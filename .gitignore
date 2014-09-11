@@ -1,0 +1,27 @@
+#Dev branch ignores
+gladstone.org/**
+modules/content/**
+htdocs/**
+
+#Ignore System Files
+*/.DS_Store
+
+# Ignore Compass Builds
+themes/**/.sass-cache
+themes/**/*.map
+themes/**/*.css
+
+# Ignore Generated Files
+themes/**/generated_files
+
+# Ignore interim build files
+*.build~
+
+# Ignore FileMerge backups
+**/*.orig
+
+# Make sure custom profile stuff is kept in index
+!modules/custom/
+!themes/**
+!gladstone.org*
+
