@@ -25,3 +25,6 @@ themes/**/generated_files
 !themes/**
 !gladstone.org*
 
+# Ignore sensitive configs
+config/deploy/*.rb
+config/deploy.rb

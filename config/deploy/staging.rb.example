@@ -1,0 +1,26 @@
+### This file contains stage-specific settings ###
+
+require 'erb'
+
+set :stage, :dev
+
+set :http_port, '8888'
+role :web, %w{username@host} 
+role :db, %w{username@host} 
+set :db_auth, { host: '127.0.0.1', username: '', password: '' }
+
+set :deploy_user, 'USERNAME'
+set :deploy_to, '/home/USERNAME/staging'
+# On dev we can make multiple builds under build_root
+set :build_root, "#{current_path.to_s}/builds" 
+
+# Default to current branch 
+set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+# Save space on dev, don't rollback
+set :keep_releases, 1
+# The path to drush
+SSHKit.config.command_map[:drush] = "/usr/local/bin/drush"
+
+
+#Load our stage specific rake tasks
+Dir.glob("lib/capistrano/#{fetch(:stage)}/*.rake").each { |r| import r }
