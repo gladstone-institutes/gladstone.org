@@ -27,4 +27,6 @@ themes/**/generated_files
 
 # Ignore sensitive configs
 config/deploy/*.rb
+config/drush/aliases.drushrc.php
+config/drush/drushrc.php
 config/deploy.rb
