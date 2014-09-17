@@ -1,0 +1,197 @@
+/* =============================================================================
+ *   Panel Styles
+ * ========================================================================== */
+
+.content-box {
+  background-color: $content_background;
+  padding: $layout-margin;
+  width: 100 - ($layout-margin * 2);
+  // width: 100%;
+  margin-bottom: $layout-margin;
+  float: left;
+  @include page-curl-bottom;
+}
+
+/* Content-Box styling for non-Gladstone Layouts */
+#gs-panel{
+    background-color: $content_background;
+    padding: $layout-margin;
+    margin: ($gutter-width * 5) 0 ($gutter-width * 2) 0; 
+    display: inline-block;   
+    @include page-curl-bottom;
+}
+
+div.at-panel {
+
+  /* "Top" Panel */ 
+  .region.top {
+    padding: ($layout-margin/2) $layout-margin;  
+    position: relative;
+    // z-index: 0;
+  }
+
+  /* Conditional Region */
+  .region-conditional-stack {
+    width: auto;
+  }
+}
+
+
+.region-gs3irc-header,
+.region-gs3irr-header,
+.region-gs2irr-header {
+
+  position: relative;
+  padding-left: $layout-margin;
+
+/* "Local Toolbar" */
+
+  .pane-page-breadcrumb,
+  .pane-page-title {
+    float: left;    
+    white-space: nowrap;
+    padding: 0.7em 0;
+  }
+
+  .pane-page-tabs {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    // this breaks the tab render on some pages
+    // bottom: -1.6em;
+
+  }
+}
+
+/* allow imagecahce styles to take precedence */
+.image-style-profile-picture-thumb {
+  // height: 160px;
+}
+
+
+
+/*** 
+ *
+ * Panels Pane Styles 
+ *
+ ***/
+
+ .feature-box {
+  &.none {background-color: transparent;}
+  &.white {background-color: $white;}
+  &.ultralight {background-color: $ultralight;}
+  &.light {background-color: $light;}
+
+
+  .pane-heading {
+    background-color: $teal;
+    color: $white;
+    padding: .1em .5em;
+
+    span {
+      // float: left;
+    }
+
+    .plus {
+        float: right;
+        max-height: 1em;      
+        position: relative;
+        top: .2em;
+        content: image-url('plus-white.png');
+    }
+  }
+
+  .view-display-id-gs_widgets_content_list_pane {
+    margin-bottom: -1em;
+
+    .views-field-title{
+      font-weight: bold;
+    }
+  }
+
+  .fieldable-panels-pane .field-name-field-basic-image-image {
+    figure { margin: -1em -1em 0 -1em; }
+  }
+
+}
+
+.pane-gladstone-widgets-general-content-feature-feed-pane {
+
+  .feed-caption {
+    display: table;
+  }
+
+  .views-row {
+    margin-bottom: 1em;
+  }
+
+  .views-row-last {
+    margin-bottom: 0;
+  }
+
+  .time-tag {
+
+    float: left;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+
+    & > * { float: left; }
+
+    .tri-right {
+      content: image-url('tri-right.png');
+      // support firefox and safari
+      background: image-url('tri-right.png') no-repeat scroll 0 0 / contain rgba(0,0,0,0);
+      height: 3em; //ff
+      width: 1em;  //ff
+    }
+
+    div.timeago {
+      border: 0;
+      color: $dark_blue;
+      background-color: $light;
+      padding: 0 0.5em;
+      height: 3em;
+
+      .time { 
+        font-size: 2.2em;
+        line-height: 1em;
+        // width: 1.2em;
+        display: table;
+        margin: 0 auto;
+      }
+
+      .unit {
+        line-height: 0.8em;
+        font-size: 0.8em;
+
+        &.month {
+          margin: 0 -0.4em;
+        }
+      } 
+    }
+    
+  }
+
+}
+
+/* when an image pane widget is in the top area of a layout */
+
+.at-panel .region-gs3irc-header
+.field-type-image,
+.at-panel .top 
+.fieldable-panels-pane 
+.field-name-field-basic-image-image {
+  img, .content {
+    // margin: -1.1% -2%;
+    margin: -1% -2% -2% -2%;
+    padding: 0;
+    line-height: 0;
+    position: relative;
+    z-index: -2;
+  }
+}
+
+
+

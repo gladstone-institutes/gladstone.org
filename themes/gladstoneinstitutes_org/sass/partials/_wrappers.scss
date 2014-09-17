@@ -1,0 +1,166 @@
+/* =============================================================================
+ *   Wrappers
+ * ========================================================================== */
+
+/*
+ * Page wrapper, includes the .container class which sets the overall page or section width
+ * Main wrapper in page.tpl.php, the .container class sets the width of the page, do not add width to it!
+ */
+#page  {
+
+  min-height: 100%; 
+  max-width: 960px;
+  margin: 0 auto;
+  // padding: 5px 15px 0 15px; //todo: make margins responsive
+
+  .container {}
+}
+
+
+/*
+ * Wraps all header elements - branding and .region-header
+ */
+#header {
+  position: relative;
+  background-color: $light;
+  // margin-bottom: $gutter-width;
+  @include page-curl-bottom;
+}
+
+/*
+ * Main content header wraps the page title, tabs and actions links
+ */
+#main-content-header {}
+
+
+/*
+ * The main page title wraps (h1)
+ */
+#page-title {
+  margin: 0;
+}
+
+
+/*
+ * Wraps the sidebars the content column
+ */
+#columns {}
+
+
+/*
+ * Main content column wrapper
+ */
+#content-column {}
+
+
+/*
+ * Wraps the main-content-header, the content region and feed-icons. Use this wrapper to style the entire main content column
+ */
+#main-content {}
+
+
+/*
+ * Wraps the content region, avoid applying styles to this wrapper, its used mainly for position and invisible gutters and can be problematic to style
+ */
+#content {
+
+}
+
+/*
+ * Footer wrapper
+ */
+#footer {
+  padding: $layout-margin;
+}
+
+
+/*
+ * Panels may need additional margin wrangling when in the $content region
+ */
+#content .panel-display {}
+
+
+/*
+ * Full Width Wrappers
+ * These are used in the optional page--full-width-wrappers.tpl.php template.
+ * All have internal .container classes. In the full width wrapper template the
+ * .container classes set the width or max-width of the contained element - you
+ * can style this but never add any width/margin/padding/borders etc to .container
+ */
+
+/*
+ * Wraps #page
+ */
+#page-wrapper {
+  .container {}
+}
+
+
+/*
+ * Wraps the leaderboard
+ */
+#leaderboard-wrapper {
+  .container {}
+}
+
+
+/*
+ * Wraps the header
+ */
+#header-wrapper {
+  /* Debug styles, is this working */
+  background: $debug;
+  .container {}
+}
+
+
+/*
+ * Wraps the nav elements
+ */
+#nav-wrapper {
+  .container {}
+}
+
+
+/*
+ * Wraps breadcrumb
+ */
+#breadcrumb-wrapper {
+  .container {}
+}
+
+
+/*
+ * Wraps messages and help
+ */
+#messages-help-wrapper {
+  .container {}
+}
+
+
+/*
+ * Wraps the main content column
+ */
+#content-wrapper {
+  .container {}
+}
+
+
+/*
+ * Wraps the tertiary content/postfix region
+ */
+#tertiary-content-wrapper {
+  .container {}
+}
+
+
+/*
+ * Footer wrapper
+ */
+#footer-wrapper {
+  /* Debug styles, is this working? */
+  background: $debug;
+
+  .container {}
+}
+

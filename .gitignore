@@ -6,12 +6,10 @@ htdocs/**
 #Ignore System Files
 */.DS_Store
 
-# Ignore Compass Builds
-themes/**/.sass-cache
+# Ignore theme dev files
+themes/**/*.sass-cache
 themes/**/*.map
 themes/**/*.css
-
-# Ignore Generated Files
 themes/**/generated_files
 
 # Ignore interim build files
@@ -22,7 +20,6 @@ themes/**/generated_files
 
 # Make sure custom profile stuff is kept in index
 !modules/custom/
-!themes/**
 !gladstone.org*
 
 # Ignore sensitive configs

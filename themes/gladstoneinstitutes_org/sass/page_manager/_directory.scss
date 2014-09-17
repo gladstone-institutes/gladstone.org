@@ -1,0 +1,25 @@
+
+.block-content ul, .block-content ol {
+	padding: 0;
+}
+
+.directory {
+	
+	ul {
+		list-style-type: none !important;
+	}
+
+	.views-row {
+		float: left;
+		margin-bottom: 1.5em;
+		border-bottom: 2px solid $teal !important;
+
+		// Prevent draggable views module from overriding the theme
+		margin: 0.5% !important;
+		padding: 0 !important;
+		// width: inherit !important;
+		max-width: 220px !important;
+	}
+}
+
+  

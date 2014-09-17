@@ -1,0 +1,101 @@
+/* =============================================================================
+ *   Superfish
+ * ========================================================================== */
+
+ul.sf-menu {
+  margin-bottom: 0;
+
+  a {
+    border-left: 0;
+    border-top: 0;
+    padding: 0 10px;
+    text-decoration: none;
+    height: 2.5em;
+    line-height: 2.5em;
+
+    &:link,
+    &:visited {}
+  }
+
+  li {
+    &:hover,
+    &.sfHover {
+      outline: 0;
+    }
+  }
+
+  a {
+    &:focus,
+    &:hover,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+
+/*
+ * Superfish blocks
+ */
+.block-superfish {
+
+  .block-inner .content {}
+
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    ul {
+      ul {
+        ul {}
+      }
+    }
+  }
+
+  li {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
+/*
+ * Vertical style
+ */
+.sf-vertical {
+  width: 100%;
+
+  li {
+    width: 100%;
+
+    &.last {}
+
+    &:hover ul,
+    &.sfHover ul {
+      left: 100%;
+      top: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      padding: 0 10px;
+    }
+  }
+}
+
+
+/*
+ * Navbar style
+ */
+.sf-navbar {
+  padding-bottom: 0 !important;
+}
+
+
+/*
+ * Sensible padding for the default style
+ */
+.sf-menu.sf-style-default a {
+  padding: 0 10px;
+}

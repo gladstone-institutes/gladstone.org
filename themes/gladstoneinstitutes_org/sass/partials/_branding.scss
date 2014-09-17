@@ -1,0 +1,70 @@
+/* =============================================================================
+ *   Branding
+ * ========================================================================== */
+
+/*
+ * Wraps all the branding elements, logo, name and slogan
+ */
+#branding {
+  margin: 0 $layout-margin;
+  background: url(../images/logo_bg.png) repeat-x;
+
+}
+
+
+/*
+ * Logo
+ */
+#logo {
+  // padding: 15px 20px;
+  padding: 1.5%; // convert gutters to % for resposive
+
+  img {
+    vertical-align: bottom;
+  }
+}
+
+
+/*
+ * Wrapper for the site name and slogan (hgroup)
+ */
+#name-and-slogan {}
+
+#name-slogan-spacer{
+  margin: 0 0.5em 0 0.5em;
+}   
+
+      
+/*
+ * Site name (h1)
+ */
+#site-name, 
+#site-slogan,
+#name-slogan-spacer {
+  float: left;
+}
+
+#site-name {
+  margin: 0;
+
+  a {
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/*
+ * Site slogan (h2)
+ */
+#site-slogan {
+  margin: 0;
+}
