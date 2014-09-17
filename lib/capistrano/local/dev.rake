@@ -27,6 +27,7 @@ namespace 'drupal:dev' do
   desc 'Update profile(root level) build and make files.'
   task :upmakes do
     set :drupal_root, Dir.pwd
+    set :branch, :master
     invoke 'drupal:dev:gen_build'
     on roles(:web) do
       file =  gen_file( file: fetch(:make_file), raw_base_uri: fetch(:raw_base_uri) )
