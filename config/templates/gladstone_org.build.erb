@@ -1,0 +1,50 @@
+; Gladstone Institutes Org ****************************************************
+;
+; This Build file will bootstrap a complete site install. The site build will
+; download drupal core, all needed patches, and the site install profile.
+; 
+; * Note: this file should only contain items related to Drupal core
+;         and the installation profile itself.
+; 
+; A build can be initiated using the drush command
+;
+;   $ drush make gladstone_org.build <target dir>
+;
+; [1] https://drupal.org/node/1432374
+;
+
+
+; Core ========================================================================
+api = 2
+core = 7.x
+
+projects[drupal][type] = core
+projects[drupal][version] = 7.22
+
+
+; Patches to Core =============================================================
+
+; Use vocabulary machine name for permissions
+; http://drupal.org/node/995156
+projects[drupal][patch][995156] = http://drupal.org/files/issues/995156-5_portable_taxonomy_permissions.patch
+
+; Bugs introduced via PHP5.4 and Drupal 7.22
+;-------------------------------------------
+; See php notices when reacreating a feature
+
+; Add recusive version of array_diff_assoc()
+; https://drupal.org/node/1850798 
+projects[drupal][patch][1850798] = https://drupal.org/files/1850798-base-array_recurse-drupal-68.patch
+
+; array_diff_assoc for multilevel arrays in DrupalDefaultEntityController
+; https://drupal.org/comment/7812787
+projects[drupal][patch][1525176] = https://drupal.org/files/issues/drupal7.entity-system.1525176-153.patch
+
+
+; Profiles ====================================================================
+projects[gladstone_org][type] = profile
+projects[gladstone_org][download][type] = git
+projects[gladstone_org][download][url] = <%= token[:repo] %>
+;keep this "profile" block at the end of the file
+;see cap local deploy:buildgen for how this file is generated
+<%= token[:profile_branch] %>

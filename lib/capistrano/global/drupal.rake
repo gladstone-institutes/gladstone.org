@@ -71,7 +71,7 @@ namespace :drupal do
       within releases_path.to_s do 
         execute :sudo, :chown, '-fR', fetch(:deploy_user), fetch(:build_root), :raise_on_non_zero_exit => false
         execute :find, '.', '-path \*/sites/default', '-exec chmod -fR u+rw {} \;', :raise_on_non_zero_exit => false
-        execute :find, '.', '-path \*/themes/gladstoneinstitutes_org/generated_files', '-exec chmod -fR u+rw {} \;', :raise_on_non_zero_exit => false
+        execute :find, '.', '-path \*/themes/'+fetch(:application)+'/generated_files', '-exec chmod -fR u+rw {} \;', :raise_on_non_zero_exit => false
       end    
     end
   end 
@@ -243,17 +243,17 @@ namespace 'drupal:dev' do
 
     run_locally do 
       # Tell drush to checkout the the same branch as currently checked out
-        current_branch = capture("git rev-parse --abbrev-ref HEAD").chomp
+        current_branch = fetch(:branch)
         info "Building Branch: #{current_branch}"
 
         if current_branch == 'HEAD'
             revision = capture("git rev-parse HEAD").chomp
             info "Revision ##{revision}"
-            profile_branch = "projects[gladstoneinstitutes_org][download][revision] = \"#{revision}\" "
+            profile_branch = "projects[#{fetch(:application)}][download][revision] = \"#{revision}\" "
         else
-            profile_branch = "projects[gladstoneinstitutes_org][download][branch] = \"#{current_branch}\" "
+            profile_branch = "projects[#{fetch(:application)}][download][branch] = \"#{current_branch}\" "
         end
-      end
+    end
 
     on roles(:web) do
       file = gen_file( repo: fetch(:repo_url), 
@@ -272,7 +272,7 @@ namespace 'drupal:dev' do
       within profile_root do 
         execute :git, 'archive', "--remote=#{fetch(:repo_url)}", fetch(:branch), "| tar -x --no-same-owner"
       end
-      file =  gen_file( file: fetch(:make_file), profile_root: profile_root )
+      file =  gen_file( file: fetch(:make_file), raw_base_uri: fetch(:raw_base_uri) )
       upload! StringIO.new(file), "#{profile_root}/#{fetch(:make_file)}"
     end
   end 
@@ -472,8 +472,7 @@ end
 
 
 def gen_file(token = {})
-  t = token
-  template = File.open("#{Dir.pwd}/config/templates/#{t[:file]}.erb",'r').read
+  template = File.open("#{Dir.pwd}/config/templates/#{token[:file]}.erb",'r').read
   erb = ERB.new(template)
   erb.result(binding)
 end

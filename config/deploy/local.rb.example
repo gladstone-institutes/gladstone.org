@@ -13,6 +13,7 @@ set :deploy_to, '/home/USERNAME/staging'
 # On dev we can make multiple builds under build_root
 set :build_root, "#{current_path.to_s}/builds"
 set :repo_url, "USERNAME@localhost:PATH/REPO.git"
+set :raw_uri, "BASE URI TO DOWNLOAD RAW FILES"
 
 # Default to current branch 
 set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
