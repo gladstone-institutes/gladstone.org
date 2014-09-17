@@ -1,0 +1,17 @@
+#panels-dnd-main .region {float: left; margin-bottom: 5px}
+#panels-dnd-main .region-gs3irr-header,
+#panels-dnd-main .region-gs3irr-footer,
+#panels-dnd-main .region-gs3irr-top {width: 100%}
+#panels-dnd-main .region-gs3irr-sidebar {width: 25%}
+#panels-dnd-main .inset-wrapper {float: left; width: 74.5%; margin-left: 0.5%}
+#panels-dnd-main .inset-wrapper .region {width: 100%}
+#panels-dnd-main .inset-wrapper .region-gs3irr-middle {width: 30%}
+#panels-dnd-main .inset-wrapper .region-gs3irr-inset {width: 69.5%; margin-left: 0.5%}
+#panels-dnd-main .region-gs3irr-bottom {clear: both}
+
+
+/* Inset sprite */
+[id$=gs3irr] .form-type-radio label {background: url(gs3irr-sprite.png)}
+.form-type-radio label[for$gs3irr] {background-position: 0 0}
+.form-type-radio label[for$=gs3irr-wrap] {background-position: -41px 0}
+.form-type-radio label[for$=gs3irr-stack] {background-position: -82px 0}

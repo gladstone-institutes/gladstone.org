@@ -11,6 +11,7 @@ themes/**/*.sass-cache
 themes/**/*.map
 themes/**/*.css
 themes/**/generated_files
+!themes/**/layouts/**/*.css
 
 # Ignore interim build files
 *.build~
