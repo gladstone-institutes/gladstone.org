@@ -25,4 +25,4 @@ set :default_env, { path: '/usr/local/bin:$PATH'}
 
 
 #Load our stage specific rake tasks
-Dir.glob("lib/capistrano/#{fetch(:stage)}/*.rake").each { |r| import r }
+Dir.glob("lib/capistrano/#{fetch(:stage)}/*.rake").each { |r| load r }

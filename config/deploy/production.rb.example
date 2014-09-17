@@ -39,4 +39,4 @@ server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
 # setting per server overrides global ssh_options
 
 #Load our stage specific rake tasks
-Dir.glob("lib/capistrano/#{fetch(:stage)}/*.rake").each { |r| import r }
+Dir.glob("lib/capistrano/#{fetch(:stage)}/*.rake").each { |r| load r }

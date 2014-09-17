@@ -23,4 +23,4 @@ SSHKit.config.command_map[:drush] = "/usr/local/bin/drush"
 
 
 #Load our stage specific rake tasks
-Dir.glob("lib/capistrano/#{fetch(:stage)}/*.rake").each { |r| import r }
+Dir.glob("lib/capistrano/#{fetch(:stage)}/*.rake").each { |r| load r }
