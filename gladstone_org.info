@@ -30,4 +30,6 @@ dependencies[] = toolbar
 ;dependencies[] = dashboard
 ;dependencies[] = dblog
 
+; extends core ==================================
 
+dependencies[] = features
