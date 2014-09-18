@@ -1,0 +1,76 @@
+/* line 4, ../sass/gladstone_admin.scss */
+#profile2_profile_form_group_cv,
+#profile2_profile_form_group_profile,
+#profile2_profile_form_group_leadership {
+  padding: 0;
+}
+/* line 11, ../sass/gladstone_admin.scss */
+#profile2_profile_form_group_cv > div,
+#profile2_profile_form_group_profile > div,
+#profile2_profile_form_group_leadership > div {
+  padding: 0;
+  margin-top: -.3em;
+}
+/* line 16, ../sass/gladstone_admin.scss */
+#profile2_profile_form_group_cv > div > div > div,
+#profile2_profile_form_group_profile > div > div > div,
+#profile2_profile_form_group_leadership > div > div > div {
+  border: 0;
+}
+/* line 20, ../sass/gladstone_admin.scss */
+#profile2_profile_form_group_cv .field-group-htab > legend,
+#profile2_profile_form_group_profile .field-group-htab > legend,
+#profile2_profile_form_group_leadership .field-group-htab > legend {
+  display: none !important;
+}
+/* line 23, ../sass/gladstone_admin.scss */
+#profile2_profile_form_group_cv .field-group-htab > legend + div.fieldset-content > .description,
+#profile2_profile_form_group_profile .field-group-htab > legend + div.fieldset-content > .description,
+#profile2_profile_form_group_leadership .field-group-htab > legend + div.fieldset-content > .description {
+  color: lightgray;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* line 33, ../sass/gladstone_admin.scss */
+div.autocomplete-deluxe-throbber {
+  height: inherit;
+}
+
+/* line 38, ../sass/gladstone_admin.scss */
+#edit-profile-profile-field-postdoc-training span.autocomplete-deluxe-item {
+  float: none;
+  display: table;
+}
+
+/* line 48, ../sass/gladstone_admin.scss */
+.field-type-list-text.field-widget-options-buttons .form-type-radios .form-item {
+  float: left;
+  margin-right: 1em;
+}
+/* line 53, ../sass/gladstone_admin.scss */
+.field-type-list-text.field-widget-options-buttons .form-type-radios .description {
+  display: inline-block;
+  float: left;
+}
+
+/* line 61, ../sass/gladstone_admin.scss */
+#edit-status .form-item:first-child {
+  float: left;
+  margin-right: 1em;
+}
+
+/* line 67, ../sass/gladstone_admin.scss */
+#edit-roles {
+  -moz-column-count: 2;
+  -moz-column-gap: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 0;
+  column-count: 2;
+  column-gap: 0;
+}
+
+/* line 76, ../sass/gladstone_admin.scss */
+.chosen-container {
+  width: 100% !important;
+}

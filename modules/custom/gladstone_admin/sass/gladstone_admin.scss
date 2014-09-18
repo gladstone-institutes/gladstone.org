@@ -1,0 +1,78 @@
+
+
+
+#profile2_profile_form_group_cv,
+#profile2_profile_form_group_profile,
+// #profile2_profile_form_group_contact,
+#profile2_profile_form_group_leadership {
+
+	padding: 0;
+
+	& > div {
+		padding: 0;
+  		margin-top: -.3em;
+	}
+
+	& > div > div > div {
+		border: 0;
+	}
+
+	.field-group-htab > legend {
+		display: none !important;
+
+		& + div.fieldset-content > .description {
+			color: lightgray;
+			font-size: 1.2em;
+			font-style: italic;
+		}
+	}
+}
+
+
+// List type tagging
+div.autocomplete-deluxe-throbber {
+	height: inherit;
+}
+// #edit-profile-profile-field-operational-role,
+#edit-profile-profile-field-postdoc-training {
+	span.autocomplete-deluxe-item {
+		float: none;
+		display: table;
+	}
+}
+
+
+// 
+.field-type-list-text.field-widget-options-buttons {
+	.form-type-radios {
+		.form-item {
+			float:left; 
+			margin-right: 1em;		
+		}
+
+		.description {
+			display: inline-block;
+			float:left;
+		}
+	}
+}
+
+
+#edit-status .form-item:first-child{
+	float: left;
+	margin-right: 1em;
+}
+
+
+#edit-roles  {
+    -moz-column-count: 2;
+    -moz-column-gap: 0;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0;
+    column-count: 2;
+    column-gap: 0;
+}
+
+.chosen-container {
+	width: 100% !important;
+}

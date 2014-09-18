@@ -33,3 +33,6 @@ dependencies[] = toolbar
 ; extends core ==================================
 
 dependencies[] = features
+
+; gladstone -------------------------------------
+dependencies[] = gladstone_admin

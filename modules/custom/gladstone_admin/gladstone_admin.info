@@ -1,0 +1,8 @@
+name = Gladstone Admin
+description = Improve the administration experience
+core = 7.x
+package = Gladstone
+php = 5.3.4
+project = gladstone_admin
+
+dependencies[] = coffee

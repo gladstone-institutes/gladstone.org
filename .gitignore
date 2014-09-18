@@ -7,7 +7,7 @@ htdocs/**
 */.DS_Store
 
 # Ignore theme dev files
-themes/**/*.sass-cache
+**/*.sass-cache
 themes/**/*.map
 themes/**/*.css
 themes/**/generated_files
