@@ -208,16 +208,17 @@ namespace 'drupal:dev' do
     end
 
     # Revert any installation configs in review to those in source control
-    features = [ 'permissions',
-                 'basic_page',
-                 'gladstone_profiles',
-                 'events',
-                 'news',
-                 'press_releases',
-                 'bibliorepository',
-                 'structure',
-                 'pressroom'
-               ]
+    # features = [ 'permissions',
+    #              'basic_page',
+    #              'gladstone_profiles',
+    #              'events',
+    #              'news',
+    #              'press_releases',
+    #              'bibliorepository',
+    #              'structure',
+    #              'pressroom'
+    #            ]
+    features = Dir.glob(fetch(:drupal_root)+'/profiles/modules/features/*').select{|p| File.directory? p}.map{|d| File.basename d}
     on roles(:web) do
       within fetch(:drupal_root) do
         features.each do |feature|
