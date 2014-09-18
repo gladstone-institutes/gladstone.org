@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Structure feature.
  */
+
+include_once 'structure.features.inc';
