@@ -3,7 +3,9 @@ description = Site Installation for Gladstone Institutes main web presence
 version = VERSION
 core = 7.x
 
-; core ;
+; core ==========================================
+
+; standard --------------------------------------
 dependencies[] = help
 dependencies[] = block
 dependencies[] = overlay
@@ -16,72 +18,16 @@ dependencies[] = image
 dependencies[] = options
 dependencies[] = number
 dependencies[] = menu
-dependencies[] = entity_token
-
-; extends core ;
-dependencies[] = ctools
-dependencies[] = page_manager
-dependencies[] = panels
-dependencies[] = panels_ipe
-dependencies[] = panels_mini
-dependencies[] = libraries
-dependencies[] = features
-dependencies[] = diff
-dependencies[] = strongarm
-dependencies[] = jquery_update
-dependencies[] = pathauto
-dependencies[] = subpathauto
-dependencies[] = page_manager_pathauto
-dependencies[] = globalredirect
-dependencies[] = field_permissions
-dependencies[] = rules
-dependencies[] = panels_ajax_tab
-dependencies[] = quicktabs
-dependencies[] = boxes
-
-
-; ux enhancements ;
-dependencies[] = module_filter
-dependencies[] = fpa
-dependencies[] = md_megamenu
-dependencies[] = coffee
-;dependencies[] = navbar ;see note in make file
-dependencies[] = toolbar
-dependencies[] = shortcut
-dependencies[] = entityconnect
-dependencies[] = token
-dependencies[] = contextual
-;dependencies[] = edit
-dependencies[] = imagefield_focus
-dependencies[] = field_group
-dependencies[] = content_menu
-dependencies[] = ckeditor
-dependencies[] = linkit
-dependencies[] = draggableviews
-dependencies[] = menu_editor
-
-; Gladstone specific ----------------------------
-dependencies[] = gladstone_widgets
-dependencies[] = gladstone_admin
-
-; Import, Export, Backup ------------------------
-dependencies[] = uuid
-dependencies[] = uuid_path
-dependencies[] = menu_position
-dependencies[] = menu_position_uuid
-;dependencies[] = profile2_uuid
-dependencies[] = deploy
-dependencies[] = services
-dependencies[] = entity_menu_links
-dependencies[] = backup_migrate
-
-; standard --------------------------------------
 dependencies[] = search
 ;dependencies[] = rdf
+dependencies[] = shortcut
+dependencies[] = toolbar
 
 ; not needed ------------------------------------
-;dependencies[] = dblog
 ;dependencies[] = color
 ;dependencies[] = comment
 ;dependencies[] = contextual
 ;dependencies[] = dashboard
+;dependencies[] = dblog
+
+
