@@ -200,7 +200,9 @@ namespace 'drupal:dev' do
         patches.each do |project, patch|
           # dir = capture(:drush, 'pmi', project, '| grep Path', '| cut -d\':\' -f2').strip
           dir = capture(:drush, :eval, "'echo drupal_get_path('module','#{project}');'").chomp
-          execute :patch, '-p0','--batch', "-d #{dir}", "< #{current_path.to_s}/patches/#{patch}", :raise_on_non_zero_exit => false
+          unless dir.empty?
+            execute :patch, '-p0','--batch', "-d #{dir}", "< #{current_path.to_s}/patches/#{patch}", :raise_on_non_zero_exit => false
+          end
         end
       end
     end
