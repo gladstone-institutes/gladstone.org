@@ -6,3 +6,5 @@ php = 5.3.4
 project = gladstone_admin
 
 dependencies[] = coffee
+dependencies[] = fpa
+dependencies[] = module_filter
