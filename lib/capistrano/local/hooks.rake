@@ -1,5 +1,5 @@
 before 'deploy', 'drupal:dev:purge'
-before 'drupal:site_install', 'drupal:dev:symlink'
+after 'drupal:dev:gen_make_profile', 'drupal:dev:symlink'
 after 'deploy', :symlink_builds do
   on roles(:web) do
     within fetch(:deploy_to) do

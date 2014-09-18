@@ -134,6 +134,19 @@ namespace 'drupal:dev' do
         end
       end
 
+      # Make projects included in the profile
+      Dir.glob('modules/*').select{|p| File.directory? p}.
+          map{|d| File.basename d}.each do |subdir|
+          Dir.glob("modules/#{subdir}/*").select{|p| File.directory? p}.
+              map{|d| File.basename d}.each do |project|
+                on roles(:web) do
+                  within "#{fetch(:drupal_root)}/profiles/#{fetch(:application)}" do
+                    execute :drush, "make --yes --ignore-checksums --no-core --contrib-destination=. --concurrency=4 modules/#{subdir}/#{project}/#{project}.make", '2>&1'
+                  end                  
+                end
+          end
+      end
+
       # Site install
       invoke 'drupal:site_install'
 
