@@ -23,3 +23,23 @@ projects[menu_position][subdir]		= "contrib"
 ; Import and export -----------------------------
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir]  = "contrib"
+
+projects[deploy][version] = "2.x-dev"
+projects[deploy][subdir]  = "contrib"
+
+projects[entity][version]	= 1.x-dev
+projects[entity][subdir]	= contrib
+
+projects[entity_dependency][version] = "1.x-dev"
+projects[entity_dependency][subdir]  = "contrib"
+
+projects[uuid][version]	= "1.x-dev"
+projects[uuid][subdir]	= "contrib"
+
+projects[entity_menu_links][version] = "1.x-dev"
+projects[entity_menu_links][subdir]  = "contrib"
+projects[entity_menu_links][patch][] = "https://www.drupal.org/files/issues/2138509-entity-menu-links-deploy-4.patch"
+
+projects[menu_position_uuid][version] = "1.x-dev"
+projects[menu_position_uuid][subdir]  = "contrib"
+projects[menu_position_uuid][patch][] = "https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/menu_position_uuid-fix_deletion_of_other_postion_rules.patch"
