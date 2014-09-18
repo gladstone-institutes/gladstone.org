@@ -1,0 +1,57 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the gladstoneinstitutes_org installation profile.
+ */
+
+define("PROFILE_ROOT", dirname(__FILE__));
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+
+/*
+function gladstone_org_install() {
+  // Disable user register.
+  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
+
+  // Setup install config 
+  $cfg = array(
+    'default_theme' => 'gladstoneinstitutes_org',
+    'admin_theme'   => 'rubik'     
+  );
+
+  // Require each of the installation includes
+  // rather than autoloading the directory, we specifiy a specific order
+  // in the array below, until features can handle config themself.
+  $includes = array(
+        'config_megamenu',
+        'config_roles_and_permissions',
+        'config_themes',
+        'enable_features',     
+        'config_blocks'
+  );
+
+  foreach( $includes as $include){  
+    require_once(PROFILE_ROOT."/includes/$include".'.inc');
+    $inc_func = "gladstoneinstitutes_org_".$include;
+    call_user_func_array($inc_func, array(&$cfg));
+  }
+
+  // foreach( glob(PROFILE_ROOT.'/includes/*.inc') as $include ) {
+  //   require_once( $include );
+  //   $include_func_name = "gladstoneinstitutes_org_".basename($include,".inc");
+  //   call_user_func_array($include_func_name, array(&$cfg));
+  // }
+
+  // Trigger AT_core's file generation 
+  // todo: auto generate files on install
+  // gladstoneinstitutes_org_theme_file_generate();
+
+} // close gladstoneinstitutes_org_install()
+*/
+
