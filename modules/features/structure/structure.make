@@ -12,3 +12,6 @@ projects[ctools][subdir]  = "contrib"
 projects[ctools][patch][] = https://drupal.org/files/ctools.code_.1774434-7.patch
 ; allow admin overlay for pager page_manager
 projects[ctools][patch][] = https://www.drupal.org/files/page-manager-admin-paths-1120028-14.patch
+
+projects[panels][version] = "3.x-dev"
+projects[panels][subdir]  = "contrib"
