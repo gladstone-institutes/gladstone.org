@@ -1,0 +1,8 @@
+name = Structure
+description = Core structure: menu, sitemap, theme, site-pages, modules
+core = 7.x
+package = Gladstone
+dependencies[] = gladstone_admin
+dependencies[] = strongarm
+features[features_api][] = api:2
+project path = profiles/gladstone_org/modules/features
