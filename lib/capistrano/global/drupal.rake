@@ -245,7 +245,11 @@ namespace 'drupal:dev' do
   # [internal] desc 'Drupal settings based on build id'
   task :build_id do
     # A specific site build lives in a drupal_root
-    ask :build, "build#{Time.now.to_i}"
+    if ENV['build']
+      set :build, ENV['build']
+    else
+      ask :build, "build#{Time.now.to_i}"
+    end
     set :drupal_root, "#{fetch(:build_root)}/#{fetch(:build)}"
     set :httpd_subdir, "/current/builds/#{fetch(:build)}"
     # MySQL Schema for build
@@ -390,7 +394,11 @@ namespace 'drupal:dev' do
       build_exists = test "[ -d #{fetch(:drupal_root)} ]"
       
       if db_exists || build_exists
-        ask :overwrite_current_build, "N"
+        if ENV['overwrite_current_build']
+          set :overwrite_current_build, ENV['overwrite_current_build']
+        else
+          ask :overwrite_current_build, "N"
+        end
         if fetch(:overwrite_current_build) =~ /^(Yes|Y)/i
           within fetch(:build_root) do
           #within fetch(:drupal_root) do
