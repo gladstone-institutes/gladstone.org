@@ -231,7 +231,7 @@ namespace 'drupal:dev' do
     #              'structure',
     #              'pressroom'
     #            ]
-    features = Dir.glob(fetch(:drupal_root)+'/profiles/modules/features/*').select{|p| File.directory? p}.map{|d| File.basename d}
+    features = Dir.glob("#{fetch(:drupal_root)}/profiles/#{fetch(:application)}/modules/features/*").select{|p| File.directory? p}.map{|d| File.basename d}
     on roles(:web) do
       within fetch(:drupal_root) do
         features.each do |feature|
