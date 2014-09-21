@@ -15,10 +15,18 @@ function structure_install() {
 	$role->weight = 5;
 	user_role_save($role);
 
+/** Mega Menu **/
+
+	// Configure and import the mega menu
+
 /** Theming **/
 
-  // Trigger AT_core's file generation 
-  // todo: auto generate files on install
-  // gladstoneinstitutes_org_theme_file_generate();
+	// Trigger AT_core's file generation 
+	// todo: auto generate files on install
+	// gladstoneinstitutes_org_theme_file_generate();
+
+/** Blocks **/
+
+	// Assign blocks to regions
 
 }
