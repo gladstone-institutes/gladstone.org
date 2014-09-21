@@ -1,0 +1,24 @@
+<?php
+
+function structure_install() {
+
+
+/** Update roles **/
+
+	// Authenticated Role
+	$role = user_role_load_by_name('authenticated user');
+	$role->weight = 4;
+	user_role_save($role);
+
+	// Anonymous Role
+	$role = user_role_load_by_name('anonymous user');
+	$role->weight = 5;
+	user_role_save($role);
+
+/** Theming **/
+
+  // Trigger AT_core's file generation 
+  // todo: auto generate files on install
+  // gladstoneinstitutes_org_theme_file_generate();
+
+}

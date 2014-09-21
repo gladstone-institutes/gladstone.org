@@ -4,7 +4,6 @@
  * Install, update and uninstall functions for the gladstoneinstitutes_org installation profile.
  */
 
-define("PROFILE_ROOT", dirname(__FILE__));
 
 /**
  * Implements hook_install().
@@ -13,42 +12,34 @@ define("PROFILE_ROOT", dirname(__FILE__));
  *
  * @see system_install()
  */
-
-
 function gladstone_org_install() {
+
+  /** Superadmin User/Role **/
+  $role = new stdClass();
+  $role->name = 'superadmin';
+  $role->weight = 0;
+  user_role_save($role);
+
+  // Give Superadmin role all permissions
+  $permissions = array();
+  foreach (module_implements('permission') as $module) {
+    $perms = module_invoke($module, 'permission');
+    foreach ($perms as $key => $value) {
+      $permissions[] = $key;
+    }
+  }
+  user_role_grant_permissions($role->rid, $permissions);
 
   // Alter User 1
   $user = user_load(1);
   $user->name = 'superadmin';
-  print_r($user);
-  user_save($user);
-/*
-  // Require each of the installation includes
-  // rather than autoloading the directory, we specifiy a specific order
-  // in the array below, until features can handle config themself.
-  $includes = array(
-        'config_megamenu',
-        'config_roles_and_permissions',
-        'enable_features',     
-        'config_blocks'
-  );
+  user_save($user);  
+  db_insert('users_roles')->fields(array('uid' => 1, 'rid' => $role->rid))->execute();
+  
+  // Set superadmin as the administrator role.
+  variable_set('user_admin_role', $role->rid);
 
-  foreach( $includes as $include){  
-    require_once(PROFILE_ROOT."/includes/$include".'.inc');
-    $inc_func = "gladstoneinstitutes_org_".$include;
-    call_user_func_array($inc_func, array(&$cfg));
-  }
 
-  // foreach( glob(PROFILE_ROOT.'/includes/*.inc') as $include ) {
-  //   require_once( $include );
-  //   $include_func_name = "gladstoneinstitutes_org_".basename($include,".inc");
-  //   call_user_func_array($include_func_name, array(&$cfg));
-  // }
-
-  // Trigger AT_core's file generation 
-  // todo: auto generate files on install
-  // gladstoneinstitutes_org_theme_file_generate();
-*/
 }
 
 
