@@ -14,3 +14,7 @@ projects[fpa][subdir]	= "contrib"
 ;Modules Management Filters
 projects[module_filter][version] = "2.x-dev"
 projects[module_filter][subdir]  = "contrib"
+
+;Menu Power editing
+projects[menu_editor][version] = "1.0-beta3"
+projects[menu_editor][subdir] = "contrib"

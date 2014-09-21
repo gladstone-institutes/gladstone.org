@@ -8,3 +8,4 @@ project = gladstone_admin
 dependencies[] = coffee
 dependencies[] = fpa
 dependencies[] = module_filter
+dependencies[] = menu_editor

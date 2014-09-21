@@ -328,6 +328,46 @@ function structure_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: menu edit main-menu.
+  $permissions['menu edit main-menu'] = array(
+    'name' => 'menu edit main-menu',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'menu_editor',
+  );
+
+  // Exported permission: menu edit management.
+  $permissions['menu edit management'] = array(
+    'name' => 'menu edit management',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'menu_editor',
+  );
+
+  // Exported permission: menu edit navigation.
+  $permissions['menu edit navigation'] = array(
+    'name' => 'menu edit navigation',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'menu_editor',
+  );
+
+  // Exported permission: menu edit user-menu.
+  $permissions['menu edit user-menu'] = array(
+    'name' => 'menu edit user-menu',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'menu_editor',
+  );
+
   // Exported permission: revert revisions.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
