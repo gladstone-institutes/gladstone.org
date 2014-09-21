@@ -14,9 +14,15 @@ define("PROFILE_ROOT", dirname(__FILE__));
  * @see system_install()
  */
 
-/*
+
 function gladstone_org_install() {
 
+  // Alter User 1
+  $user = user_load(1);
+  $user->name = 'superadmin';
+  print_r($user);
+  user_save($user);
+/*
   // Require each of the installation includes
   // rather than autoloading the directory, we specifiy a specific order
   // in the array below, until features can handle config themself.
@@ -42,7 +48,7 @@ function gladstone_org_install() {
   // Trigger AT_core's file generation 
   // todo: auto generate files on install
   // gladstoneinstitutes_org_theme_file_generate();
-
-} // close gladstoneinstitutes_org_install()
 */
+}
+
 
