@@ -21,6 +21,32 @@ function structure_install() {
 
 /** Theming **/
 
+	$default_theme = 'gladstoneinstitutes_org';
+    $admin_theme = 'rubik';
+
+	// disable all themes
+	db_update('system')
+	->fields(array('status' => 0))
+	->condition('type', 'theme')
+	->execute();
+
+	// enable $default_theme
+	db_update('system')
+	->fields(array('status' => 1))
+	->condition('type', 'theme')
+	->condition('name', $default_theme)
+	->execute();
+	variable_set('theme_default', $default_theme);
+
+	// enable $admin_theme
+	db_update('system')
+	->fields(array('status' => 1))
+	->condition('type', 'theme')
+	->condition('name', $admin_theme)
+	->execute();
+	variable_set('admin_theme', $admin_theme);
+	variable_set('node_admin_theme', '1');
+
 	// Trigger AT_core's file generation 
 	// todo: auto generate files on install
 	// gladstoneinstitutes_org_theme_file_generate();
