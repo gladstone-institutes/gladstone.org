@@ -55,4 +55,10 @@ function structure_install() {
 
 	// Assign blocks to regions
 
+/** Modules **/
+
+	$modules = array('gladstone_admin');
+	features_install_modules($modules);
+
+
 }

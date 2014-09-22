@@ -10,7 +10,6 @@ dependencies[] = deploy
 dependencies[] = entity_menu_links
 dependencies[] = features
 dependencies[] = file
-dependencies[] = gladstone_admin
 dependencies[] = image
 dependencies[] = media
 dependencies[] = menu
