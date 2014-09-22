@@ -12,6 +12,7 @@ dependencies[] = features
 dependencies[] = file
 dependencies[] = gladstone_admin
 dependencies[] = image
+dependencies[] = media
 dependencies[] = menu
 dependencies[] = menu_editor
 dependencies[] = menu_position

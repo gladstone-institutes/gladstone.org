@@ -20,6 +20,12 @@ projects[panels][subdir]  = "contrib"
 projects[menu_position][version]	= "1.x-dev"
 projects[menu_position][subdir]		= "contrib"
 
+projects[pathauto][version]	= "1.2"
+projects[pathauto][subdir]	= "contrib"
+
+projects[subpathauto][version]	= "1.3"
+projects[subpathauto][subdir]	= "contrib"
+
 ; Import and export -----------------------------
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir]  = "contrib"
@@ -44,8 +50,12 @@ projects[menu_position_uuid][version] = "1.x-dev"
 projects[menu_position_uuid][subdir]  = "contrib"
 projects[menu_position_uuid][patch][] = "https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/menu_position_uuid-fix_deletion_of_other_postion_rules.patch"
 
-projects[pathauto][version]	= "1.2"
-projects[pathauto][subdir]	= "contrib"
+; Media -----------------------------------------
+projects[media][version] = "2.x-dev"
+projects[media][subdir]	 = "contrib"
 
-projects[subpathauto][version]	= "1.3"
-projects[subpathauto][subdir]	= "contrib"
+projects[media_youtube][version] = "2.x-dev"
+projects[media_youtube][subdir]  = "contrib"
+
+projects[ckeditor_media][version] = "1.x-dev"
+projects[ckeditor_media][subdir]  = "contrib"
