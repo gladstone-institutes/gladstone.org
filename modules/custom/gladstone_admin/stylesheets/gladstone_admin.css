@@ -74,3 +74,8 @@ div.autocomplete-deluxe-throbber {
 .chosen-container {
   width: 100% !important;
 }
+
+/* line 80, ../sass/gladstone_admin.scss */
+#edit-actions {
+  margin-top: 35px;
+}
