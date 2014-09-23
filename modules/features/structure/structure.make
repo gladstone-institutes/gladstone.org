@@ -50,12 +50,4 @@ projects[menu_position_uuid][version] = "1.x-dev"
 projects[menu_position_uuid][subdir]  = "contrib"
 projects[menu_position_uuid][patch][] = "https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/menu_position_uuid-fix_deletion_of_other_postion_rules.patch"
 
-; Media -----------------------------------------
-projects[media][version] = "2.x-dev"
-projects[media][subdir]	 = "contrib"
 
-projects[media_youtube][version] = "2.x-dev"
-projects[media_youtube][subdir]  = "contrib"
-
-projects[ckeditor_media][version] = "1.x-dev"
-projects[ckeditor_media][subdir]  = "contrib"

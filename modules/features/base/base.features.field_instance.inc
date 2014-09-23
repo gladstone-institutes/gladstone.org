@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * structure.features.field_instance.inc
+ * base.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function structure_field_default_field_instances() {
+function base_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-site_page-body'
