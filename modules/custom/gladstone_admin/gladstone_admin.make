@@ -18,3 +18,8 @@ projects[module_filter][subdir]  = "contrib"
 ;Menu Power editing
 projects[menu_editor][version] = "1.0-beta3"
 projects[menu_editor][subdir] = "contrib"
+
+;Admin theme
+projects[rubik][version] = "4.0"
+;projects[rubik][patch][] = ""
+projects[tao][version] = "3.1"

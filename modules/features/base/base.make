@@ -10,6 +10,9 @@ projects[views][subdir]   = "contrib"
 projects[token][version]	= "1.5"
 projects[token][subdir]		= "contrib"
 
+projects[field_group][version] = "1.4"
+projects[field_group][subdir] = "contrib"
+
 ; Media -----------------------------------------
 projects[media][version] = "2.x-dev"
 projects[media][subdir]	 = "contrib"

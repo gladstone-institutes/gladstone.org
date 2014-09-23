@@ -74,7 +74,7 @@ function structure_strongarm() {
     'favicon_upload' => '',
     'rubik_inline_field_descriptions' => 1,
     'rubik_disable_sidebar_in_form' => 0,
-    'rubik_sidebar_field_ui' => 0,
+    'rubik_sidebar_field_ui' => 1,
   );
   $export['theme_rubik_settings'] = $strongarm;
 

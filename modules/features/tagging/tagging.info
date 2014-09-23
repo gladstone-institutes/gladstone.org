@@ -1,0 +1,8 @@
+name = Tagging
+description = Taxonomy content bundles
+core = 7.x
+package = Content
+php = 5.2.4
+dependencies[] = base
+features[features_api][] = api:2
+project path = profiles/gladstone_org/modules/features

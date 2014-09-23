@@ -21,6 +21,5 @@ projects[features][subdir]  = "contrib"
 
 ; Themes ========================================
 projects[adaptivetheme][version] = "3.1"
-projects[tao][version] = "3.1"
-projects[rubik][version] = "4.0"
+
 
