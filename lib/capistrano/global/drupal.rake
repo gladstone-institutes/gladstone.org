@@ -139,9 +139,13 @@ namespace 'drupal:dev' do
           map{|d| File.basename d}.each do |subdir|
           Dir.glob("modules/#{subdir}/*").select{|p| File.directory? p}.
               map{|d| File.basename d}.each do |project|
+                project_dir = "#{fetch(:drupal_root)}/profiles/#{fetch(:application)}"
+                make_file   = "#{project_dir}/modules/#{subdir}/#{project}/#{project}.make"
                 on roles(:web) do
-                  within "#{fetch(:drupal_root)}/profiles/#{fetch(:application)}" do
-                    execute :drush, "make --yes --ignore-checksums --no-core --contrib-destination=. --concurrency=4 modules/#{subdir}/#{project}/#{project}.make", '2>&1'
+                  within project_dir do
+                    if test "[ -e #{make_file} ]"
+                      execute :drush, "make --yes --ignore-checksums --no-core --contrib-destination=. --concurrency=4 #{make_file}", '2>&1'
+                    end                    
                   end                  
                 end
           end
@@ -231,12 +235,13 @@ namespace 'drupal:dev' do
     #              'structure',
     #              'pressroom'
     #            ]
-    features = Dir.glob("#{fetch(:drupal_root)}/profiles/#{fetch(:application)}/modules/features/*").select{|p| File.directory? p}.map{|d| File.basename d}
+    # features = Dir.glob("#{fetch(:drupal_root)}/profiles/#{fetch(:application)}/modules/features/*").select{|p| File.directory? p}.map{|d| File.basename d}
     on roles(:web) do
       within fetch(:drupal_root) do
-        features.each do |feature|
+        features = capture(:drush, 'features-list','|grep Enabled').split(/\r?\n/).map{|l| l.match(/\s+([a-z]+)\s+Enabled/)[1]}
+        features.each do |feature|  
           info "*** Reverting Feature #{feature} ***"
-          execute :drush, 'features-revert', '--yes --force', feature, '2>&1'
+          execute :drush, 'features-revert', '--yes --force', feature, '2>&1'          
         end
       end
     end    
