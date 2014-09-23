@@ -76,6 +76,7 @@ div.autocomplete-deluxe-throbber {
 }
 
 /* line 80, ../sass/gladstone_admin.scss */
-#edit-actions {
-  margin-top: 35px;
+.fixed-admin-pane {
+  position: fixed;
+  padding-right: 30px;
 }

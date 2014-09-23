@@ -25,3 +25,10 @@ projects[ckeditor_media][subdir]  = "contrib"
 
 projects[file_entity][version] = "2.x-dev"
 projects[file_entity][subdir]  = "contrib"
+
+; UI Widgets ------------------------------------
+projects[autocomplete_deluxe][version] 	= 7.x-2.0-beta3+2-dev
+projects[autocomplete_deluxe][subdir] 	= "contrib"
+projects[autocomplete_deluxe][download][type]     = git
+projects[autocomplete_deluxe][download][revision] = 70bdefe5
+projects[autocomplete_deluxe][download][branch]   = 7.x-2.0

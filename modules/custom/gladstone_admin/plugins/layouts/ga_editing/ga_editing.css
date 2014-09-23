@@ -1,0 +1,78 @@
+/* base-grid.css --- 
+   Copyright (C) 2010 António P. P. Almeida <appa@perusio.net>
+
+   Author: António P. P. Almeida <appa@perusio.net>
+
+   This program is free software, you can redistribute it and/or
+   modify it under the terms of the new-style BSD license.
+   You should have received a copy of the BSD license along with this
+   program. If not, see <http://www.debian.org/misc/bsd.license>.
+
+   Inspired & stolen from Nicole Sullivan's OOCSS http://oocss.org
+   This file is the base grid for the tinycss framework. */
+
+.unit {
+  float: left;
+}
+
+/* CSS file for the 35 65 stacked layout */
+.panel-col-35 {
+  width: 34.99%;
+}
+.panel-col-65 {
+  width: 65%;
+}
+.panel-footer {
+  display: inline-block;
+  float: none;
+  width: auto;  
+}
+.panel-footer:after {
+  clear: both;
+  display: block;
+  visibility: hidden; 
+  overflow:hidden;
+  height:0 !important;
+  line-height: 0;
+  font-size: xx-large;
+  content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
+}
+
+.panel-header, .panel-top, .panel-footer {
+  width: 100%;
+}
+
+#edit-actions {
+  margin-top: 35px;
+}
+
+.pane-node-form-publishing .pane-content, 
+{
+  display: inline-block;
+}
+
+.pane-node-form-publishing .pane-content {
+  -moz-column-count: 2;
+  -moz-column-gap: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 0;
+  column-count: 2;
+  column-gap: 0;
+}
+
+div.autocomplete-deluxe-multiple {
+  width: 97% !important;
+}
+
+.horizontal-tabs fieldset.horizontal-tabs-pane {
+  padding: 0;
+}
+
+.container-inline .fieldset-legend .fieldset-content, .fieldset.titled .fieldset-content {
+  padding-top: 1em !important;
+}
+
+.node-form .text-format-wrapper .form-item {
+  border: none;
+  padding: 0;
+}

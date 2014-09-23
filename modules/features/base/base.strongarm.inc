@@ -19,10 +19,10 @@ function base_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(),
@@ -52,6 +52,7 @@ function base_strongarm() {
   $strongarm->name = 'node_options_site_page';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_site_page'] = $strongarm;
 

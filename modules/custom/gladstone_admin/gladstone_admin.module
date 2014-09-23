@@ -16,3 +16,15 @@ function gladstone_admin_preprocess_html(&$variables) {
 }
 
 
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * It simply tells panels where to find the .inc files that define various
+ * types of plugins: layouts, styles, args, contexts, content_types.
+ */
+function gladstone_admin_ctools_plugin_directory($owner, $plugin_type) {
+  // We're just providing layout plugins.
+  if ($owner == 'panels' && $plugin_type == 'layouts') {
+    return "plugins/$plugin_type";
+  }
+}

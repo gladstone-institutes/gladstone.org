@@ -25,7 +25,7 @@ function base_node_info() {
       'description' => t('Pages essential to site-map structure'),
       'has_title' => '1',
       'title_label' => t('Title'),
-      'help' => '',
+      'help' => t('Site pages are essential to the backbone structure of the site and require elevated privileges to alter. If you need to make a change and do not have permission, contact the site admin.'),
     ),
   );
   return $items;

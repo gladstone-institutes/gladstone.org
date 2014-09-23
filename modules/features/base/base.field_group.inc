@@ -13,29 +13,87 @@ function base_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_tags|node|site_page|form';
-  $field_group->group_name = 'group_tags';
+  $field_group->identifier = 'group_content|node|site_page|form';
+  $field_group->group_name = 'group_content';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'site_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tabs';
+  $field_group->data = array(
+    'label' => 'Content',
+    'weight' => '8',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_file',
+      2 => 'title',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-content field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_content|node|site_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_tabs|node|site_page|form';
+  $field_group->group_name = 'group_tabs';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'site_page';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Tags',
-    'weight' => '4',
+    'label' => 'Tabs',
+    'weight' => '0',
     'children' => array(
-      0 => 'field_research_tag',
+      0 => 'group_content',
+      1 => 'group_tagging',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'htabs',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => '',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-tags field-group-fieldset',
-        'required_fields' => 1,
+        'classes' => 'group-tabs field-group-htabs',
       ),
     ),
   );
-  $export['group_tags|node|site_page|form'] = $field_group;
+  $export['group_tabs|node|site_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_tagging|node|site_page|form';
+  $field_group->group_name = 'group_tagging';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'site_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tabs';
+  $field_group->data = array(
+    'label' => 'Tagging',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_research_tag',
+      1 => 'field_operational_unit',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-tagging field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_tagging|node|site_page|form'] = $field_group;
 
   return $export;
 }
