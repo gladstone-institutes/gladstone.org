@@ -79,8 +79,9 @@ function base_field_group_info() {
     'label' => 'Tagging',
     'weight' => '9',
     'children' => array(
-      0 => 'field_research_tag',
-      1 => 'field_operational_unit',
+      0 => 'field_operational_unit',
+      1 => 'field_research_tag',
+      2 => 'field_node_ref',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

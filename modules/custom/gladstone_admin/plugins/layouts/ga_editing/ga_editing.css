@@ -76,3 +76,13 @@ div.autocomplete-deluxe-multiple {
   border: none;
   padding: 0;
 }
+
+.field-name-field-node-ref table,
+.field-name-field-node-ref thead th {
+  background: none;
+  border: none;
+}
+
+
+
+
