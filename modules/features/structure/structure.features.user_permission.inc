@@ -133,6 +133,15 @@ function structure_user_default_permissions() {
     'module' => 'block',
   );
 
+  // Exported permission: administer ckeditor.
+  $permissions['administer ckeditor'] = array(
+    'name' => 'administer ckeditor',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'ckeditor',
+  );
+
   // Exported permission: administer image styles.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -316,6 +325,15 @@ function structure_user_default_permissions() {
       'webadmin' => 'webadmin',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: customize ckeditor.
+  $permissions['customize ckeditor'] = array(
+    'name' => 'customize ckeditor',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'ckeditor',
   );
 
   // Exported permission: delete revisions.

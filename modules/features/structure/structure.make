@@ -50,4 +50,15 @@ projects[menu_position_uuid][version] = "1.x-dev"
 projects[menu_position_uuid][subdir]  = "contrib"
 projects[menu_position_uuid][patch][] = "https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/menu_position_uuid-fix_deletion_of_other_postion_rules.patch"
 
+; UI/UX Enhancements ----------------------------
+projects[ckeditor][version]  = 1.x-dev
+projects[ckeditor][subdir]	 = contrib
+projects[ckeditor][download][type]     = git
+projects[ckeditor][download][revision] = b29372fb
+projects[ckeditor][download][branch]   = 7.x-1.x
+libraries[ckeditor][download][type]    = get
+libraries[ckeditor][download][url]     = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.4/ckeditor_4.3.4_standard.zip
+libraries[ckeditor][download][subtree] = ckeditor/
+libraries[ckeditor][destination]       = modules/contrib/ckeditor/
+
 
