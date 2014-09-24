@@ -61,4 +61,9 @@ libraries[ckeditor][download][url]     = http://download.cksource.com/CKEditor/C
 libraries[ckeditor][download][subtree] = ckeditor/
 libraries[ckeditor][destination]       = modules/contrib/ckeditor/
 
+projects[diff][version]	= 3.x-dev
+projects[diff][subdir]	= "contrib"
+projects[diff[download][type]     = git
+projects[diff[download][revision] = 29ca19a
+projects[diff[download][branch]   = 7.x-3.x
 

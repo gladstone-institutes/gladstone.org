@@ -9,6 +9,7 @@ dependencies[] = ckeditor
 dependencies[] = coffee
 dependencies[] = ctools
 dependencies[] = deploy
+dependencies[] = diff
 dependencies[] = entity_menu_links
 dependencies[] = features
 dependencies[] = file
