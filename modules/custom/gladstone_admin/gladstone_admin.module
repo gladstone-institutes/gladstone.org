@@ -15,6 +15,21 @@ function gladstone_admin_preprocess_html(&$variables) {
   }
 }
 
+/**
+ * Implements hook_init()
+ */
+function gladstone_admin_init() {
+  
+  // Load the seven theme CSS for the media browser. This is done
+  // because the seven theme may not be the admin theme, but the
+  // media browser assumes that it is....
+  if (arg(0) == 'media' && arg(1) == 'browser' && $GLOBALS['theme'] != 'seven') {
+    $path = drupal_get_path('theme', 'seven');
+    drupal_add_css($path.'/reset.css', array('basename' => 'seven_reset', 'group' => CSS_THEME));
+    drupal_add_css($path.'/style.css', array('basename' => 'seven_style', 'group' => CSS_THEME));  
+  }
+
+}
 
 /**
  * Implements hook_ctools_plugin_directory().

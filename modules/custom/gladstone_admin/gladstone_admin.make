@@ -20,6 +20,9 @@ projects[menu_editor][version] = "1.0-beta3"
 projects[menu_editor][subdir] = "contrib"
 
 ;Admin theme
-projects[rubik][version] = "4.0"
+projects[rubik][version] 			= "4.0-dev"
+projects[rubik][download][type] 	= git
+projects[rubik][download][revision] = 05ffd6f9
+projects[rubik][download][branch] 	= 7.x-4.x
 ;projects[rubik][patch][] = ""
 projects[tao][version] = "3.1"
