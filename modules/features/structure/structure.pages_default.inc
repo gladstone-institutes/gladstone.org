@@ -125,6 +125,29 @@ function structure_default_page_manager_handlers() {
     $display->content['new-923f3a95-a5f6-426c-b9c3-e3fb76522f40'] = $pane;
     $display->panels['right'][1] = 'new-923f3a95-a5f6-426c-b9c3-e3fb76522f40';
     $pane = new stdClass();
+    $pane->pid = 'new-3d71a2c4-7074-4cc4-8fab-636a20bcba5a';
+    $pane->panel = 'right';
+    $pane->type = 'node_form_menu';
+    $pane->subtype = 'node_form_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_node_edit_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '3d71a2c4-7074-4cc4-8fab-636a20bcba5a';
+    $display->content['new-3d71a2c4-7074-4cc4-8fab-636a20bcba5a'] = $pane;
+    $display->panels['right'][2] = 'new-3d71a2c4-7074-4cc4-8fab-636a20bcba5a';
+    $pane = new stdClass();
     $pane->pid = 'new-0fafebac-29ff-4e3d-82ee-9e3935e15a0f';
     $pane->panel = 'right';
     $pane->type = 'node_form_log';
@@ -145,11 +168,11 @@ function structure_default_page_manager_handlers() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '0fafebac-29ff-4e3d-82ee-9e3935e15a0f';
     $display->content['new-0fafebac-29ff-4e3d-82ee-9e3935e15a0f'] = $pane;
-    $display->panels['right'][2] = 'new-0fafebac-29ff-4e3d-82ee-9e3935e15a0f';
+    $display->panels['right'][3] = 'new-0fafebac-29ff-4e3d-82ee-9e3935e15a0f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
