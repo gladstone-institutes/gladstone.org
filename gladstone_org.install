@@ -38,8 +38,24 @@ function gladstone_org_install() {
   
   // Set superadmin as the administrator role.
   variable_set('user_admin_role', $role->rid);
+}
 
 
+/**
+ * Implements hook_modules_enabled($modules)
+ *
+ * Delayed activation, run "Update" class modules 
+ * these "Update" Modules, programmatically apply site-wide updates
+ * to post installation. 
+ * 
+ * Example: adding tagging fields and field group to all content types
+ * @see module_enable()
+ */
+function gladstone_org_enable() {
+// function gladstone_org_modules_enabled($modules) {
+    // module_enable( array('tagging'));
+  echo "==========================================\n";
+  echo "Delayed activation hook\n";
 }
 
 

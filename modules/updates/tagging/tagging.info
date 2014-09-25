@@ -1,8 +1,12 @@
 name = Tagging
 description = Taxonomy content bundles
 core = 7.x
-package = Content
+package = Updates
 php = 5.2.4
+dependencies[] = autocomplete_deluxe
 dependencies[] = base
+dependencies[] = entityreference
+dependencies[] = field_group
+dependencies[] = taxonomy
 features[features_api][] = api:2
-project path = profiles/gladstone_org/modules/features
+project path = profiles/gladstone_org/modules/updates

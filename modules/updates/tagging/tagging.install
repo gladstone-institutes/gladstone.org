@@ -1,0 +1,339 @@
+<?php
+
+function tagging_install() {
+
+
+	// Create field groups and populate for each content type
+	$content_types = node_type_get_types();
+	foreach ($content_types as $content_type) {
+		
+		$entity_type = 'node';
+		$bundle      = $content_type->type;
+
+		$tabs = array_keys(field_group_info_groups($entity_type,$bundle,"form"));
+		_add_tagging_fields($entity_type,$bundle);
+		_create_group_tagging($entity_type,$bundle);
+		_update_group_tabs($entity_type,$bundle,$tabs);
+	}
+
+}
+
+
+
+function _add_tagging_fields($entity_type,$bundle){
+
+	$field_instances = array();
+	$current_field_instances = array_keys(field_info_instances($entity_type,$bundle));
+
+	if (!in_array('field_node_ref',$current_field_instances)) {
+		$field_instances[$entity_type.'-'.$bundle.'-field_node_ref'] = array(
+		    'bundle' => $bundle,
+		    'default_value' => NULL,
+		    'deleted' => 0,
+		    'description' => 'Add references to other content. Useful for displaying related articles feeds in the sidebar.',
+		    'display' => array(
+		      'default' => array(
+		        'label' => 'above',
+		        'module' => 'entityreference',
+		        'settings' => array(
+		          'link' => FALSE,
+		        ),
+		        'type' => 'entityreference_label',
+		        'weight' => 1,
+		      ),
+		      'teaser' => array(
+		        'label' => 'above',
+		        'settings' => array(),
+		        'type' => 'hidden',
+		        'weight' => 0,
+		      ),
+		    ),
+		    'entity_type' => $entity_type,
+		    'field_name' => 'field_node_ref',
+		    'label' => 'Node Reference(s)',
+		    'required' => 0,
+		    'rubik_edit_field_display' => 'default',
+		    'settings' => array(
+		      'user_register_form' => FALSE,
+		    ),
+		    'widget' => array(
+		      'active' => 1,
+		      'module' => 'entityreference',
+		      'settings' => array(
+		        'match_operator' => 'CONTAINS',
+		        'path' => '',
+		        'size' => 60,
+		      ),
+		      'type' => 'entityreference_autocomplete',
+		      'weight' => 5,
+		    ),
+		  );
+	}
+	if (!in_array('field_operational_unit',$current_field_instances)) {
+		$field_instances[$entity_type.'-'.$bundle.'-field_operational_unit'] = array(
+		  'bundle' => $bundle,
+		  'default_value' => NULL,
+		  'deleted' => 0,
+		  'description' => 'Functional group/team (ex: Institute, Lab, Administration, Advisory Boards)',
+		  'display' => array(
+		    'default' => array(
+		      'label' => 'above',
+		      'module' => 'taxonomy',
+		      'settings' => array(),
+		      'type' => 'taxonomy_term_reference_link',
+		      'weight' => 3,
+		    ),
+		    'teaser' => array(
+		      'label' => 'above',
+		      'settings' => array(),
+		      'type' => 'hidden',
+		      'weight' => 0,
+		    ),
+		  ),
+		  'entity_type' => $entity_type,
+		  'field_name' => 'field_operational_unit',
+		  'label' => 'Operational Unit(s)',
+		  'required' => 0,
+		  'rubik_edit_field_display' => 'default',
+		  'settings' => array(
+		    'user_register_form' => FALSE,
+		  ),
+		  'widget' => array(
+		    'active' => 1,
+		    'module' => 'autocomplete_deluxe',
+		    'settings' => array(
+		      'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+		      'delimiter' => '',
+		      'limit' => 10,
+		      'min_length' => 0,
+		      'size' => 60,
+		    ),
+		    'type' => 'autocomplete_deluxe_taxonomy',
+		    'weight' => 4,
+		  ),
+		);
+	}
+	if (!in_array('field_research_tag',$current_field_instances)) {
+		$field_instances[$entity_type.'-'.$bundle.'-field_research_tag'] = array(
+		  'bundle' => $bundle,
+		  'default_value' => NULL,
+		  'deleted' => 0,
+		  'description' => 'Tag content with related terms here. <i>example: disease name, research areas, proteins, pathways, etc..</i>',
+		  'display' => array(
+		    'default' => array(
+		      'label' => 'above',
+		      'module' => 'taxonomy',
+		      'settings' => array(),
+		      'type' => 'taxonomy_term_reference_link',
+		      'weight' => 4,
+		    ),
+		    'teaser' => array(
+		      'label' => 'above',
+		      'settings' => array(),
+		      'type' => 'hidden',
+		      'weight' => 0,
+		    ),
+		  ),
+		  'entity_type' => $entity_type,
+		  'field_name' => 'field_research_tag',
+		  'label' => 'Research Tag(s)',
+		  'required' => 0,
+		  'rubik_edit_field_display' => 'default',
+		  'settings' => array(
+		    'user_register_form' => FALSE,
+		  ),
+		  'widget' => array(
+		    'active' => 1,
+		    'module' => 'autocomplete_deluxe',
+		    'settings' => array(
+		      'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+		      'delimiter' => '',
+		      'limit' => 10,
+		      'min_length' => 0,
+		      'size' => 60,
+		    ),
+		    'type' => 'autocomplete_deluxe_taxonomy',
+		    'weight' => 3,
+		  ),
+		);
+	}
+	if (!in_array('field_file',$current_field_instances)) {
+		$field_instances[$entity_type.'-'.$bundle.'-field_file'] = array(
+		  'bundle' => $bundle,
+		  'deleted' => 0,
+		  'description' => 'Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>',
+		  'display' => array(
+		    'default' => array(
+		      'label' => 'above',
+		      'module' => 'file',
+		      'settings' => array(),
+		      'type' => 'file_default',
+		      'weight' => 2,
+		    ),
+		    'teaser' => array(
+		      'label' => 'above',
+		      'settings' => array(),
+		      'type' => 'hidden',
+		      'weight' => 0,
+		    ),
+		  ),
+		  'entity_type' => $entity_type,
+		  'field_name' => 'field_file',
+		  'label' => 'File',
+		  'required' => 0,
+		  'rubik_edit_field_display' => 'default',
+		  'settings' => array(
+		    'description_field' => 1,
+		    'file_directory' => $bundle,
+		    'file_extensions' => 'txt pdf doc png zip jpeg jpg tiff ppt',
+		    'max_filesize' => '',
+		    'user_register_form' => FALSE,
+		  ),
+		  'widget' => array(
+		    'active' => 1,
+		    'module' => 'media',
+		    'settings' => array(
+		      'allowed_schemes' => array(
+		        'public' => 'public',
+		      ),
+		      'allowed_types' => array(
+		        'audio' => 0,
+		        'document' => 0,
+		        'image' => 0,
+		        'video' => 0,
+		      ),
+		      'browser_plugins' => array(
+		        'media_default--media_browser_1' => 0,
+		        'media_default--media_browser_my_files' => 0,
+		        'upload' => 0,
+		      ),
+		    ),
+		    'type' => 'media_generic',
+		    'weight' => 3,
+		  ),
+		);
+	}
+
+	foreach ($field_instances as $field_instance) {
+		field_create_instance($field_instance);
+	}
+
+}
+
+
+function _update_group_tabs($entity_type,$bundle,$tabs = FALSE) {
+	if (!field_group_exists('group_tabs',$entity_type,$bundle,'form')){
+		$group = new stdClass();
+		$group->disabled = FALSE;
+		$group->api_version = 1;
+		$group->identifier = 'group_tabs|'.$entity_type.'|'.$bundle.'|form';
+		$group->group_name = 'group_tabs';
+		$group->entity_type = $entity_type;
+		$group->bundle = $bundle;
+		$group->mode = 'form';
+		$group->parent_name = '';
+		$group->label = 'Tabs';
+		$group->weight = 0;
+
+		if ($tabs){
+			$tabs[] = 'group_tagging';
+			$group->children = $tabs;
+		} else {
+			#@todo create group_content tab and populate with stray fields
+			_create_group_content($entity_type,$bundle);
+			$group->children = array('group_content','group_tagging');
+		}
+
+		$group->format_type = 'htabs';
+		$group->format_settings = array(
+			'formatter' => '',
+			'instance_settings' => array(
+				'classes' => 'group-tabs field-group-htabs',
+			),
+		);
+
+	} else {
+		$group = field_group_load_field_group('group_tabs',$entity_type,$bundle,'form');
+		if (!in_array('group_tagging', $group->children)) {
+			$group->children[] = 'group_tagging';
+		}
+	}
+
+	field_group_group_save($group);
+}
+
+function _create_group_tagging($entity_type,$bundle) {
+	if (!field_group_exists('group_tagging',$entity_type,$bundle,'form')){
+		$group = new stdClass();
+		$group->disabled = FALSE;
+		$group->api_version = 1;
+		$group->identifier = 'group_tagging|'.$entity_type.'|'.$bundle.'|form';
+		$group->group_name = 'group_tagging';
+		$group->entity_type = $entity_type;
+		$group->bundle = $bundle;
+		$group->mode = 'form';
+		$group->parent_name = 'group_tabs';
+		$group->label = 'Content';
+		$group->weight = 0;
+		$group->children = array(
+	     	0 => 'field_operational_unit',
+	     	1 => 'field_research_tag',
+	     	2 => 'field_node_ref',
+	    );
+		$group->format_type = 'htab';
+		$group->format_settings = array(
+			'formatter' => 'closed',
+			'instance_settings' => array(
+				'description' => '',
+				'classes' => 'group-tagging field-group-htab',
+				'required_fields' => 1,
+	        	'id' => '',
+			),
+		);
+
+		field_group_group_save($group);
+	}
+}
+
+function _create_group_content($entity_type,$bundle) {
+	if (!field_group_exists('group_content',$entity_type,$bundle,'form')){
+		$fields = array_keys(field_info_instances($entity_type, $bundle));
+		$extra_fields = array_keys(field_info_extra_fields($entity_type, $bundle,'form'));
+		$tagging_fields = array(
+	    	0 => 'field_operational_unit',
+	    	1 => 'field_research_tag',
+	    	2 => 'field_node_ref',
+	    );
+		$children = array_diff(array_merge($fields,$extra_fields), $tagging_fields);
+
+		$group = new stdClass();
+		$group->disabled = FALSE;
+		$group->api_version = 1;
+		$group->identifier = 'group_content|'.$entity_type.'|'.$bundle.'|form';
+		$group->group_name = 'group_content';
+		$group->entity_type = $entity_type;
+		$group->bundle = $bundle;
+		$group->mode = 'form';
+		$group->parent_name = 'group_tabs';
+		$group->label = 'Content';
+		$group->weight = 0;
+		$group->children = $children;
+		$group->format_type = 'htab';
+		$group->format_settings = array(
+			'formatter' => 'closed',
+			'instance_settings' => array(
+				'description' => '',
+				'classes' => 'group-content field-group-htab',
+				'required_fields' => 1,
+	        	'id' => '',
+			),
+		);
+
+		field_group_group_save($group);
+	}
+
+}
+
+
+
+
