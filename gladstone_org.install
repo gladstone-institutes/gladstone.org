@@ -44,18 +44,17 @@ function gladstone_org_install() {
 /**
  * Implements hook_modules_enabled($modules)
  *
- * Delayed activation, run "Update" class modules 
- * these "Update" Modules, programmatically apply site-wide updates
- * to post installation. 
+ * Delayed activation, runs "Update" class modules 
+ * these "Update" modules, programmatically apply site-wide updates
+ * post installation, after features have been installed and enabled. 
  * 
  * Example: adding tagging fields and field group to all content types
  * @see module_enable()
  */
-function gladstone_org_enable() {
-// function gladstone_org_modules_enabled($modules) {
+function gladstone_org_modules_enabled($modules) {
+  if (in_array('update', $modules)) {
     // module_enable( array('tagging'));
-  echo "==========================================\n";
-  echo "Delayed activation hook\n";
+  }
 }
 
 

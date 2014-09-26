@@ -1,12 +1,14 @@
 name = Tagging
-description = Taxonomy content bundles
+description = Programmatically make nodes taggable
 core = 7.x
 package = Updates
 php = 5.2.4
 dependencies[] = autocomplete_deluxe
 dependencies[] = base
 dependencies[] = entityreference
+dependencies[] = features
 dependencies[] = field_group
+dependencies[] = tagging
 dependencies[] = taxonomy
 features[features_api][] = api:2
 project path = profiles/gladstone_org/modules/updates

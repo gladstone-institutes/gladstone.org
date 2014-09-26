@@ -1,0 +1,39 @@
+<?php
+
+include_once 'up_tagging.field_instance.inc';
+include_once 'up_tagging.field_group.inc';
+
+function up_tagging_enable() {
+
+
+	// Create field groups and populate for each content type
+	$content_types = node_type_get_types();
+	foreach ($content_types as $content_type) {
+		
+		$entity_type = 'node';
+		$bundle      = $content_type->type;
+
+		// Idetify top level tabs
+		$tabs = array();
+		$groups = field_group_info_groups($entity_type,$bundle,"form");
+		foreach ($groups as $group) {
+			if (!$group->parent_name) {
+				$tabs[] = $group->group_name;
+			}
+		}
+
+		// Create field instances
+		$current_field_instances = array_keys(field_info_instances($entity_type,$bundle));
+		$field_instances = _create_field_instances($entity_type,$bundle);
+		foreach ($field_instances as $field_instance) {		
+			if (!in_array($field_instance['field_name'],$current_field_instances)) {
+				field_create_instance($field_instance);
+			}
+		}
+
+		_create_field_group_tagging($entity_type,$bundle,$tabs);
+		_update_field_group_tabs($entity_type,$bundle,$tabs);
+	}
+
+}
+
