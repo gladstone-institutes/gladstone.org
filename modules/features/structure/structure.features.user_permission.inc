@@ -142,6 +142,15 @@ function structure_user_default_permissions() {
     'module' => 'ckeditor',
   );
 
+  // Exported permission: administer content types.
+  $permissions['administer content types'] = array(
+    'name' => 'administer content types',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: administer image styles.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -272,6 +281,15 @@ function structure_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: bypass node access.
+  $permissions['bypass node access'] = array(
+    'name' => 'bypass node access',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: cancel account.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
@@ -306,6 +324,18 @@ function structure_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: create basic_page content.
+  $permissions['create basic_page content'] = array(
+    'name' => 'create basic_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: create mini panels.
   $permissions['create mini panels'] = array(
     'name' => 'create mini panels',
@@ -314,6 +344,17 @@ function structure_user_default_permissions() {
       'webadmin' => 'webadmin',
     ),
     'module' => 'panels_mini',
+  );
+
+  // Exported permission: create site_page content.
+  $permissions['create site_page content'] = array(
+    'name' => 'create site_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: create url aliases.
@@ -336,10 +377,101 @@ function structure_user_default_permissions() {
     'module' => 'ckeditor',
   );
 
+  // Exported permission: delete any basic_page content.
+  $permissions['delete any basic_page content'] = array(
+    'name' => 'delete any basic_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any site_page content.
+  $permissions['delete any site_page content'] = array(
+    'name' => 'delete any site_page content',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own basic_page content.
+  $permissions['delete own basic_page content'] = array(
+    'name' => 'delete own basic_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own site_page content.
+  $permissions['delete own site_page content'] = array(
+    'name' => 'delete own site_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: delete revisions.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any basic_page content.
+  $permissions['edit any basic_page content'] = array(
+    'name' => 'edit any basic_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any site_page content.
+  $permissions['edit any site_page content'] = array(
+    'name' => 'edit any site_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own basic_page content.
+  $permissions['edit own basic_page content'] = array(
+    'name' => 'edit own basic_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'authenticated user' => 'authenticated user',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own site_page content.
+  $permissions['edit own site_page content'] = array(
+    'name' => 'edit own site_page content',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
       'superadmin' => 'superadmin',
       'webadmin' => 'webadmin',
     ),
