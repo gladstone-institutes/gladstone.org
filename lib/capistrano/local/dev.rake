@@ -12,6 +12,8 @@ namespace 'drupal:dev' do
         execute :rm, '-fr', 'themes/'+fetch(:application)
         execute :rm, '-fr', 'modules/custom/'
         execute :rm, '-fr', 'modules/features/'
+        execute :rm, '-fr', 'modules/updates/'
+        execute :rm, '-fr', 'modules/content/'
         execute :rm, '-f',  fetch(:application)+'.info'
 
         # Symlink to Module and Theme files. 
@@ -21,6 +23,8 @@ namespace 'drupal:dev' do
         execute :ln, '-s', Dir.pwd+'/themes/'+fetch(:application), 'themes/'
         execute :ln, '-s', Dir.pwd+'/modules/custom', 'modules/'
         execute :ln, '-s', Dir.pwd+'/modules/features', 'modules/'
+        execute :ln, '-s', Dir.pwd+'/modules/updates', 'modules/'
+        execute :ln, '-s', Dir.pwd+'/modules/content', 'modules/'
         execute :ln, '-s', Dir.pwd+'/'+fetch(:application)+'.info'
       end
     end  

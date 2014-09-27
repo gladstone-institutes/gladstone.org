@@ -238,7 +238,7 @@ namespace 'drupal:dev' do
     # features = Dir.glob("#{fetch(:drupal_root)}/profiles/#{fetch(:application)}/modules/features/*").select{|p| File.directory? p}.map{|d| File.basename d}
     on roles(:web) do
       within fetch(:drupal_root) do
-        features = capture(:drush, 'features-list','|grep Enabled').split(/\r?\n/).map{|l| l.match(/\s+([a-z]+)\s+Enabled/)[1]}
+        features = capture(:drush, 'features-list','|grep Enabled').split(/\r?\n/).map{|l| l.match(/\s+([a-z_]+)\s+Enabled/)[1]}
         features.each do |feature|  
           info "*** Reverting Feature #{feature} ***"
           execute :drush, 'features-revert', '--yes --force', feature, '2>&1'          
