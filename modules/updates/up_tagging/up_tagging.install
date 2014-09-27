@@ -41,13 +41,12 @@ function up_tagging_enable() {
 
 		// Commit changes
 		foreach ($field_groups as $group_name => $field_group) {
-			// if (!field_group_exists($group_name,$entity_type,$bundle,'form') ) {
-				if($field_group) {
-					field_group_group_save($field_group);
+			if($field_group) {
+				if (field_group_exists($group_name,$entity_type,$bundle,'form') ) {
+					$field_group->export_type = EXPORT_IN_DATABASE;
 				}
-			// } else {
-
-			// }
+				field_group_group_save($field_group);
+			}
 		}
 
 	}
