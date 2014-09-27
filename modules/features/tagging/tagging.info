@@ -1,0 +1,15 @@
+name = Tagging
+description = Enable content tagging
+core = 7.x
+package = Structure
+php = 5.2.4
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[field_base][] = field_node_ref
+features[field_base][] = field_operational_unit
+features[field_base][] = field_research_tag
+features[taxonomy][] = operational_units
+features[taxonomy][] = research
+project path = profiles/gladstone_org/modules/features

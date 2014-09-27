@@ -1,6 +1,6 @@
 <?php 
 
-function _create_field_instances($entity_type,$bundle) {
+function _field_instances_info($entity_type,$bundle) {
 	$field_instances = array();
 
 	$field_instances[$entity_type.'-'.$bundle.'-field_node_ref'] = array(

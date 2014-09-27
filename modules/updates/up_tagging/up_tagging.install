@@ -20,19 +20,36 @@ function up_tagging_enable() {
 			if (!$group->parent_name) {
 				$tabs[] = $group->group_name;
 			}
-		}
+		}		
 
 		// Create field instances
 		$current_field_instances = array_keys(field_info_instances($entity_type,$bundle));
-		$field_instances = _create_field_instances($entity_type,$bundle);
+		$field_instances = _field_instances_info($entity_type,$bundle);
 		foreach ($field_instances as $field_instance) {		
 			if (!in_array($field_instance['field_name'],$current_field_instances)) {
 				field_create_instance($field_instance);
+			} else {
+				field_update_instance($field_instance);
 			}
 		}
 
-		_create_field_group_tagging($entity_type,$bundle,$tabs);
-		_update_field_group_tabs($entity_type,$bundle,$tabs);
+		// Create field groups
+		$field_groups = _field_groups_info($entity_type,$bundle);
+		
+		// Run Updates
+		_field_group_tabs_update_00($field_groups,$entity_type,$bundle,$tabs);
+
+		// Commit changes
+		foreach ($field_groups as $group_name => $field_group) {
+			// if (!field_group_exists($group_name,$entity_type,$bundle,'form') ) {
+				if($field_group) {
+					field_group_group_save($field_group);
+				}
+			// } else {
+
+			// }
+		}
+
 	}
 
 }
