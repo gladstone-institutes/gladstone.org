@@ -21,11 +21,13 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '10',
+    'weight' => 0,
     'children' => array(
       0 => 'body',
       1 => 'field_file',
-      2 => 'title',
+      5 => 'title',
+      6 => 'path',
+      7 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -51,11 +53,13 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '8',
+    'weight' => 0,
     'children' => array(
       0 => 'body',
       1 => 'field_file',
-      2 => 'title',
+      5 => 'title',
+      6 => 'path',
+      7 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -81,7 +85,7 @@ function base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => '0',
+    'weight' => 0,
     'children' => array(
       0 => 'group_content',
       1 => 'group_tagging',
@@ -107,7 +111,7 @@ function base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => '0',
+    'weight' => 0,
     'children' => array(
       0 => 'group_content',
       1 => 'group_tagging',
@@ -133,11 +137,11 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => '11',
+    'weight' => 1,
     'children' => array(
-      0 => 'field_node_ref',
-      1 => 'field_operational_unit',
-      2 => 'field_research_tag',
+      0 => 'field_operational_unit',
+      1 => 'field_research_tag',
+      2 => 'field_node_ref',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -163,7 +167,7 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => '9',
+    'weight' => 1,
     'children' => array(
       0 => 'field_operational_unit',
       1 => 'field_research_tag',
