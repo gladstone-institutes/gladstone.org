@@ -91,10 +91,11 @@ function _field_group_tabs_update_00(&$field_groups,$entity_type,$bundle,$tabs =
 	// If Parent group exists, append a tagging tab
 	if (field_group_exists('group_tabs',$entity_type,$bundle,'form')) {
 		$group = field_group_load_field_group('group_tabs',$entity_type,$bundle,'form');
-		if (!in_array('group_tagging', $group->children)) {
-			$group->children[] = 'group_tagging';
-		}
-		$field_groups['group_tabs']->children = $group;
+		if (!in_array('group_tagging', $group->children)) $group->children[] = 'group_tagging';		
+		$field_groups['group_tabs'] = $group;
+
+		// Nuke "Content" tab
+		if (field_group_exists('group_content',$entity_type,$bundle,'form')) $field_groups['group_content'] = NULL;
 	} else {
 
 		// If there are top level tabs, append a tagging tab and create a parent group
