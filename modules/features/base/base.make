@@ -23,6 +23,11 @@ projects[entityreference][download][revision]	= 7.x-1.x
 ;display views label in autocomplete, not the entity type: https://www.drupal.org/node/1896210
 projects[entityreference][patch][1896210] = https://www.drupal.org/files/issues/entityreference-1896210-5.patch
 
+projects[link][version] = "1.2"
+projects[link][subdir]	= "contrib"
+
+projects[date][version] = "2.8"
+projects[date][subdir]  = "contrib"
 
 ; Media -----------------------------------------
 projects[media][version] = 2.x-dev
