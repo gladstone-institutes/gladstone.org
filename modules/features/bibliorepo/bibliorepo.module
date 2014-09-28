@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bibliorepository feature.
+ */
+
+include_once 'bibliorepo.features.inc';
