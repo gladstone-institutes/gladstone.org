@@ -56,6 +56,50 @@ function in_the_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-in_the_news-field_biblio_ref'
+  $field_instances['node-in_the_news-field_biblio_ref'] = array(
+    'bundle' => 'in_the_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Reference to a properly formed biblio citation entry. Citations types include: Print, Audiovisual, Web, and others. <b>Using this field is encouraged! Bibilo enables powerful reporting features</b>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_biblio_ref',
+    'label' => 'Biblio Reference',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-in_the_news-field_boolean'
   $field_instances['node-in_the_news-field_boolean'] = array(
     'bundle' => 'in_the_news',
@@ -206,7 +250,7 @@ function in_the_news_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -464,6 +508,7 @@ function in_the_news_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Add references to other content. Useful for displaying related articles feeds in the sidebar.');
   t('Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>');
+  t('Biblio Reference');
   t('Cover image to display.');
   t('Excerpt');
   t('Excerpt/Full article  (if allowed) of external media.');
@@ -472,6 +517,7 @@ function in_the_news_field_default_field_instances() {
   t('Link to the referencing media.');
   t('Node Reference(s)');
   t('Operational Unit(s)');
+  t('Reference to a properly formed biblio citation entry. Citations types include: Print, Audiovisual, Web, and others. <b>Using this field is encouraged! Bibilo enables powerful reporting features</b>');
   t('Release Date');
   t('Release Image');
   t('Requires subscription to view?');

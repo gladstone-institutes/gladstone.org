@@ -22,7 +22,7 @@ function in_the_news_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
       ),
       'display' => array(),

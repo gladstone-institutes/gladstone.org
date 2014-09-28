@@ -31,6 +31,7 @@ function in_the_news_field_group_info() {
       5 => 'field_file',
       6 => 'title',
       7 => 'path',
+      8 => 'field_biblio_ref',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -60,7 +61,6 @@ function in_the_news_field_group_info() {
     'children' => array(
       0 => 'group_tagging',
       1 => 'group_content',
-      2 => 'group_source',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
