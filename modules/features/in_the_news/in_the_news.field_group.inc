@@ -24,14 +24,14 @@ function in_the_news_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'body',
-      1 => 'field_url',
-      2 => 'field_date',
-      3 => 'field_image',
-      4 => 'field_boolean',
-      5 => 'field_file',
-      6 => 'title',
-      7 => 'path',
-      8 => 'field_biblio_ref',
+      1 => 'field_biblio_refs',
+      2 => 'field_boolean',
+      3 => 'field_date',
+      4 => 'field_file',
+      5 => 'field_image',
+      6 => 'field_url',
+      7 => 'title',
+      8 => 'path',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -59,8 +59,8 @@ function in_the_news_field_group_info() {
     'label' => 'Tabs',
     'weight' => '0',
     'children' => array(
-      0 => 'group_tagging',
-      1 => 'group_content',
+      0 => 'group_content',
+      1 => 'group_tagging',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
