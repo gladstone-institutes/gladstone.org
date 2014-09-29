@@ -5,6 +5,7 @@ package = Structure
 php = 5.2.4
 dependencies[] = base
 dependencies[] = bibliorepo
+dependencies[] = field_group
 dependencies[] = options
 dependencies[] = text
 features[ctools][] = field_group:field_group:1

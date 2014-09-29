@@ -88,6 +88,7 @@ function in_the_news_field_group_info() {
       0 => 'field_node_refs',
       1 => 'field_operational_units',
       2 => 'field_research_tags',
+      3 => 'field_user_refs',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

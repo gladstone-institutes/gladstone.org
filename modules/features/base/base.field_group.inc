@@ -21,13 +21,12 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => 0,
+    'weight' => '0',
     'children' => array(
       0 => 'body',
       1 => 'field_files',
-      5 => 'title',
-      6 => 'path',
-      7 => 'title',
+      2 => 'title',
+      3 => 'path',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -53,13 +52,12 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => 0,
+    'weight' => '0',
     'children' => array(
       0 => 'body',
       1 => 'field_files',
-      5 => 'title',
-      6 => 'path',
-      7 => 'title',
+      2 => 'title',
+      3 => 'path',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -85,7 +83,7 @@ function base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => 0,
+    'weight' => '0',
     'children' => array(
       0 => 'group_content',
       1 => 'group_tagging',
@@ -111,7 +109,7 @@ function base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => 0,
+    'weight' => '0',
     'children' => array(
       0 => 'group_content',
       1 => 'group_tagging',
@@ -137,11 +135,12 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => 1,
+    'weight' => '1',
     'children' => array(
-      0 => 'field_operational_units',
-      1 => 'field_research_tags',
-      2 => 'field_node_refs',
+      0 => 'field_node_refs',
+      1 => 'field_operational_units',
+      2 => 'field_research_tags',
+      3 => 'field_user_refs',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -167,11 +166,12 @@ function base_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => 1,
+    'weight' => '1',
     'children' => array(
-      0 => 'field_operational_units',
-      1 => 'field_research_tags',
-      2 => 'field_node_refs',
+      0 => 'field_node_refs',
+      1 => 'field_operational_units',
+      2 => 'field_research_tags',
+      3 => 'field_user_refs',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

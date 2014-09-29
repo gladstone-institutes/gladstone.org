@@ -37,6 +37,7 @@ features[field_instance][] = node-in_the_news-field_node_refs
 features[field_instance][] = node-in_the_news-field_operational_units
 features[field_instance][] = node-in_the_news-field_research_tags
 features[field_instance][] = node-in_the_news-field_url
+features[field_instance][] = node-in_the_news-field_user_refs
 features[node][] = in_the_news
 features[variable][] = field_bundle_settings_node__in_the_news
 features[variable][] = menu_options_in_the_news
