@@ -27,7 +27,7 @@ function in_the_news_field_group_info() {
       1 => 'field_biblio_refs',
       2 => 'field_boolean',
       3 => 'field_date',
-      4 => 'field_file',
+      4 => 'field_files',
       5 => 'field_image',
       6 => 'field_url',
       7 => 'title',
@@ -85,9 +85,9 @@ function in_the_news_field_group_info() {
     'label' => 'Tagging',
     'weight' => '2',
     'children' => array(
-      0 => 'field_node_ref',
-      1 => 'field_operational_unit',
-      2 => 'field_research_tag',
+      0 => 'field_node_refs',
+      1 => 'field_operational_units',
+      2 => 'field_research_tags',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

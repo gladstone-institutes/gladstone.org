@@ -54,8 +54,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-basic_page-field_file'
-  $field_instances['node-basic_page-field_file'] = array(
+  // Exported field_instance: 'node-basic_page-field_files'
+  $field_instances['node-basic_page-field_files'] = array(
     'bundle' => 'basic_page',
     'deleted' => 0,
     'description' => 'Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>',
@@ -75,7 +75,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_file',
+    'field_name' => 'field_files',
     'label' => 'File',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -110,8 +110,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-basic_page-field_node_ref'
-  $field_instances['node-basic_page-field_node_ref'] = array(
+  // Exported field_instance: 'node-basic_page-field_node_refs'
+  $field_instances['node-basic_page-field_node_refs'] = array(
     'bundle' => 'basic_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -134,7 +134,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_node_ref',
+    'field_name' => 'field_node_refs',
     'label' => 'Node Reference(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -154,8 +154,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-basic_page-field_operational_unit'
-  $field_instances['node-basic_page-field_operational_unit'] = array(
+  // Exported field_instance: 'node-basic_page-field_operational_units'
+  $field_instances['node-basic_page-field_operational_units'] = array(
     'bundle' => 'basic_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -176,7 +176,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_operational_unit',
+    'field_name' => 'field_operational_units',
     'label' => 'Operational Unit(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -198,8 +198,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-basic_page-field_research_tag'
-  $field_instances['node-basic_page-field_research_tag'] = array(
+  // Exported field_instance: 'node-basic_page-field_research_tags'
+  $field_instances['node-basic_page-field_research_tags'] = array(
     'bundle' => 'basic_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -220,7 +220,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_research_tag',
+    'field_name' => 'field_research_tags',
     'label' => 'Research Tag(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -288,8 +288,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-site_page-field_file'
-  $field_instances['node-site_page-field_file'] = array(
+  // Exported field_instance: 'node-site_page-field_files'
+  $field_instances['node-site_page-field_files'] = array(
     'bundle' => 'site_page',
     'deleted' => 0,
     'description' => 'Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>',
@@ -309,7 +309,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_file',
+    'field_name' => 'field_files',
     'label' => 'File',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -344,8 +344,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-site_page-field_node_ref'
-  $field_instances['node-site_page-field_node_ref'] = array(
+  // Exported field_instance: 'node-site_page-field_node_refs'
+  $field_instances['node-site_page-field_node_refs'] = array(
     'bundle' => 'site_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -368,7 +368,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_node_ref',
+    'field_name' => 'field_node_refs',
     'label' => 'Node Reference(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -388,8 +388,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-site_page-field_operational_unit'
-  $field_instances['node-site_page-field_operational_unit'] = array(
+  // Exported field_instance: 'node-site_page-field_operational_units'
+  $field_instances['node-site_page-field_operational_units'] = array(
     'bundle' => 'site_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -410,7 +410,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_operational_unit',
+    'field_name' => 'field_operational_units',
     'label' => 'Operational Unit(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -432,8 +432,8 @@ function base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-site_page-field_research_tag'
-  $field_instances['node-site_page-field_research_tag'] = array(
+  // Exported field_instance: 'node-site_page-field_research_tags'
+  $field_instances['node-site_page-field_research_tags'] = array(
     'bundle' => 'site_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -454,7 +454,7 @@ function base_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_research_tag',
+    'field_name' => 'field_research_tags',
     'label' => 'Research Tag(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',

@@ -24,7 +24,7 @@ function bibliorepo_field_group_info() {
     'weight' => 0,
     'children' => array(
       0 => 'body',
-      4 => 'field_file',
+      4 => 'field_files',
       5 => 'title',
       6 => 'path',
       7 => 'biblio_type',
@@ -136,9 +136,9 @@ function bibliorepo_field_group_info() {
     'label' => 'Tagging',
     'weight' => 1,
     'children' => array(
-      0 => 'field_operational_unit',
-      1 => 'field_research_tag',
-      2 => 'field_node_ref',
+      0 => 'field_operational_units',
+      1 => 'field_research_tags',
+      2 => 'field_node_refs',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

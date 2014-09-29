@@ -54,8 +54,8 @@ function bibliorepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-biblio-field_file'
-  $field_instances['node-biblio-field_file'] = array(
+  // Exported field_instance: 'node-biblio-field_files'
+  $field_instances['node-biblio-field_files'] = array(
     'bundle' => 'biblio',
     'deleted' => 0,
     'description' => 'Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>',
@@ -75,7 +75,7 @@ function bibliorepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_file',
+    'field_name' => 'field_files',
     'label' => 'File',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -110,8 +110,8 @@ function bibliorepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-biblio-field_node_ref'
-  $field_instances['node-biblio-field_node_ref'] = array(
+  // Exported field_instance: 'node-biblio-field_node_refs'
+  $field_instances['node-biblio-field_node_refs'] = array(
     'bundle' => 'biblio',
     'default_value' => NULL,
     'deleted' => 0,
@@ -134,7 +134,7 @@ function bibliorepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_node_ref',
+    'field_name' => 'field_node_refs',
     'label' => 'Node Reference(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -154,8 +154,8 @@ function bibliorepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-biblio-field_operational_unit'
-  $field_instances['node-biblio-field_operational_unit'] = array(
+  // Exported field_instance: 'node-biblio-field_operational_units'
+  $field_instances['node-biblio-field_operational_units'] = array(
     'bundle' => 'biblio',
     'default_value' => NULL,
     'deleted' => 0,
@@ -176,7 +176,7 @@ function bibliorepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_operational_unit',
+    'field_name' => 'field_operational_units',
     'label' => 'Operational Unit(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -198,8 +198,8 @@ function bibliorepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-biblio-field_research_tag'
-  $field_instances['node-biblio-field_research_tag'] = array(
+  // Exported field_instance: 'node-biblio-field_research_tags'
+  $field_instances['node-biblio-field_research_tags'] = array(
     'bundle' => 'biblio',
     'default_value' => NULL,
     'deleted' => 0,
@@ -220,7 +220,7 @@ function bibliorepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_research_tag',
+    'field_name' => 'field_research_tags',
     'label' => 'Research Tag(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',

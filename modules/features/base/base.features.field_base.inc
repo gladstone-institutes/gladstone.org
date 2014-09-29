@@ -164,13 +164,13 @@ function base_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_file'
-  $field_bases['field_file'] = array(
+  // Exported field_base: 'field_files'
+  $field_bases['field_files'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_file',
+    'field_name' => 'field_files',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
