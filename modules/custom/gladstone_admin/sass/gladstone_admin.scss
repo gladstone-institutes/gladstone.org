@@ -48,11 +48,15 @@ div.autocomplete-deluxe-throbber {
 		.form-item {
 			float:left; 
 			margin-right: 1em;		
+
+			&:last-child {
+				float: none
+			}
 		}
 
 		.description {
 			display: inline-block;
-			float:left;
+			float:inherit;
 		}
 	}
 }

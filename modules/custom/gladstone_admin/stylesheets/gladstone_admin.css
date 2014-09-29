@@ -48,19 +48,23 @@ div.autocomplete-deluxe-throbber {
   float: left;
   margin-right: 1em;
 }
-/* line 53, ../sass/gladstone_admin.scss */
+/* line 52, ../sass/gladstone_admin.scss */
+.field-type-list-text.field-widget-options-buttons .form-type-radios .form-item:last-child {
+  float: none;
+}
+/* line 57, ../sass/gladstone_admin.scss */
 .field-type-list-text.field-widget-options-buttons .form-type-radios .description {
   display: inline-block;
-  float: left;
+  float: inherit;
 }
 
-/* line 61, ../sass/gladstone_admin.scss */
+/* line 65, ../sass/gladstone_admin.scss */
 #edit-status .form-item:first-child {
   float: left;
   margin-right: 1em;
 }
 
-/* line 67, ../sass/gladstone_admin.scss */
+/* line 71, ../sass/gladstone_admin.scss */
 #edit-roles {
   -moz-column-count: 2;
   -moz-column-gap: 0;
@@ -70,13 +74,7 @@ div.autocomplete-deluxe-throbber {
   column-gap: 0;
 }
 
-/* line 76, ../sass/gladstone_admin.scss */
+/* line 80, ../sass/gladstone_admin.scss */
 .chosen-container {
   width: 100% !important;
-}
-
-/* line 80, ../sass/gladstone_admin.scss */
-.fixed-admin-pane {
-  position: fixed;
-  padding-right: 30px;
 }
