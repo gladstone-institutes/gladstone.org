@@ -38,9 +38,9 @@ function _field_groups_info($entity_type,$bundle){
 	$group->label = 'Tagging';
 	$group->weight = 1;
 	$group->children = array(
-     	0 => 'field_operational_unit',
-     	1 => 'field_research_tag',
-     	2 => 'field_node_ref',
+     	0 => 'field_operational_units',
+     	1 => 'field_research_tags',
+     	2 => 'field_node_refs',
      	3 => 'field_user_refs',
     );
 	$group->format_type = 'htab';
@@ -108,7 +108,7 @@ function _field_group_tabs_update_00(&$field_groups,$entity_type,$bundle,$tabs =
 			// If there are no top level tabs, put all the fields in a content tab			
 			$fields = array_keys(field_info_instances($entity_type, $bundle));
 			$extra_fields = array_keys(field_info_extra_fields($entity_type, $bundle,'form'));		
-			$tagging_fields = array('field_operational_unit', 'field_research_tag','field_node_ref');
+			$tagging_fields = array('field_operational_units', 'field_research_tags','field_node_refs');
 			$children = array_diff(array_merge($fields,$extra_fields), $tagging_fields);
 			$children[] = 'title';
 			$field_groups['group_content']->children = $children;			

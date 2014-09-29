@@ -3,7 +3,7 @@
 function _field_instances_info($entity_type,$bundle) {
 	$field_instances = array();
 
-	$field_instances[$entity_type.'-'.$bundle.'-field_node_ref'] = array(
+	$field_instances[$entity_type.'-'.$bundle.'-field_node_refs'] = array(
 	    'bundle' => $bundle,
 	    'default_value' => NULL,
 	    'deleted' => 0,
@@ -26,7 +26,7 @@ function _field_instances_info($entity_type,$bundle) {
 	      ),
 	    ),
 	    'entity_type' => $entity_type,
-	    'field_name' => 'field_node_ref',
+	    'field_name' => 'field_node_refs',
 	    'label' => 'Node Reference(s)',
 	    'required' => 0,
 	    'rubik_edit_field_display' => 'default',
@@ -46,7 +46,7 @@ function _field_instances_info($entity_type,$bundle) {
 	    ),
 	  );
 
-	$field_instances[$entity_type.'-'.$bundle.'-field_operational_unit'] = array(
+	$field_instances[$entity_type.'-'.$bundle.'-field_operational_units'] = array(
 	  'bundle' => $bundle,
 	  'default_value' => NULL,
 	  'deleted' => 0,
@@ -67,7 +67,7 @@ function _field_instances_info($entity_type,$bundle) {
 	    ),
 	  ),
 	  'entity_type' => $entity_type,
-	  'field_name' => 'field_operational_unit',
+	  'field_name' => 'field_operational_units',
 	  'label' => 'Operational Unit(s)',
 	  'required' => 0,
 	  'rubik_edit_field_display' => 'default',
@@ -89,7 +89,7 @@ function _field_instances_info($entity_type,$bundle) {
 	  ),
 	);
 
-	$field_instances[$entity_type.'-'.$bundle.'-field_research_tag'] = array(
+	$field_instances[$entity_type.'-'.$bundle.'-field_research_tags'] = array(
 	  'bundle' => $bundle,
 	  'default_value' => NULL,
 	  'deleted' => 0,
@@ -110,7 +110,7 @@ function _field_instances_info($entity_type,$bundle) {
 	    ),
 	  ),
 	  'entity_type' => $entity_type,
-	  'field_name' => 'field_research_tag',
+	  'field_name' => 'field_research_tags',
 	  'label' => 'Research Tag(s)',
 	  'required' => 0,
 	  'rubik_edit_field_display' => 'default',
@@ -132,7 +132,7 @@ function _field_instances_info($entity_type,$bundle) {
 	  ),
 	);
 
-	$field_instances[$entity_type.'-'.$bundle.'-field_file'] = array(
+	$field_instances[$entity_type.'-'.$bundle.'-field_files'] = array(
 	  'bundle' => $bundle,
 	  'deleted' => 0,
 	  'description' => 'Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>',
@@ -152,7 +152,7 @@ function _field_instances_info($entity_type,$bundle) {
 	    ),
 	  ),
 	  'entity_type' => $entity_type,
-	  'field_name' => 'field_file',
+	  'field_name' => 'field_files',
 	  'label' => 'File',
 	  'required' => 0,
 	  'rubik_edit_field_display' => 'default',
