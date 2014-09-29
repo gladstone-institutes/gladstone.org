@@ -1,0 +1,9 @@
+name = Profiles
+description = Adds user profiles/bios, contact cards, and CVs to user accounts
+core = 7.x
+package = Gladstone
+php = 5.2.4
+dependencies[] = base
+dependencies[] = profile2
+features[features_api][] = api:2
+project path = profiles/gladstone_org/modules/features
