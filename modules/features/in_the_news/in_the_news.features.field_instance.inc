@@ -220,7 +220,7 @@ function in_the_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_files',
-    'label' => 'File',
+    'label' => 'File(s)',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
