@@ -19,7 +19,7 @@ projects[entityreference][version]	= 1.x-dev
 projects[entityreference][subdir]	= contrib
 projects[entityreference][download][type]		= git
 projects[entityreference][download][revision]	= dc4196b
-projects[entityreference][download][revision]	= 7.x-1.x
+projects[entityreference][download][branch]		= 7.x-1.x
 ;display views label in autocomplete, not the entity type: https://www.drupal.org/node/1896210
 projects[entityreference][patch][1896210] = https://www.drupal.org/files/issues/entityreference-1896210-5.patch
 
