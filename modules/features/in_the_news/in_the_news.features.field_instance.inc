@@ -56,8 +56,8 @@ function in_the_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-in_the_news-field_biblio_ref'
-  $field_instances['node-in_the_news-field_biblio_ref'] = array(
+  // Exported field_instance: 'node-in_the_news-field_biblio_refs'
+  $field_instances['node-in_the_news-field_biblio_refs'] = array(
     'bundle' => 'in_the_news',
     'default_value' => NULL,
     'deleted' => 0,
@@ -80,7 +80,7 @@ function in_the_news_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_biblio_ref',
+    'field_name' => 'field_biblio_refs',
     'label' => 'Biblio Reference',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
