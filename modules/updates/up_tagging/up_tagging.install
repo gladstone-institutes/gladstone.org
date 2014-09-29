@@ -38,6 +38,7 @@ function up_tagging_enable() {
 		
 		// Run Updates
 		_field_group_tabs_update_00($field_groups,$entity_type,$bundle,$tabs);
+		_field_group_tabs_update_01($field_groups,$entity_type,$bundle,$tabs);
 
 		// Commit changes
 		foreach ($field_groups as $group_name => $field_group) {

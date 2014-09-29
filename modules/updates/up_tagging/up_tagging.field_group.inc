@@ -41,6 +41,7 @@ function _field_groups_info($entity_type,$bundle){
      	0 => 'field_operational_unit',
      	1 => 'field_research_tag',
      	2 => 'field_node_ref',
+     	3 => 'field_user_refs',
     );
 	$group->format_type = 'htab';
 	$group->format_settings = array(
@@ -117,3 +118,12 @@ function _field_group_tabs_update_00(&$field_groups,$entity_type,$bundle,$tabs =
 	}
 }
 
+function _field_group_tabs_update_01(&$field_groups,$entity_type,$bundle,$tabs = FALSE) {
+
+	// Nuke default field_user_refs in favor of existing instance
+	$fields = array_keys(field_info_instances($entity_type, $bundle));
+	if (in_array('field_user_refs', $fields)){ 
+		array_splice($field_groups['group_tagging']->children,3,1);
+	}
+
+}
