@@ -4,10 +4,9 @@ core = 7.x
 package = Gladstone
 php = 5.3.4
 project = gladstone_admin
-
 dependencies[] = coffee
 dependencies[] = fpa
-dependencies[] = module_filter
 dependencies[] = menu_editor
+dependencies[] = module_filter
 features[features_api][] = api:2
 project path = profiles/gladstone_org/modules/custom

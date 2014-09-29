@@ -250,7 +250,7 @@ function in_the_news_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 7,
+      'weight' => 3,
     ),
   );
 
