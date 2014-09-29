@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Technology feature.
+ */
+
+include_once 'technology.features.inc';
