@@ -139,8 +139,8 @@ function press_release_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-press_release-field_caption'
-  $field_instances['node-press_release-field_caption'] = array(
+  // Exported field_instance: 'node-press_release-field_longtext'
+  $field_instances['node-press_release-field_longtext'] = array(
     'bundle' => 'press_release',
     'default_value' => NULL,
     'deleted' => 0,
@@ -161,7 +161,7 @@ function press_release_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_caption',
+    'field_name' => 'field_longtext',
     'label' => 'Sub headline',
     'required' => 0,
     'rubik_edit_field_display' => 'default',

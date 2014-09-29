@@ -95,13 +95,13 @@ function base_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_caption'
-  $field_bases['field_caption'] = array(
+  // Exported field_base: 'field_longtext'
+  $field_bases['field_longtext'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_caption',
+    'field_name' => 'field_longtext',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(

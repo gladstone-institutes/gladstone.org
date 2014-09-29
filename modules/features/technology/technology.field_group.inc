@@ -25,7 +25,7 @@ function technology_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_biblio_refs',
-      2 => 'field_caption',
+      2 => 'field_longtext',
       3 => 'field_contacts',
       4 => 'field_image',
       5 => 'field_technology_type',

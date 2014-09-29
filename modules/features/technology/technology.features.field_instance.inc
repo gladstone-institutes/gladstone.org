@@ -100,8 +100,8 @@ function technology_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-technology-field_caption'
-  $field_instances['node-technology-field_caption'] = array(
+  // Exported field_instance: 'node-technology-field_longtext'
+  $field_instances['node-technology-field_longtext'] = array(
     'bundle' => 'technology',
     'default_value' => NULL,
     'deleted' => 0,
@@ -122,7 +122,7 @@ function technology_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_caption',
+    'field_name' => 'field_longtext',
     'label' => 'Caption',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
