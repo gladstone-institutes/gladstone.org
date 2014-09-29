@@ -2,6 +2,7 @@
 
 include_once 'up_tagging.field_instance.inc';
 include_once 'up_tagging.field_group.inc';
+include_once 'up_tagging.updates.inc';
 
 function up_tagging_enable() {
 
