@@ -14,7 +14,7 @@ function up_tagging_enable() {
 		$entity_type = 'node';
 		$bundle      = $content_type->type;
 
-		// Idetify top level tabs
+		// Identify top level tabs
 		$tabs = array();
 		$groups = field_group_info_groups($entity_type,$bundle,"form");
 		foreach ($groups as $group) {

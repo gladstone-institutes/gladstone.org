@@ -153,7 +153,7 @@ function _field_instances_info($entity_type,$bundle) {
 	  ),
 	  'entity_type' => $entity_type,
 	  'field_name' => 'field_files',
-	  'label' => 'File',
+	  'label' => 'File(s)',
 	  'required' => 0,
 	  'rubik_edit_field_display' => 'default',
 	  'settings' => array(
