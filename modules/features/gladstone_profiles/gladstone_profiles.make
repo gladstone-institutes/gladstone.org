@@ -12,3 +12,8 @@ projects[profile2][download][branch]	= 7.x-1.x
 ; projects[profile2][patch][]   = "<%= token[:raw_base_uri] %>/patches/profile2-profile2_from_user_relation.patch"
 ; projects[profile2][patch][]   = "<%= token[:raw_base_uri] %>/patches/profile2-uri_callback.patch"projects[profile2][version] = "1.x-dev"
 
+projects[name][version]  = 1.x-dev
+projects[name][subdir]	 = contrib
+projects[name][download][type]     = git
+projects[name][download][revision] = dbb981c8
+projects[name][download][branch]   = 7.x-1.x
