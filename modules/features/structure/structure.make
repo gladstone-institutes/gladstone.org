@@ -56,6 +56,8 @@ projects[entity_dependency][subdir]  = "contrib"
 
 projects[uuid][version]	= "1.x-dev"
 projects[uuid][subdir]	= "contrib"
+; CTools Contexts are missing UUID support.
+projects[uuid][patch][] = https://www.drupal.org/files/issues/uuid_ctools_context-2145567-5.patch
 
 projects[entity_menu_links][version] = "1.x-dev"
 projects[entity_menu_links][subdir]  = "contrib"
