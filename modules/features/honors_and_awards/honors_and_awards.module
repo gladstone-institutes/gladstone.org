@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Honors and Awards feature.
+ */
+
+include_once 'honors_and_awards.features.inc';

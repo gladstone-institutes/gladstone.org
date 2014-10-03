@@ -29,6 +29,32 @@ projects[link][subdir]	= "contrib"
 projects[date][version] = "2.8"
 projects[date][subdir]  = "contrib"
 
+projects[relation][version]  = 1.x-dev
+projects[relation][subdir]	 = contrib
+projects[relation][download][type]     = git
+projects[relation][download][revision] = 5b8e243b
+projects[relation][download][branch]   = 7.x-1.x
+
+projects[relation_add][version]  = 1.x-dev
+projects[relation_add][subdir]	 = contrib
+projects[relation_add][download][type]     = git
+projects[relation_add][download][revision] = 93d6dda9
+projects[relation_add][download][branch]   = 7.x-1.x
+; Add case for profile2 relation_add queries, depends on computed_field:field_label_alias in target entity
+projects[relation_add][patch][]   = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/realtion_add-profile2_query_case.patch
+
+projects[auto_entitylabel][version] = "1.x-dev"
+projects[auto_entitylabel][subdir]	= "contrib"
+projects[auto_entitylabel][download][type]		= git
+projects[auto_entitylabel][download][revision]	= baf64896
+projects[auto_entitylabel][download][branch]	= 7.x-1.x
+
+projects[computed_field][version] = "1.x-dev"
+projects[computed_field][subdir]	= "contrib"
+projects[computed_field][download][type]		= git
+projects[computed_field][download][revision]	= c93e2512
+projects[computed_field][download][branch]	= 7.x-1.x
+
 ; Media -----------------------------------------
 projects[media][version] = 2.x-dev
 projects[media][subdir]	 = contrib

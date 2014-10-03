@@ -39,6 +39,28 @@ function base_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'endpoints'
+  $field_bases['endpoints'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'endpoints',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'relation' => array(
+        0 => 'entity_type',
+        1 => 'entity_id',
+        2 => 'r_index',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'relation_endpoint',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'relation_endpoint',
+  );
+
   // Exported field_base: 'field_blurb'
   $field_bases['field_blurb'] = array(
     'active' => 1,
@@ -93,33 +115,6 @@ function base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_boolean',
-  );
-
-  // Exported field_base: 'field_longtext'
-  $field_bases['field_longtext'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_longtext',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_contacts'
@@ -195,6 +190,37 @@ function base_field_default_field_bases() {
     'type' => 'datetime',
   );
 
+  // Exported field_base: 'field_date_mmyy'
+  $field_bases['field_date_mmyy'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_date_mmyy',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'date',
+    'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 1,
+      'granularity' => array(
+        'day' => 0,
+        'hour' => 0,
+        'minute' => 0,
+        'month' => 'month',
+        'second' => 0,
+        'year' => 'year',
+      ),
+      'profile2_private' => FALSE,
+      'timezone_db' => '',
+      'todate' => '',
+      'tz_handling' => 'none',
+    ),
+    'translatable' => 0,
+    'type' => 'datetime',
+  );
+
   // Exported field_base: 'field_files'
   $field_bases['field_files'] = array(
     'active' => 1,
@@ -256,6 +282,69 @@ function base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'image',
+  );
+
+  // Exported field_base: 'field_label_alias'
+  $field_bases['field_label_alias'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_label_alias',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$entity_field[0][\'value\'] = user_load($entity->uid)->realname;',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 1,
+        'data_length' => 255,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => 0,
+      'recalculate' => 0,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
+  // Exported field_base: 'field_longtext'
+  $field_bases['field_longtext'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_longtext',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_text'

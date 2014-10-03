@@ -26,6 +26,21 @@ projects[pathauto][subdir]	= "contrib"
 projects[subpathauto][version]	= "1.3"
 projects[subpathauto][subdir]	= "contrib"
 
+projects[relation_dialog][version]  = 1.x-dev
+projects[relation_dialog][subdir]	 = contrib
+projects[relation_dialog][download][type]     = git
+projects[relation_dialog][download][revision] = fa981fe9
+projects[relation_dialog][download][branch]   = 7.x-1.x
+; Entity create context button not showing: https://www.drupal.org/node/2174815
+projects[relation_dialog][patch][]   = https://www.drupal.org/files/issues/2174815-eliminate-PHP-warning-and-notice-7.patch
+
+projects[references_dialog][version]  = 1.x-dev
+projects[references_dialog][subdir]	 = contrib
+projects[references_dialog][download][type]     = git
+projects[references_dialog][download][revision] = 746a40d9
+projects[references_dialog][download][branch]   = 7.x-1.x
+
+
 ; Import and export -----------------------------
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir]  = "contrib"
@@ -49,6 +64,8 @@ projects[entity_menu_links][patch][] = "https://www.drupal.org/files/issues/2138
 projects[menu_position_uuid][version] = "1.x-dev"
 projects[menu_position_uuid][subdir]  = "contrib"
 projects[menu_position_uuid][patch][] = "https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/menu_position_uuid-fix_deletion_of_other_postion_rules.patch"
+
+;; @todo Relation uuid https://www.drupal.org/sandbox/fruitcake/2161173
 
 ; UI/UX Enhancements ----------------------------
 projects[ckeditor][version]  = 1.x-dev
