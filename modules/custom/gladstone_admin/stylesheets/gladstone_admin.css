@@ -78,3 +78,9 @@ div.autocomplete-deluxe-throbber {
 .chosen-container {
   width: 100% !important;
 }
+
+/* line 84, ../sass/gladstone_admin.scss */
+select#edit-source-bundles,
+select#edit-target-bundles {
+  height: 10em;
+}
