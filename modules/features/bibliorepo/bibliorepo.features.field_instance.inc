@@ -147,6 +147,10 @@ function bibliorepo_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
@@ -242,17 +246,67 @@ function bibliorepo_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-biblio-field_user_refs'
+  $field_instances['node-biblio-field_user_refs'] = array(
+    'bundle' => 'biblio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Tag users related to this content.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_user_refs',
+    'label' => 'User Reference(s)',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 6,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Add references to other content. Useful for displaying related articles feeds in the sidebar.');
   t('Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>');
   t('Body');
-  t('File');
+  t('File(s)');
   t('Functional group/team (ex: Institute, Lab, Administration, Advisory Boards)');
   t('Node Reference(s)');
   t('Operational Unit(s)');
   t('Research Tag(s)');
   t('Tag content with related terms here. <i>example: disease name, research areas, proteins, pathways, etc..</i>');
+  t('Tag users related to this content.');
+  t('User Reference(s)');
 
   return $field_instances;
 }
