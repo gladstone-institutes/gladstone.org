@@ -40,6 +40,11 @@ projects[references_dialog][download][type]     = git
 projects[references_dialog][download][revision] = 746a40d9
 projects[references_dialog][download][branch]   = 7.x-1.x
 
+projects[globalredirect][version]  = 1.x-dev
+projects[globalredirect][subdir]	 = contrib
+projects[globalredirect][download][type]     = git
+projects[globalredirect][download][revision] = e7debe9a
+projects[globalredirect][download][branch]   = 7.x-1.x
 
 ; Import and export -----------------------------
 projects[strongarm][version] = "2.0"
