@@ -1,0 +1,25 @@
+From e63ef20e1e81cab999279c3e625f35c11cbaa75e Mon Sep 17 00:00:00 2001
+Date: Thu, 2 Oct 2014 20:32:19 -0700
+Subject: [PATCH] add case for gladstone profile2 queries
+
+---
+ relation_add.module | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/relation_add.module b/relation_add.module
+index c8605cf..ac4ee41 100644
+--- a/relation_add.module
++++ b/relation_add.module
+@@ -358,6 +358,9 @@ function relation_add_autocomplete($type = '', $direction = 'target', $field = '
+ 
+       // We are most likely searching for an entity ID.
+       $query->entityCondition('entity_id', (int) $string);
++    } 
++    elseif ($entity_type == 'profile2') { // special case for gladstone profile2
++      $query->fieldCondition('field_label_alias', 'value', $string, 'CONTAINS');      
+     }
+     else {
+       $query->propertyCondition($label_key, $string, 'CONTAINS');
+-- 
+1.8.4.2
+
