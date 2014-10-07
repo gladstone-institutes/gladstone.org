@@ -15,7 +15,7 @@ function honors_and_awards_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Honors and Awards';
   $page->admin_description = '';
-  $page->path = 'Honors and Awards/!variant/!nid';
+  $page->path = 'Honors and Awards/%variant/%nid';
   $page->access = array(
     'logic' => 'and',
   );
@@ -286,6 +286,121 @@ function honors_and_awards_default_page_manager_pages() {
   $display->uuid = '4ea07e71-a370-4182-825f-13dd482d1f97';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-00bc994e-e4f4-4a57-8ea6-2b9dfccf9e6a';
+    $pane->panel = 'gs3irc_header';
+    $pane->type = 'page_breadcrumb';
+    $pane->subtype = 'page_breadcrumb';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '00bc994e-e4f4-4a57-8ea6-2b9dfccf9e6a';
+    $display->content['new-00bc994e-e4f4-4a57-8ea6-2b9dfccf9e6a'] = $pane;
+    $display->panels['gs3irc_header'][0] = 'new-00bc994e-e4f4-4a57-8ea6-2b9dfccf9e6a';
+    $pane = new stdClass();
+    $pane->pid = 'new-6c2befd3-3a5f-430b-85c2-c0d60f9d384c';
+    $pane->panel = 'gs3irc_header';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '6c2befd3-3a5f-430b-85c2-c0d60f9d384c';
+    $display->content['new-6c2befd3-3a5f-430b-85c2-c0d60f9d384c'] = $pane;
+    $display->panels['gs3irc_header'][1] = 'new-6c2befd3-3a5f-430b-85c2-c0d60f9d384c';
+    $pane = new stdClass();
+    $pane->pid = 'new-e2a19e65-3c0b-4890-a2ea-0e3c35d994b4';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'e2a19e65-3c0b-4890-a2ea-0e3c35d994b4';
+    $display->content['new-e2a19e65-3c0b-4890-a2ea-0e3c35d994b4'] = $pane;
+    $display->panels['gs3irc_middle'][0] = 'new-e2a19e65-3c0b-4890-a2ea-0e3c35d994b4';
+    $pane = new stdClass();
+    $pane->pid = 'new-8fed701d-bfe6-4bb9-9f9a-99b46fdf1f13';
+    $pane->panel = 'gs3irc_sidebar';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'sidebar';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '8fed701d-bfe6-4bb9-9f9a-99b46fdf1f13';
+    $display->content['new-8fed701d-bfe6-4bb9-9f9a-99b46fdf1f13'] = $pane;
+    $display->panels['gs3irc_sidebar'][0] = 'new-8fed701d-bfe6-4bb9-9f9a-99b46fdf1f13';
+    $pane = new stdClass();
+    $pane->pid = 'new-98f90f02-2291-4db1-99e2-e5c2242ef598';
+    $pane->panel = 'gs3irc_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 1,
+      'markup' => 'none',
+      'id' => '',
+      'class' => '',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '98f90f02-2291-4db1-99e2-e5c2242ef598';
+    $display->content['new-98f90f02-2291-4db1-99e2-e5c2242ef598'] = $pane;
+    $display->panels['gs3irc_top'][0] = 'new-98f90f02-2291-4db1-99e2-e5c2242ef598';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -311,19 +426,19 @@ function honors_and_awards_default_page_manager_pages() {
     'access' => array(
       'plugins' => array(
         0 => array(
-          'name' => 'context_exists',
+          'name' => 'term',
           'settings' => array(
-            'exists' => '0',
+            'vid' => '3',
+            2 => array(),
+            5 => array(),
+            6 => array(),
+            1 => array(),
+            3 => array(
+              13 => '13',
+            ),
+            4 => array(),
           ),
           'context' => 'argument_term_1',
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'context_exists',
-          'settings' => array(
-            'exists' => '0',
-          ),
-          'context' => 'argument_entity_id:node_1',
           'not' => FALSE,
         ),
       ),
@@ -350,6 +465,67 @@ function honors_and_awards_default_page_manager_pages() {
   $display->uuid = '4ea07e71-a370-4182-825f-13dd482d1f97';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-b5b627d1-e214-4dcc-8949-4ae77c36ebe9';
+    $pane->panel = 'gs3irc_header';
+    $pane->type = 'page_breadcrumb';
+    $pane->subtype = 'page_breadcrumb';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b5b627d1-e214-4dcc-8949-4ae77c36ebe9';
+    $display->content['new-b5b627d1-e214-4dcc-8949-4ae77c36ebe9'] = $pane;
+    $display->panels['gs3irc_header'][0] = 'new-b5b627d1-e214-4dcc-8949-4ae77c36ebe9';
+    $pane = new stdClass();
+    $pane->pid = 'new-52674c34-ec70-494f-b793-bda9ea941503';
+    $pane->panel = 'gs3irc_header';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '52674c34-ec70-494f-b793-bda9ea941503';
+    $display->content['new-52674c34-ec70-494f-b793-bda9ea941503'] = $pane;
+    $display->panels['gs3irc_header'][1] = 'new-52674c34-ec70-494f-b793-bda9ea941503';
+    $pane = new stdClass();
+    $pane->pid = 'new-1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe';
+    $pane->panel = 'gs3irc_sidebar';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'sidebar';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe';
+    $display->content['new-1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe'] = $pane;
+    $display->panels['gs3irc_sidebar'][0] = 'new-1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
