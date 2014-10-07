@@ -37,3 +37,4 @@ dependencies[] = features
 ; gladstone -------------------------------------
 dependencies[] = gladstone_admin
 dependencies[] = structure
+dependencies[] = keystone

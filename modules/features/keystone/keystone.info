@@ -1,0 +1,6 @@
+name = Keystone
+description = Top level abstractions tying together models, logic, and presentation
+core = 7.x
+package = Configuration
+features[features_api][] = api:2
+project path = profiles/gladstone_org/modules/features
