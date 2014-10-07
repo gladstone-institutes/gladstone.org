@@ -10,6 +10,10 @@ namespace 'drupal:dev' do
         # will build the site without needing changes to be committed to git
         info 'Remove embedded Profile'
         execute :rm, '-fr', 'themes/'+fetch(:application)
+
+        # patch for old theme
+        execute :rm, '-fr', 'themes/gladstoneinstitutes_org'
+
         execute :rm, '-fr', 'modules/custom/'
         execute :rm, '-fr', 'modules/features/'
         execute :rm, '-fr', 'modules/updates/'
@@ -21,6 +25,10 @@ namespace 'drupal:dev' do
         # changes from git everytime
         info 'Create Symlinks to git repo'
         execute :ln, '-s', Dir.pwd+'/themes/'+fetch(:application), 'themes/'
+        
+        # patch for old theme
+        execute :ln, '-s', Dir.pwd+'/themes/gladstoneinstitutes_org', 'themes/'
+
         execute :ln, '-s', Dir.pwd+'/modules/custom', 'modules/'
         execute :ln, '-s', Dir.pwd+'/modules/features', 'modules/'
         execute :ln, '-s', Dir.pwd+'/modules/updates', 'modules/'
