@@ -13,7 +13,7 @@ function base_taxonomy_default_vocabularies() {
       'name' => 'Structure',
       'machine_name' => 'structure',
       'description' => 'Terms used as selectors in subsystems like views, paths, contexts...',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
     ),
