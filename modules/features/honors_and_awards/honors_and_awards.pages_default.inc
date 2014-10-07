@@ -41,8 +41,8 @@ function honors_and_awards_default_page_manager_pages() {
     ),
     'nid' => array(
       'id' => 1,
-      'identifier' => 'Node',
-      'name' => 'entity_id:node',
+      'identifier' => 'Node: UUID',
+      'name' => 'entity_uuid:node',
       'settings' => array(),
     ),
   );
