@@ -1,4 +1,10 @@
 <?php
+/**
+ * @file
+ * Code for the Gladstone Admin feature.
+ */
+
+include_once 'gladstone_admin.features.inc';
 
 
 /**
