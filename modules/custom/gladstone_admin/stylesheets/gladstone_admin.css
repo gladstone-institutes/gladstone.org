@@ -84,3 +84,8 @@ select#edit-source-bundles,
 select#edit-target-bundles {
   height: 10em;
 }
+
+/* line 89, ../sass/gladstone_admin.scss */
+select.form-select[multiple] {
+  height: 200%;
+}
