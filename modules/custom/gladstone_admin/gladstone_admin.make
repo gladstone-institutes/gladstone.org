@@ -41,3 +41,4 @@ projects[references_dialog][subdir]	 = contrib
 projects[references_dialog][download][type]     = git
 projects[references_dialog][download][revision] = 746a40d9
 projects[references_dialog][download][branch]   = 7.x-1.x
+

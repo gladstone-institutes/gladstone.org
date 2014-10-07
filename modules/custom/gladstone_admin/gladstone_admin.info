@@ -5,6 +5,7 @@ package = Gladstone
 php = 5.3.4
 project = gladstone_admin
 dependencies[] = coffee
+dependencies[] = contextual
 dependencies[] = ctools
 dependencies[] = fpa
 dependencies[] = menu_editor
