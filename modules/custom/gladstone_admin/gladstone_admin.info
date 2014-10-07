@@ -8,5 +8,6 @@ dependencies[] = coffee
 dependencies[] = fpa
 dependencies[] = menu_editor
 dependencies[] = module_filter
+dependencies[] = relation_dialog
 features[features_api][] = api:2
 project path = profiles/gladstone_org/modules/custom
