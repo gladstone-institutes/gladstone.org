@@ -16,6 +16,7 @@ dependencies[] = events
 dependencies[] = features
 dependencies[] = file
 dependencies[] = gladstone_profiles
+dependencies[] = gladstone_widgets
 dependencies[] = globalredirect
 dependencies[] = image
 dependencies[] = in_the_news
