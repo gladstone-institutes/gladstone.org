@@ -38,6 +38,24 @@ function gladstone_admin_init() {
 }
 
 /**
+ * Implements hook_menu_local_tasks_alter()
+ */
+function gladstone_admin_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+
+  /** Force Task "Tabs" To show for when editing page manager pages **/
+  if (user_is_logged_in()) { 
+  // Dont alter the admin page tabs
+    if(path_is_admin(current_path())) return;
+
+    // hack for admin of page manager pages
+    if ( $router_item['page_callback'] = 'page_manager_page_execute' && array_key_exists(0, $data['tabs']) ) {
+     $data['tabs']['0']['count'] =   $data['tabs']['0']['count'] + 1;
+    }
+  }
+  
+}
+
+/**
  * Implements hook_ctools_plugin_directory().
  *
  * It simply tells panels where to find the .inc files that define various
