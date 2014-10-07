@@ -27,7 +27,7 @@ function structure_uuid_default_entities() {
     ),
     'uuid' => 'aab1d176-c0e7-4f1d-86ed-fe4f47c924a6',
     'vocabulary_machine_name' => 'structure',
-    'weight' => 4,
+    'weight' => 5,
   );
   $entities['superstruct_structure_taxonomy'][] = (object) array(
     '__metadata' => array(
