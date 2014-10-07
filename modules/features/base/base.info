@@ -72,6 +72,7 @@ features[filter][] = limited_html
 features[filter][] = plain_text
 features[node][] = basic_page
 features[node][] = site_page
+features[taxonomy][] = structure
 features[uuid_entities][] = structure_taxonomy
 features[variable][] = field_bundle_settings_node__basic_page
 features[variable][] = field_bundle_settings_node__site_page
