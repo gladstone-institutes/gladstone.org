@@ -4,6 +4,7 @@ core = 7.x
 package = Configuration
 php = 5.2.4
 dependencies[] = ctools
+dependencies[] = gladstone_roles
 dependencies[] = strongarm
 dependencies[] = structure
 features[ctools][] = strongarm:strongarm:1
