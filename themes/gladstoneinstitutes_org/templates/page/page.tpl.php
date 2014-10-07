@@ -44,7 +44,7 @@
  *   site, if they have been configured.
  * - $secondary_menu (array): An array containing the Secondary menu links for
  *   the site, if they have been configured.
- * - $shortcuts_menu (html): A top of page menu with shortcut links 
+ * - $quick_menu (html): A top of page menu with shortcut links 
  * - $breadcrumb: The breadcrumb trail for the current page.
  *
  * Page content (in order of occurrence in the default page.tpl.php):
@@ -97,8 +97,8 @@
 
   <header<?php print $header_attributes; ?>>
 
-    <?php if(isset($shortcuts_menu)): ?>
-        <?php print $shortcuts_menu; ?>       
+    <?php if(isset($quick_menu)): ?>
+        <?php print $quick_menu; ?>       
     <?php endif;?>
 
     <!-- start: Branding -->

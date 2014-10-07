@@ -59,9 +59,9 @@ function gladstoneinstitutes_org_process_html(&$vars) {
 function gladstoneinstitutes_org_preprocess_page(&$vars) {
   global $theme_key;
 
-  // Prepare snippit for top nav shortcut links
-  $shortcuts_menu = menu_tree_output(menu_tree_all_data('menu-shortcuts-menu'));  
-  $vars['shortcuts_menu'] = drupal_render($shortcuts_menu);
+  // Prepare snippit for top nav quick links
+  $quick_menu = menu_tree_output(menu_tree_all_data('menu-quick-menu'));  
+  $vars['quick_menu'] = drupal_render($quick_menu);
 
   // Is the current page a panels page?
   // $is_panel = panels_get_current_page_display() ? true: false;
@@ -131,10 +131,10 @@ function gladstoneinstitutes_org_html_head_alter(&$head_elements) {
 }
 
 /**
- * Wrap the navigation shortcut links for styling
+ * Wrap the navigation quick links for styling
  */
-function gladstoneinstitutes_org_menu_tree__menu_shortcuts_menu($variables){
-    return "<ul id=\"shortcuts-menu\" class=\"links\">\n" . $variables['tree'] ."</ul>\n";
+function gladstoneinstitutes_org_menu_tree__menu_quick_menu($variables){
+    return "<ul id=\"quick-menu\" class=\"links\">\n" . $variables['tree'] ."</ul>\n";
 }
 
 
