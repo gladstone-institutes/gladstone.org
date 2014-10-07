@@ -1,0 +1,6 @@
+name = Widgets
+description = Cornerstone blocks and doodads essential to page content/structure
+core = 7.x
+package = Structure
+features[features_api][] = api:2
+project path = profiles/gladstone_org/modules/features
