@@ -27,6 +27,13 @@ function honors_and_awards_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function honors_and_awards_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function honors_and_awards_node_info() {
