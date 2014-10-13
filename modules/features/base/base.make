@@ -4,7 +4,7 @@ api = 2
 core = 7.x
 
 ; Structure -------------------------------------
-projects[views][version]  = 3.7
+projects[views][version]  = 3.8
 projects[views][subdir]   = contrib
 
 projects[token][version]	= 1.5
