@@ -5,6 +5,7 @@ package = Configuration
 php = 5.2.4
 dependencies[] = ctools
 dependencies[] = gladstone_roles
+dependencies[] = gladstone_admin
 dependencies[] = strongarm
 dependencies[] = structure
 features[ctools][] = strongarm:strongarm:1
