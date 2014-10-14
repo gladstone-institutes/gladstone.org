@@ -105,6 +105,31 @@ function honors_and_awards_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'honors_and_awards' => 'honors_and_awards',
   );
+
+  /* Display: Awards */
+  $handler = $view->new_display('panel_pane', 'Awards', 'awards_pane');
+  $handler->display->display_options['display_description'] = 'List awards filtered by operational unit';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Operational Unit(s) (field_operational_units) */
+  $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['break_phrase'] = TRUE;
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 'offset';
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 'more_link';
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $export['honors_and_awards'] = $view;
 
   return $export;
