@@ -89,3 +89,13 @@ select#edit-target-bundles {
 select.form-select[multiple] {
   height: 200%;
 }
+
+/* line 95, ../sass/gladstone_admin.scss */
+ul#views-display-menu-tabs {
+  float: left;
+  overflow: visible;
+}
+/* line 99, ../sass/gladstone_admin.scss */
+ul#views-display-menu-tabs .action-list {
+  position: absolute;
+}

@@ -90,3 +90,13 @@ select.form-select[multiple]{
   height: 200%;
 }
 
+
+// Views UI fixes
+ul#views-display-menu-tabs {
+	float: left;
+	overflow: visible;
+
+	.action-list {
+		position: absolute;
+	}
+}
