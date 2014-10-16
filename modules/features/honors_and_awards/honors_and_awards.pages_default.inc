@@ -235,7 +235,7 @@ function honors_and_awards_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 2;
   $handler->conf = array(
-    'title' => 'Directory',
+    'title' => 'Directory (all awards)',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
@@ -295,7 +295,9 @@ function honors_and_awards_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -317,7 +319,9 @@ function honors_and_awards_default_page_manager_pages() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
@@ -325,6 +329,44 @@ function honors_and_awards_default_page_manager_pages() {
     $pane->uuid = '52674c34-ec70-494f-b793-bda9ea941503';
     $display->content['new-52674c34-ec70-494f-b793-bda9ea941503'] = $pane;
     $display->panels['gs3irc_header'][1] = 'new-52674c34-ec70-494f-b793-bda9ea941503';
+    $pane = new stdClass();
+    $pane->pid = 'new-4a96522b-c35b-49c2-b30e-0eb64c614041';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'honors_and_awards-awards_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '10',
+      'offset' => '0',
+      'fields_override' => array(
+        'title' => 1,
+        'nid' => 1,
+        'field_honor_and_award' => 1,
+        'field_date_mmyy' => 1,
+        'field_honors_and_awards_rels' => 1,
+        'body' => 1,
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+      'context' => array(
+        0 => 'empty',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4a96522b-c35b-49c2-b30e-0eb64c614041';
+    $display->content['new-4a96522b-c35b-49c2-b30e-0eb64c614041'] = $pane;
+    $display->panels['gs3irc_middle'][0] = 'new-4a96522b-c35b-49c2-b30e-0eb64c614041';
     $pane = new stdClass();
     $pane->pid = 'new-1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe';
     $pane->panel = 'gs3irc_sidebar';
