@@ -5,3 +5,15 @@
  */
 
 include_once 'base.features.inc';
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function base_ctools_plugin_directory($module, $plugin) {
+
+  if ($module == 'page_manager' || $module == 'panels') {
+    return 'plugins/' . $plugin;
+  }
+
+  return 'plugins/' . $plugin;
+}
