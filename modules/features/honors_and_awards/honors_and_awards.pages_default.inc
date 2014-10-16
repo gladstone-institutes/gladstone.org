@@ -15,7 +15,7 @@ function honors_and_awards_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Honors and Awards';
   $page->admin_description = '';
-  $page->path = 'Honors and Awards/%variant/%nid';
+  $page->path = 'Honors and Awards/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );
@@ -39,7 +39,7 @@ function honors_and_awards_default_page_manager_pages() {
         'transform' => 1,
       ),
     ),
-    'nid' => array(
+    'uuid' => array(
       'id' => 1,
       'identifier' => 'Node: UUID',
       'name' => 'entity_uuid:node',
@@ -207,7 +207,7 @@ function honors_and_awards_default_page_manager_pages() {
       'markup' => 'none',
       'id' => '',
       'class' => '',
-      'context' => 'argument_entity_id:node_1',
+      'context' => 'argument_entity_uuid:node_1',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -330,6 +330,29 @@ function honors_and_awards_default_page_manager_pages() {
     $display->content['new-52674c34-ec70-494f-b793-bda9ea941503'] = $pane;
     $display->panels['gs3irc_header'][1] = 'new-52674c34-ec70-494f-b793-bda9ea941503';
     $pane = new stdClass();
+    $pane->pid = 'new-3ad61a68-972d-479c-acda-7a1215911925';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_uuid:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3ad61a68-972d-479c-acda-7a1215911925';
+    $display->content['new-3ad61a68-972d-479c-acda-7a1215911925'] = $pane;
+    $display->panels['gs3irc_middle'][0] = 'new-3ad61a68-972d-479c-acda-7a1215911925';
+    $pane = new stdClass();
     $pane->pid = 'new-4a96522b-c35b-49c2-b30e-0eb64c614041';
     $pane->panel = 'gs3irc_middle';
     $pane->type = 'views_panes';
@@ -362,11 +385,11 @@ function honors_and_awards_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '4a96522b-c35b-49c2-b30e-0eb64c614041';
     $display->content['new-4a96522b-c35b-49c2-b30e-0eb64c614041'] = $pane;
-    $display->panels['gs3irc_middle'][0] = 'new-4a96522b-c35b-49c2-b30e-0eb64c614041';
+    $display->panels['gs3irc_middle'][1] = 'new-4a96522b-c35b-49c2-b30e-0eb64c614041';
     $pane = new stdClass();
     $pane->pid = 'new-1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe';
     $pane->panel = 'gs3irc_sidebar';
@@ -389,6 +412,33 @@ function honors_and_awards_default_page_manager_pages() {
     $pane->uuid = '1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe';
     $display->content['new-1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe'] = $pane;
     $display->panels['gs3irc_sidebar'][0] = 'new-1bcb8a5d-c94a-46f2-a53a-6f99aa8dbbfe';
+    $pane = new stdClass();
+    $pane->pid = 'new-bcfd8b05-7530-4252-9873-8f69b59e0ba1';
+    $pane->panel = 'gs3irc_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'none',
+      'id' => '',
+      'class' => '',
+      'context' => 'argument_entity_uuid:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'bcfd8b05-7530-4252-9873-8f69b59e0ba1';
+    $display->content['new-bcfd8b05-7530-4252-9873-8f69b59e0ba1'] = $pane;
+    $display->panels['gs3irc_top'][0] = 'new-bcfd8b05-7530-4252-9873-8f69b59e0ba1';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
