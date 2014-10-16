@@ -50,6 +50,7 @@ features[field_instance][] = node-event_calendar-field_user_refs
 features[node][] = event_calendar
 features[taxonomy][] = event_calendar_status
 features[taxonomy][] = event_type
+features[uuid_entities][] = event_status_taxonomy
 features[uuid_entities][] = event_types_taxonomy
 features[variable][] = comment_event_calendar
 features[variable][] = field_bundle_settings_node__event_calendar

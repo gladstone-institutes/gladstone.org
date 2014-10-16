@@ -10,6 +10,63 @@
 function events_uuid_default_entities() {
   $entities = array();
 
+  $entities['event_status_taxonomy'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/ad83bacb-07d1-4268-ac22-4ee246a6f81b',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'format' => NULL,
+    'name' => 'approved',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'event-status/approved',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'ad83bacb-07d1-4268-ac22-4ee246a6f81b',
+    'vocabulary_machine_name' => 'event_calendar_status',
+    'weight' => 1,
+  );
+  $entities['event_status_taxonomy'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/0f7c8100-0324-4303-862b-a1b33ad24fe1',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'format' => NULL,
+    'name' => 'pending',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'event-status/pending',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '0f7c8100-0324-4303-862b-a1b33ad24fe1',
+    'vocabulary_machine_name' => 'event_calendar_status',
+    'weight' => 2,
+  );
+  $entities['event_status_taxonomy'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/5a55405e-060a-42a3-8cfd-45c6ce4e3e6a',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'format' => NULL,
+    'name' => 'denied',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'event-status/denied',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '5a55405e-060a-42a3-8cfd-45c6ce4e3e6a',
+    'vocabulary_machine_name' => 'event_calendar_status',
+    'weight' => 2,
+  );
   $entities['event_types_taxonomy'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
