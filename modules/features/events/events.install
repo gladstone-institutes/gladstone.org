@@ -1,0 +1,31 @@
+<?php
+
+function events_install() {
+
+
+	/**
+	* Disable extraneous views
+	*/
+
+	// a list of views (their view name) I want to disable
+	$views = array(
+		'calendar'
+	);
+
+	// grab list of views that are already disabled
+	$views_status = variable_get('views_defaults', array());
+	
+	// add our views to be disabled to the list
+	foreach ($views as $view) {
+		$views_status[$view] = TRUE;
+	}
+
+	// reset the variable with the new list
+	variable_set('views_defaults', $views_status);
+	
+	// empty cache now
+	if (function_exists('views_invalidate_cache')) {
+		views_invalidate_cache();
+	}
+
+}
