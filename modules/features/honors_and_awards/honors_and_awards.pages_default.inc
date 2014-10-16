@@ -67,20 +67,20 @@ function honors_and_awards_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'access' => array(
-      'logic' => 'and',
+      'logic' => 'or',
       'plugins' => array(
         0 => array(
-          'name' => 'term',
+          'name' => 'term_uuid',
           'settings' => array(
-            'vid' => '3',
-            2 => array(),
-            5 => array(),
-            6 => array(),
-            1 => array(),
-            3 => array(
-              11 => '11',
+            'vocabulary_machine_name' => 'structure',
+            'research' => array(),
+            'event_type' => array(),
+            'honors_and_awards' => array(),
+            'operational_units' => array(),
+            'structure' => array(
+              'f6c4eda2-4491-4fbf-9831-3a78f0b69b14' => 'f6c4eda2-4491-4fbf-9831-3a78f0b69b14',
             ),
-            4 => array(),
+            'event_calendar_status' => array(),
           ),
           'context' => 'argument_term_1',
           'not' => FALSE,
@@ -247,17 +247,17 @@ function honors_and_awards_default_page_manager_pages() {
     'access' => array(
       'plugins' => array(
         0 => array(
-          'name' => 'term',
+          'name' => 'term_uuid',
           'settings' => array(
-            'vid' => '3',
-            2 => array(),
-            5 => array(),
-            6 => array(),
-            1 => array(),
-            3 => array(
-              13 => '13',
+            'vocabulary_machine_name' => 'structure',
+            'research' => array(),
+            'event_type' => array(),
+            'honors_and_awards' => array(),
+            'operational_units' => array(),
+            'structure' => array(
+              '8d3c4af2-7287-4db4-ae58-0241ee539f1e' => '8d3c4af2-7287-4db4-ae58-0241ee539f1e',
             ),
-            4 => array(),
+            'event_calendar_status' => array(),
           ),
           'context' => 'argument_term_1',
           'not' => FALSE,
