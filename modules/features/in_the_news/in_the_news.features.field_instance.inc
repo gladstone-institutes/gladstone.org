@@ -128,7 +128,7 @@ function in_the_news_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_boolean',
     'label' => 'Subscription',
-    'required' => 1,
+    'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
       'user_register_form' => FALSE,
