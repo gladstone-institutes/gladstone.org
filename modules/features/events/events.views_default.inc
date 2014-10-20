@@ -425,7 +425,7 @@ function events_views_default_views() {
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: Month (context aware) */
-  $handler = $view->new_display('panel_pane', 'Month (context aware)', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Month (context aware)', 'event_month_ca_pane');
   $handler->display->display_options['display_description'] = 'Context aware monthly event calendar';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'calendar_style';
