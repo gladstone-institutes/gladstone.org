@@ -556,7 +556,7 @@ function in_the_news_field_default_field_instances() {
   t('Cover image to display.');
   t('Excerpt');
   t('Excerpt/Full article  (if allowed) of external media.');
-  t('File');
+  t('File(s)');
   t('Functional group/team (ex: Institute, Lab, Administration, Advisory Boards)');
   t('Link to the referencing media.');
   t('Node Reference(s)');
