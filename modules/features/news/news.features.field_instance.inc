@@ -93,6 +93,10 @@ function news_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
@@ -256,6 +260,10 @@ function news_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
@@ -429,6 +437,10 @@ function news_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
@@ -443,7 +455,7 @@ function news_field_default_field_instances() {
   t('Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>');
   t('Body');
   t('Cover image to be displayed.');
-  t('File');
+  t('File(s)');
   t('Full article text');
   t('Functional group/team (ex: Institute, Lab, Administration, Advisory Boards)');
   t('Image');
