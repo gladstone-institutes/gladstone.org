@@ -100,47 +100,6 @@ function technology_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-technology-field_longtext'
-  $field_instances['node-technology-field_longtext'] = array(
-    'bundle' => 'technology',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_longtext',
-    'label' => 'Caption',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-technology-field_contacts'
   $field_instances['node-technology-field_contacts'] = array(
     'bundle' => 'technology',
@@ -301,6 +260,47 @@ function technology_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-technology-field_longtext'
+  $field_instances['node-technology-field_longtext'] = array(
+    'bundle' => 'technology',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_longtext',
+    'label' => 'Caption',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
     ),
   );
 
@@ -568,7 +568,7 @@ function technology_field_default_field_instances() {
   t('Contact(s)');
   t('Contacts in order of precedence.');
   t('Description');
-  t('File');
+  t('File(s)');
   t('Functional group/team (ex: Institute, Lab, Administration, Advisory Boards)');
   t('Gladstone Docket Number. e.g. GL2006-828');
   t('Image');
