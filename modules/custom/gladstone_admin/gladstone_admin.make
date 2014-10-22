@@ -42,3 +42,9 @@ projects[references_dialog][download][type]     = git
 projects[references_dialog][download][revision] = 746a40d9
 projects[references_dialog][download][branch]   = 7.x-1.x
 
+projects[simplify][version]  = 3.x-dev
+projects[simplify][subdir]	 = contrib
+projects[simplify][download][type]     = git
+projects[simplify][download][revision] = 7681b0e7
+projects[simplify][download][branch]   = 7.x-3.x
+
