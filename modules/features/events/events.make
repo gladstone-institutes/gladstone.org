@@ -8,3 +8,6 @@ projects[event_calendar][subdir] 	= "contrib"
 
 projects[simple_gmap][version] = 1.2
 projects[simple_gmap][subdir] = contrib
+
+projects[calendar][version] = 3.5
+projects[calendar][subdir]  = contrib
