@@ -55,6 +55,19 @@ projects[computed_field][download][type]		= git
 projects[computed_field][download][revision]	= c93e2512
 projects[computed_field][download][branch]	= 7.x-1.x
 
+projects[field_collection][version] = "1.x-dev"
+projects[field_collection][subdir]	= "contrib"
+projects[field_collection][download][type]		= git
+projects[field_collection][download][revision]	= 13c47f88
+projects[field_collection][download][branch]	= 7.x-1.x
+
+;these patches may be needed for importing "deployed profiles"
+;https://drupal.org/files/field_collection-field_collection_uuid-2075325-2.patch
+;projects[field_collection][patch][]	= https://drupal.org/files/field_collection-field_collection_uuid-2075325-2.patch
+;projects[field_collection][patch][] = "<%= token[:raw_base_uri] %>/patches/field_collection-revisiond_id_default.patch"
+;projects[field_collection][patch][] = "<%= token[:raw_base_uri] %>/patches/field_collection-uri_callback.patch"
+;maybe this woudl be a better option, put it in superstructure; https://www.drupal.org/project/field_collection_deploy
+
 ; Media -----------------------------------------
 projects[media][version] = 2.x-dev
 projects[media][subdir]	 = contrib

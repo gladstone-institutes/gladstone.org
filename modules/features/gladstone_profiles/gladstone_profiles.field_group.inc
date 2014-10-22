@@ -21,7 +21,7 @@ function gladstone_profiles_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Honors and Awards',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_honors_and_awards_rels',
     ),
@@ -115,9 +115,10 @@ function gladstone_profiles_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Education and Training',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_institutions',
+      1 => 'field_education',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -143,7 +144,7 @@ function gladstone_profiles_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Press',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_node_refs',
     ),
@@ -215,6 +216,7 @@ function gladstone_profiles_field_group_info() {
       1 => 'group_cv',
       2 => 'group_edu_training',
       3 => 'group_press',
+      4 => 'group_titles_affil',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -251,6 +253,36 @@ function gladstone_profiles_field_group_info() {
     ),
   );
   $export['group_tabs|profile2|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_titles_affil|profile2|curriculum_vitae|form';
+  $field_group->group_name = 'group_titles_affil';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'curriculum_vitae';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tabs';
+  $field_group->data = array(
+    'label' => 'Titles and Affiliations',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_professional_titles',
+      1 => 'field_affiliations',
+      2 => 'field_editorial_board',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-titles-affil field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_titles_affil|profile2|curriculum_vitae|form'] = $field_group;
 
   return $export;
 }

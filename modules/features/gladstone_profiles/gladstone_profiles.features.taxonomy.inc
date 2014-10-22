@@ -9,6 +9,14 @@
  */
 function gladstone_profiles_taxonomy_default_vocabularies() {
   return array(
+    'concentration_of_study' => array(
+      'name' => 'Concentration of Study',
+      'machine_name' => 'concentration_of_study',
+      'description' => 'Area of study for degree conferred',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'institutions' => array(
       'name' => 'Institutions',
       'machine_name' => 'institutions',
