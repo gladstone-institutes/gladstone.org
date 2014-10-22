@@ -87,8 +87,9 @@ function gladstone_profiles_field_group_info() {
     'label' => 'CV',
     'weight' => '5',
     'children' => array(
-      0 => 'field_research_interests',
-      1 => 'field_achievements',
+      0 => 'field_achievements',
+      1 => 'field_research_interests',
+      2 => 'field_lab_focus',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -130,6 +131,34 @@ function gladstone_profiles_field_group_info() {
     ),
   );
   $export['group_edu_training|profile2|curriculum_vitae|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_press|profile2|curriculum_vitae|form';
+  $field_group->group_name = 'group_press';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'curriculum_vitae';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tabs';
+  $field_group->data = array(
+    'label' => 'Press',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_node_refs',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-press field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_press|profile2|curriculum_vitae|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -185,6 +214,7 @@ function gladstone_profiles_field_group_info() {
       0 => 'group_awards',
       1 => 'group_cv',
       2 => 'group_edu_training',
+      3 => 'group_press',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

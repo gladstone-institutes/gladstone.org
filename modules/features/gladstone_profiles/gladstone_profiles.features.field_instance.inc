@@ -42,7 +42,7 @@ function gladstone_profiles_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -123,6 +123,41 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'profile2-curriculum_vitae-field_lab_focus'
+  $field_instances['profile2-curriculum_vitae-field_lab_focus'] = array(
+    'bundle' => 'curriculum_vitae',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_lab_focus',
+    'label' => 'Lab Focus',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'profile2-curriculum_vitae-field_label_alias'
   $field_instances['profile2-curriculum_vitae-field_label_alias'] = array(
     'bundle' => 'curriculum_vitae',
@@ -150,6 +185,48 @@ function gladstone_profiles_field_default_field_instances() {
       'settings' => array(),
       'type' => 'computed',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-curriculum_vitae-field_node_refs'
+  $field_instances['profile2-curriculum_vitae-field_node_refs'] = array(
+    'bundle' => 'curriculum_vitae',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Attach "back-links" to relevant "press" nodes in this <strong>autocomplete</strong> field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_node_refs',
+    'label' => 'Press Reference(s)',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 8,
     ),
   );
 
@@ -421,6 +498,41 @@ Full bio: Technical and domain specific details go here',
     ),
   );
 
+  // Exported field_instance: 'profile2-profile-field_display_title'
+  $field_instances['profile2-profile-field_display_title'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 21,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_display_title',
+    'label' => 'Display Title',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'profile2-profile-field_fax'
   $field_instances['profile2-profile-field_fax'] = array(
     'bundle' => 'profile',
@@ -455,41 +567,6 @@ Full bio: Technical and domain specific details go here',
       'settings' => array(),
       'type' => 'phone_textfield',
       'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-profile-field_display_title'
-  $field_instances['profile2-profile-field_display_title'] = array(
-    'bundle' => 'profile',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 21,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_display_title',
-    'label' => 'Display Title',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 2,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 9,
     ),
   );
 
@@ -1143,7 +1220,9 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Administrative Assistant(s)');
   t('Alternate Email(s)');
   t('Areas of Investigation');
+  t('Attach "back-links" to relevant "press" nodes in this <strong>autocomplete</strong> field.');
   t('Biography');
+  t('Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.');
   t('Comma separated list of institutions names (autocomplete) where postdoc work was done.');
   t('Date Joined');
   t('Display Title');
@@ -1155,6 +1234,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Fax');
   t('Full name of user. <i>This will affect the <b>public</b> display of a user\'s profile</i>');
   t('Given a UCSF Profiles URL like <code>profiles.ucsf.edu/jeanette.brown</code>, the Profiles Name would be <strong>jeanette.brown</strong>');
+  t('Lab Focus');
   t('Lab and/or personal research websites');
   t('LinkedIn');
   t('Name');
@@ -1168,6 +1248,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Operational Unit(s)');
   t('Phone');
   t('Postdoctoral Training');
+  t('Press Reference(s)');
   t('Profile picture');
   t('Public Email');
   t('Public mailing address');
