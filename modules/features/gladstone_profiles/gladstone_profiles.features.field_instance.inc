@@ -10,6 +10,42 @@
 function gladstone_profiles_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'profile2-curriculum_vitae-field_achievements'
+  $field_instances['profile2-curriculum_vitae-field_achievements'] = array(
+    'bundle' => 'curriculum_vitae',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is the more technical, domain specific, description of "Accomplishments" from the general public profile.
+<em>Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.</em>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_achievements',
+    'label' => 'Achievements',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'profile2-curriculum_vitae-field_honors_and_awards_rels'
   $field_instances['profile2-curriculum_vitae-field_honors_and_awards_rels'] = array(
     'bundle' => 'curriculum_vitae',
@@ -49,6 +85,44 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'profile2-curriculum_vitae-field_institutions'
+  $field_instances['profile2-curriculum_vitae-field_institutions'] = array(
+    'bundle' => 'curriculum_vitae',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Comma separated list of institutions names (autocomplete) where postdoc work was done.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_institutions',
+    'label' => 'Postdoctoral Training',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'profile2-curriculum_vitae-field_label_alias'
   $field_instances['profile2-curriculum_vitae-field_label_alias'] = array(
     'bundle' => 'curriculum_vitae',
@@ -76,6 +150,41 @@ function gladstone_profiles_field_default_field_instances() {
       'settings' => array(),
       'type' => 'computed',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-curriculum_vitae-field_research_interests'
+  $field_instances['profile2-curriculum_vitae-field_research_interests'] = array(
+    'bundle' => 'curriculum_vitae',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is the more technical, domain specific, description of "Research Interests" from the general public profile.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_research_interests',
+    'label' => 'Areas of Investigation',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
     ),
   );
 
@@ -111,7 +220,7 @@ function gladstone_profiles_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -218,7 +327,7 @@ Full bio: Technical and domain specific details go here',
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -308,7 +417,7 @@ Full bio: Technical and domain specific details go here',
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -346,6 +455,41 @@ Full bio: Technical and domain specific details go here',
       'settings' => array(),
       'type' => 'phone_textfield',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_display_title'
+  $field_instances['profile2-profile-field_display_title'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 21,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_display_title',
+    'label' => 'Display Title',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
     ),
   );
 
@@ -472,7 +616,7 @@ Full bio: Technical and domain specific details go here',
     ),
     'entity_type' => 'profile2',
     'field_name' => 'field_longtext',
-    'label' => 'Display Title',
+    'label' => 'Why Gladstone',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
@@ -486,7 +630,7 @@ Full bio: Technical and domain specific details go here',
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -525,7 +669,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -565,7 +709,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -604,7 +748,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -684,7 +828,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     'bundle' => 'profile',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Scientific Interests. <b>See the Research Focus</b> field under curriculum vitae for listing academic and industry specific focus.
+    'description' => 'Scientific Interests. <b>See the Areas of Investigation</b> field under curriculum vitae for listing academic and industry specific focus.
 <em>Note: this field is for "non-technical" copy targeted towards the general public.</em>',
     'display' => array(
       'default' => array(
@@ -711,7 +855,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -747,7 +891,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -994,10 +1138,13 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   // Included for use with string extractors like potx.
   t('<b>Autocomplete</b> any honors and awards to the user CV here. If none exists, create a new entry using the button below.');
   t('Accomplishments');
+  t('Achievements');
   t('Address');
   t('Administrative Assistant(s)');
   t('Alternate Email(s)');
+  t('Areas of Investigation');
   t('Biography');
+  t('Comma separated list of institutions names (autocomplete) where postdoc work was done.');
   t('Date Joined');
   t('Display Title');
   t('Displayed in order (primary, secondary, etc. )');
@@ -1020,13 +1167,14 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Operational Title(s)');
   t('Operational Unit(s)');
   t('Phone');
+  t('Postdoctoral Training');
   t('Profile picture');
   t('Public Email');
   t('Public mailing address');
   t('Realname Alias ');
   t('Recipient of');
   t('Research Interests');
-  t('Scientific Interests. <b>See the Research Focus</b> field under curriculum vitae for listing academic and industry specific focus.
+  t('Scientific Interests. <b>See the Areas of Investigation</b> field under curriculum vitae for listing academic and industry specific focus.
 <em>Note: this field is for "non-technical" copy targeted towards the general public.</em>');
   t('Select a user profile picture to be displayed site-wide.');
   t('Summary: Abridged bio. Less technical details (for general web audience)
@@ -1036,10 +1184,14 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Tag research areas, groups and units here.
 <em>example:</em> GICD, Stem Cell, Intellectual Property');
   t('This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>');
+  t('This is the more technical, domain specific, description of "Accomplishments" from the general public profile.
+<em>Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.</em>');
+  t('This is the more technical, domain specific, description of "Research Interests" from the general public profile.');
   t('Training');
   t('Twitter');
   t('UCSF Profiles Name');
   t('Website');
+  t('Why Gladstone');
   t('Year the user joined Gladstone. <em>example: 2010</em>');
   t('i.e. secondary contact email, external to Gladstone, alumnus contact');
 

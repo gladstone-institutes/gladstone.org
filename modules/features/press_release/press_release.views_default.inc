@@ -61,11 +61,11 @@ function press_release_views_default_views() {
   $handler->display->display_options['fields']['field_longtext']['label'] = '';
   $handler->display->display_options['fields']['field_longtext']['element_label_colon'] = FALSE;
   /* Field: Content: Headline */
-  $handler->display->display_options['fields']['field_headline']['id'] = 'field_headline';
-  $handler->display->display_options['fields']['field_headline']['table'] = 'field_data_field_headline';
-  $handler->display->display_options['fields']['field_headline']['field'] = 'field_headline';
-  $handler->display->display_options['fields']['field_headline']['label'] = '';
-  $handler->display->display_options['fields']['field_headline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_display_title']['id'] = 'field_display_title';
+  $handler->display->display_options['fields']['field_display_title']['table'] = 'field_data_field_display_title';
+  $handler->display->display_options['fields']['field_display_title']['field'] = 'field_display_title';
+  $handler->display->display_options['fields']['field_display_title']['label'] = '';
+  $handler->display->display_options['fields']['field_display_title']['element_label_colon'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';

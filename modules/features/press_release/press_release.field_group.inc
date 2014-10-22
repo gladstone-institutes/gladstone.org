@@ -83,7 +83,7 @@ function press_release_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'body',
-      1 => 'field_headline',
+      1 => 'field_display_title',
       2 => 'field_longtext',
       3 => 'field_date',
       4 => 'field_image',

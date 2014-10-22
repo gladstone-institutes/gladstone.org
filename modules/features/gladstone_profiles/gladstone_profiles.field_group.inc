@@ -21,7 +21,7 @@ function gladstone_profiles_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Honors and Awards',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_honors_and_awards_rels',
     ),
@@ -86,7 +86,10 @@ function gladstone_profiles_field_group_info() {
   $field_group->data = array(
     'label' => 'CV',
     'weight' => '5',
-    'children' => array(),
+    'children' => array(
+      0 => 'field_research_interests',
+      1 => 'field_achievements',
+    ),
     'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -99,6 +102,34 @@ function gladstone_profiles_field_group_info() {
     ),
   );
   $export['group_cv|profile2|curriculum_vitae|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_edu_training|profile2|curriculum_vitae|form';
+  $field_group->group_name = 'group_edu_training';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'curriculum_vitae';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tabs';
+  $field_group->data = array(
+    'label' => 'Education and Training',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_institutions',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-edu-training field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_edu_training|profile2|curriculum_vitae|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -123,6 +154,7 @@ function gladstone_profiles_field_group_info() {
       7 => 'field_research_interests',
       8 => 'field_training',
       9 => 'field_date_yyyy',
+      10 => 'field_display_title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -150,8 +182,9 @@ function gladstone_profiles_field_group_info() {
     'label' => 'Tabs',
     'weight' => '0',
     'children' => array(
-      0 => 'group_cv',
-      1 => 'group_awards',
+      0 => 'group_awards',
+      1 => 'group_cv',
+      2 => 'group_edu_training',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

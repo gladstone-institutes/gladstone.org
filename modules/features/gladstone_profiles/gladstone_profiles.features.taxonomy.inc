@@ -9,6 +9,14 @@
  */
 function gladstone_profiles_taxonomy_default_vocabularies() {
   return array(
+    'institutions' => array(
+      'name' => 'Institutions',
+      'machine_name' => 'institutions',
+      'description' => 'Name only',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'operational_roles' => array(
       'name' => 'Operational Roles',
       'machine_name' => 'operational_roles',

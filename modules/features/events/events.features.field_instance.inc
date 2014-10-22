@@ -289,8 +289,8 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event_calendar-field_headline'
-  $field_instances['node-event_calendar-field_headline'] = array(
+  // Exported field_instance: 'node-event_calendar-field_display_title'
+  $field_instances['node-event_calendar-field_display_title'] = array(
     'bundle' => 'event_calendar',
     'default_value' => NULL,
     'deleted' => 0,
@@ -311,7 +311,7 @@ function events_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_headline',
+    'field_name' => 'field_display_title',
     'label' => 'Headline',
     'required' => 0,
     'rubik_edit_field_display' => 'default',

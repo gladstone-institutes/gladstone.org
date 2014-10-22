@@ -369,7 +369,7 @@ function press_release_default_page_manager_pages() {
         'field_blurb' => 1,
         'body' => 1,
         'field_longtext' => 1,
-        'field_headline' => 1,
+        'field_display_title' => 1,
         'field_image' => 1,
         'field_date' => 1,
       ),

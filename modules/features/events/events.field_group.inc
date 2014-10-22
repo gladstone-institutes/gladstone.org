@@ -29,7 +29,7 @@ function events_field_group_info() {
       3 => 'field_blurb',
       4 => 'field_event_types',
       5 => 'field_files',
-      6 => 'field_headline',
+      6 => 'field_display_title',
       7 => 'field_image',
       8 => 'field_location',
       9 => 'field_longtext',
