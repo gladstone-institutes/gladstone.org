@@ -84,7 +84,8 @@ function gladstone_profiles_field_default_field_instances() {
     'bundle' => 'profile',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Noteworthy successes. <b>See the Achievements</b> field under curriculum vitae for listing academic and industry achievements.
+<em>Note: this field is for "non-technical" copy targeted towards the general public.</em>',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -110,7 +111,7 @@ function gladstone_profiles_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -217,7 +218,7 @@ Full bio: Technical and domain specific details go here',
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -260,6 +261,54 @@ Full bio: Technical and domain specific details go here',
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_date_yyyy'
+  $field_instances['profile2-profile-field_date_yyyy'] = array(
+    'bundle' => 'profile',
+    'deleted' => 0,
+    'description' => 'Year the user joined Gladstone. <em>example: 2010</em>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_date_yyyy',
+    'label' => 'Date Joined',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 13,
     ),
   );
 
@@ -635,7 +684,8 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     'bundle' => 'profile',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Scientific Interests. <b>See the Research Focus</b> field under curriculum vitae for listing academic and industry specific focus.
+<em>Note: this field is for "non-technical" copy targeted towards the general public.</em>',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -661,7 +711,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -670,7 +720,8 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     'bundle' => 'profile',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Domain Expertise. <b>See the Educations and Postdoc Training</b> fields under curriculum vitae for listing academic and industry specific training.
+<em>Note: this field is for "non-technical" copy targeted towards the general public.</em>',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -696,7 +747,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -947,8 +998,11 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Administrative Assistant(s)');
   t('Alternate Email(s)');
   t('Biography');
+  t('Date Joined');
   t('Display Title');
   t('Displayed in order (primary, secondary, etc. )');
+  t('Domain Expertise. <b>See the Educations and Postdoc Training</b> fields under curriculum vitae for listing academic and industry specific training.
+<em>Note: this field is for "non-technical" copy targeted towards the general public.</em>');
   t('Email contact displayed on public site.');
   t('Externally accessible number(s).');
   t('Fax');
@@ -957,6 +1011,8 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Lab and/or personal research websites');
   t('LinkedIn');
   t('Name');
+  t('Noteworthy successes. <b>See the Achievements</b> field under curriculum vitae for listing academic and industry achievements.
+<em>Note: this field is for "non-technical" copy targeted towards the general public.</em>');
   t('Official job title <b>without</b> credentials or affiliations.
 <em>Sort order sensitive:</em> The first item will be used in directory views.
 <i>examples:</i> Senior Staff Scientist, Visiting Investigator, Research Associate.');
@@ -970,6 +1026,8 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Realname Alias ');
   t('Recipient of');
   t('Research Interests');
+  t('Scientific Interests. <b>See the Research Focus</b> field under curriculum vitae for listing academic and industry specific focus.
+<em>Note: this field is for "non-technical" copy targeted towards the general public.</em>');
   t('Select a user profile picture to be displayed site-wide.');
   t('Summary: Abridged bio. Less technical details (for general web audience)
 Full bio: Technical and domain specific details go here');
@@ -982,6 +1040,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Twitter');
   t('UCSF Profiles Name');
   t('Website');
+  t('Year the user joined Gladstone. <em>example: 2010</em>');
   t('i.e. secondary contact email, external to Gladstone, alumnus contact');
 
   return $field_instances;

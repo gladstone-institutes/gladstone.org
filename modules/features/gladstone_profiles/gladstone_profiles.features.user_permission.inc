@@ -23,10 +23,7 @@ function gladstone_profiles_user_default_permissions() {
   $permissions['administer profiles'] = array(
     'name' => 'administer profiles',
     'roles' => array(
-      'admin' => 'admin',
-      'editor' => 'editor',
       'superadmin' => 'superadmin',
-      'webadmin' => 'webadmin',
     ),
     'module' => 'profile2',
   );
@@ -92,14 +89,11 @@ function gladstone_profiles_user_default_permissions() {
   $permissions['view any curriculum_vitae profile'] = array(
     'name' => 'view any curriculum_vitae profile',
     'roles' => array(
-      'admin' => 'admin',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
       'curriculum vitae' => 'curriculum vitae',
-      'editor' => 'editor',
       'leadership' => 'leadership',
       'superadmin' => 'superadmin',
-      'webadmin' => 'webadmin',
     ),
     'module' => 'profile2',
   );
@@ -108,14 +102,11 @@ function gladstone_profiles_user_default_permissions() {
   $permissions['view any leadership profile'] = array(
     'name' => 'view any leadership profile',
     'roles' => array(
-      'admin' => 'admin',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
       'curriculum vitae' => 'curriculum vitae',
-      'editor' => 'editor',
       'leadership' => 'leadership',
       'superadmin' => 'superadmin',
-      'webadmin' => 'webadmin',
     ),
     'module' => 'profile2',
   );
@@ -124,14 +115,11 @@ function gladstone_profiles_user_default_permissions() {
   $permissions['view any profile profile'] = array(
     'name' => 'view any profile profile',
     'roles' => array(
-      'admin' => 'admin',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
       'curriculum vitae' => 'curriculum vitae',
-      'editor' => 'editor',
       'leadership' => 'leadership',
       'superadmin' => 'superadmin',
-      'webadmin' => 'webadmin',
     ),
     'module' => 'profile2',
   );
