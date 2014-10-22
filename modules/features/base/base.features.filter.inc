@@ -16,7 +16,7 @@ function base_filter_default_formats() {
     'name' => 'Full HTML',
     'cache' => 1,
     'status' => 1,
-    'weight' => -10,
+    'weight' => -8,
     'filters' => array(
       'media_filter' => array(
         'weight' => -48,
@@ -256,7 +256,7 @@ news',
     'name' => 'Rich text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -8,
+    'weight' => -10,
     'filters' => array(
       'filter_html' => array(
         'weight' => -10,
