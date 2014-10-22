@@ -74,6 +74,7 @@ features[field_instance][] = node-site_page-field_user_refs
 features[filter][] = full_html
 features[filter][] = limited_html
 features[filter][] = plain_text
+features[filter][] = rich_text
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-footer-menu
 features[menu_custom][] = menu-quick-menu

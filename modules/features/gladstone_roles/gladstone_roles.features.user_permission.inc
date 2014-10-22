@@ -151,6 +151,15 @@ function gladstone_roles_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: administer filters.
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: administer image styles.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -618,6 +627,34 @@ function gladstone_roles_user_default_permissions() {
       'webadmin' => 'webadmin',
     ),
     'module' => 'panels',
+  );
+
+  // Exported permission: use text format full_html.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format limited_html.
+  $permissions['use text format limited_html'] = array(
+    'name' => 'use text format limited_html',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format rich_text.
+  $permissions['use text format rich_text'] = array(
+    'name' => 'use text format rich_text',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
   );
 
   // Exported permission: view own unpublished content.
