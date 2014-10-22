@@ -57,28 +57,41 @@ function gladstone_profiles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_profile2__profile';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_profile2__profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_user__user';
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'profile_profile' => array(
-          'weight' => '3',
-        ),
-        'account' => array(
-          'weight' => '2',
-        ),
-        'timezone' => array(
-          'weight' => '5',
-        ),
-        'overlay_control' => array(
           'weight' => '4',
         ),
+        'account' => array(
+          'weight' => '3',
+        ),
+        'timezone' => array(
+          'weight' => '6',
+        ),
+        'overlay_control' => array(
+          'weight' => '5',
+        ),
         'biblio_fieldset' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
       ),
       'display' => array(),

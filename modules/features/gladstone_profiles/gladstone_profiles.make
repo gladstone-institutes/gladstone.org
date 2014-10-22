@@ -17,3 +17,19 @@ projects[name][subdir]	 = contrib
 projects[name][download][type]     = git
 projects[name][download][revision] = dbb981c8
 projects[name][download][branch]   = 7.x-1.x
+
+projects[email][version] = "1.x-dev"
+projects[email][subdir]	= "contrib"
+projects[email][download][type]		= git
+projects[email][download][revision]	= 25dd1a4e
+projects[email][download][branch]	= 7.x-1.x
+
+projects[phone][version] = "1.x-dev"
+projects[phone][subdir]	= "contrib"
+projects[phone][download][type]		= git
+projects[phone][download][revision]	= 7ad8524a
+projects[phone][download][branch]	= 7.x-1.x
+libraries[libphonenumber][download][type]    = get
+libraries[libphonenumber][download][url]     = https://github.com/giggsey/libphonenumber-for-php
+libraries[libphonenumber][download][subtree] = src/libphonenumber
+libraries[libphonenumber][destination]       = libraries/libphonenumber-for-php
