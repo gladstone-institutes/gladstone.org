@@ -1907,7 +1907,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
       'module' => 'name',
       'settings' => array(),
       'type' => 'name_widget',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -1942,7 +1942,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 

@@ -167,19 +167,19 @@ function gladstone_profiles_strongarm() {
           'weight' => '7',
         ),
         'profile_profile' => array(
-          'weight' => '4',
+          'weight' => '14',
         ),
         'account' => array(
           'weight' => '3',
         ),
         'timezone' => array(
-          'weight' => '6',
-        ),
-        'overlay_control' => array(
           'weight' => '5',
         ),
+        'overlay_control' => array(
+          'weight' => '6',
+        ),
         'biblio_fieldset' => array(
-          'weight' => '2',
+          'weight' => '12',
         ),
       ),
       'display' => array(),
