@@ -1805,8 +1805,8 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     ),
   );
 
-  // Exported field_instance: 'user-user-field_name'
-  $field_instances['user-user-field_name'] = array(
+  // Exported field_instance: 'user-user-field_realname'
+  $field_instances['user-user-field_realname'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1831,7 +1831,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
       ),
     ),
     'entity_type' => 'user',
-    'field_name' => 'field_name',
+    'field_name' => 'field_realname',
     'label' => 'Name',
     'required' => 1,
     'rubik_edit_field_display' => 'default',

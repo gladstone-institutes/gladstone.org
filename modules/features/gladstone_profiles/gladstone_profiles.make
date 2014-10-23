@@ -39,7 +39,7 @@ projects[field_collection_tabs_widget][subdir]	= "contrib"
 projects[field_collection_tabs_widget][download][type]		= git
 projects[field_collection_tabs_widget][download][revision]	= 7e0fb32c
 projects[field_collection_tabs_widget][download][branch]	= 7.x-1.x
-libraries[erta][download][type]    = get
+libraries[erta][download][type]    = git
 libraries[erta][download][url]     = https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion.git
 libraries[erta][destination]       = libraries
 

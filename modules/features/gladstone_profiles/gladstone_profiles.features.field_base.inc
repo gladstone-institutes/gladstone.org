@@ -461,13 +461,13 @@ function gladstone_profiles_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_name'
-  $field_bases['field_name'] = array(
+  // Exported field_base: 'field_realname'
+  $field_bases['field_realname'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_name',
+    'field_name' => 'field_realname',
     'foreign keys' => array(),
     'indexes' => array(
       'family' => array(
