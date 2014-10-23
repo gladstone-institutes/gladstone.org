@@ -28,6 +28,42 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: create field_biography.
+  $permissions['create field_biography'] = array(
+    'name' => 'create field_biography',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: create field_operational_title.
+  $permissions['create field_operational_title'] = array(
+    'name' => 'create field_operational_title',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: create field_operational_unit.
+  $permissions['create field_operational_unit'] = array(
+    'name' => 'create field_operational_unit',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: edit any curriculum_vitae profile.
   $permissions['edit any curriculum_vitae profile'] = array(
     'name' => 'edit any curriculum_vitae profile',
@@ -55,6 +91,43 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: edit field_biography.
+  $permissions['edit field_biography'] = array(
+    'name' => 'edit field_biography',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'leadership' => 'leadership',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit field_operational_title.
+  $permissions['edit field_operational_title'] = array(
+    'name' => 'edit field_operational_title',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit field_operational_unit.
+  $permissions['edit field_operational_unit'] = array(
+    'name' => 'edit field_operational_unit',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+      'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: edit own curriculum_vitae profile.
   $permissions['edit own curriculum_vitae profile'] = array(
     'name' => 'edit own curriculum_vitae profile',
@@ -63,6 +136,34 @@ function gladstone_profiles_user_default_permissions() {
       'superadmin' => 'superadmin',
     ),
     'module' => 'profile2',
+  );
+
+  // Exported permission: edit own field_biography.
+  $permissions['edit own field_biography'] = array(
+    'name' => 'edit own field_biography',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit own field_operational_title.
+  $permissions['edit own field_operational_title'] = array(
+    'name' => 'edit own field_operational_title',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit own field_operational_unit.
+  $permissions['edit own field_operational_unit'] = array(
+    'name' => 'edit own field_operational_unit',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
   );
 
   // Exported permission: edit own leadership profile.
@@ -124,6 +225,39 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: view field_biography.
+  $permissions['view field_biography'] = array(
+    'name' => 'view field_biography',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view field_operational_title.
+  $permissions['view field_operational_title'] = array(
+    'name' => 'view field_operational_title',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view field_operational_unit.
+  $permissions['view field_operational_unit'] = array(
+    'name' => 'view field_operational_unit',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: view own curriculum_vitae profile.
   $permissions['view own curriculum_vitae profile'] = array(
     'name' => 'view own curriculum_vitae profile',
@@ -132,6 +266,34 @@ function gladstone_profiles_user_default_permissions() {
       'superadmin' => 'superadmin',
     ),
     'module' => 'profile2',
+  );
+
+  // Exported permission: view own field_biography.
+  $permissions['view own field_biography'] = array(
+    'name' => 'view own field_biography',
+    'roles' => array(
+      'leadership' => 'leadership',
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view own field_operational_title.
+  $permissions['view own field_operational_title'] = array(
+    'name' => 'view own field_operational_title',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view own field_operational_unit.
+  $permissions['view own field_operational_unit'] = array(
+    'name' => 'view own field_operational_unit',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'field_permissions',
   );
 
   // Exported permission: view own leadership profile.

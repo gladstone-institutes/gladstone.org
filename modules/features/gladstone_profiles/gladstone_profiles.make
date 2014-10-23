@@ -43,4 +43,5 @@ libraries[erta][download][type]    = git
 libraries[erta][download][url]     = https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion.git
 libraries[erta][destination]       = libraries
 
-
+projects[field_permissions][version] = "1.0-beta2"
+projects[field_permissions][subdir] = "contrib"
