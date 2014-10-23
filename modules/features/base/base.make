@@ -81,6 +81,15 @@ projects[ckeditor_media][subdir]  = contrib
 projects[file_entity][version] = 2.x-dev
 projects[file_entity][subdir]  = contrib
 
+projects[imagefield_focus][version] = "1.x-dev"
+projects[imagefield_focus][subdir]	= "contrib"
+projects[imagefield_focus][download][type]		= git
+projects[imagefield_focus][download][revision]	= fd5c5df2
+projects[imagefield_focus][download][branch]	= 7.x-1.x
+;patch to intergrate with media-2.x-dev: https://drupal.org/node/1781778#comment-7641057
+projects[imagefield_focus][patch][] = https://drupal.org/files/imagefield_focus-media-integration.patch
+
+
 ; UI Widgets ------------------------------------
 projects[autocomplete_deluxe][version] 	= 7.x-2.0-beta3+2-dev
 projects[autocomplete_deluxe][subdir] 	= contrib

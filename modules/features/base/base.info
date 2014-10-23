@@ -19,6 +19,7 @@ dependencies[] = file_entity
 dependencies[] = filter
 dependencies[] = htmlpurifier
 dependencies[] = image
+dependencies[] = imagefield_focus
 dependencies[] = link
 dependencies[] = list
 dependencies[] = media
