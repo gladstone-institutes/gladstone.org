@@ -33,3 +33,14 @@ libraries[libphonenumber][download][type]    = get
 libraries[libphonenumber][download][url]     = https://github.com/giggsey/libphonenumber-for-php
 libraries[libphonenumber][download][subtree] = src/libphonenumber
 libraries[libphonenumber][destination]       = libraries/libphonenumber-for-php
+
+projects[field_collection_tabs_widget][version] = "1.x-dev"
+projects[field_collection_tabs_widget][subdir]	= "contrib"
+projects[field_collection_tabs_widget][download][type]		= git
+projects[field_collection_tabs_widget][download][revision]	= 7e0fb32c
+projects[field_collection_tabs_widget][download][branch]	= 7.x-1.x
+libraries[erta][download][type]    = get
+libraries[erta][download][url]     = https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion.git
+libraries[erta][destination]       = libraries
+
+

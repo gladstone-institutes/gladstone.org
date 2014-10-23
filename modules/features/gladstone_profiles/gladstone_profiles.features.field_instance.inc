@@ -318,6 +318,119 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_leadership-field_biography'
+  $field_instances['field_collection_item-field_leadership-field_biography'] = array(
+    'bundle' => 'field_leadership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Use the <strong>Summary</strong> to enter an abridged biosketch for use in mini-feeds',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_biography',
+    'label' => 'Biosketch',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'display_summary' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_leadership-field_operational_title'
+  $field_instances['field_collection_item-field_leadership-field_operational_title'] = array(
+    'bundle' => 'field_leadership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The display title as defined by Human Resources',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_operational_title',
+    'label' => 'Operational Title',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_leadership-field_operational_unit'
+  $field_instances['field_collection_item-field_leadership-field_operational_unit'] = array(
+    'bundle' => 'field_leadership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'What unit does this leadership role belong to?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_operational_unit',
+    'label' => 'Operational Unit',
+    'required' => 1,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_professional_titles-field_boolean'
   $field_instances['field_collection_item-field_professional_titles-field_boolean'] = array(
     'bundle' => 'field_professional_titles',
@@ -838,6 +951,52 @@ function gladstone_profiles_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-leadership-field_leadership'
+  $field_instances['profile2-leadership-field_leadership'] = array(
+    'bundle' => 'leadership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Use these micro-bios to create alternative copy for use in the Leadership directories.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_leadership',
+    'label' => 'Leadership',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'field_collection_tabs_widget',
+      'settings' => array(
+        'fctw_add_new_tab_hover' => 'Add a new tab',
+        'fctw_add_new_tab_title' => 'Add+',
+        'fctw_empty_tab_title' => 'No Title',
+        'fctw_hide_first_blank_tab' => 1,
+        'fctw_new_tab_title' => 'New',
+        'fctw_title_field' => 'field_operational_unit',
+        'fctw_title_field_formatter' => 'taxonomy_term_reference_plain',
+      ),
+      'type' => 'field_collection_tabs',
+      'weight' => 1,
     ),
   );
 
@@ -1802,6 +1961,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Areas of Investigation');
   t('Attach "back-links" to relevant "press" nodes in this <strong>autocomplete</strong> field.');
   t('Biography');
+  t('Biosketch');
   t('Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.');
   t('Comma separated list of institutions names (autocomplete) where postdoc work was done.');
   t('Current');
@@ -1825,6 +1985,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Involvement');
   t('Lab Focus');
   t('Lab and/or personal research websites');
+  t('Leadership');
   t('LinkedIn');
   t('Name');
   t('Noteworthy successes. <b>See the Achievements</b> field under curriculum vitae for listing academic and industry achievements.
@@ -1833,7 +1994,9 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
 <em>Sort order sensitive:</em> The first item will be used in directory views.
 <i>examples:</i> Senior Staff Scientist, Visiting Investigator, Research Associate.');
   t('Operational Role(s)');
+  t('Operational Title');
   t('Operational Title(s)');
+  t('Operational Unit');
   t('Operational Unit(s)');
   t('Phone');
   t('Postdoctoral Training');
@@ -1854,6 +2017,7 @@ Full bio: Technical and domain specific details go here');
 ex: Staff Research Investigator, Associate Investigator, and Visiting Investigator are all of the "Investigator" Role');
   t('Tag research areas, groups and units here.
 <em>example:</em> GICD, Stem Cell, Intellectual Property');
+  t('The display title as defined by Human Resources');
   t('This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>');
   t('This is the more technical, domain specific, description of "Accomplishments" from the general public profile.
 <em>Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.</em>');
@@ -1864,7 +2028,10 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Training');
   t('Twitter');
   t('UCSF Profiles Name');
+  t('Use the <strong>Summary</strong> to enter an abridged biosketch for use in mini-feeds');
+  t('Use these micro-bios to create alternative copy for use in the Leadership directories.');
   t('Website');
+  t('What unit does this leadership role belong to?');
   t('Where was the above title held?');
   t('Why Gladstone');
   t('Year the user joined Gladstone. <em>example: 2010</em>');
