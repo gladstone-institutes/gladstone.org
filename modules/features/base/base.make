@@ -89,6 +89,12 @@ projects[autocomplete_deluxe][download][revision] = 70bdefe5
 projects[autocomplete_deluxe][download][branch]   = 7.x-2.0
 
 ; Filters ---------------------------------------
+projects[better_formats][version]	= 1.x-dev
+projects[better_formats][subdir]	= contrib
+projects[better_formats][download][type]		= git
+projects[better_formats][download][revision]	= 3b4a8c92
+projects[better_formats][download][revision]	= 7.x-1.x
+
 projects[htmlpurifier][version]	= 2.x-dev
 projects[htmlpurifier][subdir]	= contrib
 projects[htmlpurifier][download][type]		= git

@@ -30,7 +30,7 @@ function news_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Short title */
+  /* Field: Field: Short title */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -77,7 +77,7 @@ function news_views_default_views() {
   $handler = $view->new_display('panel_pane', 'News', 'news_pane');
   $handler->display->display_options['display_description'] = 'List/Blog of news from inside Gladstone';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Operational Unit(s) (field_operational_units) */
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
@@ -108,7 +108,7 @@ function news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Content: Operational Unit(s) (field_operational_units) */
+  /* Filter criterion: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['filters']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['filters']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['filters']['field_operational_units_tid']['field'] = 'field_operational_units_tid';

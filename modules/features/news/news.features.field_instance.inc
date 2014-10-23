@@ -13,7 +13,13 @@ function news_field_default_field_instances() {
   // Exported field_instance: 'node-news-body'
   $field_instances['node-news-body'] = array(
     'bundle' => 'news',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'summary' => '',
+        'value' => '',
+        'format' => 'limited_html',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Full article text',
     'display' => array(
@@ -40,6 +46,32 @@ function news_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -386,6 +418,32 @@ function news_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),

@@ -60,13 +60,13 @@ function press_release_views_default_views() {
   $handler->display->display_options['fields']['field_longtext']['ui_name'] = 'Content: Sub headline';
   $handler->display->display_options['fields']['field_longtext']['label'] = '';
   $handler->display->display_options['fields']['field_longtext']['element_label_colon'] = FALSE;
-  /* Field: Content: Headline */
+  /* Field: Field: Headline */
   $handler->display->display_options['fields']['field_display_title']['id'] = 'field_display_title';
   $handler->display->display_options['fields']['field_display_title']['table'] = 'field_data_field_display_title';
   $handler->display->display_options['fields']['field_display_title']['field'] = 'field_display_title';
   $handler->display->display_options['fields']['field_display_title']['label'] = '';
   $handler->display->display_options['fields']['field_display_title']['element_label_colon'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -111,7 +111,7 @@ function press_release_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Press Release', 'press_release_pane');
   $handler->display->display_options['display_description'] = 'List/blog of press releases for media syndication';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Operational Unit(s) (field_operational_units) */
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
@@ -142,7 +142,7 @@ function press_release_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'press_release' => 'press_release',
   );
-  /* Filter criterion: Content: Operational Unit(s) (field_operational_units) */
+  /* Filter criterion: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['filters']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['filters']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['filters']['field_operational_units_tid']['field'] = 'field_operational_units_tid';

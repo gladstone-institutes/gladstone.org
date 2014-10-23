@@ -81,7 +81,7 @@ function in_the_news_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Coverage', 'media_coverage_pane');
   $handler->display->display_options['display_description'] = 'Media coverage filtered by operational unit';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Operational Unit(s) (field_operational_units) */
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
@@ -112,7 +112,7 @@ function in_the_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'in_the_news' => 'in_the_news',
   );
-  /* Filter criterion: Content: Operational Unit(s) (field_operational_units) */
+  /* Filter criterion: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['filters']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['filters']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['filters']['field_operational_units_tid']['field'] = 'field_operational_units_tid';

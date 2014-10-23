@@ -61,7 +61,7 @@ function bibliorepo_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Publications', 'publications_pane');
   $handler->display->display_options['display_description'] = 'List pubs filtered by operational unit';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Operational Unit(s) (field_operational_units) */
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
@@ -93,7 +93,7 @@ function bibliorepo_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'biblio' => 'biblio',
   );
-  /* Filter criterion: Content: Operational Unit(s) (field_operational_units) */
+  /* Filter criterion: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['filters']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['filters']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['filters']['field_operational_units_tid']['field'] = 'field_operational_units_tid';

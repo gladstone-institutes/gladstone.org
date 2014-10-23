@@ -21,20 +21,19 @@ function technology_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => 0,
+    'weight' => '0',
     'children' => array(
       0 => 'body',
       1 => 'field_biblio_refs',
-      2 => 'field_longtext',
-      3 => 'field_contacts',
+      2 => 'field_contacts',
+      3 => 'field_files',
       4 => 'field_image',
-      5 => 'field_technology_type',
-      6 => 'field_text',
-      7 => 'field_user_refs',
-      11 => 'field_files',
-      12 => 'title',
-      13 => 'path',
-      14 => 'title',
+      5 => 'field_longtext',
+      6 => 'field_technology_type',
+      7 => 'field_text',
+      8 => 'field_user_refs',
+      9 => 'title',
+      10 => 'path',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -60,7 +59,7 @@ function technology_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => 0,
+    'weight' => '0',
     'children' => array(
       0 => 'group_content',
       1 => 'group_tagging',
@@ -86,11 +85,11 @@ function technology_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => 1,
+    'weight' => '1',
     'children' => array(
-      0 => 'field_operational_units',
-      1 => 'field_research_tags',
-      2 => 'field_node_refs',
+      0 => 'field_node_refs',
+      1 => 'field_operational_units',
+      2 => 'field_research_tags',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

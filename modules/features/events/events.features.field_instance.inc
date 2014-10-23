@@ -13,7 +13,13 @@ function events_field_default_field_instances() {
   // Exported field_instance: 'node-event_calendar-body'
   $field_instances['node-event_calendar-body'] = array(
     'bundle' => 'event_calendar',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'summary' => '',
+        'value' => '',
+        'format' => 'limited_html',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -37,13 +43,41 @@ function events_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Event Description',
-    'required' => FALSE,
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
     'settings' => array(
-      'display_summary' => 0,
-      'text_processing' => 0,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 1,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 7,
@@ -188,6 +222,73 @@ function events_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event_calendar-field_display_title'
+  $field_instances['node-event_calendar-field_display_title'] = array(
+    'bundle' => 'event_calendar',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Full form headline.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_display_title',
+    'label' => 'Headline',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-event_calendar-field_event_types'
   $field_instances['node-event_calendar-field_event_types'] = array(
     'bundle' => 'event_calendar',
@@ -286,47 +387,6 @@ function events_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-event_calendar-field_display_title'
-  $field_instances['node-event_calendar-field_display_title'] = array(
-    'bundle' => 'event_calendar',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Full form headline.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_display_title',
-    'label' => 'Headline',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 3,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 3,
     ),
   );
 
@@ -449,7 +509,12 @@ function events_field_default_field_instances() {
   // Exported field_instance: 'node-event_calendar-field_longtext'
   $field_instances['node-event_calendar-field_longtext'] = array(
     'bundle' => 'event_calendar',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Information about the presenter(s) external or from Gladstone. Make sure to <b>tag</b> presenters that exist in the Gladstone profile system using the "<b>User Reference(s)</b>" tagging field.',
     'display' => array(
@@ -473,7 +538,33 @@ function events_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
-      'text_processing' => 0,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

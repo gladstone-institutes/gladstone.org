@@ -321,7 +321,13 @@ function gladstone_profiles_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_leadership-field_biography'
   $field_instances['field_collection_item-field_leadership-field_biography'] = array(
     'bundle' => 'field_leadership',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'summary' => '',
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Use the <strong>Summary</strong> to enter an abridged biosketch for use in mini-feeds',
     'display' => array(
@@ -339,6 +345,32 @@ function gladstone_profiles_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'limited_html' => 0,
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -569,7 +601,33 @@ function gladstone_profiles_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
-      'text_processing' => 1,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -922,7 +980,12 @@ function gladstone_profiles_field_default_field_instances() {
   // Exported field_instance: 'profile2-curriculum_vitae-field_research_interests'
   $field_instances['profile2-curriculum_vitae-field_research_interests'] = array(
     'bundle' => 'curriculum_vitae',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'This is the more technical, domain specific, description of "Research Interests" from the general public profile.',
     'display' => array(
@@ -940,6 +1003,32 @@ function gladstone_profiles_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'limited_html' => 0,
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1003,7 +1092,12 @@ function gladstone_profiles_field_default_field_instances() {
   // Exported field_instance: 'profile2-profile-field_accomplishments'
   $field_instances['profile2-profile-field_accomplishments'] = array(
     'bundle' => 'profile',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Noteworthy successes. <b>See the Achievements</b> field under curriculum vitae for listing academic and industry achievements.
 <em>Note: this field is for "non-technical" copy targeted towards the general public.</em>',
@@ -1022,6 +1116,32 @@ function gladstone_profiles_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'limited_html' => 0,
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1057,6 +1177,32 @@ function gladstone_profiles_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1108,7 +1254,13 @@ function gladstone_profiles_field_default_field_instances() {
   // Exported field_instance: 'profile2-profile-field_biography'
   $field_instances['profile2-profile-field_biography'] = array(
     'bundle' => 'profile',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'summary' => '',
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Summary: Abridged bio. Less technical details (for general web audience)
 Full bio: Technical and domain specific details go here',
@@ -1127,6 +1279,32 @@ Full bio: Technical and domain specific details go here',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'limited_html' => 0,
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -1414,7 +1592,12 @@ Full bio: Technical and domain specific details go here',
   // Exported field_instance: 'profile2-profile-field_longtext'
   $field_instances['profile2-profile-field_longtext'] = array(
     'bundle' => 'profile',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1432,7 +1615,33 @@ Full bio: Technical and domain specific details go here',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
-      'text_processing' => 0,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'limited_html' => 0,
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1638,7 +1847,12 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   // Exported field_instance: 'profile2-profile-field_research_interests'
   $field_instances['profile2-profile-field_research_interests'] = array(
     'bundle' => 'profile',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Scientific Interests. <b>See the Areas of Investigation</b> field under curriculum vitae for listing academic and industry specific focus.
 <em>Note: this field is for "non-technical" copy targeted towards the general public.</em>',
@@ -1657,6 +1871,32 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'limited_html' => 0,
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1674,7 +1914,12 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   // Exported field_instance: 'profile2-profile-field_training'
   $field_instances['profile2-profile-field_training'] = array(
     'bundle' => 'profile',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'rich_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Domain Expertise. <b>See the Educations and Postdoc Training</b> fields under curriculum vitae for listing academic and industry specific training.
 <em>Note: this field is for "non-technical" copy targeted towards the general public.</em>',
@@ -1693,6 +1938,32 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'limited_html' => 0,
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),

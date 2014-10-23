@@ -44,7 +44,7 @@ function events_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Short title */
+  /* Field: Field: Short title */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -108,7 +108,7 @@ function events_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Events', 'events_pane');
   $handler->display->display_options['display_description'] = 'List events filtered by operational unit';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Short title */
+  /* Field: Field: Short title */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -143,7 +143,7 @@ function events_views_default_views() {
   $handler->display->display_options['sorts']['event_calendar_date_value']['table'] = 'field_data_event_calendar_date';
   $handler->display->display_options['sorts']['event_calendar_date_value']['field'] = 'event_calendar_date_value';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Operational Unit(s) (field_operational_units) */
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
@@ -277,7 +277,7 @@ function events_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Short title */
+  /* Field: Field: Short title */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -330,7 +330,7 @@ function events_views_default_views() {
   );
   $handler->display->display_options['filters']['field_event_types_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_types_tid']['vocabulary'] = 'event_type';
-  /* Filter criterion: Content: Operational Unit(s) (field_operational_units) */
+  /* Filter criterion: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['filters']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['filters']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['filters']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
@@ -460,7 +460,7 @@ function events_views_default_views() {
   $handler->display->display_options['arguments']['event_calendar_date_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['event_calendar_date_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['event_calendar_date_value']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Operational Unit(s) (field_operational_units) */
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
   $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
   $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
