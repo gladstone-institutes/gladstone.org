@@ -13,6 +13,10 @@ function gladstone_profiles_ctools_plugin_api() {
     return array("version" => "1");
   }
   list($module, $api) = func_get_args();
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "panels_mini" && $api == "panels_default") {
     return array("version" => "1");
   }
@@ -30,10 +34,80 @@ function gladstone_profiles_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function gladstone_profiles_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: profile_picture_large.
+  $styles['profile_picture_large'] = array(
+    'name' => 'profile_picture_large',
+    'label' => 'Profile picture large',
+    'effects' => array(
+      1 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 220,
+          'height' => 300,
+          'strength' => 'medium',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: profile_picture_thumb.
+  $styles['profile_picture_thumb'] = array(
+    'name' => 'profile_picture_thumb',
+    'label' => 'Profile picture thumb',
+    'effects' => array(
+      2 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 220,
+          'height' => 160,
+          'strength' => 'high',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
+ * Implements hook_name_default_formats().
+ */
+function gladstone_profiles_name_default_formats() {
+  $formats = array();
+
+  // Exported format: Professional
+  $formats['professional'] = array(
+    'name' => 'Professional',
+    'machine_name' => 'professional',
+    'format' => 't(((ig)+if)+jc)',
+  );
+
+  return $formats;
+}
+
+/**
  * Implements hook_default_profile2_type().
  */
 function gladstone_profiles_default_profile2_type() {
-
   //HACK: fix role config on import
   $cv_rid = user_role_load_by_name("curriculum vitae")->rid;
   $leadership_rid = user_role_load_by_name("leadership")->rid;

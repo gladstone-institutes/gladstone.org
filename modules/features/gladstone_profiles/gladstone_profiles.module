@@ -5,3 +5,25 @@
  */
 
 include_once 'gladstone_profiles.features.inc';
+
+
+/**
+* Implements hook_entity_info_alter().
+*
+* Leave as example of grammatically created view mode
+* https://www.drupal.org/node/1577752
+*/
+// function gladstone_profiles_entity_info_alter(&$entity_info) {
+//   $entity_info['user']['view modes']['contact'] = array(
+//     'label' => t('Contact Card'),
+//     'custom settings' => TRUE,
+//     );
+//   $entity_info['profile2']['view modes']['contact'] = array(
+//     'label' => t('Contact Card'),
+//     'custom settings' => TRUE,
+//     );
+//   $entity_info['field_collection_item']['view modes']['contact'] = array(
+//     'label' => t('Contact Card'),
+//     'custom settings' => TRUE,
+//     );
+// }
