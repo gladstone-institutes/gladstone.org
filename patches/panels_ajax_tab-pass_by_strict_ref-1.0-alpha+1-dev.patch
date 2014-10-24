@@ -1,0 +1,51 @@
+From c11d219bd47abf01574cac826c7611c2973f6df6 Mon Sep 17 00:00:00 2001
+Date: Mon, 19 Aug 2013 17:23:35 -0700
+Subject: [PATCH] patch strict pass by refs warnings
+
+---
+ panels_ajax_tab.module                              | 4 +++-
+ plugins/content_types/panels_ajax_tab_container.inc | 6 ++++--
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+diff --git a/panels_ajax_tab.module b/panels_ajax_tab.module
+index 2cebf9f..cc74db0 100644
+--- a/panels_ajax_tab.module
++++ b/panels_ajax_tab.module
+@@ -129,7 +129,9 @@ function panels_ajax_tab_prepare_mini($mini, $context_string) {
+     $parts = explode(':', $context_string);
+     $entity_type = strtolower($parts[0]);
+     $entity_id = (int) $parts[1];
+-    $entity = array_pop(entity_load($entity_type, array($entity_id)));
++    // patch strict warning
++    $entity_load_type_id = entity_load($entity_type, array($entity_id));
++    $entity = array_pop($entity_load_type_id);
+ 
+     // If it's a node, check node-view permissions
+     if ($entity_type == 'node') {
+diff --git a/plugins/content_types/panels_ajax_tab_container.inc b/plugins/content_types/panels_ajax_tab_container.inc
+index 6955640..3ec77fc 100644
+--- a/plugins/content_types/panels_ajax_tab_container.inc
++++ b/plugins/content_types/panels_ajax_tab_container.inc
+@@ -45,7 +45,8 @@ function panels_ajax_tab_container_render($subtype, $conf, $panel_args, &$contex
+   }
+   else {
+     $entity_type = $contexts[0]->type[2];
+-    $entity_id = array_shift(entity_extract_ids($entity_type, $contexts[0]->data));
++    $entity_extract_ids = entity_extract_ids($entity_type, $contexts[0]->data);
++    $entity_id = array_shift($entity_extract_ids);
+     $context_string = $entity_type . ':' . $entity_id;
+   }
+ 
+@@ -60,7 +61,8 @@ function panels_ajax_tab_container_render($subtype, $conf, $panel_args, &$contex
+   $content = '';
+   $preloaded = '';
+   if ($tabs) {
+-    $preloaded = reset(array_keys($tabs));
++    $tabs_array_keys = array_keys($tabs);
++    $preloaded = reset($tabs_array_keys);
+     if ($clean_url && isset($_GET['panels_ajax_tab_tab'])) {
+       if ($tabs[$_GET['panels_ajax_tab_tab']]) {
+         $preloaded = $_GET['panels_ajax_tab_tab'];
+-- 
+1.7.11.1
+
