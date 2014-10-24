@@ -823,6 +823,38 @@ function gladstone_profiles_default_page_manager_handlers() {
     $display->content['new-19664999-dd7e-40cb-a11a-b35bd7039560'] = $pane;
     $display->panels['gs3irr_middle'][5] = 'new-19664999-dd7e-40cb-a11a-b35bd7039560';
     $pane = new stdClass();
+    $pane->pid = 'new-38e57986-0791-466d-9403-f35901230090';
+    $pane->panel = 'gs3irr_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'profile_widgets-contact_card_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'fields_override' => array(
+        'field_image' => 1,
+        'field_label_alias' => 1,
+        'field_operational_titles' => 1,
+        'field_phone' => 1,
+        'field_public_email' => 1,
+      ),
+      'exposed' => array(
+        'field_label_alias_value' => 'Justin Nand, PhD',
+        'delta' => '0',
+        'delta_1' => '0',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '38e57986-0791-466d-9403-f35901230090';
+    $display->content['new-38e57986-0791-466d-9403-f35901230090'] = $pane;
+    $display->panels['gs3irr_sidebar'][0] = 'new-38e57986-0791-466d-9403-f35901230090';
+    $pane = new stdClass();
     $pane->pid = 'new-b6895660-4ac6-4c84-91ee-ed9e418fb450';
     $pane->panel = 'gs3irr_sidebar';
     $pane->type = 'panels_mini';
@@ -839,11 +871,11 @@ function gladstone_profiles_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'b6895660-4ac6-4c84-91ee-ed9e418fb450';
     $display->content['new-b6895660-4ac6-4c84-91ee-ed9e418fb450'] = $pane;
-    $display->panels['gs3irr_sidebar'][0] = 'new-b6895660-4ac6-4c84-91ee-ed9e418fb450';
+    $display->panels['gs3irr_sidebar'][1] = 'new-b6895660-4ac6-4c84-91ee-ed9e418fb450';
     $pane = new stdClass();
     $pane->pid = 'new-886ef288-7584-4600-a2ae-bcec9e74e61a';
     $pane->panel = 'gs3irr_top';
