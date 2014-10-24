@@ -13,6 +13,21 @@ function gladstone_admin_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'coffee_settings_menus';
+  $strongarm->value = array(
+    'main-menu' => 'main-menu',
+    'management' => 'management',
+    'user-menu' => 'user-menu',
+    'devel' => 0,
+    'menu-footer-menu' => 0,
+    'navigation' => 0,
+    'menu-quick-menu' => 0,
+  );
+  $export['coffee_settings_menus'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'simplify_blocks_global';
   $strongarm->value = array(
     0 => 'format',
