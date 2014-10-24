@@ -45,3 +45,12 @@ libraries[erta][destination]       = libraries
 
 projects[field_permissions][version] = "1.0-beta2"
 projects[field_permissions][subdir] = "contrib"
+
+projects[panels_ajax_tab][version] = "1.x-dev"
+projects[panels_ajax_tab][subdir]	= "contrib"
+projects[panels_ajax_tab][download][type]		= git
+projects[panels_ajax_tab][download][revision]	= 96b73a48
+projects[panels_ajax_tab][download][branch]	= 7.x-1.x
+;workaround for pass by strict warnings
+projects[panels_ajax_tab][patch][]	= https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/panels_ajax_tab-pass_by_strict_ref-1.0-alpha+1-dev.patch
+

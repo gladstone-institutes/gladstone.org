@@ -201,5 +201,20 @@ function gladstone_profiles_strongarm() {
   $strongarm->value = FALSE;
   $export['page_manager_user_view_disabled'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panels_ajax_tab';
+  $strongarm->value = array(
+    'clean_url' => 1,
+    'clean_url_delim' => '/',
+    'panes' => array(
+      'profiletabs' => array(
+        'profile_tab' => 'profile',
+      ),
+    ),
+  );
+  $export['panels_ajax_tab'] = $strongarm;
+
   return $export;
 }
