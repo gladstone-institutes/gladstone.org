@@ -210,7 +210,9 @@ function gladstone_profiles_strongarm() {
     'clean_url_delim' => '/',
     'panes' => array(
       'profiletabs' => array(
-        'profile_tab' => 'profile',
+        'profile_tab' => 'bio',
+        'curriculum_vitae_tab' => 'cv',
+        'publications_tab' => 'pubs',
       ),
     ),
   );

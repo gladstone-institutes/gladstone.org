@@ -124,7 +124,7 @@ function gladstone_profiles_default_page_manager_handlers() {
         'profile_tab' => array(
           'selected' => 1,
           'tab_title' => 'Profile',
-          'url_id' => 'profile',
+          'url_id' => 'bio',
           'weight' => '-10',
         ),
         'curriculum_vitae_tab' => array(
@@ -575,16 +575,16 @@ function gladstone_profiles_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'mini_panels' => array(
-        'profile_tab' => array(
-          'selected' => 1,
-          'tab_title' => 'Profile',
-          'url_id' => 'profile',
-          'weight' => '-10',
-        ),
         'sidebar' => array(
           'selected' => 0,
           'tab_title' => '',
           'url_id' => '',
+          'weight' => '-10',
+        ),
+        'profile_tab' => array(
+          'selected' => 1,
+          'tab_title' => 'Profile',
+          'url_id' => 'bio',
           'weight' => '-10',
         ),
         'curriculum_vitae_tab' => array(
