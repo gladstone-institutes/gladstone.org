@@ -346,6 +346,64 @@ function gladstone_profiles_views_default_views() {
   /* Display: Contact card */
   $handler = $view->new_display('panel_pane', 'Contact card', 'contact_card_pane');
   $handler->display->display_options['display_description'] = 'Generate a contact cards for a given user';
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'field_label_alias_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => 'Search by Contact Name (autocomplete)',
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'delta' => array(
+      'bef_format' => 'default',
+      'slider_options' => array(
+        'bef_slider_min' => '0',
+        'bef_slider_max' => '99999',
+        'bef_slider_step' => '1',
+        'bef_slider_animate' => '',
+        'bef_slider_orientation' => 'horizontal',
+      ),
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => 'Multiple ops titles? Enter one here. (first title id is 0)',
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'delta_1' => array(
+      'bef_format' => 'default',
+      'slider_options' => array(
+        'bef_slider_min' => '0',
+        'bef_slider_max' => '99999',
+        'bef_slider_step' => '1',
+        'bef_slider_animate' => '',
+        'bef_slider_orientation' => 'horizontal',
+      ),
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => 'Multiple phone numbers? Enter one here. (first phone id is 0)',
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'rich_text';
+  $handler->display->display_options['exposed_form']['options']['token_details'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Profile: Realname Alias  */
   $handler->display->display_options['fields']['field_label_alias']['id'] = 'field_label_alias';
@@ -438,6 +496,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['delta_1']['expose']['description'] = 'Multiple phone numbers? First phone id is 0';
   $handler->display->display_options['filters']['delta_1']['expose']['operator'] = 'delta_1_op';
   $handler->display->display_options['filters']['delta_1']['expose']['identifier'] = 'delta_1';
+  $handler->display->display_options['filters']['delta_1']['expose']['required'] = TRUE;
   $handler->display->display_options['filters']['delta_1']['expose']['remember_roles'] = array(
     2 => '2',
     3 => 0,

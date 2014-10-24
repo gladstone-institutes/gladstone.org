@@ -17,3 +17,11 @@ projects[views_autocomplete_filters][subdir] 	= contrib
 projects[views_autocomplete_filters][download][type]     = git
 projects[views_autocomplete_filters][download][revision] = 4773fbe5
 projects[views_autocomplete_filters][download][branch]   = 7.x-1.x
+
+projects[better_exposed_filters][version] 			 = 7.x-3.x-dev
+projects[better_exposed_filters][subdir] 			 = contrib
+projects[better_exposed_filters][download][type]     = git
+projects[better_exposed_filters][download][revision] = 5e91a5bc
+projects[better_exposed_filters][download][branch]   = 7.x-3.x
+; Workaround for php max_input_vars warning https://www.drupal.org/node/1891612
+projects[better_exposed_filters][patch][]   = https://www.drupal.org/files/better_exposed_filters-max_input_vars-1891612-7.patch

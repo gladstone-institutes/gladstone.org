@@ -3,6 +3,7 @@ description = Cornerstone blocks and doodads essential to page content/structure
 core = 7.x
 package = Structure
 php = 5.2.4
+dependencies[] = better_exposed_filters
 dependencies[] = ctools
 dependencies[] = menu_block
 dependencies[] = panels_mini

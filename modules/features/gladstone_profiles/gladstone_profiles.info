@@ -241,4 +241,6 @@ features_exclude[field_base][field_text] = field_text
 features_exclude[field_base][field_urls] = field_urls
 features_exclude[field_base][field_date_yyyy] = field_date_yyyy
 features_exclude[taxonomy][operational_units] = operational_units
+features_exclude[dependencies][better_exposed_filters] = better_exposed_filters
+features_exclude[dependencies][views_content] = views_content
 project path = profiles/gladstone_org/modules/features
