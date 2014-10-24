@@ -342,6 +342,123 @@ function gladstone_profiles_views_default_views() {
       'label' => 'Profile: Profile ID',
     ),
   );
+
+  /* Display: Contact card */
+  $handler = $view->new_display('panel_pane', 'Contact card', 'contact_card_pane');
+  $handler->display->display_options['display_description'] = 'Generate a contact cards for a given user';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Profile: Realname Alias  */
+  $handler->display->display_options['fields']['field_label_alias']['id'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['table'] = 'field_data_field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['field'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['label'] = '';
+  $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
+  /* Field: Field: Operational Title(s) */
+  $handler->display->display_options['fields']['field_operational_titles']['id'] = 'field_operational_titles';
+  $handler->display->display_options['fields']['field_operational_titles']['table'] = 'field_data_field_operational_titles';
+  $handler->display->display_options['fields']['field_operational_titles']['field'] = 'field_operational_titles';
+  $handler->display->display_options['fields']['field_operational_titles']['label'] = '';
+  $handler->display->display_options['fields']['field_operational_titles']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_titles']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
+  /* Field: Profile: Phone */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_phone']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_phone']['delta_offset'] = '0';
+  /* Field: Profile: Public Email */
+  $handler->display->display_options['fields']['field_public_email']['id'] = 'field_public_email';
+  $handler->display->display_options['fields']['field_public_email']['table'] = 'field_data_field_public_email';
+  $handler->display->display_options['fields']['field_public_email']['field'] = 'field_public_email';
+  $handler->display->display_options['fields']['field_public_email']['label'] = '';
+  $handler->display->display_options['fields']['field_public_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Profile: Realname Alias  (field_label_alias) */
+  $handler->display->display_options['filters']['field_label_alias_value']['id'] = 'field_label_alias_value';
+  $handler->display->display_options['filters']['field_label_alias_value']['table'] = 'field_data_field_label_alias';
+  $handler->display->display_options['filters']['field_label_alias_value']['field'] = 'field_label_alias_value';
+  $handler->display->display_options['filters']['field_label_alias_value']['operator'] = 'contains';
+  $handler->display->display_options['filters']['field_label_alias_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['operator_id'] = 'field_label_alias_value_op';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['label'] = 'Name';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['operator'] = 'field_label_alias_value_op';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['identifier'] = 'field_label_alias_value';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_filter'] = 1;
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_items'] = '10';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_min_chars'] = '3';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_field'] = 'field_label_alias';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_raw_suggestion'] = 1;
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_raw_dropdown'] = 1;
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_dependent'] = 0;
+  /* Filter criterion: Field: Operational Title(s) (field_operational_titles:delta) */
+  $handler->display->display_options['filters']['delta']['id'] = 'delta';
+  $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_operational_titles';
+  $handler->display->display_options['filters']['delta']['field'] = 'delta';
+  $handler->display->display_options['filters']['delta']['value']['value'] = '0';
+  $handler->display->display_options['filters']['delta']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['delta']['expose']['operator_id'] = 'delta_op';
+  $handler->display->display_options['filters']['delta']['expose']['label'] = 'Title id';
+  $handler->display->display_options['filters']['delta']['expose']['description'] = 'Multiple ops titles? First title id is 0';
+  $handler->display->display_options['filters']['delta']['expose']['operator'] = 'delta_op';
+  $handler->display->display_options['filters']['delta']['expose']['identifier'] = 'delta';
+  $handler->display->display_options['filters']['delta']['expose']['required'] = TRUE;
+  $handler->display->display_options['filters']['delta']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+  );
+  /* Filter criterion: Profile: Phone (field_phone:delta) */
+  $handler->display->display_options['filters']['delta_1']['id'] = 'delta_1';
+  $handler->display->display_options['filters']['delta_1']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['filters']['delta_1']['field'] = 'delta';
+  $handler->display->display_options['filters']['delta_1']['value']['value'] = '0';
+  $handler->display->display_options['filters']['delta_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['delta_1']['expose']['operator_id'] = 'delta_1_op';
+  $handler->display->display_options['filters']['delta_1']['expose']['label'] = 'Phone id';
+  $handler->display->display_options['filters']['delta_1']['expose']['description'] = 'Multiple phone numbers? First phone id is 0';
+  $handler->display->display_options['filters']['delta_1']['expose']['operator'] = 'delta_1_op';
+  $handler->display->display_options['filters']['delta_1']['expose']['identifier'] = 'delta_1';
+  $handler->display->display_options['filters']['delta_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $export['profile_widgets'] = $view;
 
   return $export;

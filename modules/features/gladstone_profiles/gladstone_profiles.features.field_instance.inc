@@ -1152,7 +1152,7 @@ function gladstone_profiles_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -1317,7 +1317,7 @@ Full bio: Technical and domain specific details go here',
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -1407,7 +1407,7 @@ Full bio: Technical and domain specific details go here',
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -1442,7 +1442,7 @@ Full bio: Technical and domain specific details go here',
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -1541,6 +1541,37 @@ Full bio: Technical and domain specific details go here',
       ),
       'type' => 'media_generic',
       'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_label_alias'
+  $field_instances['profile2-profile-field_label_alias'] = array(
+    'bundle' => 'profile',
+    'deleted' => 0,
+    'description' => 'This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 22,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_label_alias',
+    'label' => 'Realname Alias ',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 9,
     ),
   );
 
@@ -1655,7 +1686,7 @@ Full bio: Technical and domain specific details go here',
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -1694,7 +1725,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -1734,7 +1765,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -1773,7 +1804,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -1911,7 +1942,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -1978,7 +2009,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 

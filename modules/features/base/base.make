@@ -97,6 +97,7 @@ projects[autocomplete_deluxe][download][type]     = git
 projects[autocomplete_deluxe][download][revision] = 70bdefe5
 projects[autocomplete_deluxe][download][branch]   = 7.x-2.0
 
+
 ; Filters ---------------------------------------
 projects[better_formats][version]	= 1.x-dev
 projects[better_formats][subdir]	= contrib
