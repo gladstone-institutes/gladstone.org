@@ -15,7 +15,7 @@ function events_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Event';
   $page->admin_description = '';
-  $page->path = 'Event/%variant/%uuid';
+  $page->path = 'event/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );

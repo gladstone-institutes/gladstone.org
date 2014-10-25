@@ -15,7 +15,7 @@ function press_release_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Press Release';
   $page->admin_description = '';
-  $page->path = 'Press Release/%variant/%uuid';
+  $page->path = 'press_release/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );

@@ -23,7 +23,7 @@ function base_default_page_manager_handlers() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => '%node:content-type/node/%node:uuid',
+    'destination' => '%node:content-type:machine-name/node/%node:uuid',
     'access' => array(
       'plugins' => array(
         0 => array(

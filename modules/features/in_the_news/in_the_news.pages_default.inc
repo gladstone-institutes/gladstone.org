@@ -15,7 +15,7 @@ function in_the_news_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'In the News';
   $page->admin_description = '';
-  $page->path = 'In the News/%variant/%uuid';
+  $page->path = 'in_the_news/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );

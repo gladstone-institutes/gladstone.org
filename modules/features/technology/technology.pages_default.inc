@@ -15,7 +15,7 @@ function technology_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Technology';
   $page->admin_description = '';
-  $page->path = 'Technology/%variant/%uuid';
+  $page->path = 'technology/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );

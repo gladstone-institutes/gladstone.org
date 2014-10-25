@@ -15,7 +15,7 @@ function news_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'News';
   $page->admin_description = '';
-  $page->path = 'News/%variant/%uuid';
+  $page->path = 'news/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );

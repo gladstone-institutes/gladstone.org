@@ -15,7 +15,7 @@ function bibliorepo_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Biblio';
   $page->admin_description = '';
-  $page->path = 'Biblio/%variant/%uuid';
+  $page->path = 'biblio/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );

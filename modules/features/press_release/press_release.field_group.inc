@@ -29,13 +29,14 @@ function press_release_field_group_info() {
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Common Language',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-common-lang field-group-htab',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-common-lang field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_common_lang|node|press_release|form'] = $field_group;
@@ -51,7 +52,7 @@ function press_release_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Related',
-    'weight' => '1',
+    'weight' => '4',
     'children' => array(
       0 => 'field_biblio_refs',
       1 => 'field_urls',
@@ -80,13 +81,13 @@ function press_release_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Release',
-    'weight' => '0',
+    'weight' => '3',
     'children' => array(
       0 => 'body',
       1 => 'field_contacts',
       2 => 'field_date',
-      3 => 'field_files',
-      4 => 'field_display_title',
+      3 => 'field_display_title',
+      4 => 'field_files',
       5 => 'field_image',
       6 => 'field_longtext',
     ),
@@ -142,7 +143,7 @@ function press_release_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_node_refs',
       1 => 'field_operational_units',

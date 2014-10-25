@@ -15,7 +15,7 @@ function honors_and_awards_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Honors and Awards';
   $page->admin_description = '';
-  $page->path = 'Honors and Awards/%variant/%uuid';
+  $page->path = 'honors_and_awards/%variant/%uuid';
   $page->access = array(
     'logic' => 'and',
   );
