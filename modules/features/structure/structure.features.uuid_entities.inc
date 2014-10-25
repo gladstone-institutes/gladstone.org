@@ -19,12 +19,7 @@ function structure_uuid_default_entities() {
     'description' => '',
     'format' => 'full_html',
     'name' => 'Variants',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'structure/variants',
-        'language' => 'und',
-      ),
-    ),
+    'url_alias' => array(),
     'uuid' => 'aab1d176-c0e7-4f1d-86ed-fe4f47c924a6',
     'vocabulary_machine_name' => 'structure',
     'weight' => 5,
@@ -41,12 +36,7 @@ function structure_uuid_default_entities() {
     'parent' => array(
       0 => 'aab1d176-c0e7-4f1d-86ed-fe4f47c924a6',
     ),
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'structure/home',
-        'language' => 'und',
-      ),
-    ),
+    'url_alias' => array(),
     'uuid' => '2e99b285-9f9a-410c-a2b9-43a881ba10ab',
     'vocabulary_machine_name' => 'structure',
     'weight' => 1,
