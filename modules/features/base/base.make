@@ -113,3 +113,7 @@ projects[htmlpurifier][download][revision]	= 7.x-2.x
 libraries[htmlpurifier][download][type]	= get
 libraries[htmlpurifier][download][url]	= http://htmlpurifier.org/releases/htmlpurifier-4.6.0.tar.gz
 libraries[htmlpurifier][destination]	= libraries
+
+; Libraries -------------------------------------
+projects[jquery_update][version] = 2.4
+projects[jquery_update][subdir]  = contrib

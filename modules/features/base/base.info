@@ -20,6 +20,7 @@ dependencies[] = filter
 dependencies[] = htmlpurifier
 dependencies[] = image
 dependencies[] = imagefield_focus
+dependencies[] = jquery_update
 dependencies[] = link
 dependencies[] = list
 dependencies[] = media
