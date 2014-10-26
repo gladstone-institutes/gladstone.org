@@ -13,7 +13,7 @@ function ontology_taxonomy_default_vocabularies() {
       'name' => 'Operational Units',
       'machine_name' => 'operational_units',
       'description' => 'Functional group/team (ex: Institute, Lab, Administration, Advisory Boards)',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
     ),
