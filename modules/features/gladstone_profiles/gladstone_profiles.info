@@ -116,6 +116,7 @@ features[field_instance][] = user-user-field_realname
 features[field_instance][] = user-user-field_text
 features[image][] = profile_picture_directory
 features[image][] = profile_picture_large
+features[image][] = profile_picture_medium
 features[image][] = profile_picture_thumbnail
 features[namefield][] = professional
 features[page_manager_handlers][] = user_view_panel_context
