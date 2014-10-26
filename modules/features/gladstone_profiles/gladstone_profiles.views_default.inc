@@ -36,6 +36,13 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['pid']['field'] = 'pid';
   $handler->display->display_options['fields']['pid']['label'] = '';
   $handler->display->display_options['fields']['pid']['element_label_colon'] = FALSE;
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
+  );
 
   /* Display: Grid (context aware) */
   $handler = $view->new_display('panel_pane', 'Grid (context aware)', 'directory_widget_grid_ca_pane');
@@ -242,6 +249,13 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['delta']['expose']['label'] = 'Operational Title(s) (field_operational_titles:delta)';
   $handler->display->display_options['filters']['delta']['expose']['operator'] = 'delta_op';
   $handler->display->display_options['filters']['delta']['expose']['identifier'] = 'delta';
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
+  );
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -469,6 +483,13 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['delta']['expose']['label'] = 'Operational Title(s) (field_operational_titles:delta)';
   $handler->display->display_options['filters']['delta']['expose']['operator'] = 'delta_op';
   $handler->display->display_options['filters']['delta']['expose']['identifier'] = 'delta';
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
+  );
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -695,6 +716,13 @@ function gladstone_profiles_views_default_views() {
     7 => 0,
   );
   $handler->display->display_options['filters']['field_operational_titles_tid']['vocabulary'] = 'operational_titles';
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
+  );
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -802,6 +830,22 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['arguments']['drupal_uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['drupal_uid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['drupal_uid']['validate']['type'] = 'user';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'biblio' => 'biblio',
+  );
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -1028,6 +1072,15 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['arguments']['pid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['pid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['pid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
+  );
   $handler->display->display_options['pane_category']['name'] = 'Profile Widgets';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
@@ -1215,6 +1268,13 @@ function gladstone_profiles_views_default_views() {
     8 => 0,
     1 => 0,
     7 => 0,
+  );
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
   );
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
