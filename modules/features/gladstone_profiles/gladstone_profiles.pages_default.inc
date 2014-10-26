@@ -1138,7 +1138,7 @@ function gladstone_profiles_default_page_manager_pages() {
     $pane->pid = 'new-fd6ab12d-9345-4b48-9093-35f150538773';
     $pane->panel = 'gs2irr_inset';
     $pane->type = 'views_panes';
-    $pane->subtype = 'directory_widgets-profile_widget_dir_grid_ca_pane';
+    $pane->subtype = 'directory_widgets-directory_widget_grid_ca_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1175,7 +1175,7 @@ function gladstone_profiles_default_page_manager_pages() {
     $pane->pid = 'new-78d9607d-6158-40fa-b6f2-836b2bc9465d';
     $pane->panel = 'gs2irr_inset';
     $pane->type = 'views_panes';
-    $pane->subtype = 'directory_widgets-profile_widget_dir_grid_ca_pane';
+    $pane->subtype = 'directory_widgets-directory_widget_grid_ca_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1212,7 +1212,7 @@ function gladstone_profiles_default_page_manager_pages() {
     $pane->pid = 'new-bd943bb1-207b-45a2-88e5-bc59a1c0c976';
     $pane->panel = 'gs2irr_inset';
     $pane->type = 'views_panes';
-    $pane->subtype = 'directory_widgets-profile_widget_dir_grid_ca_pane';
+    $pane->subtype = 'directory_widgets-directory_widget_grid_ca_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
