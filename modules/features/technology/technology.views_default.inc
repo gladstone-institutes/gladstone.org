@@ -87,9 +87,18 @@ function technology_views_default_views() {
     'technology' => 'technology',
   );
 
-  /* Display: Technologies */
-  $handler = $view->new_display('panel_pane', 'Technologies', 'tech_pane');
+  /* Display: Technologies (context aware) */
+  $handler = $view->new_display('panel_pane', 'Technologies (context aware)', 'tech_ca_pane');
   $handler->display->display_options['display_description'] = 'List of available technologies';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
+  $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -145,6 +154,16 @@ function technology_views_default_views() {
   );
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_operational_units_tid' => array(
+      'type' => 'context',
+      'context' => 'terms.tids',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Field: Operational Unit(s) (field_operational_units)',
+    ),
+  );
   $export['technology'] = $view;
 
   return $export;

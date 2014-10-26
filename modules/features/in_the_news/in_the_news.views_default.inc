@@ -77,8 +77,8 @@ function in_the_news_views_default_views() {
     'in_the_news' => 'in_the_news',
   );
 
-  /* Display: Coverage */
-  $handler = $view->new_display('panel_pane', 'Coverage', 'media_coverage_pane');
+  /* Display: Coverage (context aware) */
+  $handler = $view->new_display('panel_pane', 'Coverage (context aware)', 'media_coverage_ca_pane');
   $handler->display->display_options['display_description'] = 'Media coverage filtered by operational unit';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */

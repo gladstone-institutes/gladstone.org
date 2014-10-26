@@ -106,8 +106,8 @@ function honors_and_awards_views_default_views() {
     'honors_and_awards' => 'honors_and_awards',
   );
 
-  /* Display: Awards */
-  $handler = $view->new_display('panel_pane', 'Awards', 'awards_pane');
+  /* Display: Awards (context aware) */
+  $handler = $view->new_display('panel_pane', 'Awards (context aware)', 'awards_ca_pane');
   $handler->display->display_options['display_description'] = 'List awards filtered by operational unit';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */

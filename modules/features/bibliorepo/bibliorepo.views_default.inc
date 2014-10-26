@@ -57,8 +57,8 @@ function bibliorepo_views_default_views() {
     'biblio' => 'biblio',
   );
 
-  /* Display: Publications */
-  $handler = $view->new_display('panel_pane', 'Publications', 'publications_pane');
+  /* Display: Publications (context aware) */
+  $handler = $view->new_display('panel_pane', 'Publications (context aware)', 'publications_ca_pane');
   $handler->display->display_options['display_description'] = 'List pubs filtered by operational unit';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */

@@ -73,8 +73,8 @@ function news_views_default_views() {
     'news' => 'news',
   );
 
-  /* Display: News */
-  $handler = $view->new_display('panel_pane', 'News', 'news_pane');
+  /* Display: News (context aware) */
+  $handler = $view->new_display('panel_pane', 'News (context aware)', 'news_ca_pane');
   $handler->display->display_options['display_description'] = 'List/Blog of news from inside Gladstone';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */

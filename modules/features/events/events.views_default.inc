@@ -104,8 +104,8 @@ function events_views_default_views() {
   $handler->display->display_options['filters']['field_event_types_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_types_tid']['vocabulary'] = 'event_type';
 
-  /* Display: Events */
-  $handler = $view->new_display('panel_pane', 'Events', 'events_pane');
+  /* Display: Events (context aware) */
+  $handler = $view->new_display('panel_pane', 'Events (context aware)', 'events_ca_pane');
   $handler->display->display_options['display_description'] = 'List events filtered by operational unit';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Field: Short title */

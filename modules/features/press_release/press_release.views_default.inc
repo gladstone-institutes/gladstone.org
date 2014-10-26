@@ -107,8 +107,8 @@ function press_release_views_default_views() {
     'press_release' => 'press_release',
   );
 
-  /* Display: Press Release */
-  $handler = $view->new_display('panel_pane', 'Press Release', 'press_release_pane');
+  /* Display: Press Release (context aware) */
+  $handler = $view->new_display('panel_pane', 'Press Release (context aware)', 'press_release_ca_pane');
   $handler->display->display_options['display_description'] = 'List/blog of press releases for media syndication';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
