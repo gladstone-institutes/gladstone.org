@@ -13,9 +13,9 @@ function base_deploy_plans_default() {
   $plan = new DeployPlan();
   $plan->disabled = FALSE; /* Edit this to true to make a default plan disabled initially */
   $plan->api_version = 1;
-  $plan->name = 'structure_taxonomy';
-  $plan->title = 'structure_taxonomy';
-  $plan->description = 'load terms initializing the taxonomy';
+  $plan->name = 'base_structure_terms';
+  $plan->title = 'Base Structure Terms';
+  $plan->description = 'Load terms initializing the taxonomy';
   $plan->debug = 0;
   $plan->aggregator_plugin = 'DeployAggregatorManaged';
   $plan->aggregator_config = array(
@@ -26,7 +26,7 @@ function base_deploy_plans_default() {
   $plan->processor_config = array();
   $plan->endpoints = array();
   $plan->dependency_plugin = 'deploy_iterator';
-  $export['structure_taxonomy'] = $plan;
+  $export['base_structure_terms'] = $plan;
 
   return $export;
 }
