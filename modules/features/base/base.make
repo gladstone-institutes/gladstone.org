@@ -91,10 +91,10 @@ projects[imagefield_focus][patch][] = https://drupal.org/files/imagefield_focus-
 
 
 ; UI Widgets ------------------------------------
-projects[autocomplete_deluxe][version] 	= 7.x-2.0-beta3+2-dev
+projects[autocomplete_deluxe][version] 	= 7.x-2.0-dev
 projects[autocomplete_deluxe][subdir] 	= contrib
 projects[autocomplete_deluxe][download][type]     = git
-projects[autocomplete_deluxe][download][revision] = 70bdefe5
+projects[autocomplete_deluxe][download][revision] = a49e633d
 projects[autocomplete_deluxe][download][branch]   = 7.x-2.0
 
 
