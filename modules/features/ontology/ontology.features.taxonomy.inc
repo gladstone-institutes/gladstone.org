@@ -25,5 +25,13 @@ function ontology_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -10,
     ),
+    'structure' => array(
+      'name' => 'Structure',
+      'machine_name' => 'structure',
+      'description' => 'Terms used as selectors in subsystems like views, paths, contexts...',
+      'hierarchy' => 1,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
   );
 }
