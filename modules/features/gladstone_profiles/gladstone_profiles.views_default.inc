@@ -11,6 +11,251 @@ function gladstone_profiles_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'directory_widgets';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'profile';
+  $view->human_name = 'Directory Widgets';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Profile: Profile ID */
+  $handler->display->display_options['fields']['pid']['id'] = 'pid';
+  $handler->display->display_options['fields']['pid']['table'] = 'profile';
+  $handler->display->display_options['fields']['pid']['field'] = 'pid';
+  $handler->display->display_options['fields']['pid']['label'] = '';
+  $handler->display->display_options['fields']['pid']['element_label_colon'] = FALSE;
+
+  /* Display: Directory grid (context aware) */
+  $handler = $view->new_display('panel_pane', 'Directory grid (context aware)', 'profile_widget_dir_grid_ca_pane');
+  $handler->display->display_options['display_description'] = 'Display a directory in a grid of profile pictures';
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'field_operational_units_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => 'Example: GIND, GICD, GIVI, Administration, IT, Facilities',
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_operational_roles_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => 'Example: Investigator, Staff Scientist, Research Associate',
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_operational_titles_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => 'Example: Senior Investigator, Associate Investigator, Staff Research Scientist II',
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'rich_text';
+  $handler->display->display_options['exposed_form']['options']['token_details'] = 0;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Profile: User uid */
+  $handler->display->display_options['relationships']['user']['id'] = 'user';
+  $handler->display->display_options['relationships']['user']['table'] = 'profile';
+  $handler->display->display_options['relationships']['user']['field'] = 'user';
+  /* Relationship: Field: Operational Title(s) (field_operational_titles) */
+  $handler->display->display_options['relationships']['field_operational_titles_tid']['id'] = 'field_operational_titles_tid';
+  $handler->display->display_options['relationships']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
+  $handler->display->display_options['relationships']['field_operational_titles_tid']['field'] = 'field_operational_titles_tid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Profile: User uid */
+  $handler->display->display_options['fields']['user']['id'] = 'user';
+  $handler->display->display_options['fields']['user']['table'] = 'profile';
+  $handler->display->display_options['fields']['user']['field'] = 'user';
+  $handler->display->display_options['fields']['user']['label'] = '';
+  $handler->display->display_options['fields']['user']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['user']['element_label_colon'] = FALSE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['alter']['path'] = 'user/[user]';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'profile_picture_directory',
+    'image_link' => '',
+  );
+  /* Field: Profile: Realname Alias  */
+  $handler->display->display_options['fields']['field_label_alias']['id'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['table'] = 'field_data_field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['field'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['label'] = '';
+  $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
+  $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
+  /* Field: Field: Operational Title(s) */
+  $handler->display->display_options['fields']['field_operational_titles']['id'] = 'field_operational_titles';
+  $handler->display->display_options['fields']['field_operational_titles']['table'] = 'field_data_field_operational_titles';
+  $handler->display->display_options['fields']['field_operational_titles']['field'] = 'field_operational_titles';
+  $handler->display->display_options['fields']['field_operational_titles']['label'] = '';
+  $handler->display->display_options['fields']['field_operational_titles']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_titles']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
+  $handler->display->display_options['sorts']['weight_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight_1']['relationship'] = 'field_operational_titles_tid';
+  /* Sort criterion: Name Components: Family */
+  $handler->display->display_options['sorts']['field_realname_family']['id'] = 'field_realname_family';
+  $handler->display->display_options['sorts']['field_realname_family']['table'] = 'field_data_field_realname';
+  $handler->display->display_options['sorts']['field_realname_family']['field'] = 'field_realname_family';
+  $handler->display->display_options['sorts']['field_realname_family']['relationship'] = 'user';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
+  $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_operational_units_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Field: Image (field_image:fid) */
+  $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_image_fid']['group'] = 1;
+  /* Filter criterion: Field: Operational Unit(s) (field_operational_units) */
+  $handler->display->display_options['filters']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
+  $handler->display->display_options['filters']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
+  $handler->display->display_options['filters']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
+  $handler->display->display_options['filters']['field_operational_units_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_operational_units_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_operational_units_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['operator_id'] = 'field_operational_units_tid_op';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['label'] = 'Operational Unit(s)';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['description'] = 'Example: GIND, GICD, GIVI, Administration, IT, Facilities';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['operator'] = 'field_operational_units_tid_op';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['identifier'] = 'field_operational_units_tid';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['filters']['field_operational_units_tid']['vocabulary'] = 'operational_units';
+  /* Filter criterion: Profile: Operational Role(s) (field_operational_roles) */
+  $handler->display->display_options['filters']['field_operational_roles_tid']['id'] = 'field_operational_roles_tid';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['field'] = 'field_operational_roles_tid';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_operational_roles_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['operator_id'] = 'field_operational_roles_tid_op';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['label'] = 'Operational Role(s)';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['description'] = 'Example: Investigator, Staff Scientist, Research Associate';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['operator'] = 'field_operational_roles_tid_op';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['identifier'] = 'field_operational_roles_tid';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['filters']['field_operational_roles_tid']['vocabulary'] = 'operational_roles';
+  /* Filter criterion: Field: Operational Title(s) (field_operational_titles) */
+  $handler->display->display_options['filters']['field_operational_titles_tid']['id'] = 'field_operational_titles_tid';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['field'] = 'field_operational_titles_tid';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_operational_titles_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['operator_id'] = 'field_operational_titles_tid_op';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['label'] = 'Operational Title(s)';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['description'] = 'Example: Senior Investigator, Associate Investigator, Staff Research Scientist II';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['operator'] = 'field_operational_titles_tid_op';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['identifier'] = 'field_operational_titles_tid';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['filters']['field_operational_titles_tid']['vocabulary'] = 'operational_titles';
+  /* Filter criterion: Field: Operational Title(s) (field_operational_titles:delta) */
+  $handler->display->display_options['filters']['delta']['id'] = 'delta';
+  $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_operational_titles';
+  $handler->display->display_options['filters']['delta']['field'] = 'delta';
+  $handler->display->display_options['filters']['delta']['value']['value'] = '0';
+  $handler->display->display_options['filters']['delta']['expose']['operator_id'] = 'delta_op';
+  $handler->display->display_options['filters']['delta']['expose']['label'] = 'Operational Title(s) (field_operational_titles:delta)';
+  $handler->display->display_options['filters']['delta']['expose']['operator'] = 'delta_op';
+  $handler->display->display_options['filters']['delta']['expose']['identifier'] = 'delta';
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 'offset';
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
+  $export['directory_widgets'] = $view;
+
+  $view = new view();
   $view->name = 'profile_user_content';
   $view->description = 'Feeds of a given user\'s content';
   $view->tag = 'default';
@@ -215,7 +460,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'curriculum_vitae' => 'curriculum_vitae',
   );
-  /* Filter criterion: Field: Current (field_boolean) */
+  /* Filter criterion: Field: Subscription (field_boolean) */
   $handler->display->display_options['filters']['field_boolean_value']['id'] = 'field_boolean_value';
   $handler->display->display_options['filters']['field_boolean_value']['table'] = 'field_data_field_boolean';
   $handler->display->display_options['filters']['field_boolean_value']['field'] = 'field_boolean_value';

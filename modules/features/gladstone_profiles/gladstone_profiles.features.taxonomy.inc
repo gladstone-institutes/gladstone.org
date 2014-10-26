@@ -29,7 +29,7 @@ function gladstone_profiles_taxonomy_default_vocabularies() {
       'name' => 'Operational Roles',
       'machine_name' => 'operational_roles',
       'description' => 'Superclasses of Operational Titles',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
     ),

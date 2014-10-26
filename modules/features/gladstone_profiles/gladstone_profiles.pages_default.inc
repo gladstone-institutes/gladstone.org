@@ -951,3 +951,355 @@ function gladstone_profiles_default_page_manager_handlers() {
 
   return $export;
 }
+
+/**
+ * Implements hook_default_page_manager_pages().
+ */
+function gladstone_profiles_default_page_manager_pages() {
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'directory';
+  $page->task = 'page';
+  $page->admin_title = 'Directory';
+  $page->admin_description = 'Display profile data in various formats';
+  $page->path = 'directory/%variant/%uuid';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array(
+    'variant' => array(
+      'id' => 1,
+      'identifier' => 'Variant',
+      'name' => 'term_uuid',
+      'settings' => array(
+        'input_form' => 'term',
+        'vocabularies' => array(
+          'structure' => 'structure',
+          'research' => 0,
+          'concentration_of_study' => 0,
+          'event_type' => 0,
+          'honors_and_awards' => 0,
+          'institutions' => 0,
+          'operational_roles' => 0,
+          'operational_titles' => 0,
+          'operational_units' => 0,
+          'event_calendar_status' => 0,
+        ),
+        'breadcrumb' => 1,
+        'transform' => 1,
+      ),
+    ),
+    'uuid' => array(
+      'id' => 1,
+      'identifier' => 'Node: UUID',
+      'name' => 'entity_uuid:node',
+      'settings' => array(),
+    ),
+  );
+  $page->conf = array();
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_directory_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'directory';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Directors and Investigators',
+    'no_blocks' => 0,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_uuid',
+          'settings' => array(
+            'vocabulary_machine_name' => 'structure',
+            'research' => array(),
+            'concentration_of_study' => array(),
+            'event_type' => array(),
+            'honors_and_awards' => array(),
+            'institutions' => array(),
+            'operational_roles' => array(),
+            'operational_titles' => array(),
+            'operational_units' => array(),
+            'structure' => array(
+              'dd473bde-e5d3-4b59-ac37-e08e3b22addd' => 'dd473bde-e5d3-4b59-ac37-e08e3b22addd',
+            ),
+            'event_calendar_status' => array(),
+          ),
+          'context' => 'argument_term_uuid_1',
+          'not' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'gs2irr';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'gs3irc_header' => NULL,
+      'gs3irc_top' => NULL,
+      'gs3irc_sidebar' => NULL,
+      'gs3irc_middle' => NULL,
+      'gs3irc_inset' => NULL,
+      'gs3irc_bottom' => NULL,
+      'gs3irc_footer' => NULL,
+      'gs2irr_header' => NULL,
+      'gs2irr_top' => NULL,
+      'gs2irr_sidebar' => NULL,
+      'gs2irr_inset' => NULL,
+      'gs2irr_bottom' => NULL,
+      'gs2irr_footer' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'ead1c459-47f4-4fcc-9e03-5f5649eafda3';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-69bf88ea-780d-4495-b2f6-b3cf820302d1';
+    $pane->panel = 'gs2irr_header';
+    $pane->type = 'page_breadcrumb';
+    $pane->subtype = 'page_breadcrumb';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '69bf88ea-780d-4495-b2f6-b3cf820302d1';
+    $display->content['new-69bf88ea-780d-4495-b2f6-b3cf820302d1'] = $pane;
+    $display->panels['gs2irr_header'][0] = 'new-69bf88ea-780d-4495-b2f6-b3cf820302d1';
+    $pane = new stdClass();
+    $pane->pid = 'new-73926406-4610-413a-95fd-b6f85b4bf5e6';
+    $pane->panel = 'gs2irr_header';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '73926406-4610-413a-95fd-b6f85b4bf5e6';
+    $display->content['new-73926406-4610-413a-95fd-b6f85b4bf5e6'] = $pane;
+    $display->panels['gs2irr_header'][1] = 'new-73926406-4610-413a-95fd-b6f85b4bf5e6';
+    $pane = new stdClass();
+    $pane->pid = 'new-2e856c3d-c477-4e8a-b135-6346c07be5e0';
+    $pane->panel = 'gs2irr_inset';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_uuid:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2e856c3d-c477-4e8a-b135-6346c07be5e0';
+    $display->content['new-2e856c3d-c477-4e8a-b135-6346c07be5e0'] = $pane;
+    $display->panels['gs2irr_inset'][0] = 'new-2e856c3d-c477-4e8a-b135-6346c07be5e0';
+    $pane = new stdClass();
+    $pane->pid = 'new-fd6ab12d-9345-4b48-9093-35f150538773';
+    $pane->panel = 'gs2irr_inset';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'directory_widgets-profile_widget_dir_grid_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '0',
+      'offset' => '0',
+      'fields_override' => array(
+        'user' => 0,
+        'field_image' => 1,
+        'field_label_alias' => 1,
+        'field_operational_titles' => 1,
+      ),
+      'exposed' => array(
+        'field_operational_units_tid' => 'GICD',
+        'field_operational_roles_tid' => 'Director, Associate Director, Investigator, Staff Research Scientist, Visiting Scientist',
+        'field_operational_titles_tid' => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Cardiovascular',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'fd6ab12d-9345-4b48-9093-35f150538773';
+    $display->content['new-fd6ab12d-9345-4b48-9093-35f150538773'] = $pane;
+    $display->panels['gs2irr_inset'][1] = 'new-fd6ab12d-9345-4b48-9093-35f150538773';
+    $pane = new stdClass();
+    $pane->pid = 'new-78d9607d-6158-40fa-b6f2-836b2bc9465d';
+    $pane->panel = 'gs2irr_inset';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'directory_widgets-profile_widget_dir_grid_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '0',
+      'offset' => '0',
+      'fields_override' => array(
+        'user' => 0,
+        'field_image' => 1,
+        'field_label_alias' => 1,
+        'field_operational_titles' => 1,
+      ),
+      'exposed' => array(
+        'field_operational_units_tid' => 'GIVI',
+        'field_operational_roles_tid' => 'Director, Associate Director, Investigator, Staff Research Scientist, Visiting Scientist',
+        'field_operational_titles_tid' => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Virology & Immunology',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '78d9607d-6158-40fa-b6f2-836b2bc9465d';
+    $display->content['new-78d9607d-6158-40fa-b6f2-836b2bc9465d'] = $pane;
+    $display->panels['gs2irr_inset'][2] = 'new-78d9607d-6158-40fa-b6f2-836b2bc9465d';
+    $pane = new stdClass();
+    $pane->pid = 'new-bd943bb1-207b-45a2-88e5-bc59a1c0c976';
+    $pane->panel = 'gs2irr_inset';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'directory_widgets-profile_widget_dir_grid_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '0',
+      'offset' => '0',
+      'fields_override' => array(
+        'user' => 0,
+        'field_image' => 1,
+        'field_label_alias' => 1,
+        'field_operational_titles' => 1,
+      ),
+      'exposed' => array(
+        'field_operational_units_tid' => 'GIND',
+        'field_operational_roles_tid' => 'Director, Associate Director, Investigator, Staff Research Scientist, Visiting Scientist',
+        'field_operational_titles_tid' => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Neurological',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'bd943bb1-207b-45a2-88e5-bc59a1c0c976';
+    $display->content['new-bd943bb1-207b-45a2-88e5-bc59a1c0c976'] = $pane;
+    $display->panels['gs2irr_inset'][3] = 'new-bd943bb1-207b-45a2-88e5-bc59a1c0c976';
+    $pane = new stdClass();
+    $pane->pid = 'new-0d947f0f-9cf3-4571-b62e-bc8c96af91c7';
+    $pane->panel = 'gs2irr_sidebar';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'sidebar';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '0d947f0f-9cf3-4571-b62e-bc8c96af91c7';
+    $display->content['new-0d947f0f-9cf3-4571-b62e-bc8c96af91c7'] = $pane;
+    $display->panels['gs2irr_sidebar'][0] = 'new-0d947f0f-9cf3-4571-b62e-bc8c96af91c7';
+    $pane = new stdClass();
+    $pane->pid = 'new-3d89a9d9-c8ab-4f9c-9b56-4ce5c502035f';
+    $pane->panel = 'gs2irr_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'none',
+      'id' => '',
+      'class' => '',
+      'context' => 'argument_entity_uuid:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3d89a9d9-c8ab-4f9c-9b56-4ce5c502035f';
+    $display->content['new-3d89a9d9-c8ab-4f9c-9b56-4ce5c502035f'] = $pane;
+    $display->panels['gs2irr_top'][0] = 'new-3d89a9d9-c8ab-4f9c-9b56-4ce5c502035f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['directory'] = $page;
+
+  return $pages;
+
+}
