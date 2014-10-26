@@ -239,7 +239,7 @@ function news_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'Directory (all awards)',
+    'title' => 'Feed (all awards)',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',

@@ -98,13 +98,13 @@ function ontology_uuid_default_entities() {
     ),
     'description' => '',
     'format' => 'plain_text',
-    'name' => 'Directory',
+    'name' => 'Feed',
     'parent' => array(
       0 => 'aab1d176-c0e7-4f1d-86ed-fe4f47c924a6',
     ),
     'url_alias' => array(
       0 => array(
-        'alias' => 'structure/directory',
+        'alias' => 'structure/feed',
         'language' => 'und',
       ),
     ),
