@@ -1,5 +1,5 @@
-name = Tagging
-description = Enable content tagging
+name = Ontology
+description = Enable content tagging, classfication, and control terms
 core = 7.x
 package = Structure
 php = 5.2.4

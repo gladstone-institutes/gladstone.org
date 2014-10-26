@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * tagging.features.field_base.inc
+ * ontology.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function tagging_field_default_field_bases() {
+function ontology_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_node_refs'

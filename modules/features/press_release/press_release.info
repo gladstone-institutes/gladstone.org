@@ -17,7 +17,6 @@ dependencies[] = link
 dependencies[] = media
 dependencies[] = page_manager
 dependencies[] = strongarm
-dependencies[] = tagging
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views

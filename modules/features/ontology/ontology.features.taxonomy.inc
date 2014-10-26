@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * tagging.features.taxonomy.inc
+ * ontology.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function tagging_taxonomy_default_vocabularies() {
+function ontology_taxonomy_default_vocabularies() {
   return array(
     'operational_units' => array(
       'name' => 'Operational Units',

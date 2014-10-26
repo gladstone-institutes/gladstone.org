@@ -14,7 +14,6 @@ dependencies[] = file
 dependencies[] = image
 dependencies[] = media
 dependencies[] = strongarm
-dependencies[] = tagging
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views

@@ -12,7 +12,6 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = file
 dependencies[] = media
-dependencies[] = tagging
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
