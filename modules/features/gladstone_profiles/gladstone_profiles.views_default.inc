@@ -484,6 +484,9 @@ function gladstone_profiles_views_default_views() {
   /* Display: List (context aware) */
   $handler = $view->new_display('panel_pane', 'List (context aware)', 'directory_widget_list_ca_pane');
   $handler->display->display_options['display_description'] = 'Display a directory in a grouped list of profile links';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
@@ -529,11 +532,28 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'rich_text';
   $handler->display->display_options['exposed_form']['options']['token_details'] = 0;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_operational_roles',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Profile: User uid */
   $handler->display->display_options['relationships']['user']['id'] = 'user';
   $handler->display->display_options['relationships']['user']['table'] = 'profile';
   $handler->display->display_options['relationships']['user']['field'] = 'user';
+  /* Relationship: Profile: Operational Role(s) (field_operational_roles) */
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['id'] = 'field_operational_roles_tid';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['field'] = 'field_operational_roles_tid';
   /* Relationship: Field: Operational Title(s) (field_operational_titles) */
   $handler->display->display_options['relationships']['field_operational_titles_tid']['id'] = 'field_operational_titles_tid';
   $handler->display->display_options['relationships']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
@@ -546,19 +566,6 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['user']['label'] = '';
   $handler->display->display_options['fields']['user']['exclude'] = TRUE;
   $handler->display->display_options['fields']['user']['element_label_colon'] = FALSE;
-  /* Field: Field: Image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_image']['alter']['path'] = 'user/[user]';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'profile_picture_medium',
-    'image_link' => '',
-  );
   /* Field: Profile: Realname Alias  */
   $handler->display->display_options['fields']['field_label_alias']['id'] = 'field_label_alias';
   $handler->display->display_options['fields']['field_label_alias']['table'] = 'field_data_field_label_alias';
@@ -567,27 +574,22 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
   $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
-  /* Field: Field: Operational Title(s) */
-  $handler->display->display_options['fields']['field_operational_titles']['id'] = 'field_operational_titles';
-  $handler->display->display_options['fields']['field_operational_titles']['table'] = 'field_data_field_operational_titles';
-  $handler->display->display_options['fields']['field_operational_titles']['field'] = 'field_operational_titles';
-  $handler->display->display_options['fields']['field_operational_titles']['label'] = '';
-  $handler->display->display_options['fields']['field_operational_titles']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_operational_titles']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: Field: Biography */
-  $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
-  $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
-  $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
-  $handler->display->display_options['fields']['field_biography']['label'] = '';
-  $handler->display->display_options['fields']['field_biography']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_biography']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['field_biography']['settings'] = array(
-    'trim_length' => '600',
-  );
+  /* Field: Profile: Operational Role(s) */
+  $handler->display->display_options['fields']['field_operational_roles']['id'] = 'field_operational_roles';
+  $handler->display->display_options['fields']['field_operational_roles']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['fields']['field_operational_roles']['field'] = 'field_operational_roles';
+  $handler->display->display_options['fields']['field_operational_roles']['label'] = '';
+  $handler->display->display_options['fields']['field_operational_roles']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_operational_roles']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_roles']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_operational_roles']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_roles']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'field_operational_roles_tid';
   /* Sort criterion: Taxonomy term: Weight */
   $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
   $handler->display->display_options['sorts']['weight_1']['table'] = 'taxonomy_term_data';
@@ -663,6 +665,12 @@ function gladstone_profiles_views_default_views() {
     7 => 0,
   );
   $handler->display->display_options['filters']['field_operational_roles_tid']['vocabulary'] = 'operational_roles';
+  /* Filter criterion: Profile: Operational Role(s) (field_operational_roles:delta) */
+  $handler->display->display_options['filters']['delta']['id'] = 'delta';
+  $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['filters']['delta']['field'] = 'delta';
+  $handler->display->display_options['filters']['delta']['value']['value'] = '0';
+  $handler->display->display_options['filters']['delta']['group'] = 1;
   /* Filter criterion: Field: Operational Title(s) (field_operational_titles) */
   $handler->display->display_options['filters']['field_operational_titles_tid']['id'] = 'field_operational_titles_tid';
   $handler->display->display_options['filters']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
@@ -687,15 +695,6 @@ function gladstone_profiles_views_default_views() {
     7 => 0,
   );
   $handler->display->display_options['filters']['field_operational_titles_tid']['vocabulary'] = 'operational_titles';
-  /* Filter criterion: Field: Operational Title(s) (field_operational_titles:delta) */
-  $handler->display->display_options['filters']['delta']['id'] = 'delta';
-  $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_operational_titles';
-  $handler->display->display_options['filters']['delta']['field'] = 'delta';
-  $handler->display->display_options['filters']['delta']['value']['value'] = '0';
-  $handler->display->display_options['filters']['delta']['expose']['operator_id'] = 'delta_op';
-  $handler->display->display_options['filters']['delta']['expose']['label'] = 'Operational Title(s) (field_operational_titles:delta)';
-  $handler->display->display_options['filters']['delta']['expose']['operator'] = 'delta_op';
-  $handler->display->display_options['filters']['delta']['expose']['identifier'] = 'delta';
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
