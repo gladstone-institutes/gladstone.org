@@ -5,6 +5,8 @@
  */
 
 include_once 'gladstone_profiles.features.inc';
+//formatters example: 
+// include_once 'gladstone_profiles.formatters.inc';
 
 
 /**
