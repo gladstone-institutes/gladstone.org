@@ -27,7 +27,7 @@ function gladstone_profiles_uuid_default_entities() {
     ),
     'uuid' => 'da79160e-8e47-461b-a277-d802e04c3926',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 1,
+    'weight' => 7,
   );
   $entities['profile_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -49,7 +49,7 @@ function gladstone_profiles_uuid_default_entities() {
     ),
     'uuid' => 'aab6312c-432c-4c0a-aeb9-a71777bf6420',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 1,
   );
   $entities['profile_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -71,7 +71,7 @@ function gladstone_profiles_uuid_default_entities() {
     ),
     'uuid' => '41e0547e-c71f-4aeb-85fd-50001ac6c522',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 1,
+    'weight' => 2,
   );
   $entities['profile_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -93,7 +93,7 @@ function gladstone_profiles_uuid_default_entities() {
     ),
     'uuid' => 'dac256ad-e0ea-43b4-85cf-1cf9aaf77219',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 2,
+    'weight' => 3,
   );
   $entities['profile_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -115,7 +115,7 @@ function gladstone_profiles_uuid_default_entities() {
     ),
     'uuid' => '49ea4a28-1370-44a6-9dbc-80d560d31319',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 3,
+    'weight' => 4,
   );
   $entities['profile_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -137,7 +137,86 @@ function gladstone_profiles_uuid_default_entities() {
     ),
     'uuid' => '7d611df3-5101-4540-b011-97a679007fe8',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 4,
+    'weight' => 5,
+  );
+  $entities['profile_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/c5dda8f9-c5bb-4aac-84fc-aa685883f010',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'President',
+    'parent' => array(
+      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/president',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'c5dda8f9-c5bb-4aac-84fc-aa685883f010',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['profile_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/a523ee86-1fb4-4c3f-8ad0-effe5b9173cc',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'format' => NULL,
+    'name' => 'Scientific Advisory Board Member',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/scientific-advisory-board-member',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'a523ee86-1fb4-4c3f-8ad0-effe5b9173cc',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['profile_operational_title_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/dd4dab25-8def-44f5-9e9b-4c6e43ba8084',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Director',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-titles/director',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'dd4dab25-8def-44f5-9e9b-4c6e43ba8084',
+    'vocabulary_machine_name' => 'operational_titles',
+    'weight' => 0,
+  );
+  $entities['profile_operational_title_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/035b35bc-6d99-4f4f-bd61-ae2f6c86f032',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'President',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-titles/president',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '035b35bc-6d99-4f4f-bd61-ae2f6c86f032',
+    'vocabulary_machine_name' => 'operational_titles',
+    'weight' => 0,
   );
   $entities['profile_structure_terms'][] = (object) array(
     '__metadata' => array(

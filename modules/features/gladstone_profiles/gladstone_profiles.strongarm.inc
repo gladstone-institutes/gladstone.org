@@ -20,6 +20,13 @@ function gladstone_profiles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_profile2_mini_cv';
+  $strongarm->value = '';
+  $export['auto_entitylabel_pattern_profile2_mini_cv'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_php_profile2_curriculum_vitae';
   $strongarm->value = 0;
   $export['auto_entitylabel_php_profile2_curriculum_vitae'] = $strongarm;
@@ -27,9 +34,23 @@ function gladstone_profiles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_profile2_mini_cv';
+  $strongarm->value = '';
+  $export['auto_entitylabel_php_profile2_mini_cv'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_profile2_curriculum_vitae';
   $strongarm->value = '1';
   $export['auto_entitylabel_profile2_curriculum_vitae'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_profile2_mini_cv';
+  $strongarm->value = '';
+  $export['auto_entitylabel_profile2_mini_cv'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -141,6 +162,19 @@ function gladstone_profiles_strongarm() {
     ),
   );
   $export['field_bundle_settings_profile2__leadership'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_profile2__mini_cv';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_profile2__mini_cv'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

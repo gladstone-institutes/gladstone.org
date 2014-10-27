@@ -118,8 +118,9 @@ function gladstone_profiles_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_achievements',
-      1 => 'field_research_interests',
-      2 => 'field_lab_focus',
+      1 => 'field_lab_focus',
+      2 => 'field_label_alias',
+      3 => 'field_research_interests',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -147,8 +148,8 @@ function gladstone_profiles_field_group_info() {
     'label' => 'Education and Training',
     'weight' => '7',
     'children' => array(
-      0 => 'field_institutions',
-      1 => 'field_education',
+      0 => 'field_education',
+      1 => 'field_institutions',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -356,9 +357,9 @@ function gladstone_profiles_field_group_info() {
     'label' => 'Titles and Affiliations',
     'weight' => '6',
     'children' => array(
-      0 => 'field_professional_titles',
-      1 => 'field_affiliations',
-      2 => 'field_editorial_board',
+      0 => 'field_affiliations',
+      1 => 'field_editorial_board',
+      2 => 'field_professional_titles',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

@@ -23,7 +23,10 @@ function gladstone_profiles_user_default_permissions() {
   $permissions['administer profiles'] = array(
     'name' => 'administer profiles',
     'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
       'superadmin' => 'superadmin',
+      'webadmin' => 'webadmin',
     ),
     'module' => 'profile2',
   );
@@ -76,6 +79,15 @@ function gladstone_profiles_user_default_permissions() {
   // Exported permission: edit any leadership profile.
   $permissions['edit any leadership profile'] = array(
     'name' => 'edit any leadership profile',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'profile2',
+  );
+
+  // Exported permission: edit any mini_cv profile.
+  $permissions['edit any mini_cv profile'] = array(
+    'name' => 'edit any mini_cv profile',
     'roles' => array(
       'superadmin' => 'superadmin',
     ),
@@ -176,11 +188,21 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: edit own mini_cv profile.
+  $permissions['edit own mini_cv profile'] = array(
+    'name' => 'edit own mini_cv profile',
+    'roles' => array(
+      'mini cv' => 'mini cv',
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'profile2',
+  );
+
   // Exported permission: edit own profile profile.
   $permissions['edit own profile profile'] = array(
     'name' => 'edit own profile profile',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
+      'profile' => 'profile',
       'superadmin' => 'superadmin',
     ),
     'module' => 'profile2',
@@ -208,6 +230,16 @@ function gladstone_profiles_user_default_permissions() {
       'curriculum vitae' => 'curriculum vitae',
       'leadership' => 'leadership',
       'superadmin' => 'superadmin',
+    ),
+    'module' => 'profile2',
+  );
+
+  // Exported permission: view any mini_cv profile.
+  $permissions['view any mini_cv profile'] = array(
+    'name' => 'view any mini_cv profile',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -302,6 +334,15 @@ function gladstone_profiles_user_default_permissions() {
     'roles' => array(
       'authenticated user' => 'authenticated user',
       'superadmin' => 'superadmin',
+    ),
+    'module' => 'profile2',
+  );
+
+  // Exported permission: view own mini_cv profile.
+  $permissions['view own mini_cv profile'] = array(
+    'name' => 'view own mini_cv profile',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );

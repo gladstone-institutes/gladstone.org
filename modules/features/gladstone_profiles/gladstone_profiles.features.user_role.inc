@@ -22,5 +22,17 @@ function gladstone_profiles_user_default_roles() {
     'weight' => 4,
   );
 
+  // Exported role: mini cv.
+  $roles['mini cv'] = array(
+    'name' => 'mini cv',
+    'weight' => 6,
+  );
+
+  // Exported role: profile.
+  $roles['profile'] = array(
+    'name' => 'profile',
+    'weight' => 7,
+  );
+
   return $roles;
 }

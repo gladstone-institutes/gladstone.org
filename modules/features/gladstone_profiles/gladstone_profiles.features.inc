@@ -112,6 +112,29 @@ function gladstone_profiles_image_default_styles() {
     ),
   );
 
+  // Exported image style: profile_picture_square.
+  $styles['profile_picture_square'] = array(
+    'name' => 'profile_picture_square',
+    'label' => 'Profile picture square',
+    'effects' => array(
+      1 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 220,
+          'height' => 220,
+          'strength' => 'high',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: profile_picture_thumbnail.
   $styles['profile_picture_thumbnail'] = array(
     'name' => 'profile_picture_thumbnail',
@@ -160,8 +183,9 @@ function gladstone_profiles_name_default_formats() {
 function gladstone_profiles_default_profile2_type() {
   //HACK: fix role config on import
   $cv_rid = user_role_load_by_name("curriculum vitae")->rid;
+  $minicv_rid = user_role_load_by_name("mini cv")->rid;
   $leadership_rid = user_role_load_by_name("leadership")->rid;
-  $auth_rid = user_role_load_by_name("authenticated user")->rid;
+  $profile_rid = user_role_load_by_name("profile")->rid;
 
   $items = array();
   $items['curriculum_vitae'] = entity_import('profile2_type', '{
@@ -178,7 +202,15 @@ function gladstone_profiles_default_profile2_type() {
     "type" : "leadership",
     "label" : "Leadership",
     "weight" : "2",
-    "data" : { "registration" : 0, "roles" : { "'.$leadership_rid.'" : "'.$leadership_rid.'" } }
+    "data" : { "registration" : 0, "roles" : { "8" : "8" } }
+  }');
+  $items['mini_cv'] = entity_import('profile2_type', '{
+    "userCategory" : true,
+    "userView" : true,
+    "type" : "mini_cv",
+    "label" : "Mini CV",
+    "weight" : "0",
+    "data" : { "registration" : 0, "roles" : { "'.$minicv_rid.'" : "'.$minicv_rid.'" } }
   }');
   $items['profile'] = entity_import('profile2_type', '{
     "userCategory" : true,
@@ -186,7 +218,7 @@ function gladstone_profiles_default_profile2_type() {
     "type" : "profile",
     "label" : "Profile",
     "weight" : "0",
-    "data" : { "registration" : 1, "roles" : { "'.$auth_rid.'" : "'.$auth_rid.'" } }
+    "data" : { "registration" : 0, "roles" : { "'.$profile_rid.'" : "'.$profile_rid.'" } }
   }');
   return $items;
 }

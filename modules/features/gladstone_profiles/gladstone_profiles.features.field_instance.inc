@@ -383,7 +383,45 @@ function gladstone_profiles_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_leadership-field_operational_role'
+  $field_instances['field_collection_item-field_leadership-field_operational_role'] = array(
+    'bundle' => 'field_leadership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The role as defined by Human Resources. This is different from a Title, as it defines a generalized function (without grades prefixes like "Senior" or suffixes like "III". <em>example: Investigator, Research Associate</em>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_operational_role',
+    'label' => 'Operational Role',
+    'required' => 1,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 1,
     ),
   );
 
@@ -392,7 +430,7 @@ function gladstone_profiles_field_default_field_instances() {
     'bundle' => 'field_leadership',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The display title as defined by Human Resources',
+    'description' => 'The display title as defined by Human Resources. This is different from a Role, as it defines "grade" and specialization. <em>example: Senior Research Investigator, Research Associate III</em>',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -459,7 +497,7 @@ function gladstone_profiles_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -497,7 +535,7 @@ function gladstone_profiles_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -519,6 +557,44 @@ function gladstone_profiles_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_institution',
     'label' => 'Institution',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_professional_titles-field_institution_op_unit'
+  $field_instances['field_collection_item-field_professional_titles-field_institution_op_unit'] = array(
+    'bundle' => 'field_professional_titles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Departments or Special Groups <em>example: Department of Genetics</em>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_institution_op_unit',
+    'label' => 'Operational Unit',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
@@ -637,7 +713,7 @@ function gladstone_profiles_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -863,7 +939,7 @@ function gladstone_profiles_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -1039,7 +1115,38 @@ function gladstone_profiles_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-leadership-field_label_alias'
+  $field_instances['profile2-leadership-field_label_alias'] = array(
+    'bundle' => 'leadership',
+    'deleted' => 0,
+    'description' => 'This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_label_alias',
+    'label' => 'Realname Alias ',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 0,
     ),
   );
 
@@ -1085,6 +1192,75 @@ function gladstone_profiles_field_default_field_instances() {
         'fctw_title_field_formatter' => 'taxonomy_term_reference_plain',
       ),
       'type' => 'field_collection_tabs',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-mini_cv-field_label_alias'
+  $field_instances['profile2-mini_cv-field_label_alias'] = array(
+    'bundle' => 'mini_cv',
+    'deleted' => 0,
+    'description' => 'This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_label_alias',
+    'label' => 'Realname Alias ',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-mini_cv-field_professional_titles'
+  $field_instances['profile2-mini_cv-field_professional_titles'] = array(
+    'bundle' => 'mini_cv',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Additional employed titles held (work history). These will be displayed for external Gladstone affiliates (e.g. Scientific Advisory Board Members), and not used elsewhere in the site.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_professional_titles',
+    'label' => 'Professional titles',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 1,
     ),
   );
@@ -2258,6 +2434,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('<b>Autocomplete</b> any honors and awards to the user CV here. If none exists, create a new entry using the button below.');
   t('Accomplishments');
   t('Achievements');
+  t('Additional employed titles held (work history). These will be displayed for external Gladstone affiliates (e.g. Scientific Advisory Board Members), and not used elsewhere in the site.');
   t('Additional employed titles held (work history). These will only be displayed on the profile page, and not used elsewhere in the site.');
   t('Address');
   t('Administrative Assistant(s)');
@@ -2273,6 +2450,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Current');
   t('Date Joined');
   t('Degree');
+  t('Departments or Special Groups <em>example: Department of Genetics</em>');
   t('Diploma Year');
   t('Display Title');
   t('Displayed in order (primary, secondary, etc. )');
@@ -2299,6 +2477,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Official job title <b>without</b> credentials or affiliations.
 <em>Sort order sensitive:</em> The first item will be used in directory views.
 <i>examples:</i> Senior Staff Scientist, Visiting Investigator, Research Associate.');
+  t('Operational Role');
   t('Operational Role(s)');
   t('Operational Title');
   t('Operational Title(s)');
@@ -2323,7 +2502,8 @@ Full bio: Technical and domain specific details go here');
 ex: Staff Research Investigator, Associate Investigator, and Visiting Investigator are all of the "Investigator" Role');
   t('Tag research areas, groups and units here.
 <em>example:</em> GICD, Stem Cell, Intellectual Property');
-  t('The display title as defined by Human Resources');
+  t('The display title as defined by Human Resources. This is different from a Role, as it defines "grade" and specialization. <em>example: Senior Research Investigator, Research Associate III</em>');
+  t('The role as defined by Human Resources. This is different from a Title, as it defines a generalized function (without grades prefixes like "Senior" or suffixes like "III". <em>example: Investigator, Research Associate</em>');
   t('This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>');
   t('This is the more technical, domain specific, description of "Accomplishments" from the general public profile.
 <em>Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.</em>');

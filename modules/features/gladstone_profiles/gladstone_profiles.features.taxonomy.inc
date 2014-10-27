@@ -17,6 +17,14 @@ function gladstone_profiles_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
+    'institution_operational_unit' => array(
+      'name' => 'Institution Operational Unit',
+      'machine_name' => 'institution_operational_unit',
+      'description' => 'Operational Units at External Institutions',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'institutions' => array(
       'name' => 'Institutions',
       'machine_name' => 'institutions',
