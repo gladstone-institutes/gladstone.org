@@ -964,7 +964,10 @@ function gladstone_profiles_default_page_manager_pages() {
   $page->admin_title = 'Directory';
   $page->admin_description = 'Display profile data in various formats';
   $page->path = 'directory/%variant/%uuid';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array(
     'variant' => array(

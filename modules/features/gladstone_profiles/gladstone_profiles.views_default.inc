@@ -921,6 +921,10 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['relationships']['field_operational_titles_tid']['id'] = 'field_operational_titles_tid';
   $handler->display->display_options['relationships']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
   $handler->display->display_options['relationships']['field_operational_titles_tid']['field'] = 'field_operational_titles_tid';
+  /* Relationship: Profile: Operational Role(s) (field_operational_roles) */
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['id'] = 'field_operational_roles_tid';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['field'] = 'field_operational_roles_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Profile: User uid */
   $handler->display->display_options['fields']['user']['id'] = 'user';
@@ -983,6 +987,11 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['relationship'] = 'field_operational_titles_tid';
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
+  $handler->display->display_options['sorts']['weight_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight_1']['relationship'] = 'field_operational_roles_tid';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['filter_groups']['groups'] = array(
@@ -1002,7 +1011,10 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_operational_titles_tid']['id'] = 'field_operational_titles_tid';
   $handler->display->display_options['filters']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
   $handler->display->display_options['filters']['field_operational_titles_tid']['field'] = 'field_operational_titles_tid';
-  $handler->display->display_options['filters']['field_operational_titles_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_operational_titles_tid']['value'] = array(
+    0 => '33',
+    1 => '34',
+  );
   $handler->display->display_options['filters']['field_operational_titles_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_operational_titles_tid']['vocabulary'] = 'operational_titles';
   /* Filter criterion: Profile: Type */
@@ -1017,7 +1029,10 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_operational_roles_tid']['id'] = 'field_operational_roles_tid';
   $handler->display->display_options['filters']['field_operational_roles_tid']['table'] = 'field_data_field_operational_roles';
   $handler->display->display_options['filters']['field_operational_roles_tid']['field'] = 'field_operational_roles_tid';
-  $handler->display->display_options['filters']['field_operational_roles_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['value'] = array(
+    0 => '5',
+    1 => '11',
+  );
   $handler->display->display_options['filters']['field_operational_roles_tid']['group'] = 2;
   $handler->display->display_options['filters']['field_operational_roles_tid']['vocabulary'] = 'operational_roles';
 
