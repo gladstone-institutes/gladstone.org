@@ -1211,7 +1211,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_operational_role_tid']['field'] = 'field_operational_role_tid';
   $handler->display->display_options['filters']['field_operational_role_tid']['relationship'] = 'field_leadership_value';
   $handler->display->display_options['filters']['field_operational_role_tid']['value'] = array(
-    0 => '38',
+    0 => '12',
   );
   $handler->display->display_options['filters']['field_operational_role_tid']['vocabulary'] = 'operational_roles';
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
