@@ -60,7 +60,6 @@ features[variable][] = date_first_day
 features[variable][] = drupal_http_request_fails
 features[variable][] = email__active_tab
 features[variable][] = empty_timezone_message
-features[variable][] = install_time
 features[variable][] = node_admin_theme
 features[variable][] = theme_default
 features[variable][] = theme_rubik_settings
