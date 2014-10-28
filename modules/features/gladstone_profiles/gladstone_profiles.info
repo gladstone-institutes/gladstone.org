@@ -131,6 +131,7 @@ features[namefield][] = professional
 features[page_manager_handlers][] = user_view_panel_context
 features[page_manager_handlers][] = user_view_panel_context_2
 features[page_manager_pages][] = directory
+features[page_manager_pages][] = leadership
 features[panels_mini][] = curriculum_vitae_tab
 features[panels_mini][] = profile_tab
 features[panels_mini][] = publications_tab

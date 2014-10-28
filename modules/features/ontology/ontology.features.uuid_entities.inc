@@ -754,7 +754,7 @@ function ontology_uuid_default_entities() {
       ),
     ),
     'format' => 'rich_text',
-    'name' => 'Information Technology',
+    'name' => 'IT',
     'url_alias' => array(
       0 => array(
         'alias' => 'operational-units/information-technology',

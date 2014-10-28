@@ -1176,6 +1176,8 @@ function gladstone_profiles_views_default_views() {
   );
   $handler->display->display_options['filters']['field_operational_roles_tid']['group'] = 2;
   $handler->display->display_options['filters']['field_operational_roles_tid']['vocabulary'] = 'operational_roles';
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: Scientific Advisory Board (context aware) */
   $handler = $view->new_display('panel_pane', 'Scientific Advisory Board (context aware)', 'leadership_widget_sci_adv_board_ca_pane');
