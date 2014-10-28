@@ -218,6 +218,158 @@ function ontology_uuid_default_entities() {
     'vocabulary_machine_name' => 'operational_roles',
     'weight' => 0,
   );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/6e82a0c0-5a77-410e-b086-ecdbca75553f',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Assistant Controller',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/assistant-controller',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '6e82a0c0-5a77-410e-b086-ecdbca75553f',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d0bb7522-267a-44e0-a321-4fb2ec8720e6',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Human Resources Officer',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/human-resources-officer',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd0bb7522-267a-44e0-a321-4fb2ec8720e6',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/cf7bdeb8-6c09-4e33-885c-bcb8f9e95ea1',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Chief Technology Officer',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/chief-technology-officer',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'cf7bdeb8-6c09-4e33-885c-bcb8f9e95ea1',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/1e5b1d87-a048-4711-98cd-98953b06558a',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Chief Building Engineer',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/chief-building-engineer',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '1e5b1d87-a048-4711-98cd-98953b06558a',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d810d2bf-3dfb-4f5d-ba3d-e25e3d7832af',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Purchasing Manager',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/purchasing-manager',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd810d2bf-3dfb-4f5d-ba3d-e25e3d7832af',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d848fae8-3a83-4376-93c6-93ad8395309a',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Scientific Officer for Research Integrity',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/scientific-officer-research-integrity',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd848fae8-3a83-4376-93c6-93ad8395309a',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/796d665b-0cea-41c3-8403-b1d80c3b41e2',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Scientific Officer for Technology & Innovation',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/scientific-officer-technology-innovation',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '796d665b-0cea-41c3-8403-b1d80c3b41e2',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/f3a65134-f224-49cc-a730-dfef15ecdfa8',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Scientific Officer for Mentoring',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/scientific-officer-mentoring',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'f3a65134-f224-49cc-a730-dfef15ecdfa8',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
   $entities['ontology_operational_unit_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
@@ -504,6 +656,195 @@ function ontology_uuid_default_entities() {
     'uuid' => '9426a451-58f8-40ea-81ea-e90d15539569',
     'vocabulary_machine_name' => 'operational_units',
     'weight' => 7,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d6032808-de30-4454-b177-f9b032b543c6',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Finance',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Finance',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/finance',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd6032808-de30-4454-b177-f9b032b543c6',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/20e12bb1-122d-4a05-8087-49a4ff004f37',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Grants & Contracts',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Grants and Contracts',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/grants-and-contracts',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '20e12bb1-122d-4a05-8087-49a4ff004f37',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/9dbdae10-c08e-4cb6-a264-4673be12f6e4',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Human Resources',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Human Resources',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/human-resources',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '9dbdae10-c08e-4cb6-a264-4673be12f6e4',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/5a92ee83-47a2-4dc9-89d2-ddd15f47d22f',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Information Technology',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Information Technology',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/information-technology',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '5a92ee83-47a2-4dc9-89d2-ddd15f47d22f',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/4627a784-ee9b-48c9-b8f7-a3860cae178d',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Operations',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Operations',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/operations',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '4627a784-ee9b-48c9-b8f7-a3860cae178d',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/c9acac14-154b-41ff-9727-38d9ef14061e',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Purchasing & Receiving',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Purchasing and Receiving',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/purchasing-and-receiving',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'c9acac14-154b-41ff-9727-38d9ef14061e',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/df8a9c26-fb40-4635-988d-96c5459160e3',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Science Administration',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Science Administration',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/science-administration',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'df8a9c26-fb40-4635-988d-96c5459160e3',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
   );
   $entities['ontology_structure_terms'][] = (object) array(
     '__metadata' => array(
