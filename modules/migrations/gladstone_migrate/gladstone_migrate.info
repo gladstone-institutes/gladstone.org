@@ -1,0 +1,11 @@
+name = Gladstone Migrate
+description = Migrate data between versions
+core = 7.x
+package = Migration
+php = 5.3.4
+project = gladstone_migrate
+dependencies[] = migrate
+dependencies[] = migrate_d2d
+dependencies[] = migrate_extras
+features[features_api][] = api:2
+project path = profiles/gladstone_org/modules/migrations
