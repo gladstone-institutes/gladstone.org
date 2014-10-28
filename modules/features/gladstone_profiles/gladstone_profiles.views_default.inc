@@ -764,6 +764,129 @@ function gladstone_profiles_views_default_views() {
       'label' => 'Field: Operational Unit(s) (field_operational_units)',
     ),
   );
+
+  /* Display: Operational Unit List */
+  $handler = $view->new_display('panel_pane', 'Operational Unit List', 'directory_widget_ops_unit_list_pane');
+  $handler->display->display_options['display_description'] = 'Display a list of members grouped by operational unit';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_operational_units',
+      'rendered' => 0,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Profile: User uid */
+  $handler->display->display_options['fields']['user']['id'] = 'user';
+  $handler->display->display_options['fields']['user']['table'] = 'profile';
+  $handler->display->display_options['fields']['user']['field'] = 'user';
+  $handler->display->display_options['fields']['user']['label'] = '';
+  $handler->display->display_options['fields']['user']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['user']['element_label_colon'] = FALSE;
+  /* Field: Field: Operational Unit(s) */
+  $handler->display->display_options['fields']['field_operational_units']['id'] = 'field_operational_units';
+  $handler->display->display_options['fields']['field_operational_units']['table'] = 'field_data_field_operational_units';
+  $handler->display->display_options['fields']['field_operational_units']['field'] = 'field_operational_units';
+  $handler->display->display_options['fields']['field_operational_units']['label'] = '';
+  $handler->display->display_options['fields']['field_operational_units']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_units']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_operational_units']['delta_offset'] = '0';
+  /* Field: Profile: Operational Role(s) */
+  $handler->display->display_options['fields']['field_operational_roles']['id'] = 'field_operational_roles';
+  $handler->display->display_options['fields']['field_operational_roles']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['fields']['field_operational_roles']['field'] = 'field_operational_roles';
+  $handler->display->display_options['fields']['field_operational_roles']['label'] = '';
+  $handler->display->display_options['fields']['field_operational_roles']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_roles']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_operational_roles']['delta_offset'] = '0';
+  /* Field: Profile: Realname Alias  */
+  $handler->display->display_options['fields']['field_label_alias']['id'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['table'] = 'field_data_field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['field'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['label'] = '';
+  $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
+  $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
+  /* Field: Profile: Public Email */
+  $handler->display->display_options['fields']['field_public_email']['id'] = 'field_public_email';
+  $handler->display->display_options['fields']['field_public_email']['table'] = 'field_data_field_public_email';
+  $handler->display->display_options['fields']['field_public_email']['field'] = 'field_public_email';
+  $handler->display->display_options['fields']['field_public_email']['label'] = '';
+  $handler->display->display_options['fields']['field_public_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
+  );
+  /* Filter criterion: Field: Operational Unit(s) (field_operational_units) */
+  $handler->display->display_options['filters']['field_operational_units_tid']['id'] = 'field_operational_units_tid';
+  $handler->display->display_options['filters']['field_operational_units_tid']['table'] = 'field_data_field_operational_units';
+  $handler->display->display_options['filters']['field_operational_units_tid']['field'] = 'field_operational_units_tid';
+  $handler->display->display_options['filters']['field_operational_units_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_operational_units_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['operator_id'] = 'field_operational_units_tid_op';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['label'] = 'Operational Unit(s)';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['operator'] = 'field_operational_units_tid_op';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['identifier'] = 'field_operational_units_tid';
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_units_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+    9 => 0,
+    10 => 0,
+  );
+  $handler->display->display_options['filters']['field_operational_units_tid']['vocabulary'] = 'operational_units';
+  /* Filter criterion: Profile: Operational Role(s) (field_operational_roles) */
+  $handler->display->display_options['filters']['field_operational_roles_tid']['id'] = 'field_operational_roles_tid';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['field'] = 'field_operational_roles_tid';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['operator_id'] = 'field_operational_roles_tid_op';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['label'] = 'Operational Role(s)';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['operator'] = 'field_operational_roles_tid_op';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['identifier'] = 'field_operational_roles_tid';
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_operational_roles_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+    1 => 0,
+    7 => 0,
+    9 => 0,
+    10 => 0,
+  );
+  $handler->display->display_options['filters']['field_operational_roles_tid']['vocabulary'] = 'operational_roles';
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $export['directory_widgets'] = $view;
 
   $view = new view();
