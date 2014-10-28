@@ -3,6 +3,10 @@
 function keystone_install() {
 
 
+/** Set Time Zone **/
+
+	variable_set('date_default_timezone', 'America/Los_Angeles');
+
 /** Update roles **/
 
 	// Authenticated Role

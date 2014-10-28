@@ -56,7 +56,6 @@ features[variable][] = anonymous
 features[variable][] = configurable_timezones
 features[variable][] = date_api_use_iso8601
 features[variable][] = date_api_version
-features[variable][] = date_default_timezone
 features[variable][] = date_first_day
 features[variable][] = drupal_http_request_fails
 features[variable][] = email__active_tab
