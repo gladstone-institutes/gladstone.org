@@ -465,6 +465,46 @@ function ontology_uuid_default_entities() {
     'vocabulary_machine_name' => 'operational_units',
     'weight' => 0,
   );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/ca4cefd8-41c6-4e0a-9e57-984417d67e9b',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(),
+    'format' => 'rich_text',
+    'name' => 'President & Directors',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/president-directors',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'ca4cefd8-41c6-4e0a-9e57-984417d67e9b',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 7,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/9426a451-58f8-40ea-81ea-e90d15539569',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(),
+    'format' => 'rich_text',
+    'name' => 'Administration',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/administration',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '9426a451-58f8-40ea-81ea-e90d15539569',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 7,
+  );
   $entities['ontology_structure_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
