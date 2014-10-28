@@ -32,131 +32,21 @@ function ontology_uuid_default_entities() {
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/aab6312c-432c-4c0a-aeb9-a71777bf6420',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Director',
-    'parent' => array(
-      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
-    ),
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/director',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => 'aab6312c-432c-4c0a-aeb9-a71777bf6420',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 1,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/41e0547e-c71f-4aeb-85fd-50001ac6c522',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Associate Director',
-    'parent' => array(
-      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
-    ),
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/associate-director',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '41e0547e-c71f-4aeb-85fd-50001ac6c522',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 2,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/dac256ad-e0ea-43b4-85cf-1cf9aaf77219',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Investigator',
-    'parent' => array(
-      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
-    ),
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/investigator',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => 'dac256ad-e0ea-43b4-85cf-1cf9aaf77219',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 3,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/49ea4a28-1370-44a6-9dbc-80d560d31319',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Staff Research Scientist',
-    'parent' => array(
-      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
-    ),
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/staff-research-scientist',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '49ea4a28-1370-44a6-9dbc-80d560d31319',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 4,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/7d611df3-5101-4540-b011-97a679007fe8',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Visiting Scientist',
-    'parent' => array(
-      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
-    ),
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/visiting-scientist',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '7d611df3-5101-4540-b011-97a679007fe8',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 5,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/d05d90b9-266a-488c-bc16-e1e29ae61cde',
+      'uri' => 'taxonomy_term/a523ee86-1fb4-4c3f-8ad0-effe5b9173cc',
       'cause' => FALSE,
     ),
     'description' => NULL,
     'format' => NULL,
-    'name' => 'Engineer',
+    'name' => 'Scientific Advisory Board Member',
     'url_alias' => array(
       0 => array(
-        'alias' => 'operational-roles/engineer',
+        'alias' => 'operational-roles/scientific-advisory-board-member',
         'language' => 'und',
       ),
     ),
-    'uuid' => 'd05d90b9-266a-488c-bc16-e1e29ae61cde',
+    'uuid' => 'a523ee86-1fb4-4c3f-8ad0-effe5b9173cc',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 6,
+    'weight' => 0,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -183,19 +73,148 @@ function ontology_uuid_default_entities() {
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/a523ee86-1fb4-4c3f-8ad0-effe5b9173cc',
+      'uri' => 'taxonomy_term/d05d90b9-266a-488c-bc16-e1e29ae61cde',
       'cause' => FALSE,
     ),
     'description' => NULL,
     'format' => NULL,
-    'name' => 'Scientific Advisory Board Member',
+    'name' => 'Engineer',
     'url_alias' => array(
       0 => array(
-        'alias' => 'operational-roles/scientific-advisory-board-member',
+        'alias' => 'operational-roles/engineer',
         'language' => 'und',
       ),
     ),
-    'uuid' => 'a523ee86-1fb4-4c3f-8ad0-effe5b9173cc',
+    'uuid' => 'd05d90b9-266a-488c-bc16-e1e29ae61cde',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 6,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/7d611df3-5101-4540-b011-97a679007fe8',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Visiting Scientist',
+    'parent' => array(
+      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/visiting-scientist',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '7d611df3-5101-4540-b011-97a679007fe8',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 5,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/49ea4a28-1370-44a6-9dbc-80d560d31319',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Staff Research Scientist',
+    'parent' => array(
+      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/staff-research-scientist',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '49ea4a28-1370-44a6-9dbc-80d560d31319',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 4,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/dac256ad-e0ea-43b4-85cf-1cf9aaf77219',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Investigator',
+    'parent' => array(
+      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/investigator',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'dac256ad-e0ea-43b4-85cf-1cf9aaf77219',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 3,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/41e0547e-c71f-4aeb-85fd-50001ac6c522',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Associate Director',
+    'parent' => array(
+      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/associate-director',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '41e0547e-c71f-4aeb-85fd-50001ac6c522',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 2,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/aab6312c-432c-4c0a-aeb9-a71777bf6420',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Director',
+    'parent' => array(
+      0 => 'da79160e-8e47-461b-a277-d802e04c3926',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/director',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'aab6312c-432c-4c0a-aeb9-a71777bf6420',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 1,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/c68fb120-7898-4f68-a4f9-d8fc9eb5cd7e',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'format' => NULL,
+    'name' => 'Foundation Member',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/foundation-member',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'c68fb120-7898-4f68-a4f9-d8fc9eb5cd7e',
     'vocabulary_machine_name' => 'operational_roles',
     'weight' => 0,
   );
@@ -423,6 +442,26 @@ function ontology_uuid_default_entities() {
       ),
     ),
     'uuid' => 'dbdbc98b-e144-41c0-bc16-dfcb82d94c81',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/ece2a512-252d-4a46-9988-e9ab121ee976',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'field_text' => array(),
+    'format' => NULL,
+    'name' => 'Foundation',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/foundation',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'ece2a512-252d-4a46-9988-e9ab121ee976',
     'vocabulary_machine_name' => 'operational_units',
     'weight' => 0,
   );

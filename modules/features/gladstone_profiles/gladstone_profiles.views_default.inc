@@ -374,7 +374,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -790,13 +790,6 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['pid']['id'] = 'pid';
   $handler->display->display_options['fields']['pid']['table'] = 'profile';
   $handler->display->display_options['fields']['pid']['field'] = 'pid';
-  /* Filter criterion: Profile: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'profile';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'profile' => 'profile',
-  );
 
   /* Display: Feed (context aware) */
   $handler = $view->new_display('panel_pane', 'Feed (context aware)', 'leadership_widget_feed_ca_pane');
@@ -866,7 +859,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
   $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -888,6 +881,15 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['arguments']['field_operational_unit_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_operational_unit_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_operational_unit_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'profile' => 'profile',
+  );
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -1229,6 +1231,78 @@ function gladstone_profiles_views_default_views() {
     0 => '12',
   );
   $handler->display->display_options['filters']['field_operational_role_tid']['vocabulary'] = 'operational_roles';
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: Foundation */
+  $handler = $view->new_display('panel_pane', 'Foundation', 'leadership_widget_foundation_pane');
+  $handler->display->display_options['display_description'] = 'List of foundation members';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Profile: User uid */
+  $handler->display->display_options['relationships']['user']['id'] = 'user';
+  $handler->display->display_options['relationships']['user']['table'] = 'profile';
+  $handler->display->display_options['relationships']['user']['field'] = 'user';
+  /* Relationship: Profile */
+  $handler->display->display_options['relationships']['profile']['id'] = 'profile';
+  $handler->display->display_options['relationships']['profile']['table'] = 'users';
+  $handler->display->display_options['relationships']['profile']['field'] = 'profile';
+  $handler->display->display_options['relationships']['profile']['relationship'] = 'user';
+  $handler->display->display_options['relationships']['profile']['ui_name'] = 'Profile';
+  $handler->display->display_options['relationships']['profile']['bundle_types'] = array(
+    'profile' => 'profile',
+  );
+  /* Relationship: Profile: Leadership (field_leadership) */
+  $handler->display->display_options['relationships']['field_leadership_value']['id'] = 'field_leadership_value';
+  $handler->display->display_options['relationships']['field_leadership_value']['table'] = 'field_data_field_leadership';
+  $handler->display->display_options['relationships']['field_leadership_value']['field'] = 'field_leadership_value';
+  $handler->display->display_options['relationships']['field_leadership_value']['delta'] = '-1';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Leadership: User uid */
+  $handler->display->display_options['fields']['user']['id'] = 'user';
+  $handler->display->display_options['fields']['user']['table'] = 'profile';
+  $handler->display->display_options['fields']['user']['field'] = 'user';
+  $handler->display->display_options['fields']['user']['ui_name'] = 'Leadership: User uid';
+  $handler->display->display_options['fields']['user']['label'] = '';
+  $handler->display->display_options['fields']['user']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['user']['element_label_colon'] = FALSE;
+  /* Field: Leadership: Realname alias */
+  $handler->display->display_options['fields']['field_label_alias']['id'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['table'] = 'field_data_field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['field'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['ui_name'] = 'Leadership: Realname alias';
+  $handler->display->display_options['fields']['field_label_alias']['label'] = '';
+  $handler->display->display_options['fields']['field_label_alias']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
+  /* Field: Profile: Realname alias */
+  $handler->display->display_options['fields']['field_label_alias_1']['id'] = 'field_label_alias_1';
+  $handler->display->display_options['fields']['field_label_alias_1']['table'] = 'field_data_field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias_1']['field'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias_1']['relationship'] = 'profile';
+  $handler->display->display_options['fields']['field_label_alias_1']['ui_name'] = 'Profile: Realname alias';
+  $handler->display->display_options['fields']['field_label_alias_1']['label'] = '';
+  $handler->display->display_options['fields']['field_label_alias_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_label_alias_1']['alter']['path'] = 'user/[user]';
+  $handler->display->display_options['fields']['field_label_alias_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_label_alias_1']['empty'] = '[field_label_alias]';
+  $handler->display->display_options['fields']['field_label_alias_1']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'leadership' => 'leadership',
+  );
+  /* Filter criterion: Field collection item: Operational Unit (field_operational_unit) */
+  $handler->display->display_options['filters']['field_operational_unit_tid']['id'] = 'field_operational_unit_tid';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['table'] = 'field_data_field_operational_unit';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['field'] = 'field_operational_unit_tid';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['relationship'] = 'field_leadership_value';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['value'] = array(
+    0 => '36',
+  );
+  $handler->display->display_options['filters']['field_operational_unit_tid']['vocabulary'] = 'operational_units';
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['leadership_widgets'] = $view;

@@ -180,6 +180,25 @@ function gladstone_profiles_uuid_default_entities() {
     'vocabulary_machine_name' => 'operational_roles',
     'weight' => 0,
   );
+  $entities['profile_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/c68fb120-7898-4f68-a4f9-d8fc9eb5cd7e',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'format' => NULL,
+    'name' => 'Foundation Member',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/foundation-member',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'c68fb120-7898-4f68-a4f9-d8fc9eb5cd7e',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
   $entities['profile_operational_title_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
