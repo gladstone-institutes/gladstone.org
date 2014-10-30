@@ -2,4 +2,55 @@
 /**
  * @file
  * Drupal needs this blank file.
+ *
+ * Statically defined migrations (w/o UI)
+ * ---------------------------------------
+ * Migrate operates almost entirely through classes, and by adding any
+ * files containing class definitions to the .info file, those files 
+ * are automatically included only when the classes they contain are 
+ * referenced. The one non-class piece you need to implement is 
+ * hook_migrate_api(), but because *.migrate.inc is registered using
+ * hook_hook_info, by defining your implementation of that hook in
+ * a_wusel_migration.migrate.inc, it is automatically invoked only 
+ * when needed.
+ *
+ * source: https://www.drupal.org/node/1285276
+ *
+ *
+ * Dynamically defined migrations (w/ ui)
+ * --------------------------------------
+ * Migrations that use different instances of the same base class to 
+ * to migrate different content should use Dynamically registered 
+ * migrations, here in the *.module file
+ *
  */
+
+function gladstone_migrate_flush_caches() {
+
+	// Common arguments
+	$args = array(
+		'group_name' => 'Gladstone',
+		'source_version' => 7,
+		'source_connection' => 'legacy',
+		'source_database' => array(
+			'driver'   => 'mysql',
+			'database' => variable_get('gladstone_migrate_source_schema',''),
+			'username' => variable_get('gladstone_migrate_source_user',''),
+			'password' => variable_get('gladstone_migrate_source_pass',''),
+			'host'     => '127.0.0.1',
+			'prefix'   => '',
+		),
+		'format_mappings' => array(
+			'php' => 'full_html',
+			'full_html' => 'full_html',
+			'limited_html' => 'limited_html',
+			'plain_text' => 'plain_text'
+		)
+	);
+
+	// Register migrations -----
+	Migration::registerMigration('GSUser','user', $args);
+
+}
+
+

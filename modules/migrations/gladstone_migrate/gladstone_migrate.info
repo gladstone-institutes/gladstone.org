@@ -1,4 +1,4 @@
-name = Gladstone Migrate
+name = Gladstone Migrate v1
 description = Migrate data between versions
 core = 7.x
 package = Migration
@@ -7,5 +7,10 @@ project = gladstone_migrate
 dependencies[] = migrate
 dependencies[] = migrate_d2d
 dependencies[] = migrate_extras
+dependencies[] = migrate_ui
+dependencies[] = migrate_d2d_ui
 features[features_api][] = api:2
-project path = profiles/gladstone_org/modules/migrations
+files[] = gladstone.migrate.inc
+files[] = user.migrate.inc
+project path = profiles/gladstone_org/modules/migrationsproject path = profiles/gladstone_org/modules/migrations
+version = 1.0-2.0
