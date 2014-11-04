@@ -361,7 +361,7 @@ function events_field_default_field_instances() {
     'rubik_edit_field_display' => 'default',
     'settings' => array(
       'description_field' => 1,
-      'file_directory' => 'event_calendar',
+      'file_directory' => 'event',
       'file_extensions' => 'txt pdf doc png zip jpeg jpg tiff ppt',
       'max_filesize' => '',
       'user_register_form' => FALSE,
