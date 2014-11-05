@@ -10,7 +10,8 @@ dependencies[] = migrate_extras
 dependencies[] = migrate_ui
 dependencies[] = migrate_d2d_ui
 features[features_api][] = api:2
-files[] = gladstone.migrate.inc
+files[] = file.migrate.inc
 files[] = user.migrate.inc
-project path = profiles/gladstone_org/modules/migrationsproject path = profiles/gladstone_org/modules/migrations
+files[] = profile.migrate.inc
+project path = profiles/gladstone_org/modules/migrations
 version = 1.0-2.0

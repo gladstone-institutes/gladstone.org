@@ -17,7 +17,8 @@ class GSUser extends DrupalUser7Migration {
       parent::__construct($arguments);
 
       // make sure our roles are migrated first
-      $this->dependencies[] = 'GSRole';
+      // add the machine name for the role migration class
+      $this->dependencies[] = 'role';
 
       // map the fields as (destination, source)
       $this->addFieldMapping('field_realname', 'field_full_name_given');
@@ -80,6 +81,8 @@ class GSRole extends DrupalRole7Migration {
       'admin'       => 'admin',
       'editor'      => 'editor',
       'leadership'  => 'leadership',
+
+      // use the pseudo roles to partition the monolithic source profile
       'has_cv'      => 'curriculum vitae',
       'has_mincv'   => 'mini cv',
       'has_profile' => 'profile',

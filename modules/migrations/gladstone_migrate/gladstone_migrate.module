@@ -44,12 +44,19 @@ function gladstone_migrate_flush_caches() {
 			'php' => 'full_html',
 			'full_html' => 'full_html',
 			'limited_html' => 'limited_html',
+			'rich_text' => 'rich_text',
 			'plain_text' => 'plain_text'
 		)
 	);
 
 	// Register migrations -----
+	Migration::registerMigration('GSFile','files',$args+array(
+		'source_dir' => '/Users/jnand/Documents/Projects/gladstone/gladstone-web-d7/gladstone.org.git/htdocs/releases/20141006235547/builds/demo/sites/default/files',
+		'destination_dir' => 'public://'
+	));
 	Migration::registerMigration('GSUser','user', $args);
+	Migration::registerMigration('GSRole','role', $args);
+	Migration::registerMigration('GSProfile','profile', $args);
 
 }
 
