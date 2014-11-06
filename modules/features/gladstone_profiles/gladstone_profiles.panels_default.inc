@@ -520,17 +520,47 @@ function gladstone_profiles_default_panels_mini() {
     $pane->type = 'entity_field';
     $pane->subtype = 'profile2:field_longtext';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'entity_field_value:profile2:profile:field_longtext',
+          'settings' => array(
+            'field_longtext' => array(
+              'und' => array(
+                0 => array(
+                  'value' => '',
+                  'format' => 'plain_text',
+                ),
+              ),
+            ),
+            'field_longtext_value' => array(
+              0 => array(
+                'value' => '',
+                'format' => 'plain_text',
+              ),
+            ),
+            'field_longtext_format' => array(
+              0 => array(
+                'value' => '',
+                'format' => 'plain_text',
+              ),
+            ),
+          ),
+          'context' => 'relationship_profile2_1',
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'hidden',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(),
       'context' => 'relationship_profile2_1',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Why Gladstone',
     );
     $pane->cache = array();
     $pane->style = array(

@@ -44,7 +44,45 @@ function gladstone_profiles_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 2,
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_affiliations-field_institution_op_unit'
+  $field_instances['field_collection_item-field_affiliations-field_institution_op_unit'] = array(
+    'bundle' => 'field_affiliations',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Operational unit or special group. <em>example: Department of Neurology</em>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_institution_op_unit',
+    'label' => 'Department',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 1,
     ),
   );
 
@@ -82,83 +120,68 @@ function gladstone_profiles_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_editorial_board-field_institution'
-  $field_instances['field_collection_item-field_editorial_board-field_institution'] = array(
-    'bundle' => 'field_editorial_board',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_institution',
-    'label' => 'Institution',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'autocomplete_deluxe',
-      'settings' => array(
-        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
-        'delimiter' => '',
-        'limit' => 10,
-        'min_length' => 0,
-        'size' => 60,
-      ),
-      'type' => 'autocomplete_deluxe_taxonomy',
       'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_editorial_board-field_operational_role'
-  $field_instances['field_collection_item-field_editorial_board-field_operational_role'] = array(
-    'bundle' => 'field_editorial_board',
+  // Exported field_instance: 'field_collection_item-field_affiliations-field_text'
+  $field_instances['field_collection_item-field_affiliations-field_text'] = array(
+    'bundle' => 'field_affiliations',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Title as given by the affiliated institution, if any.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_operational_role',
-    'label' => 'Involvement',
+    'field_name' => 'field_text',
+    'label' => 'Display Title',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'autocomplete_deluxe',
+      'module' => 'text',
       'settings' => array(
-        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
-        'delimiter' => '',
-        'limit' => 10,
-        'min_length' => 0,
         'size' => 60,
       ),
-      'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 4,
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -752,44 +775,6 @@ function gladstone_profiles_field_default_field_instances() {
       'settings' => array(),
       'type' => 'field_collection_embed',
       'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-curriculum_vitae-field_editorial_board'
-  $field_instances['profile2-curriculum_vitae-field_editorial_board'] = array(
-    'bundle' => 'curriculum_vitae',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 10,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_editorial_board',
-    'label' => 'Editorial Board',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 8,
     ),
   );
 
@@ -2450,13 +2435,13 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Current');
   t('Date Joined');
   t('Degree');
+  t('Department');
   t('Departments or Special Groups <em>example: Department of Genetics</em>');
   t('Diploma Year');
   t('Display Title');
   t('Displayed in order (primary, secondary, etc. )');
   t('Domain Expertise. <b>See the Educations and Postdoc Training</b> fields under curriculum vitae for listing academic and industry specific training.
 <em>Note: this field is for "non-technical" copy targeted towards the general public.</em>');
-  t('Editorial Board');
   t('Education');
   t('Email contact displayed on public site.');
   t('Externally accessible number(s).');
@@ -2483,6 +2468,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Operational Title(s)');
   t('Operational Unit');
   t('Operational Unit(s)');
+  t('Operational unit or special group. <em>example: Department of Neurology</em>');
   t('Phone');
   t('Postdoctoral Training');
   t('Press Reference(s)');
@@ -2508,6 +2494,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('This is the more technical, domain specific, description of "Accomplishments" from the general public profile.
 <em>Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.</em>');
   t('This is the more technical, domain specific, description of "Research Interests" from the general public profile.');
+  t('Title as given by the affiliated institution, if any.');
   t('Title of position held. <strong>Add multiple titles sparingly</strong>, use only if many titles were held simultaneously at this institution.
 
 ');
