@@ -32,190 +32,19 @@ function ontology_uuid_default_entities() {
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/b7151bfe-79a0-4320-b98e-4972f01d6cf3',
+      'uri' => 'taxonomy_term/eacce9dd-c317-4343-b610-fe33983f7065',
       'cause' => FALSE,
     ),
     'description' => '',
     'format' => 'rich_text',
-    'name' => 'Trustee Member',
+    'name' => 'Controller',
     'url_alias' => array(
       0 => array(
-        'alias' => 'operational-roles/trustee-member',
+        'alias' => 'operational-roles/controller',
         'language' => 'und',
       ),
     ),
-    'uuid' => 'b7151bfe-79a0-4320-b98e-4972f01d6cf3',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/c9e709fc-189f-472f-a209-01a638dd5017',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Staff Research Assistant',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/staff-research-assistant',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => 'c9e709fc-189f-472f-a209-01a638dd5017',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/383ecc98-a71c-458c-b64b-3fed47be7bad',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Staff Research Scientist',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/staff-research-scientist',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '383ecc98-a71c-458c-b64b-3fed47be7bad',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/bdc133a4-ca5c-42f3-ba02-0f32473f46cd',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Investigator',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/investigator',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => 'bdc133a4-ca5c-42f3-ba02-0f32473f46cd',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/92453927-732a-4cfd-a3af-17aa1a2bd8ea',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Associate Director',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/associate-director',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '92453927-732a-4cfd-a3af-17aa1a2bd8ea',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/62ae45b7-022c-4e7b-844f-dac05eb723dc',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Director',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/director',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '62ae45b7-022c-4e7b-844f-dac05eb723dc',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/d23ce91e-93c8-4842-a8ce-00d6d568cc7c',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Emeritus',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/emeritus',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => 'd23ce91e-93c8-4842-a8ce-00d6d568cc7c',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/88e655d9-994e-401a-a7ca-e658ad9169e4',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'President',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/president',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '88e655d9-994e-401a-a7ca-e658ad9169e4',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/50d544e6-03fb-4a6c-996e-102725ebf865',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Graduate Student',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/graduate-student',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '50d544e6-03fb-4a6c-996e-102725ebf865',
-    'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_role_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/598a9d63-df3f-45ee-9efd-59d425b7e276',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'format' => 'rich_text',
-    'name' => 'Manager',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-roles/manager',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '598a9d63-df3f-45ee-9efd-59d425b7e276',
+    'uuid' => 'eacce9dd-c317-4343-b610-fe33983f7065',
     'vocabulary_machine_name' => 'operational_roles',
     'weight' => 0,
   );
@@ -241,19 +70,171 @@ function ontology_uuid_default_entities() {
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/eacce9dd-c317-4343-b610-fe33983f7065',
+      'uri' => 'taxonomy_term/598a9d63-df3f-45ee-9efd-59d425b7e276',
       'cause' => FALSE,
     ),
     'description' => '',
     'format' => 'rich_text',
-    'name' => 'Controller',
+    'name' => 'Manager',
     'url_alias' => array(
       0 => array(
-        'alias' => 'operational-roles/controller',
+        'alias' => 'operational-roles/manager',
         'language' => 'und',
       ),
     ),
-    'uuid' => 'eacce9dd-c317-4343-b610-fe33983f7065',
+    'uuid' => '598a9d63-df3f-45ee-9efd-59d425b7e276',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/50d544e6-03fb-4a6c-996e-102725ebf865',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Graduate Student',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/graduate-student',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '50d544e6-03fb-4a6c-996e-102725ebf865',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/88e655d9-994e-401a-a7ca-e658ad9169e4',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'President',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/president',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '88e655d9-994e-401a-a7ca-e658ad9169e4',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d23ce91e-93c8-4842-a8ce-00d6d568cc7c',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Emeritus',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/emeritus',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd23ce91e-93c8-4842-a8ce-00d6d568cc7c',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/62ae45b7-022c-4e7b-844f-dac05eb723dc',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Director',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/director',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '62ae45b7-022c-4e7b-844f-dac05eb723dc',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/92453927-732a-4cfd-a3af-17aa1a2bd8ea',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Associate Director',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/associate-director',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '92453927-732a-4cfd-a3af-17aa1a2bd8ea',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/bdc133a4-ca5c-42f3-ba02-0f32473f46cd',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Investigator',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/investigator',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'bdc133a4-ca5c-42f3-ba02-0f32473f46cd',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/383ecc98-a71c-458c-b64b-3fed47be7bad',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Staff Research Scientist',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/staff-research-scientist',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '383ecc98-a71c-458c-b64b-3fed47be7bad',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/c9e709fc-189f-472f-a209-01a638dd5017',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Staff Research Associate',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/staff-research-associate',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'c9e709fc-189f-472f-a209-01a638dd5017',
     'vocabulary_machine_name' => 'operational_roles',
     'weight' => 0,
   );
@@ -273,6 +254,120 @@ function ontology_uuid_default_entities() {
       ),
     ),
     'uuid' => '3bc18020-a523-4ab4-b263-20ccc1edc4dd',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/aabbdd0e-fc6d-4d5c-889a-543be10ad58a',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Postdoc',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/postdoc',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'aabbdd0e-fc6d-4d5c-889a-543be10ad58a',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/58ae40ed-e609-4cb4-aa62-a242ae484708',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Chair',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/chair',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '58ae40ed-e609-4cb4-aa62-a242ae484708',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/2c8a579f-2b31-4e61-83d5-f720c6131a73',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Co-chair',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/co-chair',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '2c8a579f-2b31-4e61-83d5-f720c6131a73',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/4dc159e5-a506-4068-82ae-34d972b7d354',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Member',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/member',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '4dc159e5-a506-4068-82ae-34d972b7d354',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/50f9d5fb-0820-494d-9c7d-cb1402c97f20',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Professor',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/professor',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '50f9d5fb-0820-494d-9c7d-cb1402c97f20',
+    'vocabulary_machine_name' => 'operational_roles',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_role_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/19cd2681-3644-4ff9-8f66-a3afaf44d529',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'format' => 'rich_text',
+    'name' => 'Fellow',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-roles/fellow',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '19cd2681-3644-4ff9-8f66-a3afaf44d529',
     'vocabulary_machine_name' => 'operational_roles',
     'weight' => 0,
   );
@@ -327,6 +422,60 @@ function ontology_uuid_default_entities() {
       ),
     ),
     'uuid' => 'b23c0e33-b4d8-4718-9ff3-9835224b3c94',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/0b694eb4-55cf-43aa-a086-7dfcb6180aac',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Advisory Board',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Advisory Board',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/advisory-board',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '0b694eb4-55cf-43aa-a086-7dfcb6180aac',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/3479a888-49f8-4eb0-b75b-b25d294e8990',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Scientific Advisory Board',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Scientific Advisory Board',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/scientific-advisory-board',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '3479a888-49f8-4eb0-b75b-b25d294e8990',
     'vocabulary_machine_name' => 'operational_units',
     'weight' => 0,
   );
