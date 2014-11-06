@@ -855,44 +855,6 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-curriculum_vitae-field_institutions'
-  $field_instances['profile2-curriculum_vitae-field_institutions'] = array(
-    'bundle' => 'curriculum_vitae',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Comma separated list of institutions names (autocomplete) where postdoc work was done.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_institutions',
-    'label' => 'Postdoctoral Training',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'autocomplete_deluxe',
-      'settings' => array(
-        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
-        'delimiter' => '',
-        'limit' => 10,
-        'min_length' => 0,
-        'size' => 60,
-      ),
-      'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 10,
-    ),
-  );
-
   // Exported field_instance: 'profile2-curriculum_vitae-field_lab_focus'
   $field_instances['profile2-curriculum_vitae-field_lab_focus'] = array(
     'bundle' => 'curriculum_vitae',
@@ -2431,7 +2393,6 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Biography');
   t('Biosketch');
   t('Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.');
-  t('Comma separated list of institutions names (autocomplete) where postdoc work was done.');
   t('Current');
   t('Date Joined');
   t('Degree');
@@ -2470,7 +2431,6 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Operational Unit(s)');
   t('Operational unit or special group. <em>example: Department of Neurology</em>');
   t('Phone');
-  t('Postdoctoral Training');
   t('Press Reference(s)');
   t('Professional titles');
   t('Profile picture');
