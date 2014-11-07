@@ -82,6 +82,7 @@ features[field_instance][] = field_collection_item-field_professional_titles-fie
 features[field_instance][] = field_collection_item-field_professional_titles-field_institution
 features[field_instance][] = field_collection_item-field_professional_titles-field_institution_op_units
 features[field_instance][] = field_collection_item-field_professional_titles-field_operational_titles
+features[field_instance][] = field_collection_item-field_professional_titles-field_text
 features[field_instance][] = profile2-curriculum_vitae-field_achievements
 features[field_instance][] = profile2-curriculum_vitae-field_affiliations
 features[field_instance][] = profile2-curriculum_vitae-field_education

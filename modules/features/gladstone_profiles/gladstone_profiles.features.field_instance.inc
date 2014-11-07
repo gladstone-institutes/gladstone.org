@@ -558,7 +558,7 @@ function gladstone_profiles_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -596,7 +596,7 @@ function gladstone_profiles_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
@@ -658,7 +658,7 @@ function gladstone_profiles_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_operational_titles',
     'label' => 'Operational Title(s)',
-    'required' => 0,
+    'required' => 1,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
       'user_register_form' => FALSE,
@@ -674,7 +674,68 @@ function gladstone_profiles_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 0,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_professional_titles-field_text'
+  $field_instances['field_collection_item-field_professional_titles-field_text'] = array(
+    'bundle' => 'field_professional_titles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Customized title. <em>this field will override the operational title and operational unit fields</em>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_text',
+    'label' => 'Display Title',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -2394,6 +2455,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
   t('Biosketch');
   t('Bulleted list, with one field entry per bullet. Do not add bullet point glyphs, they will be added automatically.');
   t('Current');
+  t('Customized title. <em>this field will override the operational title and operational unit fields</em>');
   t('Date Joined');
   t('Degree');
   t('Department');
