@@ -48,8 +48,8 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_affiliations-field_institution_op_unit'
-  $field_instances['field_collection_item-field_affiliations-field_institution_op_unit'] = array(
+  // Exported field_instance: 'field_collection_item-field_affiliations-field_institution_op_units'
+  $field_instances['field_collection_item-field_affiliations-field_institution_op_units'] = array(
     'bundle' => 'field_affiliations',
     'default_value' => NULL,
     'deleted' => 0,
@@ -64,7 +64,7 @@ function gladstone_profiles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_institution_op_unit',
+    'field_name' => 'field_institution_op_units',
     'label' => 'Department',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
@@ -600,8 +600,8 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_professional_titles-field_institution_op_unit'
-  $field_instances['field_collection_item-field_professional_titles-field_institution_op_unit'] = array(
+  // Exported field_instance: 'field_collection_item-field_professional_titles-field_institution_op_units'
+  $field_instances['field_collection_item-field_professional_titles-field_institution_op_units'] = array(
     'bundle' => 'field_professional_titles',
     'default_value' => NULL,
     'deleted' => 0,
@@ -616,7 +616,7 @@ function gladstone_profiles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_institution_op_unit',
+    'field_name' => 'field_institution_op_units',
     'label' => 'Operational Unit',
     'required' => 0,
     'rubik_edit_field_display' => 'default',

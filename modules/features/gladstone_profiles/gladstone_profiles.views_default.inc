@@ -374,7 +374,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: Field: Biosketch */
+  /* Field: Field: Biography */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -982,7 +982,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
   $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
-  /* Field: Field: Biosketch */
+  /* Field: Field: Biography */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -1290,15 +1290,15 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
   /* Field: mini CV: Op Unit */
-  $handler->display->display_options['fields']['field_institution_op_unit']['id'] = 'field_institution_op_unit';
-  $handler->display->display_options['fields']['field_institution_op_unit']['table'] = 'field_data_field_institution_op_unit';
-  $handler->display->display_options['fields']['field_institution_op_unit']['field'] = 'field_institution_op_unit';
-  $handler->display->display_options['fields']['field_institution_op_unit']['relationship'] = 'field_professional_titles_value_1';
-  $handler->display->display_options['fields']['field_institution_op_unit']['ui_name'] = 'mini CV: Op Unit';
-  $handler->display->display_options['fields']['field_institution_op_unit']['label'] = '';
-  $handler->display->display_options['fields']['field_institution_op_unit']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_institution_op_unit']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_institution_op_unit']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_institution_op_units']['id'] = 'field_institution_op_units';
+  $handler->display->display_options['fields']['field_institution_op_units']['table'] = 'field_data_field_institution_op_units';
+  $handler->display->display_options['fields']['field_institution_op_units']['field'] = 'field_institution_op_units';
+  $handler->display->display_options['fields']['field_institution_op_units']['relationship'] = 'field_professional_titles_value_1';
+  $handler->display->display_options['fields']['field_institution_op_units']['ui_name'] = 'mini CV: Op Unit';
+  $handler->display->display_options['fields']['field_institution_op_units']['label'] = '';
+  $handler->display->display_options['fields']['field_institution_op_units']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_institution_op_units']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_institution_op_units']['type'] = 'taxonomy_term_reference_plain';
   /* Field: mini CV: Institution */
   $handler->display->display_options['fields']['field_institution']['id'] = 'field_institution';
   $handler->display->display_options['fields']['field_institution']['table'] = 'field_data_field_institution';
@@ -1323,16 +1323,16 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles_1']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles_1']['delta_offset'] = '0';
   /* Field: CV: Op Unit */
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['id'] = 'field_institution_op_unit_1';
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['table'] = 'field_data_field_institution_op_unit';
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['field'] = 'field_institution_op_unit';
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['relationship'] = 'field_professional_titles_value';
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['ui_name'] = 'CV: Op Unit';
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['label'] = '';
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['empty'] = '[field_institution_op_unit]';
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_institution_op_unit_1']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['id'] = 'field_institution_op_units_1';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['table'] = 'field_data_field_institution_op_units';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['field'] = 'field_institution_op_units';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['relationship'] = 'field_professional_titles_value';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['ui_name'] = 'CV: Op Unit';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['label'] = '';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_institution_op_units_1']['empty'] = '[field_institution_op_units]';
+  $handler->display->display_options['fields']['field_institution_op_units_1']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_institution_op_units_1']['type'] = 'taxonomy_term_reference_plain';
   /* Field: CV: Institution */
   $handler->display->display_options['fields']['field_institution_1']['id'] = 'field_institution_1';
   $handler->display->display_options['fields']['field_institution_1']['table'] = 'field_data_field_institution';

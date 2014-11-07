@@ -330,13 +330,13 @@ function gladstone_profiles_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_institution_op_unit'
-  $field_bases['field_institution_op_unit'] = array(
+  // Exported field_base: 'field_institution_op_units'
+  $field_bases['field_institution_op_units'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_institution_op_unit',
+    'field_name' => 'field_institution_op_units',
     'field_permissions' => array(
       'type' => 0,
     ),
