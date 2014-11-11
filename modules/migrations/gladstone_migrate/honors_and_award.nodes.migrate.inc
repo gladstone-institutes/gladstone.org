@@ -63,6 +63,7 @@ class GSHonorsAndAwards extends DrupalNode7Migration {
 			'field_award_name',
 			'field_node_ref',
 			'field_award_year_value',
+			'field_award_year'
 		  ));
 
 	}

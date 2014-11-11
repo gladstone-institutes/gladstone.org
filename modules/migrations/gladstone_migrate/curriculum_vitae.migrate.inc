@@ -4,13 +4,22 @@ class GSCurriculumVitae extends GSProfile2Base {
 	protected $curriculum_vitae_rid;
 
 	public function __construct(array $arguments) {
-		$arguments['description'] = 'import user profile2:curriculum_vitae';
-		parent::__construct($arguments);
+	  $arguments['description'] = 'import user profile2:curriculum_vitae';
+	
+	  // Pseudo sources
+      $this->sourceFields += array(
+      	'achievements' => t('aggregate achievements'),
+      	'lab_focus' => t('aggregate lab focus multi-field'),
+      	'field_areas_of_investigation_value' => t('text field'),
+       );
+
+	  parent::__construct($arguments);
 
       // make sure our roles are migrated first
       // add the machine name for the role migration class
       $this->dependencies[] = 'user';
       $this->dependencies[] = 'files';
+
 
       // the 'profile' argument is the machine name of the destination
       // profile type
@@ -38,7 +47,8 @@ class GSCurriculumVitae extends GSProfile2Base {
         'field_node_refs',
         'field_professional_titles',
         'field_professional_titles:revision_id',
-        'path'
+        'path',
+        'field_honors_and_awards_rels',
       ));
 
       // $this->addUnmigratedSources(array(
@@ -142,6 +152,12 @@ abstract class GSFieldCollectionBase extends DrupalMigration {
 class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 	public function __construct(array $arguments) {
 		$arguments['description'] = 'import field collection affiliations';
+		
+		$this->sourceFields += array(
+			'in_op_unit' => t('Institute Op Unit via remap csv'),
+			'display_title' => t('Edge case, custom title'),
+		);
+
 		parent::__construct($arguments);
 
 		$this->dependencies[] = 'curriculum_vitae';
@@ -278,7 +294,6 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 	}
 }
 
-
 class GSCurriculumVitaeEducation extends GSFieldCollectionBase {
 	public function __construct(array $arguments) {
 		$arguments['description'] = 'import field collection education';
@@ -355,6 +370,14 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 
 	public function __construct(array $arguments) {
 		$arguments['description'] = 'import field collection professional titles';
+		
+		$this->sourceFields += array(
+			'new_institute_name' => t('New name via remap csv file'),
+			'institution_op_unit' => t('Institute Op Unit via remap csv'),
+			'new_operational_title' => t('Ops Title via remap csv'),
+			'display_title' => t('Edge case, custom title'),
+		);
+
 		parent::__construct($arguments);
 
 		$this->dependencies[] = 'curriculum_vitae';
@@ -509,7 +532,6 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 	}
 }
 
-
 class GSHonorsAndAwardsRelations extends DrupalMigration {
 	public function __construct(array $arguments) {
 		$arguments['description'] = 'import honors and awards';
@@ -518,6 +540,12 @@ class GSHonorsAndAwardsRelations extends DrupalMigration {
 		$this->dependencies[] = 'curriculum_vitae';
 		$this->dependencies[] = 'honors_and_award';
 
+
+		$this->sourceFields += array(
+			'new_award_nid' => t('nid of honors_and_award node post migration'),
+			'new_cv_pid' => t('pid of curriculum_vitae profile post migration'),
+		);
+
 		$this->source = new MigrateSourceSQL(
 			$this->query(),
 			$this->sourceFields,
@@ -525,27 +553,118 @@ class GSHonorsAndAwardsRelations extends DrupalMigration {
 			$this->sourceOptions
 		);
 
-		$this->destination = new MigrateDestinationRelation('curriculum_vitae');
+		$this->destination = new MigrateDestinationRelation('was_awarded');
 
 		$this->map = new MigrateSQLMap(
 			$this->machineName,
-			MigrateDestinationNode::getKeySchema(), //source
+			array(
+				'field_honors_and_awards_target_id' => array(
+					'type' => 'int',
+					'unsigned' => TRUE,
+					'not null' => TRUE,
+					'description' => 'node id',
+				),
+				'entity_id' => array(
+					'type' => 'int',
+					'unsigned' => TRUE,
+					'not null' => TRUE,
+					'description' => 'profile2 id',
+				),
+				'delta' => array(
+					'type' => 'int',
+					'unsigned' => TRUE,
+					'not null' => TRUE,
+					'description' => 'index number in set',
+				),
+			), //source
 			MigrateDestinationRelation::getKeySchema() //destination
 		);
 
+
+		$this->addFieldMapping('uid','uid')->sourceMigration('user');
+		$this->addFieldMapping('is_new')->defaultValue(TRUE);
+		// $this->addFieldMapping('endpoints:entity_id','field_honors_and_awards_target_id');
+		// $this->addFieldMapping('endpoints:r_index',NULL);
+
+
 		$this->addUnmigratedDestinations(array(
 			'path',
+			'created',
+			'changed',
+			'endpoints',
+			'endpoints:entity_id',
+			'endpoints:r_index'
+		));
+
+		$this->addUnmigratedSources(array(
+			'new_award_nid',
+			'new_cv_pid'
 		));
 	}
 
+	public function postImport() {
+	    parent::postImport();
+
+	    // Populate the relation_add:field_honors_and_awards_rel table
+	    // insert ignore into field_data_field_honors_and_awards_rels
+		// 	(`entity_type`,`bundle`,`deleted`,`entity_id`,`revision_id`,`language`,`delta`)
+		// select 'profile2','curriculum_vitae',0,endpoints_entity_id,endpoints_entity_id,'und',0
+		// from field_data_endpoints
+		// where endpoints_entity_type = 'profile2'
+		//  and bundle = 'was_awarded'
+
+	}
+
+	public function postRollback() {
+    	parent::postRollback();
+
+    	// Clean up the relation_add:field_honors_and_awards_rel table
+    	db_delete('field_data_field_honors_and_awards_rels')
+    		->condition('entity_type', 'node')
+    		->condition('bundle', 'honors_and_awards')
+    		->execute();
+    	db_delete('field_data_field_honors_and_awards_rels')
+    		->condition('entity_type','profile2')
+    		->condition('bundle','curriculum_vitae')
+    		->execute();
+    }
+
+
+	//http://janezurevc.name/relation-migrate-integration-and-reference-upgrade-path
+	public function prepare(stdClass $relation, stdClass $row) {
+
+    	$query = db_select('migrate_map_honors_and_award','mha');
+    	$query->addField('mha','destid1','new_award_nid');
+    	$query->condition('mha.sourceid1',$row->field_honors_and_awards_target_id);
+    	$query->range(0,1);
+    	$nid = $query->execute()->fetchCol()[0];
+
+       	$query = db_select('migrate_map_curriculum_vitae','mcv');
+    	$query->addField('mcv','destid1','new_cv_pid');
+    	$query->condition('mcv.sourceid1',$row->entity_id);
+    	$query->range(0,1);
+    	$pid = $query->execute()->fetchCol()[0];
+
+    	// skip unmapped cv:pids
+    	if (empty($pid)) { return FALSE;}
+
+		$relation->endpoints[LANGUAGE_NONE] = array(
+			array( 'entity_type' => 'profile2', 'entity_id' => $pid),		
+			array( 'entity_type' => 'node',     'entity_id' => $nid),
+		);
+	}
+
 	protected function query() {
-	    $query = Database::getConnection('default', $this->sourceConnection)
-			->select('node', 'n')
-			->fields('n', array('nid', 'vid', 'language', 'title', 'uid',
-				'status', 'created', 'changed', 'comment', 'promote', 'sticky',
-				'tnid', 'translate'))
-			->condition('n.type', 'honors_and_awards')
-			->orderBy('n.changed');
+	    $query = Database::getConnection('legacy', $this->sourceConnection)
+			->select('field_data_field_honors_and_awards', 'ha')
+			->fields('ha',array('field_honors_and_awards_target_id','entity_id','delta'))
+			->condition('ha.entity_type','profile2','=')
+			->condition('ha.bundle','profile','=');
+
+		$query->leftjoin('node','n',
+			"n.nid=ha.field_honors_and_awards_target_id and n.type='honors_and_awards'");
+		$query->fields('n',array('uid'));
+
 	    return $query;
 	}
 }
