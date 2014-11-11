@@ -68,10 +68,9 @@ class GSCurriculumVitae extends GSProfile2Base {
       }
 
       // Assign a profile role if minimum fields are met
-/*     if (!empty($row->) || 
-          !empty($row->) ||
-          !empty($row->) ||
-          !empty($row->)
+     if ( !empty($row->field_research_interests) || 
+          !empty($row->field_lab_focus) ||
+          !empty($row->field_achievements)
         ) {
             $query = db_select('migrate_map_user', 'u');
             $destid = $query->condition('sourceid1',$this->uid,'=')
@@ -84,9 +83,9 @@ class GSCurriculumVitae extends GSProfile2Base {
              array(':uid' => $row->uid, ':rid' => $this->curriculum_vitae_rid));
       } else {
         // skip profile creation if min fields are not met
-        // return FALSE; // dont skip any rows since contact is part of profile
+        return FALSE;
       }
-*/
+
 
       $row->achievements = $this->field_achievements($row->pid);
       $row->lab_focus = $this->field_lab_focus($row->pid);
