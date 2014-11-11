@@ -14,8 +14,8 @@ class GSProfile2Base extends DrupalMigration {
 
     $this->map = new MigrateSQLMap(
       $this->machineName,
-      MigrateDestinationProfile2::getKeySchema(),
-      MigrateDestinationProfile2::getKeySchema()
+      MigrateDestinationProfile2::getKeySchema(), //source
+      MigrateDestinationProfile2::getKeySchema()  //dest
     );
 
   }
