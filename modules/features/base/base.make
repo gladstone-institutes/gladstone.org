@@ -29,11 +29,13 @@ projects[link][subdir]	= "contrib"
 projects[date][version] = "2.8"
 projects[date][subdir]  = "contrib"
 
-projects[relation][version]  = 1.x-dev
+projects[relation][version]  = 1.x-rc5
 projects[relation][subdir]	 = contrib
 projects[relation][download][type]     = git
 projects[relation][download][revision] = 5b8e243b
 projects[relation][download][branch]   = 7.x-1.x
+; workaround for migrate error
+projects[relation][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/relation-field_validation_failed-2160525-4.patch
 
 projects[relation_add][version]  = 1.x-dev
 projects[relation_add][subdir]	 = contrib
