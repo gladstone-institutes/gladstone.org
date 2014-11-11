@@ -13,5 +13,6 @@ features[features_api][] = api:2
 files[] = file.migrate.inc
 files[] = user.migrate.inc
 files[] = profile.migrate.inc
+files[] = ops.terms.migrate.inc
 project path = profiles/gladstone_org/modules/migrations
 version = 1.0-2.0

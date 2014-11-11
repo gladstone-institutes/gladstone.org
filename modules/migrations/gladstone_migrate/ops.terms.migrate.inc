@@ -1,22 +1,19 @@
 <?php
 
-/**
- * Stub class for migrating operations control taxonomy
- *
- */
-class GSProfileOpsRole extends DrupalTerm7Migration {
+class GSOpsRoleTerms extends DrupalTerm7Migration {
   // associate array for remapping terms
   protected $remap = array();
 
   public function __construct(array $arguments) {
+    $arguments['description'] = 'import ops role terms';
+    $arguments['source_vocabulary'] = 'operational_roles';
+    $arguments['destination_vocabulary'] = 'operational_roles';    
     parent::__construct($arguments);
 
-      // multi-value term migrations
-      // $this->addFieldMapping('field_operational_roles')->separator(',')->callbacks(array($this,'remapTerm'));
-      // $this->addFieldMapping('field_operational_roles:source_type')->defaultValue('name');
-      // $this->addFieldMapping('field_operational_roles:create_term')->defaultValue(FALSE);
-      // $this->addFieldMapping('field_operational_roles:ignore_case')->defaultValue(TRUE);
-
+    $this->removeFieldMapping('parent');
+    $this->addUnmigratedDestinations(array(
+      'parent',
+    ));
   }
 
   public function preImport() {
@@ -29,7 +26,9 @@ class GSProfileOpsRole extends DrupalTerm7Migration {
         while ($data = fgetcsv($handle)) {
           $legacy_name = $data[0];
           $new_name = $data[1];
+          $op_unit = empty($data[2]) ? NULL : $data[2];
           $this->remap['operational_roles'][$legacy_name] = $new_name;
+          $this->remap['operational_units'][$legacy_name] = $op_unit;
         }
         fclose($handle);
       }
@@ -42,31 +41,103 @@ class GSProfileOpsRole extends DrupalTerm7Migration {
         return FALSE;
       }
 
+      if(array_key_exists($row->name,$this->remap['operational_roles']) &&
+         !empty($this->remap['operational_roles'][$row->name])) {
+          // remap the term
+          $new_name = $this->remap['operational_roles'][$row->name];
+
+          if(!empty($this->remap['operational_units'][$row->name])) {
+            $op_unit = $this->remap['operational_units'][$row->name];
+            if(taxonomy_get_term_by_name($op_unit,'operational_units')) {
+              // op unit term exits, skip
+            } else {
+              // create op unit term
+              $term = new stdClass();
+              $term->name = $op_unit;
+              $term->vocabulary_machine_name = 'operational_units';
+              taxonomy_term_save($term);
+            }
+          }
+
+          $row->name = $new_name;
+      } else {
+          // skip unspecified terms
+        return FALSE;
+      }
+  }
+}
+
+
+class GSOpsTitleTerms extends DrupalTerm7Migration {
+  // associate array for remapping terms
+  protected $remap = array();
+
+  public function __construct(array $arguments) {
+    $arguments['description'] = 'import ops title terms';
+    $arguments['source_vocabulary'] = 'operational_titles';
+    $arguments['destination_vocabulary'] = 'operational_titles';    
+    parent::__construct($arguments);
+
+    $this->removeFieldMapping('parent');
+    $this->addUnmigratedDestinations(array(
+      'parent',
+    ));
   }
 
-  protected function remapTerm($vocab, $name) {
-    dsm($this);
-    dsm($vocab);
-    dsm($name);
-    exit;
-      if (isset($this->remap[$vocab]) && isset($this->remap[$vocab][$name])) {
-        return $this->remap[$vocab][$name];
+  public function preImport() {
+
+    // Create our remap associations
+    if (empty($this->remap['operational_titles'])) {
+      # cs input: old_title,new_title,instituion_op_unit,display_title
+      $filename = DRUPAL_ROOT.'/'.drupal_get_path('module', 'gladstone_migrate').'/remap/operational_titles.csv';
+      $handle = fopen($filename, 'r');
+      if ($handle) {
+        while ($data = fgetcsv($handle)) {
+          $old_title = $data[0];
+          $new_title = $data[1];
+          $op_unit = empty($data[2]) ? NULL : $data[2];
+          $display_title = empty($data[3]) ? NULL : $data[3];
+          $this->remap[$old_title] = new stdClass();
+          $this->remap->title   = $new_title;
+          $this->remap->op_unit = $op_unit;
+          $this->remap->display_title = $display_title;
+        }
+        fclose($handle);
+      }
+    }
+
+  }
+
+  public function prepareRow($row) {    
+      if (parent::prepareRow($row) === FALSE) {
+        return FALSE;
+      }
+
+      if(array_key_exists($row->name,$this->remap)) {
+
+        $key = $row->name;
+
+        // create an institution_operational_unit term in specified
+        // and one does not already exist
+        if(!empty($this->remap[$key]->op_unit) &&
+          !taxonomy_get_term_by_name($this->remap[$key]->op_unit,'institution_operational_unit')
+        ) {
+          $term = new stdClass();
+          $term->name = $this->remap->op_unit;
+          $term->vocabulary_machine_name = 'institution_operational_unit';
+          taxonomy_term_save($term);
+        }
+
+        if(!empty($this->remap[$key]->title)) {
+          $row->name = $this->remap[$key]->title;
+        }
+
       } else {
-        return $name;
+          // skip unspecified terms
+        return FALSE;
       }
   }
 
-  protected function query() {
-    $query = parent::query();
-
-    // get names for multi-valued term field
-    $query->leftjoin('field_data_field_operational','or', 
-      "or.entity_id=p.pid and or.entity_type='profile2' and or.bundle='profile'");
-    $query->leftjoin('profile', 'contact_profile',
-      "contact_profile.pid=contact.field_contact_target_id and contact_profile.type='profile'");
-    $query->addExpression('GROUP_CONCAT(DISTINCT contact_profile.uid)', 'contacts');
-    $query->groupBy('p.pid');  
-
-    return $query;
-  }
 }
+
+
