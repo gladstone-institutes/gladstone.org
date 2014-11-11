@@ -21,7 +21,7 @@ class GSHonorsAndAwards extends DrupalNode7Migration {
 		);		
 
   		// field mappings (destination, source) ------------------------
-	    $this->addFieldMapping('field_date_mmyy','field_award_year');
+	    $this->addFieldMapping('field_date_mmyy','field_award_year_value');
 	    $this->addFieldMapping('field_user_refs','field_user_ref')->sourceMigration('user');
 	    $this->addFieldMapping('field_operational_units', 'field_operational_unit');
 	    $this->addFieldMapping('field_operational_units:source_type')->defaultValue('name');
@@ -70,8 +70,6 @@ class GSHonorsAndAwards extends DrupalNode7Migration {
 
 	public function prepareRow($row) {
 		$row->honor_and_award_term = $row->title;
-		$year = explode('-',$row->field_award_year_value)[0];		
-		$row->title = '('.$year.')'.$row->title;
 	}
 
 	protected function query() {
