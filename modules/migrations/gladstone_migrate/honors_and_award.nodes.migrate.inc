@@ -70,6 +70,9 @@ class GSHonorsAndAwards extends DrupalNode7Migration {
 
 
 	public function prepareRow($row) {
+		if (parent::prepareRow($row) === FALSE) {
+        	return FALSE;
+      	}
 		$row->honor_and_award_term = $row->title;
 	}
 

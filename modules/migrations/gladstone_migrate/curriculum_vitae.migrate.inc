@@ -199,7 +199,9 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 	}
 
 	public function prepareRow($row) {
-
+		if (parent::prepareRow($row) === FALSE) {
+        	return FALSE;
+      	}
 
 		/** Clean up taxonomy terms **/
 		$inv = $row->field_involvement_target_id;
