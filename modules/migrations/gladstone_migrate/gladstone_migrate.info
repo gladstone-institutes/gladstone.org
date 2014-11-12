@@ -15,6 +15,7 @@ files[] = file.migrate.inc
 files[] = user.migrate.inc
 files[] = profile.migrate.inc
 files[] = curriculum_vitae.migrate.inc
+files[] = leadership.migrate.inc
 files[] = ops.terms.migrate.inc
 files[] = institution.terms.migrate.inc
 files[] = honors_and_award.nodes.migrate.inc

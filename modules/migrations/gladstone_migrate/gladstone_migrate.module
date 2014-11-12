@@ -60,6 +60,8 @@ function gladstone_migrate_flush_caches() {
 	Migration::registerMigration('GSUser','user', $args);
 	Migration::registerMigration('GSRole','role', $args);
 	Migration::registerMigration('GSProfile','profile', $args);
+	Migration::registerMigration('GSLeadership','leadership', $args);
+	Migration::registerMigration('GSLeadershipLeadership','leadership_collection', $args);
 	Migration::registerMigration('GSCurriculumVitae','curriculum_vitae', $args);
 	Migration::registerMigration('GSCurriculumVitaeAffiliations','affiliation', $args);
 	Migration::registerMigration('GSCurriculumVitaeEducation','education', $args);

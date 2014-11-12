@@ -1,0 +1,145 @@
+<?php 
+
+class GSLeadership extends GSProfile2Base {
+
+	protected $profile_rid;
+
+	public function __construct(array $arguments) {
+		$arguments['description'] = 'import user profile2:leadership';
+		parent::__construct($arguments);
+
+		$this->dependencies[] = 'user';
+
+    	$this->destination = new MigrateDestinationProfile2('leadership'); 
+
+ 		// field mappings (destination, source) ------------------------
+		$this->addFieldMapping('uid','uid')->sourceMigration('user');
+    	$this->addFieldMapping('language')->defaultValue('en');
+
+      	// tell migrate to ignore these fields
+      	$this->addUnmigratedDestinations(array( 
+			'revision_uid',
+			'field_label_alias',
+			'field_leadership',
+			'field_leadership:revision_id',
+			'path'
+      	));
+
+      	$this->addUnmigratedSources(array(
+      		'leader',
+      	));
+
+	}
+
+	public function preImport() {
+		// get the profile role id
+		$this->profile_rid = user_role_load_by_name('leadership')->rid; 
+	}
+
+	public function prepareRow($row) {
+		if (parent::prepareRow($row) === FALSE) {
+			return FALSE;			
+		}
+
+
+		// Assing a profile role if minimum fields are met
+		if (!empty($row->leader) ) {
+			$query = db_select('migrate_map_user', 'u');
+			$destid = $query->condition('sourceid1',$this->uid,'=')
+			            ->fields('u', array('destid1'))
+			            ->execute()
+			            ->fetchField();
+
+			// This has no roll-back
+			db_query('INSERT IGNORE INTO users_roles (uid,rid) VALUES (:uid, :rid)',
+			 array(':uid' => $row->uid, ':rid' => $this->profile_rid));
+		} else {
+			// skip profile creation if min fields are not met
+			return FALSE;
+		}		
+	}
+
+  	protected function query() {
+		$query = parent::query();
+
+		$query->leftjoin('field_data_field_leadership','l',
+			"l.entity_id=p.pid and l.entity_type='profile2' and l.bundle='profile'");
+		$query->addField('l','field_leadership_value','leader');
+		return $query;
+	}
+}
+
+class GSLeadershipLeadership extends GSFieldCollectionBase {
+	public function __construct(array $arguments) {
+		$arguments['description'] = 'import field collection leadership';
+		parent::__construct($arguments);
+
+		// $this->sourceFields += array(
+		// 	'in_op_unit' => t('Institute Op Unit via remap csv'),
+		// 	'display_title' => t('Edge case, custom title'),
+		// );
+
+		$this->dependencies[] = 'leadership';
+
+		$this->destination = new MigrateDestinationFieldCollection(
+			'field_leadership',
+      		array('host_entity_type' => 'profile2')
+    	);
+
+		// field mappings (destination, source) ------------------------
+		$this->addFieldMapping('host_entity_id','entity_id')->sourceMigration('leadership');
+      	$this->addFieldMapping('field_biography','field_biography_value');
+      	$this->addFieldMapping('field_biography:format')->defaultValue('rich_text');
+
+		$this->addUnmigratedDestinations(array(
+			'field_biography:summary',
+			'field_biography:language',
+			'field_operational_role',
+			'field_operational_role:source_type',
+			'field_operational_role:create_term',
+			'field_operational_role:ignore_case',
+			'field_operational_title',
+			'field_operational_title:source_type',
+			'field_operational_title:create_term',
+			'field_operational_title:ignore_case',
+			'field_operational_unit',
+			'field_operational_unit:source_type',
+			'field_operational_unit:create_term',
+			'field_operational_unit:ignore_case',
+			'path',
+		));
+
+		$this->addUnmigratedSources(array(
+			'field_leadership_value',
+		));
+	}
+
+	public function prepareRow($row) {
+		if (parent::prepareRow($row) === FALSE) {
+        	return FALSE;
+      	}
+
+		// skip fields with no bio sketch set
+		if (empty($row->field_biography_value)) {
+			return FALSE;
+		}
+	}
+
+	protected function query() {
+		$query = Database::getConnection('legacy', $this->sourceConnection)
+			->select('field_data_field_leadership', 'l')
+			->fields('l', array('entity_id','field_leadership_value'))
+			->condition('l.entity_type','profile2', '=')
+			->condition('l.bundle','profile','=');
+
+		$query->leftjoin('field_data_field_biography','b',
+			"b.entity_id=l.field_leadership_value and b.entity_type='field_collection_item' and b.bundle='field_leadership'");
+		$query->fields('b',array('field_biography_value'));
+		return $query;
+	}
+
+}
+
+
+
+
