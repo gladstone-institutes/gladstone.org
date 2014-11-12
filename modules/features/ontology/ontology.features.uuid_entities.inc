@@ -374,7 +374,7 @@ function ontology_uuid_default_entities() {
   $entities['ontology_operational_unit_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/df8a9c26-fb40-4635-988d-96c5459160e3',
+      'uri' => 'taxonomy_term/a2da3046-4339-42e0-925c-c7ef1f8a6d2c',
       'cause' => FALSE,
     ),
     'description' => '',
@@ -382,26 +382,283 @@ function ontology_uuid_default_entities() {
       'und' => array(
         0 => array(
           'format' => NULL,
-          'value' => 'Science Administration',
+          'value' => 'Research',
         ),
       ),
     ),
     'format' => 'rich_text',
-    'name' => 'Science Administration',
+    'name' => 'Research',
     'url_alias' => array(
       0 => array(
-        'alias' => 'operational-units/science-administration',
+        'alias' => 'operational-units/research',
         'language' => 'und',
       ),
     ),
-    'uuid' => 'df8a9c26-fb40-4635-988d-96c5459160e3',
+    'uuid' => 'a2da3046-4339-42e0-925c-c7ef1f8a6d2c',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 6,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/92781701-5f8f-4cec-a21f-ca96b1bf6eb2',
+      'cause' => 'taxonomy_term/1ba15dd3-7ce9-4a37-997a-e45e5343b340',
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Institute',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Institute',
+    'parent' => array(
+      0 => 'a2da3046-4339-42e0-925c-c7ef1f8a6d2c',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/institute',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '92781701-5f8f-4cec-a21f-ca96b1bf6eb2',
     'vocabulary_machine_name' => 'operational_units',
     'weight' => 0,
   );
   $entities['ontology_operational_unit_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/b23c0e33-b4d8-4718-9ff3-9835224b3c94',
+      'uri' => 'taxonomy_term/1ba15dd3-7ce9-4a37-997a-e45e5343b340',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Neurological Disease',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'GIND',
+    'parent' => array(
+      0 => '92781701-5f8f-4cec-a21f-ca96b1bf6eb2',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/gind',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '1ba15dd3-7ce9-4a37-997a-e45e5343b340',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 2,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/33890157-70e8-4b8f-baa0-ac6051467b2d',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Virology & Immunology',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'GIVI',
+    'parent' => array(
+      0 => '92781701-5f8f-4cec-a21f-ca96b1bf6eb2',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/givi',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '33890157-70e8-4b8f-baa0-ac6051467b2d',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 1,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/7c6d4536-94d7-4e46-b9ee-cf4733380546',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Stem Cells and Regenerative Medicine',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Stem Cell',
+    'parent' => array(
+      0 => '92781701-5f8f-4cec-a21f-ca96b1bf6eb2',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/stem-cell',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '7c6d4536-94d7-4e46-b9ee-cf4733380546',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 3,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/70f4e9ca-ffa3-432c-84bf-879eaf69aa02',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Translational Research',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Translational',
+    'parent' => array(
+      0 => '92781701-5f8f-4cec-a21f-ca96b1bf6eb2',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/translational',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '70f4e9ca-ffa3-432c-84bf-879eaf69aa02',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 4,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/dbdbc98b-e144-41c0-bc16-dfcb82d94c81',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'field_text' => array(),
+    'format' => NULL,
+    'name' => 'Trustees',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/trustees',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'dbdbc98b-e144-41c0-bc16-dfcb82d94c81',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/ece2a512-252d-4a46-9988-e9ab121ee976',
+      'cause' => FALSE,
+    ),
+    'description' => NULL,
+    'field_text' => array(),
+    'format' => NULL,
+    'name' => 'Foundation',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/foundation',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'ece2a512-252d-4a46-9988-e9ab121ee976',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/ca4cefd8-41c6-4e0a-9e57-984417d67e9b',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(),
+    'format' => 'rich_text',
+    'name' => 'President & Directors',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/president-directors',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'ca4cefd8-41c6-4e0a-9e57-984417d67e9b',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 7,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/9426a451-58f8-40ea-81ea-e90d15539569',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(),
+    'format' => 'rich_text',
+    'name' => 'Administration',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/administration',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '9426a451-58f8-40ea-81ea-e90d15539569',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 7,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/6e2f4c2d-5e3e-4205-82d1-6b84a6976e6f',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Outreach',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Outreach',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/outreach',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '6e2f4c2d-5e3e-4205-82d1-6b84a6976e6f',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/ea027cc9-7502-4f0c-b142-44c35f9b74bc',
       'cause' => FALSE,
     ),
     'description' => '',
@@ -421,41 +678,14 @@ function ontology_uuid_default_entities() {
         'language' => 'und',
       ),
     ),
-    'uuid' => 'b23c0e33-b4d8-4718-9ff3-9835224b3c94',
+    'uuid' => 'ea027cc9-7502-4f0c-b142-44c35f9b74bc',
     'vocabulary_machine_name' => 'operational_units',
     'weight' => 0,
   );
   $entities['ontology_operational_unit_terms'][] = (object) array(
     '__metadata' => array(
       'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/0b694eb4-55cf-43aa-a086-7dfcb6180aac',
-      'cause' => FALSE,
-    ),
-    'description' => '',
-    'field_text' => array(
-      'und' => array(
-        0 => array(
-          'format' => NULL,
-          'value' => 'Advisory Board',
-        ),
-      ),
-    ),
-    'format' => 'rich_text',
-    'name' => 'Advisory Board',
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'operational-units/advisory-board',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '0b694eb4-55cf-43aa-a086-7dfcb6180aac',
-    'vocabulary_machine_name' => 'operational_units',
-    'weight' => 0,
-  );
-  $entities['ontology_operational_unit_terms'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'taxonomy_term',
-      'uri' => 'taxonomy_term/3479a888-49f8-4eb0-b75b-b25d294e8990',
+      'uri' => 'taxonomy_term/5b176079-3aaf-43cf-bfb2-b7162e6b22d8',
       'cause' => FALSE,
     ),
     'description' => '',
@@ -475,7 +705,443 @@ function ontology_uuid_default_entities() {
         'language' => 'und',
       ),
     ),
-    'uuid' => '3479a888-49f8-4eb0-b75b-b25d294e8990',
+    'uuid' => '5b176079-3aaf-43cf-bfb2-b7162e6b22d8',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/7de8cbe0-4321-4ba2-8e31-fadd97830cc3',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Advisory Board',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Advisory Board',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/advisory-board',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '7de8cbe0-4321-4ba2-8e31-fadd97830cc3',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/9f091c73-fdcc-470a-a19a-a6bade03039c',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Cardiovascular Disease',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'GICD',
+    'parent' => array(
+      0 => '92781701-5f8f-4cec-a21f-ca96b1bf6eb2',
+    ),
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/gicd',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '9f091c73-fdcc-470a-a19a-a6bade03039c',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d6032808-de30-4454-b177-f9b032b543c6',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Finance',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Finance',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/finance',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd6032808-de30-4454-b177-f9b032b543c6',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/5a92ee83-47a2-4dc9-89d2-ddd15f47d22f',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Information Technology',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'IT',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/information-technology',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '5a92ee83-47a2-4dc9-89d2-ddd15f47d22f',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/4627a784-ee9b-48c9-b8f7-a3860cae178d',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Operations',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Operations',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/operations',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '4627a784-ee9b-48c9-b8f7-a3860cae178d',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/092e4408-90cc-40ec-b016-23e482ab0f11',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'President\'s Council',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'President\'s Council',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/presidents-council',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '092e4408-90cc-40ec-b016-23e482ab0f11',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d9d75b2f-e5cc-4fd4-886c-c52f182470cf',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Institutional Advancement',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Institutional Advancement',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/institutional-advancement',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd9d75b2f-e5cc-4fd4-886c-c52f182470cf',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/fe2d30bb-674f-4e4b-b9da-c8102a564f42',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Development',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Development',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/development',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'fe2d30bb-674f-4e4b-b9da-c8102a564f42',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/02779f14-e1c8-4c3b-9ae6-c0f050d022d8',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Intellectual Property',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Intellectual Property',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/intellectual-property',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '02779f14-e1c8-4c3b-9ae6-c0f050d022d8',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/c4183e9c-c6b9-4aa7-9fae-4f6a959252af',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Communications',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Communications',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/communications',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'c4183e9c-c6b9-4aa7-9fae-4f6a959252af',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/5f6b4531-71bc-4a5a-b360-253268a319c3',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Accounting',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Accounting',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/accounting',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '5f6b4531-71bc-4a5a-b360-253268a319c3',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/b56e7641-8559-4b06-aba8-6cc13b2bc85a',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Facilities',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Facilities',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/facilities',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'b56e7641-8559-4b06-aba8-6cc13b2bc85a',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/d361ce07-8976-483b-9ea9-b72a9865f947',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'President\'s Office',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'President\'s Office',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/presidents-office',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => 'd361ce07-8976-483b-9ea9-b72a9865f947',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/9dbdae10-c08e-4cb6-a264-4673be12f6e4',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Human Resources',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Human Resources',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/human-resources',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '9dbdae10-c08e-4cb6-a264-4673be12f6e4',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/20e12bb1-122d-4a05-8087-49a4ff004f37',
+      'cause' => FALSE,
+    ),
+    'description' => '',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Grants & Contracts',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Grants and Contracts',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/grants-and-contracts',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '20e12bb1-122d-4a05-8087-49a4ff004f37',
+    'vocabulary_machine_name' => 'operational_units',
+    'weight' => 0,
+  );
+  $entities['ontology_operational_unit_terms'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'taxonomy_term',
+      'uri' => 'taxonomy_term/410cdbf4-4910-40c2-8f02-1c6595d0a02f',
+      'cause' => FALSE,
+    ),
+    'description' => '
+',
+    'field_text' => array(
+      'und' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Science Administration',
+        ),
+      ),
+    ),
+    'format' => 'rich_text',
+    'name' => 'Science Administration',
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'operational-units/science-administration',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '410cdbf4-4910-40c2-8f02-1c6595d0a02f',
     'vocabulary_machine_name' => 'operational_units',
     'weight' => 0,
   );
