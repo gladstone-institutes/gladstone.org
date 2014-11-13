@@ -1,0 +1,28 @@
+From a301a502cd84cccfb45b430a2eeb4ba165824122 Mon Sep 17 00:00:00 2001
+From: Justin Nand <jnand@users.noreply.github.com>
+Date: Thu, 13 Nov 2014 11:01:18 -0800
+Subject: [PATCH] fix tz conversion
+
+---
+ date.migrate.inc | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/date.migrate.inc b/date.migrate.inc
+index 095c789..73f16df 100644
+--- a/date.migrate.inc
++++ b/date.migrate.inc
+@@ -141,9 +141,9 @@ class DateMigrateFieldHandler extends MigrateFieldHandler {
+       }
+ 
+       // If we have a value, work from a timestamp.
+-      $from = MigrationBase::timestamp($from);
++      $from = MigrationBase::timestamp($from, $timezone);
+       if ($to) {
+-        $to = MigrationBase::timestamp($to);
++        $to = MigrationBase::timestamp($to, $timezone);
+       }
+ 
+       // What does the destination field expect?
+-- 
+1.8.4.2
+
