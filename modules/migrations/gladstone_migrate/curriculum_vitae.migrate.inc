@@ -86,7 +86,7 @@ class GSCurriculumVitae extends GSProfile2Base {
              array(':uid' => $row->uid, ':rid' => $this->curriculum_vitae_rid));
       } else {
         // skip profile creation if min fields are not met
-        return FALSE;
+        // return FALSE; //dont skip any cvs for all!
       }
   	}  	
 

@@ -55,7 +55,7 @@ class GSLeadership extends GSProfile2Base {
 			 array(':uid' => $row->uid, ':rid' => $this->profile_rid));
 		} else {
 			// skip profile creation if min fields are not met
-			return FALSE;
+			// return FALSE; //dont skip leadership for all!
 		}		
 	}
 
@@ -109,9 +109,6 @@ class GSLeadershipLeadership extends GSFieldCollectionBase {
 			'path',
 		));
 
-		$this->addUnmigratedSources(array(
-			'field_leadership_value',
-		));
 	}
 
 	public function prepareRow($row) {
