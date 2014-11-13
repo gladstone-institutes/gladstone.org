@@ -410,38 +410,39 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
     	);
 
 	  // field mappings (destination, source) ------------------------
+	  //causes PK dup warnings $this->addFieldMapping('item_id','field_professional_titles_value');
       $this->addFieldMapping('host_entity_id','entity_id')->sourceMigration('curriculum_vitae');
-      $this->addFieldMapping('field_institution','new_institute_name')
-      	   ->sourceMigration('institution')
-      	   ->defaultValue(NULL);
-      $this->addFieldMapping('field_institution:source_type')->defaultValue('name');
-      $this->addFieldMapping('field_institution:create_term')->defaultValue(FALSE);
-      $this->addFieldMapping('field_institution:ignore_case')->defaultValue(TRUE);
       $this->addFieldMapping('field_boolean')->defaultValue(TRUE);
-      $this->addFieldMapping('field_institution_op_units','institution_op_unit')
-      	   ->sourceMigration('institution_operational_unit')
-      	   ->defaultValue(NULL);
-      $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
-      $this->addFieldMapping('field_institution_op_units:create_term')->defaultValue(FALSE);
-      $this->addFieldMapping('field_institution_op_units:ignore_case')->defaultValue(TRUE);
-      $this->addFieldMapping('field_operational_titles','new_operational_title')->defaultValue(NULL);
-      $this->addFieldMapping('field_operational_titles:source_type')->defaultValue('name');
-      $this->addFieldMapping('field_operational_titles:create_term')->defaultValue(FALSE);
-      $this->addFieldMapping('field_operational_titles:ignore_case')->defaultValue(TRUE);
       $this->addFieldMapping('field_text','display_title')->defaultValue(NULL);
+
+      
+      $this->addFieldMapping('field_institution','new_institute_name');
+      // $this->addFieldMapping('field_institution:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_institution:create_term')->defaultValue(TRUE);
+      $this->addFieldMapping('field_institution:ignore_case')->defaultValue(TRUE);
+
+      $this->addFieldMapping('field_institution_op_units','institution_op_unit');
+      // $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_institution_op_units:create_term')->defaultValue(TRUE);
+      $this->addFieldMapping('field_institution_op_units:ignore_case')->defaultValue(TRUE);
+      
+      $this->addFieldMapping('field_operational_titles','new_operational_title');
+      // $this->addFieldMapping('field_operational_titles:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_operational_titles:create_term')->defaultValue(TRUE);
+      $this->addFieldMapping('field_operational_titles:ignore_case')->defaultValue(TRUE);
 
    	  $this->addUnmigratedDestinations(array(
    	  	'path',
    	  	'field_text:language'
    	  ));
 
-   	  $this->addUnmigratedSources(array(
-   	  	'field_professional_titles_value',
-   	  	'old_institue_name',
-   	  	'field_institution_target_id',
-   	  	'old_operational_title',
-   	  	'field_operational_title_target_id',
-   	  ));
+   	  // $this->addUnmigratedSources(array(
+   	  // 	'field_professional_titles_value',
+   	  // 	'old_institue_name',
+   	  // 	'field_institution_target_id',
+   	  // 	'old_operational_title',
+   	  // 	'field_operational_title_target_id',
+   	  // ));
 
 
 	}
@@ -475,7 +476,7 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 					$op_unit   = empty($data[2]) ? NULL : $data[2];
 					$display_title = empty($data[3]) ? NULL : $data[3];
 					$this->remap['ops_titles'][$old_title] = new stdClass();
-					$this->remap['ops_titles'][$old_title]->title = $new_title;
+					$this->remap['ops_titles'][$old_title]->new_title = $new_title;
 					$this->remap['ops_titles'][$old_title]->op_unit = $op_unit;
 					$this->remap['ops_titles'][$old_title]->display_title = $display_title;
         		}
@@ -489,6 +490,7 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 			return FALSE;
 		}
 
+		$row->institution_op_unit = array();
 		$row->new_operational_title = '';
 		$row->display_title = '';
 
@@ -496,7 +498,7 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 		if (array_key_exists($row->old_operational_title, $this->remap['ops_titles'])) {
 
 			// set op title or set display title
-			$title = $this->remap['ops_titles'][$row->old_operational_title]->title;		
+			$title = $this->remap['ops_titles'][$row->old_operational_title]->new_title;		
 			if (!empty($title)) {
 				$row->new_operational_title = $title;
 			} else {
@@ -505,21 +507,33 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 
 			$op_unit = $this->remap['ops_titles'][$row->old_operational_title]->op_unit;
 			if (!empty($op_unit)) {
-				$row->institution_op_unit = $op_unit;
-			}
-		} 
+				$row->institution_op_unit[] = $op_unit;
+			} 
+		} else {
+			$row->display_title = $row->old_operational_title;
+		}
+
+
 
 		// Clean up institute taxonomy terms -----
 		if(array_key_exists($row->old_institue_name, $this->remap['institutions'])) {
 
-			$row->new_institute_name = !empty($this->remap['institutions'][$row->old_institue_name]) ? $this->remap['institutions'][$row->old_institue_name] : $row->old_institue_name;
+			if (!empty($this->remap['institutions'][$row->old_institue_name])) {
+				$row->new_institute_name = $this->remap['institutions'][$row->old_institue_name];
+			}else {
+				$row->new_institute_name = $row->old_institue_name;
+			}
 
 			// assign a institution op unit if needed
 			if(!empty($this->remap['institution_op_unit'][$row->old_institue_name])) {
 				$op_unit = $this->remap['institution_op_unit'][$row->old_institue_name];
-				$row->institution_op_unit = $op_unit;
+				$row->institution_op_unit[] = $op_unit;
 			}
 		} 
+
+		dsm($row);
+
+		return FALSE;
 	}
 
 	protected function query() {
