@@ -140,7 +140,19 @@ abstract class GSFieldCollectionBase extends DrupalMigration {
 
 	    $this->map = new MigrateSQLMap(
 	      $this->machineName,
-	      MigrateDestinationFieldCollection::getKeySchema(), //source
+	      array(
+	      	'entity_id' => array(
+	      		'type' => 'int',
+	      		'unsigned' => TRUE,
+	      		'not null' => TRUE,
+	      	),
+	      	'delta' => array(
+	      		'type' => 'int',
+	      		'unsigned' => TRUE,
+	      		'not null' => TRUE
+	      	),	      	
+	      ), //source
+	      // MigrateDestinationFieldCollection::getKeySchema(), //source
 	      MigrateDestinationFieldCollection::getKeySchema()  //dest
 	    );
 	}
@@ -272,7 +284,7 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 	protected function query() {
 	    $query = Database::getConnection('legacy', $this->sourceConnection)
 	      ->select('field_data_field_affiliations', 'a')
-	      ->fields('a', array('entity_id','field_affiliations_value'))
+	      ->fields('a', array('entity_id','delta','field_affiliations_value'))
 	      ->condition('a.entity_type','profile2', '=')
 	      ->condition('a.bundle','profile','=');
 
@@ -337,7 +349,7 @@ class GSCurriculumVitaeEducation extends GSFieldCollectionBase {
 	protected function query() {
 	    $query = Database::getConnection('legacy', $this->sourceConnection)
 	      ->select('field_data_field_education', 'e')
-	      ->fields('e', array('entity_id','field_education_value'))
+	      ->fields('e', array('entity_id','delta','field_education_value'))
 	      ->condition('e.entity_type','profile2', '=')
 	      ->condition('e.bundle','profile','=');
 
@@ -500,7 +512,7 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 	protected function query() {
 	    $query = Database::getConnection('legacy', $this->sourceConnection)
 	      ->select('field_data_field_professional_titles', 'pt')
-	      ->fields('pt', array('entity_id','field_professional_titles_value'))
+	      ->fields('pt', array('entity_id','delta','field_professional_titles_value'))
 	      ->condition('pt.entity_type','profile2', '=')
 	      ->condition('pt.bundle','profile','=');
 

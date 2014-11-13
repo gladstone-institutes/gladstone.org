@@ -125,7 +125,7 @@ class GSLeadershipLeadership extends GSFieldCollectionBase {
 	protected function query() {
 		$query = Database::getConnection('legacy', $this->sourceConnection)
 			->select('field_data_field_leadership', 'l')
-			->fields('l', array('entity_id','field_leadership_value'))
+			->fields('l', array('entity_id','delta','field_leadership_value'))
 			->condition('l.entity_type','profile2', '=')
 			->condition('l.bundle','profile','=');
 
