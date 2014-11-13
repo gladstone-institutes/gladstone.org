@@ -23,7 +23,7 @@ class GSInstitutionTerms extends DrupalTerm7Migration {
       if ($handle) {
         while ($data = fgetcsv($handle)) {
           $legacy_name = $data[0];
-          $new_name = $data[1];
+          $new_name = empty($data[1]) ? NULL : $data[1];
           $op_unit = empty($data[2]) ? NULL : $data[2];
           $this->remap['institutions'][$legacy_name] = $new_name;
           $this->remap['institution_op_unit'][$legacy_name] = $op_unit;

@@ -94,7 +94,7 @@ class GSOpsTitleTerms extends DrupalTerm7Migration {
       if ($handle) {
         while ($data = fgetcsv($handle)) {
           $old_title = $data[0];
-          $new_title = $data[1];
+          $new_title = empty($data[1]) ? NULL : $data[1];
           $op_unit = empty($data[2]) ? NULL : $data[2];
           $display_title = empty($data[3]) ? NULL : $data[3];          
           $this->remap[$old_title] = new stdClass();
