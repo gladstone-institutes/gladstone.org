@@ -10,7 +10,6 @@ class GSInTheNews extends DrupalNode7Migration {
 		parent::__construct($arguments);
 
 		$this->addFieldMapping('field_date','field_release_date');
-		$this->addFieldMapping('field_date:timezone')->defaultValue($arguments['timezone']);
 		$this->addFieldMapping('field_url','field_website');
 		$this->addFieldMapping('field_url:title','field_website:title');
 	}	
