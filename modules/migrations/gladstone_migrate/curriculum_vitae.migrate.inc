@@ -71,7 +71,7 @@ class GSCurriculumVitae extends GSProfile2Base {
 	  		batch_set($batch);
 		}
 	} 
-	
+
 	public function prepareRow($row) {    
       if (parent::prepareRow($row) === FALSE) {
         return FALSE;
@@ -455,8 +455,8 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 	      if ($handle) {
 	        while ($data = fgetcsv($handle)) {
 	          $legacy_name = $data[0];
-	          $new_name = $data[1];
-	          $op_unit = empty($data[2]) ? NULL : $data[2];
+	          $new_name = empty($data[1]) ? NULL : $data[1];
+	          $op_unit	= empty($data[2]) ? NULL : $data[2];
 	          $this->remap['institutions'][$legacy_name] = $new_name;
 	          $this->remap['institution_op_unit'][$legacy_name] = $op_unit;
 	        }
@@ -471,8 +471,8 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
       		if ($handle) {
         		while ($data = fgetcsv($handle)) {
 					$old_title = $data[0];
-					$new_title = $data[1];
-					$op_unit = empty($data[2]) ? NULL : $data[2];
+					$new_title = empty($data[1]) ? NULL : $data[1];
+					$op_unit   = empty($data[2]) ? NULL : $data[2];
 					$display_title = empty($data[3]) ? NULL : $data[3];
 					$this->remap['ops_titles'][$old_title] = new stdClass();
 					$this->remap['ops_titles'][$old_title]->title = $new_title;
@@ -489,15 +489,18 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 			return FALSE;
 		}
 
+		$row->new_operational_title = '';
+		$row->display_title = '';
+
 		// Clean up operational title terms -----
-		if (array_key_exists($row->old_title, $this->remap['ops_titles'])) {
+		if (array_key_exists($row->old_operational_title, $this->remap['ops_titles'])) {
 
 			// set op title or set display title
-			$title = $this->remap['ops_titles'][$row->old_operational_title]->title;
+			$title = $this->remap['ops_titles'][$row->old_operational_title]->title;		
 			if (!empty($title)) {
 				$row->new_operational_title = $title;
 			} else {
-				$row->display_title = $title;
+				$row->display_title = $row->old_operational_title;
 			}
 
 			$op_unit = $this->remap['ops_titles'][$row->old_operational_title]->op_unit;
@@ -542,11 +545,11 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 	    	 ot.entity_type='field_collection_item' and 
 	    	 ot.bundle='field_professional_titles'");
 	    $query->fields('ot',array('field_operational_title_target_id'));
-	    $query->leftjoin('taxonomy_term_data','td',
-	    	"td.tid=ot.field_operational_title_target_id and
+	    $query->leftjoin('taxonomy_term_data','td2',
+	    	"td2.tid=ot.field_operational_title_target_id and
 	    	 ot.entity_type='field_collection_item' and
 	    	 ot.bundle='field_professional_titles'");
-	    $query->addField('td','name','old_operational_title');
+	    $query->addField('td2','name','old_operational_title');
 
 
 	    return $query;
