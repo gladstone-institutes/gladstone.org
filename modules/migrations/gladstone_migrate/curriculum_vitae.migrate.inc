@@ -623,19 +623,6 @@ class GSHonorsAndAwardsRelations extends DrupalMigration {
 		));
 	}
 
-	public function postImport() {
-	    parent::postImport();
-
-	    // Populate the relation_add:field_honors_and_awards_rel table
-	    // insert ignore into field_data_field_honors_and_awards_rels
-		// 	(`entity_type`,`bundle`,`deleted`,`entity_id`,`revision_id`,`language`,`delta`)
-		// select 'profile2','curriculum_vitae',0,endpoints_entity_id,endpoints_entity_id,'und',0
-		// from field_data_endpoints
-		// where endpoints_entity_type = 'profile2'
-		//  and bundle = 'was_awarded'
-
-	}
-
 	public function postRollback() {
     	parent::postRollback();
 
