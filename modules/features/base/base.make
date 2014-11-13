@@ -28,6 +28,8 @@ projects[link][subdir]	= "contrib"
 
 projects[date][version] = "2.8"
 projects[date][subdir]  = "contrib"
+;fix date import timezone conversion https://www.drupal.org/node/2305049
+projects[date][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/date-timezone_correction.patch
 
 projects[relation][version]  = 1.x-rc5
 projects[relation][subdir]	 = contrib
