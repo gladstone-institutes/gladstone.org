@@ -1,0 +1,39 @@
+From d2604db8fa8a8b08e6892e1de4ffaaca0b770afa Mon Sep 17 00:00:00 2001
+From: Justin Nand <jnand@users.noreply.github.com>
+Date: Thu, 13 Nov 2014 09:49:07 -0800
+Subject: [PATCH] date tz conversion
+
+---
+ includes/base.inc | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/includes/base.inc b/includes/base.inc
+index 41ecae0..9770300 100644
+--- a/includes/base.inc
++++ b/includes/base.inc
+@@ -1336,7 +1336,7 @@ abstract class MigrationBase {
+    *
+    * @param string $value
+    */
+-  static public function timestamp($value) {
++  static public function timestamp($value, $timezone = NULL) {
+     // Does it look like it's already a timestamp? Just return it
+     if (is_numeric($value)) {
+       return $value;
+@@ -1347,7 +1347,12 @@ abstract class MigrationBase {
+       return time();
+     }
+ 
+-    $date = new DateTime($value);
++    if (!empty($timezone)) {      
++      $date = new DateTime($value, new DateTimeZone($timezone));
++    } else {
++      $date = new DateTime($value);
++    }
++
+     $time = $date->format('U');
+     if ($time == FALSE) {
+       // Handles form YYYY-MM-DD HH:MM:SS.garbage
+-- 
+1.8.4.2
+
