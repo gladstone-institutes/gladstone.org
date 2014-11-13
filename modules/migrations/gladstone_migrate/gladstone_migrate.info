@@ -23,6 +23,5 @@ files[] = event.nodes.migrate.inc
 files[] = in_the_news.nodes.migrate.inc
 files[] = news.nodes.migrate.inc
 files[] = press_release.nodes.migrate.inc
-;files[] = relation_add.inc
 project path = profiles/gladstone_org/modules/migrations
 version = 1.0-2.0

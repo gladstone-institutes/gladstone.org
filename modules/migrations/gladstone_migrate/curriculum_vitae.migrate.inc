@@ -59,7 +59,7 @@ class GSCurriculumVitae extends GSProfile2Base {
 
 	public function preImport() {
     	// get the profile role id
-    	$this->curriculum_vitae_rid = user_role_load_by_name('curriculum_vitae')->rid; 
+    	$this->curriculum_vitae_rid = user_role_load_by_name('curriculum vitae')->rid; 
   	}
 
 	public function prepareRow($row) {    
@@ -67,10 +67,13 @@ class GSCurriculumVitae extends GSProfile2Base {
         return FALSE;
       }
 
-      // Assign a profile role if minimum fields are met
-     if ( !empty($row->field_research_interests) || 
-          !empty($row->field_lab_focus) ||
-          !empty($row->field_achievements)
+     $row->achievements = $this->field_achievements($row->pid);
+     $row->lab_focus = $this->field_lab_focus($row->pid);
+     
+     // Assign a profile role if minimum fields are met
+     if ( !empty($row->field_areas_of_investigation_value) || 
+          !empty($row->lab_focus) ||
+          !empty($row->achievements)
         ) {
             $query = db_select('migrate_map_user', 'u');
             $destid = $query->condition('sourceid1',$this->uid,'=')
@@ -85,11 +88,6 @@ class GSCurriculumVitae extends GSProfile2Base {
         // skip profile creation if min fields are not met
         return FALSE;
       }
-
-
-      $row->achievements = $this->field_achievements($row->pid);
-      $row->lab_focus = $this->field_lab_focus($row->pid);
-
   	}  	
 
   	protected function query() {

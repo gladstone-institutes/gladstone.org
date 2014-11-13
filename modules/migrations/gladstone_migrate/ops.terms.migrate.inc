@@ -87,7 +87,7 @@ class GSOpsTitleTerms extends DrupalTerm7Migration {
   public function preImport() {
 
     // Create our remap associations
-    if (empty($this->remap['operational_titles'])) {
+    if (empty($this->remap)) {
       # cs input: old_title,new_title,instituion_op_unit,display_title
       $filename = DRUPAL_ROOT.'/'.drupal_get_path('module', 'gladstone_migrate').'/remap/operational_titles.csv';
       $handle = fopen($filename, 'r');
@@ -96,11 +96,11 @@ class GSOpsTitleTerms extends DrupalTerm7Migration {
           $old_title = $data[0];
           $new_title = $data[1];
           $op_unit = empty($data[2]) ? NULL : $data[2];
-          $display_title = empty($data[3]) ? NULL : $data[3];
+          $display_title = empty($data[3]) ? NULL : $data[3];          
           $this->remap[$old_title] = new stdClass();
-          $this->remap->title   = $new_title;
-          $this->remap->op_unit = $op_unit;
-          $this->remap->display_title = $display_title;
+          $this->remap[$old_title]->title   = $new_title;
+          $this->remap[$old_title]->op_unit = $op_unit;
+          $this->remap[$old_title]->display_title = $display_title;
         }
         fclose($handle);
       }
