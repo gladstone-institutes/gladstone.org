@@ -2,6 +2,7 @@
 
 class GSInstitutionTerms extends DrupalTerm7Migration {
 	protected $remap = array();
+  protected $vocabs  = array();
 
 	public function __construct(array $arguments) {
 		$arguments['description'] = 'import institution terms';
@@ -16,6 +17,9 @@ class GSInstitutionTerms extends DrupalTerm7Migration {
 	}
 
   public function preImport() {
+
+    $this->vocabs = taxonomy_vocabulary_get_names(); 
+
     // Create our remap associations
     if (empty($this->remap['institutions'])) {
       $filename = DRUPAL_ROOT.'/'.drupal_get_path('module', 'gladstone_migrate').'/remap/institutions.csv';
@@ -24,7 +28,7 @@ class GSInstitutionTerms extends DrupalTerm7Migration {
         while ($data = fgetcsv($handle)) {
           $legacy_name = $data[0];
           $new_name = empty($data[1]) ? NULL : $data[1];
-          $op_unit = empty($data[2]) ? NULL : $data[2];
+          $op_unit  = empty($data[2]) ? NULL : $data[2];
           $this->remap['institutions'][$legacy_name] = $new_name;
           $this->remap['institution_op_unit'][$legacy_name] = $op_unit;
         }
@@ -44,14 +48,15 @@ class GSInstitutionTerms extends DrupalTerm7Migration {
 
     	if(!empty($this->remap['institution_op_unit'][$row->name])) {
     		$op_unit = $this->remap['institution_op_unit'][$row->name];
-    		if(taxonomy_get_term_by_name($op_unit,'institution_operational_unit')){
-    			// op unit unit term exists, skip
-    		} else {
-				// create op unit term
-				$term = new stdClass();
-				$term->name = $op_unit;
-				$term->vocabulary_machine_name = 'institution_operational_unit';
-				taxonomy_term_save($term);    			
+        $term = taxonomy_get_term_by_name($op_unit,'institution_operational_unit');
+    		
+        if(empty($term)){
+    			// create op unit term
+          $term = new stdClass();
+          $term->name = $op_unit;
+          $term->vid = $this->vocabs['institution_operational_unit']->vid;
+          $term->vocabulary_machine_name = 'institution_operational_unit';
+          taxonomy_term_save($term);  
     		}
     	}
 
