@@ -20,6 +20,7 @@ files[] = ops.terms.migrate.inc
 files[] = institution.terms.migrate.inc
 files[] = honors_and_award.nodes.migrate.inc
 files[] = event.nodes.migrate.inc
+files[] = in_the_news.nodes.migrate.inc
 ;files[] = relation_add.inc
 project path = profiles/gladstone_org/modules/migrations
 version = 1.0-2.0

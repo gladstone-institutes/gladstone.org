@@ -67,6 +67,7 @@ function gladstone_migrate_flush_caches() {
 	Migration::registerMigration('GSCurriculumVitaeEducation','education', $args);
 	Migration::registerMigration('GSCurriculumVitaeProfTitles','prof_title', $args);
 	Migration::registerMigration('GSEvent','event', $args);
+	Migration::registerMigration('GSInTheNews','in_the_news', $args);
 	Migration::registerMigration('GSHonorsAndAwards','honors_and_award', $args);
 	Migration::registerMigration('GSHonorsAndAwardsRelations','honors_and_awards_relation', $args);
 	// ADD migration to update node_refs
