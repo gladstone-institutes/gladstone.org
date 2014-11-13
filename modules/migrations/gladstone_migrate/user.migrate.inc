@@ -49,6 +49,16 @@ class GSUser extends DrupalUser7Migration {
     $row->ucsf_profiles_name = $ucsf_profiles_name;
   }
 
+  public function postImport() {
+    // update computed name indexes "field_label_alias"
+    if (module_exists('computed_field_tools')) {
+      $field_info_fields = field_info_fields();
+      $entities_by_type = $field_info_fields['field_label_alias']['bundles'];
+      $batch = _computed_field_tools_setup_batch_args('field_label_alias', $entities_by_type, 500);
+      batch_set($batch);
+    }
+  }
+
   protected function query() {
 
     // join in our name data
@@ -81,11 +91,6 @@ class GSRole extends DrupalRole7Migration {
       'admin'       => 'admin',
       'editor'      => 'editor',
       'leadership'  => 'leadership',
-
-      // use the pseudo roles to partition the monolithic source profile
-      'has_cv'      => 'curriculum vitae',
-      'has_mincv'   => 'mini cv',
-      'has_profile' => 'profile',
     );
 
     parent::__construct($arguments);

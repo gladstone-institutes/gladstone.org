@@ -122,6 +122,16 @@ class GSLeadershipLeadership extends GSFieldCollectionBase {
 		}
 	}
 
+	public function postImport() {
+		// update computed name indexes "field_label_alias"
+		if (module_exists('computed_field_tools')) {
+			$field_info_fields = field_info_fields();
+			$entities_by_type = $field_info_fields['field_label_alias']['bundles'];
+			$batch = _computed_field_tools_setup_batch_args('field_label_alias', $entities_by_type, 500);
+			batch_set($batch);
+		}
+	}	
+
 	protected function query() {
 		$query = Database::getConnection('legacy', $this->sourceConnection)
 			->select('field_data_field_leadership', 'l')

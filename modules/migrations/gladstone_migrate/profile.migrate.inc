@@ -137,6 +137,16 @@ class GSProfile extends GSProfile2Base {
     // get the profile role id
     $this->profile_rid = user_role_load_by_name('profile')->rid; 
   }
+  
+  public function postImport() {
+    // update computed name indexes "field_label_alias"
+    if (module_exists('computed_field_tools')) {
+      $field_info_fields = field_info_fields();
+      $entities_by_type = $field_info_fields['field_label_alias']['bundles'];
+      $batch = _computed_field_tools_setup_batch_args('field_label_alias', $entities_by_type, 500);
+      batch_set($batch);
+    }
+  }
 
   public function prepareRow($row) {    
       if (parent::prepareRow($row) === FALSE) {

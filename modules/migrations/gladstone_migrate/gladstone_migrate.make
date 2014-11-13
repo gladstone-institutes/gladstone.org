@@ -23,3 +23,6 @@ projects[migrate_extras][subdir]				= contrib
 projects[migrate_extras][download][type]		= git
 projects[migrate_extras][download][revision]	= 02fcb71a
 projects[migrate_extras][download][branch]		= 7.x-2.x
+
+projects[computed_field_tools][version]		= 7.x-1.0
+projects[computed_field_tools][subdir]		= contrib
