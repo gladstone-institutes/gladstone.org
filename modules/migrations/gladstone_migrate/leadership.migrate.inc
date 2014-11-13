@@ -42,8 +42,8 @@ class GSLeadership extends GSProfile2Base {
 		}
 
 
-		// Assing a profile role if minimum fields are met
-		if (!empty($row->leader) ) {
+		// Assing a leadership profile role if minimum fields are met
+		if (!empty($row->biosketch) ) {
 			$query = db_select('migrate_map_user', 'u');
 			$destid = $query->condition('sourceid1',$this->uid,'=')
 			            ->fields('u', array('destid1'))
@@ -65,6 +65,11 @@ class GSLeadership extends GSProfile2Base {
 		$query->leftjoin('field_data_field_leadership','l',
 			"l.entity_id=p.pid and l.entity_type='profile2' and l.bundle='profile'");
 		$query->addField('l','field_leadership_value','leader');
+
+		$query->leftjoin('field_data_field_biography','b',
+			"b.entity_id=l.field_leadership_value and b.entity_type='field_collection_item' and b.bundle='field_leadership'");
+		$query->addField('b','field_biography_value','biosketch');
+
 		return $query;
 	}
 }
