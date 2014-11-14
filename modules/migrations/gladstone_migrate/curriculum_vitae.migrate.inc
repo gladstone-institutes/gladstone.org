@@ -410,19 +410,18 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
     	);
 
 	  // field mappings (destination, source) ------------------------
-	  //causes PK dup warnings $this->addFieldMapping('item_id','field_professional_titles_value');
       $this->addFieldMapping('host_entity_id','entity_id')->sourceMigration('curriculum_vitae');
       $this->addFieldMapping('field_boolean')->defaultValue(TRUE);
       $this->addFieldMapping('field_text','display_title')->defaultValue(NULL);
 
       
       $this->addFieldMapping('field_institution','new_institute_name');
-      // $this->addFieldMapping('field_institution:source_type')->defaultValue('name');
-      $this->addFieldMapping('field_institution:create_term')->defaultValue(TRUE);
+      $this->addFieldMapping('field_institution:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_institution:create_term')->defaultValue(FALSE);
       $this->addFieldMapping('field_institution:ignore_case')->defaultValue(TRUE);
 
       $this->addFieldMapping('field_institution_op_units','institution_op_unit');
-      // $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
       $this->addFieldMapping('field_institution_op_units:create_term')->defaultValue(TRUE);
       $this->addFieldMapping('field_institution_op_units:ignore_case')->defaultValue(TRUE);
       
@@ -448,6 +447,9 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 	}
 
 	public function preImport() {
+
+		$this->vocabs = taxonomy_vocabulary_get_names(); 
+
 	    // Create our remap associations
 
 	    if (empty($this->remap['institutions'])) {
@@ -514,14 +516,15 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 		}
 
 
-
 		// Clean up institute taxonomy terms -----
 		if(array_key_exists($row->old_institue_name, $this->remap['institutions'])) {
 
 			if (!empty($this->remap['institutions'][$row->old_institue_name])) {
 				$row->new_institute_name = $this->remap['institutions'][$row->old_institue_name];
-			}else {
+				// $row->new_institute_tid = $this->getTid($row->new_institute_name,'institutions');
+			} else {
 				$row->new_institute_name = $row->old_institue_name;
+				// $row->new_institute_tid = $this->getTid($row->old_institue_name,'institutions');
 			}
 
 			// assign a institution op unit if needed
@@ -530,10 +533,7 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 				$row->institution_op_unit[] = $op_unit;
 			}
 		} 
-
-		dsm($row);
-
-		return FALSE;
+	
 	}
 
 	protected function query() {
@@ -567,6 +567,16 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 
 
 	    return $query;
+	}
+
+	private function getTid($term_name,$vocab) {
+		$vid = $this->vocabs[$vocab]->vid;
+		$query = db_select('taxonomy_term_data','td')
+			->fields('td',array())
+			->condition('td.vid',$vid)
+			->condition('td.name',$term_name);
+		return $query->execute()->fetchCol()[0];
+
 	}
 }
 
