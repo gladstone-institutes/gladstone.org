@@ -191,29 +191,29 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
       $this->addFieldMapping('host_entity_id','entity_id')->sourceMigration('curriculum_vitae');
       $this->addFieldMapping('field_institution','field_institution_target_id')->sourceMigration('institution');
       $this->addFieldMapping('field_institution:source_type')->defaultValue('tid');
-      $this->addFieldMapping('field_institution:create_term')->defaultValue(FALSE);
-      $this->addFieldMapping('field_institution:ignore_case')->defaultValue(TRUE);
+      // $this->addFieldMapping('field_institution:create_term')->defaultValue(FALSE);
+      // $this->addFieldMapping('field_institution:ignore_case')->defaultValue(TRUE);
 
-      $this->addFieldMapping('field_operational_role','field_involvement_target_id')->sourceMigration('operational_role');
-      $this->addFieldMapping('field_operational_role:source_type')->defaultValue('tid');
-      $this->addFieldMapping('field_operational_role:create_term')->defaultValue(FALSE);
-      $this->addFieldMapping('field_operational_role:ignore_case')->defaultValue(TRUE);
+      // $this->addFieldMapping('field_operational_role','field_involvement_target_name');
+      // $this->addFieldMapping('field_operational_role:source_type')->defaultValue('name');
+      // $this->addFieldMapping('field_operational_role:create_term')->defaultValue(TRUE);
+      // $this->addFieldMapping('field_operational_role:ignore_case')->defaultValue(TRUE);
 
-      $this->addFieldMapping('field_institution_op_units','in_op_unit');
-      $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
-      $this->addFieldMapping('field_institution_op_units:create_term')->defaultValue(TRUE);
-      $this->addFieldMapping('field_institution_op_units:ignore_case')->defaultValue(FALSE);
+      // $this->addFieldMapping('field_institution_op_units','in_op_unit');
+      // $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
+      // $this->addFieldMapping('field_institution_op_units:create_term')->defaultValue(TRUE);
+      // $this->addFieldMapping('field_institution_op_units:ignore_case')->defaultValue(TRUE);
 
-      $this->addFieldMapping('field_text','display_title');
-      $this->addFieldMapping('field_text:language')->defaultValue(NULL);
+      // $this->addFieldMapping('field_text','display_title');
+      // $this->addFieldMapping('field_text:language')->defaultValue(LANGUAGE_NONE);
 
    	  $this->addUnmigratedDestinations(array(
    	  	'path',
    	  ));
 
-   	  $this->addUnmigratedSources(array(
-   	  	'field_affiliations_value',
-   	  ));
+   	  // $this->addUnmigratedSources(array(
+   	  // 	'field_affiliations_value',
+   	  // ));
 
 
 	}
@@ -224,71 +224,77 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
       	}
 
 		/** Clean up taxonomy terms **/
-		$inv = $row->field_involvement_target_id;
+		$inv = $row->field_involvement_target_name;
 		switch($inv) {
-			// Advisory Board Member
-			case 17:
+			case 'Advisory Board Member':
 				$row->in_op_unit = 'Advisory Board';
-				break;				
-			// Alpha Omega Alpha
-			case 127:
+				$row->field_involvement_target_name = 'Member';
+				break;
+			case 'Associate Investigator':
+				$row->field_involvement_target_name = 'Investigator';
+				break;							
+			case 'Alpha Omega Alpha':
+				$row->field_involvement_target_name = NULL;			
 				$row->display_title = 'Alpha Omega Alpha';
 				break;
-			// Basic Science Council
-			case 159:
+			case 'Basic Science Council':
 				$row->in_op_unit = 'Basic Science Council';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Board of Directors
-			case 137:
+			case 'Board of Directors':
 				$row->in_op_unit = 'Board of Directors';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Chair, Academic Medicine Advisory Council
-			case 140:
+			case 'Chair, Academic Medicine Advisory Council':
 				$row->in_op_unit = 'Academic Medicine Advisory Council';
+				$row->field_involvement_target_name = 'Chair';
 				break;
-			// Clinical Translation Committee
-			case 160:
+			case 'Clinical Translation Committee':
 				$row->in_op_unit = 'Clinical Translation Committee';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Editorial Board
-			case 142:
+			case 'Editorial Board':
 				$row->in_op_unit = 'Editorial Board';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Grant review panel
-			case 118:
+			case 'Grant review panel':
 				$row->in_op_unit = 'Grant review panel';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Internal Advisory Board
-			case 206:
+			case 'Internal Advisory Board':
 				$row->in_op_unit = 'Internal Advisory Board';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Medical & Scientific Advisory Council Chair
-			case 209:
+			case 'Medical & Scientific Advisory Council Chair':
 				$row->in_op_unit = 'Medical & Scientific Advisory Council';
+				$row->field_involvement_target_name = 'Chair';
 				break;
-			// President, Board of Directors
-			case 156:
+			case 'President, Board of Directors':
 				$row->in_op_unit = 'Board of Directors';
+				$row->field_involvement_target_name = 'President';
 				break;
-			// Scientific Advisory Board
-			case 235:
+			case 'Scientific Advisory Board':
 				$row->in_op_unit = 'Scientific Advisory Board';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Scientific Advisory Board Member
-			case 121:
+			case 'Scientific Advisory Board Member':
 				$row->in_op_unit = 'Scientific Advisory Board';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Senate
-			case 205:
+			case 'Senate':
 				$row->in_op_unit = 'Senate';
+				$row->field_involvement_target_name = 'Member';
 				break;
-			// Study Group 3A, Co-chair
-			case 119:
+			case 'Study Group 3A, Co-chair':
 				$row->in_op_unit = 'Study Group 3A';
+				$row->field_involvement_target_name = 'Co-chair';
 				break;
 		}
 
-
+		$row->field_institution_target_id_dest = $this->mapId($row->field_institution_target_id,'institution');
+		// $row->display_title = $row->field_institution_target_name.','.$row->field_involvement_target_name;
+		dsm($row);
+		// return FALSE;
 	}
 
 	protected function query() {
@@ -303,16 +309,30 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 	    	 i.entity_type='field_collection_item' and 
 	    	 i.bundle='field_affiliations'");
 	    $query->fields('i',array('field_institution_target_id'));
+	    $query->leftjoin('taxonomy_term_data','td1',
+	    	"td1.tid=i.field_institution_target_id");
+	    $query->addField('td1','name','field_institution_target_name');
 
 	    $query->leftjoin('field_data_field_involvement','inv',
 	    	"inv.entity_id=a.field_affiliations_value and 
 	    	 inv.entity_type='field_collection_item' and 
 	    	 inv.bundle='field_affiliations'");
-	    $query->fields('inv',array('field_involvement_target_id'));	    
+	    // $query->fields('inv',array('field_involvement_target_id'));	 
+	    $query->leftjoin('taxonomy_term_data','td',
+	    	"td.tid=inv.field_involvement_target_id");
+	    $query->addField('td','name','field_involvement_target_name');
 
 
 	    return $query;
 	}
+
+	private function mapId($old_id,$map_table) {
+		return db_select('migrate_map_'.$map_table,'m')
+				->fields('m',array('destid1'))
+				->condition('sourceid1',$old_id)
+				->execute()
+				->fetchCol()[0];
+	}	
 }
 
 class GSCurriculumVitaeEducation extends GSFieldCollectionBase {
