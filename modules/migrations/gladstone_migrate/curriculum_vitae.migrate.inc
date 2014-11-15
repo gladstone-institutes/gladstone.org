@@ -150,19 +150,9 @@ abstract class GSFieldCollectionBase extends DrupalMigration {
 
 	    $this->map = new MigrateSQLMap(
 	      $this->machineName,
-	      array(
-	      	'entity_id' => array(
-	      		'type' => 'int',
-	      		'unsigned' => TRUE,
-	      		'not null' => TRUE,
-	      	),
-	      	'delta' => array(
-	      		'type' => 'int',
-	      		'unsigned' => TRUE,
-	      		'not null' => TRUE
-	      	),	      	
-	      ), //source
-	      // MigrateDestinationFieldCollection::getKeySchema(), //source
+	      // we use the "item_id" from the infield collections since they serve 
+	      // as a unique entity identifier amongs all field_colledction_items
+	      MigrateDestinationFieldCollection::getKeySchema(), //source
 	      MigrateDestinationFieldCollection::getKeySchema()  //dest
 	    );
 	}
@@ -194,18 +184,18 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
       // $this->addFieldMapping('field_institution:create_term')->defaultValue(FALSE);
       // $this->addFieldMapping('field_institution:ignore_case')->defaultValue(TRUE);
 
-      // $this->addFieldMapping('field_operational_role','field_involvement_target_name');
-      // $this->addFieldMapping('field_operational_role:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_operational_role','field_involvement_target_id')->sourceMigration('operational_role');
+      $this->addFieldMapping('field_operational_role:source_type')->defaultValue('tid');
       // $this->addFieldMapping('field_operational_role:create_term')->defaultValue(TRUE);
       // $this->addFieldMapping('field_operational_role:ignore_case')->defaultValue(TRUE);
 
-      // $this->addFieldMapping('field_institution_op_units','in_op_unit');
-      // $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
-      // $this->addFieldMapping('field_institution_op_units:create_term')->defaultValue(TRUE);
-      // $this->addFieldMapping('field_institution_op_units:ignore_case')->defaultValue(TRUE);
+      $this->addFieldMapping('field_institution_op_units','in_op_unit');
+      $this->addFieldMapping('field_institution_op_units:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_institution_op_units:create_term')->defaultValue(TRUE);
+      $this->addFieldMapping('field_institution_op_units:ignore_case')->defaultValue(TRUE);
 
-      // $this->addFieldMapping('field_text','display_title');
-      // $this->addFieldMapping('field_text:language')->defaultValue(LANGUAGE_NONE);
+      $this->addFieldMapping('field_text','display_title');
+      $this->addFieldMapping('field_text:language')->defaultValue(LANGUAGE_NONE);
 
    	  $this->addUnmigratedDestinations(array(
    	  	'path',
@@ -292,9 +282,6 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 		}
 
 		$row->field_institution_target_id_dest = $this->mapId($row->field_institution_target_id,'institution');
-		// $row->display_title = $row->field_institution_target_name.','.$row->field_involvement_target_name;
-		dsm($row);
-		// return FALSE;
 	}
 
 	protected function query() {
@@ -303,6 +290,7 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 	      ->fields('a', array('entity_id','delta','field_affiliations_value'))
 	      ->condition('a.entity_type','profile2', '=')
 	      ->condition('a.bundle','profile','=');
+	    $query->addField('a','field_affiliations_value','item_id');
 
 	    $query->leftjoin('field_data_field_institution','i',
 	    	"i.entity_id=a.field_affiliations_value and 
@@ -317,7 +305,7 @@ class GSCurriculumVitaeAffiliations extends GSFieldCollectionBase {
 	    	"inv.entity_id=a.field_affiliations_value and 
 	    	 inv.entity_type='field_collection_item' and 
 	    	 inv.bundle='field_affiliations'");
-	    // $query->fields('inv',array('field_involvement_target_id'));	 
+	    $query->fields('inv',array('field_involvement_target_id'));	 
 	    $query->leftjoin('taxonomy_term_data','td',
 	    	"td.tid=inv.field_involvement_target_id");
 	    $query->addField('td','name','field_involvement_target_name');
@@ -382,6 +370,7 @@ class GSCurriculumVitaeEducation extends GSFieldCollectionBase {
 	      ->fields('e', array('entity_id','delta','field_education_value'))
 	      ->condition('e.entity_type','profile2', '=')
 	      ->condition('e.bundle','profile','=');
+	    $query->addField('e','field_education_value','item_id');
 
 	    $query->leftjoin('field_data_field_institution','i',
 	    	"i.entity_id=e.field_education_value and 
@@ -562,6 +551,7 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 	      ->fields('pt', array('entity_id','delta','field_professional_titles_value'))
 	      ->condition('pt.entity_type','profile2', '=')
 	      ->condition('pt.bundle','profile','=');
+	    $query->addField('pt','field_professional_titles_value','item_id');
 
 	    $query->leftjoin('field_data_field_institution','i',
 	    	"i.entity_id=pt.field_professional_titles_value and 

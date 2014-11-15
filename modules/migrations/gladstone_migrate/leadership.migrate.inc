@@ -143,6 +143,7 @@ class GSLeadershipLeadership extends GSFieldCollectionBase {
 			->fields('l', array('entity_id','delta','field_leadership_value'))
 			->condition('l.entity_type','profile2', '=')
 			->condition('l.bundle','profile','=');
+		$query->addField('l','field_leadership_value','item_id');
 
 		$query->leftjoin('field_data_field_biography','b',
 			"b.entity_id=l.field_leadership_value and b.entity_type='field_collection_item' and b.bundle='field_leadership'");
