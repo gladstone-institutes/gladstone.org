@@ -13,6 +13,12 @@ projects[ctools][patch][] = "https://www.drupal.org/files/page-manager-admin-pat
 
 
 ; Structure: sitemap, layout, nav ---------------
+projects[content_menu][version]  = 1.x-dev
+projects[content_menu][subdir]	 = contrib
+projects[content_menu][download][type]     = git
+projects[content_menu][download][revision] = f004cdfc
+projects[content_menu][download][branch]   = 7.x-1.x
+
 projects[panels][version] = "3.x-dev"
 projects[panels][subdir]  = "contrib"
 
