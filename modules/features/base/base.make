@@ -3,7 +3,7 @@
 api = 2
 core = 7.x
 
-; Structure -------------------------------------
+; Structural Compnents: Fields etc. -------------
 projects[views][version]  = 3.8
 projects[views][subdir]   = contrib
 

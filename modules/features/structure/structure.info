@@ -53,7 +53,6 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[page_manager_pages][] = home
-features[page_manager_pages][] = node_uuid
 features[variable][] = admin_theme
 features[variable][] = anonymous
 features[variable][] = configurable_timezones
