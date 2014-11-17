@@ -1,5 +1,5 @@
 name = Ontology
-description = Enable content tagging, classfication, and control terms
+description = Enable content tagging, classification, and control terms (done in one bundle as workaround to  relative tid import)
 core = 7.x
 package = Structure
 php = 5.2.4
