@@ -374,7 +374,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -982,7 +982,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
   $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -1670,7 +1670,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'curriculum_vitae' => 'curriculum_vitae',
   );
-  /* Filter criterion: Field: Subscription (field_boolean) */
+  /* Filter criterion: Field: Current (field_boolean) */
   $handler->display->display_options['filters']['field_boolean_value']['id'] = 'field_boolean_value';
   $handler->display->display_options['filters']['field_boolean_value']['table'] = 'field_data_field_boolean';
   $handler->display->display_options['filters']['field_boolean_value']['field'] = 'field_boolean_value';
