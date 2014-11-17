@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Institute feature.
+ */
+
+include_once 'institute.features.inc';
