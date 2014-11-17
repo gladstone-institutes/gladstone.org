@@ -109,6 +109,22 @@ function structure_default_page_manager_pages() {
     'relationships' => array(),
     'code' => '301',
     'destination' => '%uuid:content-type:machine-name/node/%uuid:uuid',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'basic_page' => 'basic_page',
+              'site_page' => 'site_page',
+            ),
+          ),
+          'context' => 'argument_entity_uuid:node_1',
+          'not' => TRUE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();
