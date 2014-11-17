@@ -1,0 +1,19 @@
+--- page_manager_pathauto.module	2014-04-01 15:26:11.000000000 -0700
++++ page_manager_pathauto.module	2014-04-01 15:32:21.000000000 -0700
+@@ -19,7 +19,7 @@
+  * aliases.
+  */
+ function page_manager_pathauto_page_manager_variant_operations_alter(&$operations, &$handler) {
+-  if ($handler->task == 'page' && user_access('manage page_manager aliases')) {
++  if ($handler->task && user_access('manage page_manager aliases')) {
+     $keys = array_keys($operations['children']);
+     $before = array_slice($operations['children'], 0, array_search('settings', $keys) +1);
+     $after = array_slice($operations['children'], array_search('settings', $keys) + 1);
+@@ -45,6 +45,7 @@
+   $form['conf']['pathalias'] = array(
+     '#title' => t('@title: Pathauto Alias', array('@title' => $conf['title'])),
+     '#type' => 'textfield',
++    '#maxlength' => 255, 
+     '#default_value' => isset($conf['pathalias']) ? $conf['pathalias'] : NULL,
+   );
+   $rows = array();

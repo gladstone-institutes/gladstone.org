@@ -23,6 +23,12 @@ projects[entityreference][download][branch]		= 7.x-1.x
 ;display views label in autocomplete, not the entity type: https://www.drupal.org/node/1896210
 projects[entityreference][patch][1896210] = https://www.drupal.org/files/issues/entityreference-1896210-5.patch
 
+projects[page_manager_pathauto][version] = "1.x-dev"
+projects[page_manager_pathauto][subdir]  = "contrib"
+; custom patch to resolve php5.4 warning, that key doesnt exist
+projects[page_manager_pathauto][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/page_manager_pathauto-strict_warning_illegal_string_offset.patch
+projects[page_manager_pathauto][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/page_manager_pathauto-on_all_page_manager_pages.patch
+
 projects[link][version] = "1.2"
 projects[link][subdir]	= "contrib"
 

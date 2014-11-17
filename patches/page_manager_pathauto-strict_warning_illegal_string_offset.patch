@@ -1,0 +1,11 @@
+--- a/page_manager_pathauto.module
++++ b/page_manager_pathauto.module
+@@ -114,7 +114,7 @@
+         $new_alias[] = pathauto_cleanstring($string);
+       }
+       $new_alias = implode('/', $new_alias);
+-      $existing_alias = _pathauto_existing_alias_data($alias['source']);
++      $existing_alias = _pathauto_existing_alias_data($alias);
+       if (!$existing_alias) {
+         $existing_alias = NULL;
+       }
