@@ -69,14 +69,6 @@ function bibliorepo_views_default_views() {
   $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_operational_units_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_operational_units_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_operational_units_tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_operational_units_tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['field_operational_units_tid']['validate_options']['vocabularies'] = array(
-    'operational_units' => 'operational_units',
-  );
-  $handler->display->display_options['arguments']['field_operational_units_tid']['validate_options']['type'] = 'tids';
-  $handler->display->display_options['arguments']['field_operational_units_tid']['validate']['fail'] = 'ignore';
-  $handler->display->display_options['arguments']['field_operational_units_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -156,7 +148,7 @@ function bibliorepo_views_default_views() {
   $handler->display->display_options['argument_input'] = array(
     'field_operational_units_tid' => array(
       'type' => 'context',
-      'context' => 'terms.tids',
+      'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
