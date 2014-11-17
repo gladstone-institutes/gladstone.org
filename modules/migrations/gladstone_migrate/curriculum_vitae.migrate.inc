@@ -86,14 +86,16 @@ class GSCurriculumVitae extends GSProfile2Base {
           !empty($row->achievements)
         ) {
             $query = db_select('migrate_map_user', 'u');
-            $destid = $query->condition('sourceid1',$this->uid,'=')
+            $destid = $query->condition('sourceid1',$row->uid,'=')
                         ->fields('u', array('destid1'))
                         ->execute()
                         ->fetchField();
 
             // This has no roll-back
             db_query('INSERT IGNORE INTO users_roles (uid,rid) VALUES (:uid, :rid)',
-             array(':uid' => $row->uid, ':rid' => $this->curriculum_vitae_rid));
+             array(':uid' => $destid, ':rid' => $this->curriculum_vitae_rid)
+            );
+
       } else {
         // skip profile creation if min fields are not met
         // return FALSE; //dont skip any cvs for all!
@@ -503,7 +505,8 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 
 		$row->institution_op_unit = array();
 		$row->new_operational_title = '';
-		$row->display_title = '';
+
+		$row->display_title = $this->remap['ops_titles'][$row->old_operational_title]->display_title;
 
 		// Clean up operational title terms -----
 		if (array_key_exists($row->old_operational_title, $this->remap['ops_titles'])) {
@@ -513,7 +516,9 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 			if (!empty($title)) {
 				$row->new_operational_title = $title;
 			} else {
-				$row->display_title = $row->old_operational_title;
+				if (empty($row->display_title)) {
+					$row->display_title = $row->old_operational_title;
+				}
 			}
 
 			$op_unit = $this->remap['ops_titles'][$row->old_operational_title]->op_unit;
@@ -521,7 +526,9 @@ class GSCurriculumVitaeProfTitles extends GSFieldCollectionBase {
 				$row->institution_op_unit[] = $op_unit;
 			} 
 		} else {
-			$row->display_title = $row->old_operational_title;
+			if (empty($row->display_title)) {
+				$row->display_title = $row->old_operational_title;
+			}
 		}
 
 

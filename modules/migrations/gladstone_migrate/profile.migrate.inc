@@ -82,6 +82,21 @@ class GSProfile extends GSProfile2Base {
       $this->addFieldMapping('field_urls', 'field_website_url');
       $this->addFieldMapping('field_urls:title', 'field_website_title');
 
+      $this->addFieldMapping('field_operational_roles','op_roles')->sourceMigration('operational_role');
+      $this->addFieldMapping('field_operational_roles:source_type')->defaultValue('tid');
+      // $this->addFieldMapping('field_operational_roles:create_term')
+      // $this->addFieldMapping('field_operational_roles:ignore_case')
+
+      $this->addFieldMapping('field_operational_titles','op_title');
+      $this->addFieldMapping('field_operational_titles:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_operational_titles:create_term')->defaultValue(TRUE);
+      $this->addFieldMapping('field_operational_titles:ignore_case')->defaultValue(TRUE);
+
+      $this->addFieldMapping('field_operational_units','op_units');
+      $this->addFieldMapping('field_operational_units:source_type')->defaultValue('name');
+      $this->addFieldMapping('field_operational_units:create_term')->defaultValue(FALSE);
+      $this->addFieldMapping('field_operational_units:ignore_case')->defaultValue(TRUE);
+
       // tell migrate to ignore these fields
       $this->addUnmigratedDestinations(array(
         'revision_uid',
@@ -110,20 +125,7 @@ class GSProfile extends GSProfile2Base {
         'field_twitter:language',
         'field_urls:attributes',
         'field_urls:language',
-        'path',
-        // skip these for now
-        'field_operational_roles',
-        'field_operational_roles:source_type',
-        'field_operational_roles:create_term',
-        'field_operational_roles:ignore_case',
-        'field_operational_titles',
-        'field_operational_titles:source_type',
-        'field_operational_titles:create_term',
-        'field_operational_titles:ignore_case',
-        'field_operational_units',
-        'field_operational_units:source_type',
-        'field_operational_units:create_term',
-        'field_operational_units:ignore_case',
+        'path',                
       ));
       // $this->addUnmigratedSources(array(
       //   'field_profile_type',
@@ -153,6 +155,53 @@ class GSProfile extends GSProfile2Base {
         return FALSE;
       }
 
+      $row->op_roles = $this->op_roles($row->pid);
+      $row->op_units = $this->op_units($row->pid);
+
+      // attempt to assign an op title
+      if (!empty($row->op_roles)){
+        switch ($row->op_roles[0]) {
+          //Director 
+          case 27:
+            $op_title = 'Director';
+            break;
+          case 28:
+            $op_title = 'Associate Director';
+            break;
+          case 191:
+            $op_title = 'Associate Investigator';
+            break;
+          case 25:
+            $op_title = 'Investigator';
+            break;
+          case 26:
+            $op_title = 'Staff Research Investigator';
+            break;
+          case 109:
+            $op_title = 'Senior Investigator';
+            break;
+          case 323:
+            $op_title = 'Assistant Investigator';
+            break;
+          case 297:
+            $op_title = 'President Emeritus';
+            break;
+          case 29:
+            $op_title = 'Trustee';
+            break;
+          case 15:
+            $op_title = 'Staff Research Scientist I';
+            break;
+          case 23:
+            $op_title = 'Visiting Scientist';
+            break;
+          case 32:
+            $op_title = 'Graduate Student';
+            break;
+        }
+        $row->op_title = $op_title;
+      }
+
       // Assing a profile role if minimum fields are met
       if (!empty($row->field_biography_value) || 
           !empty($row->field_research_interests_value) ||
@@ -160,14 +209,14 @@ class GSProfile extends GSProfile2Base {
           !empty($row->field_training_value)
         ) {
             $query = db_select('migrate_map_user', 'u');
-            $destid = $query->condition('sourceid1',$this->uid,'=')
+            $destid = $query->condition('sourceid1',$row->uid,'=')
                         ->fields('u', array('destid1'))
                         ->execute()
                         ->fetchField();
 
             // This has no roll-back
             db_query('INSERT IGNORE INTO users_roles (uid,rid) VALUES (:uid, :rid)',
-             array(':uid' => $row->uid, ':rid' => $this->profile_rid));
+             array(':uid' => $destid, ':rid' => $this->profile_rid));
       } else {
         // skip profile creation if min fields are not met
         // return FALSE; // dont skip any rows since contact is part of profile
@@ -252,4 +301,39 @@ class GSProfile extends GSProfile2Base {
     return $query;
   }
 
+  private function op_roles($id) {
+    $query = Database::getConnection('legacy', $this->sourceConnection)
+      ->select('field_data_field_operational_role', 'opr')
+      ->condition('opr.entity_id',$id,'=')
+      ->condition('opr.entity_type','profile2', '=')
+      ->condition('opr.bundle','profile','=');
+    $query->leftjoin('taxonomy_term_data','td',
+      "td.tid=opr.field_operational_role_tid ");
+    $query->fields('td',array('tid','name'));
+    return $query->execute()->fetchCol();   
+  }  
+
+  private function op_units($id) {
+    $query = Database::getConnection('legacy', $this->sourceConnection)
+      ->select('field_data_field_operational_unit', 'ou')
+      ->condition('ou.entity_id',$id,'=')
+      ->condition('ou.entity_type','profile2', '=')
+      ->condition('ou.bundle','profile','=');
+    $query->leftjoin('taxonomy_term_data','td',
+      "td.tid=ou.field_operational_unit_tid ");
+    $query->fields('td',array('name'));
+    $data = $query->execute()->fetchCol();
+
+    // Clean Op unit terms
+    foreach ($data as $key => $value) {
+      switch ($value) {
+        case 'Stem Cells and Regenerative Medicine':
+          $value = 'Stem Cell';
+          break;        
+      }
+      $data[$key] = $value;
+    }
+
+    return $data;   
+  }  
 }

@@ -45,14 +45,14 @@ class GSLeadership extends GSProfile2Base {
 		// Assing a leadership profile role if minimum fields are met
 		if (!empty($row->biosketch) ) {
 			$query = db_select('migrate_map_user', 'u');
-			$destid = $query->condition('sourceid1',$this->uid,'=')
+			$destid = $query->condition('sourceid1',$row->uid,'=')
 			            ->fields('u', array('destid1'))
 			            ->execute()
 			            ->fetchField();
 
 			// This has no roll-back
 			db_query('INSERT IGNORE INTO users_roles (uid,rid) VALUES (:uid, :rid)',
-			 array(':uid' => $row->uid, ':rid' => $this->profile_rid));
+			 array(':uid' => $destid, ':rid' => $this->profile_rid));
 		} else {
 			// skip profile creation if min fields are not met
 			// return FALSE; //dont skip leadership for all!
