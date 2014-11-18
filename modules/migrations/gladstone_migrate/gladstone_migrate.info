@@ -4,6 +4,7 @@ core = 7.x
 package = Migration
 php = 5.3.4
 project = gladstone_migrate
+dependencies[] = keystone
 dependencies[] = migrate
 dependencies[] = migrate_d2d
 dependencies[] = migrate_extras
