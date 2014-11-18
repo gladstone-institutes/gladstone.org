@@ -45,11 +45,6 @@ projects[globalredirect][download][revision] = e7debe9a
 projects[globalredirect][download][branch]   = 7.x-1.x
 
 ; Import and export -----------------------------
-projects[node_export][version]  = 7.x-3.x-dev
-projects[node_export][subdir]	 = contrib
-projects[node_export][download][type]     = git
-projects[node_export][download][revision] = ebef5678
-projects[node_export][download][branch]   = 7.x-3.x
 
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir]  = "contrib"
