@@ -186,7 +186,7 @@ function structure_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'Link\',\'Unlink\',\'Image\',\'Media\'],
+    [\'Source\',\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'Link\',\'Unlink\',\'Image\',\'Media\'],
     \'/\',
     [\'Styles\',\'Font\',\'FontSize\',\'TextColor\',\'BGColor\',\'Maximize\',\'ShowBlocks\',\'Iframe\',\'About\']
 ]',
@@ -199,7 +199,7 @@ function structure_ckeditor_profile_defaults() {
         'lang' => 'en',
         'auto_lang' => 'f',
         'language_direction' => 'default',
-        'allowed_content' => 't',
+        'allowed_content' => 'f',
         'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
