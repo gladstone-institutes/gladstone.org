@@ -5,3 +5,33 @@
  */
 
 include_once 'institute.features.inc';
+
+
+/**
+ * Implements hook_admin_paths_alter()
+ */
+function institute_admin_paths_alter(&$paths) {
+	// Add new path for "Edit" tab to show up when viewing a page managed node
+	$paths['institute/*/*/*/edit'] = TRUE;
+	return $paths;
+}
+
+/**
+ * Implements hook_menu_alter()
+ */
+function institute_menu_alter(&$items) {
+	$items['institute/%/%/%node/edit'] = array(
+		'title' => 'Edit',
+		'description' => 'Edit page managed node',
+		'page callback'  => 'node_page_edit',
+		'page arguments' => array(3),
+		'access callback' => 'node_access',
+		'access arguments' => array('update',3),
+		'type' => MENU_LOCAL_TASK,
+		'context' => MENU_CONTEXT_PAGE,
+		'tab_parent' => 'institute/%/%/%',
+		'tab_root' => 'institute/%/%/%',
+		'file' => 'node.pages.inc',
+		'module' => 'node'
+	);
+}
