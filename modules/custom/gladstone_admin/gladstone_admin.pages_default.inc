@@ -1,5 +1,10 @@
 <?php
 /**
+ * @file
+ * gladstone_admin.pages_default.inc
+ */
+
+/**
  * Implements hook_default_page_manager_handlers().
  */
 function gladstone_admin_default_page_manager_handlers() {

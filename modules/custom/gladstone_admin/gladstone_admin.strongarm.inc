@@ -15,11 +15,11 @@ function gladstone_admin_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'coffee_settings_menus';
   $strongarm->value = array(
-    'main-menu' => 'main-menu',
     'management' => 'management',
     'user-menu' => 'user-menu',
     'devel' => 0,
     'menu-footer-menu' => 0,
+    'main-menu' => 0,
     'navigation' => 0,
     'menu-quick-menu' => 0,
   );
