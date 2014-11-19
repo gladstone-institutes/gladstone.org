@@ -60,7 +60,16 @@ namespace :drupal do
     on roles(:web) do        
       within fetch(:drupal_root) do
         SSHKit.config.output = DrushFormatter.new($stdout)
-        execute :drush, '--yes', 'site-install', profile, db_url, "--account-pass=#{pass}", '2>&1', :raise_on_non_zero_exit => false
+        
+        execute :drush, :status
+        execute :php, '--version'
+        execute :php, '--ini'
+
+        execute :drush, '--yes', 'site-install', profile, db_url, 
+          "--account-pass=#{pass}", 
+          '2>&1', 
+          '-d -v', #drush debug flags
+          :raise_on_non_zero_exit => false
       end
     end    
   end
