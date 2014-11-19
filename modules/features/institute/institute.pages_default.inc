@@ -15,7 +15,7 @@ function institute_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Institute';
   $page->admin_description = 'Standardized display of institute pages ';
-  $page->path = 'institute/%institute/%variant/%uuid';
+  $page->path = 'institute/%institute/%variant/%nid';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array(
@@ -65,10 +65,10 @@ function institute_default_page_manager_pages() {
         'transform' => 1,
       ),
     ),
-    'uuid' => array(
+    'nid' => array(
       'id' => 1,
-      'identifier' => 'Node: UUID',
-      'name' => 'entity_uuid:node',
+      'identifier' => 'Node: ID',
+      'name' => 'entity_id:node',
       'settings' => array(),
     ),
   );
