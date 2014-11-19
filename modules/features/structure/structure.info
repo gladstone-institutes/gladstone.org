@@ -36,6 +36,7 @@ dependencies[] = path
 dependencies[] = pathauto
 dependencies[] = press_release
 dependencies[] = search
+dependencies[] = site_pages
 dependencies[] = strongarm
 dependencies[] = subpathauto
 dependencies[] = taxonomy
