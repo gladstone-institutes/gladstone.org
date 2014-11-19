@@ -22,7 +22,11 @@ set :keep_releases, 1
 # Path to drush
 SSHKit.config.command_map[:drush] = "/usr/local/bin/drush"
 # Correct our environment
-set :default_env, { path: '/usr/local/bin:$PATH'} 
+set :default_env, { 
+	'PATH' => '/usr/local/bin:$PATH',
+	'DRUSH_INI' => '/Users/jnand/.drush/drush.ini',
+	'PHP_OPTIONS' => '\'-d max_execution_time=0 -d disable_functions=set_time_limit\''
+} 
 
 
 #Load our stage specific rake tasks
