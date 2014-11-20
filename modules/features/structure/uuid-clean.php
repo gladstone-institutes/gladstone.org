@@ -81,11 +81,19 @@ if ( count($argv) < 5 ){
 }
 
 // arguments
-$input = $argv[1];
-$hook  = $argv[2];
-$plan  = $argv[3];
-$wrap  = ($argv[4] == 'wrap') ? TRUE : FALSE;
-$types = array_slice($argv,5);
+if ( in_array('wrap', $argv)) {
+    $input = $argv[1];
+    $hook  = $argv[2];
+    $plan  = $argv[3];
+    $wrap  = ($argv[4] == 'wrap') ? TRUE : FALSE;
+    $types = array_slice($argv,5);
+} else {
+    $input = $argv[1];
+    $hook  = $argv[2];
+    $plan  = $argv[3];
+    $wrap  = FALSE;
+    $types = array_slice($argv,4);
+}
 
 
 // load input
