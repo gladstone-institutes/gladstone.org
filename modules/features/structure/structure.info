@@ -55,5 +55,6 @@ features[deploy_plans][] = structure_sitemap
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[page_manager_pages][] = home
+features[page_manager_pages][] = panelize
 features[uuid_entities][] = structure_sitemap
 project path = profiles/gladstone_org/modules/features
