@@ -5,3 +5,33 @@
  */
 
 include_once 'structure.features.inc';
+
+
+/**
+ * Implements hook_admin_paths_alter()
+ */
+function structure_admin_paths_alter(&$paths) {
+	// Add new path for "Edit" tab to show up when viewing a page managed node
+	$paths['z/*/edit'] = TRUE;
+	return $paths;
+}
+
+/**
+ * Implements hook_menu_alter()
+ */
+function structure_menu_alter(&$items) {
+	$items['z/%node/edit'] = array(
+		'title' => 'Edit',
+		'description' => 'Edit page managed node',
+		'page callback'  => 'node_page_edit',
+		'page arguments' => array(1),
+		'access callback' => 'node_access',
+		'access arguments' => array('update',1),
+		'type' => MENU_LOCAL_TASK,
+		'context' => MENU_CONTEXT_PAGE,
+		'tab_parent' => 'z/%',
+		'tab_root' => 'z/%',
+		'file' => 'node.pages.inc',
+		'module' => 'node'
+	);
+}
