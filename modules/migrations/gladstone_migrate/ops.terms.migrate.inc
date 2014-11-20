@@ -10,6 +10,8 @@ class GSOpsRoleTerms extends DrupalTerm7Migration {
     $arguments['destination_vocabulary'] = 'operational_roles';    
     parent::__construct($arguments);
 
+    $this->dependencies[] = 'role';
+
     $this->removeFieldMapping('parent');
     $this->addUnmigratedDestinations(array(
       'parent',
@@ -77,6 +79,8 @@ class GSOpsTitleTerms extends DrupalTerm7Migration {
     $arguments['source_vocabulary'] = 'operational_titles';
     $arguments['destination_vocabulary'] = 'operational_titles';    
     parent::__construct($arguments);
+
+    $this->dependencies[] = 'operational_role';
 
     $this->removeFieldMapping('parent');
     $this->addUnmigratedDestinations(array(

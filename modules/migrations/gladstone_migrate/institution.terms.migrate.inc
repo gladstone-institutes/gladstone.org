@@ -10,10 +10,12 @@ class GSInstitutionTerms extends DrupalTerm7Migration {
 		$arguments['destination_vocabulary'] = 'institutions';
 		parent::__construct($arguments);
 
-	    $this->removeFieldMapping('parent');
-	    $this->addUnmigratedDestinations(array(
-	      'parent',
-	    ));   
+    $this->dependencies[] = 'operational_role';
+
+    $this->removeFieldMapping('parent');
+    $this->addUnmigratedDestinations(array(
+      'parent',
+    ));   
 	}
 
   public function preImport() {
