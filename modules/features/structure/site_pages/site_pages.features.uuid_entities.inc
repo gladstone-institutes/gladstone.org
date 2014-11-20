@@ -48797,397 +48797,594 @@ Check here for a comprehensive list of all academic papers and publications by G
 	'uuid' => 'cf21f58d-110b-4916-8dac-9037168a6a6c'
 	);
 
-  $entities['structure_site_pages'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'node',
-      'uri' => 'node/450c71d7-03d1-4ccc-a239-fa5258413a3f',
-      'cause' => FALSE,
-    ),
-    'body' => array(
-      'und' => array(
-        0 => array(
-          'format' => 'limited_html',
-          'summary' => '',
-          'value' => '',
-        ),
-      ),
-    ),
-    'comment' => 0,
-    'field_files' => array(),
-    'field_node_refs' => array(),
-    'field_operational_units' => array(),
-    'field_research_tags' => array(),
-    'field_user_refs' => array(),
-    'language' => 'und',
-    'log' => '',
-    'panelizer' => array(
-      'page_manager' => array(
-        'disabled' => FALSE,
-        'api_version' => 1,
-        'name' => 'node:site_page:default',
-        'title' => 'Site Page Default',
-        'panelizer_type' => 'node',
-        'panelizer_key' => 'site_page',
-        'no_blocks' => FALSE,
-        'css_id' => '',
-        'css' => '',
-        'pipeline' => 'ipe',
-        'contexts' => array(),
-        'relationships' => array(),
-        'access' => array(),
-        'view_mode' => 'page_manager',
-        'css_class' => '',
-        'title_element' => 'H2',
-        'link_to_entity' => TRUE,
-        'extra' => array(),
-        'display' => array(
-          'args' => array(),
-          'content' => array(
-            'new-13daa690-5368-4415-9fe4-bc2d12ebd9e4' => array(
-              'pid' => 'new-13daa690-5368-4415-9fe4-bc2d12ebd9e4',
-              'panel' => 'gs3irc_header',
-              'type' => 'page_breadcrumb',
-              'subtype' => 'page_breadcrumb',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 0,
-              'locks' => array(),
-              'uuid' => '13daa690-5368-4415-9fe4-bc2d12ebd9e4',
-            ),
-            'new-bd86da3d-af3a-4567-ba1e-02f2d43e44ed' => array(
-              'pid' => 'new-bd86da3d-af3a-4567-ba1e-02f2d43e44ed',
-              'panel' => 'gs3irc_header',
-              'type' => 'page_tabs',
-              'subtype' => 'page_tabs',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'type' => 'both',
-                'id' => 'tabs',
-                'override_title' => 1,
-                'override_title_text' => '',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 1,
-              'locks' => array(),
-              'uuid' => 'bd86da3d-af3a-4567-ba1e-02f2d43e44ed',
-            ),
-            'new-9a545b0d-ea38-45e8-b9dc-6b105503076d' => array(
-              'pid' => 'new-9a545b0d-ea38-45e8-b9dc-6b105503076d',
-              'panel' => 'gs3irc_middle',
-              'type' => 'node_title',
-              'subtype' => 'node_title',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'link' => 0,
-                'markup' => 'none',
-                'id' => '',
-                'class' => '',
-                'context' => 'panelizer',
-                'override_title' => 1,
-                'override_title_text' => '',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 0,
-              'locks' => array(),
-              'uuid' => '9a545b0d-ea38-45e8-b9dc-6b105503076d',
-            ),
-            'new-c92c051e-551a-446d-8c5f-558e10b4625c' => array(
-              'pid' => 'new-c92c051e-551a-446d-8c5f-558e10b4625c',
-              'panel' => 'gs3irc_middle',
-              'type' => 'entity_field',
-              'subtype' => 'node:body',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'label' => 'hidden',
-                'formatter' => 'text_default',
-                'delta_limit' => 0,
-                'delta_offset' => 0,
-                'delta_reversed' => FALSE,
-                'formatter_settings' => array(),
-                'context' => 'panelizer',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 1,
-              'locks' => array(),
-              'uuid' => 'c92c051e-551a-446d-8c5f-558e10b4625c',
-            ),
-            'new-3fce3546-cc03-43bc-927f-5575715709e4' => array(
-              'pid' => 'new-3fce3546-cc03-43bc-927f-5575715709e4',
-              'panel' => 'gs3irc_middle',
-              'type' => 'entity_field',
-              'subtype' => 'node:field_node_refs',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'label' => 'above',
-                'formatter' => 'entityreference_label',
-                'delta_limit' => 0,
-                'delta_offset' => 0,
-                'delta_reversed' => FALSE,
-                'formatter_settings' => array(
-                  'link' => FALSE,
-                ),
-                'context' => 'panelizer',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 2,
-              'locks' => array(),
-              'uuid' => '3fce3546-cc03-43bc-927f-5575715709e4',
-            ),
-            'new-ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493' => array(
-              'pid' => 'new-ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493',
-              'panel' => 'gs3irc_middle',
-              'type' => 'entity_field',
-              'subtype' => 'node:field_files',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'label' => 'above',
-                'formatter' => 'file_default',
-                'delta_limit' => 0,
-                'delta_offset' => 0,
-                'delta_reversed' => FALSE,
-                'formatter_settings' => array(),
-                'context' => 'panelizer',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 3,
-              'locks' => array(),
-              'uuid' => 'ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493',
-            ),
-            'new-09eb06d7-0b8d-4674-ab10-5b2dfae2cebc' => array(
-              'pid' => 'new-09eb06d7-0b8d-4674-ab10-5b2dfae2cebc',
-              'panel' => 'gs3irc_middle',
-              'type' => 'entity_field',
-              'subtype' => 'node:field_operational_units',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'label' => 'above',
-                'formatter' => 'taxonomy_term_reference_link',
-                'delta_limit' => 0,
-                'delta_offset' => 0,
-                'delta_reversed' => FALSE,
-                'formatter_settings' => array(),
-                'context' => 'panelizer',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 4,
-              'locks' => array(),
-              'uuid' => '09eb06d7-0b8d-4674-ab10-5b2dfae2cebc',
-            ),
-            'new-1e4d545d-6355-4b4a-b655-dacb3703ce4c' => array(
-              'pid' => 'new-1e4d545d-6355-4b4a-b655-dacb3703ce4c',
-              'panel' => 'gs3irc_middle',
-              'type' => 'entity_field',
-              'subtype' => 'node:field_research_tags',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'label' => 'above',
-                'formatter' => 'taxonomy_term_reference_link',
-                'delta_limit' => 0,
-                'delta_offset' => 0,
-                'delta_reversed' => FALSE,
-                'formatter_settings' => array(),
-                'context' => 'panelizer',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 5,
-              'locks' => array(),
-              'uuid' => '1e4d545d-6355-4b4a-b655-dacb3703ce4c',
-            ),
-            'new-1acfe6f0-c34e-466c-b780-041267482898' => array(
-              'pid' => 'new-1acfe6f0-c34e-466c-b780-041267482898',
-              'panel' => 'gs3irc_middle',
-              'type' => 'entity_field',
-              'subtype' => 'node:field_user_refs',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'label' => 'above',
-                'formatter' => 'entityreference_label',
-                'delta_limit' => 0,
-                'delta_offset' => 0,
-                'delta_reversed' => FALSE,
-                'formatter_settings' => array(
-                  'link' => FALSE,
-                ),
-                'context' => 'panelizer',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 6,
-              'locks' => array(),
-              'uuid' => '1acfe6f0-c34e-466c-b780-041267482898',
-            ),
-            'new-ea11f4d5-01d0-4a0f-81ba-c822c3077e58' => array(
-              'pid' => 'new-ea11f4d5-01d0-4a0f-81ba-c822c3077e58',
-              'panel' => 'gs3irc_middle',
-              'type' => 'node_links',
-              'subtype' => 'node_links',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'override_title' => FALSE,
-                'override_title_text' => '',
-                'build_mode' => 'page_manager',
-                'identifier' => '',
-                'link' => TRUE,
-                'context' => 'panelizer',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(
-                'css_class' => 'link-wrapper',
-              ),
-              'extras' => array(),
-              'position' => 7,
-              'locks' => array(),
-              'uuid' => 'ea11f4d5-01d0-4a0f-81ba-c822c3077e58',
-            ),
-            'new-648d7c74-37da-4607-9cec-9c014641f212' => array(
-              'pid' => 'new-648d7c74-37da-4607-9cec-9c014641f212',
-              'panel' => 'gs3irc_sidebar',
-              'type' => 'panels_mini',
-              'subtype' => 'sidebar',
-              'shown' => TRUE,
-              'access' => array(),
-              'configuration' => array(
-                'override_title' => 1,
-                'override_title_text' => '',
-              ),
-              'cache' => array(),
-              'style' => array(
-                'settings' => NULL,
-              ),
-              'css' => array(),
-              'extras' => array(),
-              'position' => 0,
-              'locks' => array(),
-              'uuid' => '648d7c74-37da-4607-9cec-9c014641f212',
-            ),
-          ),
-          'panels' => array(
-            'gs3irc_header' => array(
-              0 => 'new-13daa690-5368-4415-9fe4-bc2d12ebd9e4',
-              1 => 'new-bd86da3d-af3a-4567-ba1e-02f2d43e44ed',
-            ),
-            'gs3irc_middle' => array(
-              0 => 'new-9a545b0d-ea38-45e8-b9dc-6b105503076d',
-              1 => 'new-c92c051e-551a-446d-8c5f-558e10b4625c',
-              2 => 'new-3fce3546-cc03-43bc-927f-5575715709e4',
-              3 => 'new-ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493',
-              4 => 'new-09eb06d7-0b8d-4674-ab10-5b2dfae2cebc',
-              5 => 'new-1e4d545d-6355-4b4a-b655-dacb3703ce4c',
-              6 => 'new-1acfe6f0-c34e-466c-b780-041267482898',
-              7 => 'new-ea11f4d5-01d0-4a0f-81ba-c822c3077e58',
-            ),
-            'gs3irc_sidebar' => array(
-              0 => 'new-648d7c74-37da-4607-9cec-9c014641f212',
-            ),
-          ),
-          'incoming_content' => NULL,
-          'css_id' => NULL,
-          'context' => array(),
-          'did' => 'new',
-          'renderer' => 'standard',
-          'layout' => 'gs3irc',
-          'layout_settings' => array(),
-          'panel_settings' => array(
-            'style_settings' => array(
-              'default' => NULL,
-              'gs3irc_header' => NULL,
-              'gs3irc_top' => NULL,
-              'gs3irc_sidebar' => NULL,
-              'gs3irc_middle' => NULL,
-              'gs3irc_inset' => NULL,
-              'gs3irc_bottom' => NULL,
-              'gs3irc_footer' => NULL,
-            ),
-          ),
-          'cache' => array(),
-          'title' => '%node:title',
-          'uuid' => 'c55c66b7-b680-4bcb-aad3-6d4c666641ee',
-          'hide_title' => 0,
-          'title_pane' => 'new-c92c051e-551a-446d-8c5f-558e10b4625c',
-        ),
-        'export_module' => 'base',
-        'type' => 'Overridden',
-        'export_type' => 2,
-        'in_code_only' => TRUE,
-        'table' => 'panelizer_defaults',
-        'did' => NULL,
-        'entity_id' => 91,
-        'revision_id' => 181,
-      ),
-    ),
-    'promote' => 0,
-    'status' => 1,
-    'sticky' => 0,
-    'title' => 'Administration',
-    'tnid' => 0,
-    'translate' => 0,
-    'type' => 'site_page',
-    'uid' => 1,
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'content/administration',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => '450c71d7-03d1-4ccc-a239-fa5258413a3f',
-  );
+$entities['structure_site_pages'][] = (object) array(
+	'__metadata' => array(
+		'type' => 'node',
+		'uri' => 'node/450c71d7-03d1-4ccc-a239-fa5258413a3f',
+		'cause' => false
+		),
+	'body' => array(
+		'und' => array(
+			0 => array(
+				'format' => 'limited_html',
+				'summary' => '',
+				'value' => ''
+				)
+			)
+		),
+	'comment' => 0,
+	'field_files' => array(
+
+		),
+	'field_node_refs' => array(
+
+		),
+	'field_operational_units' => array(
+
+		),
+	'field_research_tags' => array(
+
+		),
+	'field_user_refs' => array(
+
+		),
+	'language' => 'und',
+	'log' => '',
+	'panelizer' => array(
+		'page_manager' => array(
+			'disabled' => false,
+			'api_version' => 1,
+			'name' => 'node:site_page:default',
+			'title' => 'Site Page Default',
+			'panelizer_type' => 'node',
+			'panelizer_key' => 'site_page',
+			'no_blocks' => false,
+			'css_id' => '',
+			'css' => '',
+			'pipeline' => 'ipe',
+			'contexts' => array(
+
+				),
+			'relationships' => array(
+
+				),
+			'access' => array(
+
+				),
+			'view_mode' => 'page_manager',
+			'css_class' => '',
+			'title_element' => 'H2',
+			'link_to_entity' => true,
+			'extra' => array(
+
+				),
+			'display' => array(
+				'args' => array(
+
+					),
+				'content' => array(
+					'new-13daa690-5368-4415-9fe4-bc2d12ebd9e4' => array(
+						'pid' => 'new-13daa690-5368-4415-9fe4-bc2d12ebd9e4',
+						'panel' => 'gs3irc_header',
+						'type' => 'page_breadcrumb',
+						'subtype' => 'page_breadcrumb',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 0,
+						'locks' => array(
+
+							),
+						'uuid' => '13daa690-5368-4415-9fe4-bc2d12ebd9e4'
+						),
+					'new-bd86da3d-af3a-4567-ba1e-02f2d43e44ed' => array(
+						'pid' => 'new-bd86da3d-af3a-4567-ba1e-02f2d43e44ed',
+						'panel' => 'gs3irc_header',
+						'type' => 'page_tabs',
+						'subtype' => 'page_tabs',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'type' => 'both',
+							'id' => 'tabs',
+							'override_title' => 1,
+							'override_title_text' => ''
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 1,
+						'locks' => array(
+
+							),
+						'uuid' => 'bd86da3d-af3a-4567-ba1e-02f2d43e44ed'
+						),
+					'new-9a545b0d-ea38-45e8-b9dc-6b105503076d' => array(
+						'pid' => 'new-9a545b0d-ea38-45e8-b9dc-6b105503076d',
+						'panel' => 'gs3irc_middle',
+						'type' => 'node_title',
+						'subtype' => 'node_title',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'link' => 0,
+							'markup' => 'none',
+							'id' => '',
+							'class' => '',
+							'context' => 'panelizer',
+							'override_title' => 1,
+							'override_title_text' => ''
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 0,
+						'locks' => array(
+
+							),
+						'uuid' => '9a545b0d-ea38-45e8-b9dc-6b105503076d'
+						),
+					'new-c92c051e-551a-446d-8c5f-558e10b4625c' => array(
+						'pid' => 'new-c92c051e-551a-446d-8c5f-558e10b4625c',
+						'panel' => 'gs3irc_middle',
+						'type' => 'entity_field',
+						'subtype' => 'node:body',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'label' => 'hidden',
+							'formatter' => 'text_default',
+							'delta_limit' => 0,
+							'delta_offset' => 0,
+							'delta_reversed' => false,
+							'formatter_settings' => array(
+
+								),
+							'context' => 'panelizer'
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 1,
+						'locks' => array(
+
+							),
+						'uuid' => 'c92c051e-551a-446d-8c5f-558e10b4625c'
+						),
+					'new-3fce3546-cc03-43bc-927f-5575715709e4' => array(
+						'pid' => 'new-3fce3546-cc03-43bc-927f-5575715709e4',
+						'panel' => 'gs3irc_middle',
+						'type' => 'entity_field',
+						'subtype' => 'node:field_node_refs',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'label' => 'above',
+							'formatter' => 'entityreference_label',
+							'delta_limit' => 0,
+							'delta_offset' => 0,
+							'delta_reversed' => false,
+							'formatter_settings' => array(
+								'link' => false
+								),
+							'context' => 'panelizer'
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 2,
+						'locks' => array(
+
+							),
+						'uuid' => '3fce3546-cc03-43bc-927f-5575715709e4'
+						),
+					'new-ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493' => array(
+						'pid' => 'new-ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493',
+						'panel' => 'gs3irc_middle',
+						'type' => 'entity_field',
+						'subtype' => 'node:field_files',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'label' => 'above',
+							'formatter' => 'file_default',
+							'delta_limit' => 0,
+							'delta_offset' => 0,
+							'delta_reversed' => false,
+							'formatter_settings' => array(
+
+								),
+							'context' => 'panelizer'
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 3,
+						'locks' => array(
+
+							),
+						'uuid' => 'ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493'
+						),
+					'new-09eb06d7-0b8d-4674-ab10-5b2dfae2cebc' => array(
+						'pid' => 'new-09eb06d7-0b8d-4674-ab10-5b2dfae2cebc',
+						'panel' => 'gs3irc_middle',
+						'type' => 'entity_field',
+						'subtype' => 'node:field_operational_units',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'label' => 'above',
+							'formatter' => 'taxonomy_term_reference_link',
+							'delta_limit' => 0,
+							'delta_offset' => 0,
+							'delta_reversed' => false,
+							'formatter_settings' => array(
+
+								),
+							'context' => 'panelizer'
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 4,
+						'locks' => array(
+
+							),
+						'uuid' => '09eb06d7-0b8d-4674-ab10-5b2dfae2cebc'
+						),
+					'new-1e4d545d-6355-4b4a-b655-dacb3703ce4c' => array(
+						'pid' => 'new-1e4d545d-6355-4b4a-b655-dacb3703ce4c',
+						'panel' => 'gs3irc_middle',
+						'type' => 'entity_field',
+						'subtype' => 'node:field_research_tags',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'label' => 'above',
+							'formatter' => 'taxonomy_term_reference_link',
+							'delta_limit' => 0,
+							'delta_offset' => 0,
+							'delta_reversed' => false,
+							'formatter_settings' => array(
+
+								),
+							'context' => 'panelizer'
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 5,
+						'locks' => array(
+
+							),
+						'uuid' => '1e4d545d-6355-4b4a-b655-dacb3703ce4c'
+						),
+					'new-1acfe6f0-c34e-466c-b780-041267482898' => array(
+						'pid' => 'new-1acfe6f0-c34e-466c-b780-041267482898',
+						'panel' => 'gs3irc_middle',
+						'type' => 'entity_field',
+						'subtype' => 'node:field_user_refs',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'label' => 'above',
+							'formatter' => 'entityreference_label',
+							'delta_limit' => 0,
+							'delta_offset' => 0,
+							'delta_reversed' => false,
+							'formatter_settings' => array(
+								'link' => false
+								),
+							'context' => 'panelizer'
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 6,
+						'locks' => array(
+
+							),
+						'uuid' => '1acfe6f0-c34e-466c-b780-041267482898'
+						),
+					'new-ea11f4d5-01d0-4a0f-81ba-c822c3077e58' => array(
+						'pid' => 'new-ea11f4d5-01d0-4a0f-81ba-c822c3077e58',
+						'panel' => 'gs3irc_middle',
+						'type' => 'node_links',
+						'subtype' => 'node_links',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'override_title' => false,
+							'override_title_text' => '',
+							'build_mode' => 'page_manager',
+							'identifier' => '',
+							'link' => true,
+							'context' => 'panelizer'
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+							'css_class' => 'link-wrapper'
+							),
+						'extras' => array(
+
+							),
+						'position' => 7,
+						'locks' => array(
+
+							),
+						'uuid' => 'ea11f4d5-01d0-4a0f-81ba-c822c3077e58'
+						),
+					'new-648d7c74-37da-4607-9cec-9c014641f212' => array(
+						'pid' => 'new-648d7c74-37da-4607-9cec-9c014641f212',
+						'panel' => 'gs3irc_sidebar',
+						'type' => 'panels_mini',
+						'subtype' => 'sidebar',
+						'shown' => true,
+						'access' => array(
+
+							),
+						'configuration' => array(
+							'override_title' => 1,
+							'override_title_text' => ''
+							),
+						'cache' => array(
+
+							),
+						'style' => array(
+							'settings' => NULL
+							),
+						'css' => array(
+
+							),
+						'extras' => array(
+
+							),
+						'position' => 0,
+						'locks' => array(
+
+							),
+						'uuid' => '648d7c74-37da-4607-9cec-9c014641f212'
+						)
+					),
+				'panels' => array(
+					'gs3irc_header' => array(
+						0 => 'new-13daa690-5368-4415-9fe4-bc2d12ebd9e4',
+						1 => 'new-bd86da3d-af3a-4567-ba1e-02f2d43e44ed'
+						),
+					'gs3irc_middle' => array(
+						0 => 'new-9a545b0d-ea38-45e8-b9dc-6b105503076d',
+						1 => 'new-c92c051e-551a-446d-8c5f-558e10b4625c',
+						2 => 'new-3fce3546-cc03-43bc-927f-5575715709e4',
+						3 => 'new-ed91ff1c-d54c-4a9b-8ea5-ae1e618b2493',
+						4 => 'new-09eb06d7-0b8d-4674-ab10-5b2dfae2cebc',
+						5 => 'new-1e4d545d-6355-4b4a-b655-dacb3703ce4c',
+						6 => 'new-1acfe6f0-c34e-466c-b780-041267482898',
+						7 => 'new-ea11f4d5-01d0-4a0f-81ba-c822c3077e58'
+						),
+					'gs3irc_sidebar' => array(
+						0 => 'new-648d7c74-37da-4607-9cec-9c014641f212'
+						)
+					),
+				'incoming_content' => NULL,
+				'css_id' => NULL,
+				'context' => array(
+
+					),
+				'did' => 'new',
+				'renderer' => 'standard',
+				'layout' => 'gs3irc',
+				'layout_settings' => array(
+
+					),
+				'panel_settings' => array(
+					'style_settings' => array(
+						'default' => NULL,
+						'gs3irc_header' => NULL,
+						'gs3irc_top' => NULL,
+						'gs3irc_sidebar' => NULL,
+						'gs3irc_middle' => NULL,
+						'gs3irc_inset' => NULL,
+						'gs3irc_bottom' => NULL,
+						'gs3irc_footer' => NULL
+						)
+					),
+				'cache' => array(
+
+					),
+				'title' => '%node:title',
+				'uuid' => 'c55c66b7-b680-4bcb-aad3-6d4c666641ee',
+				'hide_title' => 0,
+				'title_pane' => 'new-c92c051e-551a-446d-8c5f-558e10b4625c'
+				),
+			'export_module' => 'base',
+			'type' => 'Overridden',
+			'export_type' => 2,
+			'in_code_only' => true,
+			'table' => 'panelizer_defaults',
+			'did' => NULL,
+			'entity_id' => 91,
+			'revision_id' => 181
+			)
+		),
+	'promote' => 0,
+	'status' => 1,
+	'sticky' => 0,
+	'title' => 'Administration',
+	'tnid' => 0,
+	'translate' => 0,
+	'type' => 'site_page',
+	'uid' => 1,
+	'url_alias' => array(
+		0 => array(
+			'alias' => 'content/administration',
+			'language' => 'und'
+			)
+		),
+	'uuid' => '450c71d7-03d1-4ccc-a239-fa5258413a3f'
+	);
+
+$entities['structure_site_pages'][] = (object) array(
+	'__metadata' => array(
+		'type' => 'node',
+		'uri' => 'node/323316af-bf95-4303-b60b-c85c61e52578',
+		'cause' => false
+		),
+	'body' => array(
+		'und' => array(
+			0 => array(
+				'format' => 'limited_html',
+				'summary' => '',
+				'value' => '<p>Gladstone researchers are advancing science every day. Below you\'ll discover compelling research news, in-depth features, scientist profiles, and much more. And by <a href="http://lb.benchmarkemail.com//listbuilder/signupnew?9bGwlFuGOREK7yW8HfQ6A3TVLJ38FkWyBw1WHzVrH8T5mj5OqPbK3uMzIjNtMjwz">signing up for our monthly e-newsletter</a> you can have the latest info delivered right to your inbox.</p>
+'
+				)
+			)
+		),
+	'comment' => 0,
+	'field_files' => array(
+
+		),
+	'field_node_refs' => array(
+
+		),
+	'field_operational_units' => array(
+
+		),
+	'field_research_tags' => array(
+
+		),
+	'field_user_refs' => array(
+
+		),
+	'language' => 'und',
+	'log' => '',
+	'promote' => 0,
+	'status' => 1,
+	'sticky' => 0,
+	'title' => 'News and Highlights',
+	'tnid' => 0,
+	'translate' => 0,
+	'type' => 'site_page',
+	'uid' => 1,
+	'url_alias' => array(
+		0 => array(
+			'alias' => 'content/news-and-highlights',
+			'language' => 'und'
+			)
+		),
+	'uuid' => '323316af-bf95-4303-b60b-c85c61e52578'
+	);
+
+
       return $entities;
     }
