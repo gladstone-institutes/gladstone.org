@@ -912,7 +912,11 @@ function structure_default_page_manager_pages() {
     $pane->subtype = 'leadership_widgets-leadership_widget_foundation_pane';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '0',
+      'override_title' => 1,
+      'override_title_text' => 'Gladstone Foundation Board',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

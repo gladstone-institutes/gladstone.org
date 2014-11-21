@@ -4896,39 +4896,7 @@ Mobile: 415.806.6245</p>
 
 <p>In addition to providing financial support to Gladstone, the Foundation works in concert with our President’s Council to act as strategic advisors and as Gladstone ambassadors to the community and the nation.</p>
 
-<p>For information about our Foundation Board, contact Michael Penn, Chief Executive Officer, Gladstone Foundation, at<a href="mailto:michael.penn@gladstone.ucsf.edu?subject=Gladstone%20Foundation" style="text-decoration: none; color: rgb(12, 74, 101);">michael.penn@gladstone.ucsf.edu</a>.</p>
-
-<p><strong>Gladstone Foundation Board</strong></p>
-
-<p>William S. Price III, Board Chair</p>
-
-<p>William K. Bowes, Vice Chair</p>
-
-<p>W. Richard Bingham</p>
-
-<p>Elizabeth Blackburn, PhD</p>
-
-<p>Chris Boskin</p>
-
-<p>Robin Richards Donohoe</p>
-
-<p>Paul C. Edwards</p>
-
-<p>Alan L. Kaganov, ScD</p>
-
-<p>Louis G. Lange, MD, PhD</p>
-
-<p>Ernest Mario, PhD</p>
-
-<p>Stasia Obremskey</p>
-
-<p>Douglas G. Scrivner</p>
-
-<p>Nicholas J. Simon</p>
-
-<p>R. Sanders “Sandy” Williams, MD</p>
-
-<p>William H. Younger</p>
+<p>For information about our Foundation Board, contact Michael Penn, Chief Executive Officer, Gladstone Foundation, at<a href="mailto:michael.penn@gladstone.ucsf.edu?subject=Gladstone%20Foundation" style="text-decoration:none;color:rgb(12,74,101);">michael.penn@gladstone.ucsf.edu</a>.</p>
 ',
         ),
       ),
