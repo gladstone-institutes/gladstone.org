@@ -271,7 +271,7 @@ function gladstone_profiles_views_default_views() {
     'field_operational_units_tid' => array(
       'type' => 'context',
       'context' => 'entity:taxonomy_term.tid',
-      'context_optional' => 0,
+      'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Field: Operational Unit(s) (field_operational_units)',
@@ -515,7 +515,7 @@ function gladstone_profiles_views_default_views() {
     'field_operational_units_tid' => array(
       'type' => 'context',
       'context' => 'entity_uuid:taxonomy_term.tid',
-      'context_optional' => 0,
+      'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Field: Operational Unit(s) (field_operational_units)',
@@ -758,7 +758,7 @@ function gladstone_profiles_views_default_views() {
     'field_operational_units_tid' => array(
       'type' => 'context',
       'context' => 'entity:taxonomy_term.tid',
-      'context_optional' => 0,
+      'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Field: Operational Unit(s) (field_operational_units)',
