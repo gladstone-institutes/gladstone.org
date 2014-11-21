@@ -25,7 +25,7 @@ function keystone_install() {
 
 /** Theming **/
 
-	$default_theme = 'gladstoneinstitutes_org';
+	$default_theme = 'gladstone_org';
     $admin_theme = 'rubik';
 
 	// disable all themes
@@ -53,7 +53,7 @@ function keystone_install() {
 
 	// Trigger AT_core's file generation 
 	// todo: auto generate files on install
-	// gladstoneinstitutes_org_theme_file_generate();
+	// gladstone_org_theme_file_generate();
 
 /** Blocks **/
 

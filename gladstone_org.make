@@ -18,8 +18,3 @@ core = 7.x
 ; Modules =======================================
 projects[features][version] = "2.0-rc1"
 projects[features][subdir]  = "contrib"
-
-; Themes ========================================
-projects[adaptivetheme][version] = "3.1"
-
-
