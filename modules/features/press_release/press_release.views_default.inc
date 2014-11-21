@@ -197,7 +197,7 @@ function press_release_views_default_views() {
   $handler->display->display_options['argument_input'] = array(
     'field_operational_units_tid' => array(
       'type' => 'context',
-      'context' => 'terms.tids',
+      'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
