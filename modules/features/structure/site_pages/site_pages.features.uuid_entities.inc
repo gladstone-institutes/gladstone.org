@@ -4521,45 +4521,6 @@ Mobile: 415.806.6245</p>
           'format' => 'limited_html',
           'summary' => '',
           'value' => '<p>Four accomplished physician scientists lead Gladstone</p>
-
-<table align="left" border="0" cellpadding="5" cellspacing="0" style="height: 100%; width: 500px;">
-	<tbody>
-		<tr>
-			<td><img alt="Sandy Williams" class="media-image img__fid__64 img__view_mode__teaser attr__format__teaser attr__field_file_image_alt_text[und][0][value]__Sandy Williams attr__field_file_image_title_text[und][0][value]__" src="http://today.gladstone.internal:8888/current/builds/demo/sites/default/files/styles/medium/public/profile_pictures/williams-profile.jpg?itok=vvC97Una" /></td>
-			<td><a href="/current/builds/demo/our-science/people/r-sanders-williams">R. Sanders Williams, MD</a><br />
-			President<br />
-			<a href="mailto:rs.williams@gladstone.ucsf.edu">rs.williams@gladstone.ucsf.edu</a><br />
-			Phone:&nbsp;(415) 734-2000<br />
-			Fax:&nbsp;(415) 355-0820</td>
-		</tr>
-		<tr>
-			<td><img alt="Deepak Srivastava" class="media-image img__fid__60 img__view_mode__teaser attr__format__teaser attr__field_file_image_alt_text[und][0][value]__Deepak Srivastava attr__field_file_image_title_text[und][0][value]__" src="http://today.gladstone.internal:8888/current/builds/demo/sites/default/files/styles/medium/public/profile_pictures/srivastava-profile.jpg?itok=dtG_YCTH" /></td>
-			<td><a href="/current/builds/demo/our-science/people/deepak-srivastava">Deepak Srivastava, MD</a><br />
-			Director<br />
-			<a href="mailto:dsrivastava@gladstone.ucsf.edu">dsrivastava@gladstone.ucsf.edu</a><br />
-			Phone:&nbsp;(415) 734-2716<br />
-			Fax:&nbsp;(415) 355-0141</td>
-		</tr>
-		<tr>
-			<td><img alt="Warner Greene" class="media-image img__fid__55 img__view_mode__teaser attr__format__teaser attr__field_file_image_alt_text[und][0][value]__Warner Greene attr__field_file_image_title_text[und][0][value]__" src="http://today.gladstone.internal:8888/current/builds/demo/sites/default/files/styles/medium/public/profile_pictures/greene-profile.jpg?itok=HRAgI504" /></td>
-			<td><a href="/current/builds/demo/our-science/people/warner-greene">Warner C. Greene, MD, PhD</a><br />
-			Director<br />
-			<a href="mailto:wgreene@gladstone.ucsf.edu">wgreene@gladstone.ucsf.edu</a><br />
-			Phone:&nbsp;(415) 734-4805<br />
-			Fax:&nbsp;(415) 355-0153</td>
-		</tr>
-		<tr>
-			<td><img alt="Lennart Mucke, MD" class="media-image img__fid__28 img__view_mode__teaser attr__format__teaser attr__field_file_image_alt_text[und][0][value]__Lennart Mucke, MD attr__field_file_image_title_text[und][0][value]__Lennart" src="http://today.gladstone.internal:8888/current/builds/demo/sites/default/files/styles/medium/public/profile_pictures/mucke-profile.jpg?itok=8oRA7zgY" title="Lennart Mucke, MD" /></td>
-			<td><a href="/current/builds/demo/our-science/people/lennart-mucke">Lennart Mucke, MD</a><br />
-			Director<br />
-			<a href="mailto:lmucke@gladstone.ucsf.edu">lmucke@gladstone.ucsf.edu</a><br />
-			Phone:&nbsp;(415) 734-2504<br />
-			Fax:&nbsp;(415) 355-0131</td>
-		</tr>
-	</tbody>
-</table>
-
-<p>&nbsp;</p>
 ',
         ),
       ),

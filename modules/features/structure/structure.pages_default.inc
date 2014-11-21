@@ -133,7 +133,7 @@ function structure_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'gs3irc';
+  $display->layout = 'gs2irr';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -154,7 +154,7 @@ function structure_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
-    $pane->panel = 'gs3irc_header';
+    $pane->panel = 'gs2irr_header';
     $pane->type = 'page_breadcrumb';
     $pane->subtype = 'page_breadcrumb';
     $pane->shown = TRUE;
@@ -170,10 +170,10 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'e758fad8-9de1-40c0-bf53-1cdfb23615fb';
     $display->content['new-e758fad8-9de1-40c0-bf53-1cdfb23615fb'] = $pane;
-    $display->panels['gs3irc_header'][0] = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
+    $display->panels['gs2irr_header'][0] = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
     $pane = new stdClass();
     $pane->pid = 'new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
-    $pane->panel = 'gs3irc_header';
+    $pane->panel = 'gs2irr_header';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
     $pane->shown = TRUE;
@@ -194,27 +194,10 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
     $display->content['new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e'] = $pane;
-    $display->panels['gs3irc_header'][1] = 'new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
-    $pane = new stdClass();
-    $pane->pid = 'new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7';
-    $pane->panel = 'gs3irc_middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'leadership_widgets-leadership_widget_prez_dirs_pane';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7';
-    $display->content['new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7'] = $pane;
-    $display->panels['gs3irc_middle'][0] = 'new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7';
+    $display->panels['gs2irr_header'][1] = 'new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
     $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
-    $pane->panel = 'gs3irc_middle';
+    $pane->panel = 'gs2irr_inset';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
     $pane->shown = TRUE;
@@ -230,14 +213,31 @@ function structure_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3irc_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $display->panels['gs2irr_inset'][0] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $pane = new stdClass();
+    $pane->pid = 'new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7';
+    $pane->panel = 'gs2irr_inset';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'leadership_widgets-leadership_widget_prez_dirs_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7';
+    $display->content['new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7'] = $pane;
+    $display->panels['gs2irr_inset'][1] = 'new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7';
     $pane = new stdClass();
     $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs3irc_middle';
+    $pane->panel = 'gs2irr_inset';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
     $pane->shown = TRUE;
@@ -261,10 +261,10 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
     $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs3irc_middle'][2] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $display->panels['gs2irr_inset'][2] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
-    $pane->panel = 'gs3irc_sidebar';
+    $pane->panel = 'gs2irr_sidebar';
     $pane->type = 'panels_mini';
     $pane->subtype = 'sidebar';
     $pane->shown = TRUE;
@@ -283,7 +283,7 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $display->content['new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d'] = $pane;
-    $display->panels['gs3irc_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
+    $display->panels['gs2irr_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
   $handler->conf['display'] = $display;
@@ -412,33 +412,10 @@ function structure_default_page_manager_pages() {
     $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
     $display->panels['gs3irc_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
     $pane = new stdClass();
-    $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
-    $pane->panel = 'gs3irc_middle';
-    $pane->type = 'node_body';
-    $pane->subtype = 'node_body';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
-    $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3irc_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
-    $pane = new stdClass();
-    $pane->pid = 'new-418db808-23f2-451d-addb-1080d1226f47';
+    $pane->pid = 'new-c11b4af4-3f89-4f8b-a9c8-8cff0b1cbf68';
     $pane->panel = 'gs3irc_middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'directory_widgets-directory_widget_ops_unit_list_pane';
+    $pane->subtype = 'leadership_widgets-leadership_widget_feed_ca_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -446,30 +423,33 @@ function structure_default_page_manager_pages() {
       'pager_id' => '0',
       'items_per_page' => '10',
       'fields_override' => array(
-        'user' => 1,
-        'field_operational_units' => 1,
-        'field_operational_roles' => 1,
+        'user' => 0,
+        'field_image' => 1,
+        'field_operational_title' => 0,
+        'field_operational_unit' => 0,
         'field_label_alias' => 1,
-        'field_public_email' => 1,
+        'field_biography' => 1,
       ),
       'exposed' => array(
-        'field_operational_units_tid' => 'Trustees',
-        'field_operational_roles_tid' => '',
+        'field_operational_unit_tid' => 'Trustees',
+        'field_operational_role_tid' => 'Member',
+        'field_operational_title_tid' => '',
       ),
-      'override_title' => 1,
+      'context' => array(
+        0 => 'empty',
+      ),
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
+    $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '418db808-23f2-451d-addb-1080d1226f47';
-    $display->content['new-418db808-23f2-451d-addb-1080d1226f47'] = $pane;
-    $display->panels['gs3irc_middle'][2] = 'new-418db808-23f2-451d-addb-1080d1226f47';
+    $pane->uuid = 'c11b4af4-3f89-4f8b-a9c8-8cff0b1cbf68';
+    $display->content['new-c11b4af4-3f89-4f8b-a9c8-8cff0b1cbf68'] = $pane;
+    $display->panels['gs3irc_middle'][1] = 'new-c11b4af4-3f89-4f8b-a9c8-8cff0b1cbf68';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3irc_sidebar';
@@ -656,6 +636,45 @@ function structure_default_page_manager_pages() {
     $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
     $display->panels['gs3irc_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
     $pane = new stdClass();
+    $pane->pid = 'new-3e8ad62c-ab25-475f-8368-8fde50a824f2';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'leadership_widgets-leadership_widget_feed_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '10',
+      'fields_override' => array(
+        'user' => 0,
+        'field_image' => 1,
+        'field_operational_title' => 1,
+        'field_operational_unit' => 0,
+        'field_label_alias' => 1,
+        'field_biography' => 1,
+      ),
+      'exposed' => array(
+        'field_operational_unit_tid' => 'Administration',
+        'field_operational_role_tid' => '',
+        'field_operational_title_tid' => '',
+      ),
+      'context' => array(
+        0 => 'empty',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '3e8ad62c-ab25-475f-8368-8fde50a824f2';
+    $display->content['new-3e8ad62c-ab25-475f-8368-8fde50a824f2'] = $pane;
+    $display->panels['gs3irc_middle'][1] = 'new-3e8ad62c-ab25-475f-8368-8fde50a824f2';
+    $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane->panel = 'gs3irc_middle';
     $pane->type = 'node_body';
@@ -673,47 +692,11 @@ function structure_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3irc_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
-    $pane = new stdClass();
-    $pane->pid = 'new-418db808-23f2-451d-addb-1080d1226f47';
-    $pane->panel = 'gs3irc_middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'directory_widgets-directory_widget_ops_unit_list_pane';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'use_pager' => 1,
-      'pager_id' => '0',
-      'items_per_page' => '10',
-      'fields_override' => array(
-        'user' => 1,
-        'field_operational_units' => 1,
-        'field_operational_roles' => 1,
-        'field_label_alias' => 1,
-        'field_public_email' => 1,
-      ),
-      'exposed' => array(
-        'field_operational_units_tid' => 'Administration',
-        'field_operational_roles_tid' => '',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '418db808-23f2-451d-addb-1080d1226f47';
-    $display->content['new-418db808-23f2-451d-addb-1080d1226f47'] = $pane;
-    $display->panels['gs3irc_middle'][2] = 'new-418db808-23f2-451d-addb-1080d1226f47';
+    $display->panels['gs3irc_middle'][2] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3irc_sidebar';
