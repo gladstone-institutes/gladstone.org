@@ -41,6 +41,7 @@ function institute_default_page_manager_pages() {
         'breadcrumb' => 0,
         'transform' => 1,
       ),
+      'keyword' => 'institute',
     ),
     'variant' => array(
       'id' => 2,
@@ -64,12 +65,14 @@ function institute_default_page_manager_pages() {
         'breadcrumb' => 0,
         'transform' => 1,
       ),
+      'keyword' => 'variant',
     ),
     'nid' => array(
       'id' => 1,
       'identifier' => 'Node: ID',
       'name' => 'entity_id:node',
       'settings' => array(),
+      'keyword' => 'nid',
     ),
   );
   $page->conf = array();
@@ -201,7 +204,7 @@ function institute_default_page_manager_pages() {
       ),
       'exposed' => array(
         'field_operational_units_tid' => '',
-        'field_operational_roles_tid' => 'Director, Associate Director, Investigator',
+        'field_operational_roles_tid' => 'Director, Associate Director, Investigator, Staff Research Scientist, Visiting',
         'field_operational_titles_tid' => '',
       ),
       'context' => array(
@@ -857,6 +860,27 @@ function institute_default_page_manager_pages() {
     $display->content['new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992'] = $pane;
     $display->panels['gs3irc_middle'][1] = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
     $pane = new stdClass();
+    $pane->pid = 'new-37bd44e5-50bb-4f2c-ae2c-900df0147d3e';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'leadership_widgets-leadership_widget_sci_adv_board_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '37bd44e5-50bb-4f2c-ae2c-900df0147d3e';
+    $display->content['new-37bd44e5-50bb-4f2c-ae2c-900df0147d3e'] = $pane;
+    $display->panels['gs3irc_middle'][2] = 'new-37bd44e5-50bb-4f2c-ae2c-900df0147d3e';
+    $pane = new stdClass();
     $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
     $pane->panel = 'gs3irc_sidebar';
     $pane->type = 'panels_mini';
@@ -1225,6 +1249,42 @@ function institute_default_page_manager_pages() {
     $display->content['new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992'] = $pane;
     $display->panels['gs3irc_middle'][1] = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
     $pane = new stdClass();
+    $pane->pid = 'new-7619fa37-0e74-48c1-8b8d-e7ad8059daeb';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'press_release-press_release_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '10',
+      'fields_override' => array(
+        'title' => 1,
+        'field_blurb' => 1,
+        'body' => 1,
+        'field_longtext' => 1,
+        'field_display_title' => 1,
+        'field_image' => 1,
+        'field_date' => 1,
+      ),
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '7619fa37-0e74-48c1-8b8d-e7ad8059daeb';
+    $display->content['new-7619fa37-0e74-48c1-8b8d-e7ad8059daeb'] = $pane;
+    $display->panels['gs3irc_middle'][2] = 'new-7619fa37-0e74-48c1-8b8d-e7ad8059daeb';
+    $pane = new stdClass();
     $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
     $pane->panel = 'gs3irc_sidebar';
     $pane->type = 'panels_mini';
@@ -1408,6 +1468,42 @@ function institute_default_page_manager_pages() {
     $pane->uuid = '5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
     $display->content['new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992'] = $pane;
     $display->panels['gs3irc_middle'][1] = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
+    $pane = new stdClass();
+    $pane->pid = 'new-8c682a46-8ebc-407c-a32b-9589341a9b01';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'honors_and_awards-awards_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '10',
+      'offset' => '0',
+      'fields_override' => array(
+        'title' => 1,
+        'nid' => 1,
+        'field_honor_and_award' => 1,
+        'field_date_mmyy' => 1,
+        'field_honors_and_awards_rels' => 1,
+        'body' => 1,
+      ),
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '8c682a46-8ebc-407c-a32b-9589341a9b01';
+    $display->content['new-8c682a46-8ebc-407c-a32b-9589341a9b01'] = $pane;
+    $display->panels['gs3irc_middle'][2] = 'new-8c682a46-8ebc-407c-a32b-9589341a9b01';
     $pane = new stdClass();
     $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
     $pane->panel = 'gs3irc_sidebar';
@@ -1593,6 +1689,37 @@ function institute_default_page_manager_pages() {
     $display->content['new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992'] = $pane;
     $display->panels['gs3irc_middle'][1] = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
     $pane = new stdClass();
+    $pane->pid = 'new-de679a78-fdaf-47c6-814f-4ea6855f058b';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'biblio-publications_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '10',
+      'offset' => '0',
+      'fields_override' => array(
+        'citation' => 1,
+      ),
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'de679a78-fdaf-47c6-814f-4ea6855f058b';
+    $display->content['new-de679a78-fdaf-47c6-814f-4ea6855f058b'] = $pane;
+    $display->panels['gs3irc_middle'][2] = 'new-de679a78-fdaf-47c6-814f-4ea6855f058b';
+    $pane = new stdClass();
     $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
     $pane->panel = 'gs3irc_sidebar';
     $pane->type = 'panels_mini';
@@ -1776,6 +1903,61 @@ function institute_default_page_manager_pages() {
     $pane->uuid = '5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
     $display->content['new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992'] = $pane;
     $display->panels['gs3irc_middle'][1] = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
+    $pane = new stdClass();
+    $pane->pid = 'new-2401ea40-cd33-47bd-9c4f-b2f6bc897334';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'event-event_month_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'path' => 'institute/%institute:name/%variant:name',
+      'context' => array(
+        1 => 'argument_term_1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '2401ea40-cd33-47bd-9c4f-b2f6bc897334';
+    $display->content['new-2401ea40-cd33-47bd-9c4f-b2f6bc897334'] = $pane;
+    $display->panels['gs3irc_middle'][2] = 'new-2401ea40-cd33-47bd-9c4f-b2f6bc897334';
+    $pane = new stdClass();
+    $pane->pid = 'new-56a14d82-c91e-4c61-8f21-b82229a47d0a';
+    $pane->panel = 'gs3irc_middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'event-events_ca_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '10',
+      'offset' => '0',
+      'fields_override' => array(
+        'field_text' => 1,
+        'event_calendar_date' => 1,
+        'body' => 1,
+      ),
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '56a14d82-c91e-4c61-8f21-b82229a47d0a';
+    $display->content['new-56a14d82-c91e-4c61-8f21-b82229a47d0a'] = $pane;
+    $display->panels['gs3irc_middle'][3] = 'new-56a14d82-c91e-4c61-8f21-b82229a47d0a';
     $pane = new stdClass();
     $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
     $pane->panel = 'gs3irc_sidebar';

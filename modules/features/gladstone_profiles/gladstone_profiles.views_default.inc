@@ -374,7 +374,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: Field: Biosketch */
+  /* Field: Field: Biography */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -982,7 +982,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
   $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
-  /* Field: Field: Biosketch */
+  /* Field: Field: Biography */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -1363,17 +1363,39 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'leadership' => 'leadership',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Field collection item: Operational Unit (field_operational_unit) */
+  $handler->display->display_options['filters']['field_operational_unit_tid']['id'] = 'field_operational_unit_tid';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['table'] = 'field_data_field_operational_unit';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['field'] = 'field_operational_unit_tid';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['relationship'] = 'field_leadership_value';
+  $handler->display->display_options['filters']['field_operational_unit_tid']['value'] = array(
+    0 => '52',
+  );
+  $handler->display->display_options['filters']['field_operational_unit_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_operational_unit_tid']['vocabulary'] = 'operational_units';
   /* Filter criterion: Field collection item: Operational Role (field_operational_role) */
   $handler->display->display_options['filters']['field_operational_role_tid']['id'] = 'field_operational_role_tid';
   $handler->display->display_options['filters']['field_operational_role_tid']['table'] = 'field_data_field_operational_role';
   $handler->display->display_options['filters']['field_operational_role_tid']['field'] = 'field_operational_role_tid';
   $handler->display->display_options['filters']['field_operational_role_tid']['relationship'] = 'field_leadership_value';
   $handler->display->display_options['filters']['field_operational_role_tid']['value'] = array(
-    0 => '5',
+    0 => '9',
   );
+  $handler->display->display_options['filters']['field_operational_role_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_operational_role_tid']['vocabulary'] = 'operational_roles';
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_operational_unit_tid' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Field collection item: Operational Unit (field_operational_unit)',
+    ),
+  );
 
   /* Display: Foundation */
   $handler = $view->new_display('panel_pane', 'Foundation', 'leadership_widget_foundation_pane');

@@ -229,7 +229,7 @@ function events_views_default_views() {
   $handler->display->display_options['argument_input'] = array(
     'field_operational_units_tid' => array(
       'type' => 'context',
-      'context' => 'terms.tids',
+      'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
@@ -498,7 +498,7 @@ function events_views_default_views() {
     ),
     'field_operational_units_tid' => array(
       'type' => 'context',
-      'context' => 'entity_uuid:taxonomy_term.tid',
+      'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
