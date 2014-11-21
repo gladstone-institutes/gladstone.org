@@ -25,12 +25,16 @@
 /**
  * Preprocess variables for the html template.
  */
-/* -- Delete this line to enable.
 function gladstone_org_preprocess_html(&$vars) {
   global $theme_key;
 
-  // Two examples of adding custom classes to the body.
+  // Minimalist Typekit Integration, to avoid FontYourFace
+  // @todo add theme setting field for configuring api key
+  drupal_add_js('http://use.typekit.com/nnk8pxv.js');
+  drupal_add_js('try{Typekit.load();}catch(e){}', array('type' => 'inline', 'scope' => 'header', 'weight' => -10));
 
+  // Two examples of adding custom classes to the body.
+  
   // Add a body class for the active theme name.
   // $vars['classes_array'][] = drupal_html_class($theme_key);
 
