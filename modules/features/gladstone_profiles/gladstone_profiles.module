@@ -12,7 +12,7 @@ include_once 'gladstone_profiles.features.inc';
 /**
 * Implements hook_entity_info_alter().
 *
-* Leave as example of grammatically created view mode
+* Leave as example of programmatically created view mode
 * https://www.drupal.org/node/1577752
 */
 // function gladstone_profiles_entity_info_alter(&$entity_info) {
