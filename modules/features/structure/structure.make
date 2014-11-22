@@ -71,6 +71,12 @@ projects[menu_position_uuid][version] = "1.x-dev"
 projects[menu_position_uuid][subdir]  = "contrib"
 projects[menu_position_uuid][patch][] = "https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/menu_position_uuid-fix_deletion_of_other_postion_rules.patch"
 
+projects[features_extra][version]  = 1.x-dev
+projects[features_extra][subdir]	 = contrib
+projects[features_extra][download][type]     = git
+projects[features_extra][download][revision] = d3d1cba0
+projects[features_extra][download][branch]   = 7.x-1.x
+
 ;; @todo Relation uuid https://www.drupal.org/sandbox/fruitcake/2161173
 
 ; UI/UX Enhancements ----------------------------
