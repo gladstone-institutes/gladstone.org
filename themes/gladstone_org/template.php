@@ -33,6 +33,9 @@ function gladstone_org_preprocess_html(&$vars) {
   drupal_add_js('http://use.typekit.com/nnk8pxv.js');
   drupal_add_js('try{Typekit.load();}catch(e){}', array('type' => 'inline', 'scope' => 'header', 'weight' => -10));
 
+  // Add font awesome
+  drupal_add_css(drupal_get_path('theme', 'gladstone_org').'/css/font-awesome/font-awesome.css');
+
   // Two examples of adding custom classes to the body.
   
   // Add a body class for the active theme name.
@@ -51,6 +54,24 @@ function gladstone_org_html_head_alter(&$head_elements) {
   unset($head_elements['system_meta_generator']);
 }
 
+/**
+ * Process menu links
+ */
+function gladstone_org_menu_link(array $variables) {
+
+  // Rewrite "icon" links
+  $attrs = $variables['element']['#localized_options']['attributes'];
+  if (array_key_exists('class',$attrs) && in_array('icon-only',$attrs['class'])) {
+    $title = $variables['element']['#title'];
+    $href = $variables['element']['#href'];
+    $classes = implode(' ', $attrs['class']);
+    return '<li class="'.implode(' ',$variables['element']['#attributes']['class']).'">'.
+           '<a href="'.$href.'" class="'.$classes.'" title="'.$title.'"></a></li>';
+  } else { 
+    // Return default link
+    return theme_menu_link($variables);
+  }
+}
 /**
  * Process variables for the html template.
  */
