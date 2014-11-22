@@ -161,7 +161,8 @@ var {
 
 
 #page  {
-  &.container {}
+  &.container {
+  }
 }
 
 
@@ -217,11 +218,14 @@ var {
  * add any width/margin/padding/borders etc to .container
  */
 
+
 /*
  * Wraps the leaderboard
  */
 #leaderboard-wrapper {
-  .container {}
+  .container {
+    @include page-width();
+  }
 }
 
 
@@ -231,7 +235,9 @@ var {
 #header-wrapper {
   /* Debug styles, is this working */
   background: $debug;
-  .container {}
+  .container {
+    @include page-width();
+  }
 }
 
 
@@ -239,7 +245,9 @@ var {
  * Wraps the nav elements
  */
 #nav-wrapper {
-  .container {}
+  .container {
+    @include page-width();
+  }
 }
 
 
@@ -271,7 +279,9 @@ var {
  * Wraps the main content column
  */
 #content-wrapper {
-  .container {}
+  .container {
+    @include page-width();
+  }
 }
 
 
@@ -290,7 +300,9 @@ var {
   /* Debug styles, is this working? */
   background: $debug;
 
-  .container {}
+  .container {
+    @include page-width();
+  }
 }
 
 

@@ -17,6 +17,12 @@
 //   @include mix-in-name;
 //
 
+// Layout Variables
+// controls container widths, spacing and floats
+// 
+
+$page_width: 980px; //max-page width
+
 //
 // Color Variables
 // Colors used in the sample global.styles. You can use these to recolor many
@@ -188,4 +194,12 @@ $gutter-width: 10px;
       position: relative; // Otherwise these elements will appear below the "Unpublished" text.
     }
   }
+}
+
+// 
+// Set page width container mixin
+// 
+@mixin page-width {
+  margin: 0 auto;
+  max-width: $page_width;
 }
