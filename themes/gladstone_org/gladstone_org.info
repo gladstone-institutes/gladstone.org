@@ -175,24 +175,23 @@
 
 
   ; Layout settings - Smalltouch landscape
-  settings[smalltouch_landscape_layout]         = 'one_col_vert'
-  settings[smalltouch_landscape_page_unit]      = '%'
-  settings[smalltouch_landscape_sidebar_unit]   = '%'
-  settings[smalltouch_landscape_page_width]     = 100
-  settings[smalltouch_landscape_sidebar_first]  = 50
-  settings[smalltouch_landscape_sidebar_second] = 50
-  settings[smalltouch_landscape_media_query]    = 'only screen and (min-width:321px) and (max-width:580px)'
+  settings[smartphone_landscape_layout]         = 'one_col_vert'
+  settings[smartphone_landscape_page_unit]      = '%'
+  settings[smartphone_landscape_sidebar_unit]   = '%'
+  settings[smartphone_landscape_page_width]     = 100
+  settings[smartphone_landscape_sidebar_first]  = 50
+  settings[smartphone_landscape_sidebar_second] = 50
+  settings[smartphone_landscape_media_query]    = 'only screen and (min-width:321px) and (max-width:580px)'
 
 
   ; Layout settings - Smalltouch portrait
-  settings[smalltouch_portrait_layout]         = 'one_col_stack'
-  settings[smalltouch_portrait_page_unit]      = '%'
-  settings[smalltouch_portrait_sidebar_unit]   = '%'
-  settings[smalltouch_portrait_page_width]     = 100
-  settings[smalltouch_portrait_sidebar_first]  = 100
-  settings[smalltouch_portrait_sidebar_second] = 100
-  settings[smalltouch_portrait_media_query]    = 'only screen and (max-width:320px)'
-
+  settings[smartphone_portrait_layout]         = 'one_col_stack'
+  settings[smartphone_portrait_page_unit]      = '%'
+  settings[smartphone_portrait_sidebar_unit]   = '%'
+  settings[smartphone_portrait_page_width]     = 100
+  settings[smartphone_portrait_sidebar_first]  = 100
+  settings[smartphone_portrait_sidebar_second] = 100
+  settings[smartphone_portrait_media_query]    = 'only screen and (max-width:320px)'
 
   ; Responsive Panels - Standard layout
   settings[bigscreen_two_50]            = 'two-50'
@@ -243,25 +242,25 @@
 
 
   ; Responsive Panels - Smalltouch landscape
-  settings[smalltouch_landscape_two_50]            = 'two-50-stack'
-  settings[smalltouch_landscape_two_33_66]         = 'two-33-66-stack'
-  settings[smalltouch_landscape_two_66_33]         = 'two-66-33-stack'
-  settings[smalltouch_landscape_two_brick]         = 'two-brick-stack'
-  settings[smalltouch_landscape_three_3x33]        = 'three-3x33-stack'
-  settings[smalltouch_landscape_three_25_50_25]    = 'three-25-50-25-stack'
-  settings[smalltouch_landscape_three_25_25_50]    = 'three-25-25-50-stack'
-  settings[smalltouch_landscape_three_50_25_25]    = 'three-50-25-25-stack'
-  settings[smalltouch_landscape_four_4x25]         = 'four-4x25-stack'
-  settings[smalltouch_landscape_five_5x20]         = 'five-5x20-stack'
-  settings[smalltouch_landscape_six_6x16]          = 'six-6x16-stack'
-  settings[smalltouch_landscape_three_inset_left]  = 'three-inset-left-stack'
-  settings[smalltouch_landscape_three_inset_right] = 'three-inset-right-stack'
+  settings[smartphone_landscape_two_50]            = 'two-50-stack'
+  settings[smartphone_landscape_two_33_66]         = 'two-33-66-stack'
+  settings[smartphone_landscape_two_66_33]         = 'two-66-33-stack'
+  settings[smartphone_landscape_two_brick]         = 'two-brick-stack'
+  settings[smartphone_landscape_three_3x33]        = 'three-3x33-stack'
+  settings[smartphone_landscape_three_25_50_25]    = 'three-25-50-25-stack'
+  settings[smartphone_landscape_three_25_25_50]    = 'three-25-25-50-stack'
+  settings[smartphone_landscape_three_50_25_25]    = 'three-50-25-25-stack'
+  settings[smartphone_landscape_four_4x25]         = 'four-4x25-stack'
+  settings[smartphone_landscape_five_5x20]         = 'five-5x20-stack'
+  settings[smartphone_landscape_six_6x16]          = 'six-6x16-stack'
+  settings[smartphone_landscape_three_inset_left]  = 'three-inset-left-stack'
+  settings[smartphone_landscape_three_inset_right] = 'three-inset-right-stack'
 
 
   ; CSS
   settings[disable_responsive_styles]     = 0
   settings[enable_custom_media_queries]   = 1
-  settings[global_default_layout]         = 'smalltouch-portrait'
+  settings[global_default_layout]         = 'smartphone-portrait'
   settings[global_default_layout_toggle]  = 0
   settings[global_files_path]             = 'public_files'
 
