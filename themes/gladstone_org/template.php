@@ -47,7 +47,7 @@ function gladstone_org_preprocess_html(&$vars) {
 /**
  * Remove meta tag from the head that reads "Drupal 7"...
  */
-function gladstoneinstitutes_org_html_head_alter(&$head_elements) {
+function gladstone_org_html_head_alter(&$head_elements) {
   unset($head_elements['system_meta_generator']);
 }
 

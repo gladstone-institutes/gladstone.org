@@ -196,12 +196,11 @@
       </div></div>
     </div></div>
 
-    <?php if ($page['footer'] || $attribution): ?>
+    <?php if ($page['footer']): ?>
       <div id="footer-wrapper">
         <div class="container clearfix">
           <footer<?php print $footer_attributes; ?>>
             <?php print render($page['footer']); ?>
-            <?php print $attribution; ?>
           </footer>
         </div>
       </div>
