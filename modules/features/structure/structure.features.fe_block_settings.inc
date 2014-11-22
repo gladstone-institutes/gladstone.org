@@ -90,5 +90,31 @@ function structure_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['panels_mini-footer'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'footer',
+    'module' => 'panels_mini',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'gladstone_org' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'gladstone_org',
+        'weight' => 0,
+      ),
+      'rubik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rubik',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }

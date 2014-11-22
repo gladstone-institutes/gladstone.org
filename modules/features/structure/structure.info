@@ -56,6 +56,7 @@ features[deploy_plans][] = structure_sitemap
 features[fe_block_settings][] = menu-menu-connect-with-us
 features[fe_block_settings][] = menu-menu-donate
 features[fe_block_settings][] = menu-menu-quick-menu
+features[fe_block_settings][] = panels_mini-footer
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-connect-with-us
