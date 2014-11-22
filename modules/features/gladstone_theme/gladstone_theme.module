@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Gladstone Theme feature.
  */
+
+include_once 'gladstone_theme.features.inc';
