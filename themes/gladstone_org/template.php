@@ -60,16 +60,18 @@ function gladstone_org_html_head_alter(&$head_elements) {
 function gladstone_org_menu_link(array $variables) {
 
   // Rewrite "icon" links
-  $attrs = $variables['element']['#localized_options']['attributes'];
-  if (array_key_exists('class',$attrs) && in_array('icon-only',$attrs['class'])) {
-    $title = $variables['element']['#title'];
-    $href = $variables['element']['#href'];
-    $classes = implode(' ', $attrs['class']);
-    return '<li class="'.implode(' ',$variables['element']['#attributes']['class']).'">'.
-           '<a href="'.$href.'" class="'.$classes.'" title="'.$title.'"></a></li>';
-  } else { 
-    // Return default link
-    return theme_menu_link($variables);
+  if (!empty($variables['element']['#localized_options'])) {
+    $attrs = $variables['element']['#localized_options']['attributes'];
+    if (array_key_exists('class',$attrs) && in_array('icon-only',$attrs['class'])) {
+      $title = $variables['element']['#title'];
+      $href = $variables['element']['#href'];
+      $classes = implode(' ', $attrs['class']);
+      return '<li class="'.implode(' ',$variables['element']['#attributes']['class']).'">'.
+             '<a href="'.$href.'" class="'.$classes.'" title="'.$title.'"></a></li>';
+    } else { 
+      // Return default link
+      return theme_menu_link($variables);
+    }
   }
 }
 /**
