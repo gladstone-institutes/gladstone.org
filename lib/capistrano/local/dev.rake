@@ -1,4 +1,3 @@
-
 namespace 'drupal:dev' do
 
   desc 'Symlink deployed directories to our local dev copy'
@@ -27,9 +26,6 @@ namespace 'drupal:dev' do
         info 'Create Symlinks to git repo'
         execute :ln, '-s', Dir.pwd+'/themes/'+fetch(:application), 'themes/'
         
-        # patch for old theme
-        execute :ln, '-s', Dir.pwd+'/themes/gladstoneinstitutes_org', 'themes/'
-
         execute :ln, '-s', Dir.pwd+'/modules/custom', 'modules/'
         execute :ln, '-s', Dir.pwd+'/modules/features', 'modules/'
         execute :ln, '-s', Dir.pwd+'/modules/updates', 'modules/'
