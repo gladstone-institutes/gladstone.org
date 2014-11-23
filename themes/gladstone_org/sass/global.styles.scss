@@ -275,7 +275,9 @@ var {
  * Wraps messages and help
  */
 #messages-help-wrapper {
-  .container {}
+  .container {
+    @include page-width();
+  }
 }
 
 
@@ -316,6 +318,27 @@ var {
   }
 }
 
+/*
+ * Panel layout wrappers
+ */
+#panel-feature {
+  .container {
+    @include page-width();
+  }
+}
+
+#panel-content {
+  background-color: $content_bg;
+  .container {
+    @include page-width();
+  }
+}
+
+#panel-footer {
+  .container {
+    @include page-width();
+  }
+}
 
 /* =============================================================================
  *   Branding

@@ -542,7 +542,6 @@ table {
  * $gutter-width is set in _base.scss
  */
 #main-content,
-.block-inner,
 .pane-inner,
 .menu-wrapper,
 .branding-elements,
@@ -551,7 +550,6 @@ table {
 .at-panel .rounded-corner,
 .block-panels-mini > .block-title,
 .rendered-by-ds .panel-display .region-inner,
-div.messages,
 .at-gutter {
   margin-left: $gutter-width;
   margin-right: $gutter-width;

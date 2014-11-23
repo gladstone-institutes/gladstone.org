@@ -132,9 +132,9 @@
   settings[toggle_logo]                      = 1
   settings[toggle_name]                      = 1
   settings[toggle_slogan]                    = 1
-  settings[toggle_node_user_picture]         = 0
-  settings[toggle_comment_user_picture]      = 0
-  settings[toggle_comment_user_verification] = 0
+  ;settings[toggle_node_user_picture]         = 0
+  ;settings[toggle_comment_user_picture]      = 0
+  ;settings[toggle_comment_user_verification] = 0
   settings[toggle_favicon]                   = 1
   settings[toggle_main_menu]                 = 1
   settings[toggle_secondary_menu]            = 1
@@ -151,7 +151,7 @@
   settings[bigscreen_sidebar_first]  = 25
   settings[bigscreen_sidebar_second] = 25
   settings[bigscreen_set_max_width]  = 1
-  settings[bigscreen_max_width]      = 1140
+  settings[bigscreen_max_width]      = 980
   settings[bigscreen_media_query]    = 'only screen and (min-width:1025px)'
 
 
