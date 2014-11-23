@@ -225,6 +225,8 @@ var {
 #leaderboard-wrapper {
   .container {
     @include page-width();
+    background-color: $header_bg;
+    height: 3.5em;
   }
 }
 
@@ -484,6 +486,48 @@ ul.links {
  */
 .region-inner .region-inner {}
 
+
+/*
+ * Leaderboard region
+ */
+.region-leaderboard {
+  float: right;
+
+  .block-inner {
+    margin: 0;
+  }
+
+  .block-content {
+    padding: 0;    
+  }
+
+  .block,
+  li {
+    float:left;
+  }
+
+  ul.menu {
+    padding-left: 0;
+
+    li.leaf {
+      list-style-type: none;
+      list-style-image: none;
+      margin-left: $gutter-width;
+      
+      &.first a.icon-only {
+        margin-left: 0;
+      }
+    }
+
+    a.icon-only {
+      margin-left: -0.2*$gutter-width;
+    }
+  }
+
+  .donate.button {
+    padding: 0.2em 1em;
+  }
+}
 
 /*
  * Header region, embedded in the #header
