@@ -172,7 +172,12 @@ var {
 /*
  * Wraps all header elements - branding and .region-header
  */
-#header {}
+#header {
+  background-color: $page;
+  background-image: image-url('logo_slogan_vert.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
 
 
 /*
@@ -238,10 +243,11 @@ var {
  * Wraps the header
  */
 #header-wrapper {
-  /* Debug styles, is this working */
-  background: $debug;
+  // /* Debug styles, is this working */
+  // background: $debug;
   .container {
     @include page-width();
+    background-color: $header_bg;
   }
 }
 
@@ -318,17 +324,18 @@ var {
 /*
  * Wraps all the branding elements, logo, name and slogan
  */
-#branding {}
+#branding {
+  padding: $gutter-width 0;
+}
 
 
 /*
  * Logo
  */
 #logo {
-  padding: 10px 0;
-
+  float: left;
   img {
-    vertical-align: bottom;
+    vertical-align: center;
   }
 }
 
@@ -336,7 +343,9 @@ var {
 /*
  * Wrapper for the site name and slogan
  */
-#name-and-slogan {}
+#name-and-slogan {
+  float: right;
+}
 
 
 /*
@@ -363,8 +372,8 @@ var {
 /*
  * Site slogan (h2)
  */
-#site-slogan {
-  margin: 0;
+#slogan {
+  float: right;
 }
 
 
