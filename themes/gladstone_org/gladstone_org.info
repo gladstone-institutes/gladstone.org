@@ -225,6 +225,7 @@
   settings[tablet_landscape_six_6x16]          = 'six-6x16-3x2-grid'
   settings[tablet_landscape_three_inset_left]  = 'three-inset-left'
   settings[tablet_landscape_three_inset_right] = 'three-inset-right'
+  settings[tablet_landscape_gs3_50_25_25] = 'gs3-50-25-25'
 
 
   ; Responsive Panels - Tablet portrait
