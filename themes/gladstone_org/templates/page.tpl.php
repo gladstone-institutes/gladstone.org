@@ -127,6 +127,14 @@
               <?php endif; ?>
 
               <?php if ($site_name || $site_slogan): ?>
+
+                <div id="slogan">
+                  <a href="<?php print $front_page; ?>" title="<?php print $site_name_unlinked; ?>">
+                    <img class="site-slogan image-style-none" src="<?php print $base_path.'/'.$directory.'/slogan.png'; ?>" alt="<?php print $site_slogan;?>">
+                  </a>
+                </div>
+
+                <?php /*
                 <!-- start: Site name and Slogan -->
                 <div<?php print $hgroup_attributes; ?>>
 
@@ -135,6 +143,7 @@
                   <?php endif; ?>
 
                 </div><!-- /end #name-and-slogan -->
+                */ ?>
               <?php endif; ?>
 
 

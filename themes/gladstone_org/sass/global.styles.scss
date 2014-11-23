@@ -39,7 +39,10 @@
  */
 
 html {
-  background: $page;
+  background-color: $page;
+  background-image: image-url('bg_gradient.png');
+  background-position: 50% 0%;
+  background-repeat: no-repeat repeat;
 }
 
 body {
