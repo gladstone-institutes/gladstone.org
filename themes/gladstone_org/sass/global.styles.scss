@@ -308,8 +308,8 @@ var {
  * Footer wrapper
  */
 #footer-wrapper {
-  /* Debug styles, is this working? */
-  background: $debug;
+  // /* Debug styles, is this working? */
+  // background: $debug;
 
   .container {
     @include page-width();
@@ -598,7 +598,31 @@ ul.links {
 /*
  * Footer region
  */
-.region-footer {}
+.region-footer {
+
+  text-transform: uppercase;
+
+  .block-inner {
+    margin: 0;
+  }
+
+  .pane-title {
+    font-size: 1em;
+    color: $page_txt;
+  }
+
+  ul.menu {
+    padding-left: 0;
+    margin: 0;
+
+    li.leaf {
+      list-style-type: none;
+      list-style-image: none;
+      .icon-only { margin-right: 0.5*$gutter-width; }
+    }
+
+  }
+}
 
 
 /* =============================================================================

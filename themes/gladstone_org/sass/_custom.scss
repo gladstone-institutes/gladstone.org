@@ -36,6 +36,7 @@ $bg_medium: $blue_9;
 $bg_light:  #FFF;
 
 $page:         $bg_dark; // to match the page background, default is white
+$page_txt:     $bg_light;
 $header_bg:    $bg_medium;
 $border:       #ccc;    // all borders set in global.styles - tables, fieldset, primary links
 $highlight:    #c00;    // required mark, form error highlight, "new" label on comments

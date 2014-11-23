@@ -29,7 +29,7 @@ images_dir = "css/images"
 #add_import_path "../../../default/modules/FOO"
 #add_import_path "../../../all/modules/FOO"
 #add_import_path "../../../../modules/FOO"
-add_import_path "./sass/partials"
+add_import_path "./sass/panes"
 add_import_path "./sass/page_manager"
 add_import_path "./sass/font-awesome"
 
