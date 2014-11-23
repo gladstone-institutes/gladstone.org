@@ -208,6 +208,7 @@
   settings[bigscreen_six_6x16]          = 'six-6x16-3x2-grid'
   settings[bigscreen_three_inset_left]  = 'three-inset-left'
   settings[bigscreen_three_inset_right] = 'three-inset-right'
+  settings[bigscreen_gs3_50_25_25]      = 'gs3-50-25-25'
 
 
   ; Responsive Panels - Tablet landscape
@@ -240,6 +241,7 @@
   settings[tablet_portrait_six_6x16]          = 'six-6x16-2x3-grid'
   settings[tablet_portrait_three_inset_left]  = 'three-inset-left-wrap'
   settings[tablet_portrait_three_inset_right] = 'three-inset-right-wrap'
+  settings[tablet_portrait_gs3_50_25_25]      = 'gs3-50-25-25-stack-top'
 
 
   ; Responsive Panels - Smalltouch landscape
@@ -256,6 +258,7 @@
   settings[smartphone_landscape_six_6x16]          = 'six-6x16-stack'
   settings[smartphone_landscape_three_inset_left]  = 'three-inset-left-stack'
   settings[smartphone_landscape_three_inset_right] = 'three-inset-right-stack'
+  settings[smartphone_landscape_gs3_50_25_25]      = 'gs3-50-25-25-stack'
 
 
   ; CSS
