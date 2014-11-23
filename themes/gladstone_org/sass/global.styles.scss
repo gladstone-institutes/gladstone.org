@@ -258,6 +258,7 @@ var {
 #nav-wrapper {
   .container {
     @include page-width();
+    background-color: $header_bg;
   }
 }
 
