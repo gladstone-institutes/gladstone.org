@@ -6,7 +6,7 @@
  */
 function gladstone_org_gs3_25_25_50_panels_layouts() {
   $items['gs3_25_25_50'] = array(
-    'title'    => t('GS 3 Three column 25/25/50'),
+    'title'    => t('GS Three column 25/25/50'),
     'category' => t('Gladstone'),
     'icon'     => 'gs3_25_25_50.png',
     'theme'    => 'gs3_25_25_50',
