@@ -130,10 +130,6 @@
                 <!-- start: Site name and Slogan -->
                 <div<?php print $hgroup_attributes; ?>>
 
-                  <?php if ($site_name): ?>
-                    <h1<?php print $site_name_attributes; ?>><?php print $site_name; ?></h1>
-                  <?php endif; ?>
-
                   <?php if ($site_slogan): ?>
                     <h2<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
                   <?php endif; ?>
@@ -155,8 +151,6 @@
       <div id="nav-wrapper">
         <div class="container clearfix">
           <?php print render($page['menu_bar']); ?>
-          <?php if ($primary_navigation): print $primary_navigation; endif; ?>
-          <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
         </div>
       </div>
     <?php endif; ?>
