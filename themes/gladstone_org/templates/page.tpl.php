@@ -173,7 +173,7 @@
       </div>
     <?php endif; ?>
 
-    <div id="content-wrapper"><div class="container">
+    <div id="content-wrapper">
       <div id="columns"><div class="columns-inner clearfix">
         <div id="content-column"><div class="content-inner">
 
@@ -197,7 +197,8 @@
 
 
       </div></div>
-    </div></div>
+
+  </div>
 
     <?php if ($page['footer']): ?>
       <div id="footer-wrapper">
