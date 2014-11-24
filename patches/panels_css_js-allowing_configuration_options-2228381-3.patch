@@ -1,0 +1,18 @@
+diff --git a/sites/all/modules/contrib/panels_css_js/panels_css_js.module b/sites/all/modules/contrib/panels_css_js/panels_css_js.module
+index 2376da9..14de654 100644
+--- a/panels_css_js.module
++++ b/panels_css_js.module
+@@ -189,7 +189,12 @@ function panels_css_js_files_css_render($conf) {
+   $css_files = panels_css_js_files_filter_value($css_conf);
+ 
+   foreach ($css_files as $css_file) {
+-    drupal_add_css($css_file['file']);
++    if (isset($css_file['options'])) {
++        drupal_add_css($css_file['file'], $css_file['options']);
++    }
++    else {
++      drupal_add_css($css_file['file']);
++    }
+   }
+ }
+ 

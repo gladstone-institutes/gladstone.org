@@ -1,0 +1,92 @@
+diff --git a/panels_css_js.module b/panels_css_js.module
+index d532981..2376da9 100755
+--- a/panels_css_js.module
++++ b/panels_css_js.module
+@@ -74,7 +74,7 @@ function panels_css_js_code_js_form(&$form, &$conf) {
+ }
+ 
+ function panels_css_js_get_files_field_description() {
+-  return t('Enter one file per line. You can use "[module-{module_name}]" or "[theme-{theme_name}]" placeholders to get path to module/theme. You can use "[theme]" placeholder to get path to current page theme.');
++  return t('Enter one file per line. You can use "[module-{module_name}]" or "[theme-{theme_name}]" placeholders to get path to module/theme. You can use "[theme]" placeholder to get path to current page theme. You can use {{attribute}={value}} to define custom attributes.');
+ }
+ 
+ function panels_css_js_get_code_styles() {
+@@ -94,7 +94,7 @@ function panels_css_js_files_js_edit_form(&$form, &$conf) {
+   $form['settings']['panels_css_js_files_js'] = array(
+     '#type' => 'textarea',
+     '#title' => t('JS files'),
+-    '#description' => panels_css_js_get_files_field_description() . ' ' . t('Examples: "[theme]/js/scripts.js" or "[theme-zen]/scripts/main.js"'),
++    '#description' => panels_css_js_get_files_field_description() . ' ' . t('Examples: "[theme]/js/scripts.js" or "[theme-zen]/scripts/main.js", /scripts/scripts.js{scope=footer}'),
+     '#default_value' => $conf['panels_css_js_files_js'],
+   );
+ }
+@@ -117,9 +117,9 @@ function panels_css_js_code_js_edit_form(&$form, &$conf) {
+   $form['settings']['panels_css_js_code_js_wrapper'] = array(
+     '#type' => 'radios',
+     '#options' => array(
+-        0 => t('Do not use wrapper'),
+-        1 => t('Use jQuery wrapper'),
+-        2 => t('Use jQuery wrapper with document.ready handler')
++      0 => t('Do not use wrapper'),
++      1 => t('Use jQuery wrapper'),
++      2 => t('Use jQuery wrapper with document.ready handler')
+     ),
+     '#default_value' => $conf['panels_css_js_code_js_wrapper'],
+     '#required' => true,
+@@ -189,7 +189,7 @@ function panels_css_js_files_css_render($conf) {
+   $css_files = panels_css_js_files_filter_value($css_conf);
+ 
+   foreach ($css_files as $css_file) {
+-    drupal_add_css($css_file);
++    drupal_add_css($css_file['file']);
+   }
+ }
+ 
+@@ -198,7 +198,12 @@ function panels_css_js_files_js_render($conf) {
+   $js_files = panels_css_js_files_filter_value($js_conf);
+ 
+   foreach ($js_files as $js_file) {
+-    drupal_add_js($js_file);
++    if (isset($js_file['options'])) {
++      drupal_add_js($js_file['file'], $js_file['options']);
++    }
++    else {
++      drupal_add_js($js_file['file']);
++    }
+   }
+ }
+ 
+@@ -238,18 +243,31 @@ function panels_css_js_files_filter_value($value) {
+ 
+       $matches = array();
+       $types = array('module', 'theme');
++      $file_array = array( 'file' => $file);
+ 
+       foreach ($types as $type) {
+         $pattern = '/\[' . $type . '-(.+)\]/';
+-
+         preg_match($pattern, $file, $matches);
+ 
+         if (count($matches) > 1 && ($path = drupal_get_path($type, $matches[1])) != '') {
+           $file = str_replace($matches[0], $path, $file);
++          $file_array['file'] = $file;
++        }
++      }
++
++      $pattern = '/{(.+?)}/';
++      preg_match($pattern, $file, $matches);
++
++      if (preg_match($pattern, $file, $matches)) {
++        $options = explode(',', $matches[1]);
++        foreach ($options as $option) {
++          $elements = explode('=', $option);
++          $file_array['options'][$elements[0]] = $elements[1];
+         }
++        $file_array['file'] = preg_replace($pattern, '', $file);
+       }
+ 
+-      $include_files[] = $file;
++      $include_files[] = $file_array;
+     }
+   }
+ 
