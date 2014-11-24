@@ -22,6 +22,11 @@ projects[content_menu][download][branch]   = 7.x-1.x
 projects[panels][version] = "3.x-dev"
 projects[panels][subdir]  = "contrib"
 
+projects[panels_css_js][version] = "1.1"
+projects[panels_css_js][subdir]  = "contrib"
+projects[panels_css_js][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/panels_css_js-allowing_configuration_options-2228381-2.patch
+projects[panels_css_js][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/panels_css_js-allowing_configuration_options-2228381-3.patch
+
 projects[panelizer][version]  = 7.x-3.1+90-dev
 projects[panelizer][subdir]	 = contrib
 projects[panelizer][download][type]     = git
