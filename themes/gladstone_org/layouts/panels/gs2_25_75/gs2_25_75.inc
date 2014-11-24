@@ -28,7 +28,7 @@ function gladstone_org_gs2_25_75_panels_layouts() {
         'css' => array(
           '25' => array('.gs2-25-75 .container > .region-gs2-25-75-sidebar' => 'width:25%'),
           '75fl' => array('.gs2-25-75 .container > .inset-wrapper' => 'width:75%;float:left'),
-          // '100' => array('.gs2-25-75 .container > .inset-wrapper > .region' => 'width:100%'),
+          '100' => array('.gs2-25-75 .container > .inset-wrapper > .region' => 'width:100%'),
         ),
       ),
       'gs2-25-75-stack' => array(
