@@ -1,0 +1,11 @@
+name = Mega Menu
+description = Drag and drop to create mega menu.
+core = 7.x
+package = Gladstone
+files[] = md_megamenu.module
+dependencies[] = media
+
+project status url = 
+version = "7.x-1.15"
+core = "7.x"
+project = "md_megamenu"
