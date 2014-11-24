@@ -486,6 +486,14 @@ function gladstone_profiles_default_page_manager_handlers() {
         'context' => 'argument_entity_id:user_1',
         'id' => 1,
       ),
+      1 => array(
+        'identifier' => 'Curriculum Vitae',
+        'keyword' => 'Curriculum Vitae',
+        'name' => 'profile2',
+        'type' => 'curriculum_vitae',
+        'context' => 'argument_entity_id:user_1',
+        'id' => 2,
+      ),
     ),
     'access' => array(
       'logic' => 'and',
@@ -698,7 +706,7 @@ function gladstone_profiles_default_page_manager_handlers() {
       'override_title' => 1,
       'override_title_text' => 'Other Professional Titles',
       'context' => array(
-        0 => 'relationship_profile2_1',
+        0 => 'relationship_profile2_2',
       ),
     );
     $pane->cache = array();
