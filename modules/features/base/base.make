@@ -85,6 +85,9 @@ projects[media][subdir]	 = contrib
 projects[media_youtube][version] = 2.x-dev
 projects[media_youtube][subdir]  = contrib
 
+projects[media_vimeo][version] = 7.x-2.0
+projects[media_vimeo][subdir] = contrib
+
 projects[ckeditor_media][version] = 1.x-dev
 projects[ckeditor_media][subdir]  = contrib
 
