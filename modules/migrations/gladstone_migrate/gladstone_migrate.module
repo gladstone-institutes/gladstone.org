@@ -51,7 +51,7 @@ function gladstone_migrate_flush_caches() {
 
 	// Register migrations -----
 	Migration::registerMigration('GSFile','files',$args+array(
-		'source_dir' => '/Users/jnand/Documents/Projects/gladstone/gladstone-web-d7/gladstone.org.git/htdocs/releases/20141006235547/builds/demo/sites/default/files',
+		'source_dir' => variable_get('gladstone_migrate_source_files'),		
 		'destination_dir' => 'public://'
 	));	
 	Migration::registerMigration('GSOpsRoleTerms','operational_role', $args);
