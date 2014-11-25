@@ -36,6 +36,8 @@ function gladstone_widgets_page_build(&$page) {
 
 /**
  * Implementation of hook_ctools_content_subtype_alter()
+ *
+ * Alter the appearance of the "add content pane" dialouge
  */
 function gladstone_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
 
@@ -87,5 +89,108 @@ function gladstone_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
   }
 }
 
+/**
+ * Implementation of hook_form_alter()
+ *
+ * Alter the forms of various panels panes
+ */
+function gladstone_widgets_form_alter(&$form, &$form_state, $form_id) {
 
+  // Simplify the menu block edit form
+  // *note* this only targets widget forms
+  if ($form_id == 'menu_block_menu_tree_content_type_edit_form') {
+    $form['admin_title']['#access'] = FALSE;
+    $form['depth']['#access'] = FALSE;
+    $form['display_options']['#default_value'] = 'advanced';
+    $form['display_options']['#access'] = FALSE;
+    $form['title_link']['#access'] = FALSE;
+    $form['buttons']['#prefix'] = '<div class="menu-block-ctools-buttons">';
+
+    // Disable some options since they appear busted or confusing in Menu Block
+    // TODO - http://drupal.org/node/1649112
+    $form['parent_mlid']['#access'] = FALSE;
+    $form['sort']['#access'] = FALSE;
+  }
+
+  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
+
+    // Add fields to the FPP object if we are adding a reusable object for the first time
+    if ($form_state['entity']->reusable && $form_state['op'] == 'add' && $form_state['rebuild'] == FALSE) {
+      $form = fieldable_panels_panes_entity_edit_form($form, $form_state);
+    }
+
+    // Add a custom pre-render method to deal with "Content Settings" fieldset.
+    $form['#pre_render'][] = 'gladstone_widgets_fieldable_panel_pane_pre_render';
+    
+    // Remove the revisioning information
+    $form['revision']['revision']['#type'] = 'value';
+    $form['revision']['log']['#access'] = FALSE;
+
+    // Add a widget setting
+    $form['widget_settings']['#type'] = 'fieldset';
+    $form['widget_settings']['#title'] = t('General Settings');
+    $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
+    $form['title']['#title_display'] = 'invisible';
+    $form['widget_settings']['title'] = $form['title'];
+    unset($form['title']);
+
+    // Move the link field into the general settings tab.
+    $form['widget_settings']['link'] = $form['link'];
+    unset($form['link']);
+
+    // Improve the reusable interface
+    $form['reusable']['#title'] = t('Reusable Settings');
+    $form['reusable']['#type'] = 'fieldset';
+    $form['reusable']['#process'] = array('ctools_dependent_process');
+    $form['reusable']['#id'] = 'reusable-settings';
+    $form['reusable']['category']['#value'] = t('Reusable Content');
+    $form['reusable']['category']['#type'] = 'value';
+    $form['reusable']['admin_description']['#access'] = FALSE;
+
+    // Set the proper dependencies for the reusable markup
+    $form['reusable']['warning']['#dependency'] = array('edit-reusable' => array(1));
+    $form['reusable']['warning']['#prefix'] = '<div id="reusable-wrapper">';
+    $form['reusable']['warning']['#suffix'] = '</div>';
+    $form['reusable']['warning']['#type'] = 'item';
+
+    // Update the text for the reusable markup
+    $form['reusable']['warning']['#markup'] = '<div class="description">' . t('Note: This item is reusable! Any changes made will be applied globally.') . '</div>';
+  }
+
+  // Improve the usability and functionality of the table field widget
+  if (!empty($form['field_basic_table_table'])) {
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['import']['#access'] = FALSE; // Remove importing from CSV
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsible'] = FALSE;
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsed'] = FALSE;
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] . '? ';
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] = '';
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] . '? ';
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] = '';
+  }
+}
+
+/**
+ * Implement the "Content Settings" fieldset in a pre-render. This fixes issues with image caused by initially
+ * doing this in a form_alter.
+ *
+ * @see http://drupal.org/node/1567704
+ */
+function gladstone_widgets_fieldable_panel_pane_pre_render($element) {
+  // Add a content settings fieldset.
+  $element['content_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Content Settings'),
+    '#weight' => 1,
+  );
+
+  // Add any remaining fields to the content settings fieldset.
+  foreach ($element as $key => $value) {
+    if (substr($key, 0, 6) == 'field_' || $key == 'body') {
+      $element['content_settings'][$key] = $value;
+      unset($element[$key]);
+    }
+  }
+
+  return $element;
+}
 
