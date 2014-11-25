@@ -6,9 +6,30 @@
 
 include_once 'gladstone_widgets.features.inc';
 
+/**
+ * Implements hook_init()
+ */
 function gladstone_widgets_init() {
 
-  // load the timeago plugin
-  drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/jquery.timeago.js', array('scope' => 'footer'));
+	// load the timeago plugin
+	drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/jquery.timeago.js', array('scope' => 'footer'));
 
+}
+
+/**
+ * Implements hook_page_build()
+ */
+function gladstone_widgets_page_build(&$page) {
+
+	// Add our custom javascript to the footer to override other things.
+	drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/gladstone-widgets.js', array('scope' => 'footer'));
+
+	// If jquery_update was used to update jQuery UI to version 1.9 or higher
+	// than we need to load a plugin to add the '.rotate' function to the tabs
+	// widget.
+	$jquery_ui = drupal_get_library('system', 'ui');
+	if (version_compare($jquery_ui['version'], '1.9', '>=')) {
+	drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/jquery-ui-tabs-rotate.js', array('scope' => 'footer'));
+	}
+  
 }
