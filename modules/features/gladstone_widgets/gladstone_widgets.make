@@ -25,3 +25,24 @@ projects[better_exposed_filters][download][revision] = 5e91a5bc
 projects[better_exposed_filters][download][branch]   = 7.x-3.x
 ; Workaround for php max_input_vars warning https://www.drupal.org/node/1891612
 projects[better_exposed_filters][patch][]   = https://www.drupal.org/files/better_exposed_filters-max_input_vars-1891612-7.patch
+
+
+; Fields required to support legacy Widgets --------------------------
+
+projects[tablefield][version] = 2.2
+projects[tablefield][subdir] = contrib
+projects[tablefield][patch][2050657] = "http://drupal.org/files/tablefield_event_click_conflict.patch"
+
+projects[simple_gmap][version] = 1.2
+projects[simple_gmap][subdir] = contrib
+
+projects[formatter_field][version] = 1.0-beta3
+projects[formatter_field][subdir]  = contrib
+
+
+projects[fieldable_panels_panes][version] = 1.x-dev
+projects[fieldable_panels_panes][subdir]  = contrib
+
+; remove dafaut config in favor of features strongarm, !we want override detection!
+projects[defaultconfig][version] = 1.x-dev
+projects[defaultconfig][subdir]  = contrib
