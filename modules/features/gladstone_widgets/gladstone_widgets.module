@@ -5,3 +5,10 @@
  */
 
 include_once 'gladstone_widgets.features.inc';
+
+function gladstone_widgets_init() {
+
+  // load the timeago plugin
+  drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/jquery.timeago.js', array('scope' => 'footer'));
+
+}
