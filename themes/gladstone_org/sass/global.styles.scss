@@ -654,6 +654,9 @@ ul.links {
  * ========================================================================== */
 
 a {
+
+  color: $link;
+  
   text-decoration: none;
 
   &:link,
@@ -675,7 +678,7 @@ a {
 
 .nav {
   clear: both;
-  margin: 10px 0;
+  // margin: 10px 0;
 
   ul,
   ul.menu {
@@ -694,6 +697,9 @@ a {
 
   li a,
   ul.menu li a {
+
+    color: $nav_link;
+
     display: block;
     white-space: nowrap;
     padding: 0 10px;
