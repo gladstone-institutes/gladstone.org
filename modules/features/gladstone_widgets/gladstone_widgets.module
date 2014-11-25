@@ -194,3 +194,103 @@ function gladstone_widgets_fieldable_panel_pane_pre_render($element) {
   return $element;
 }
 
+/** 
+ * Implementation of hook_entity_info_alter()
+ *
+ * Set bundle admin config here. e.g. access permissions
+ */
+function gladstone_widgets_entity_info_alter(&$entity_info) {
+
+  // Quick links
+  $entity_info['fieldable_panels_pane']['bundles']['quick_links'] = array(
+    'label' => t('Add links'),
+    'pane category' => t('Gladstone'),
+    'pane icon' => drupal_get_path('module', 'gladstone_widgets') . '/images/icon_link.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/quick-links',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic file
+  $entity_info['fieldable_panels_pane']['bundles']['basic_file'] = array(
+    'label' => t('Add file'),
+    'pane category' => t('Gladstone'),
+    'pane icon' => drupal_get_path('module', 'gladstone_widgets') . '/images/icon_file.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/basic-file',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic Image
+  $entity_info['fieldable_panels_pane']['bundles']['image'] = array(
+    'label' => t('Add image'),
+    'pane category' => t('Gladstone'),
+    'pane icon' => drupal_get_path('module', 'gladstone_widgets') . '/images/icon_image.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/image',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic text
+  $entity_info['fieldable_panels_pane']['bundles']['text'] = array(
+    'label' => t('Add text'),
+    'pane category' => t('Gladstone'),
+    'pane icon' => drupal_get_path('module', 'gladstone_widgets') . '/images/icon_text.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/text',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic Map
+  $entity_info['fieldable_panels_pane']['bundles']['map'] = array(
+    'label' => t('Add map'),
+    'pane category' => t('Gladstone'),
+    'pane icon' => drupal_get_path('module', 'gladstone_widgets') . '/images/icon_map.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/map',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+ 
+  // Basic table
+  $entity_info['fieldable_panels_pane']['bundles']['table'] = array(
+    'label' => t('Add table'),
+    'pane category' => t('Gladstone'),
+    'pane icon' => drupal_get_path('module', 'gladstone_widgets') . '/images/icon_table.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/table',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic video
+  $entity_info['fieldable_panels_pane']['bundles']['video'] = array(
+    'label' => t('Add video'),
+    'pane category' => t('Gladstone'),
+    'pane icon' => drupal_get_path('module', 'gladstone_widgets') . '/images/icon_video.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/video',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+}
+
