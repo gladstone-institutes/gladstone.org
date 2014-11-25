@@ -624,7 +624,13 @@ ul.links {
  */
 .region-footer {
 
+  color: $page_overlay;
   text-transform: uppercase;
+
+  a,
+  a.active {
+    color: $page_overlay;
+  }
 
   .block-inner {
     margin: 0;
@@ -632,7 +638,6 @@ ul.links {
 
   .pane-title {
     font-size: 1em;
-    color: $page_txt;
   }
 
   ul.menu {
@@ -656,7 +661,7 @@ ul.links {
 a {
 
   color: $link;
-  
+
   text-decoration: none;
 
   &:link,

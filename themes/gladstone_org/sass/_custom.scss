@@ -31,8 +31,9 @@ $page_width: 960px; //max-page width
 
 $lum_0:   #000;
 $lum_9:   #FFF;
+$lum_9a:  rgba(255,255,255,0.75);
 
-$blue_0a: rgba(0, 35, 56, .9);
+$blue_0a: rgba(0, 35, 56, 0.8);
 $blue_0:  rgb(0, 40, 61);
 $blue_5:  rgb(55, 127, 195);
 $blue_9:  rgb(207, 220, 227); //lightest blue
@@ -43,6 +44,7 @@ $bg_light:  $lum_9;
 
 $page:          $bg_dark; // to match the page background, default is white
 $page_txt:      $bg_light;
+$page_overlay:  $lum_9a;
 
 $header_bg:     $bg_medium;
 $header_txt:    $blue_5;
