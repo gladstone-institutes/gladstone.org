@@ -51,7 +51,7 @@ projects[relation_add][download][type]     = git
 projects[relation_add][download][revision] = 93d6dda9
 projects[relation_add][download][branch]   = 7.x-1.x
 ; Add case for profile2 relation_add queries, depends on computed_field:field_label_alias in target entity
-projects[relation_add][patch][]   = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/realtion_add-profile2_query_case.patch
+projects[relation_add][patch][]   = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/relation_add-profile2_query_case.patch
 
 projects[auto_entitylabel][version] = "1.x-dev"
 projects[auto_entitylabel][subdir]	= "contrib"
