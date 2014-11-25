@@ -21,6 +21,9 @@ projects[content_menu][download][branch]   = 7.x-1.x
 
 projects[panels][version] = "3.x-dev"
 projects[panels][subdir]  = "contrib"
+projects[panels][download][type] = git
+projects[panels][download][revision] = 5fc99872
+projects[panels][download][branch] = 7.x-3.x
 
 projects[panels_css_js][version] = "1.1"
 projects[panels_css_js][subdir]  = "contrib"
