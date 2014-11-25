@@ -31,5 +31,61 @@ function gladstone_widgets_page_build(&$page) {
 	if (version_compare($jquery_ui['version'], '1.9', '>=')) {
 	drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/jquery-ui-tabs-rotate.js', array('scope' => 'footer'));
 	}
-  
+
 }
+
+/**
+ * Implementation of hook_ctools_content_subtype_alter()
+ */
+function gladstone_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
+
+  // Modify the menu block plugin to better fit into our UI
+  if ($plugin['module'] == 'menu_block' && $subtype['menu_title'] == 'Main menu') {
+    $subtype['category'][0] = t('Gladstone');
+    $subtype['title'] = t('Add submenu');
+    // @todo look into replacign this with font-awesome http://fortawesome.github.io/Font-Awesome/
+    $subtype['icon'] = drupal_get_path('module', 'gladstone_widgets') . '/images/icon_submenu.png';
+    $subtype['admin css'] = array(drupal_get_path('module', 'menu_block') . '/menu-block-admin.css');
+    $subtype['admin js'] = array(drupal_get_path('module', 'menu_block') . '/menu-block.js');
+  }
+
+  // Modify the general content item to appear in the generic content sidebar area
+  if ($plugin['module'] == 'views_content' && $subtype['title'] == 'Content Item') {
+    $subtype['category'][0] = t('Gladstone');
+    $subtype['title'] = t('Add content item');
+    $subtype['icon'] = drupal_get_path('module', 'gladstone_widgets') . '/images/icon_content_item.png';
+  }
+
+  // Modify the general content listing to appear in the generic content sidebar area
+  if ($plugin['module'] == 'views_content' && $subtype['title'] == 'Content List') {
+    $subtype['category'][0] = t('Gladstone');
+    $subtype['title'] = t('Add content list');
+    $subtype['icon'] = drupal_get_path('module', 'gladstone_widgets') . '/images/icon_content_list.png';
+  }
+
+  // Modify the featured content feed
+  if ($plugin['module'] == 'views_content' && $subtype['title'] == 'Feature Feed') {
+    $subtype['category'][0] = t('Gladstone');
+    $subtype['title'] = t('Add featured feed');
+    $subtype['icon'] = drupal_get_path('module', 'gladstone_widgets') . '/images/icon_spotlight.png';
+  }
+
+  // Modify the plugins so we do away with this "node" and "entity" thing
+  if ($subtype['category'] == 'Node' || $subtype['category'] == 'Entity') {
+    // $subtype['category'] = t('Page Content');
+  }
+  if ($subtype['category'] == 'User') {
+    // $subtype['category'] = t('User Content');
+  }
+  if ($subtype['category'] == 'Taxonomy_term' || $subtype['category'] == 'Taxonomy term') {
+    // $subtype['category'] = t('Category Content');
+  }
+
+  // Modify the plugins so we have consistent language around "form" content
+  if ($subtype['category'] == 'Form') {
+    // $subtype['category'] = t('Form Content');
+  }
+}
+
+
+
