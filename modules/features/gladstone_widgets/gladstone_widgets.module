@@ -309,3 +309,32 @@ function gladstone_widgets_field_display_fieldable_panels_pane_alter(&$display, 
   }
 }
 
+/**
+ * Implementation of hook_file_default_displays_alter()
+ */
+function gladstone_widgets_file_default_displays_alter(&$default_displays) {
+  // Display the 'Generic file' display on video preview.
+  if (!empty($default_displays['video__preview__file_field_file_default'])) {
+    $default_displays['video__preview__file_field_file_default']->status = FALSE;
+  }
+
+  // Set the default video configuration for videos
+  if (!empty($default_displays['video__default__media_vimeo_video'])) {
+    $default_displays['video__default__media_vimeo_video']->settings['protocol'] = '//';
+  }
+
+  // Set the default image style for videos to be our custom video image style
+  if (!empty($default_displays['video__default__media_vimeo_image'])) {
+    $default_displays['video__default__media_vimeo_image']->settings['image_style'] = 'gladstone_image_video';
+  }
+
+  // Set the teaser image style for videos to be our custom video image style
+  if (!empty($default_displays['video__teaser__media_vimeo_image'])) {
+    $default_displays['video__teaser__media_vimeo_image']->settings['image_style'] = 'gladstone_image_video';
+  }
+
+  // Set the preview image style for videos to be our custom thumbnail image style
+  if (!empty($default_displays['video__preview__media_vimeo_image'])) {
+    $default_displays['video__preview__media_vimeo_image']->settings['image_style'] = 'gladstone_image_thumbnail';
+  }}
+
