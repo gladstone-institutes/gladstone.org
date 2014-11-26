@@ -9,6 +9,7 @@ dependencies[] = menu_block
 dependencies[] = panels_mini
 dependencies[] = views_autocomplete_filters
 dependencies[] = views_content
+stylesheets[all][] = gladstone-widgets.css
 features[ctools][] = panels_mini:panels_default:1
 features[features_api][] = api:2
 features[panels_mini][] = footer
