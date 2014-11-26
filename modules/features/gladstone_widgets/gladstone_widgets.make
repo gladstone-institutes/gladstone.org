@@ -42,7 +42,3 @@ projects[formatter_field][subdir]  = contrib
 
 projects[fieldable_panels_panes][version] = 1.x-dev
 projects[fieldable_panels_panes][subdir]  = contrib
-
-; remove dafaut config in favor of features strongarm, !we want override detection!
-projects[defaultconfig][version] = 1.x-dev
-projects[defaultconfig][subdir]  = contrib
