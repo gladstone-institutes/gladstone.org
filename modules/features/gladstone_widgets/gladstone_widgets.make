@@ -29,9 +29,8 @@ projects[better_exposed_filters][patch][]   = https://www.drupal.org/files/bette
 
 ; Fields required to support legacy Widgets --------------------------
 
-projects[tablefield][version] = 2.2
+projects[tablefield][version] = 2.3
 projects[tablefield][subdir] = contrib
-projects[tablefield][patch][2050657] = "http://drupal.org/files/tablefield_event_click_conflict.patch"
 
 projects[simple_gmap][version] = 1.2
 projects[simple_gmap][subdir] = contrib

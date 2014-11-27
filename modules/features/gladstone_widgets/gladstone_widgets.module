@@ -24,6 +24,8 @@ function gladstone_widgets_page_build(&$page) {
 	// Add our custom javascript to the footer to override other things.
 	drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/gladstone-widgets.js', array('scope' => 'footer'));
 
+	drupal_add_library ( 'system' , 'ui.tabs' );
+
 	// If jquery_update was used to update jQuery UI to version 1.9 or higher
 	// than we need to load a plugin to add the '.rotate' function to the tabs
 	// widget.
@@ -158,14 +160,14 @@ function gladstone_widgets_form_alter(&$form, &$form_state, $form_id) {
   }
 
   // Improve the usability and functionality of the table field widget
-  if (!empty($form['field_basic_table_table'])) {
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['import']['#access'] = FALSE; // Remove importing from CSV
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsible'] = FALSE;
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsed'] = FALSE;
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] . '? ';
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] = '';
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] . '? ';
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] = '';
+  if (!empty($form['field_table'])) {
+    $form['field_table'][LANGUAGE_NONE][0]['tablefield']['import']['#access'] = FALSE; // Remove importing from CSV
+    $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsible'] = FALSE;
+    $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsed'] = FALSE;
+    $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#field_prefix'] = $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] . '? ';
+    $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] = '';
+    $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#field_prefix'] = $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] . '? ';
+    $form['field_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] = '';
   }
 }
 
