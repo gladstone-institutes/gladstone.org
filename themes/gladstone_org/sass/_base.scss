@@ -20,8 +20,10 @@
 // See the documentation at http://compass-style.org/reference/compass/support/
 //
 
-$legacy-support-for-ie6: true;
-$legacy-support-for-ie7: true;
+// Disabled, compass has changed the legacy support patterern
+// @see http://stackoverflow.com/questions/25863370/configure-compass-browser-support-compass-1-x-syntax
+// $legacy-support-for-ie6: true;
+// $legacy-support-for-ie7: true;
 
 
 //

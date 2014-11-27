@@ -13,6 +13,9 @@ require 'capistrano/setup'
 # Includes default deployment tasks
 require 'capistrano/deploy'
 
+# Integrate with RVM
+require 'rvm1/capistrano3'
+
 # Support rsync
 #require 'capistrano/rsync'
 
