@@ -59,6 +59,17 @@ class GSUser extends DrupalUser7Migration {
     }
   }
 
+  public function complete($entity, $row) {
+    // Reset password hash back to the source hash; when Migrate saves the user
+    // entity after the prepare() method is complete, Drupal hashes the hash,
+    // meaning we need to set it back to the original hash.
+    // SEE: https://drupal.org/node/1349758
+    db_update('users')
+      ->fields(array('pass' => $row->pass))
+      ->condition('uid', $entity->uid)
+      ->execute();
+  }  
+
   protected function query() {
 
     // join in our name data
