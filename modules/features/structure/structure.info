@@ -33,6 +33,7 @@ dependencies[] = news
 dependencies[] = overlay
 dependencies[] = page_manager
 dependencies[] = panels
+dependencies[] = panels_css_js
 dependencies[] = panels_ipe
 dependencies[] = panels_mini
 dependencies[] = path
