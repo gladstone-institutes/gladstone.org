@@ -1,0 +1,7 @@
+This folder contains JSON exports of theme settings variables from the
+variables table. Each file *.var.json corresponds to one exported variable
+
+These files are only needed for build automation where theme settings
+specific to adaptive sub theme gladstone_org are imported via drush as
+a workaround for problematic drupal_form_submit behavior in the gladstone
+drush generate command
