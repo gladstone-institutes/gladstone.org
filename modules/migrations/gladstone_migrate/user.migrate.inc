@@ -74,10 +74,11 @@ class GSUser extends DrupalUser7Migration {
 
     // join in our name data
     $query = parent::query();
-    $query->leftjoin('profile','p', 'u.uid = p.uid');
+    $query->leftjoin('profile','p', 
+      "u.uid = p.uid and p.type = 'profile'");
     $query->fields('p');
-    $query->condition('p.type','profile', '=');
-    $query->leftjoin('field_data_field_full_name', 'fn', 'p.pid = fn.entity_id');
+    $query->leftjoin('field_data_field_full_name', 'fn',
+     "p.pid=fn.entity_id and fn.entity_type='profile2' and fn.bundle='profile'");
     $query->fields('fn', array(
       'field_full_name_given',
       'field_full_name_middle',
@@ -85,8 +86,6 @@ class GSUser extends DrupalUser7Migration {
       'field_full_name_generational',
       'field_full_name_credentials'
       ));
-    $query->condition('fn.entity_type', 'profile2', '=')
-          ->condition('fn.bundle', 'profile', '=');
 
     return $query;
   }
