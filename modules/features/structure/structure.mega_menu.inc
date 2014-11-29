@@ -16,7 +16,7 @@ function structure_mega_menu_defaults() {
 
 
 	if (md_megamenu_check_machine_name($import_menu['machine_name'])) {
-		drupal_set_message(t('A MegaMenu by that machine name already exists; please choose a different machine name'));
+		// drupal_set_message(t('A MegaMenu by that machine name already exists; please choose a different machine name'), 'error',FALSE);
 		return;
 	}
 
@@ -41,7 +41,7 @@ function structure_mega_menu_defaults() {
 			);
 
 	if (!$menu) {
-		drupal_set_message(t('Megamenu: Import failed. Please check data and try again'), 'error');
+		// drupal_set_message(t('Megamenu: Import failed. Please check data and try again'), 'error', FALSE);
 		return false;
 	}
 
@@ -52,7 +52,7 @@ function structure_mega_menu_defaults() {
 		MDMegaTab::create($menu->mid, $tab['position'], $tab['items'], $tab['settings']);
 	}
 
-	drupal_set_message(t('MD Megamenu: Import success.'));
+	// drupal_set_message(t('MD Megamenu: Import success.'),'status',FALSE);
 
 
 }
