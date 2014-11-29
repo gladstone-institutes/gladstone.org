@@ -23,10 +23,10 @@ function structure_mega_menu_defaults() {
 	// HACK: update megs menu structure with current block ids
 	// @todo
 	// @see
-	foreach ($import_menu['tabs'] as $tab) {
-		foreach ($tab['items'] as $row) {
-			foreach ($row as $col) {
-				foreach ($col as $item) {
+	foreach ($import_menu['tabs'] as &$tab) {
+		foreach ($tab['items'] as &$row) {
+			foreach ($row as &$col) {
+				foreach ($col as &$item) {
 					$block = block_load($item['block_module'], $item['block_id']);
 					$item['block_bid'] = $block->bid;
 				}

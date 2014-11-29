@@ -15,7 +15,7 @@ function structure_default_fe_block_settings() {
   $export['md_megamenu-1'] = array(
     'cache' => -1,
     'custom' => 0,
-    'delta' => 2,
+    'delta' => 1,
     'module' => 'md_megamenu',
     'node_types' => array(),
     'pages' => '',
