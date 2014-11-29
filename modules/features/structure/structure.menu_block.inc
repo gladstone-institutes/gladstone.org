@@ -8,6 +8,20 @@
  * Implements hook_menu_block_defaults().
  */
 function structure_menu_block_defaults() {
+
+  // HACK: Fix parent menu assignment in sub-men-blocks
+  // @todo
+  // @hack
+
+  $parents = array();
+  $mtree = menu_tree_all_data("main-menu");
+  foreach ($mtree as $branch) {
+    $menu = $branch['link']['menu_name'];
+    $name = $branch['link']['link_title'];
+    $mlid = $branch['link']['mlid'];
+    $parents[$name] = $menu.':'.$mlid;
+  }
+
   $export = array();
 
   $menu_block = new stdClass();
@@ -20,7 +34,7 @@ function structure_menu_block_defaults() {
   $menu_block->expanded = 0;
   $menu_block->follow = '0';
   $menu_block->level = 1;
-  $menu_block->parent = 'main-menu:898';
+  $menu_block->parent = $parents['About Us'];
   $menu_block->sort = 0;
   $menu_block->title_link = 0;
   $export['mega_menu_about_us'] = $menu_block;
@@ -35,7 +49,7 @@ function structure_menu_block_defaults() {
   $menu_block->expanded = 0;
   $menu_block->follow = '0';
   $menu_block->level = 1;
-  $menu_block->parent = 'main-menu:832';
+  $menu_block->parent = $parents['Connect'];
   $menu_block->sort = 0;
   $menu_block->title_link = 0;
   $export['mega_menu_connect'] = $menu_block;
@@ -50,7 +64,7 @@ function structure_menu_block_defaults() {
   $menu_block->expanded = 0;
   $menu_block->follow = '0';
   $menu_block->level = 1;
-  $menu_block->parent = 'main-menu:823';
+  $menu_block->parent = $parents['Our Science'];
   $menu_block->sort = 0;
   $menu_block->title_link = 0;
   $export['mega_menu_our_science'] = $menu_block;
