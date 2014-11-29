@@ -65,7 +65,6 @@ class GSUser extends DrupalUser7Migration {
     $query = parent::query();
     $query->leftjoin('profile','p', 
       "u.uid = p.uid and p.type = 'profile'");
-    $query->fields('p');
     $query->leftjoin('field_data_field_full_name', 'fn',
      "p.pid=fn.entity_id and fn.entity_type='profile2' and fn.bundle='profile'");
     $query->fields('fn', array(
