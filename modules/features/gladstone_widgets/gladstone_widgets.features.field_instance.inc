@@ -184,6 +184,42 @@ function gladstone_widgets_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'fieldable_panels_pane-image-field_formatter'
+  $field_instances['fieldable_panels_pane-image-field_formatter'] = array(
+    'bundle' => 'image',
+    'default_value' => array(
+      0 => array(
+        'type' => 'image',
+        'settings' => 'a:1:{s:11:"image_style";s:5:"large";}',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_formatter',
+    'label' => 'Formatter',
+    'required' => 0,
+    'settings' => array(
+      'field_name' => 'field_image',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'formatter_field',
+      'settings' => array(),
+      'type' => 'formatter_select',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'fieldable_panels_pane-map-field_map_address'
   $field_instances['fieldable_panels_pane-map-field_map_address'] = array(
     'bundle' => 'map',
@@ -487,6 +523,7 @@ function gladstone_widgets_field_default_field_instances() {
   t('Text');
   t('The street address of the location you wish to map. This widget will contact Google and try to do its best to create a map!');
   t('Video');
+  t('Formatter');
 
   return $field_instances;
 }
