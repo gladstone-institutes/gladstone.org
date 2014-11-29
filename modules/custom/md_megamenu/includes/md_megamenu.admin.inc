@@ -1645,7 +1645,8 @@ function md_megamenu_export_data() {
     );
     $menu_data['tabs'] = md_megamenu_get_tabs_data($menu->mid, $tabs);
 
-    print drupal_json_encode($menu_data);
+    // print drupal_json_encode($menu_data);
+    print serialize($menu_data);
   }
 }
 

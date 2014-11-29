@@ -4,8 +4,6 @@
  * structure.features.inc
  */
 
-include_once 'structure.mega_menu.inc';
-
 /**
  * Implements hook_ctools_plugin_api().
  */
@@ -27,8 +25,3 @@ function structure_ctools_plugin_api() {
     return array("version" => "1");
   }
 }
-
-/**
- * Calls mega menu configuration
- */
-structure_mega_menu_defaults();

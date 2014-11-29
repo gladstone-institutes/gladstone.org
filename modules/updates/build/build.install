@@ -1,0 +1,14 @@
+<?php 
+
+
+require 'mega_menu.inc';
+
+
+function build_enable() {
+
+
+	// Calls mega menu configuration
+	mega_menu_defaults();
+
+
+}
