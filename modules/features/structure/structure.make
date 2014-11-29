@@ -73,7 +73,9 @@ projects[uuid][patch][] = https://www.drupal.org/files/issues/uuid_ctools_contex
 
 projects[entity_menu_links][version] = "1.x-dev"
 projects[entity_menu_links][subdir]  = "contrib"
-projects[entity_menu_links][patch][] = "https://www.drupal.org/files/issues/2138509-entity-menu-links-deploy-4.patch"
+projects[entity_menu_links][download][type]     = git
+projects[entity_menu_links][download][revision] = 8a6ef3e8
+projects[entity_menu_links][download][branch]   = 7.x-1.x
 
 projects[menu_position_uuid][version] = "1.x-dev"
 projects[menu_position_uuid][subdir]  = "contrib"
