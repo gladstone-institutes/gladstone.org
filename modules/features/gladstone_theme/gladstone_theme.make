@@ -15,4 +15,10 @@ projects[menu_attributes][download][type]     = git
 projects[menu_attributes][download][revision] = 3c652035
 projects[menu_attributes][download][branch]   = 7.x-1.x
 
+;projects[classy_panel_styles][version]			  = 1.x
+;projects[classy_panel_styles][subdir]			  = contrib
+;projects[classy_panel_styles][download][type]     = git
+;projects[classy_panel_styles][download][url]	  = git://git.drupal.org/sandbox/derek.deraps/2208431.git
+;projects[classy_panel_styles][download][revision] = fa45cc90
+;projects[classy_panel_styles][download][branch]   = 7.x-1.x
 

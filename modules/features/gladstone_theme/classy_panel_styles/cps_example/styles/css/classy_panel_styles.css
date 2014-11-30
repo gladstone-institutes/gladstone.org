@@ -1,0 +1,1237 @@
+#page #panels-dnd-main div[class*="bg"],
+body div[class*="bg"] {
+  padding: 10px;
+  *zoom: 1;
+}
+#page #panels-dnd-main div[class*="bg"]:after,
+body div[class*="bg"]:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#page #panels-dnd-main .bg-blue,
+body .bg-blue {
+  background: #3671d2;
+  color: white;
+}
+#page #panels-dnd-main .bg-green,
+body .bg-green {
+  background: #a1a46e;
+}
+#page #panels-dnd-main .bg-gray,
+body .bg-gray {
+  background: #dddddd;
+}
+#page #panels-dnd-main .bg-black,
+body .bg-black {
+  background: black;
+  color: white;
+}
+#page #panels-dnd-main .bg-white,
+body .bg-white {
+  background: white;
+}
+#page #panels-dnd-main .bg-borders .pane-content,
+body .bg-borders .pane-content {
+  padding: 10px;
+  border-top: double 10px #cccccc;
+  border-bottom: double 10px #cccccc;
+}
+#page #panels-dnd-main .bg-thin-border .pane-content,
+body .bg-thin-border .pane-content {
+  padding: 10px;
+  border: solid 1px #cccccc;
+}
+#page #panels-dnd-main .region-bg-navy,
+body .region-bg-navy {
+  background: #222261;
+}
+#page #panels-dnd-main .region-bg-black,
+body .region-bg-black {
+  background: black;
+}
+#page #panels-dnd-main .region-bg-white,
+body .region-bg-white {
+  background: white;
+}
+
+#page #panels-dnd-main img,
+body img {
+  max-width: 100%;
+  height: auto;
+}
+#page #panels-dnd-main .img-right .views-field,
+body .img-right .views-field {
+  float: left;
+  width: 50%;
+}
+#page #panels-dnd-main .img-right .field-image.views-field,
+body .img-right .field-image.views-field {
+  float: right;
+}
+#page #panels-dnd-main .img-left .views-field,
+body .img-left .views-field {
+  float: right;
+  width: 50%;
+}
+#page #panels-dnd-main .img-left .field-image.views-field,
+body .img-left .field-image.views-field {
+  float: left;
+}
+#page #panels-dnd-main .image-float-right img,
+body .image-float-right img {
+  float: right;
+  margin: 0 0 15px 15px;
+}
+#page #panels-dnd-main .image-float-left img,
+body .image-float-left img {
+  float: left;
+  margin: 0 15px 15px 0;
+}
+
+#page #panels-dnd-main .panel-pane,
+body .panel-pane {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#page #panels-dnd-main .panels-ipe-portlet-wrapper,
+body .panels-ipe-portlet-wrapper {
+  clear: both;
+}
+#page #panels-dnd-main .float-left,
+body .float-left {
+  float: left;
+  clear: none;
+}
+#page #panels-dnd-main .float-right,
+body .float-right {
+  float: right;
+  clear: none;
+}
+#page #panels-dnd-main .clear-left,
+body .clear-left {
+  clear: left;
+}
+#page #panels-dnd-main .clear-right,
+body .clear-right {
+  clear: right;
+}
+#page #panels-dnd-main .clear-both,
+body .clear-both {
+  clear: both;
+}
+#page #panels-dnd-main .align-center,
+body .align-center {
+  text-align: center;
+}
+#page #panels-dnd-main .align-right,
+body .align-right {
+  text-align: right;
+}
+#page #panels-dnd-main .align-left,
+body .align-left {
+  text-align: left;
+}
+#page #panels-dnd-main .width-25,
+body .width-25 {
+  width: 25%;
+  float: left;
+}
+#page #panels-dnd-main .width-33,
+body .width-33 {
+  width: 33.33%;
+  float: left;
+}
+#page #panels-dnd-main div.width-50,
+body div.width-50 {
+  width: 50%;
+  float: left;
+}
+#page #panels-dnd-main .width-66,
+body .width-66 {
+  width: 66%;
+  float: left;
+}
+#page #panels-dnd-main .width-75,
+body .width-75 {
+  width: 75%;
+  float: left;
+}
+#page #panels-dnd-main .width-100,
+body .width-100 {
+  width: 100%;
+}
+#page #panels-dnd-main .width-50-100,
+body .width-50-100 {
+  width: 100%;
+}
+@media (min-width: 769px) {
+  #page #panels-dnd-main .width-50-100,
+  body .width-50-100 {
+    width: 50%;
+    float: left;
+    margin-right: 2%;
+    margin-left: 0;
+  }
+  #page #panels-dnd-main .width-50-100 ~ .width-50-100,
+  body .width-50-100 ~ .width-50-100 {
+    margin-right: 0;
+  }
+}
+#page #panels-dnd-main .width-25,
+#page #panels-dnd-main .width-33,
+#page #panels-dnd-main .width-50,
+#page #panels-dnd-main .width-66,
+#page #panels-dnd-main .width-75,
+body .width-25,
+body .width-33,
+body .width-50,
+body .width-66,
+body .width-75 {
+  padding-right: 2%;
+  padding-left: 0;
+}
+#page #panels-dnd-main .width-25 ~ .width-25 ~ .width-25 ~ .width-25,
+#page #panels-dnd-main .width-25 ~ .width-25 ~ .width-50,
+#page #panels-dnd-main .width-33 ~ .width-33 ~ .width-33,
+#page #panels-dnd-main .width-33 ~ .width-66,
+#page #panels-dnd-main .width-50 ~ .width-25 ~ .width-25,
+#page #panels-dnd-main .width-50 ~ .width-50,
+#page #panels-dnd-main .width-66 ~ .width-33,
+#page #panels-dnd-main .width-75 ~ .width-25,
+body .width-25 ~ .width-25 ~ .width-25 ~ .width-25,
+body .width-25 ~ .width-25 ~ .width-50,
+body .width-33 ~ .width-33 ~ .width-33,
+body .width-33 ~ .width-66,
+body .width-50 ~ .width-25 ~ .width-25,
+body .width-50 ~ .width-50,
+body .width-66 ~ .width-33,
+body .width-75 ~ .width-25 {
+  padding-right: 0;
+}
+#page #panels-dnd-main .panels-ipe-portlet-wrapper,
+body .panels-ipe-portlet-wrapper {
+  padding-right: 0;
+}
+#page #panels-dnd-main [class*="width-"] [class*="width-"],
+body [class*="width-"] [class*="width-"] {
+  width: 100%;
+}
+
+#page #panels-dnd-main .text-columns-4,
+body .text-columns-4 {
+  -moz-column-count: 4;
+  -webkit-column-count: 4;
+  column-count: 4;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
+#page #panels-dnd-main .text-columns-3,
+body .text-columns-3 {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
+#page #panels-dnd-main .text-columns-2,
+body .text-columns-2 {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
+
+@media (max-width: 480px) {
+  #page #panels-dnd-main .col-5 .views-row, #page #panels-dnd-main .col-5-img-float .views-row,
+  body .col-5 .views-row,
+  body #page #panels-dnd-main .col-5-img-float .views-row,
+  #page #panels-dnd-main body .col-5-img-float .views-row,
+  body .col-5-img-float .views-row {
+    float: left;
+    clear: both;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1% 1%;
+  }
+}
+@media (min-width: 480px) and (max-width: 769px) {
+  #page #panels-dnd-main .col-5 .views-row, #page #panels-dnd-main .col-5-img-float .views-row,
+  body .col-5 .views-row,
+  body #page #panels-dnd-main .col-5-img-float .views-row,
+  #page #panels-dnd-main body .col-5-img-float .views-row,
+  body .col-5-img-float .views-row {
+    float: left;
+    clear: none;
+  }
+  #page #panels-dnd-main .col-5 .views-row, #page #panels-dnd-main .col-5-img-float .views-row,
+  body .col-5 .views-row,
+  body #page #panels-dnd-main .col-5-img-float .views-row,
+  #page #panels-dnd-main body .col-5-img-float .views-row,
+  body .col-5-img-float .views-row {
+    width: 32%;
+    padding: 0 1% 1%;
+    margin: 0 1% 1%;
+  }
+  #page #panels-dnd-main .col-5 .views-row-1, #page #panels-dnd-main .col-5-img-float .views-row-1,
+  body .col-5 .views-row-1,
+  body #page #panels-dnd-main .col-5-img-float .views-row-1,
+  #page #panels-dnd-main body .col-5-img-float .views-row-1,
+  body .col-5-img-float .views-row-1 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-0, #page #panels-dnd-main .col-5-img-float .views-row-0,
+  body .col-5 .views-row-0,
+  body #page #panels-dnd-main .col-5-img-float .views-row-0,
+  #page #panels-dnd-main body .col-5-img-float .views-row-0,
+  body .col-5-img-float .views-row-0 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-4, #page #panels-dnd-main .col-5-img-float .views-row-4,
+  body .col-5 .views-row-4,
+  body #page #panels-dnd-main .col-5-img-float .views-row-4,
+  #page #panels-dnd-main body .col-5-img-float .views-row-4,
+  body .col-5-img-float .views-row-4 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-3, #page #panels-dnd-main .col-5-img-float .views-row-3,
+  body .col-5 .views-row-3,
+  body #page #panels-dnd-main .col-5-img-float .views-row-3,
+  #page #panels-dnd-main body .col-5-img-float .views-row-3,
+  body .col-5-img-float .views-row-3 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-7, #page #panels-dnd-main .col-5-img-float .views-row-7,
+  body .col-5 .views-row-7,
+  body #page #panels-dnd-main .col-5-img-float .views-row-7,
+  #page #panels-dnd-main body .col-5-img-float .views-row-7,
+  body .col-5-img-float .views-row-7 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-6, #page #panels-dnd-main .col-5-img-float .views-row-6,
+  body .col-5 .views-row-6,
+  body #page #panels-dnd-main .col-5-img-float .views-row-6,
+  #page #panels-dnd-main body .col-5-img-float .views-row-6,
+  body .col-5-img-float .views-row-6 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-10, #page #panels-dnd-main .col-5-img-float .views-row-10,
+  body .col-5 .views-row-10,
+  body #page #panels-dnd-main .col-5-img-float .views-row-10,
+  #page #panels-dnd-main body .col-5-img-float .views-row-10,
+  body .col-5-img-float .views-row-10 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-9, #page #panels-dnd-main .col-5-img-float .views-row-9,
+  body .col-5 .views-row-9,
+  body #page #panels-dnd-main .col-5-img-float .views-row-9,
+  #page #panels-dnd-main body .col-5-img-float .views-row-9,
+  body .col-5-img-float .views-row-9 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-13, #page #panels-dnd-main .col-5-img-float .views-row-13,
+  body .col-5 .views-row-13,
+  body #page #panels-dnd-main .col-5-img-float .views-row-13,
+  #page #panels-dnd-main body .col-5-img-float .views-row-13,
+  body .col-5-img-float .views-row-13 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-12, #page #panels-dnd-main .col-5-img-float .views-row-12,
+  body .col-5 .views-row-12,
+  body #page #panels-dnd-main .col-5-img-float .views-row-12,
+  #page #panels-dnd-main body .col-5-img-float .views-row-12,
+  body .col-5-img-float .views-row-12 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-16, #page #panels-dnd-main .col-5-img-float .views-row-16,
+  body .col-5 .views-row-16,
+  body #page #panels-dnd-main .col-5-img-float .views-row-16,
+  #page #panels-dnd-main body .col-5-img-float .views-row-16,
+  body .col-5-img-float .views-row-16 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-15, #page #panels-dnd-main .col-5-img-float .views-row-15,
+  body .col-5 .views-row-15,
+  body #page #panels-dnd-main .col-5-img-float .views-row-15,
+  #page #panels-dnd-main body .col-5-img-float .views-row-15,
+  body .col-5-img-float .views-row-15 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-19, #page #panels-dnd-main .col-5-img-float .views-row-19,
+  body .col-5 .views-row-19,
+  body #page #panels-dnd-main .col-5-img-float .views-row-19,
+  #page #panels-dnd-main body .col-5-img-float .views-row-19,
+  body .col-5-img-float .views-row-19 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-18, #page #panels-dnd-main .col-5-img-float .views-row-18,
+  body .col-5 .views-row-18,
+  body #page #panels-dnd-main .col-5-img-float .views-row-18,
+  #page #panels-dnd-main body .col-5-img-float .views-row-18,
+  body .col-5-img-float .views-row-18 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-22, #page #panels-dnd-main .col-5-img-float .views-row-22,
+  body .col-5 .views-row-22,
+  body #page #panels-dnd-main .col-5-img-float .views-row-22,
+  #page #panels-dnd-main body .col-5-img-float .views-row-22,
+  body .col-5-img-float .views-row-22 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-21, #page #panels-dnd-main .col-5-img-float .views-row-21,
+  body .col-5 .views-row-21,
+  body #page #panels-dnd-main .col-5-img-float .views-row-21,
+  #page #panels-dnd-main body .col-5-img-float .views-row-21,
+  body .col-5-img-float .views-row-21 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-25, #page #panels-dnd-main .col-5-img-float .views-row-25,
+  body .col-5 .views-row-25,
+  body #page #panels-dnd-main .col-5-img-float .views-row-25,
+  #page #panels-dnd-main body .col-5-img-float .views-row-25,
+  body .col-5-img-float .views-row-25 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-24, #page #panels-dnd-main .col-5-img-float .views-row-24,
+  body .col-5 .views-row-24,
+  body #page #panels-dnd-main .col-5-img-float .views-row-24,
+  #page #panels-dnd-main body .col-5-img-float .views-row-24,
+  body .col-5-img-float .views-row-24 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-28, #page #panels-dnd-main .col-5-img-float .views-row-28,
+  body .col-5 .views-row-28,
+  body #page #panels-dnd-main .col-5-img-float .views-row-28,
+  #page #panels-dnd-main body .col-5-img-float .views-row-28,
+  body .col-5-img-float .views-row-28 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-27, #page #panels-dnd-main .col-5-img-float .views-row-27,
+  body .col-5 .views-row-27,
+  body #page #panels-dnd-main .col-5-img-float .views-row-27,
+  #page #panels-dnd-main body .col-5-img-float .views-row-27,
+  body .col-5-img-float .views-row-27 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-31, #page #panels-dnd-main .col-5-img-float .views-row-31,
+  body .col-5 .views-row-31,
+  body #page #panels-dnd-main .col-5-img-float .views-row-31,
+  #page #panels-dnd-main body .col-5-img-float .views-row-31,
+  body .col-5-img-float .views-row-31 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-30, #page #panels-dnd-main .col-5-img-float .views-row-30,
+  body .col-5 .views-row-30,
+  body #page #panels-dnd-main .col-5-img-float .views-row-30,
+  #page #panels-dnd-main body .col-5-img-float .views-row-30,
+  body .col-5-img-float .views-row-30 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-34, #page #panels-dnd-main .col-5-img-float .views-row-34,
+  body .col-5 .views-row-34,
+  body #page #panels-dnd-main .col-5-img-float .views-row-34,
+  #page #panels-dnd-main body .col-5-img-float .views-row-34,
+  body .col-5-img-float .views-row-34 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-33, #page #panels-dnd-main .col-5-img-float .views-row-33,
+  body .col-5 .views-row-33,
+  body #page #panels-dnd-main .col-5-img-float .views-row-33,
+  #page #panels-dnd-main body .col-5-img-float .views-row-33,
+  body .col-5-img-float .views-row-33 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-37, #page #panels-dnd-main .col-5-img-float .views-row-37,
+  body .col-5 .views-row-37,
+  body #page #panels-dnd-main .col-5-img-float .views-row-37,
+  #page #panels-dnd-main body .col-5-img-float .views-row-37,
+  body .col-5-img-float .views-row-37 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-36, #page #panels-dnd-main .col-5-img-float .views-row-36,
+  body .col-5 .views-row-36,
+  body #page #panels-dnd-main .col-5-img-float .views-row-36,
+  #page #panels-dnd-main body .col-5-img-float .views-row-36,
+  body .col-5-img-float .views-row-36 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-40, #page #panels-dnd-main .col-5-img-float .views-row-40,
+  body .col-5 .views-row-40,
+  body #page #panels-dnd-main .col-5-img-float .views-row-40,
+  #page #panels-dnd-main body .col-5-img-float .views-row-40,
+  body .col-5-img-float .views-row-40 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-39, #page #panels-dnd-main .col-5-img-float .views-row-39,
+  body .col-5 .views-row-39,
+  body #page #panels-dnd-main .col-5-img-float .views-row-39,
+  #page #panels-dnd-main body .col-5-img-float .views-row-39,
+  body .col-5-img-float .views-row-39 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-43, #page #panels-dnd-main .col-5-img-float .views-row-43,
+  body .col-5 .views-row-43,
+  body #page #panels-dnd-main .col-5-img-float .views-row-43,
+  #page #panels-dnd-main body .col-5-img-float .views-row-43,
+  body .col-5-img-float .views-row-43 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-42, #page #panels-dnd-main .col-5-img-float .views-row-42,
+  body .col-5 .views-row-42,
+  body #page #panels-dnd-main .col-5-img-float .views-row-42,
+  #page #panels-dnd-main body .col-5-img-float .views-row-42,
+  body .col-5-img-float .views-row-42 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 769px) {
+  #page #panels-dnd-main .col-5 .views-row, #page #panels-dnd-main .col-5-img-float .views-row,
+  body .col-5 .views-row,
+  body #page #panels-dnd-main .col-5-img-float .views-row,
+  #page #panels-dnd-main body .col-5-img-float .views-row,
+  body .col-5-img-float .views-row {
+    float: left;
+    clear: none;
+  }
+  #page #panels-dnd-main .col-5 .views-row, #page #panels-dnd-main .col-5-img-float .views-row,
+  body .col-5 .views-row,
+  body #page #panels-dnd-main .col-5-img-float .views-row,
+  #page #panels-dnd-main body .col-5-img-float .views-row,
+  body .col-5-img-float .views-row {
+    width: 18.4%;
+    padding: 0 1% 1%;
+    margin: 0 1% 1%;
+  }
+  #page #panels-dnd-main .col-5 .views-row-1, #page #panels-dnd-main .col-5-img-float .views-row-1,
+  body .col-5 .views-row-1,
+  body #page #panels-dnd-main .col-5-img-float .views-row-1,
+  #page #panels-dnd-main body .col-5-img-float .views-row-1,
+  body .col-5-img-float .views-row-1 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-0, #page #panels-dnd-main .col-5-img-float .views-row-0,
+  body .col-5 .views-row-0,
+  body #page #panels-dnd-main .col-5-img-float .views-row-0,
+  #page #panels-dnd-main body .col-5-img-float .views-row-0,
+  body .col-5-img-float .views-row-0 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-6, #page #panels-dnd-main .col-5-img-float .views-row-6,
+  body .col-5 .views-row-6,
+  body #page #panels-dnd-main .col-5-img-float .views-row-6,
+  #page #panels-dnd-main body .col-5-img-float .views-row-6,
+  body .col-5-img-float .views-row-6 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-5, #page #panels-dnd-main .col-5-img-float .views-row-5,
+  body .col-5 .views-row-5,
+  body #page #panels-dnd-main .col-5-img-float .views-row-5,
+  #page #panels-dnd-main body .col-5-img-float .views-row-5,
+  body .col-5-img-float .views-row-5 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-11, #page #panels-dnd-main .col-5-img-float .views-row-11,
+  body .col-5 .views-row-11,
+  body #page #panels-dnd-main .col-5-img-float .views-row-11,
+  #page #panels-dnd-main body .col-5-img-float .views-row-11,
+  body .col-5-img-float .views-row-11 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-10, #page #panels-dnd-main .col-5-img-float .views-row-10,
+  body .col-5 .views-row-10,
+  body #page #panels-dnd-main .col-5-img-float .views-row-10,
+  #page #panels-dnd-main body .col-5-img-float .views-row-10,
+  body .col-5-img-float .views-row-10 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-16, #page #panels-dnd-main .col-5-img-float .views-row-16,
+  body .col-5 .views-row-16,
+  body #page #panels-dnd-main .col-5-img-float .views-row-16,
+  #page #panels-dnd-main body .col-5-img-float .views-row-16,
+  body .col-5-img-float .views-row-16 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-15, #page #panels-dnd-main .col-5-img-float .views-row-15,
+  body .col-5 .views-row-15,
+  body #page #panels-dnd-main .col-5-img-float .views-row-15,
+  #page #panels-dnd-main body .col-5-img-float .views-row-15,
+  body .col-5-img-float .views-row-15 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-21, #page #panels-dnd-main .col-5-img-float .views-row-21,
+  body .col-5 .views-row-21,
+  body #page #panels-dnd-main .col-5-img-float .views-row-21,
+  #page #panels-dnd-main body .col-5-img-float .views-row-21,
+  body .col-5-img-float .views-row-21 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-20, #page #panels-dnd-main .col-5-img-float .views-row-20,
+  body .col-5 .views-row-20,
+  body #page #panels-dnd-main .col-5-img-float .views-row-20,
+  #page #panels-dnd-main body .col-5-img-float .views-row-20,
+  body .col-5-img-float .views-row-20 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-26, #page #panels-dnd-main .col-5-img-float .views-row-26,
+  body .col-5 .views-row-26,
+  body #page #panels-dnd-main .col-5-img-float .views-row-26,
+  #page #panels-dnd-main body .col-5-img-float .views-row-26,
+  body .col-5-img-float .views-row-26 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-25, #page #panels-dnd-main .col-5-img-float .views-row-25,
+  body .col-5 .views-row-25,
+  body #page #panels-dnd-main .col-5-img-float .views-row-25,
+  #page #panels-dnd-main body .col-5-img-float .views-row-25,
+  body .col-5-img-float .views-row-25 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-31, #page #panels-dnd-main .col-5-img-float .views-row-31,
+  body .col-5 .views-row-31,
+  body #page #panels-dnd-main .col-5-img-float .views-row-31,
+  #page #panels-dnd-main body .col-5-img-float .views-row-31,
+  body .col-5-img-float .views-row-31 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-30, #page #panels-dnd-main .col-5-img-float .views-row-30,
+  body .col-5 .views-row-30,
+  body #page #panels-dnd-main .col-5-img-float .views-row-30,
+  #page #panels-dnd-main body .col-5-img-float .views-row-30,
+  body .col-5-img-float .views-row-30 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-36, #page #panels-dnd-main .col-5-img-float .views-row-36,
+  body .col-5 .views-row-36,
+  body #page #panels-dnd-main .col-5-img-float .views-row-36,
+  #page #panels-dnd-main body .col-5-img-float .views-row-36,
+  body .col-5-img-float .views-row-36 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-35, #page #panels-dnd-main .col-5-img-float .views-row-35,
+  body .col-5 .views-row-35,
+  body #page #panels-dnd-main .col-5-img-float .views-row-35,
+  #page #panels-dnd-main body .col-5-img-float .views-row-35,
+  body .col-5-img-float .views-row-35 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-41, #page #panels-dnd-main .col-5-img-float .views-row-41,
+  body .col-5 .views-row-41,
+  body #page #panels-dnd-main .col-5-img-float .views-row-41,
+  #page #panels-dnd-main body .col-5-img-float .views-row-41,
+  body .col-5-img-float .views-row-41 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-40, #page #panels-dnd-main .col-5-img-float .views-row-40,
+  body .col-5 .views-row-40,
+  body #page #panels-dnd-main .col-5-img-float .views-row-40,
+  #page #panels-dnd-main body .col-5-img-float .views-row-40,
+  body .col-5-img-float .views-row-40 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-5 .views-row-46, #page #panels-dnd-main .col-5-img-float .views-row-46,
+  body .col-5 .views-row-46,
+  body #page #panels-dnd-main .col-5-img-float .views-row-46,
+  #page #panels-dnd-main body .col-5-img-float .views-row-46,
+  body .col-5-img-float .views-row-46 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-5 .views-row-45, #page #panels-dnd-main .col-5-img-float .views-row-45,
+  body .col-5 .views-row-45,
+  body #page #panels-dnd-main .col-5-img-float .views-row-45,
+  #page #panels-dnd-main body .col-5-img-float .views-row-45,
+  body .col-5-img-float .views-row-45 {
+    margin-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  #page #panels-dnd-main .col-4 .views-row, #page #panels-dnd-main .col-4-img-float .views-row,
+  body .col-4 .views-row,
+  body #page #panels-dnd-main .col-4-img-float .views-row,
+  #page #panels-dnd-main body .col-4-img-float .views-row,
+  body .col-4-img-float .views-row {
+    float: left;
+    clear: both;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1% 1%;
+  }
+}
+@media (min-width: 480px) and (max-width: 600px) {
+  #page #panels-dnd-main .col-4 .views-row, #page #panels-dnd-main .col-4-img-float .views-row,
+  body .col-4 .views-row,
+  body #page #panels-dnd-main .col-4-img-float .views-row,
+  #page #panels-dnd-main body .col-4-img-float .views-row,
+  body .col-4-img-float .views-row {
+    float: left;
+    clear: none;
+  }
+  #page #panels-dnd-main .col-4 .views-row, #page #panels-dnd-main .col-4-img-float .views-row,
+  body .col-4 .views-row,
+  body #page #panels-dnd-main .col-4-img-float .views-row,
+  #page #panels-dnd-main body .col-4-img-float .views-row,
+  body .col-4-img-float .views-row {
+    width: 49%;
+    padding: 0 1% 1%;
+    margin: 0 1% 1%;
+  }
+  #page #panels-dnd-main .col-4 .views-row-1, #page #panels-dnd-main .col-4-img-float .views-row-1,
+  body .col-4 .views-row-1,
+  body #page #panels-dnd-main .col-4-img-float .views-row-1,
+  #page #panels-dnd-main body .col-4-img-float .views-row-1,
+  body .col-4-img-float .views-row-1 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-0, #page #panels-dnd-main .col-4-img-float .views-row-0,
+  body .col-4 .views-row-0,
+  body #page #panels-dnd-main .col-4-img-float .views-row-0,
+  #page #panels-dnd-main body .col-4-img-float .views-row-0,
+  body .col-4-img-float .views-row-0 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-3, #page #panels-dnd-main .col-4-img-float .views-row-3,
+  body .col-4 .views-row-3,
+  body #page #panels-dnd-main .col-4-img-float .views-row-3,
+  #page #panels-dnd-main body .col-4-img-float .views-row-3,
+  body .col-4-img-float .views-row-3 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-2, #page #panels-dnd-main .col-4-img-float .views-row-2,
+  body .col-4 .views-row-2,
+  body #page #panels-dnd-main .col-4-img-float .views-row-2,
+  #page #panels-dnd-main body .col-4-img-float .views-row-2,
+  body .col-4-img-float .views-row-2 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-5, #page #panels-dnd-main .col-4-img-float .views-row-5,
+  body .col-4 .views-row-5,
+  body #page #panels-dnd-main .col-4-img-float .views-row-5,
+  #page #panels-dnd-main body .col-4-img-float .views-row-5,
+  body .col-4-img-float .views-row-5 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-4, #page #panels-dnd-main .col-4-img-float .views-row-4,
+  body .col-4 .views-row-4,
+  body #page #panels-dnd-main .col-4-img-float .views-row-4,
+  #page #panels-dnd-main body .col-4-img-float .views-row-4,
+  body .col-4-img-float .views-row-4 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-7, #page #panels-dnd-main .col-4-img-float .views-row-7,
+  body .col-4 .views-row-7,
+  body #page #panels-dnd-main .col-4-img-float .views-row-7,
+  #page #panels-dnd-main body .col-4-img-float .views-row-7,
+  body .col-4-img-float .views-row-7 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-6, #page #panels-dnd-main .col-4-img-float .views-row-6,
+  body .col-4 .views-row-6,
+  body #page #panels-dnd-main .col-4-img-float .views-row-6,
+  #page #panels-dnd-main body .col-4-img-float .views-row-6,
+  body .col-4-img-float .views-row-6 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-9, #page #panels-dnd-main .col-4-img-float .views-row-9,
+  body .col-4 .views-row-9,
+  body #page #panels-dnd-main .col-4-img-float .views-row-9,
+  #page #panels-dnd-main body .col-4-img-float .views-row-9,
+  body .col-4-img-float .views-row-9 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-8, #page #panels-dnd-main .col-4-img-float .views-row-8,
+  body .col-4 .views-row-8,
+  body #page #panels-dnd-main .col-4-img-float .views-row-8,
+  #page #panels-dnd-main body .col-4-img-float .views-row-8,
+  body .col-4-img-float .views-row-8 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) {
+  #page #panels-dnd-main .col-4 .views-row, #page #panels-dnd-main .col-4-img-float .views-row,
+  body .col-4 .views-row,
+  body #page #panels-dnd-main .col-4-img-float .views-row,
+  #page #panels-dnd-main body .col-4-img-float .views-row,
+  body .col-4-img-float .views-row {
+    float: left;
+    clear: none;
+  }
+  #page #panels-dnd-main .col-4 .views-row, #page #panels-dnd-main .col-4-img-float .views-row,
+  body .col-4 .views-row,
+  body #page #panels-dnd-main .col-4-img-float .views-row,
+  #page #panels-dnd-main body .col-4-img-float .views-row,
+  body .col-4-img-float .views-row {
+    width: 23.5%;
+    padding: 0 1% 1%;
+    margin: 0 1% 1%;
+  }
+  #page #panels-dnd-main .col-4 .views-row-1, #page #panels-dnd-main .col-4-img-float .views-row-1,
+  body .col-4 .views-row-1,
+  body #page #panels-dnd-main .col-4-img-float .views-row-1,
+  #page #panels-dnd-main body .col-4-img-float .views-row-1,
+  body .col-4-img-float .views-row-1 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-0, #page #panels-dnd-main .col-4-img-float .views-row-0,
+  body .col-4 .views-row-0,
+  body #page #panels-dnd-main .col-4-img-float .views-row-0,
+  #page #panels-dnd-main body .col-4-img-float .views-row-0,
+  body .col-4-img-float .views-row-0 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-5, #page #panels-dnd-main .col-4-img-float .views-row-5,
+  body .col-4 .views-row-5,
+  body #page #panels-dnd-main .col-4-img-float .views-row-5,
+  #page #panels-dnd-main body .col-4-img-float .views-row-5,
+  body .col-4-img-float .views-row-5 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-4, #page #panels-dnd-main .col-4-img-float .views-row-4,
+  body .col-4 .views-row-4,
+  body #page #panels-dnd-main .col-4-img-float .views-row-4,
+  #page #panels-dnd-main body .col-4-img-float .views-row-4,
+  body .col-4-img-float .views-row-4 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-9, #page #panels-dnd-main .col-4-img-float .views-row-9,
+  body .col-4 .views-row-9,
+  body #page #panels-dnd-main .col-4-img-float .views-row-9,
+  #page #panels-dnd-main body .col-4-img-float .views-row-9,
+  body .col-4-img-float .views-row-9 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-8, #page #panels-dnd-main .col-4-img-float .views-row-8,
+  body .col-4 .views-row-8,
+  body #page #panels-dnd-main .col-4-img-float .views-row-8,
+  #page #panels-dnd-main body .col-4-img-float .views-row-8,
+  body .col-4-img-float .views-row-8 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-13, #page #panels-dnd-main .col-4-img-float .views-row-13,
+  body .col-4 .views-row-13,
+  body #page #panels-dnd-main .col-4-img-float .views-row-13,
+  #page #panels-dnd-main body .col-4-img-float .views-row-13,
+  body .col-4-img-float .views-row-13 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-12, #page #panels-dnd-main .col-4-img-float .views-row-12,
+  body .col-4 .views-row-12,
+  body #page #panels-dnd-main .col-4-img-float .views-row-12,
+  #page #panels-dnd-main body .col-4-img-float .views-row-12,
+  body .col-4-img-float .views-row-12 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-4 .views-row-17, #page #panels-dnd-main .col-4-img-float .views-row-17,
+  body .col-4 .views-row-17,
+  body #page #panels-dnd-main .col-4-img-float .views-row-17,
+  #page #panels-dnd-main body .col-4-img-float .views-row-17,
+  body .col-4-img-float .views-row-17 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-4 .views-row-16, #page #panels-dnd-main .col-4-img-float .views-row-16,
+  body .col-4 .views-row-16,
+  body #page #panels-dnd-main .col-4-img-float .views-row-16,
+  #page #panels-dnd-main body .col-4-img-float .views-row-16,
+  body .col-4-img-float .views-row-16 {
+    margin-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  #page #panels-dnd-main .col-3 .views-row, #page #panels-dnd-main .col-3-img-float .views-row,
+  body .col-3 .views-row,
+  body #page #panels-dnd-main .col-3-img-float .views-row,
+  #page #panels-dnd-main body .col-3-img-float .views-row,
+  body .col-3-img-float .views-row {
+    float: left;
+    clear: both;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1% 1%;
+  }
+}
+@media (min-width: 480px) and (max-width: 600px) {
+  #page #panels-dnd-main .col-3 .views-row, #page #panels-dnd-main .col-3-img-float .views-row,
+  body .col-3 .views-row,
+  body #page #panels-dnd-main .col-3-img-float .views-row,
+  #page #panels-dnd-main body .col-3-img-float .views-row,
+  body .col-3-img-float .views-row {
+    float: left;
+    clear: none;
+  }
+  #page #panels-dnd-main .col-3 .views-row, #page #panels-dnd-main .col-3-img-float .views-row,
+  body .col-3 .views-row,
+  body #page #panels-dnd-main .col-3-img-float .views-row,
+  #page #panels-dnd-main body .col-3-img-float .views-row,
+  body .col-3-img-float .views-row {
+    width: 49%;
+    padding: 0 1% 1%;
+    margin: 0 1% 1%;
+  }
+  #page #panels-dnd-main .col-3 .views-row-1, #page #panels-dnd-main .col-3-img-float .views-row-1,
+  body .col-3 .views-row-1,
+  body #page #panels-dnd-main .col-3-img-float .views-row-1,
+  #page #panels-dnd-main body .col-3-img-float .views-row-1,
+  body .col-3-img-float .views-row-1 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-0, #page #panels-dnd-main .col-3-img-float .views-row-0,
+  body .col-3 .views-row-0,
+  body #page #panels-dnd-main .col-3-img-float .views-row-0,
+  #page #panels-dnd-main body .col-3-img-float .views-row-0,
+  body .col-3-img-float .views-row-0 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-3, #page #panels-dnd-main .col-3-img-float .views-row-3,
+  body .col-3 .views-row-3,
+  body #page #panels-dnd-main .col-3-img-float .views-row-3,
+  #page #panels-dnd-main body .col-3-img-float .views-row-3,
+  body .col-3-img-float .views-row-3 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-2, #page #panels-dnd-main .col-3-img-float .views-row-2,
+  body .col-3 .views-row-2,
+  body #page #panels-dnd-main .col-3-img-float .views-row-2,
+  #page #panels-dnd-main body .col-3-img-float .views-row-2,
+  body .col-3-img-float .views-row-2 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-5, #page #panels-dnd-main .col-3-img-float .views-row-5,
+  body .col-3 .views-row-5,
+  body #page #panels-dnd-main .col-3-img-float .views-row-5,
+  #page #panels-dnd-main body .col-3-img-float .views-row-5,
+  body .col-3-img-float .views-row-5 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-4, #page #panels-dnd-main .col-3-img-float .views-row-4,
+  body .col-3 .views-row-4,
+  body #page #panels-dnd-main .col-3-img-float .views-row-4,
+  #page #panels-dnd-main body .col-3-img-float .views-row-4,
+  body .col-3-img-float .views-row-4 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-7, #page #panels-dnd-main .col-3-img-float .views-row-7,
+  body .col-3 .views-row-7,
+  body #page #panels-dnd-main .col-3-img-float .views-row-7,
+  #page #panels-dnd-main body .col-3-img-float .views-row-7,
+  body .col-3-img-float .views-row-7 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-6, #page #panels-dnd-main .col-3-img-float .views-row-6,
+  body .col-3 .views-row-6,
+  body #page #panels-dnd-main .col-3-img-float .views-row-6,
+  #page #panels-dnd-main body .col-3-img-float .views-row-6,
+  body .col-3-img-float .views-row-6 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-9, #page #panels-dnd-main .col-3-img-float .views-row-9,
+  body .col-3 .views-row-9,
+  body #page #panels-dnd-main .col-3-img-float .views-row-9,
+  #page #panels-dnd-main body .col-3-img-float .views-row-9,
+  body .col-3-img-float .views-row-9 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-8, #page #panels-dnd-main .col-3-img-float .views-row-8,
+  body .col-3 .views-row-8,
+  body #page #panels-dnd-main .col-3-img-float .views-row-8,
+  #page #panels-dnd-main body .col-3-img-float .views-row-8,
+  body .col-3-img-float .views-row-8 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) {
+  #page #panels-dnd-main .col-3 .views-row, #page #panels-dnd-main .col-3-img-float .views-row,
+  body .col-3 .views-row,
+  body #page #panels-dnd-main .col-3-img-float .views-row,
+  #page #panels-dnd-main body .col-3-img-float .views-row,
+  body .col-3-img-float .views-row {
+    float: left;
+    clear: none;
+  }
+  #page #panels-dnd-main .col-3 .views-row, #page #panels-dnd-main .col-3-img-float .views-row,
+  body .col-3 .views-row,
+  body #page #panels-dnd-main .col-3-img-float .views-row,
+  #page #panels-dnd-main body .col-3-img-float .views-row,
+  body .col-3-img-float .views-row {
+    width: 32%;
+    padding: 0 1% 1%;
+    margin: 0 1% 1%;
+  }
+  #page #panels-dnd-main .col-3 .views-row-1, #page #panels-dnd-main .col-3-img-float .views-row-1,
+  body .col-3 .views-row-1,
+  body #page #panels-dnd-main .col-3-img-float .views-row-1,
+  #page #panels-dnd-main body .col-3-img-float .views-row-1,
+  body .col-3-img-float .views-row-1 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-0, #page #panels-dnd-main .col-3-img-float .views-row-0,
+  body .col-3 .views-row-0,
+  body #page #panels-dnd-main .col-3-img-float .views-row-0,
+  #page #panels-dnd-main body .col-3-img-float .views-row-0,
+  body .col-3-img-float .views-row-0 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-4, #page #panels-dnd-main .col-3-img-float .views-row-4,
+  body .col-3 .views-row-4,
+  body #page #panels-dnd-main .col-3-img-float .views-row-4,
+  #page #panels-dnd-main body .col-3-img-float .views-row-4,
+  body .col-3-img-float .views-row-4 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-3, #page #panels-dnd-main .col-3-img-float .views-row-3,
+  body .col-3 .views-row-3,
+  body #page #panels-dnd-main .col-3-img-float .views-row-3,
+  #page #panels-dnd-main body .col-3-img-float .views-row-3,
+  body .col-3-img-float .views-row-3 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-7, #page #panels-dnd-main .col-3-img-float .views-row-7,
+  body .col-3 .views-row-7,
+  body #page #panels-dnd-main .col-3-img-float .views-row-7,
+  #page #panels-dnd-main body .col-3-img-float .views-row-7,
+  body .col-3-img-float .views-row-7 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-6, #page #panels-dnd-main .col-3-img-float .views-row-6,
+  body .col-3 .views-row-6,
+  body #page #panels-dnd-main .col-3-img-float .views-row-6,
+  #page #panels-dnd-main body .col-3-img-float .views-row-6,
+  body .col-3-img-float .views-row-6 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-10, #page #panels-dnd-main .col-3-img-float .views-row-10,
+  body .col-3 .views-row-10,
+  body #page #panels-dnd-main .col-3-img-float .views-row-10,
+  #page #panels-dnd-main body .col-3-img-float .views-row-10,
+  body .col-3-img-float .views-row-10 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-9, #page #panels-dnd-main .col-3-img-float .views-row-9,
+  body .col-3 .views-row-9,
+  body #page #panels-dnd-main .col-3-img-float .views-row-9,
+  #page #panels-dnd-main body .col-3-img-float .views-row-9,
+  body .col-3-img-float .views-row-9 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-3 .views-row-13, #page #panels-dnd-main .col-3-img-float .views-row-13,
+  body .col-3 .views-row-13,
+  body #page #panels-dnd-main .col-3-img-float .views-row-13,
+  #page #panels-dnd-main body .col-3-img-float .views-row-13,
+  body .col-3-img-float .views-row-13 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-3 .views-row-12, #page #panels-dnd-main .col-3-img-float .views-row-12,
+  body .col-3 .views-row-12,
+  body #page #panels-dnd-main .col-3-img-float .views-row-12,
+  #page #panels-dnd-main body .col-3-img-float .views-row-12,
+  body .col-3-img-float .views-row-12 {
+    margin-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  #page #panels-dnd-main .col-2 .views-row, #page #panels-dnd-main .col-2-img-float .views-row,
+  body .col-2 .views-row,
+  body #page #panels-dnd-main .col-2-img-float .views-row,
+  #page #panels-dnd-main body .col-2-img-float .views-row,
+  body .col-2-img-float .views-row {
+    float: left;
+    clear: both;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1% 1%;
+  }
+}
+@media (min-width: 480px) {
+  #page #panels-dnd-main .col-2 .views-row, #page #panels-dnd-main .col-2-img-float .views-row,
+  body .col-2 .views-row,
+  body #page #panels-dnd-main .col-2-img-float .views-row,
+  #page #panels-dnd-main body .col-2-img-float .views-row,
+  body .col-2-img-float .views-row {
+    float: left;
+    clear: none;
+  }
+  #page #panels-dnd-main .col-2 .views-row, #page #panels-dnd-main .col-2-img-float .views-row,
+  body .col-2 .views-row,
+  body #page #panels-dnd-main .col-2-img-float .views-row,
+  #page #panels-dnd-main body .col-2-img-float .views-row,
+  body .col-2-img-float .views-row {
+    width: 49%;
+    padding: 0 1% 1%;
+    margin: 0 1% 1%;
+  }
+  #page #panels-dnd-main .col-2 .views-row-1, #page #panels-dnd-main .col-2-img-float .views-row-1,
+  body .col-2 .views-row-1,
+  body #page #panels-dnd-main .col-2-img-float .views-row-1,
+  #page #panels-dnd-main body .col-2-img-float .views-row-1,
+  body .col-2-img-float .views-row-1 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-2 .views-row-0, #page #panels-dnd-main .col-2-img-float .views-row-0,
+  body .col-2 .views-row-0,
+  body #page #panels-dnd-main .col-2-img-float .views-row-0,
+  #page #panels-dnd-main body .col-2-img-float .views-row-0,
+  body .col-2-img-float .views-row-0 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-2 .views-row-3, #page #panels-dnd-main .col-2-img-float .views-row-3,
+  body .col-2 .views-row-3,
+  body #page #panels-dnd-main .col-2-img-float .views-row-3,
+  #page #panels-dnd-main body .col-2-img-float .views-row-3,
+  body .col-2-img-float .views-row-3 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-2 .views-row-2, #page #panels-dnd-main .col-2-img-float .views-row-2,
+  body .col-2 .views-row-2,
+  body #page #panels-dnd-main .col-2-img-float .views-row-2,
+  #page #panels-dnd-main body .col-2-img-float .views-row-2,
+  body .col-2-img-float .views-row-2 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-2 .views-row-5, #page #panels-dnd-main .col-2-img-float .views-row-5,
+  body .col-2 .views-row-5,
+  body #page #panels-dnd-main .col-2-img-float .views-row-5,
+  #page #panels-dnd-main body .col-2-img-float .views-row-5,
+  body .col-2-img-float .views-row-5 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-2 .views-row-4, #page #panels-dnd-main .col-2-img-float .views-row-4,
+  body .col-2 .views-row-4,
+  body #page #panels-dnd-main .col-2-img-float .views-row-4,
+  #page #panels-dnd-main body .col-2-img-float .views-row-4,
+  body .col-2-img-float .views-row-4 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-2 .views-row-7, #page #panels-dnd-main .col-2-img-float .views-row-7,
+  body .col-2 .views-row-7,
+  body #page #panels-dnd-main .col-2-img-float .views-row-7,
+  #page #panels-dnd-main body .col-2-img-float .views-row-7,
+  body .col-2-img-float .views-row-7 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-2 .views-row-6, #page #panels-dnd-main .col-2-img-float .views-row-6,
+  body .col-2 .views-row-6,
+  body #page #panels-dnd-main .col-2-img-float .views-row-6,
+  #page #panels-dnd-main body .col-2-img-float .views-row-6,
+  body .col-2-img-float .views-row-6 {
+    margin-right: 0;
+  }
+  #page #panels-dnd-main .col-2 .views-row-9, #page #panels-dnd-main .col-2-img-float .views-row-9,
+  body .col-2 .views-row-9,
+  body #page #panels-dnd-main .col-2-img-float .views-row-9,
+  #page #panels-dnd-main body .col-2-img-float .views-row-9,
+  body .col-2-img-float .views-row-9 {
+    margin-left: 0;
+    clear: both;
+  }
+  #page #panels-dnd-main .col-2 .views-row-8, #page #panels-dnd-main .col-2-img-float .views-row-8,
+  body .col-2 .views-row-8,
+  body #page #panels-dnd-main .col-2-img-float .views-row-8,
+  #page #panels-dnd-main body .col-2-img-float .views-row-8,
+  body .col-2-img-float .views-row-8 {
+    margin-right: 0;
+  }
+}
+#page #panels-dnd-main .col-1 .views-row, #page #panels-dnd-main .col-1-img-float .views-row,
+body .col-1 .views-row,
+body #page #panels-dnd-main .col-1-img-float .views-row,
+#page #panels-dnd-main body .col-1-img-float .views-row,
+body .col-1-img-float .views-row {
+  float: left;
+  clear: both;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 1% 1%;
+}
+#page #panels-dnd-main .alternate .field__item.even,
+#page #panels-dnd-main .alternate .field__item.odd,
+body .alternate .field__item.even,
+body .alternate .field__item.odd {
+  clear: both;
+  display: block;
+  margin: 0.75em 0;
+}
+#page #panels-dnd-main .alternate .field__item.even .field__item.even,
+#page #panels-dnd-main .alternate .field__item.even .field__item.odd,
+#page #panels-dnd-main .alternate .field__item.odd .field__item.even,
+#page #panels-dnd-main .alternate .field__item.odd .field__item.odd,
+body .alternate .field__item.even .field__item.even,
+body .alternate .field__item.even .field__item.odd,
+body .alternate .field__item.odd .field__item.even,
+body .alternate .field__item.odd .field__item.odd {
+  clear: none;
+  margin: 0 0 0.5em;
+}
+#page #panels-dnd-main .alternate .field__item.even,
+body .alternate .field__item.even {
+  padding-right: 1.75em;
+}
+#page #panels-dnd-main .alternate .field__item.odd,
+body .alternate .field__item.odd {
+  padding-left: 1.75em;
+}
