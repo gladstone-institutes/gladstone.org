@@ -322,6 +322,11 @@ var {
  * Panel layout wrappers
  */
 #panel-feature {
+
+  .views-field-field-image {
+    line-height: 0;
+  }
+
   .container {
     @include page-width();
   }
@@ -1373,7 +1378,7 @@ ul.action-links {
  * Main wrapper for most blocks, block_system_main does not have it
  */
 .block {
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
 
 
