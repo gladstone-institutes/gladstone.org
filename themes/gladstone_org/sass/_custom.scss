@@ -38,6 +38,8 @@ $blue_0:  rgb(0, 40, 61);
 $blue_5:  rgb(55, 127, 195);
 $blue_9:  rgb(207, 220, 227); //lightest blue
 
+$orange: #FB8E04;
+
 $bg_dark:   $blue_0;
 $bg_medium: $blue_9;
 $bg_light:  $lum_9;
@@ -57,6 +59,7 @@ $link:            $blue_5;
 $nav_link:        $blue_5;
 $nav_link_active: $blue_0;
 
+$accent:       $orange;
 $border:       #ccc;    // all borders set in global.styles - tables, fieldset, primary links
 $highlight:    #c00;    // required mark, form error highlight, "new" label on comments
 $ultralight:   #f5f5f5; // table row even, primary link inactive tabs
