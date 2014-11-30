@@ -1210,6 +1210,10 @@ ul.action-links {
  */
 .field-type-image {
 
+  figure {
+    line-height: 0;
+  }
+
   .caption {}
 
   .full-caption {}
