@@ -66,12 +66,77 @@ function structure_default_page_manager_pages() {
       'gs3_50_25_25_third' => NULL,
       'gs3_50_25_25_bottom' => NULL,
     ),
+    'gs3_50_25_25_top' => array(
+      'style' => 'default',
+    ),
   );
   $display->cache = array();
   $display->title = '';
   $display->uuid = '8859286b-edb2-44c1-ac26-bfcc93e8d41e';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-544a756e-6cc5-496c-bc99-3e4a0ca059a7';
+    $pane->panel = 'gs3_50_25_25_first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'content_widgets-content_widget_item_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'fields_override' => array(
+        'title' => 1,
+        'body' => 1,
+        'created' => 1,
+        'field_image' => 0,
+      ),
+      'exposed' => array(
+        'title' => 'Gladstone Scientist Elected to AAAS',
+        'field_operational_units_tid' => '',
+        'sort_by' => 'created',
+        'sort_order' => 'DESC',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'style' => 'default',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '544a756e-6cc5-496c-bc99-3e4a0ca059a7';
+    $display->content['new-544a756e-6cc5-496c-bc99-3e4a0ca059a7'] = $pane;
+    $display->panels['gs3_50_25_25_first'][0] = 'new-544a756e-6cc5-496c-bc99-3e4a0ca059a7';
+    $pane = new stdClass();
+    $pane->pid = 'new-d2b111b3-4e1f-4d17-bedf-1019a19cf036';
+    $pane->panel = 'gs3_50_25_25_top';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:8ec6754e-bdb2-42cc-875e-cd12f57cbab0';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'title_tag' => 'h1',
+        'title_color' => '#FFF',
+        'caption_color' => '#FFF',
+        'caption_size' => '1em',
+      ),
+      'style' => 'feature_image',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd2b111b3-4e1f-4d17-bedf-1019a19cf036';
+    $display->content['new-d2b111b3-4e1f-4d17-bedf-1019a19cf036'] = $pane;
+    $display->panels['gs3_50_25_25_top'][0] = 'new-d2b111b3-4e1f-4d17-bedf-1019a19cf036';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
