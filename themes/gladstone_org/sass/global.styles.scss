@@ -574,7 +574,13 @@ ul.links {
   }
 
   .donate.button {
+    color: $page_txt;
+    background-color: $accent;
     padding: 0.2em 1em;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
   }
 }
 
@@ -1862,8 +1868,15 @@ fieldset {
 /*
  * Buttons used by contrib modules like Media
  */
-a.button {
-  @include appearance(button);
+// a.button {
+//   @include appearance(button);
+// }
+.button {
+  padding: $gutter-width*0.5 $gutter-width;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 
