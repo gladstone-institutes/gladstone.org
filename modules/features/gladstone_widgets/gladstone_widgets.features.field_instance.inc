@@ -44,8 +44,8 @@ function gladstone_widgets_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'public' => 'public',
           'private' => 'private',
+          'public' => 'public',
         ),
         'allowed_types' => array(
           'image' => 'image',
@@ -96,39 +96,39 @@ function gladstone_widgets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-image-field_longtext'
-  $field_instances['fieldable_panels_pane-image-field_longtext'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-image-field_formatter'
+  $field_instances['fieldable_panels_pane-image-field_formatter'] = array(
     'bundle' => 'image',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'type' => 'image',
+        'settings' => 'a:1:{s:11:"image_style";s:5:"large";}',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_longtext',
-    'label' => 'Caption',
+    'field_name' => 'field_formatter',
+    'label' => 'Formatter',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 0,
-      'text_processing' => 1,
+      'field_name' => 'field_image',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 3,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 2,
+      'active' => 0,
+      'module' => 'formatter_field',
+      'settings' => array(),
+      'type' => 'formatter_select',
+      'weight' => 3,
     ),
   );
 
@@ -184,39 +184,77 @@ function gladstone_widgets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-image-field_formatter'
-  $field_instances['fieldable_panels_pane-image-field_formatter'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-image-field_longtext'
+  $field_instances['fieldable_panels_pane-image-field_longtext'] = array(
     'bundle' => 'image',
-    'default_value' => array(
-      0 => array(
-        'type' => 'image',
-        'settings' => 'a:1:{s:11:"image_style";s:5:"large";}',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'type' => 'text_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_formatter',
-    'label' => 'Formatter',
+    'field_name' => 'field_longtext',
+    'label' => 'Caption',
     'required' => 0,
     'settings' => array(
-      'field_name' => 'field_image',
+      'display_summary' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'formatter_field',
-      'settings' => array(),
-      'type' => 'formatter_select',
-      'weight' => 3,
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'fieldable_panels_pane-map-field_longtext'
+  $field_instances['fieldable_panels_pane-map-field_longtext'] = array(
+    'bundle' => 'map',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_longtext',
+    'label' => 'Information',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => -3,
     ),
   );
 
@@ -266,44 +304,6 @@ function gladstone_widgets_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => -4,
-    ),
-  );
-
-  // Exported field_instance: 'fieldable_panels_pane-map-field_longtext'
-  $field_instances['fieldable_panels_pane-map-field_longtext'] = array(
-    'bundle' => 'map',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'edit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_longtext',
-    'label' => 'Information',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 3,
-      ),
-      'type' => 'text_textarea',
-      'weight' => -3,
     ),
   );
 
@@ -515,15 +515,14 @@ function gladstone_widgets_field_default_field_instances() {
   t('Address');
   t('Caption');
   t('File');
+  t('Formatter');
   t('Image');
   t('Information');
-  t('Items');
   t('Links');
   t('Table');
   t('Text');
   t('The street address of the location you wish to map. This widget will contact Google and try to do its best to create a map!');
   t('Video');
-  t('Formatter');
 
   return $field_instances;
 }

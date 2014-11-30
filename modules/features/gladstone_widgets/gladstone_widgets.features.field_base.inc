@@ -10,23 +10,25 @@
 function gladstone_widgets_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_table'
-  $field_bases['field_table'] = array(
+  // Exported field_base: 'field_formatter'
+  $field_bases['field_formatter'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_table',
+    'field_name' => 'field_formatter',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
-    'module' => 'tablefield',
+    'module' => 'formatter_field',
     'settings' => array(
-      'cell_processing' => 0,
-      'lock_values' => 0,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
-    'type' => 'tablefield',
+    'type' => 'formatter',
   );
 
   // Exported field_base: 'field_map_address'
@@ -58,25 +60,23 @@ function gladstone_widgets_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_formatter'
-  $field_bases['field_formatter'] = array(
+  // Exported field_base: 'field_table'
+  $field_bases['field_table'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_formatter',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
+    'field_name' => 'field_table',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
-    'module' => 'formatter_field',
+    'module' => 'tablefield',
     'settings' => array(
-      'profile2_private' => FALSE,
+      'cell_processing' => 0,
+      'lock_values' => 0,
     ),
     'translatable' => 0,
-    'type' => 'formatter',
+    'type' => 'tablefield',
   );
 
   return $field_bases;
