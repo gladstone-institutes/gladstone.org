@@ -328,7 +328,8 @@ var {
   }
 
   .container {
-    @include page-width();
+    // @include page-width();
+    margin: 0 auto;
   }
 }
 
