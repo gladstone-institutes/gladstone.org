@@ -53,6 +53,7 @@ features[field_base][] = field_date
 features[field_base][] = field_date_mmyy
 features[field_base][] = field_date_yyyy
 features[field_base][] = field_display_title
+features[field_base][] = field_file
 features[field_base][] = field_files
 features[field_base][] = field_image
 features[field_base][] = field_label_alias
