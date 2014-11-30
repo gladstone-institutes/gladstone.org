@@ -21,7 +21,8 @@
 // controls container widths, spacing and floats
 // 
 
-$page_width: 960px; //max-page width
+$page_width: 960px;  //max-width for page content
+$page_gutter: 980px; //page_width+gutters, for container bg image bounds
 
 //
 // Color Variables

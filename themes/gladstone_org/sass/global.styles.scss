@@ -330,6 +330,7 @@ var {
   .container {
     // @include page-width();
     margin: 0 auto;
+    max-width: $page_gutter;
   }
 }
 
