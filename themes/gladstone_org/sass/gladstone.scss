@@ -1,6 +1,12 @@
-
+// _base.scss imports _custom.scss and other partials.
+@import "base";
 
 // fix media modal offset
 iframe.media-modal-frame {
 	padding: 0 !important;
+}
+
+// text accent color
+.accent {
+	color:$accent;
 }

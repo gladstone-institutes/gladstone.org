@@ -1,0 +1,35 @@
+.gladstone-pane {
+	background-color: rgb(241, 221, 205);
+}
+.gladstone-pane .heading {
+	color: white;
+	background-color: rgb(55, 127, 195);
+	padding: .5em 1em;
+}
+
+.gladstone-pane .heading .title {
+	float: left;
+	margin: 0;
+}
+.gladstone-pane .heading i {
+	float: right;
+	line-height: normal;
+}
+.gladstone-pane .content {
+	padding: 1em;
+}
+
+
+.gladstone-pane.image-full img {
+
+}
+
+.gladstone-pane.image-float-left img {
+	float: left;
+	padding-right: 1em;
+}
+
+.gladstone-pane.image-float-right img {
+	float: right;
+	padding-left: 1em;
+}

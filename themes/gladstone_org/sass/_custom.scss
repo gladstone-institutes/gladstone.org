@@ -41,6 +41,8 @@ $blue_9:  rgb(207, 220, 227); //lightest blue
 
 $orange: #FB8E04;
 
+$tan: rgb(241, 221, 205);
+
 $bg_dark:   $blue_0;
 $bg_medium: $blue_9;
 $bg_light:  $lum_9;
@@ -55,6 +57,11 @@ $header_shadow: $blue_0a;
 
 $content_bg:    $bg_light;
 $content_txt:   $lum_0;
+
+$pane_bg:         $tan;
+$pane_txt:        $blue_0;
+$pane_header_bg:  $blue_5;
+$pane_header_txt: $lum_9;
 
 $link:            $blue_5;
 $nav_link:        $blue_5;

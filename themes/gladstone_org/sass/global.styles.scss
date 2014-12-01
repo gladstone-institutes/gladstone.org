@@ -338,6 +338,7 @@ var {
   background-color: $content_bg;
   .container {
     @include page-width();
+    padding-top: $gutter-width;
   }
 }
 
