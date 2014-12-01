@@ -58,9 +58,9 @@ function theme_masonry_render_region($vars) {
 
   $masonry_conf = "data-masonry-options='{ ".
                   '"columnWidth": 60,'.
-                  // '"containerStyle": null,'.
+                  '"containerStyle": null'.
                   // '"isFitWidth": true,'.
-                  '"itemSelector": ".masonry-pane"'.
+                  // '"itemSelector": ".masonry-pane"'.
                   "}'";
 
   $output = '<div id="masonry-'.$region_id.'" class="js-masonry" '.$masonry_conf.'>';
@@ -68,7 +68,7 @@ function theme_masonry_render_region($vars) {
       $output .= $pane;
   }
 
-  dpm($vars,'Region');
+  // dpm($vars,'Region');
   
   // Add js files
   $masonryjs = drupal_get_path('module','gladstone_theme').'/js/masonry.pkgd.min.js';
