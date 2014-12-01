@@ -924,7 +924,7 @@ function gladstone_widgets_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'Footer';
-  $handler->display->display_options['footer']['area']['content'] = '<span>Find these stories and more at our </span><a href="node/47"><span>NEWS HUB </span><i class="fa fa-caret-right"></i></a>';
+  $handler->display->display_options['footer']['area']['content'] = '<span>Find these stories and more at our </span><a href="node/47" class="accent"><b><span>NEWS HUB </span><i class="fa fa-caret-right"></i></b></a>';
   $handler->display->display_options['footer']['area']['format'] = 'limited_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
