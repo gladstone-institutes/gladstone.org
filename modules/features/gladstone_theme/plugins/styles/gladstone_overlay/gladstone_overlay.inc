@@ -43,8 +43,9 @@ function theme_gladstone_overlay_render_pane($vars) {
   $settings = $vars['settings'];
 
 
-  dpm($vars,'Pane');
-  dpm($entity,'Ent');
+  // dpm($vars,'Pane');
+  // dpm($entity,'Ent');
+  
   if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'image') {
 
     $settings['fpid'] = $entity->fpid;
