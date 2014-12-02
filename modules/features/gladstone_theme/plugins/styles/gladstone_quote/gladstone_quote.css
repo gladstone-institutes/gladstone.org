@@ -4,13 +4,14 @@
 	padding: 1em;
 	background-size: cover;
 	position: relative;
+	background-repeat: no-repeat;
 }
 
 .gladstone-quote img {
 	visibility: hidden;
 }
 .gladstone-quote .title {
-	float: left;
+	/*float: left;*/
 	margin: 0;
 }
 .gladstone-quote i {

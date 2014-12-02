@@ -42,8 +42,8 @@ function theme_gladstone_quote_render_pane($vars) {
   $display  = $vars['display'];
   $settings = $vars['settings'];
 
-  dpm($vars,'Pane');
-  dpm($entity,'Ent');
+  // dpm($vars,'Pane');
+  // dpm($entity,'Ent');
 
 
   if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'image') {
@@ -64,6 +64,7 @@ function theme_gladstone_quote_render_pane($vars) {
     // make path relative, this fails for sites in a subdir
     // $bg_image_url = preg_replace('#' . $base_url . '#', '', $bg_image_url);
 
+    $caption = $entity->field_longtext['und'][0]['safe_value'];
 
     $path = $vars['style']['path'];
     drupal_add_css($path.'/gladstone_quote.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
@@ -78,7 +79,7 @@ function theme_gladstone_quote_render_pane($vars) {
     // apply feature box wrappers
     return theme('gladstone_quote_theme_pane', 
               array( 'title' => $title,
-                     'content' => $caption,
+                     'caption' => $caption,
                      'link' => $link,
                      'settings' => $settings,
               )

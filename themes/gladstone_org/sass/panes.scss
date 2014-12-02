@@ -23,3 +23,21 @@
 	&.gladstone-quote 
 	{ margin-bottom: $gutter-width; }
 }
+
+.width-50 {
+	width: 50%;
+}
+
+.float-right {
+	float: right;
+}
+
+.clear-left {
+	clear: left;
+}
+.clear-right {
+	clear: right;
+}
+.clear-both {
+	clear: both;
+}
