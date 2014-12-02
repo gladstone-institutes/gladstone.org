@@ -29,7 +29,7 @@ projects[page_manager_pathauto][subdir]  = "contrib"
 projects[page_manager_pathauto][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/page_manager_pathauto-strict_warning_illegal_string_offset.patch
 projects[page_manager_pathauto][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/page_manager_pathauto-on_all_page_manager_pages.patch
 
-projects[link][version] = "1.2"
+projects[link][version] = "1.3"
 projects[link][subdir]	= "contrib"
 
 projects[date][version] = "2.8"
