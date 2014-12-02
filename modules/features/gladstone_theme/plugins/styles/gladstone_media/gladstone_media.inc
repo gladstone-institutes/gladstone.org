@@ -74,7 +74,7 @@ function theme_gladstone_media_render_pane($vars) {
   return theme('gladstone_media_theme_pane', 
             array( 'title' => $title,
                    'content' => render($content),
-                   'contextual_links' => render($contextual_links),
+                   // 'contextual_links' => render($contextual_links),
                    'link' => $link,
                    'settings' => $settings,
             )
