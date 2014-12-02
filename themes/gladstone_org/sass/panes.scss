@@ -19,6 +19,13 @@
 }
 
 .pane {
+	margin-bottom: $gutter-width;
+
+	a,
+	a:hover {
+		text-decoration: none;
+	}
+
 	&.gladstone-pane,
 	&.gladstone-quote 
 	{ margin-bottom: $gutter-width; }
