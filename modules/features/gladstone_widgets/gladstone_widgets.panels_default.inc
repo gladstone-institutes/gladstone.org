@@ -35,7 +35,6 @@ function gladstone_widgets_default_panels_mini() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '111caa4e-bc89-4b73-94d4-76a16e579d70';
-  $display->title_url = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -135,7 +134,6 @@ ALL RIGHTS RESERVED',
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'b0c36764-294c-405e-b03c-fad4984f8df6';
-  $display->title_url = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
