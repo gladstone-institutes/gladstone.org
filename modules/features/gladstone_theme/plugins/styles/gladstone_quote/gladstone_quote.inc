@@ -73,6 +73,7 @@ function theme_gladstone_quote_render_pane($vars) {
     drupal_add_css($css,array('type' => 'inline'));    
 
     // prep css classes for pane container
+    $settings['clear'] = ($settings['clear'] == 'null') ? NULL : $settings['clear'];
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
     $settings['bg_image_url'] = $bg_image_url;
 
@@ -135,6 +136,7 @@ function gladstone_quote_pane_settings_form($style_settings) {
     '#type'  => 'select',
     '#options' => array(
     //'css class' => 'Selection display name'
+      'null' => 'No Clear',
       'clear-left' => 'Clear left',
       'clear-right' => 'Clear right',
       'clear-both' => 'Clear both',

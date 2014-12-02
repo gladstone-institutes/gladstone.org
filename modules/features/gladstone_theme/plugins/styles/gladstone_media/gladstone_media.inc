@@ -44,8 +44,8 @@ function theme_gladstone_media_render_pane($vars) {
   $settings = $vars['settings'];
 
 
-  dpm($vars,'Pane');
-  dpm($entity,'Ent');
+  // dpm($vars,'Pane');
+  // dpm($entity,'Ent');
 
   $title = $vars['content']->title;
   if (property_exists($entity, 'link') && $entity->link && !empty($entity->path)) {
@@ -68,6 +68,7 @@ function theme_gladstone_media_render_pane($vars) {
   drupal_add_css($path.'/gladstone_media.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 
   // prep css classes for pane container
+  $settings['clear'] = ($settings['clear'] == 'null') ? NULL : $settings['clear'];
   $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
 
   // apply feature box wrappers
@@ -131,6 +132,7 @@ function gladstone_media_pane_settings_form($style_settings) {
     '#type'  => 'select',
     '#options' => array(
     //'css class' => 'Selection display name'
+      'null' => 'No Clear',
       'clear-left' => 'Clear left',
       'clear-right' => 'Clear right',
       'clear-both' => 'Clear both',
