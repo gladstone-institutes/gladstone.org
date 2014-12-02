@@ -1,0 +1,51 @@
+.gladstone-overlay {
+	background-color: rgb(241, 221, 205);
+	line-height: normal;
+}
+.gladstone-overlay .heading {
+	color: white;
+	background-color: rgb(55, 127, 195);
+	padding: .5em 1em;
+}
+
+.gladstone-overlay .heading .title {
+	float: left;
+	margin: 0;
+}
+.gladstone-overlay .heading i {
+	float: right;
+}
+.gladstone-overlay .content-wrapper {
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.gladstone-overlay .content {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	color: white;
+}
+
+.gladstone-overlay .content .inner {
+	margin: 1em;
+}
+
+.gladstone-overlay .content p {
+	margin: 0;
+}
+
+.gladstone-overlay img {
+	visibility: hidden;
+}
+
+.gladstone-overlay.image-float-left img {
+	float: left;
+	padding-right: 1em;
+}
+
+.gladstone-overlay.image-float-right img {
+	float: right;
+	padding-left: 1em;
+}
