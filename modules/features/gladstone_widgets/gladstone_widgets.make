@@ -39,5 +39,11 @@ projects[formatter_field][version] = 1.0-beta3
 projects[formatter_field][subdir]  = contrib
 
 
-projects[fieldable_panels_panes][version] = 1.x-dev
-projects[fieldable_panels_panes][subdir]  = contrib
+projects[fieldable_panels_panes][version] 			 = 1.x-dev
+projects[fieldable_panels_panes][subdir] 			 = contrib
+projects[fieldable_panels_panes][download][type]     = git
+projects[fieldable_panels_panes][download][revision] = bfef4bce
+projects[fieldable_panels_panes][download][branch]   = 7.x-1.x
+; Workaroudn for exportable FPPs https://www.drupal.org/node/2246893
+projects[fieldable_panels_panes][patch][]   = https://www.drupal.org/files/issues/properly-set-pane-subtype-on-edit-form-submit-0.patch
+

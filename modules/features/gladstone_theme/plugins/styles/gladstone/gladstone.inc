@@ -37,14 +37,14 @@ function theme_gladstone_render_pane($vars) {
 
   $ctype    = $vars['content']->type;
   $content  = $vars['content']->content;
-  $entity   = (is_array($content) && in_array('#'.$ctype,$content)) ? $content['#'.$ctype] : NULL;
+  $entity   = (is_array($content) && array_key_exists('#'.$ctype,$content)) ? $content['#'.$ctype] : NULL;
   $pane     = $vars['pane'];
   $display  = $vars['display'];
   $settings = $vars['settings'];
 
 
-  dpm($vars,'Pane');
-  dpm($entity,'Ent');
+  // dpm($vars,'Pane');
+  // dpm($entity,'Ent');
 
   $title = $vars['content']->title;
   if (!empty($settings['url'])) {
