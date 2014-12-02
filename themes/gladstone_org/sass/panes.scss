@@ -18,6 +18,8 @@
 	margin: 0;
 }
 
-.pane.gladstone-pane {
-	margin-bottom: $gutter-width;
+.pane {
+	&.gladstone-pane,
+	&.gladstone-quote 
+	{ margin-bottom: $gutter-width; }
 }
