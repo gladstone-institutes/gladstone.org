@@ -120,6 +120,7 @@ function gladstone_pane_settings_form($style_settings) {
     '#type'  => 'select',
     '#options' => array(
     //'css class' => 'Selection display name'
+      'null' => 'No Clear',
       'clear-left' => 'Clear left',
       'clear-right' => 'Clear right',
       'clear-both' => 'Clear both',
