@@ -33,7 +33,7 @@
 }
 
 .gladstone-quote-jm ul.jump-menu {
-	/*padding: 0;*/
+	padding: 0;
 	/*margin: 0;*/
 	/*position: absolute;*/
 	/*width: 100%;*/
@@ -60,6 +60,11 @@
 
 .gladstone-quote-jm ul.jump-menu li a span {
 	padding: 0 1em;
+}
+
+ul.jump-menu li a i {
+	float: right;
+	margin-right: 1em;
 }
 
 .gladstone-quote-jm ul.jump-menu .donate.button {

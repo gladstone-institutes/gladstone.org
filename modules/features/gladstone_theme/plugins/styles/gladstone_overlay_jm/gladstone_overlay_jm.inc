@@ -186,7 +186,7 @@ function _gladstone_widget_build_jump_menu($urls) {
 
     $li  = '<li class="leaf">';
     $li .= '<a href="'.$rel_url.'" class="button'.$classes.'">';
-    $li .= '<span>'.$url['title'].'</span>';
+    $li .= '<span>'.$url['title'].'</span><i class="fa fa-angle-right fa-lg"></i>';
     $li .= '</a></li>';
 
     $menu .= $li;

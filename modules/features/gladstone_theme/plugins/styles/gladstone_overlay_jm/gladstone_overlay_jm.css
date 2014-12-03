@@ -77,6 +77,11 @@ ul.jump-menu li a {
 	margin-bottom: .5em;
 }
 
+ul.jump-menu li a i {
+	float: right;
+	margin-right: 1em;
+}
+
 ul.jump-menu li a span {
 	padding: 0 1em;
 }
