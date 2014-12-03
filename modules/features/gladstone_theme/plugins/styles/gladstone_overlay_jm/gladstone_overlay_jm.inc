@@ -182,10 +182,10 @@ function _gladstone_widget_build_jump_menu($urls) {
     // make path relative, this fails for sites in a subdir
     // use "#" instead of "/" to wrap the regex expression, it auto-escapes '/' literals
     $rel_url = preg_replace('#' . $base_url . '/?#', '', $url['display_url']);
-    $classes = $url['attributes']['class'];
+    $classes = array_key_exists('class',$url['attributes']) ? ' '.$url['attributes']['class'] : NULL;
 
     $li  = '<li class="leaf">';
-    $li .= '<a href="'.$rel_url.'" class="button '.$classes.'">';
+    $li .= '<a href="'.$rel_url.'" class="button'.$classes.'">';
     $li .= '<span>'.$url['title'].'</span>';
     $li .= '</a></li>';
 
