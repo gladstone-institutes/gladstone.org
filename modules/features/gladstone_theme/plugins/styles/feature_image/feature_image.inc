@@ -40,7 +40,8 @@ function theme_feature_image_render_pane($vars) {
 
   $ctype    = $vars['content']->type;
   $content  = $vars['content']->content;
-  $entity   = $content['#element'];
+  // $entity   = $content['#element'];
+  $entity   = (is_array($content) && array_key_exists('#'.$ctype,$content)) ? $content['#'.$ctype] : NULL;
   $pane     = $vars['pane'];
   $display  = $vars['display'];
   $settings = $vars['settings'];
