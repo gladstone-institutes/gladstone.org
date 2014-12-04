@@ -38,6 +38,30 @@ function gladstone_widgets_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-f715eda6-3c02-42b5-8f17-5a8d116c7755';
+    $pane->panel = 'four_first';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:6a35db60-b29e-4532-be1a-5978e3cd1e39';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'contact-footer',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f715eda6-3c02-42b5-8f17-5a8d116c7755';
+    $display->content['new-f715eda6-3c02-42b5-8f17-5a8d116c7755'] = $pane;
+    $display->panels['four_first'][0] = 'new-f715eda6-3c02-42b5-8f17-5a8d116c7755';
+    $pane = new stdClass();
     $pane->pid = 'new-42e0975b-6286-4054-80f6-5edacd7e0c4b';
     $pane->panel = 'four_fourth';
     $pane->type = 'custom';
