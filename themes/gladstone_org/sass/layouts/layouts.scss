@@ -1,0 +1,12 @@
+@import "base";
+
+.region-gs3-25-50-25-sidebar > .region-inner {
+	// the padding needs to be 3x the gutter since there are two layouts nested
+	// AT uses a -1*gutter width compensation
+	// see global.base.scss #content .panel-display 
+	padding-right: 3*$gutter-width;
+}
+
+.region-gs3-25-50-25-inset > .region-inner {
+	padding-left: 3*$gutter-width;
+}
