@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * jump_menu.fieldable_panels_pane_type.inc
+ * gladstone_widgets.fieldable_panels_pane_type.inc
  */
 
 /**
