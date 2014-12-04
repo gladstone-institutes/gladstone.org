@@ -311,7 +311,7 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1em 0;
+  margin: .5*$gutter-width 0 $gutter-width 0;
 }
 
 

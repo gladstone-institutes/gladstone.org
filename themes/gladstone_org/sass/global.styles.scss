@@ -355,7 +355,7 @@ var {
   .container {
     @include page-curl-bottom();
     @include page-width();
-    padding-top: $gutter-width;
+    padding-top: 1.5*$gutter-width;
   }
 }
 
@@ -665,7 +665,7 @@ ul.links {
   color: $page_overlay;
   text-transform: uppercase;
 
-  a,
+  a,h2,
   a.active {
     color: $page_overlay;
   }
@@ -892,10 +892,10 @@ ul.sf-menu {
  * ========================================================================== */
 
 ul.menu {
-  padding-left: 15px;
+  padding-left: $gutter-width;
 
   ul {
-    padding-left: 15px;
+    padding-left: $gutter-width;
 
     ul {
       ul {}
