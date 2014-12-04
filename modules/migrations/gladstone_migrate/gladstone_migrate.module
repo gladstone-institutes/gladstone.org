@@ -54,6 +54,7 @@ function gladstone_migrate_flush_caches() {
 		'source_dir' => variable_get('gladstone_migrate_source_files'),		
 		'destination_dir' => 'public://'
 	));	
+	Migration::registerMigration('GSImageFieldFocus','field_focus', $args);
 	Migration::registerMigration('GSOpsRoleTerms','operational_role', $args);
 	Migration::registerMigration('GSOpsTitleTerms','operational_title', $args);
 	Migration::registerMigration('GSInstitutionTerms','institution', $args);
