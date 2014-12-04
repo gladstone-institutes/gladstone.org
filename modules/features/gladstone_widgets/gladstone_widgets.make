@@ -40,12 +40,12 @@ projects[formatter_field][subdir]  = contrib
 projects[formatter_field][download][type]     = git
 projects[formatter_field][download][revision] = 67ea6c63
 projects[formatter_field][download][branch]   = 7.x-1.x
-; patch for bug "Undefined index: image_style in image_field_formatter_settings_form" 
-; @see https://www.drupal.org/node/1393488
-projects[fieldable_panels_panes][patch][] = https://www.drupal.org/files/formatter_field-error_message_on_format_switch-1393488-5.patch
 ; patch for reset when a field with unlimited values gets added
 ; @see https://www.drupal.org/node/1762202
-https://www.drupal.org/files/formatter_field-1762202-2.patch
+projects[formatter_field][patch][] = https://www.drupal.org/files/formatter_field-1762202-2.patch
+; patch for bug "Undefined index: image_style in image_field_formatter_settings_form" 
+; @see https://www.drupal.org/node/1393488
+projects[formatter_field][patch][] = https://www.drupal.org/files/formatter_field-error_message_on_format_switch-1393488-5.patch
 
 
 projects[fieldable_panels_panes][version] 			 = 1.x-dev
