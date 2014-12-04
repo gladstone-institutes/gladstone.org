@@ -1,0 +1,18 @@
+diff --git a/formatter_field.module b/formatter_field.module
+index 0c8c5d6..51105e6 100644
+--- a/formatter_field.module
++++ b/formatter_field.module
+@@ -90,9 +90,12 @@ function formatter_field_field_widget_form(&$form, &$form_state, $field, $instan
+ 
+   // Populate $items from $form_state values if available.  This is necessary
+   // for the #ajax functionality.
+-  if (!empty($form_state['values'])) {
++  if (!empty($form_state['values'][$field['field_name']])) {
+     $path = array($field['field_name'], $langcode);
+     $items = drupal_array_get_nested_value($form_state['values'], $path);
++  } elseif (empty($form_state['input'][$field['field_name']])) {
++    $path = array($field['field_name'], $langcode);
++    $items = drupal_array_get_nested_value($form_state['input'], $path);   
+   }
+ 
+   if (!empty($items[$delta]['settings']) && is_string($items[$delta]['settings'])) {
