@@ -28,6 +28,11 @@ projects[drupal][version] = 7.23
 ; http://drupal.org/node/995156
 ; projects[drupal][patch][995156] = http://drupal.org/files/issues/995156-5_portable_taxonomy_permissions.patch
 
+; Undefined index: #field_name in file_managed_file_save_upload()
+; @see https://www.drupal.org/node/1903010
+projects[drupal][patch][] = https://www.drupal.org/files/issues/drupal-undefinedindex_fileupload-1903010-4.patch
+
+
 ; Bugs introduced via PHP5.4 and Drupal 7.22
 ;-------------------------------------------
 ; See php notices when reacreating a feature
