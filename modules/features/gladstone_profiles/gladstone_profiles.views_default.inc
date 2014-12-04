@@ -104,6 +104,10 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['relationships']['field_operational_titles_tid']['id'] = 'field_operational_titles_tid';
   $handler->display->display_options['relationships']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
   $handler->display->display_options['relationships']['field_operational_titles_tid']['field'] = 'field_operational_titles_tid';
+  /* Relationship: Profile: Operational Role(s) (field_operational_roles) */
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['id'] = 'field_operational_roles_tid';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['field'] = 'field_operational_roles_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Profile: User uid */
   $handler->display->display_options['fields']['user']['id'] = 'user';
@@ -144,6 +148,11 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'field_operational_roles_tid';
   /* Sort criterion: Taxonomy term: Weight */
   $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
   $handler->display->display_options['sorts']['weight_1']['table'] = 'taxonomy_term_data';
@@ -243,11 +252,18 @@ function gladstone_profiles_views_default_views() {
     7 => 0,
   );
   $handler->display->display_options['filters']['field_operational_titles_tid']['vocabulary'] = 'operational_titles';
+  /* Filter criterion: Profile: Operational Role(s) (field_operational_roles:delta) */
+  $handler->display->display_options['filters']['delta_1']['id'] = 'delta_1';
+  $handler->display->display_options['filters']['delta_1']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['filters']['delta_1']['field'] = 'delta';
+  $handler->display->display_options['filters']['delta_1']['value']['value'] = '0';
+  $handler->display->display_options['filters']['delta_1']['group'] = 1;
   /* Filter criterion: Field: Operational Title(s) (field_operational_titles:delta) */
   $handler->display->display_options['filters']['delta']['id'] = 'delta';
   $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_operational_titles';
   $handler->display->display_options['filters']['delta']['field'] = 'delta';
   $handler->display->display_options['filters']['delta']['value']['value'] = '0';
+  $handler->display->display_options['filters']['delta']['group'] = 1;
   $handler->display->display_options['filters']['delta']['expose']['operator_id'] = 'delta_op';
   $handler->display->display_options['filters']['delta']['expose']['label'] = 'Operational Title(s) (field_operational_titles:delta)';
   $handler->display->display_options['filters']['delta']['expose']['operator'] = 'delta_op';
@@ -259,6 +275,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'profile' => 'profile',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['pane_category']['name'] = 'Gladstone';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -377,7 +394,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -1037,7 +1054,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
   $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -1849,7 +1866,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'curriculum_vitae' => 'curriculum_vitae',
   );
-  /* Filter criterion: Field: Subscription (field_boolean) */
+  /* Filter criterion: Field: Current (field_boolean) */
   $handler->display->display_options['filters']['field_boolean_value']['id'] = 'field_boolean_value';
   $handler->display->display_options['filters']['field_boolean_value']['table'] = 'field_data_field_boolean';
   $handler->display->display_options['filters']['field_boolean_value']['field'] = 'field_boolean_value';

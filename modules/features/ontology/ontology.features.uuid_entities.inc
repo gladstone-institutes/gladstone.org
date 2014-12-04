@@ -31,7 +31,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'e6de0803-57d4-4c35-b773-454ae8e8d24c',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 4,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -54,7 +54,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '3bc18020-a523-4ab4-b263-20ccc1edc4dd',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 15,
+    'weight' => 13,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -73,7 +73,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'aabbdd0e-fc6d-4d5c-889a-543be10ad58a',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 9,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -100,7 +100,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '58ae40ed-e609-4cb4-aa62-a242ae484708',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 29,
+    'weight' => 18,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -123,7 +123,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '2c8a579f-2b31-4e61-83d5-f720c6131a73',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 15,
+    'weight' => 14,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -170,7 +170,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '4dc159e5-a506-4068-82ae-34d972b7d354',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 30,
+    'weight' => 20,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -189,7 +189,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '50f9d5fb-0820-494d-9c7d-cb1402c97f20',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 10,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -208,7 +208,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '19cd2681-3644-4ff9-8f66-a3afaf44d529',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 6,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -227,7 +227,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'c66077f2-4a44-493d-a665-86cc8c6aecd6',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 16,
+    'weight' => 15,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -246,7 +246,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'c9e709fc-189f-472f-a209-01a638dd5017',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 11,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -269,7 +269,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '383ecc98-a71c-458c-b64b-3fed47be7bad',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 3,
+    'weight' => 12,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -305,10 +305,22 @@ function ontology_uuid_default_entities() {
         'alias' => 'tag/operational-roles/faculty/investigator/staff-research-investigator',
         'language' => 'und',
       ),
+      6 => array(
+        'alias' => 'tag/operational-roles/staff/staff-research-investigator',
+        'language' => 'und',
+      ),
+      7 => array(
+        'alias' => 'tag/operational-roles/associate-investigator',
+        'language' => 'und',
+      ),
+      8 => array(
+        'alias' => 'tag/operational-roles/senior-investigator',
+        'language' => 'und',
+      ),
     ),
     'uuid' => 'bdc133a4-ca5c-42f3-ba02-0f32473f46cd',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 1,
+    'weight' => 3,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -327,7 +339,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'eacce9dd-c317-4343-b610-fe33983f7065',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 5,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -346,7 +358,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'df486cf8-f86a-4204-a7ee-fc8641ac857b',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 8,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -365,7 +377,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '598a9d63-df3f-45ee-9efd-59d425b7e276',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 7,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -384,7 +396,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '50d544e6-03fb-4a6c-996e-102725ebf865',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 11,
+    'weight' => 19,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -407,7 +419,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '88e655d9-994e-401a-a7ca-e658ad9169e4',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 27,
+    'weight' => 0,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -430,7 +442,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'd23ce91e-93c8-4842-a8ce-00d6d568cc7c',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 28,
+    'weight' => 17,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -476,7 +488,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => '92453927-732a-4cfd-a3af-17aa1a2bd8ea',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 0,
+    'weight' => 2,
   );
   $entities['ontology_operational_role_terms'][] = (object) array(
     '__metadata' => array(
@@ -495,7 +507,7 @@ function ontology_uuid_default_entities() {
     ),
     'uuid' => 'a97c74bd-394b-4d76-a8d1-9088a33f8479',
     'vocabulary_machine_name' => 'operational_roles',
-    'weight' => 26,
+    'weight' => 16,
   );
   $entities['ontology_operational_unit_terms'][] = (object) array(
     '__metadata' => array(
