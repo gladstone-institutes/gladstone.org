@@ -587,10 +587,11 @@ function gladstone_profiles_default_panels_mini() {
   $mini->admin_description = 'Public facing fields displayed by profile ajax tabs';
   $mini->requiredcontexts = array(
     0 => array(
-      'identifier' => 'User (UUID)',
+      'identifier' => 'User',
       'keyword' => 'user',
-      'name' => 'entity_uuid:user',
-      'uuid' => '',
+      'name' => 'user',
+      'type' => 'select',
+      'uid' => '',
       'id' => 1,
     ),
   );
@@ -611,13 +612,28 @@ function gladstone_profiles_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-babcd3bf-caf7-41d0-a7e9-b8ba57bb4a35';
+    $pane->pid = 'new-d9d58378-9e07-43c0-a3f8-11a2872454b3';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'profile_user_content-profile_pubs_pane';
+    $pane->subtype = 'profile_user_content-profile_pubs_ca_pane';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '10',
+      'offset' => '0',
+      'arguments' => array(
+        'drupal_uid' => '%user:uid',
+      ),
+      'fields_override' => array(
+        'citation' => 1,
+        'field_research_tags' => 1,
+        'field_operational_units' => 1,
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -626,11 +642,11 @@ function gladstone_profiles_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'babcd3bf-caf7-41d0-a7e9-b8ba57bb4a35';
-    $display->content['new-babcd3bf-caf7-41d0-a7e9-b8ba57bb4a35'] = $pane;
-    $display->panels['one_main'][0] = 'new-babcd3bf-caf7-41d0-a7e9-b8ba57bb4a35';
+    $pane->uuid = 'd9d58378-9e07-43c0-a3f8-11a2872454b3';
+    $display->content['new-d9d58378-9e07-43c0-a3f8-11a2872454b3'] = $pane;
+    $display->panels['one_main'][0] = 'new-d9d58378-9e07-43c0-a3f8-11a2872454b3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-babcd3bf-caf7-41d0-a7e9-b8ba57bb4a35';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['publications_tab'] = $mini;
 

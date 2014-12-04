@@ -1747,7 +1747,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $handler->display->display_options['argument_input'] = array(
     'drupal_uid' => array(
-      'type' => 'context',
+      'type' => 'user',
       'context' => 'entity_uuid:user.uid',
       'context_optional' => 0,
       'panel' => '0',
