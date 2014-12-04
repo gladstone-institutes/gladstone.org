@@ -309,7 +309,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -458,7 +458,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -682,7 +682,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -929,7 +929,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -1158,7 +1158,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -1330,7 +1330,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -1536,7 +1536,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -1746,7 +1746,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -1957,7 +1957,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -2249,7 +2249,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -2444,7 +2444,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -2649,7 +2649,7 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -2895,7 +2895,7 @@ Founding Partner, TPG Capital</p>
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -3101,7 +3101,7 @@ Managing Director, Draper Intl.</p>
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -3306,7 +3306,7 @@ Director, Roddenberry Foundation</p>
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -3478,7 +3478,7 @@ Director, Roddenberry Foundation</p>
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -3745,7 +3745,7 @@ Director, Roddenberry Foundation</p>
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
@@ -3917,7 +3917,7 @@ Director, Roddenberry Foundation</p>
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'none',
+      'markup' => 'h2',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_id:node_1',
