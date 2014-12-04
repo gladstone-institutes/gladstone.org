@@ -1,0 +1,111 @@
+
+// 
+// Generate CSS Symmetric PageCurl effect
+// 
+@mixin page-curl-top {
+
+  position: relative;
+
+  &:before,
+  &:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+
+    top:  0%;
+    bottom: 100%;
+    left: 0;
+    width: 50%;
+
+  }
+
+  &:before {
+    $shadow: 1.5em 0.8em 1em 1em $header_shadow;
+    -webkit-box-shadow: $shadow;
+       -moz-box-shadow: $shadow;
+            box-shadow: $shadow;
+
+    $transform: skew(200deg, 1deg);
+    -webkit-transform: $transform;
+       -moz-transform: $transform;
+        -ms-transform: $transform;
+         -o-transform: $transform;
+            transform: $transform;
+  }
+
+  &:after {
+
+    left: 50%;
+    // correct AT themes .clearfix:after 
+    visibility: visible; 
+
+    $shadow: -.5em 0.8em 1em 1em $header_shadow;
+        -webkit-box-shadow: $shadow;
+           -moz-box-shadow: $shadow;
+                box-shadow: $shadow;
+
+
+    $transform: skew(-200deg, -1deg);
+    -webkit-transform: $transform;
+       -moz-transform: $transform;
+        -ms-transform: $transform;
+         -o-transform: $transform;
+            transform: $transform;
+
+  }
+
+}
+
+@mixin page-curl-bottom {
+
+  position: relative;
+
+  &:before,
+  &:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+
+    top:  100%;
+    bottom: 0%;
+    left: 0;
+    width: 50%;
+
+  }
+
+  &:before {
+    $shadow: 2em -0.4em 0.75em 1em $header_shadow;
+    -webkit-box-shadow: $shadow;
+       -moz-box-shadow: $shadow;
+            box-shadow: $shadow;
+
+    $transform: skew(-431deg, -2deg);
+    -webkit-transform: $transform;
+       -moz-transform: $transform;
+        -ms-transform: $transform;
+         -o-transform: $transform;
+            transform: $transform;
+  }
+
+  &:after {
+
+    left: 50%;
+    // correct AT themes .clearfix:after 
+    visibility: visible; 
+
+    $shadow: -2em -0.4em 0.75em 1em $header_shadow;
+        -webkit-box-shadow: $shadow;
+           -moz-box-shadow: $shadow;
+                box-shadow: $shadow;
+
+
+    $transform: skew(431deg, 2deg);
+    -webkit-transform: $transform;
+       -moz-transform: $transform;
+        -ms-transform: $transform;
+         -o-transform: $transform;
+            transform: $transform;
+
+  }
+
+}

@@ -257,12 +257,17 @@ var {
  */
 #nav-wrapper {
   .container {
+    @include page-curl-bottom();
     @include page-width();
     background-color: $header_bg;
+    z-index: 1;
   }
 }
 
-
+#menu-bar {
+  background-color: $header_bg;
+}
+ 
 /*
  * Wraps breadcrumb
  */
@@ -293,6 +298,7 @@ var {
  * Wraps the main content column
  */
 #content-wrapper {
+  margin-bottom: 2*$gutter-width;
   .container {
   }
 }
@@ -337,6 +343,7 @@ var {
 #panel-content {
   background-color: $content_bg;
   .container {
+    @include page-curl-bottom();
     @include page-width();
     padding-top: $gutter-width;
   }
