@@ -63,7 +63,7 @@
   &:before,
   &:after {
     z-index: -1;
-    position: absolute;
+    // position: absolute;
     content: "";
 
     top:  100%;
@@ -74,6 +74,7 @@
   }
 
   &:before {
+    position: absolute;
     $shadow: 2em -0.4em 0.75em 1em $header_shadow;
     -webkit-box-shadow: $shadow;
        -moz-box-shadow: $shadow;
@@ -89,6 +90,7 @@
 
   &:after {
 
+    position: relative;
     left: 50%;
     // correct AT themes .clearfix:after 
     visibility: visible; 
