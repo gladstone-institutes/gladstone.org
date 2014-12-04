@@ -1,0 +1,214 @@
+<?php
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
+function biblio_ucsf_profiles_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#biblio_ucsf_profiles":
+      return '<p>' . t("Import Biblio nodes via PMIDs pulled from UCSF profiles") . '</p>';
+      break;
+  }
+} 
+
+/**
+ * Implements hook_menu().
+ */
+function biblio_ucsf_profiles_menu() {
+  $items = array();
+  $items['admin/config/content/biblio/ucsf_profiles'] = array(
+    'title' => 'UCSF Profiles',
+    'description' => 'Configure UCSF Profiles',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('biblio_ucsf_profiles_form'),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_LOCAL_TASK,
+  );
+  return $items;
+}
+
+/**
+ * Page callback: Biblio UCSF Profiles settings
+ *
+ * @see biblio_ucsf_profiles_menu()
+ */
+function biblio_ucsf_profiles_form($form, &$form_state) {
+  $form['biblio_ucsf_profiles_active'] = array(
+  	'#type' => 'checkbox',
+  	'#title' => t('Poll UCSF Profiles for publications'),
+  	'#default_value' => variable_get('biblio_ucsf_profiles_active', 1)
+  );
+
+  $form['biblio_ucsf_profiles_cron'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Cron Frequency'),
+    '#size' => 10,
+    '#maxlength' => 10,
+    // '#process' => array('form_process_radios'),
+    '#description' => t('Time(seconds) between updates'),
+    '#default_value' => variable_get('biblio_ucsf_profiles_cron', 3*24*60*60),
+    // '#required' => TRUE,
+  );
+
+  // https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7#button
+  $form['force_poll'] = array(
+  	  '#type' => 'submit',
+      '#value' => 'Force API Poll',
+      '#submit' => array('biblio_ucsf_profiles_force_poll')
+
+	  
+	  // '#type' => 'button', 
+	  // '#value' => t('Force API Poll'), 
+	  // '#weight' => 19,
+	  // '#submit' => array('biblio_ucsf_profiles_force_poll'),
+	);
+
+  return system_settings_form($form);
+}
+
+
+/**
+ * Form submission handler for biblio_ucsf_profiles_import().
+ *
+ * @param array $form
+ *   The form being used to edit the module settings.
+ *
+ * @param array $form_state
+ *   An associative array containing the current state of the form.
+ */
+function biblio_ucsf_profiles_force_poll($form, &$form_state) {
+  module_load_include('php','biblio_ucsf_profiles', 'lib/jsonpath-0.8.1');
+  module_load_include('module','biblio_pm');
+  module_load_include('inc','biblio','includes/biblio.import.export');
+
+  $profiles = views_get_view_result('biblio_ucsf_profiles');
+  foreach ($profiles as $profile) {
+    biblio_ucsf_profiles_import($profile);
+  }
+}
+
+/**
+ * UCSF Profiles -> BiblioEntrezClient Importer!
+ */
+function biblio_ucsf_profiles_import($profile,$batch=TRUE) {
+  
+  // Profiles API 
+  // @see http://opendata.profiles.ucsf.edu/
+  $api = "http://api.profiles.ucsf.edu/json/v2/?publications=full&source=gladstoneinstitutes.org";
+
+
+  $pmids = array();
+  $uid = field_get_items('profile', $profile, 'profile_uid');
+  // $ucsf_id = field_get_items('profile', $profile, 'field_field_ucsf_id');
+  // if ( array_key_exists('raw',$ucsf_id) && array_key_exists('value',$ucsf_id['raw']) ) {
+  //   //http://ucsfprofiles.proboards.com/thread/3/example-code-xml-data-feed
+  //   $person_id = floor($ucsf_id['raw']['value']/10.0) + 2569307;
+  // } else {
+  //   return;
+  // }
+  // $url = $api."&Person=".$person_id;
+  
+  $ucsf_profile_name = field_get_items('profile', $profile, 'field_field_text');
+  if ( array_key_exists('raw',$ucsf_profile_name) && array_key_exists('value',$ucsf_profile_name['raw']) ) {
+    $ucsf_profile_name = $ucsf_profile_name['raw']['value'];
+  } else {
+    return;
+  }  
+  $url = $api."&ProfilesURLName=".$ucsf_profile_name;
+
+  $options = array(
+    'headers' => array(),
+    'method' => 'GET',
+    'data' => NULL,
+    'max_redirects' => 0,
+    'timeout' => 30.0,
+    'context' => NULL
+  );
+
+  $json = drupal_json_decode( drupal_http_request($url,$options)->data);
+  $pubs = jsonPath($json,'$.Profiles[0].Publications.*.PublicationSource[0].PMID');
+  $err  = jsonPath($json,'$.error');
+
+  if (!$err && is_array($pubs) && count($pubs) > 0 ) {
+    $pubs = array_filter( array_unique($pubs) );
+    biblio_pm_import_ids($pubs,$terms=array(),$batch=TRUE);
+  }
+
+  // variable_set('ucsf_profiles_ids', $form_state['values']['ids']);
+  // drupal_set_message(t('Employee IDs are saved.'), 'status', FALSE);
+}
+
+/**
+ * Implements hook_cron_queue_info().
+ * See: https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_cron_queue_info/7
+ */
+function biblio_ucsf_profiles_cron_queue_info() {
+  $queues['biblio_ucsf_profiles'] = array(
+    'worker callback' => 'biblio_ucsf_profiles_import',
+    'time' => 10 * 60, //10 min * 60sec
+  );
+  return $queues;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function biblio_ucsf_profiles_cron() {
+
+  if ($interval = variable_get('biblio_ucsf_profiles_cron', 0)) {
+    if ((time() - $interval) >= variable_get('ucsf_profiles_cron_last', 0)) {
+      module_load_include('php','biblio_ucsf_profiles', 'lib/jsonpath-0.8.1');
+      module_load_include('module','biblio_pm');
+      module_load_include('inc','biblio','includes/biblio.import.export');
+
+      $queue = DrupalQueue::get('biblio_ucsf_profiles');
+      $profiles = views_get_view_result('biblio_ucsf_profiles');
+      foreach ($profiles as $profile) {
+        $queue->createItem($profile);
+      }
+
+      variable_set('ucsf_profiles_cron_last', time());
+    }
+  }  
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function hook_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'biblio_ucsf_profiles') . '/includes/views',
+    // 'template path' => drupal_get_path('module', 'biblio_ucsf_profiles') . '/themes',
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

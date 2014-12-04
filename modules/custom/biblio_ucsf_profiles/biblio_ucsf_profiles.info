@@ -1,0 +1,10 @@
+name = Biblio UCSF Profiles
+description = Conects biblio to UCSF Profiles
+core = 7.x
+package = Biblio
+configure = admin/config/content/biblio/ucsf_profiles
+
+dependencies[] = biblio
+dependencies[] = biblio_pm
+dependencies[] = feeds
+dependencies[] = views
