@@ -818,6 +818,8 @@ function gladstone_profiles_default_page_manager_handlers() {
       'context' => array(
         0 => 'relationship_profile2_1',
       ),
+      'override_title' => 1,
+      'override_title_text' => 'Assistant',
     );
     $pane->cache = array();
     $pane->style = array(
