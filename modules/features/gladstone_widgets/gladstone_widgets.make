@@ -47,3 +47,7 @@ projects[fieldable_panels_panes][download][branch]   = 7.x-1.x
 ; Workaroudn for exportable FPPs https://www.drupal.org/node/2246893
 projects[fieldable_panels_panes][patch][]   = https://www.drupal.org/files/issues/properly-set-pane-subtype-on-edit-form-submit-0.patch
 
+
+projects[twitter_block][version] = 2.2
+projects[twitter_block][subdir] = contrib
+
