@@ -510,6 +510,11 @@ function gladstone_profiles_default_page_manager_handlers() {
         ),
       ),
     ),
+    'panels_css_js_files_css' => '[theme]/css/page_manager/profile.css',
+    'panels_css_js_files_js' => '',
+    'panels_css_js_code_css' => '',
+    'panels_css_js_code_js' => '',
+    'panels_css_js_code_js_wrapper' => '0',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_25_50';
@@ -918,7 +923,10 @@ function gladstone_profiles_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'realname',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -947,7 +955,10 @@ function gladstone_profiles_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'display-title',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
