@@ -34,7 +34,7 @@ function gladstone_widgets_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => 'general',
+      'file_directory' => 'files',
       'file_extensions' => 'pdf txt',
       'max_filesize' => '',
       'user_register_form' => FALSE,
@@ -153,7 +153,7 @@ function gladstone_widgets_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => 'general',
+      'file_directory' => 'images',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
       'focus_lock_ratio' => 0,
@@ -279,7 +279,7 @@ function gladstone_widgets_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'images',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
       'focus_lock_ratio' => 0,
@@ -694,7 +694,7 @@ function gladstone_widgets_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => '',
+      'file_directory' => 'video',
       'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg oga ogv wmv ico',
       'max_filesize' => '',
       'user_register_form' => FALSE,
