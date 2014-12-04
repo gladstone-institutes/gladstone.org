@@ -67,6 +67,8 @@ function theme_feature_image_render_pane($vars) {
     if ($entity->link) {
       $alias = drupal_get_path_alias($entity->path);
       $link = ($alias) ? $alias : $entity->path;
+    } else {
+      $link = NULL;
     }
 
     $path = $vars['style']['hook theme']['feature_image_theme_pane']['path'];
