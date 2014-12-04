@@ -193,14 +193,14 @@ function institute_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'use_pager' => 1,
+      'use_pager' => 0,
       'pager_id' => '0',
-      'items_per_page' => '10',
+      'items_per_page' => '0',
       'offset' => '0',
       'fields_override' => array(
-        'user' => 1,
+        'user' => 0,
         'field_label_alias' => 1,
-        'field_operational_roles' => 1,
+        'field_operational_roles' => 0,
       ),
       'exposed' => array(
         'field_operational_units_tid' => '',
