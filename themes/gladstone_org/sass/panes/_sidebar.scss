@@ -1,0 +1,14 @@
+.pane-sidebar {
+
+	.menu li {
+		border-bottom: 0.1em dotted $blue_5;
+		padding: $gutter-width 0 .3*$gutter-width 0;
+
+		a {
+			margin-left: .75*$gutter-width;
+		}
+		&.expanded ul {
+			border-top: 0.1em dotted $blue_5;
+		} 
+	}
+}

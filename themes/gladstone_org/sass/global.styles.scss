@@ -55,6 +55,10 @@ body {
  *   HTML Elements
  * ========================================================================== */
 
+h1,h2,h3 {
+  color: $blue_5;
+}
+
 h1 {}
 
 
@@ -329,6 +333,11 @@ var {
  */
 #panel-feature {
 
+  #breadcrumb,
+  #breadcrumb a {
+    color: $page_txt;
+  }
+
   .views-field-field-image {
     line-height: 0;
   }
@@ -342,6 +351,7 @@ var {
 
 #panel-content {
   background-color: $content_bg;
+
   .container {
     @include page-curl-bottom();
     @include page-width();
@@ -700,7 +710,7 @@ a {
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
     outline: none;
   }
 }
@@ -893,6 +903,8 @@ ul.menu {
   }
 
   li {
+    list-style-type: none;
+    list-style-image: none;
     margin: 0;
 
     &.collapsed,
@@ -1460,7 +1472,7 @@ ul.action-links {
 
   ul,
   ol {
-    padding: 0 0 0 15px;
+    // padding: 0 0 0 15px;
   }
 
   li {
