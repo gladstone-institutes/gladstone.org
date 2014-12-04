@@ -1,0 +1,25 @@
+//
+// The word "Unpublished" displayed underneath unpublished nodes and comments
+//
+@mixin unpublished {
+  color: pink; // target browsers that do not support rgba
+  color: rgba(239, 170, 170, 0.4);
+  font-family: $impact;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+
+  // @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  //   .ie6-7 &>* {
+  //     position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+  //   }
+  // }
+  
+}

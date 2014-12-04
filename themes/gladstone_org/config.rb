@@ -32,6 +32,7 @@ images_dir = "css/images"
 add_import_path "./sass/panes"
 add_import_path "./sass/page_manager"
 add_import_path "./sass/font-awesome"
+add_import_path "./sass/mixins"
 
 
 ################################################################################
