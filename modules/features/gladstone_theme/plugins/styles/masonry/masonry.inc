@@ -93,8 +93,8 @@ function theme_masonry_render_pane($vars) {
   $settings = $vars['settings'];
 
 
-  dpm($vars,'Pane');
-  dpm($entity,'Ent');
+  // dpm($vars,'Pane');
+  // dpm($entity,'Ent');
 
 
   if (!empty($vars['content']->title)) {
