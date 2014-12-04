@@ -57,6 +57,10 @@ body {
 
 h1,h2,h3 {
   color: $blue_5;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 h1 {}
@@ -335,7 +339,9 @@ var {
 
   #breadcrumb,
   #breadcrumb a {
-    color: $page_txt;
+    color: $page_overlay;
+    // text-shadow: 0px 1px 1px #4d4d4d;
+    font-weight: bold;
   }
 
   .views-field-field-image {
@@ -1126,13 +1132,14 @@ ul.pager li {
 
 
 ul.primary {
-  border-bottom-color: $border;
-  margin: 20px 0;
-  padding: 0 0 0 5px;
+  border-bottom: none;  
+  // border-bottom-color: $border;
+  // margin: 20px 0;
+  // padding: 0 0 0 5px;
 
   li {
     display: block;
-    float: left;
+    float: right;
     margin: 0 1px -1px;
 
     a {
@@ -1157,7 +1164,7 @@ ul.primary {
     a,
     a:hover,
     a:focus {
-      background-color: $page;
+      background-color: $white;
       border-bottom-color: $page;
     }
   }

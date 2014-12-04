@@ -9,6 +9,10 @@
 @import "panes/directory_widgets";
 
 
+.pane-page-breadcrumb {
+	float: left;
+}
+
 #panel-content {
 	section.panel-pane {
 		&.light { background-color: $tan;}
