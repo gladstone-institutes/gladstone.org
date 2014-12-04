@@ -71,6 +71,12 @@ projects[uuid][subdir]	= "contrib"
 ; CTools Contexts are missing UUID support.
 projects[uuid][patch][] = https://www.drupal.org/files/issues/uuid_ctools_context-2145567-5.patch
 
+projects[uuid_features][version] = 7.x-1.0-alpha4
+projects[uuid_features][subdir] = contrib
+projects[uuid_features][download][type]     = git
+projects[uuid_features][download][revision] = 31938d91
+projects[uuid_features][download][branch]   = 7.x-1.x
+
 projects[entity_menu_links][version] = "1.x-dev"
 projects[entity_menu_links][subdir]  = "contrib"
 projects[entity_menu_links][download][type]     = git

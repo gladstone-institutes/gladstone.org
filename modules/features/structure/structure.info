@@ -47,6 +47,7 @@ dependencies[] = taxonomy
 dependencies[] = technology
 dependencies[] = toolbar
 dependencies[] = uuid
+dependencies[] = uuid_features
 dependencies[] = uuid_path
 features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = CKEditor Global Profile
