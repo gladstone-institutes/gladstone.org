@@ -76,45 +76,45 @@ function structure_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-544a756e-6cc5-496c-bc99-3e4a0ca059a7';
+    $pane->pid = 'new-c738e1ba-ae66-4a27-a9b7-c0893f839af7';
     $pane->panel = 'gs3_50_25_25_first';
     $pane->type = 'views_panes';
-    $pane->subtype = 'content_widgets-content_widget_item_pane';
+    $pane->subtype = 'content_widgets-content_widget_news_hub_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'more_link' => 0,
-      'fields_override' => array(
-        'title' => 1,
-        'body' => 1,
-        'created' => 1,
-        'field_image' => 0,
-      ),
+      'items_per_page' => '2',
       'exposed' => array(
-        'title' => 'Gladstone Scientist Elected to AAAS',
-        'field_operational_units_tid' => '',
-        'sort_by' => 'created',
-        'sort_order' => 'DESC',
+        'promote' => '0',
+        'sticky' => '0',
       ),
       'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
-      'style' => 'default',
+      'settings' => array(
+        'url' => '',
+        'icon' => 'fa-rss',
+        'width' => 'width-100',
+        'float' => 'float-left',
+        'clear' => 'null',
+        'image_layout' => 'image-float-left',
+      ),
+      'style' => 'gladstone',
     );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '544a756e-6cc5-496c-bc99-3e4a0ca059a7';
-    $display->content['new-544a756e-6cc5-496c-bc99-3e4a0ca059a7'] = $pane;
-    $display->panels['gs3_50_25_25_first'][0] = 'new-544a756e-6cc5-496c-bc99-3e4a0ca059a7';
+    $pane->uuid = 'c738e1ba-ae66-4a27-a9b7-c0893f839af7';
+    $display->content['new-c738e1ba-ae66-4a27-a9b7-c0893f839af7'] = $pane;
+    $display->panels['gs3_50_25_25_first'][0] = 'new-c738e1ba-ae66-4a27-a9b7-c0893f839af7';
     $pane = new stdClass();
-    $pane->pid = 'new-d2b111b3-4e1f-4d17-bedf-1019a19cf036';
-    $pane->panel = 'gs3_50_25_25_top';
+    $pane->pid = 'new-e18ba9ac-64e6-43bf-bef6-2591869c8c73';
+    $pane->panel = 'gs3_50_25_25_first';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:8ec6754e-bdb2-42cc-875e-cd12f57cbab0';
+    $pane->subtype = 'uuid:430d4112-be9c-4653-956a-645ab9ddbf9c';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -123,9 +123,204 @@ function structure_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => array(
-        'title_tag' => 'h1',
-        'title_color' => '#FFF',
-        'caption_color' => '#FFF',
+        'url' => '',
+        'icon' => 'fa-play-circle-o',
+        'width' => 'width-50',
+        'float' => 'float-left',
+        'clear' => 'null',
+        'image_layout' => 'image-full',
+      ),
+      'style' => 'gladstone_media',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'e18ba9ac-64e6-43bf-bef6-2591869c8c73';
+    $display->content['new-e18ba9ac-64e6-43bf-bef6-2591869c8c73'] = $pane;
+    $display->panels['gs3_50_25_25_first'][1] = 'new-e18ba9ac-64e6-43bf-bef6-2591869c8c73';
+    $pane = new stdClass();
+    $pane->pid = 'new-2f8fe402-0a54-4420-acf5-83bf8f3a39eb';
+    $pane->panel = 'gs3_50_25_25_first';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:6d4bd53f-a154-470d-8ed5-ccea06f9e0ca';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'url' => '',
+        'width' => 'width-50',
+        'float' => 'float-left',
+        'clear' => 'null',
+      ),
+      'style' => 'gladstone_quote_jm',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '2f8fe402-0a54-4420-acf5-83bf8f3a39eb';
+    $display->content['new-2f8fe402-0a54-4420-acf5-83bf8f3a39eb'] = $pane;
+    $display->panels['gs3_50_25_25_first'][2] = 'new-2f8fe402-0a54-4420-acf5-83bf8f3a39eb';
+    $pane = new stdClass();
+    $pane->pid = 'new-ccf9c0b5-59f2-484c-af33-ff6234957b42';
+    $pane->panel = 'gs3_50_25_25_first';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:d6dbded7-1639-4f46-8cb6-32a0de08c7cc';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'url' => '',
+        'icon' => '',
+        'width' => 'width-50',
+        'float' => 'float-right',
+        'clear' => 'null',
+        'image_layout' => 'image-full',
+      ),
+      'style' => 'gladstone',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'ccf9c0b5-59f2-484c-af33-ff6234957b42';
+    $display->content['new-ccf9c0b5-59f2-484c-af33-ff6234957b42'] = $pane;
+    $display->panels['gs3_50_25_25_first'][3] = 'new-ccf9c0b5-59f2-484c-af33-ff6234957b42';
+    $pane = new stdClass();
+    $pane->pid = 'new-7e452c47-4966-469d-b5bb-6419c10ecb50';
+    $pane->panel = 'gs3_50_25_25_first';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:8ec939f2-35ae-4d63-929b-00c890ea51ab';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'url' => '',
+        'width' => 'width-50',
+        'float' => 'float-left',
+        'clear' => 'null',
+      ),
+      'style' => 'gladstone_quote',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = '7e452c47-4966-469d-b5bb-6419c10ecb50';
+    $display->content['new-7e452c47-4966-469d-b5bb-6419c10ecb50'] = $pane;
+    $display->panels['gs3_50_25_25_first'][4] = 'new-7e452c47-4966-469d-b5bb-6419c10ecb50';
+    $pane = new stdClass();
+    $pane->pid = 'new-eaaf3760-8808-47de-a764-897b0a187401';
+    $pane->panel = 'gs3_50_25_25_second';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:25f3cd3d-3153-4561-844d-b3ae9ffeee19';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'url' => '',
+        'icon' => '',
+        'width' => 'width-100',
+        'float' => 'float-left',
+        'clear' => 'null',
+      ),
+      'style' => 'gladstone_overlay',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'eaaf3760-8808-47de-a764-897b0a187401';
+    $display->content['new-eaaf3760-8808-47de-a764-897b0a187401'] = $pane;
+    $display->panels['gs3_50_25_25_second'][0] = 'new-eaaf3760-8808-47de-a764-897b0a187401';
+    $pane = new stdClass();
+    $pane->pid = 'new-420cd553-0164-45dc-8581-79abf4728ea1';
+    $pane->panel = 'gs3_50_25_25_third';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:c9a58689-7b2b-4f2d-8109-6b421f765214';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'url' => '',
+        'width' => 'width-100',
+        'float' => 'float-left',
+        'clear' => 'null',
+      ),
+      'style' => 'gladstone_quote_jm',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '420cd553-0164-45dc-8581-79abf4728ea1';
+    $display->content['new-420cd553-0164-45dc-8581-79abf4728ea1'] = $pane;
+    $display->panels['gs3_50_25_25_third'][0] = 'new-420cd553-0164-45dc-8581-79abf4728ea1';
+    $pane = new stdClass();
+    $pane->pid = 'new-07c3735c-41b2-4be2-818f-b81666745b80';
+    $pane->panel = 'gs3_50_25_25_third';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:f81766ee-5368-4c35-ace6-160deefd3fe4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'url' => '',
+        'icon' => '',
+        'width' => 'width-100',
+        'float' => 'float-left',
+        'clear' => 'null',
+      ),
+      'style' => 'gladstone_overlay_jm',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '07c3735c-41b2-4be2-818f-b81666745b80';
+    $display->content['new-07c3735c-41b2-4be2-818f-b81666745b80'] = $pane;
+    $display->panels['gs3_50_25_25_third'][1] = 'new-07c3735c-41b2-4be2-818f-b81666745b80';
+    $pane = new stdClass();
+    $pane->pid = 'new-3757051d-1dc3-41f9-843f-14fb517237e4';
+    $pane->panel = 'gs3_50_25_25_top';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:91b7243d-de5b-4eb2-a789-562a48273cbb';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'title_tag' => 'h3',
+        'title_color' => '#000',
+        'caption_color' => '#000',
         'caption_size' => '1em',
       ),
       'style' => 'feature_image',
@@ -134,9 +329,9 @@ function structure_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'd2b111b3-4e1f-4d17-bedf-1019a19cf036';
-    $display->content['new-d2b111b3-4e1f-4d17-bedf-1019a19cf036'] = $pane;
-    $display->panels['gs3_50_25_25_top'][0] = 'new-d2b111b3-4e1f-4d17-bedf-1019a19cf036';
+    $pane->uuid = '3757051d-1dc3-41f9-843f-14fb517237e4';
+    $display->content['new-3757051d-1dc3-41f9-843f-14fb517237e4'] = $pane;
+    $display->panels['gs3_50_25_25_top'][0] = 'new-3757051d-1dc3-41f9-843f-14fb517237e4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
