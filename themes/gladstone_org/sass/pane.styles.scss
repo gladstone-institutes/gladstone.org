@@ -1,0 +1,16 @@
+@import "base";
+
+.gladstone-pane,
+.gladstone-overlay,
+.gladstone-media-pane {
+	& .title {
+		color: $pane_header_txt;
+	}
+}
+
+.gladstone-quote,
+.gladstone-quote-jm {
+	& .title {
+		color: $accent;
+	}
+}
