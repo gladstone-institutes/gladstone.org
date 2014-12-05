@@ -552,6 +552,15 @@ function gladstone_roles_user_default_permissions() {
     'module' => 'search',
   );
 
+  // Exported permission: use PHP for settings.
+  $permissions['use PHP for settings'] = array(
+    'name' => 'use PHP for settings',
+    'roles' => array(
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'php',
+  );
+
   // Exported permission: use advanced search.
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
@@ -644,6 +653,15 @@ function gladstone_roles_user_default_permissions() {
     'name' => 'use text format limited_html',
     'roles' => array(
       'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format php_code.
+  $permissions['use text format php_code'] = array(
+    'name' => 'use text format php_code',
+    'roles' => array(
+      'superadmin' => 'superadmin',
     ),
     'module' => 'filter',
   );
