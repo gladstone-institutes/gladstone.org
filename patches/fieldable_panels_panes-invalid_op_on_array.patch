@@ -1,0 +1,21 @@
+diff --git a/fieldable_panels_panes.module b/fieldable_panels_panes.module
+index c54c05e..e9bab50 100644
+--- a/fieldable_panels_panes.module
++++ b/fieldable_panels_panes.module
+@@ -132,10 +132,12 @@ function fieldable_panels_panes_entity_info_alter(&$info) {
+ 
+   if (is_array($info) && !empty($info)) {
+     foreach ($info['fieldable_panels_pane']['bundles'] as $name => &$bundle) {
+-      if (isset($bundle['admin']['path']) && strpos($bundle['admin']['path'], $old_base_path) !== FALSE) {
+-        $bundle['admin']['path'] = str_replace($old_base_path, $new_base_path, $bundle['admin']['path']);
+-        $bundle['admin']['real path'] = str_replace($old_base_path, $new_base_path, $bundle['admin']['real path']);
+-        $bundle['admin']['bundle argument'] = $bundle['admin']['bundle argument'] - 1;
++      if (isset($bundle['admin']['path'][0]) && strpos($bundle['admin']['path'][0], $old_base_path) !== FALSE) {
++        foreach ($bundle['admin']['bundle argument'] as $i => $argument) {
++          $bundle['admin']['path'][$i] = str_replace($old_base_path, $new_base_path, $bundle['admin']['path'][$i]);
++          $bundle['admin']['real path'][$i] = str_replace($old_base_path, $new_base_path, $bundle['admin']['real path'][$i]);
++          $bundle['admin']['bundle argument'][$i] = $argument - 1;
++        }
+       }
+     }
+   }
