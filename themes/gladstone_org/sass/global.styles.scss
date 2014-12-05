@@ -1269,8 +1269,8 @@ ul.action-links {
  */
 .field-type-taxonomy-term-reference {
 
-  /* The same bottom margin as p, blockquote, ul, ol and dl */
-  margin-bottom: 1.5em;
+  // The same bottom margin as p, blockquote, ul, ol and dl
+  // margin-bottom: 1.5em;
 
   &.field-label-inline .field-items {
     margin: 0;

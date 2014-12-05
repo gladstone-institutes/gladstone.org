@@ -14,6 +14,7 @@
 	margin-top: -0.2*$gw;
 }
 
+
 .pane-profile2-field-image,
 .pane-profile2-field-fax,
 .pane-profile-widgets-profile-widget-prof-titles-ca-pane {
@@ -34,6 +35,15 @@
 	}
 }
 
+.region-gs3-25-25-50-inset {
+	h2 {
+		margin-bottom: .5*$gw;
+	}
+	.region-inner > section:not(:first-child) {
+		margin-bottom: .5*$gw;
+	}
+}
+
 .pane-profile2-field-phone,
 .pane-profile2-field-fax {
 	h2 {
@@ -50,6 +60,55 @@
 	.views-row {
 		margin-bottom: .5*$gw;
 	}
+}
+
+
+// 
+// CV Tab
+// ---------
+.field-name-field-lab-focus,
+.field-name-field-achievements {
+	
+	.field-item {
+		margin-bottom: .5*$gw;
+		display: list-item;
+		margin-left: 1.5*$gw;
+	}
+}
+
+.pane-profile2-field-professional-titles,
+.pane-profile2-field-research-interests,
+.pane-profile2-field-affiliations,
+.pane-profile2-field-education {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+	}
+}
+
+.pane-profile2-field-professional-titles {
+	.field-name-field-professional-titles > div > .field-item {
+		line-height: 1.2em;
+		margin-bottom: .75*$gw;
+
+		.field-name-field-text {
+			font-style: oblique;
+		}
+	}
+}
+.pane-profile2-field-education {
+	.field-item .field { 
+		float:left; 
+	}
+}
+.field-name-field-date-yyyy { 
+	width: 2.5em;
+}
+.field-name-field-degree {
+	width: 2em;
 }
 
 
