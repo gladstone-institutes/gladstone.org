@@ -79,6 +79,7 @@ features[menu_custom][] = menu-quick-menu
 features[page_manager_pages][] = home
 features[page_manager_pages][] = panelize
 features[uuid_entities][] = structure_sitemap
+features[uuid_fpp][] = 23688efa-ef09-4a7d-9052-41c870c65040
 features[uuid_fpp][] = 25f3cd3d-3153-4561-844d-b3ae9ffeee19
 features[uuid_fpp][] = 430d4112-be9c-4653-956a-645ab9ddbf9c
 features[uuid_fpp][] = 6d4bd53f-a154-470d-8ed5-ccea06f9e0ca

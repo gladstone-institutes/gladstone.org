@@ -53,6 +53,17 @@ function structure_default_page_manager_pages() {
     'access' => array(
       'logic' => 'and',
     ),
+    'panels_css_js_files_css' => '',
+    'panels_css_js_files_js' => '',
+    'panels_css_js_code_css' => '',
+    'panels_css_js_code_js' => 'window.twttr = (function (d, s, id) {
+  var t, js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id; js.src= "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+}(document, "script", "twitter-wjs"));',
+    'panels_css_js_code_js_wrapper' => '0',
   );
   $display = new panels_display();
   $display->layout = 'gs3_50_25_25';
@@ -250,6 +261,35 @@ function structure_default_page_manager_pages() {
     $pane->uuid = 'eaaf3760-8808-47de-a764-897b0a187401';
     $display->content['new-eaaf3760-8808-47de-a764-897b0a187401'] = $pane;
     $display->panels['gs3_50_25_25_second'][0] = 'new-eaaf3760-8808-47de-a764-897b0a187401';
+    $pane = new stdClass();
+    $pane->pid = 'new-c7d83f73-e4c2-41ff-b1c1-ecd732b4f1f7';
+    $pane->panel = 'gs3_50_25_25_second';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:23688efa-ef09-4a7d-9052-41c870c65040';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'url' => '',
+        'icon' => 'fa-twitter',
+        'width' => 'width-100',
+        'float' => 'float-left',
+        'clear' => 'null',
+        'image_layout' => 'image-full',
+      ),
+      'style' => 'gladstone',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'c7d83f73-e4c2-41ff-b1c1-ecd732b4f1f7';
+    $display->content['new-c7d83f73-e4c2-41ff-b1c1-ecd732b4f1f7'] = $pane;
+    $display->panels['gs3_50_25_25_second'][1] = 'new-c7d83f73-e4c2-41ff-b1c1-ecd732b4f1f7';
     $pane = new stdClass();
     $pane->pid = 'new-420cd553-0164-45dc-8581-79abf4728ea1';
     $pane->panel = 'gs3_50_25_25_third';

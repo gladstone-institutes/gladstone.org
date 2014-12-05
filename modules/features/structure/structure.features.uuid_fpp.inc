@@ -11,6 +11,40 @@ function structure_uuid_features_default_fpps() {
   $fpps = array();
 
   $fpps[] = array(
+    'timestamp' => 1417745560,
+    'title' => '@gladstonelabs',
+    'log' => '',
+    'bundle' => 'text',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 1,
+    'admin_title' => '@gladstonelabs twitter feed',
+    'admin_description' => '',
+    'category' => 'Reusable Content',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1417744569,
+    'uuid' => '23688efa-ef09-4a7d-9052-41c870c65040',
+    'language' => 'und',
+    'field_longtext' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<a class="twitter-timeline"
+  href="https://twitter.com/gladstonelabs"
+  data-widget-id="516743444740337664"
+  data-screen-name="gladstonelabs"
+  data-link-color="#0c4a6"
+  data-border-color="#0c4a6"
+  height="362px"
+  data-chrome="noheader nofooter noborders noscrollbar transparent"
+  data-show-replies="false"
+></a>',
+          'format' => 'php_code',
+        ),
+      ),
+    ),
+  );
+  $fpps[] = array(
     'timestamp' => 1417733712,
     'title' => 'SCIENTIST SPOTLIGHT',
     'log' => '',
