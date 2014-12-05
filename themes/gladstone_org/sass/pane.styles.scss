@@ -14,3 +14,26 @@
 		color: $accent;
 	}
 }
+
+
+
+.pane.inner {
+	margin: 0;
+}
+
+.pane.width-50 {
+	&.float-left {
+		& > .pane.inner {
+			@extend .pane.inner;
+			padding-right: .5*$gutter-width;
+		}
+	}
+
+	&.float-right {
+		& > .pane.inner {
+			@extend .pane.inner;
+			padding-left: .5*$gutter-width;
+		}
+	}
+
+}

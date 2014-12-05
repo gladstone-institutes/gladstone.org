@@ -32,7 +32,7 @@ function gladstone_org_gs3_50_25_25_panels_layouts() {
       'gs3-50-25-25' => array(
         'css' => array(
           '25' => array('.gs3-50-25-25 .container > .region' => 'width:25%'),
-          '48' => array('.gs3-50-25-25 .container > div.region-gs3-50-25-25-first' => 'width:48%'),
+          '50' => array('.gs3-50-25-25 .container > div.region-gs3-50-25-25-first' => 'width:50%'),
           'fdw' => array('.gs3-50-25-25 .container > .region-gs3-50-25-25-top,'. 
                          '.gs3-50-25-25 .container > .region-gs3-50-25-25-bottom'
                          => 'float:none;display:block;width:100%;clear:both'),

@@ -1,5 +1,5 @@
 .gladstone-quote {
-	background-color: rgb(0, 40, 61);
+	/*background-color: rgb(0, 40, 61);*/
 	color: white;
 	/*padding: 1em;*/
 	background-size: cover;
@@ -19,11 +19,15 @@
 	line-height: normal;
 }
 .gladstone-quote .content {
-	padding: 1em;
+	/*padding: 1em;*/
+	width: 100%;
 	position: absolute;
-	/*top: 1em;*/
+	top: 0;
 }
 
+.gladstone-quote .content .inner {
+	margin: 1em;
+}
 
 .gladstone-quote.image-full img {
 

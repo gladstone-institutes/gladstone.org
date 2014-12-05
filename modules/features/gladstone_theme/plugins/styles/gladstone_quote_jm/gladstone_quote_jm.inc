@@ -67,7 +67,7 @@ function theme_gladstone_quote_jm_render_pane($vars) {
     // make path relative, this fails for sites in a subdir
     // $bg_image_url = preg_replace('#' . $base_url . '#', '', $bg_image_url);
     $settings['bg_image_url'] = $bg_image_url;
-    $css = '.gladstone-quote-jm.fpp-id-'.$entity->fpid.' .content-wrapper { background-image: url('.$bg_image_url.');}';
+    $css = '.gladstone-quote-jm.fpp-id-'.$entity->fpid.' .content-wrapper { background: rgb(0, 40, 61) url('.$bg_image_url.') no-repeat;}';
     drupal_add_css($css,array('type' => 'inline'));  
 
     $path = $vars['style']['path'];

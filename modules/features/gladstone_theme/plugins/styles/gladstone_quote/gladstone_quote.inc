@@ -69,7 +69,7 @@ function theme_gladstone_quote_render_pane($vars) {
     $path = $vars['style']['path'];
     drupal_add_css($path.'/gladstone_quote.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 
-    $css = '.gladstone-quote.fpp-id-'.$entity->fpid.' { background-image: url('.$bg_image_url.');}';
+    $css = '.gladstone-quote.fpp-id-'.$entity->fpid.' .content-wrapper { background: rgb(0, 40, 61) url('.$bg_image_url.') no-repeat;}';
     drupal_add_css($css,array('type' => 'inline'));    
 
     // prep css classes for pane container
