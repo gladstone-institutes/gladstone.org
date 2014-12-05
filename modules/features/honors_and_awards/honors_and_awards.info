@@ -22,6 +22,7 @@ features[field_instance][] = node-honors_and_awards-field_date_mmyy
 features[field_instance][] = node-honors_and_awards-field_files
 features[field_instance][] = node-honors_and_awards-field_honor_and_award
 features[field_instance][] = node-honors_and_awards-field_honors_and_awards_rels
+features[field_instance][] = node-honors_and_awards-field_image
 features[field_instance][] = node-honors_and_awards-field_node_refs
 features[field_instance][] = node-honors_and_awards-field_operational_units
 features[field_instance][] = node-honors_and_awards-field_research_tags

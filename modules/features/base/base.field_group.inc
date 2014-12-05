@@ -27,6 +27,7 @@ function base_field_group_info() {
       1 => 'field_files',
       2 => 'title',
       3 => 'path',
+      4 => 'field_image',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -58,6 +59,7 @@ function base_field_group_info() {
       1 => 'field_files',
       2 => 'title',
       3 => 'path',
+      4 => 'field_image',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

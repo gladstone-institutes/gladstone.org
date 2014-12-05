@@ -30,6 +30,7 @@ function honors_and_awards_field_group_info() {
       4 => 'field_honors_and_awards_rels',
       5 => 'title',
       6 => 'path',
+      7 => 'field_image',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
