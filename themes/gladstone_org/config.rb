@@ -34,6 +34,7 @@ add_import_path "./sass/page_manager"
 add_import_path "./sass/font-awesome"
 add_import_path "./sass/mixins"
 add_import_path "./sass/layouts"
+add_import_path "./sass/styles"
 
 
 ################################################################################

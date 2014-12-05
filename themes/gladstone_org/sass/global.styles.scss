@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  font-family: $sans-serif-small; // Set from _custom.scss font variables
+  font-family: $sans-serif; // Set from _custom.scss font variables
   font-size: 87.5%;
 }
 
@@ -1981,7 +1981,7 @@ tbody tr {
 tr {
 
   &.odd {
-    background: $page;
+    background: $tr_odd;
   }
 
   /* Table row striping */
@@ -1989,7 +1989,7 @@ tr {
   &.even,
   &:nth-child(2n+2)  {
     border-bottom: 0;
-    background-color: $ultralight;
+    background-color: $tr_even;
   }
 
   &.drag {}
@@ -1997,11 +1997,11 @@ tr {
   &.drag-previous {}
 
   &.odd td.active {
-    background-color: $light;
+    background-color: $tr_odd_active;
   }
 
   &.even td.active {
-    background-color: $medium_light;
+    background-color: $tr_even_active;
   }
 }
 

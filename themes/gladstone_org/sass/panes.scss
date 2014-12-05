@@ -37,6 +37,13 @@
 	{ margin-bottom: $gutter-width; }
 }
 
+// @finetune Page heading
+h1,h2,h3 {
+	&.page-heading {
+		margin-top: -0.4em;
+	}
+}
+
 .width-50 {
 	width: 50%;
 }
