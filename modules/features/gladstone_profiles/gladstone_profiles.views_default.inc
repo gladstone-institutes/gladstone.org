@@ -1795,16 +1795,6 @@ function gladstone_profiles_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
-  /* No results behavior: Global: Text area */
-  $handler->display->display_options['empty']['area']['id'] = 'area';
-  $handler->display->display_options['empty']['area']['table'] = 'views';
-  $handler->display->display_options['empty']['area']['field'] = 'area';
-  $handler->display->display_options['empty']['area']['label'] = 'No Results';
-  $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = '- No Results - 
-<br>
-*profile not configured';
-  $handler->display->display_options['empty']['area']['format'] = 'rich_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Relation: awarded to (node → profile2) */
   $handler->display->display_options['relationships']['relation_was_awarded_profile2']['id'] = 'relation_was_awarded_profile2';
