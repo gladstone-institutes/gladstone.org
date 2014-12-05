@@ -82,6 +82,29 @@ function base_image_default_styles() {
     ),
   );
 
+  // Exported image style: feed_full_width.
+  $styles['feed_full_width'] = array(
+    'name' => 'feed_full_width',
+    'label' => 'Feed full width (480x200)',
+    'effects' => array(
+      3 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 480,
+          'height' => 200,
+          'strength' => 'medium',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 

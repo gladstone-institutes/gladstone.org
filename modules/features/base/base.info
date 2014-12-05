@@ -90,6 +90,7 @@ features[filter][] = plain_text
 features[filter][] = rich_text
 features[image][] = feature_image_cover
 features[image][] = feature_image_page
+features[image][] = feed_full_width
 features[node][] = basic_page
 features[node][] = site_page
 features[page_manager_handlers][] = node_view_http_response
