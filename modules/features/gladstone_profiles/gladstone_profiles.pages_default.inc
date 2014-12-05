@@ -740,8 +740,8 @@ function gladstone_profiles_default_page_manager_handlers() {
       'delta_reversed' => FALSE,
       'formatter_settings' => array(),
       'context' => 'relationship_profile2_1',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Contact Information',
     );
     $pane->cache = array();
     $pane->style = array(
