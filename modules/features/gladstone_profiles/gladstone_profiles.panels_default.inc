@@ -152,7 +152,7 @@ function gladstone_profiles_default_panels_mini() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'view_mode' => 'full',
+        'view_mode' => 'profile',
       ),
       'context' => 'relationship_profile2_1',
       'override_title' => 0,
@@ -183,7 +183,7 @@ function gladstone_profiles_default_panels_mini() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'view_mode' => 'full',
+        'view_mode' => 'profile',
       ),
       'context' => 'relationship_profile2_1',
       'override_title' => 0,
@@ -245,7 +245,7 @@ function gladstone_profiles_default_panels_mini() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'view_mode' => 'full',
+        'view_mode' => 'profile',
       ),
       'context' => 'relationship_profile2_1',
       'override_title' => 0,

@@ -15,19 +15,19 @@ include_once 'gladstone_profiles.features.inc';
 * Leave as example of programmatically created view mode
 * https://www.drupal.org/node/1577752
 */
-// function gladstone_profiles_entity_info_alter(&$entity_info) {
-//   $entity_info['user']['view modes']['contact'] = array(
-//     'label' => t('Contact Card'),
-//     'custom settings' => TRUE,
-//     );
-//   $entity_info['profile2']['view modes']['contact'] = array(
-//     'label' => t('Contact Card'),
-//     'custom settings' => TRUE,
-//     );
-//   $entity_info['field_collection_item']['view modes']['contact'] = array(
-//     'label' => t('Contact Card'),
-//     'custom settings' => TRUE,
-//     );
-// }
+function gladstone_profiles_entity_info_alter(&$entity_info) {
+  $entity_info['user']['view modes']['profile'] = array(
+    'label' => t('Profile'),
+    'custom settings' => TRUE,
+    );
+  $entity_info['profile2']['view modes']['profile'] = array(
+    'label' => t('Profile'),
+    'custom settings' => TRUE,
+    );
+  $entity_info['field_collection_item']['view modes']['profile'] = array(
+    'label' => t('Profile'),
+    'custom settings' => TRUE,
+    );
+}
 
 
