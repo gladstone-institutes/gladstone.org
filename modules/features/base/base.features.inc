@@ -31,6 +31,61 @@ function base_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function base_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: feature_image_cover.
+  $styles['feature_image_cover'] = array(
+    'name' => 'feature_image_cover',
+    'label' => 'Feature Image (960x320)',
+    'effects' => array(
+      1 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 960,
+          'height' => 320,
+          'strength' => 'high',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: feature_image_page.
+  $styles['feature_image_page'] = array(
+    'name' => 'feature_image_page',
+    'label' => 'Feature Image (710x250)',
+    'effects' => array(
+      2 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 710,
+          'height' => 250,
+          'strength' => 'high',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function base_node_info() {
