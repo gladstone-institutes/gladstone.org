@@ -489,10 +489,10 @@ function events_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'event_calendar_date_value' => array(
-      'type' => 'panel',
+      'type' => 'user',
       'context' => 'entity:file.field-file-image-alt-text',
       'context_optional' => 0,
-      'panel' => '0',
+      'panel' => '1',
       'fixed' => '',
       'label' => 'Content: Date(s) -  start date (event_calendar_date)',
     ),
