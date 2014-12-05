@@ -35,6 +35,11 @@
 // 
 // Middle regions
 // ---------------
+.region-gs3-25-25-50-middle {
+	& > .region-inner {
+		padding-right: $gw;
+	}
+}
 .region-gs3-50-25-25-second {
 	& > .region-inner {
 		padding: 0 .5*$gutter-width;
