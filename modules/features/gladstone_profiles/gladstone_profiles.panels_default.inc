@@ -292,22 +292,26 @@ function gladstone_profiles_default_panels_mini() {
     $display->content['new-19aa163b-8471-4564-a994-0c8762ef2717'] = $pane;
     $display->panels['one_main'][7] = 'new-19aa163b-8471-4564-a994-0c8762ef2717';
     $pane = new stdClass();
-    $pane->pid = 'new-64ac4581-663d-4f6e-b0a8-24954a05e557';
+    $pane->pid = 'new-272d1469-554f-489b-9d56-2e90a6b9723a';
     $pane->panel = 'one_main';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'profile2:field_honors_and_awards_rels';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'profile_user_content-profile_awads_ca_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'relation_add_endpoints_and_fields',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(),
-      'context' => 'relationship_profile2_1',
-      'override_title' => 1,
-      'override_title_text' => 'Honors and Awards',
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '0',
+      'offset' => '0',
+      'fields_override' => array(
+        'field_date_mmyy' => 1,
+        'field_honor_and_award' => 1,
+      ),
+      'context' => array(
+        0 => 'requiredcontext_entity_uuid:user_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -317,9 +321,9 @@ function gladstone_profiles_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 8;
     $pane->locks = array();
-    $pane->uuid = '64ac4581-663d-4f6e-b0a8-24954a05e557';
-    $display->content['new-64ac4581-663d-4f6e-b0a8-24954a05e557'] = $pane;
-    $display->panels['one_main'][8] = 'new-64ac4581-663d-4f6e-b0a8-24954a05e557';
+    $pane->uuid = '272d1469-554f-489b-9d56-2e90a6b9723a';
+    $display->content['new-272d1469-554f-489b-9d56-2e90a6b9723a'] = $pane;
+    $display->panels['one_main'][8] = 'new-272d1469-554f-489b-9d56-2e90a6b9723a';
     $pane = new stdClass();
     $pane->pid = 'new-8e6bfc7f-fffa-440b-a8ec-e709aca07f9e';
     $pane->panel = 'one_main';

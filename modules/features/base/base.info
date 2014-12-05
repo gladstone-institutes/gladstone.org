@@ -99,6 +99,7 @@ features[panelizer_defaults][] = node:basic_page:default
 features[panelizer_defaults][] = node:site_page:default
 features[variable][] = array_filter
 features[variable][] = better_formats_per_field_core
+features[variable][] = date_format_year
 features[variable][] = field_bundle_settings_node__basic_page
 features[variable][] = field_bundle_settings_node__site_page
 features[variable][] = focus

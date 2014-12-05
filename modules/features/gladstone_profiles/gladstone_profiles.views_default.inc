@@ -1775,6 +1775,118 @@ function gladstone_profiles_views_default_views() {
       'label' => 'Biblio: Drupal UserID',
     ),
   );
+
+  /* Display: Honors and Awards (context aware) */
+  $handler = $view->new_display('panel_pane', 'Honors and Awards (context aware)', 'profile_awads_ca_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Honors and Awards';
+  $handler->display->display_options['display_description'] = 'Feed of a user\'s honors and award nodes';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_date_mmyy' => 'field_date_mmyy',
+    'field_honor_and_award' => 'field_honor_and_award',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'No Results';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '- No Results - 
+<br>
+*profile not configured';
+  $handler->display->display_options['empty']['area']['format'] = 'rich_text';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Relation: awarded to (node → profile2) */
+  $handler->display->display_options['relationships']['relation_was_awarded_profile2']['id'] = 'relation_was_awarded_profile2';
+  $handler->display->display_options['relationships']['relation_was_awarded_profile2']['table'] = 'node';
+  $handler->display->display_options['relationships']['relation_was_awarded_profile2']['field'] = 'relation_was_awarded_profile2';
+  $handler->display->display_options['relationships']['relation_was_awarded_profile2']['r_index'] = '-1';
+  $handler->display->display_options['relationships']['relation_was_awarded_profile2']['entity_deduplication_left'] = 0;
+  $handler->display->display_options['relationships']['relation_was_awarded_profile2']['entity_deduplication_right'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Award Date */
+  $handler->display->display_options['fields']['field_date_mmyy']['id'] = 'field_date_mmyy';
+  $handler->display->display_options['fields']['field_date_mmyy']['table'] = 'field_data_field_date_mmyy';
+  $handler->display->display_options['fields']['field_date_mmyy']['field'] = 'field_date_mmyy';
+  $handler->display->display_options['fields']['field_date_mmyy']['label'] = '';
+  $handler->display->display_options['fields']['field_date_mmyy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date_mmyy']['settings'] = array(
+    'format_type' => 'year',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['field_honor_and_award']['id'] = 'field_honor_and_award';
+  $handler->display->display_options['fields']['field_honor_and_award']['table'] = 'field_data_field_honor_and_award';
+  $handler->display->display_options['fields']['field_honor_and_award']['field'] = 'field_honor_and_award';
+  $handler->display->display_options['fields']['field_honor_and_award']['label'] = '';
+  $handler->display->display_options['fields']['field_honor_and_award']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Award Date (field_date_mmyy) */
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['id'] = 'field_date_mmyy_value';
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['table'] = 'field_data_field_date_mmyy';
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['field'] = 'field_date_mmyy_value';
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Profile: User uid */
+  $handler->display->display_options['arguments']['user']['id'] = 'user';
+  $handler->display->display_options['arguments']['user']['table'] = 'profile';
+  $handler->display->display_options['arguments']['user']['field'] = 'user';
+  $handler->display->display_options['arguments']['user']['relationship'] = 'relation_was_awarded_profile2';
+  $handler->display->display_options['arguments']['user']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['user']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['user']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['user']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['user']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'honors_and_awards' => 'honors_and_awards',
+  );
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 'offset';
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
+  $handler->display->display_options['argument_input'] = array(
+    'user' => array(
+      'type' => 'context',
+      'context' => 'entity:user.uid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Profile: User uid',
+    ),
+  );
   $export['profile_user_content'] = $view;
 
   $view = new view();
@@ -1866,7 +1978,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'curriculum_vitae' => 'curriculum_vitae',
   );
-  /* Filter criterion: Field: Subscription (field_boolean) */
+  /* Filter criterion: Field: Current (field_boolean) */
   $handler->display->display_options['filters']['field_boolean_value']['id'] = 'field_boolean_value';
   $handler->display->display_options['filters']['field_boolean_value']['table'] = 'field_data_field_boolean';
   $handler->display->display_options['filters']['field_boolean_value']['field'] = 'field_boolean_value';
