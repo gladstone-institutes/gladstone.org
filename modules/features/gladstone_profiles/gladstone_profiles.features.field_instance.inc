@@ -1780,6 +1780,7 @@ Full bio: Technical and domain specific details go here',
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1793,6 +1794,7 @@ Full bio: Technical and domain specific details go here',
       'enable_tokens' => 0,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'LinkedIn',
       'url' => 0,
@@ -2218,6 +2220,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -2231,6 +2234,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
       'enable_tokens' => 0,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Twitter',
       'url' => 0,
@@ -2267,6 +2271,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -2280,6 +2285,7 @@ ex: Staff Research Investigator, Associate Investigator, and Visiting Investigat
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,

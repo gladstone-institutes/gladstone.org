@@ -861,7 +861,9 @@ function gladstone_profiles_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -925,7 +927,7 @@ function gladstone_profiles_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => 'realname',
-      'css_class' => '',
+      'css_class' => 'page-heading',
     );
     $pane->extras = array();
     $pane->position = 0;
