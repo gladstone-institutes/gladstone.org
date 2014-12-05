@@ -266,7 +266,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -450,7 +450,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -634,7 +634,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -818,7 +818,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -1023,7 +1023,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -1207,7 +1207,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -1427,7 +1427,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -1647,7 +1647,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
@@ -1862,7 +1862,7 @@ function institute_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
       'class' => '',
       'context' => 'argument_entity_uuid:node_1',
