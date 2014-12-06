@@ -78,14 +78,14 @@ $medium_light: #ebebeb; // table row even active
 $medium_dark:  #e5e5e5; // table thead
 
 $thead:          $medium_dark;
-$tr_odd:         $page;
+$tr_odd:         $white;
 $tr_even:        $ultralight;
 $tr_odd_active:  $light;
 $tr_even_active: $medium_light;
 
 $primary_task:        $ultralight;
 $primary_task_hover:  $light;
-$primary_task_active: $page;
+$primary_task_active: $accent;
 
 // 
 // Debugging
