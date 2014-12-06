@@ -6063,7 +6063,7 @@ $entities['structure_sitemap'][] = (object) array(
 	'access_arguments' => 'a:2:{i:0;s:4:"view";i:1;i:1;}',
 	'access_callback' => 'node_access',
 	'context' => 0,
-	'customized' => 0,
+	'customized' => 1,
 	'default_revision' => 1,
 	'delivery_callback' => '',
 	'depth' => 2,
@@ -6081,13 +6081,17 @@ $entities['structure_sitemap'][] = (object) array(
 		1 => 'node_load'
 		),
 	'localized_options' => array(
+		'attributes' => array(
 
+			)
 		),
 	'menu_name' => 'main-menu',
 	'module' => 'menu',
 	'number_parts' => 2,
 	'options' => array(
+		'attributes' => array(
 
+			)
 		),
 	'p1' => '406081d8-493c-4423-9ba0-e7957f1b23a4',
 	'p2' => 'd4481342-daf4-4dc1-9860-f69374c03694',
