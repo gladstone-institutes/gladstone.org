@@ -243,7 +243,7 @@ function gladstone_profiles_default_panels_mini() {
       'formatter' => 'field_collection_fields',
       'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => 0,
+      'delta_reversed' => 1,
       'formatter_settings' => array(
         'view_mode' => 'profile',
       ),
