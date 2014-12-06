@@ -22,9 +22,9 @@ function gladstone_profiles_user_default_roles() {
     'weight' => 4,
   );
 
-  // Exported role: mini cv.
-  $roles['mini cv'] = array(
-    'name' => 'mini cv',
+  // Exported role: external cv.
+  $roles['external cv'] = array(
+    'name' => 'external cv',
     'weight' => 6,
   );
 

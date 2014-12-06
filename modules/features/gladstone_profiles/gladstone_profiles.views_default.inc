@@ -1381,15 +1381,15 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['relationships']['profile_1']['bundle_types'] = array(
     'curriculum_vitae' => 'curriculum_vitae',
   );
-  /* Relationship: mini CV */
+  /* Relationship: External CV */
   $handler->display->display_options['relationships']['profile_2']['id'] = 'profile_2';
   $handler->display->display_options['relationships']['profile_2']['table'] = 'users';
   $handler->display->display_options['relationships']['profile_2']['field'] = 'profile';
   $handler->display->display_options['relationships']['profile_2']['relationship'] = 'user';
-  $handler->display->display_options['relationships']['profile_2']['ui_name'] = 'mini CV';
+  $handler->display->display_options['relationships']['profile_2']['ui_name'] = 'External CV';
   $handler->display->display_options['relationships']['profile_2']['label'] = 'minicv';
   $handler->display->display_options['relationships']['profile_2']['bundle_types'] = array(
-    'mini_cv' => 'mini_cv',
+    'external_cv' => 'external_cv',
   );
   /* Relationship: CV: Professional Titles */
   $handler->display->display_options['relationships']['field_professional_titles_value']['id'] = 'field_professional_titles_value';
@@ -1399,12 +1399,12 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['relationships']['field_professional_titles_value']['ui_name'] = 'CV: Professional Titles';
   $handler->display->display_options['relationships']['field_professional_titles_value']['label'] = 'cv_prof_titles';
   $handler->display->display_options['relationships']['field_professional_titles_value']['delta'] = '-1';
-  /* Relationship: mini CV: Professional Titles */
+  /* Relationship: External CV: Professional Titles */
   $handler->display->display_options['relationships']['field_professional_titles_value_1']['id'] = 'field_professional_titles_value_1';
   $handler->display->display_options['relationships']['field_professional_titles_value_1']['table'] = 'field_data_field_professional_titles';
   $handler->display->display_options['relationships']['field_professional_titles_value_1']['field'] = 'field_professional_titles_value';
   $handler->display->display_options['relationships']['field_professional_titles_value_1']['relationship'] = 'profile_2';
-  $handler->display->display_options['relationships']['field_professional_titles_value_1']['ui_name'] = 'mini CV: Professional Titles';
+  $handler->display->display_options['relationships']['field_professional_titles_value_1']['ui_name'] = 'External CV: Professional Titles';
   $handler->display->display_options['relationships']['field_professional_titles_value_1']['label'] = 'minicv_prof_titles';
   $handler->display->display_options['relationships']['field_professional_titles_value_1']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -1442,34 +1442,34 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['user_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['user_1']['empty'] = '[field_label_alias]';
   $handler->display->display_options['fields']['user_1']['hide_empty'] = TRUE;
-  /* Field: mini CV: Prof Title */
+  /* Field: External CV: Prof Title */
   $handler->display->display_options['fields']['field_operational_titles']['id'] = 'field_operational_titles';
   $handler->display->display_options['fields']['field_operational_titles']['table'] = 'field_data_field_operational_titles';
   $handler->display->display_options['fields']['field_operational_titles']['field'] = 'field_operational_titles';
   $handler->display->display_options['fields']['field_operational_titles']['relationship'] = 'field_professional_titles_value_1';
-  $handler->display->display_options['fields']['field_operational_titles']['ui_name'] = 'mini CV: Prof Title';
+  $handler->display->display_options['fields']['field_operational_titles']['ui_name'] = 'External CV: Prof Title';
   $handler->display->display_options['fields']['field_operational_titles']['label'] = '';
   $handler->display->display_options['fields']['field_operational_titles']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_operational_titles']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: mini CV: Op Unit */
+  /* Field: External CV: Op Unit */
   $handler->display->display_options['fields']['field_institution_op_units']['id'] = 'field_institution_op_units';
   $handler->display->display_options['fields']['field_institution_op_units']['table'] = 'field_data_field_institution_op_units';
   $handler->display->display_options['fields']['field_institution_op_units']['field'] = 'field_institution_op_units';
   $handler->display->display_options['fields']['field_institution_op_units']['relationship'] = 'field_professional_titles_value_1';
-  $handler->display->display_options['fields']['field_institution_op_units']['ui_name'] = 'mini CV: Op Unit';
+  $handler->display->display_options['fields']['field_institution_op_units']['ui_name'] = 'External CV: Op Unit';
   $handler->display->display_options['fields']['field_institution_op_units']['label'] = '';
   $handler->display->display_options['fields']['field_institution_op_units']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_institution_op_units']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_institution_op_units']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: mini CV: Institution */
+  /* Field: External CV: Institution */
   $handler->display->display_options['fields']['field_institution']['id'] = 'field_institution';
   $handler->display->display_options['fields']['field_institution']['table'] = 'field_data_field_institution';
   $handler->display->display_options['fields']['field_institution']['field'] = 'field_institution';
   $handler->display->display_options['fields']['field_institution']['relationship'] = 'field_professional_titles_value_1';
-  $handler->display->display_options['fields']['field_institution']['ui_name'] = 'mini CV: Institution';
+  $handler->display->display_options['fields']['field_institution']['ui_name'] = 'External CV: Institution';
   $handler->display->display_options['fields']['field_institution']['label'] = '';
   $handler->display->display_options['fields']['field_institution']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_institution']['element_label_colon'] = FALSE;

@@ -85,9 +85,9 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: edit any mini_cv profile.
-  $permissions['edit any mini_cv profile'] = array(
-    'name' => 'edit any mini_cv profile',
+  // Exported permission: edit any external_cv profile.
+  $permissions['edit any external_cv profile'] = array(
+    'name' => 'edit any external_cv profile',
     'roles' => array(
       'superadmin' => 'superadmin',
     ),
@@ -188,11 +188,11 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: edit own mini_cv profile.
-  $permissions['edit own mini_cv profile'] = array(
-    'name' => 'edit own mini_cv profile',
+  // Exported permission: edit own external_cv profile.
+  $permissions['edit own external_cv profile'] = array(
+    'name' => 'edit own external_cv profile',
     'roles' => array(
-      'mini cv' => 'mini cv',
+      'external cv' => 'external cv',
       'superadmin' => 'superadmin',
     ),
     'module' => 'profile2',
@@ -234,9 +234,9 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: view any mini_cv profile.
-  $permissions['view any mini_cv profile'] = array(
-    'name' => 'view any mini_cv profile',
+  // Exported permission: view any external_cv profile.
+  $permissions['view any external_cv profile'] = array(
+    'name' => 'view any external_cv profile',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
@@ -338,9 +338,9 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: view own mini_cv profile.
-  $permissions['view own mini_cv profile'] = array(
-    'name' => 'view own mini_cv profile',
+  // Exported permission: view own external_cv profile.
+  $permissions['view own external_cv profile'] = array(
+    'name' => 'view own external_cv profile',
     'roles' => array(
       'authenticated user' => 'authenticated user',
     ),

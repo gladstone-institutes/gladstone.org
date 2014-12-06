@@ -1117,7 +1117,7 @@ function base_strongarm() {
     'entity_field_extra-taxonomy_term:description' => 'entity_field_extra-taxonomy_term:description',
     'entity_field_extra-user:profile_curriculum_vitae' => 'entity_field_extra-user:profile_curriculum_vitae',
     'entity_field_extra-user:profile_leadership' => 'entity_field_extra-user:profile_leadership',
-    'entity_field_extra-user:profile_mini_cv' => 'entity_field_extra-user:profile_mini_cv',
+    'entity_field_extra-user:profile_external_cv' => 'entity_field_extra-user:profile_external_cv',
     'entity_field_extra-user:profile_profile' => 'entity_field_extra-user:profile_profile',
     'entity_field_extra-user:summary' => 'entity_field_extra-user:summary',
     'custom-custom' => 'custom-custom',

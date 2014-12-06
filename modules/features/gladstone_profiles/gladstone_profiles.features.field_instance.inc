@@ -1388,9 +1388,9 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-mini_cv-field_label_alias'
-  $field_instances['profile2-mini_cv-field_label_alias'] = array(
-    'bundle' => 'mini_cv',
+  // Exported field_instance: 'profile2-external_cv-field_label_alias'
+  $field_instances['profile2-external_cv-field_label_alias'] = array(
+    'bundle' => 'external_cv',
     'deleted' => 0,
     'description' => 'This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>',
     'display' => array(
@@ -1425,9 +1425,9 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-mini_cv-field_professional_titles'
-  $field_instances['profile2-mini_cv-field_professional_titles'] = array(
-    'bundle' => 'mini_cv',
+  // Exported field_instance: 'profile2-external_cv-field_professional_titles'
+  $field_instances['profile2-external_cv-field_professional_titles'] = array(
+    'bundle' => 'external_cv',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Additional employed titles held (work history). These will be displayed for external Gladstone affiliates (e.g. Scientific Advisory Board Members), and not used elsewhere in the site.',
