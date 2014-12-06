@@ -179,7 +179,7 @@ function gladstone_profiles_name_default_formats() {
 function gladstone_profiles_default_profile2_type() {
   //HACK: fix role config on import
   $cv_rid = user_role_load_by_name("curriculum vitae")->rid;
-  $minicv_rid = user_role_load_by_name("external cv")->rid;
+  $external_cv_rid = user_role_load_by_name("external cv")->rid;
   $leadership_rid = user_role_load_by_name("leadership")->rid;
   $profile_rid = user_role_load_by_name("profile")->rid;
 
@@ -206,7 +206,7 @@ function gladstone_profiles_default_profile2_type() {
     "type" : "external_cv",
     "label" : "External CV",
     "weight" : "0",
-    "data" : { "registration" : 0, "roles" : { "'.$minicv_rid.'" : "'.$minicv_rid.'" } }
+    "data" : { "registration" : 0, "roles" : { "'.$external_cv_rid.'" : "'.$external_cv_rid.'" } }
   }');
   $items['profile'] = entity_import('profile2_type', '{
     "userCategory" : true,
