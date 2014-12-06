@@ -1,6 +1,14 @@
 @import "base";
 
 // 
+// AT layout nesting
+// ------------------
+.region-gs2-25-75-inset {
+	.panel-display {
+		margin: 0 !important;
+	}
+}
+// 
 // Left Sidebar regions
 // ---------------------
 .region-gs2-25-75-sidebar,
