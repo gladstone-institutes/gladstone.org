@@ -1108,7 +1108,7 @@ function gladstone_profiles_views_default_views() {
     10 => 0,
   );
   $handler->display->display_options['filters']['field_operational_unit_tid']['vocabulary'] = 'operational_units';
-  /* Filter criterion: Field collection item: Operational Role (field_operational_role) */
+  /* Filter criterion: Field collection item: Involvement (field_operational_role) */
   $handler->display->display_options['filters']['field_operational_role_tid']['id'] = 'field_operational_role_tid';
   $handler->display->display_options['filters']['field_operational_role_tid']['table'] = 'field_data_field_operational_role';
   $handler->display->display_options['filters']['field_operational_role_tid']['field'] = 'field_operational_role_tid';
@@ -1539,7 +1539,7 @@ function gladstone_profiles_views_default_views() {
   );
   $handler->display->display_options['filters']['field_operational_unit_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_operational_unit_tid']['vocabulary'] = 'operational_units';
-  /* Filter criterion: Field collection item: Operational Role (field_operational_role) */
+  /* Filter criterion: Field collection item: Involvement (field_operational_role) */
   $handler->display->display_options['filters']['field_operational_role_tid']['id'] = 'field_operational_role_tid';
   $handler->display->display_options['filters']['field_operational_role_tid']['table'] = 'field_data_field_operational_role';
   $handler->display->display_options['filters']['field_operational_role_tid']['field'] = 'field_operational_role_tid';
@@ -2175,6 +2175,10 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'rich_text';
   $handler->display->display_options['exposed_form']['options']['token_details'] = 0;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -2189,6 +2193,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'profile_picture_thumbnail',
@@ -2206,6 +2211,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['field'] = 'field_operational_titles';
   $handler->display->display_options['fields']['field_operational_titles']['label'] = '';
   $handler->display->display_options['fields']['field_operational_titles']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_operational_titles']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_operational_titles']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
@@ -2235,22 +2241,25 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['label'] = 'Name';
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['operator'] = 'field_label_alias_value_op';
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['identifier'] = 'field_label_alias_value';
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['required'] = TRUE;
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['remember_roles'] = array(
     2 => '2',
     3 => 0,
     6 => 0,
     4 => 0,
     5 => 0,
-    8 => 0,
     1 => 0,
     7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
   );
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_filter'] = 1;
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_items'] = '10';
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_min_chars'] = '3';
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_field'] = 'field_label_alias';
-  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_raw_suggestion'] = 1;
-  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_raw_dropdown'] = 1;
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_raw_suggestion'] = 0;
+  $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_raw_dropdown'] = 0;
   $handler->display->display_options['filters']['field_label_alias_value']['expose']['autocomplete_dependent'] = 0;
   /* Filter criterion: Field: Operational Title(s) (field_operational_titles:delta) */
   $handler->display->display_options['filters']['delta']['id'] = 'delta';
