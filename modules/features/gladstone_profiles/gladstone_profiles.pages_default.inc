@@ -42,6 +42,11 @@ function gladstone_profiles_default_page_manager_handlers() {
     'access' => array(
       'logic' => 'and',
     ),
+    'panels_css_js_files_css' => '[theme]/css/page_manager/profile.css',
+    'panels_css_js_files_js' => '',
+    'panels_css_js_code_css' => '',
+    'panels_css_js_code_js' => '',
+    'panels_css_js_code_js_wrapper' => '0',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_25_50';
