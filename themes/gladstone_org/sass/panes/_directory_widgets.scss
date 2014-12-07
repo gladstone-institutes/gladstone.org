@@ -3,3 +3,14 @@
 		margin-top: 0;
 	}
 }
+
+.pane-directory-widgets-directory-widget-grid-ca-pane,
+.pane-directory-widgets-directory-widget-people-ca-pane {
+ 	.views-row {
+ 		margin: .5*$gutter-width;
+ 	}
+ 	h2 {
+ 		@extend .views-row;
+ 		font-size: 1.17em; // same as h3
+ 	}
+}

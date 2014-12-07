@@ -620,7 +620,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'Trustees',
     'no_blocks' => 0,
@@ -808,7 +808,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -27;
+  $handler->weight = -28;
   $handler->conf = array(
     'title' => 'Administration',
     'no_blocks' => 0,
@@ -1055,7 +1055,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -26;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'Gladstone Foundation',
     'no_blocks' => 0,
@@ -1286,7 +1286,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -25;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'History',
     'no_blocks' => 0,
@@ -1492,7 +1492,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -24;
+  $handler->weight = -25;
   $handler->conf = array(
     'title' => 'For Journalists',
     'no_blocks' => 0,
@@ -1698,7 +1698,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -23;
+  $handler->weight = -24;
   $handler->conf = array(
     'title' => 'Press Releases',
     'no_blocks' => 0,
@@ -1908,7 +1908,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -22;
+  $handler->weight = -23;
   $handler->conf = array(
     'title' => 'Media Coverage',
     'no_blocks' => 0,
@@ -2114,7 +2114,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -21;
+  $handler->weight = -22;
   $handler->conf = array(
     'title' => 'All Directors & Investigators',
     'no_blocks' => 0,
@@ -2158,6 +2158,9 @@ function structure_default_page_manager_pages() {
       'gs3_25_50_25_inset' => NULL,
       'gs3_25_50_25_bottom' => NULL,
       'gs3_25_50_25_footer' => NULL,
+      'gs2_25_75_header' => NULL,
+      'gs2_25_75_sidebar' => NULL,
+      'gs2_25_75_inset' => NULL,
     ),
   );
   $display->cache = array();
@@ -2217,9 +2220,9 @@ function structure_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
-      'class' => '',
+      'class' => 'page-heading',
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',
@@ -2284,14 +2287,17 @@ function structure_default_page_manager_pages() {
       'context' => array(
         0 => 'empty',
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Cardiovascular',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'float-left',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -2324,14 +2330,17 @@ function structure_default_page_manager_pages() {
       'context' => array(
         0 => 'empty',
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Virology and Immunology',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'float-left',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -2364,14 +2373,17 @@ function structure_default_page_manager_pages() {
       'context' => array(
         0 => 'empty',
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Neurological',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'float-left',
+    );
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
@@ -2411,7 +2423,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -20;
+  $handler->weight = -21;
   $handler->conf = array(
     'title' => 'Technologies Available',
     'no_blocks' => 0,
@@ -2606,7 +2618,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -19;
+  $handler->weight = -20;
   $handler->conf = array(
     'title' => 'Scientific Publications',
     'no_blocks' => 0,
@@ -2811,7 +2823,7 @@ function structure_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'panelize';
   $handler->handler = 'panel_context';
-  $handler->weight = -18;
+  $handler->weight = -19;
   $handler->conf = array(
     'title' => 'People',
     'no_blocks' => 0,
@@ -2838,7 +2850,7 @@ function structure_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'gs3_25_50_25';
+  $display->layout = 'gs2_25_75';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -2850,6 +2862,9 @@ function structure_default_page_manager_pages() {
       'gs3_25_50_25_inset' => NULL,
       'gs3_25_50_25_bottom' => NULL,
       'gs3_25_50_25_footer' => NULL,
+      'gs2_25_75_header' => NULL,
+      'gs2_25_75_sidebar' => NULL,
+      'gs2_25_75_inset' => NULL,
     ),
   );
   $display->cache = array();
@@ -2859,7 +2874,7 @@ function structure_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
-    $pane->panel = 'gs3_25_50_25_header';
+    $pane->panel = 'gs2_25_75_header';
     $pane->type = 'page_breadcrumb';
     $pane->subtype = 'page_breadcrumb';
     $pane->shown = TRUE;
@@ -2875,10 +2890,10 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'e758fad8-9de1-40c0-bf53-1cdfb23615fb';
     $display->content['new-e758fad8-9de1-40c0-bf53-1cdfb23615fb'] = $pane;
-    $display->panels['gs3_25_50_25_header'][0] = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
+    $display->panels['gs2_25_75_header'][0] = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
     $pane = new stdClass();
     $pane->pid = 'new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
-    $pane->panel = 'gs3_25_50_25_header';
+    $pane->panel = 'gs2_25_75_header';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
     $pane->shown = TRUE;
@@ -2899,19 +2914,19 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
     $display->content['new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e'] = $pane;
-    $display->panels['gs3_25_50_25_header'][1] = 'new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
+    $display->panels['gs2_25_75_header'][1] = 'new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
     $pane = new stdClass();
     $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs3_25_50_25_middle';
+    $pane->panel = 'gs2_25_75_inset';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
-      'markup' => 'h2',
+      'markup' => 'h1',
       'id' => '',
-      'class' => '',
+      'class' => 'page-heading',
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',
@@ -2926,10 +2941,10 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
     $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $display->panels['gs2_25_75_inset'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
     $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
-    $pane->panel = 'gs3_25_50_25_middle';
+    $pane->panel = 'gs2_25_75_inset';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
     $pane->shown = TRUE;
@@ -2949,24 +2964,25 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $display->panels['gs2_25_75_inset'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
-    $pane->pid = 'new-9662a316-efd4-4bb2-bdf4-94d845529400';
-    $pane->panel = 'gs3_25_50_25_middle';
+    $pane->pid = 'new-70a1ffd9-a372-4a95-b0b0-c1adfd59cae3';
+    $pane->panel = 'gs2_25_75_inset';
     $pane->type = 'views_panes';
-    $pane->subtype = 'directory_widgets-directory_widget_grid_ca_pane';
+    $pane->subtype = 'directory_widgets-directory_widget_people_ca_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'use_pager' => 1,
       'pager_id' => '0',
-      'items_per_page' => '10',
+      'items_per_page' => '30',
       'offset' => '0',
       'fields_override' => array(
-        'user' => 1,
+        'user' => 0,
         'field_image' => 1,
         'field_label_alias' => 1,
         'field_operational_titles' => 1,
+        'field_operational_units' => 1,
       ),
       'exposed' => array(
         'field_operational_units_tid' => '',
@@ -2987,12 +3003,12 @@ function structure_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '9662a316-efd4-4bb2-bdf4-94d845529400';
-    $display->content['new-9662a316-efd4-4bb2-bdf4-94d845529400'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][2] = 'new-9662a316-efd4-4bb2-bdf4-94d845529400';
+    $pane->uuid = '70a1ffd9-a372-4a95-b0b0-c1adfd59cae3';
+    $display->content['new-70a1ffd9-a372-4a95-b0b0-c1adfd59cae3'] = $pane;
+    $display->panels['gs2_25_75_inset'][2] = 'new-70a1ffd9-a372-4a95-b0b0-c1adfd59cae3';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
-    $pane->panel = 'gs3_25_50_25_sidebar';
+    $pane->panel = 'gs2_25_75_sidebar';
     $pane->type = 'panels_mini';
     $pane->subtype = 'sidebar';
     $pane->shown = TRUE;
@@ -3011,7 +3027,7 @@ function structure_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $display->content['new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d'] = $pane;
-    $display->panels['gs3_25_50_25_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
+    $display->panels['gs2_25_75_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
   $handler->conf['display'] = $display;
@@ -3147,33 +3163,6 @@ Founding Partner, TPG Capital</p>
     $display->content['new-0effa9ac-5415-41b3-8390-51f7f4cb0712'] = $pane;
     $display->panels['gs3_25_50_25_inset'][0] = 'new-0effa9ac-5415-41b3-8390-51f7f4cb0712';
     $pane = new stdClass();
-    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h2',
-      'id' => '',
-      'class' => '',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane->panel = 'gs3_25_50_25_middle';
     $pane->type = 'node_body';
@@ -3191,11 +3180,11 @@ Founding Partner, TPG Capital</p>
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $display->panels['gs3_25_50_25_middle'][0] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3_25_50_25_sidebar';
@@ -3218,6 +3207,33 @@ Founding Partner, TPG Capital</p>
     $pane->uuid = 'ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $display->content['new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d'] = $pane;
     $display->panels['gs3_25_50_25_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
+    $pane = new stdClass();
+    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $pane->panel = 'gs3_25_50_25_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'h1',
+      'id' => '',
+      'class' => 'page-heading',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
+    $display->panels['gs3_25_50_25_top'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
   $handler->conf['display'] = $display;
@@ -3353,33 +3369,6 @@ Managing Director, Draper Intl.</p>
     $display->content['new-0effa9ac-5415-41b3-8390-51f7f4cb0712'] = $pane;
     $display->panels['gs3_25_50_25_inset'][0] = 'new-0effa9ac-5415-41b3-8390-51f7f4cb0712';
     $pane = new stdClass();
-    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h2',
-      'id' => '',
-      'class' => '',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane->panel = 'gs3_25_50_25_middle';
     $pane->type = 'node_body';
@@ -3397,11 +3386,11 @@ Managing Director, Draper Intl.</p>
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $display->panels['gs3_25_50_25_middle'][0] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3_25_50_25_sidebar';
@@ -3424,6 +3413,33 @@ Managing Director, Draper Intl.</p>
     $pane->uuid = 'ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $display->content['new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d'] = $pane;
     $display->panels['gs3_25_50_25_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
+    $pane = new stdClass();
+    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $pane->panel = 'gs3_25_50_25_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'h1',
+      'id' => '',
+      'class' => 'page-heading',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
+    $display->panels['gs3_25_50_25_top'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
   $handler->conf['display'] = $display;
@@ -3558,33 +3574,6 @@ Director, Roddenberry Foundation</p>
     $display->content['new-0effa9ac-5415-41b3-8390-51f7f4cb0712'] = $pane;
     $display->panels['gs3_25_50_25_inset'][0] = 'new-0effa9ac-5415-41b3-8390-51f7f4cb0712';
     $pane = new stdClass();
-    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h2',
-      'id' => '',
-      'class' => '',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane->panel = 'gs3_25_50_25_middle';
     $pane->type = 'node_body';
@@ -3602,11 +3591,11 @@ Director, Roddenberry Foundation</p>
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $display->panels['gs3_25_50_25_middle'][0] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3_25_50_25_sidebar';
@@ -3629,6 +3618,33 @@ Director, Roddenberry Foundation</p>
     $pane->uuid = 'ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $display->content['new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d'] = $pane;
     $display->panels['gs3_25_50_25_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
+    $pane = new stdClass();
+    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $pane->panel = 'gs3_25_50_25_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'h1',
+      'id' => '',
+      'class' => 'page-heading',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
+    $display->panels['gs3_25_50_25_top'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
   $handler->conf['display'] = $display;
@@ -3730,33 +3746,6 @@ Director, Roddenberry Foundation</p>
     $display->content['new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e'] = $pane;
     $display->panels['gs3_25_50_25_header'][1] = 'new-76d49242-6b4c-49e3-aa07-e94f8f2cc75e';
     $pane = new stdClass();
-    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h2',
-      'id' => '',
-      'class' => '',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane->panel = 'gs3_25_50_25_middle';
     $pane->type = 'node_body';
@@ -3774,11 +3763,11 @@ Director, Roddenberry Foundation</p>
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $display->panels['gs3_25_50_25_middle'][0] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
     $pane->pid = 'new-29d00e74-b882-4892-850f-bf2a9948fa8f';
     $pane->panel = 'gs3_25_50_25_middle';
@@ -3797,11 +3786,11 @@ Director, Roddenberry Foundation</p>
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '29d00e74-b882-4892-850f-bf2a9948fa8f';
     $display->content['new-29d00e74-b882-4892-850f-bf2a9948fa8f'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][2] = 'new-29d00e74-b882-4892-850f-bf2a9948fa8f';
+    $display->panels['gs3_25_50_25_middle'][1] = 'new-29d00e74-b882-4892-850f-bf2a9948fa8f';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3_25_50_25_sidebar';
@@ -3824,6 +3813,33 @@ Director, Roddenberry Foundation</p>
     $pane->uuid = 'ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $display->content['new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d'] = $pane;
     $display->panels['gs3_25_50_25_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
+    $pane = new stdClass();
+    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $pane->panel = 'gs3_25_50_25_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'h1',
+      'id' => '',
+      'class' => 'page-heading',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
+    $display->panels['gs3_25_50_25_top'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
   $handler->conf['display'] = $display;
@@ -3997,33 +4013,6 @@ Director, Roddenberry Foundation</p>
     $display->content['new-5c93d459-f9d3-4a34-8c25-7ee90050373e'] = $pane;
     $display->panels['gs3_25_50_25_inset'][0] = 'new-5c93d459-f9d3-4a34-8c25-7ee90050373e';
     $pane = new stdClass();
-    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h2',
-      'id' => '',
-      'class' => '',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane = new stdClass();
     $pane->pid = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane->panel = 'gs3_25_50_25_middle';
     $pane->type = 'node_body';
@@ -4041,11 +4030,11 @@ Director, Roddenberry Foundation</p>
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
+    $display->panels['gs3_25_50_25_middle'][0] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3_25_50_25_sidebar';
@@ -4068,6 +4057,33 @@ Director, Roddenberry Foundation</p>
     $pane->uuid = 'ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $display->content['new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d'] = $pane;
     $display->panels['gs3_25_50_25_sidebar'][0] = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
+    $pane = new stdClass();
+    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $pane->panel = 'gs3_25_50_25_top';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'h1',
+      'id' => '',
+      'class' => 'page-heading',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
+    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
+    $display->panels['gs3_25_50_25_top'][0] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e758fad8-9de1-40c0-bf53-1cdfb23615fb';
   $handler->conf['display'] = $display;
