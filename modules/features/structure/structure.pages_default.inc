@@ -574,33 +574,6 @@ function structure_default_page_manager_pages() {
     $display->content['new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7'] = $pane;
     $display->panels['gs2_25_75_inset'][2] = 'new-4fe29b8d-6922-4de5-b0c0-9564f2a5b5f7';
     $pane = new stdClass();
-    $pane->pid = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane->panel = 'gs2_25_75_inset';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h2',
-      'id' => '',
-      'class' => '',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = '40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $display->content['new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c'] = $pane;
-    $display->panels['gs2_25_75_inset'][3] = 'new-40cbe226-8ceb-47b4-95eb-b1ab801cf34c';
-    $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs2_25_75_sidebar';
     $pane->type = 'panels_mini';
