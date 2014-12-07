@@ -76,18 +76,18 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: edit any leadership profile.
-  $permissions['edit any leadership profile'] = array(
-    'name' => 'edit any leadership profile',
+  // Exported permission: edit any external_cv profile.
+  $permissions['edit any external_cv profile'] = array(
+    'name' => 'edit any external_cv profile',
     'roles' => array(
       'superadmin' => 'superadmin',
     ),
     'module' => 'profile2',
   );
 
-  // Exported permission: edit any external_cv profile.
-  $permissions['edit any external_cv profile'] = array(
-    'name' => 'edit any external_cv profile',
+  // Exported permission: edit any leadership profile.
+  $permissions['edit any leadership profile'] = array(
+    'name' => 'edit any leadership profile',
     'roles' => array(
       'superadmin' => 'superadmin',
     ),
@@ -150,6 +150,16 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: edit own external_cv profile.
+  $permissions['edit own external_cv profile'] = array(
+    'name' => 'edit own external_cv profile',
+    'roles' => array(
+      'external cv' => 'external cv',
+      'superadmin' => 'superadmin',
+    ),
+    'module' => 'profile2',
+  );
+
   // Exported permission: edit own field_biography.
   $permissions['edit own field_biography'] = array(
     'name' => 'edit own field_biography',
@@ -188,16 +198,6 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: edit own external_cv profile.
-  $permissions['edit own external_cv profile'] = array(
-    'name' => 'edit own external_cv profile',
-    'roles' => array(
-      'external cv' => 'external cv',
-      'superadmin' => 'superadmin',
-    ),
-    'module' => 'profile2',
-  );
-
   // Exported permission: edit own profile profile.
   $permissions['edit own profile profile'] = array(
     'name' => 'edit own profile profile',
@@ -221,6 +221,16 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: view any external_cv profile.
+  $permissions['view any external_cv profile'] = array(
+    'name' => 'view any external_cv profile',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'profile2',
+  );
+
   // Exported permission: view any leadership profile.
   $permissions['view any leadership profile'] = array(
     'name' => 'view any leadership profile',
@@ -230,16 +240,6 @@ function gladstone_profiles_user_default_permissions() {
       'curriculum vitae' => 'curriculum vitae',
       'leadership' => 'leadership',
       'superadmin' => 'superadmin',
-    ),
-    'module' => 'profile2',
-  );
-
-  // Exported permission: view any external_cv profile.
-  $permissions['view any external_cv profile'] = array(
-    'name' => 'view any external_cv profile',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -300,6 +300,15 @@ function gladstone_profiles_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: view own external_cv profile.
+  $permissions['view own external_cv profile'] = array(
+    'name' => 'view own external_cv profile',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'profile2',
+  );
+
   // Exported permission: view own field_biography.
   $permissions['view own field_biography'] = array(
     'name' => 'view own field_biography',
@@ -334,15 +343,6 @@ function gladstone_profiles_user_default_permissions() {
     'roles' => array(
       'authenticated user' => 'authenticated user',
       'superadmin' => 'superadmin',
-    ),
-    'module' => 'profile2',
-  );
-
-  // Exported permission: view own external_cv profile.
-  $permissions['view own external_cv profile'] = array(
-    'name' => 'view own external_cv profile',
-    'roles' => array(
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );

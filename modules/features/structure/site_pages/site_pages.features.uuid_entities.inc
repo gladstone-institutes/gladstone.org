@@ -130,6 +130,7 @@ function site_pages_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -205,6 +206,7 @@ function site_pages_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -337,6 +339,7 @@ function site_pages_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -403,6 +406,7 @@ function site_pages_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -442,6 +446,7 @@ function site_pages_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -494,6 +499,7 @@ function site_pages_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -570,6 +576,7 @@ function site_pages_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -636,6 +643,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -681,6 +689,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -718,6 +727,7 @@ Fax: 415-355-0930</p>
     'body' => array(),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -757,6 +767,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -802,6 +813,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -877,6 +889,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -922,6 +935,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -984,6 +998,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -1183,6 +1198,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -1222,6 +1238,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -1277,6 +1294,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1325,6 +1343,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1370,6 +1389,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1415,6 +1435,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1473,6 +1494,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -1524,6 +1546,7 @@ Fax: 415-355-0930</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -1574,6 +1597,7 @@ Nobel at Gladstone</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1630,6 +1654,7 @@ Nobel at Gladstone</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1697,6 +1722,7 @@ Nobel at Gladstone</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -1762,6 +1788,7 @@ Education and Community Partnerships Manager<br />
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -1801,6 +1828,7 @@ Education and Community Partnerships Manager<br />
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1846,6 +1874,7 @@ Education and Community Partnerships Manager<br />
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1891,6 +1920,7 @@ Education and Community Partnerships Manager<br />
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -1993,6 +2023,7 @@ Education and Community Partnerships Manager<br />
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -2132,6 +2163,7 @@ San Francisco, CA 94158</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2178,6 +2210,7 @@ San Francisco, CA 94158</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2255,6 +2288,7 @@ Watch our scientists describe extraordinary examples of the work made possible w
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2286,6 +2320,7 @@ Watch our scientists describe extraordinary examples of the work made possible w
     'body' => array(),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2353,6 +2388,7 @@ Watch our scientists describe extraordinary examples of the work made possible w
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -2485,6 +2521,7 @@ Watch our scientists describe extraordinary examples of the work made possible w
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -2551,6 +2588,7 @@ Watch our scientists describe extraordinary examples of the work made possible w
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2642,6 +2680,7 @@ Fax: 415-355-0826</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2754,6 +2793,7 @@ Fax: 415-355-0826</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2796,6 +2836,7 @@ Fax: 415-355-0826</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2852,6 +2893,7 @@ Fax: 415-355-0826</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2906,6 +2948,7 @@ Fax: 415-355-0826</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -2946,6 +2989,7 @@ Fax: 415-355-0826</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3025,6 +3069,7 @@ Learn how Gladstone hopes to use the latest cellular reprogramming technology to
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3056,6 +3101,7 @@ Learn how Gladstone hopes to use the latest cellular reprogramming technology to
     'body' => array(),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3111,6 +3157,7 @@ Members of the media can browse here for Gladstone press releases, media contact
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3164,6 +3211,7 @@ Lennart Mucke, MD, and Deepak Srivastava, MD</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3218,6 +3266,7 @@ Lennart Mucke, MD, and Deepak Srivastava, MD</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3319,6 +3368,7 @@ Career Promotion<br />
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3461,6 +3511,7 @@ and Trainees as Synergistic and Fruitful as Possible</strong></em></p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3517,6 +3568,7 @@ and Trainees as Synergistic and Fruitful as Possible</strong></em></p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3563,6 +3615,7 @@ and Trainees as Synergistic and Fruitful as Possible</strong></em></p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3624,6 +3677,7 @@ Fax: (415) 355-0910</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3674,6 +3728,7 @@ Fax: (415) 355-0910</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3713,6 +3768,7 @@ Fax: (415) 355-0910</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3769,6 +3825,7 @@ ADD MAP WIDGET',
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3825,6 +3882,7 @@ ADD MAP WIDGET',
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -3865,6 +3923,7 @@ ADD MAP WIDGET',
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4102,6 +4161,7 @@ Annual Salaries for 2014</strong></h3>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4155,6 +4215,7 @@ Annual Salaries for 2014</strong></h3>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4202,6 +4263,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4241,6 +4303,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4280,6 +4343,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4326,6 +4390,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4374,6 +4439,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4425,6 +4491,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4481,6 +4548,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4527,6 +4595,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4566,6 +4635,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4611,6 +4681,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4656,6 +4727,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4701,6 +4773,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4806,6 +4879,7 @@ Mobile: 415.806.6245</p>
         ),
       ),
     ),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4851,6 +4925,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -4903,6 +4978,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -4955,6 +5031,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -5090,6 +5167,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -5121,6 +5199,7 @@ Mobile: 415.806.6245</p>
     'body' => array(),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5158,6 +5237,7 @@ Mobile: 415.806.6245</p>
     'body' => array(),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5253,6 +5333,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -5305,6 +5386,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5350,6 +5432,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5421,6 +5504,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5466,6 +5550,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5526,6 +5611,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5582,6 +5668,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5640,6 +5727,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5692,6 +5780,7 @@ Mobile: 415.806.6245</p>
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(
       'und' => array(
@@ -5747,6 +5836,7 @@ Check here for a comprehensive list of all academic papers and publications by G
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -5786,6 +5876,7 @@ Check here for a comprehensive list of all academic papers and publications by G
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),
@@ -5826,6 +5917,7 @@ Check here for a comprehensive list of all academic papers and publications by G
     ),
     'comment' => 0,
     'field_files' => array(),
+    'field_image' => array(),
     'field_node_refs' => array(),
     'field_operational_units' => array(),
     'field_research_tags' => array(),

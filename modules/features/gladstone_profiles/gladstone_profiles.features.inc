@@ -192,14 +192,6 @@ function gladstone_profiles_default_profile2_type() {
     "weight" : "1",
     "data" : { "registration" : 0, "roles" : { "'.$cv_rid.'" : "'.$cv_rid.'" } }
   }');
-  $items['leadership'] = entity_import('profile2_type', '{
-    "userCategory" : true,
-    "userView" : true,
-    "type" : "leadership",
-    "label" : "Leadership",
-    "weight" : "2",
-    "data" : { "registration" : 0, "roles" : { "8" : "8" } }
-  }');
   $items['external_cv'] = entity_import('profile2_type', '{
     "userCategory" : true,
     "userView" : true,
@@ -207,6 +199,14 @@ function gladstone_profiles_default_profile2_type() {
     "label" : "External CV",
     "weight" : "0",
     "data" : { "registration" : 0, "roles" : { "'.$external_cv_rid.'" : "'.$external_cv_rid.'" } }
+  }');
+  $items['leadership'] = entity_import('profile2_type', '{
+    "userCategory" : true,
+    "userView" : true,
+    "type" : "leadership",
+    "label" : "Leadership",
+    "weight" : "2",
+    "data" : { "registration" : 0, "roles" : { "'.$leadership_rid.'" : "'.$leadership_rid.'" } }
   }');
   $items['profile'] = entity_import('profile2_type', '{
     "userCategory" : true,

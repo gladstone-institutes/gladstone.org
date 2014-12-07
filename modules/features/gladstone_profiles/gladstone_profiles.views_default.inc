@@ -2233,7 +2233,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'curriculum_vitae' => 'curriculum_vitae',
   );
-  /* Filter criterion: Field: Subscription (field_boolean) */
+  /* Filter criterion: Field: Current (field_boolean) */
   $handler->display->display_options['filters']['field_boolean_value']['id'] = 'field_boolean_value';
   $handler->display->display_options['filters']['field_boolean_value']['table'] = 'field_data_field_boolean';
   $handler->display->display_options['filters']['field_boolean_value']['field'] = 'field_boolean_value';

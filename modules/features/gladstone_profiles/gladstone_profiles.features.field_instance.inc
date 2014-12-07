@@ -1299,6 +1299,87 @@ function gladstone_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'profile2-external_cv-field_label_alias'
+  $field_instances['profile2-external_cv-field_label_alias'] = array(
+    'bundle' => 'external_cv',
+    'deleted' => 0,
+    'description' => 'This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 3,
+      ),
+      'profile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_label_alias',
+    'label' => 'Realname Alias ',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-external_cv-field_professional_titles'
+  $field_instances['profile2-external_cv-field_professional_titles'] = array(
+    'bundle' => 'external_cv',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Additional employed titles held (work history). These will be displayed for external Gladstone affiliates (e.g. Scientific Advisory Board Members), and not used elsewhere in the site.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 2,
+      ),
+      'profile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_professional_titles',
+    'label' => 'Professional titles',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'profile2-leadership-field_label_alias'
   $field_instances['profile2-leadership-field_label_alias'] = array(
     'bundle' => 'leadership',
@@ -1384,87 +1465,6 @@ function gladstone_profiles_field_default_field_instances() {
         'fctw_title_field_formatter' => 'taxonomy_term_reference_plain',
       ),
       'type' => 'field_collection_tabs',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-external_cv-field_label_alias'
-  $field_instances['profile2-external_cv-field_label_alias'] = array(
-    'bundle' => 'external_cv',
-    'deleted' => 0,
-    'description' => 'This field is dynamically computed from the User\'s Name field. Its needed to ensure any database level queries based on a "label" field still work. <b>DON\'T ALTER UNLESS YOURE A DEVELOPER</b>',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'computed_field',
-        'settings' => array(),
-        'type' => 'computed_field_plain',
-        'weight' => 3,
-      ),
-      'profile' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_label_alias',
-    'label' => 'Realname Alias ',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'computed_field',
-      'settings' => array(),
-      'type' => 'computed',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-external_cv-field_professional_titles'
-  $field_instances['profile2-external_cv-field_professional_titles'] = array(
-    'bundle' => 'external_cv',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Additional employed titles held (work history). These will be displayed for external Gladstone affiliates (e.g. Scientific Advisory Board Members), and not used elsewhere in the site.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 2,
-      ),
-      'profile' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_professional_titles',
-    'label' => 'Professional titles',
-    'required' => 0,
-    'rubik_edit_field_display' => 'default',
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
       'weight' => 1,
     ),
   );
