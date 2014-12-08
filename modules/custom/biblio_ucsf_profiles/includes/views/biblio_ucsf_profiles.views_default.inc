@@ -7,7 +7,7 @@
 /**
  * Implements hook_views_default_views().
  */
-function ucsf_profiles_views_default_views() {
+function biblio_ucsf_profiles_views_default_views() {
 	$view = new view();
 	$view->name = 'biblio_ucsf_profiles';
 	$view->description = '';
