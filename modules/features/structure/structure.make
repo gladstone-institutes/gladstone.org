@@ -62,6 +62,9 @@ projects[deploy][subdir]  = "contrib"
 
 projects[entity][version]	= 1.x-dev
 projects[entity][subdir]	= contrib
+projects[entity][download][type]     = git
+projects[entity][download][revision] = a8688df0
+projects[entity][download][branch]   = 7.x-1.x
 
 projects[entity_dependency][version] = "1.x-dev"
 projects[entity_dependency][subdir]  = "contrib"
