@@ -10,3 +10,72 @@ iframe.media-modal-frame {
 .accent {
 	color:$accent;
 }
+
+
+.article {
+
+	.pane-node-title h1 {
+		margin-bottom: 0;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.deck {
+		font-size: 1.5em; //same as h2
+		line-height: 1.1em;
+		margin-bottom: 1em;
+	}
+
+	.article-node-metadata {
+		font-size: 1em; //same as h4
+		border-top-color: $orange_9;
+		border-bottom-color: $orange_9;
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+		border-top-style: solid;
+		border-bottom-style: solid;
+		margin-bottom: $gw;
+
+		.block-content {
+			padding: .5*$gw;
+		}
+	}
+
+	.feature-image {
+		// margin-bottom: $gw;
+	}
+
+	.caption {
+		font-size: 1em; //same as h5
+		padding: $gw .5*$gw;
+		border-bottom-color: $orange_9;		
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+	}
+
+	.tags {
+
+		.pane-title {
+			color: $accent;
+			font-size: 1em;
+			text-transform: uppercase;
+		}
+
+		.block-content ul {
+			list-style: none;
+			list-style-image: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				float: left;
+				margin-right: .5*$gw;
+			}
+		}
+	}
+}
+
+
+

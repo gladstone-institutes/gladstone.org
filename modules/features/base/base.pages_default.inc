@@ -214,7 +214,7 @@ function base_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'article',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -328,7 +328,10 @@ function base_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'tags',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -429,7 +432,10 @@ function base_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'deck',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -446,8 +452,8 @@ function base_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => '"Article" node meta-data',
       'title' => '',
-      'body' => '<span class="author">By %author:name</span>/
-<span class="node-type">Gladstone %node:content-type</span>/
+      'body' => '<span class="author">By %author:name /</span>
+<span class="node-type">Gladstone %node:content-type /</span>
 <span class="release-date">%node:field-date:article</span>',
       'format' => 'php_code',
       'substitute' => 1,
@@ -491,7 +497,10 @@ function base_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'feature-image',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -520,7 +529,10 @@ function base_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'caption',
+    );
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
