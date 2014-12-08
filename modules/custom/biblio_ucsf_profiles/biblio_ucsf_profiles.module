@@ -182,7 +182,7 @@ function biblio_ucsf_profiles_cron() {
 /**
  * Implements hook_views_api().
  */
-function hook_views_api() {
+function biblio_ucsf_profiles_views_api() {
   return array(
     'api' => 3,
     'path' => drupal_get_path('module', 'biblio_ucsf_profiles') . '/includes/views',
