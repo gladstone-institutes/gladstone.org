@@ -12,6 +12,7 @@ dependencies[] = content_menu
 dependencies[] = ctools
 dependencies[] = deploy
 dependencies[] = diff
+dependencies[] = entity
 dependencies[] = entity_menu_links
 dependencies[] = events
 dependencies[] = fe_block
