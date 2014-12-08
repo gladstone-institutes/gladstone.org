@@ -1794,23 +1794,13 @@ function gladstone_profiles_views_default_views() {
     'leadership' => 'leadership',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Field collection item: Operational Unit (field_operational_unit) */
-  $handler->display->display_options['filters']['field_operational_unit_tid']['id'] = 'field_operational_unit_tid';
-  $handler->display->display_options['filters']['field_operational_unit_tid']['table'] = 'field_data_field_operational_unit';
-  $handler->display->display_options['filters']['field_operational_unit_tid']['field'] = 'field_operational_unit_tid';
-  $handler->display->display_options['filters']['field_operational_unit_tid']['relationship'] = 'field_leadership_value';
-  $handler->display->display_options['filters']['field_operational_unit_tid']['value'] = array(
-    0 => '52',
-  );
-  $handler->display->display_options['filters']['field_operational_unit_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_operational_unit_tid']['vocabulary'] = 'operational_units';
   /* Filter criterion: Field collection item: Operational Role (field_operational_role) */
   $handler->display->display_options['filters']['field_operational_role_tid']['id'] = 'field_operational_role_tid';
   $handler->display->display_options['filters']['field_operational_role_tid']['table'] = 'field_data_field_operational_role';
   $handler->display->display_options['filters']['field_operational_role_tid']['field'] = 'field_operational_role_tid';
   $handler->display->display_options['filters']['field_operational_role_tid']['relationship'] = 'field_leadership_value';
   $handler->display->display_options['filters']['field_operational_role_tid']['value'] = array(
-    0 => '9',
+    0 => '24',
   );
   $handler->display->display_options['filters']['field_operational_role_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_operational_role_tid']['vocabulary'] = 'operational_roles';
@@ -2233,7 +2223,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'curriculum_vitae' => 'curriculum_vitae',
   );
-  /* Filter criterion: Field: Current (field_boolean) */
+  /* Filter criterion: Field: Subscription (field_boolean) */
   $handler->display->display_options['filters']['field_boolean_value']['id'] = 'field_boolean_value';
   $handler->display->display_options['filters']['field_boolean_value']['table'] = 'field_data_field_boolean';
   $handler->display->display_options['filters']['field_boolean_value']['field'] = 'field_boolean_value';
