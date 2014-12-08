@@ -625,7 +625,7 @@ function gladstone_profiles_default_panels_mini() {
     $pane->configuration = array(
       'use_pager' => 1,
       'pager_id' => '0',
-      'items_per_page' => '10',
+      'items_per_page' => '25',
       'offset' => '0',
       'arguments' => array(
         'drupal_uid' => '%user:uid',
