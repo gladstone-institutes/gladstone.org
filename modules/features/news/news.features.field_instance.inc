@@ -84,7 +84,7 @@ function news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -132,7 +132,132 @@ function news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_blurb'
+  $field_instances['node-news-field_blurb'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Deck, consisting of less then 100 characters to allow for hashtags and links for a total of 140 characters on social media.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_blurb',
+    'label' => 'Deck',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 100,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_date'
+  $field_instances['node-news-field_date'] = array(
+    'bundle' => 'news',
+    'deleted' => 0,
+    'description' => 'The "Official" release date. i.e. released from embargo.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'base_human',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_date',
+    'label' => 'Release Date',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 3,
     ),
   );
 
@@ -188,7 +313,7 @@ function news_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -255,7 +380,78 @@ function news_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_longtext'
+  $field_instances['node-news-field_longtext'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Caption text for feature image.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_longtext',
+    'label' => 'Caption',
+    'required' => 0,
+    'rubik_edit_field_display' => 'default',
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -8,
+            ),
+            'limited_html' => array(
+              'weight' => -9,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'rich_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 6,
     ),
   );
 
@@ -516,7 +712,11 @@ function news_field_default_field_instances() {
   t('Attach any related biblio citations here.');
   t('Attach file(s). <i>note: these files will be <b>publicly</b> accessible</i>');
   t('Body');
+  t('Caption');
+  t('Caption text for feature image.');
   t('Cover image to be displayed.');
+  t('Deck');
+  t('Deck, consisting of less then 100 characters to allow for hashtags and links for a total of 140 characters on social media.');
   t('File(s)');
   t('Full article text');
   t('Functional group/team (ex: Institute, Lab, Administration, Advisory Boards)');
@@ -524,10 +724,12 @@ function news_field_default_field_instances() {
   t('Node Reference(s)');
   t('Operational Unit(s)');
   t('Publication(s)');
+  t('Release Date');
   t('Research Tag(s)');
   t('Short title');
   t('Tag content with related terms here. <i>example: disease name, research areas, proteins, pathways, etc..</i>');
   t('Tag users related to this content.');
+  t('The "Official" release date. i.e. released from embargo.');
   t('Title for views and minifeeds (140chars)');
   t('User Reference(s)');
 
