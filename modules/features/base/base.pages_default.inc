@@ -452,9 +452,15 @@ function base_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => '"Article" node meta-data',
       'title' => '',
-      'body' => '<span class="author">By %author:name /</span>
+      'body' => '<div class="inner float-left">
+<span class="author">By %author:name /</span>
 <span class="node-type">Gladstone %node:content-type /</span>
-<span class="release-date">%node:field-date:article</span>',
+<span class="release-date">%node:field-date:article</span>
+</div>
+<div class="share float-right">
+<a href="http://facebook.com/sharer.php?u=%node:url"><i class="fa fa-facebook-square"></i></a>
+<a href="http://twitter.com/intent/tweet?url=%node:url&text=%node:title"><i class="fa fa-twitter"></i></a>
+</div>',
       'format' => 'php_code',
       'substitute' => 1,
     );

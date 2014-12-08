@@ -41,6 +41,13 @@ iframe.media-modal-frame {
 		.block-content {
 			padding: .5*$gw;
 		}
+
+		.share {
+			margin-right: 2*$gw;
+			i {
+				margin-right: .25*$gw;
+			}
+		}
 	}
 
 	.feature-image {
