@@ -123,7 +123,7 @@ projects[htmlpurifier][subdir]	= contrib
 projects[htmlpurifier][download][type]		= git
 projects[htmlpurifier][download][revision]	= a62d293a
 projects[htmlpurifier][download][revision]	= 7.x-2.x
-libraries[htmlpurifier][download][type]	= get
+;libraries[htmlpurifier][download][type]	= get
 ;libraries[htmlpurifier][download][url]	= http://htmlpurifier.org/releases/htmlpurifier-4.6.0.tar.gz
 ;libraries[htmlpurifier][destination]	= libraries
 
