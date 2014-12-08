@@ -1825,9 +1825,14 @@ function institute_default_page_manager_pages() {
         ),
       ),
     ),
+    'panels_css_js_files_css' => '[theme]/css/page_manager/institute.css',
+    'panels_css_js_files_js' => '',
+    'panels_css_js_code_css' => '',
+    'panels_css_js_code_js' => '',
+    'panels_css_js_code_js_wrapper' => '0',
   );
   $display = new panels_display();
-  $display->layout = 'gs3_25_50_25';
+  $display->layout = 'gs2_25_75';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -1848,7 +1853,7 @@ function institute_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-3e44f9a7-1696-4abc-9b0a-687099c95a74';
-    $pane->panel = 'gs3_25_50_25_header';
+    $pane->panel = 'gs2_25_75_header';
     $pane->type = 'page_breadcrumb';
     $pane->subtype = 'page_breadcrumb';
     $pane->shown = TRUE;
@@ -1864,10 +1869,10 @@ function institute_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '3e44f9a7-1696-4abc-9b0a-687099c95a74';
     $display->content['new-3e44f9a7-1696-4abc-9b0a-687099c95a74'] = $pane;
-    $display->panels['gs3_25_50_25_header'][0] = 'new-3e44f9a7-1696-4abc-9b0a-687099c95a74';
+    $display->panels['gs2_25_75_header'][0] = 'new-3e44f9a7-1696-4abc-9b0a-687099c95a74';
     $pane = new stdClass();
     $pane->pid = 'new-69104fa5-9c29-496a-8451-02a3fb44cca3';
-    $pane->panel = 'gs3_25_50_25_header';
+    $pane->panel = 'gs2_25_75_header';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
     $pane->shown = TRUE;
@@ -1901,86 +1906,10 @@ function institute_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '69104fa5-9c29-496a-8451-02a3fb44cca3';
     $display->content['new-69104fa5-9c29-496a-8451-02a3fb44cca3'] = $pane;
-    $display->panels['gs3_25_50_25_header'][1] = 'new-69104fa5-9c29-496a-8451-02a3fb44cca3';
-    $pane = new stdClass();
-    $pane->pid = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'node_body';
-    $pane->subtype = 'node_body';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_uuid:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
-    $display->content['new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][0] = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
-    $pane = new stdClass();
-    $pane->pid = 'new-de679a78-fdaf-47c6-814f-4ea6855f058b';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'biblio-publications_ca_pane';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 0,
-      'use_pager' => 1,
-      'pager_id' => '0',
-      'items_per_page' => '10',
-      'offset' => '0',
-      'fields_override' => array(
-        'citation' => 1,
-      ),
-      'context' => array(
-        0 => 'argument_term_1',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = 'de679a78-fdaf-47c6-814f-4ea6855f058b';
-    $display->content['new-de679a78-fdaf-47c6-814f-4ea6855f058b'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-de679a78-fdaf-47c6-814f-4ea6855f058b';
-    $pane = new stdClass();
-    $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
-    $pane->panel = 'gs3_25_50_25_sidebar';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'sidebar';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '8f8e58b3-3478-4030-b689-c82c207884a3';
-    $display->content['new-8f8e58b3-3478-4030-b689-c82c207884a3'] = $pane;
-    $display->panels['gs3_25_50_25_sidebar'][0] = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
+    $display->panels['gs2_25_75_header'][1] = 'new-69104fa5-9c29-496a-8451-02a3fb44cca3';
     $pane = new stdClass();
     $pane->pid = 'new-c131e3ab-1418-460a-a869-67e9b6dfd94d';
-    $pane->panel = 'gs3_25_50_25_top';
+    $pane->panel = 'gs2_25_75_inset';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
     $pane->shown = TRUE;
@@ -2004,10 +1933,10 @@ function institute_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'c131e3ab-1418-460a-a869-67e9b6dfd94d';
     $display->content['new-c131e3ab-1418-460a-a869-67e9b6dfd94d'] = $pane;
-    $display->panels['gs3_25_50_25_top'][0] = 'new-c131e3ab-1418-460a-a869-67e9b6dfd94d';
+    $display->panels['gs2_25_75_inset'][0] = 'new-c131e3ab-1418-460a-a869-67e9b6dfd94d';
     $pane = new stdClass();
     $pane->pid = 'new-dae0a8e5-ac3a-46bb-8dcc-de405d31d734';
-    $pane->panel = 'gs3_25_50_25_top';
+    $pane->panel = 'gs2_25_75_inset';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_image';
     $pane->shown = TRUE;
@@ -2034,7 +1963,84 @@ function institute_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'dae0a8e5-ac3a-46bb-8dcc-de405d31d734';
     $display->content['new-dae0a8e5-ac3a-46bb-8dcc-de405d31d734'] = $pane;
-    $display->panels['gs3_25_50_25_top'][1] = 'new-dae0a8e5-ac3a-46bb-8dcc-de405d31d734';
+    $display->panels['gs2_25_75_inset'][1] = 'new-dae0a8e5-ac3a-46bb-8dcc-de405d31d734';
+    $pane = new stdClass();
+    $pane->pid = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
+    $pane->panel = 'gs2_25_75_inset';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_uuid:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
+    $display->content['new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992'] = $pane;
+    $display->panels['gs2_25_75_inset'][2] = 'new-5c404e9b-d6e0-4e49-83f0-1514b1a7d992';
+    $pane = new stdClass();
+    $pane->pid = 'new-4f3626d8-93e7-4a65-8bdc-2cb6066a8b5a';
+    $pane->panel = 'gs2_25_75_inset';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'biblio-member_pubs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '25',
+      'offset' => '0',
+      'fields_override' => array(
+        'citation' => 1,
+        'field_research_tags' => 0,
+      ),
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '4f3626d8-93e7-4a65-8bdc-2cb6066a8b5a';
+    $display->content['new-4f3626d8-93e7-4a65-8bdc-2cb6066a8b5a'] = $pane;
+    $display->panels['gs2_25_75_inset'][3] = 'new-4f3626d8-93e7-4a65-8bdc-2cb6066a8b5a';
+    $pane = new stdClass();
+    $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
+    $pane->panel = 'gs2_25_75_sidebar';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'sidebar';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '8f8e58b3-3478-4030-b689-c82c207884a3';
+    $display->content['new-8f8e58b3-3478-4030-b689-c82c207884a3'] = $pane;
+    $display->panels['gs2_25_75_sidebar'][0] = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-3e44f9a7-1696-4abc-9b0a-687099c95a74';
   $handler->conf['display'] = $display;

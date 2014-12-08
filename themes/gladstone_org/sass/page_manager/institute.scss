@@ -1,0 +1,24 @@
+@import "base";
+
+
+.pane-biblio-member-pubs {
+	.views-row {
+		margin-bottom: .75*$gw;
+		line-height: 1em;
+	}
+
+	.field-content {
+		color: rgba($blue_0,0.75);
+	}
+
+	.biblio-authors a {
+		color: rgba($blue_0a,0.5);
+	}
+
+	a.biblio-local-author {
+		color: $accent;
+	}
+	.biblio-title-ama a {
+		color: rgba($blue_0,0.8);
+	}
+}
