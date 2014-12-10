@@ -5940,6 +5940,52 @@ Check here for a comprehensive list of all academic papers and publications by G
     ),
     'uuid' => '323316af-bf95-4303-b60b-c85c61e52578',
   );
+  $entities['export_staging'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'node',
+      'uri' => 'node/662c9f19-1c90-4a9a-9681-d94db21511ba',
+      'cause' => FALSE,
+    ),
+    'body' => array(
+      'und' => array(
+        0 => array(
+          'format' => 'limited_html',
+          'summary' => '',
+          'value' => '',
+        ),
+      ),
+    ),
+    'comment' => 0,
+    'field_files' => array(),
+    'field_image' => array(),
+    'field_node_refs' => array(),
+    'field_operational_units' => array(
+      'und' => array(
+        0 => array(
+          'tid' => '1ba15dd3-7ce9-4a37-997a-e45e5343b340',
+        ),
+      ),
+    ),
+    'field_research_tags' => array(),
+    'field_user_refs' => array(),
+    'language' => 'und',
+    'log' => '',
+    'promote' => 0,
+    'status' => 1,
+    'sticky' => 0,
+    'title' => 'Centers',
+    'tnid' => 0,
+    'translate' => 0,
+    'type' => 'site_page',
+    'uid' => 1,
+    'url_alias' => array(
+      0 => array(
+        'alias' => 'content/centers-2',
+        'language' => 'und',
+      ),
+    ),
+    'uuid' => '662c9f19-1c90-4a9a-9681-d94db21511ba',
+  );
 
   return $entities;
 }
