@@ -3816,10 +3816,7 @@ Fax: (415) 355-0910</p>
 		</tr>
 	</tbody>
 </table>
-
-<p>&nbsp;</p>
-
-ADD MAP WIDGET',
+',
         ),
       ),
     ),
