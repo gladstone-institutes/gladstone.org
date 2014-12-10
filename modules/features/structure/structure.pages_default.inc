@@ -2884,7 +2884,7 @@ function structure_default_page_manager_pages() {
       'more_link' => 0,
       'use_pager' => 1,
       'pager_id' => '0',
-      'items_per_page' => '10',
+      'items_per_page' => '40',
       'offset' => '0',
       'fields_override' => array(
         'citation' => 1,
@@ -2894,6 +2894,10 @@ function structure_default_page_manager_pages() {
       ),
       'override_title' => 0,
       'override_title_text' => '',
+      'exposed' => array(
+        'field_operational_units_tid' => '',
+        'field_research_tags_tid' => '',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
