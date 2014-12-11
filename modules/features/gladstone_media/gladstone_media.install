@@ -1,0 +1,16 @@
+<?php
+
+function gladstone_media_enable() {
+
+	// @hack create an db override of the default video file type
+	// as a workaroudn for many complicated media integration issues
+	$video_file_type = drupal_get_path('module','gladstone_media').'/video.file_type.serialized';
+
+	db_insert('file_type') // Table name no longer needs {}
+		->fields(array(
+  			'type' => 'video',
+  			'label' => 'Video',
+  			'description' => 'A <em>Video</em> file is a moving visual recording.',
+  			'mimetypes' => file_get_contents($video_file_type)
+	))->execute();
+}

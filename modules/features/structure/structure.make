@@ -102,8 +102,14 @@ projects[features_extra][download][branch]   = 7.x-1.x
 projects[ckeditor][version]  = 1.x-dev
 projects[ckeditor][subdir]	 = contrib
 projects[ckeditor][download][type]     = git
-projects[ckeditor][download][revision] = b29372fb
+projects[ckeditor][download][revision] = 8499587d
 projects[ckeditor][download][branch]   = 7.x-1.x
+; Integration with Media 2.x @see https://www.drupal.org/node/2159403
+projects[ckeditor][patch][1504696] = https://www.drupal.org/files/issues/make_ckeditor_plugin-2159403-107.patch
+; External plugin declarations are redundant. @see http://drupal.org/comment/8284591#comment-8284591
+;projects[ckeditor][patch][2158741] = http://drupal.org/files/issues/ckeditor-remove-external-plugin-declarations-1-alt.patch
+
+
 libraries[ckeditor][download][type]    = get
 libraries[ckeditor][download][url]     = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.4/ckeditor_4.3.4_standard.zip
 libraries[ckeditor][download][subtree] = ckeditor/

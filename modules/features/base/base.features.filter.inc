@@ -18,13 +18,8 @@ function base_filter_default_formats() {
     'status' => 1,
     'weight' => -8,
     'filters' => array(
-      'media_filter' => array(
-        'weight' => -48,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'htmlpurifier' => array(
-        'weight' => -47,
+        'weight' => -50,
         'status' => 1,
         'settings' => array(
           'htmlpurifier_config_name' => 'htmlpurifier_advanced',
@@ -176,6 +171,11 @@ news',
             'URI.SafeIframeRegexp' => '%^http://(www.youtube.|player.vimeo.|maps.google.|www.slideshare.)%',
           ),
         ),
+      ),
+      'media_filter' => array(
+        'weight' => -49,
+        'status' => 1,
+        'settings' => array(),
       ),
     ),
   );
@@ -188,30 +188,25 @@ news',
     'status' => 1,
     'weight' => -9,
     'filters' => array(
-      'media_filter' => array(
-        'weight' => -49,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_autop' => array(
-        'weight' => -46,
+        'weight' => -50,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_url' => array(
-        'weight' => -45,
+        'weight' => -49,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => -44,
+        'weight' => -48,
         'status' => 1,
         'settings' => array(),
       ),
       'htmlpurifier' => array(
-        'weight' => 0,
+        'weight' => -43,
         'status' => 1,
         'settings' => array(
           'htmlpurifier_config_name' => 'htmlpurifier_advanced',
@@ -363,6 +358,11 @@ news',
             'URI.SafeIframeRegexp' => '%^http://(www.youtube.|player.vimeo.|maps.google.|www.slideshare.)%',
           ),
         ),
+      ),
+      'media_filter' => array(
+        'weight' => -42,
+        'status' => 1,
+        'settings' => array(),
       ),
     ),
   );

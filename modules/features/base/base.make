@@ -81,18 +81,32 @@ projects[field_collection][download][branch]	= 7.x-1.x
 ; Media -----------------------------------------
 projects[media][version] = 2.x-dev
 projects[media][subdir]	 = contrib
+projects[media][download][type] 	  = git
+projects[media][download][revision] = 247b31f8
+projects[media][download][branch]   = 7.x-2.x
+; fix markup is strip-out by ckeditor @see https://www.drupal.org/node/2364559
+projects[media][patch][] = https://www.drupal.org/files/issues/media-document-stripped-ckeditor-2364559-9.patch
 
 projects[media_youtube][version] = 2.x-dev
 projects[media_youtube][subdir]  = contrib
+projects[media_youtube][download][type] 	  = git
+projects[media_youtube][download][revision] = 9728dfb1
+projects[media_youtube][download][branch]   = 7.x-2.x
 
 projects[media_vimeo][version] = 7.x-2.0
 projects[media_vimeo][subdir] = contrib
+projects[media_vimeo][download][type] 	  = git
+projects[media_vimeo][download][revision] = 546dfa35
+projects[media_vimeo][download][branch]   = 7.x-2.x
 
 projects[ckeditor_media][version] = 1.x-dev
 projects[ckeditor_media][subdir]  = contrib
 
 projects[file_entity][version] = 2.x-dev
 projects[file_entity][subdir]  = contrib
+projects[file_entity][download][type] 	  = git
+projects[file_entity][download][revision] = 39e9f081
+projects[file_entity][download][branch]   = 7.x-2.x
 
 projects[imagefield_focus][version] = "1.x-dev"
 projects[imagefield_focus][subdir]	= "contrib"
