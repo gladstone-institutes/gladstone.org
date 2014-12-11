@@ -4638,10 +4638,10 @@ Director, Roddenberry Foundation</p>
     $display->content['new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7'] = $pane;
     $display->panels['gs3_25_50_25_middle'][0] = 'new-6baa05bd-5ffb-43e6-bffb-b6fd941126c7';
     $pane = new stdClass();
-    $pane->pid = 'new-aba04ef8-2f4c-437b-a5b6-9b4b3b492996';
+    $pane->pid = 'new-2fbfb2f7-861e-4385-906d-81fbf6b2f8a0';
     $pane->panel = 'gs3_25_50_25_middle';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:14acfa1d-98e6-4426-b454-429760acd45d';
+    $pane->subtype = 'uuid:f9213b95-f117-4d7c-8467-8e132ac55085';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -4653,9 +4653,9 @@ Director, Roddenberry Foundation</p>
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'aba04ef8-2f4c-437b-a5b6-9b4b3b492996';
-    $display->content['new-aba04ef8-2f4c-437b-a5b6-9b4b3b492996'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][1] = 'new-aba04ef8-2f4c-437b-a5b6-9b4b3b492996';
+    $pane->uuid = '2fbfb2f7-861e-4385-906d-81fbf6b2f8a0';
+    $display->content['new-2fbfb2f7-861e-4385-906d-81fbf6b2f8a0'] = $pane;
+    $display->panels['gs3_25_50_25_middle'][1] = 'new-2fbfb2f7-861e-4385-906d-81fbf6b2f8a0';
     $pane = new stdClass();
     $pane->pid = 'new-ccdfc11b-ee2f-4356-89bd-57827c5adb0d';
     $pane->panel = 'gs3_25_50_25_sidebar';

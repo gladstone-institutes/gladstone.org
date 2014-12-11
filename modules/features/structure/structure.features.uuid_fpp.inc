@@ -408,5 +408,32 @@ making it possible.</p>
       ),
     ),
   );
+  $fpps[] = array(
+    'timestamp' => 1418258288,
+    'title' => '',
+    'log' => '',
+    'bundle' => 'map',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 1,
+    'admin_title' => 'Gladstone google map',
+    'admin_description' => '',
+    'category' => 'Reusable Content',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1418258259,
+    'uuid' => 'f9213b95-f117-4d7c-8467-8e132ac55085',
+    'language' => 'und',
+    'field_longtext' => array(),
+    'field_map_address' => array(
+      'und' => array(
+        0 => array(
+          'value' => '1650 Owens Street San Francisco, CA 94158-2261',
+          'format' => NULL,
+          'safe_value' => '1650 Owens Street San Francisco, CA 94158-2261',
+        ),
+      ),
+    ),
+  );
   return $fpps;
 }
