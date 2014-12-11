@@ -1612,6 +1612,9 @@ function gladstone_profiles_views_default_views() {
   /* Display: Scientific Advisory Board (context aware) */
   $handler = $view->new_display('panel_pane', 'Scientific Advisory Board (context aware)', 'leadership_widget_sci_adv_board_ca_pane');
   $handler->display->display_options['display_description'] = 'Feed of external advisors';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Leadership: field_leadership */
   $handler->display->display_options['relationships']['field_leadership_value']['id'] = 'field_leadership_value';
@@ -1774,6 +1777,13 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_institution_1']['empty'] = '[field_institution]';
   $handler->display->display_options['fields']['field_institution_1']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_institution_1']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Field: Biography */
+  $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
+  $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
+  $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
+  $handler->display->display_options['fields']['field_biography']['relationship'] = 'field_leadership_value';
+  $handler->display->display_options['fields']['field_biography']['label'] = '';
+  $handler->display->display_options['fields']['field_biography']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field collection item: Operational Unit (field_operational_unit) */
   $handler->display->display_options['arguments']['field_operational_unit_tid']['id'] = 'field_operational_unit_tid';
