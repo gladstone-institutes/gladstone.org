@@ -7279,7 +7279,7 @@ $entities['structure_sitemap'][] = (object) array(
 		'attributes' => array(
 			'class' => array(
 				0 => 'fa',
-				1 => 'fa-envelope-o',
+				1 => 'fa-envelope',
 				2 => 'icon-only',
 				3 => 'fa-2x'
 				),
@@ -7298,7 +7298,7 @@ $entities['structure_sitemap'][] = (object) array(
 		'attributes' => array(
 			'class' => array(
 				0 => 'fa',
-				1 => 'fa-envelope-o',
+				1 => 'fa-envelope',
 				2 => 'icon-only',
 				3 => 'fa-2x'
 				),

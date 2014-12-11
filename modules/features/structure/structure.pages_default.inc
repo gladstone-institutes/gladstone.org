@@ -135,7 +135,7 @@ function structure_default_page_manager_pages() {
     $pane->style = array(
       'settings' => array(
         'url' => '',
-        'icon' => 'fa-play-circle-o',
+        'icon' => 'fa-play-circle',
         'width' => 'width-50',
         'float' => 'float-left',
         'clear' => 'null',
