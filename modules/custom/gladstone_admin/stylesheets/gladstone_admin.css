@@ -60,7 +60,7 @@ div.autocomplete-deluxe-throbber {
 
 /* line 65, ../sass/gladstone_admin.scss */
 #edit-status .form-item:first-child {
-  float: left;
+  /*float: left;*/ 
   margin-right: 1em;
 }
 
