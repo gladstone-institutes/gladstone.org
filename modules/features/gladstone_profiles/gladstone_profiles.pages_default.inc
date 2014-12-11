@@ -371,6 +371,8 @@ function gladstone_profiles_default_page_manager_handlers() {
       'context' => array(
         0 => 'relationship_profile2_1',
       ),
+      'override_title' => 1,
+      'override_title_text' => 'Assistant',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -437,7 +439,10 @@ function gladstone_profiles_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'realname',
+      'css_class' => 'page-heading',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -466,7 +471,10 @@ function gladstone_profiles_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'display-title',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
