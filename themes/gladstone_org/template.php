@@ -30,7 +30,7 @@ function gladstone_org_preprocess_html(&$vars) {
 
   // Minimalist Typekit Integration, to avoid FontYourFace
   // @todo add theme setting field for configuring api key
-  drupal_add_js('http://use.typekit.com/nnk8pxv.js');
+  drupal_add_js('http://use.typekit.com/nnk8pxv.js',array('type'=>'external','scope' => 'header','weight' => -11));
   drupal_add_js('try{Typekit.load();}catch(e){}', array('type' => 'inline', 'scope' => 'header', 'weight' => -10));
 
   // Add font awesome
