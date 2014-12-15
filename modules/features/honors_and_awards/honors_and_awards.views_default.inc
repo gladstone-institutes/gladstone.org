@@ -96,6 +96,13 @@ function honors_and_awards_views_default_views() {
   $handler->display->display_options['fields']['field_honor_and_award']['relationship'] = 'relation_base_was_awarded_node';
   $handler->display->display_options['fields']['field_honor_and_award']['label'] = '';
   $handler->display->display_options['fields']['field_honor_and_award']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Award Date (field_date_mmyy) */
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['id'] = 'field_date_mmyy_value';
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['table'] = 'field_data_field_date_mmyy';
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['field'] = 'field_date_mmyy_value';
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['relationship'] = 'relation_base_was_awarded_node';
+  $handler->display->display_options['sorts']['field_date_mmyy_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Operational Unit(s) (field_operational_units) */
   $handler->display->display_options['arguments']['field_operational_units_tid']['id'] = 'field_operational_units_tid';

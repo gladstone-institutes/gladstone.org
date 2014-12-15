@@ -30,6 +30,11 @@ function base_date_formats() {
       'format' => 'F j, Y',
       'locales' => array(),
     ),
+    array(
+      'type' => 'year',
+      'format' => 'Y',
+      'locales' => array()
+    )
   );
 }
 
@@ -38,6 +43,7 @@ function base_date_formats() {
  */
 function base_date_format_types() {
   return array(
-    'article' => t('Gladstone: Month dd, YYYY'),
+    'article' => t('Month dd, YYYY'),
+    'year' => t('YYYY')
   );
 }
