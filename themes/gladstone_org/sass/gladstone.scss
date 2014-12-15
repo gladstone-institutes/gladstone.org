@@ -106,3 +106,32 @@ iframe.media-modal-frame {
 		color: rgba($blue_0,0.8);
 	}
 }
+// @hack search form
+#block-search-form {
+	float: right;
+	position: relative;
+	margin: -2.25em 0 0 0 !important;
+	z-index: 999;
+
+	input::-webkit-input-placeholder,
+	input:-moz-placeholder {
+  		color: $blue_5;  		
+	}
+
+	input.form-text {
+		// height: 1.25em;
+		background-color: transparent;
+		border: 2px solid $blue_5;
+		border-radius: 2px;
+	}
+
+	input.form-submit {
+		background: image-url('spyglass.png') no-repeat scroll center center transparent;
+		border: 0 none;
+		margin-left: -2em;
+		text-indent: -9999px;
+		// height: 2em;
+		width: 2em;
+		position: relative;
+	}
+}
