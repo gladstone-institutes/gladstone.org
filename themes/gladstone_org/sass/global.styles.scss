@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  font-family: $sans-serif; // Set from _custom.scss font variables
+  font-family: $serif; // Set from _custom.scss font variables
   font-size: 87.5%;
 }
 
@@ -55,6 +55,9 @@ body {
  *   HTML Elements
  * ========================================================================== */
 
+h1,h2,h3,h4,h5,h6,nav,.menu {
+  font-family: $sans-serif;
+}
 h1,h2,h3 {
   color: $blue_5;
 
@@ -265,7 +268,7 @@ var {
  */
 #nav-wrapper {
   .container {
-    @include page-curl-bottom();
+    // @include page-curl-bottom();
     @include page-width();
     background-color: $header_bg;
     z-index: 1;
@@ -359,7 +362,7 @@ var {
   background-color: $content_bg;
 
   .container {
-    @include page-curl-bottom();
+    // @include page-curl-bottom();
     @include page-width();
     padding-top: 1.5*$gutter-width;
   }
