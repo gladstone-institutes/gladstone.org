@@ -6,3 +6,13 @@
 
 
 include_once 'honors_and_awards.features.inc';
+
+
+/**
+ * Implements hook_views_query_alter(&$view, &$query)
+ */
+function honors_and_awards_views_query_alter(&$view, &$query) {
+  if ($view->name == 'honors_and_awards') {
+    $query->where[0]['type'] = 'OR';
+  }
+}
