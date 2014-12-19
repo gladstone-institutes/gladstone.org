@@ -1,0 +1,75 @@
+<?php
+
+
+function gladstone_intramigrate_flush_caches() {
+	
+	// Common arguments
+	$args = array(
+		'group_name' => 'Gladstone',
+		'source_version' => 7,
+		'source_connection' => 'legacy',
+		'source_database' => array(
+			'driver'   => 'mysql',
+			'database' => variable_get('gladstone_migrate_source_schema',''),
+			'username' => variable_get('gladstone_migrate_source_user',''),
+			'password' => variable_get('gladstone_migrate_source_pass',''),
+			'host'     => '127.0.0.1',
+			'prefix'   => '',
+		),
+		'format_mappings' => array(
+			'php' => 'php',
+			'full_html' => 'full_html',
+			'limited_html' => 'limited_html',
+			'rich_text' => 'rich_text',
+			'plain_text' => 'plain_text'
+		)
+	);
+
+	/*** Register migrations ----- ***/
+
+	// Users
+	Migration::registerMigration('GSUser','user', $args);
+	Migration::registerMigration('GSRole','role', $args);
+
+	// Files
+	Migration::registerMigration('GSFile','files',$args+array(
+		'source_dir' => variable_get('gladstone_migrate_source_files'),		
+		'destination_dir' => 'public://'
+	));	
+	Migration::registerMigration('GSImageFieldFocus','field_focus', $args);
+
+	// Terms
+	Migration::registerMigration('GSOpsUnitTerms','operational_unit', $args);
+	Migration::registerMigration('GSOpsRoleTerms','operational_role', $args);
+	Migration::registerMigration('GSOpsTitleTerms','operational_title', $args);
+	Migration::registerMigration('GSInstitutionTerms','institution', $args);
+	Migration::registerMigration('GSInstitutionOpUnitTerms','institution_operational_unit', $args);
+	Migration::registerMigration('GSHonorsAndAwardsTerms','honors_and_awards', $args);
+	Migration::registerMigration('GSConcentrationOfStudyTerms','concentration_of_study', $args);
+	Migration::registerMigration('GSResearchTerms','research', $args);
+	Migration::registerMigration('GSEventTypeTerms','event_types', $args);
+
+	// Node
+	Migration::registerMigration('GSAllNodes','nodes', $args);
+	Migration::registerMigration('GSNews','news', $args);
+	Migration::registerMigration('GSHonorsAndAwards','honors_and_award_nodes', $args);
+	Migration::registerMigration('GSEvent','event', $args);	
+	Migration::registerMigration('GSInTheNews','in_the_news', $args);
+	Migration::registerMigration('GSPressRelease','press_release', $args);
+	
+	// Migration::registerMigration('GSBiblioNodes','biblio', $args);
+	// @todo basic pages
+	// @todo technolody, yet to be specd
+
+	//Profile2
+	Migration::registerMigration('GSProfile','profile', $args);
+	Migration::registerMigration('GSCurriculumVitae','curriculum_vitae', $args);
+	Migration::registerMigration('GSCurriculumVitaeAffiliations','affiliation', $args);
+	Migration::registerMigration('GSCurriculumVitaeEducation','education', $args);
+	Migration::registerMigration('GSCurriculumVitaeProfTitles','prof_title', $args);	
+	Migration::registerMigration('GSHonorsAndAwardsRelations','honors_and_awards_relation', $args);	
+	Migration::registerMigration('GSLeadership','leadership', $args);
+	Migration::registerMigration('GSLeadershipCollection','leadership_collection', $args);
+
+
+}
