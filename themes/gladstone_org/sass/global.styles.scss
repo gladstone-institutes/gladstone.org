@@ -719,6 +719,7 @@ a {
 
   &:hover,
   &:focus {
+    color: $accent !important;
     text-decoration: none;
     outline: none;
   }
