@@ -57,7 +57,24 @@ function gladstone_intramigrate_flush_caches() {
 	Migration::registerMigration('GSInTheNews','in_the_news', $args);
 	Migration::registerMigration('GSPressRelease','press_release', $args);
 	
-	// Migration::registerMigration('GSBiblioNodes','biblio', $args);
+	// Biblio
+	Migration::registerMigration('GSBiblioNodes','biblio_nodes', $args);
+	Migration::registerMigration('GSBiblio','biblio', $args);
+	Migration::registerMigration('GSBiblioContributor','biblio_contributor', $args);
+	Migration::registerMigration('GSBiblioContributorDataInit','biblio_contributor_data', $args);
+	Migration::registerMigration('GSBiblioContributorData','biblio_contributor_data_update', $args);
+	Migration::registerMigration('GSBiblioContributorType','biblio_contributor_type', $args);
+	Migration::registerMigration('GSBiblioContributorTypeData','biblio_contributor_type_data', $args);
+	Migration::registerMigration('GSBiblioDuplicates','biblio_duplicates', $args);
+	Migration::registerMigration('GSBiblioFieldType','biblio_field_type', $args);
+	Migration::registerMigration('GSBiblioFieldTypeData','biblio_field_type_data', $args);
+	Migration::registerMigration('GSBiblioFields','biblio_fields', $args);
+	Migration::registerMigration('GSBiblioKeyword','biblio_keyword', $args);
+	Migration::registerMigration('GSBiblioKeywordData','biblio_keyword_data', $args);
+	Migration::registerMigration('GSBiblioPubmed','biblio_pubmed', $args);
+	Migration::registerMigration('GSBiblioPubmedGrantInfo','biblio_pubmed_grant_info', $args);
+	Migration::registerMigration('GSBiblioTypes','biblio_types', $args);
+
 	// @todo basic pages
 	// @todo technolody, yet to be specd
 
