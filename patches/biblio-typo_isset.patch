@@ -1,0 +1,13 @@
+diff --git a/includes/biblio.keywords.inc b/includes/biblio.keywords.inc
+index c1317fc..b94e131 100644
+--- a/includes/biblio.keywords.inc
++++ b/includes/biblio.keywords.inc
+@@ -123,7 +123,7 @@ function biblio_insert_keywords($node, $update = FALSE) {
+   $kw_vocab = variable_get('biblio_keyword_vocabulary', 0);
+   $taxo_terms = $typed_keywords = array();
+   $freetag_vocab = FALSE;
+-  if (is_set($node->biblio_keywords) && !is_array($node->biblio_keywords)) {
++  if (isset($node->biblio_keywords) && !is_array($node->biblio_keywords)) {
+     $typed_keywords = biblio_explode_keywords($node->biblio_keywords);
+   }
+   else {
