@@ -9,8 +9,14 @@ class GSBiblioNodes extends GSNode {
 
 		parent::__construct($arguments);	
 
+		$this->dependencies[] = 'biblio_types';
+
+		// prevent biblio save from throwing warnings during node migration
+		$this->addFieldMapping('biblio_type')->defaultValue(0);
+		$this->addFieldMapping('biblio_keywords')->defaultValue(array());
+		
 		$this->addUnmigratedSources(array(
-			'biblio_refs'
+			'biblio_refs',
 		));
 	}	
 }
@@ -48,7 +54,8 @@ class GSBiblio extends GSBiblioBase {
 		$arguments['description'] = 'biblio';
 		$arguments['table_name']  = 'biblio';
 		parent::__construct($arguments);
-
+		$this->systemOfRecord = Migration::DESTINATION;		
+		$this->dependencies[] = 'biblio_nodes';
 		$this->dependencies[] = 'biblio_types';
 		$this->addFieldMapping('vid','nid')->sourceMigration('nodes');
 		$this->addFieldMapping('nid','nid')->sourceMigration('nodes');
@@ -132,8 +139,7 @@ class GSBiblioContributorDataInit extends GSBiblioBase {
 		$arguments['description'] = 'biblio_contributor_data';
 		$arguments['table_name']  = 'biblio_contributor_data';
 		parent::__construct($arguments);
-		$this->systemOfRecord = Migration::DESTINATION;		
-		$this->addSimpleMappings(array('cid'));
+		$this->addSimpleMappings(array('name','lastname','firstname','prefix','suffix','initials','affiliation','literal','md5',));
 	}
 }
 
@@ -147,7 +153,6 @@ class GSBiblioContributorData extends GSBiblioBase {
 		$this->addFieldMapping('aka','aka')->sourceMigration('biblio_contributor_data');
 		$this->addFieldMapping('alt_form','alt_form')->sourceMigration('biblio_contributor_data');
 		$this->addFieldMapping('drupal_uid','drupal_uid')->sourceMigration('user');
-		$this->addSimpleMappings(array('name','lastname','firstname','prefix','suffix','initials','affiliation','literal','md5',));
 	}
 }
 
@@ -170,7 +175,7 @@ class GSBiblioContributorTypeData extends GSBiblioBase {
 		$arguments['description'] = 'biblio_contributor_type_data';
 		$arguments['table_name']  = 'biblio_contributor_type_data';
 		parent::__construct($arguments);
-		$this->addSimpleMappings(array('auth_type','title','hint'));
+		$this->addSimpleMappings(array('title','hint'));
 	}
 }
 
@@ -190,7 +195,7 @@ class GSBiblioFieldType extends GSBiblioBase {
 		$arguments['description'] = 'biblio_field_type';
 		$arguments['table_name']  = 'biblio_field_type';
 		parent::__construct($arguments);
-
+		$this->systemOfRecord = Migration::DESTINATION;		
 		$this->dependencies[] = 'biblio_types';
 		$this->dependencies[] = 'biblio_fields';
 		$this->dependencies[] = 'biblio_field_type_data';
