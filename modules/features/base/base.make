@@ -37,10 +37,10 @@ projects[date][subdir]  = "contrib"
 ;fix date import timezone conversion https://www.drupal.org/node/2305049
 projects[date][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/date-timezone_correction.patch
 
-projects[relation][version]  = 1.x-rc5
+projects[relation][version]  = 7.x-1.x-dev
 projects[relation][subdir]	 = contrib
 projects[relation][download][type]     = git
-projects[relation][download][revision] = 5b8e243b
+projects[relation][download][revision] = f6938120
 projects[relation][download][branch]   = 7.x-1.x
 ; workaround for migrate error
 projects[relation][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/relation-field_validation_failed-2160525-4.patch
