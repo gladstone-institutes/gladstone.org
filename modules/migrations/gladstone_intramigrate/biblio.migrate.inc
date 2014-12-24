@@ -54,8 +54,8 @@ class GSBiblio extends GSBiblioBase {
 		$arguments['description'] = 'biblio';
 		$arguments['table_name']  = 'biblio';
 		parent::__construct($arguments);
-		$this->systemOfRecord = Migration::DESTINATION;		
-		$this->dependencies[] = 'biblio_nodes';
+		// $this->systemOfRecord = Migration::DESTINATION;		
+		// $this->dependencies[] = 'biblio_nodes';
 		$this->dependencies[] = 'biblio_types';
 		$this->addFieldMapping('vid','nid')->sourceMigration('nodes');
 		$this->addFieldMapping('nid','nid')->sourceMigration('nodes');

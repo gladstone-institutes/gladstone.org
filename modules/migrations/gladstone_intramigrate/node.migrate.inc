@@ -57,6 +57,10 @@ class GSNode extends DrupalNode7Migration {
 		$this->dependencies[] = 'operational_unit';
 		$this->dependencies[] = 'research';
 
+		// $this->systemOfRecord = Migration::DESTINATION;		
+		$this->addFieldMapping('nid','nid')->sourceMigration('nodes');
+		$this->addFieldMapping('vid','nid')->sourceMigration('nodes');
+
 		$this->addFieldMapping('field_user_refs','user_refs')->sourceMigration('user');
 		$this->addFieldMapping('field_node_refs','node_refs')->sourceMigration('nodes');
 		$this->addFieldMapping('field_files','files')->sourceMigration('files');
