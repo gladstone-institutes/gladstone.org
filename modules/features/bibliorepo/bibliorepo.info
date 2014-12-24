@@ -6,6 +6,7 @@ php = 5.2.4
 dependencies[] = autocomplete_deluxe
 dependencies[] = base
 dependencies[] = biblio
+dependencies[] = biblio_pm
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
