@@ -15,7 +15,7 @@ class GSNews extends GSNode {
 		$this->addFieldMapping('field_image:file_class')->defaultValue('MigrateFileFid');
 		$this->addFieldMapping('field_image:preserve_files')->defaultValue(TRUE);
 		$this->addFieldMapping('field_image:language')->defaultValue(LANGUAGE_NONE);
-		$this->addFieldMapping('field_biblio_refs','biblio_refs')->sourceMigration('nodes');
+		$this->addFieldMapping('field_biblio_refs','biblio_refs')->sourceMigration('biblio_nodes');
 
 
 		$this->addSimpleMappings(array(

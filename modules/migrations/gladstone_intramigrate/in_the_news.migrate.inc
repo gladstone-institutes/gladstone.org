@@ -9,7 +9,7 @@ class GSInTheNews extends GSNode {
 
 		parent::__construct($arguments);
 
-		$this->addFieldMapping('field_biblio_refs','biblio_refs')->sourceMigration('nodes');
+		$this->addFieldMapping('field_biblio_refs','biblio_refs')->sourceMigration('biblio_nodes');
 
 		$this->addFieldMapping('field_image','field_image_fid')->sourceMigration('files');
 		$this->addFieldMapping('field_image:alt','field_image_alt');

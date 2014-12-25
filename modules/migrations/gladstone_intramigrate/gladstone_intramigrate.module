@@ -58,8 +58,14 @@ function gladstone_intramigrate_flush_caches() {
 	Migration::registerMigration('GSPressRelease','press_release', $args);
 	
 	// Biblio
-	Migration::registerMigration('GSBiblioNodes','biblio_nodes', $args);
 	Migration::registerMigration('GSBiblio','biblio', $args);
+	Migration::registerMigration('GSBiblioNodes','biblio_nodes', $args);	
+	Migration::registerMigration('GSBilblioNodeRevisions','biblio_node_revisions', $args);	
+	Migration::registerMigration('GSBiblioUserRefs','biblio_user_refs', $args);
+	Migration::registerMigration('GSBiblioNodeRefs','biblio_node_refs', $args);
+	Migration::registerMigration('GSBiblioFiles','biblio_files', $args);
+	Migration::registerMigration('GSBilbioOpUnits','biblio_operational_units', $args);
+	Migration::registerMigration('GSBiblioResearchTags','biblio_research_tags', $args);	
 	Migration::registerMigration('GSBiblioContributor','biblio_contributor', $args);
 	Migration::registerMigration('GSBiblioContributorDataInit','biblio_contributor_data', $args);
 	Migration::registerMigration('GSBiblioContributorData','biblio_contributor_data_update', $args);

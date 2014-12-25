@@ -20,16 +20,15 @@ class GSAllNodes extends DrupalMigration {
 			MigrateDestinationTable::getKeySchema($this->sourceTable)
 		);
 
-		$this->addSimpleMappings(array(
-			'uuid'
-		));
+		$this->addSimpleMappings(array('uuid','type'));
 
 	}
-
+		
 	protected function query() {
 	    $query = Database::getConnection('legacy', $this->sourceConnection)
 	      ->select($this->sourceTable, 'n')
 	      ->fields('n');
+	    $query->condition('n.type','biblio','<>');
 	    return $query;
 	}
 }
@@ -112,7 +111,7 @@ class GSNode extends DrupalNode7Migration {
 
       	$nid = $row->nid;
 
-      	$row->user_refs = $this->user_refs($nid);
+		$row->user_refs = $this->user_refs($nid);
 		$row->node_refs = $this->node_refs($nid);
 		$row->files = $this->files($nid);
 		$row->op_units = $this->op_units($nid);
