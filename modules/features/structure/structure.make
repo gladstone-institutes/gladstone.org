@@ -36,6 +36,13 @@ projects[panelizer][download][type]     = git
 projects[panelizer][download][revision] = 809ab899
 projects[panelizer][download][branch]   = 7.x-3.x
 
+projects[pm_existing_pages][version]  = 7.x-1.x-dev
+projects[pm_existing_pages][subdir]	 = contrib
+projects[pm_existing_pages][download][type]     = git
+projects[pm_existing_pages][download][revision] = e0451cc0
+projects[pm_existing_pages][download][branch]   = 7.x-1.x
+projects[pm_existing_pages][patch][] = https://www.drupal.org/files/issues/7.x-1.4-wildcards_0.patch
+
 ; add ability to inject nodes into the menu structure
 projects[menu_position][version]	= "1.x-dev"
 projects[menu_position][subdir]		= "contrib"
