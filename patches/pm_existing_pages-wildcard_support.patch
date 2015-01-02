@@ -1,0 +1,78 @@
+
+From f183a530aa90cb699460ae53e1e6f321d21fbb58 Mon Sep 17 00:00:00 2001
+Date: Fri, 2 Jan 2015 00:02:56 -0800
+Subject: [PATCH] add wildecard support
+
+---
+ plugins/tasks/pm_existing_pages.inc | 41 ++++++++++++++++++++-----------------
+ 1 file changed, 22 insertions(+), 19 deletions(-)
+
+diff --git a/plugins/tasks/pm_existing_pages.inc b/plugins/tasks/pm_existing_pages.inc
+index 080db72..ed303a0 100644
+--- a/plugins/tasks/pm_existing_pages.inc
++++ b/plugins/tasks/pm_existing_pages.inc
+@@ -47,39 +47,42 @@ function pm_existing_pages_pm_existing_pages_menu_alter(&$items, $task) {
+       continue;
+     }
+ 
+-    $paths = explode("\n", $task_info->paths);
+-    foreach ($paths as $path) {
+-      $path = trim($path);
++    $paths = drupal_strtolower($task_info->paths);
+ 
+-      // Make sure we have a path.
+-      if (empty($path) || !isset($items[$path])) {
+-        drupal_set_message(t('%path has not been overridden because the menu item does not exist.', array('%path' => $path)));
+-        continue;
+-      }
++    foreach($items as $item_path => &$item) {
++      $item_path = drupal_strtolower($item_path);
++
++      $page_match = drupal_match_path($item_path, $paths);
++
++      if($page_match) {
++      	$path = $item_path;
+ 
+       // Make sure we have a page callback. We silently continue here, as this
+       // is a menu item that will inherit the page callback from its parent
+       // menu item.
+-      if (empty($items[$path]['page callback'])) {
++      	if (empty($item['page callback'])) {
+         continue;
+       }
+ 
+       // Add more page arguments.
+       $pm_args = array(
+         'ti' => $task_id,
+-        'pc' => $items[$path]['page callback'],
+-        'f' => isset($items[$path]['file']) ? $items[$path]['file'] : '',
+-        'fp' => isset($items[$path]['file path']) ? $items[$path]['file path'] : '',
+-        'm' => isset($items[$path]['module']) ? $items[$path]['module'] : '',
+-        't' => isset($items[$path]['title']) ? $items[$path]['title'] : '',
++      	  'pc' => $item['page callback'],
++      	  'f' => isset($item['file']) ? $item['file'] : '',
++      	  'fp' => isset($item['file path']) ? $item['file path'] : '',
++      	  'm' => isset($item['module']) ? $item['module'] : '',
++		  't' => isset($item['title']) ? $item['title'] : '',
+       );
+-      $page_arguments = isset($items[$path]['page arguments']) ? $items[$path]['page arguments'] : array();
++      	$page_arguments = isset($item['page arguments']) ? $item['page arguments'] : array();
+       $page_arguments[] = $pm_args;
+-      $items[$path]['page callback'] = 'pm_existing_pages_pm_existing_pages_page';
+-      $items[$path]['page arguments'] = $page_arguments;
+-      $items[$path]['file path'] = $task['path'];
+-      $items[$path]['file'] = $task['file'];
++      	$item['page callback'] = 'pm_existing_pages_pm_existing_pages_page';
++      	$item['page arguments'] = $page_arguments;
++      	$item['file path'] = $task['path'];
++      	$item['file'] = $task['file'];
+     }
++
++    }
++
+   }
+ }
+ 
+-- 
+1.8.4.2
+
