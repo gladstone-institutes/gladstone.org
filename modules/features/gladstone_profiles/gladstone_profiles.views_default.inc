@@ -394,7 +394,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_operational_titles']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_operational_titles']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_operational_titles']['delta_offset'] = '0';
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -1319,7 +1319,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_label_alias']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_label_alias']['alter']['path'] = 'user/[user]';
   $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -1777,7 +1777,7 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_institution_1']['empty'] = '[field_institution]';
   $handler->display->display_options['fields']['field_institution_1']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_institution_1']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Field: Biography */
+  /* Field: Field: Biosketch */
   $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
   $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
   $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
@@ -2544,9 +2544,11 @@ function gladstone_profiles_views_default_views() {
     6 => 0,
     4 => 0,
     5 => 0,
-    8 => 0,
     1 => 0,
     7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
   );
   /* Filter criterion: Profile: Phone (field_phone:delta) */
   $handler->display->display_options['filters']['delta_1']['id'] = 'delta_1';
@@ -2566,9 +2568,11 @@ function gladstone_profiles_views_default_views() {
     6 => 0,
     4 => 0,
     5 => 0,
-    8 => 0,
     1 => 0,
     7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
   );
   /* Filter criterion: Profile: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
