@@ -11,7 +11,7 @@ function gladstone_widgets_uuid_features_default_fpps() {
   $fpps = array();
 
   $fpps[] = array(
-    'timestamp' => 1417662491,
+    'timestamp' => 1418087832,
     'title' => '',
     'log' => '',
     'bundle' => 'image',
