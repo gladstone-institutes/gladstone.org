@@ -195,10 +195,6 @@ namespace 'drupal:dev' do
     # Download some extra modules
     modules = [ 'menu_editor',
                 'backup_migrate',
-                'record_feature', 
-                'devel', 
-                'simplehtmldom',
-                'profiler_builder'
               ]
     on roles(:web) do
       within fetch(:drupal_root) do

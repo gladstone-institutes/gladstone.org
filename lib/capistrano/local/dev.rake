@@ -31,6 +31,7 @@ namespace 'drupal:dev' do
         execute :ln, '-s', Dir.pwd+'/modules/updates', 'modules/'
         execute :ln, '-s', Dir.pwd+'/modules/content', 'modules/'
         execute :ln, '-s', Dir.pwd+'/modules/migrations', 'modules/'
+        execute :ln, '-s', Dir.pwd+'/modules/dev','modules/'
         execute :ln, '-s', Dir.pwd+'/'+fetch(:application)+'.info'
       end
     end  
