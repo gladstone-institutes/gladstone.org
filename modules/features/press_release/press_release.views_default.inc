@@ -129,20 +129,22 @@ function press_release_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Release Date */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['label'] = '';
-  $handler->display->display_options['fields']['field_date']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_date']['alter']['text'] = '<small>[field_date]</small>';
+  $handler->display->display_options['fields']['field_date']['alter']['text'] = '[field_date]';
+  $handler->display->display_options['fields']['field_date']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_date']['type'] = 'format_interval';
   $handler->display->display_options['fields']['field_date']['settings'] = array(
-    'interval' => '2',
-    'interval_display' => 'time ago',
+    'format_type' => 'article',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
   );
   /* Field: Field: Headline */
   $handler->display->display_options['fields']['field_display_title']['id'] = 'field_display_title';
@@ -261,7 +263,7 @@ function press_release_views_default_views() {
   $handler->display->display_options['allow']['more_link'] = 'more_link';
   $handler->display->display_options['allow']['path_override'] = 0;
   $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $handler->display->display_options['argument_input'] = array(
     'field_operational_units_tid' => array(
