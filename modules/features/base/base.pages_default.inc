@@ -50,7 +50,7 @@ function base_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -27;
+  $handler->weight = -25;
   $handler->conf = array(
     'title' => 'Default',
     'no_blocks' => 0,
@@ -208,9 +208,9 @@ function base_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -27;
   $handler->conf = array(
-    'title' => '"Article"',
+    'title' => 'News',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
@@ -234,7 +234,6 @@ function base_default_page_manager_handlers() {
           'settings' => array(
             'type' => array(
               'news' => 'news',
-              'press_release' => 'press_release',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
