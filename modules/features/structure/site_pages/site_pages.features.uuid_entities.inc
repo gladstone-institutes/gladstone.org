@@ -5937,7 +5937,7 @@ Check here for a comprehensive list of all academic papers and publications by G
     ),
     'uuid' => '323316af-bf95-4303-b60b-c85c61e52578',
   );
-  $entities['export_staging'][] = (object) array(
+  $entities['structure_site_pages'][] = (object) array(
     '__metadata' => array(
       'type' => 'node',
       'uri' => 'node/662c9f19-1c90-4a9a-9681-d94db21511ba',
