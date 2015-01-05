@@ -1389,7 +1389,7 @@ function institute_default_page_manager_pages() {
       'pager_id' => '0',
       'items_per_page' => '10',
       'fields_override' => array(
-        'field_image' => 1,
+        'field_image' => 0,
         'title' => 1,
         'field_date' => 1,
         'field_display_title' => 0,
@@ -1402,6 +1402,10 @@ function institute_default_page_manager_pages() {
       ),
       'override_title' => 0,
       'override_title_text' => '',
+      'exposed' => array(
+        'field_operational_units_tid' => '',
+        'field_research_tags_tid' => '',
+      ),
     );
     $pane->cache = array();
     $pane->style = array();
@@ -2211,39 +2215,6 @@ function institute_default_page_manager_pages() {
     $pane->uuid = '2401ea40-cd33-47bd-9c4f-b2f6bc897334';
     $display->content['new-2401ea40-cd33-47bd-9c4f-b2f6bc897334'] = $pane;
     $display->panels['gs3_25_50_25_middle'][1] = 'new-2401ea40-cd33-47bd-9c4f-b2f6bc897334';
-    $pane = new stdClass();
-    $pane->pid = 'new-56a14d82-c91e-4c61-8f21-b82229a47d0a';
-    $pane->panel = 'gs3_25_50_25_middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'event-events_ca_pane';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 0,
-      'use_pager' => 1,
-      'pager_id' => '0',
-      'items_per_page' => '10',
-      'offset' => '0',
-      'fields_override' => array(
-        'field_text' => 1,
-        'event_calendar_date' => 1,
-        'body' => 1,
-      ),
-      'context' => array(
-        0 => 'argument_term_1',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '56a14d82-c91e-4c61-8f21-b82229a47d0a';
-    $display->content['new-56a14d82-c91e-4c61-8f21-b82229a47d0a'] = $pane;
-    $display->panels['gs3_25_50_25_middle'][2] = 'new-56a14d82-c91e-4c61-8f21-b82229a47d0a';
     $pane = new stdClass();
     $pane->pid = 'new-8f8e58b3-3478-4030-b689-c82c207884a3';
     $pane->panel = 'gs3_25_50_25_sidebar';
