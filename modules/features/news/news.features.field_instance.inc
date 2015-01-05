@@ -537,6 +537,7 @@ function news_field_default_field_instances() {
       'module' => 'autocomplete_deluxe',
       'settings' => array(
         'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'delimiter' => '',
         'limit' => 10,
         'min_length' => 0,
@@ -581,6 +582,7 @@ function news_field_default_field_instances() {
       'module' => 'autocomplete_deluxe',
       'settings' => array(
         'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'delimiter' => '',
         'limit' => 10,
         'min_length' => 0,

@@ -7,6 +7,7 @@ dependencies[] = autocomplete_deluxe
 dependencies[] = base
 dependencies[] = bibliorepo
 dependencies[] = ctools
+dependencies[] = date
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
