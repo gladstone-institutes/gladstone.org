@@ -146,9 +146,11 @@ function export_footer() {
 // sanity check
 if ( count($argv) < 2 ){
     echo "--- HELP ---\n";
-    echo " Use this script to update  exported uuid_entities for the structure module \n";
+    echo " Use this script to update exported uuid_entities for the structure module \n";
     echo " preserving the original order. Make sure there is only one deploy plan per \n";
-    echo " module for entities deplayed as part of the 'structure' module\n\n";
+    echo " module for entities deployed as part of the 'structure' module\n\n";
+    echo "\n* run from the structure directory, and the entities exported to 'export_staging'\n";
+    echo "will be merged/updated into the specified module_name and deploy_plan\n\n";
     echo "usage: php uuid-update.php input_file module_name deploy_plan_name entity_types\n\n";
     echo "module_name\tmachine name of module\n";
     echo "entity_types\tmachine names of entity_types (e.g. 'node','menu_link','taxonomy_term')\n";
