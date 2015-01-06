@@ -40,6 +40,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'localized_options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'menu_name' => 'main-menu',
@@ -48,6 +53,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'p1' => '406081d8-493c-4423-9ba0-e7957f1b23a4',
@@ -468,6 +478,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'localized_options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'menu_name' => 'main-menu',
@@ -476,6 +491,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'p1' => '406081d8-493c-4423-9ba0-e7957f1b23a4',
@@ -527,7 +547,7 @@ $entities['structure_sitemap'][] = (object) array(
 	'expanded' => 0,
 	'external' => 0,
 	'fit' => 2,
-	'has_children' => 0,
+	'has_children' => 1,
 	'hidden' => 0,
 	'href' => 'node/47',
 	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/node_view.inc',
@@ -537,19 +557,29 @@ $entities['structure_sitemap'][] = (object) array(
 		1 => 'node_load'
 		),
 	'localized_options' => array(
+		'alter' => true,
 		'attributes' => array(
 
 			),
-		'alter' => true
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
+			)
 		),
 	'menu_name' => 'main-menu',
 	'module' => 'menu',
 	'number_parts' => 2,
 	'options' => array(
+		'alter' => true,
 		'attributes' => array(
 
 			),
-		'alter' => true
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
+			)
 		),
 	'p1' => '406081d8-493c-4423-9ba0-e7957f1b23a4',
 	'p2' => '288fff33-b567-4ecb-8cac-cd6c8d8bfc0c',
@@ -1222,6 +1252,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'localized_options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'menu_name' => 'main-menu',
@@ -1230,6 +1265,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'p1' => '406081d8-493c-4423-9ba0-e7957f1b23a4',
@@ -2218,6 +2258,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'localized_options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'menu_name' => 'main-menu',
@@ -2226,6 +2271,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'p1' => '406081d8-493c-4423-9ba0-e7957f1b23a4',
@@ -2266,37 +2316,45 @@ $entities['structure_sitemap'][] = (object) array(
 		'cause' => false
 		),
 	'access' => true,
-	'access_arguments' => 'a:2:{i:0;s:4:"view";i:1;i:1;}',
-	'access_callback' => 'node_access',
-	'context' => 0,
+	'access_arguments' => NULL,
+	'access_callback' => NULL,
+	'context' => NULL,
 	'customized' => 1,
 	'default_revision' => 1,
-	'delivery_callback' => '',
+	'delivery_callback' => NULL,
 	'depth' => 2,
-	'description' => '',
+	'description' => NULL,
 	'expanded' => 0,
-	'external' => 0,
-	'fit' => 2,
+	'external' => 1,
+	'fit' => NULL,
 	'has_children' => 0,
 	'hidden' => 0,
-	'href' => 'node/45',
-	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/node_view.inc',
-	'link_path' => 'node/63f882e2-5d22-4385-8dc0-54c495c5c23c',
+	'href' => 'http://www.youtube.com/GladstoneScience',
+	'include_file' => NULL,
+	'link_path' => 'http://www.youtube.com/GladstoneScience',
 	'link_title' => 'Videos',
-	'load_functions' => array(
-		1 => 'node_load'
-		),
+	'load_functions' => NULL,
 	'localized_options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'menu_name' => 'main-menu',
 	'module' => 'menu',
-	'number_parts' => 2,
+	'number_parts' => NULL,
 	'options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'p1' => '8eade152-15ee-444f-aee7-16ba33a87285',
@@ -2308,21 +2366,21 @@ $entities['structure_sitemap'][] = (object) array(
 	'p7' => 0,
 	'p8' => 0,
 	'p9' => 0,
-	'page_arguments' => 'a:1:{i:0;i:1;}',
-	'page_callback' => 'page_manager_node_view_page',
-	'path' => 'node/%',
+	'page_arguments' => NULL,
+	'page_callback' => NULL,
+	'path' => NULL,
 	'plid' => '8eade152-15ee-444f-aee7-16ba33a87285',
-	'position' => '',
-	'router_path' => 'node/%',
-	'tab_parent' => '',
-	'tab_root' => 'node/%',
-	'theme_arguments' => 'a:0:{}',
-	'theme_callback' => '',
+	'position' => NULL,
+	'router_path' => '',
+	'tab_parent' => NULL,
+	'tab_root' => NULL,
+	'theme_arguments' => NULL,
+	'theme_callback' => NULL,
 	'title' => 'Videos',
-	'title_arguments' => 'a:1:{i:0;i:1;}',
-	'title_callback' => 'node_page_title',
-	'to_arg_functions' => '',
-	'type' => 6,
+	'title_arguments' => NULL,
+	'title_callback' => NULL,
+	'to_arg_functions' => NULL,
+	'type' => NULL,
 	'url_alias' => array(
 
 		),
@@ -2631,152 +2689,6 @@ $entities['structure_sitemap'][] = (object) array(
 		),
 	'uuid' => '42defa44-31b3-4ad0-8e6f-2d754063b764',
 	'weight' => -50
-	);
-
-$entities['structure_sitemap'][] = (object) array(
-	'__metadata' => array(
-		'type' => 'menu_link',
-		'uri' => 'menu_link/eb699da5-91e6-4bac-9707-da9d7afbe014',
-		'cause' => 'menu_link/41cd876c-ca77-486e-89f8-44a6e033d292'
-		),
-	'access' => true,
-	'access_arguments' => 'a:4:{i:0;a:2:{s:4:"type";s:4:"none";s:8:"settings";N;}i:1;i:1;i:2;i:2;i:3;i:3;}',
-	'access_callback' => 'ctools_access_menu',
-	'context' => 0,
-	'customized' => 1,
-	'default_revision' => 1,
-	'delivery_callback' => '',
-	'depth' => 2,
-	'description' => '',
-	'expanded' => 0,
-	'external' => 0,
-	'fit' => 8,
-	'has_children' => 1,
-	'hidden' => 0,
-	'href' => 'institute/gind/home/67',
-	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/page.inc',
-	'link_path' => 'institute/gind/home/67',
-	'link_title' => 'Neurological Disease',
-	'load_functions' => array(
-		1 => 'pm_arg_load',
-		2 => 'pm_arg_load',
-		3 => 'pm_arg_load'
-		),
-	'localized_options' => array(
-		'attributes' => array(
-
-			)
-		),
-	'menu_name' => 'main-menu',
-	'module' => 'menu',
-	'number_parts' => 4,
-	'options' => array(
-		'attributes' => array(
-
-			)
-		),
-	'p1' => '3f7c1da8-3889-4280-ac31-5cf396953705',
-	'p2' => 'eb699da5-91e6-4bac-9707-da9d7afbe014',
-	'p3' => 0,
-	'p4' => 0,
-	'p5' => 0,
-	'p6' => 0,
-	'p7' => 0,
-	'p8' => 0,
-	'p9' => 0,
-	'page_arguments' => 'a:4:{i:0;s:9:"institute";i:1;i:1;i:2;i:2;i:3;i:3;}',
-	'page_callback' => 'page_manager_page_execute',
-	'path' => 'institute/%/%/%',
-	'plid' => '3f7c1da8-3889-4280-ac31-5cf396953705',
-	'position' => '',
-	'router_path' => 'institute/%/%/%',
-	'tab_parent' => '',
-	'tab_root' => 'institute/%/%/%',
-	'theme_arguments' => 'a:0:{}',
-	'theme_callback' => '',
-	'title' => 'Neurological Disease',
-	'title_arguments' => '',
-	'title_callback' => 't',
-	'to_arg_functions' => '',
-	'type' => 0,
-	'url_alias' => array(
-
-		),
-	'uuid' => 'eb699da5-91e6-4bac-9707-da9d7afbe014',
-	'weight' => -47
-	);
-
-$entities['structure_sitemap'][] = (object) array(
-	'__metadata' => array(
-		'type' => 'menu_link',
-		'uri' => 'menu_link/41cd876c-ca77-486e-89f8-44a6e033d292',
-		'cause' => false
-		),
-	'access' => true,
-	'access_arguments' => 'a:4:{i:0;a:2:{s:4:"type";s:4:"none";s:8:"settings";N;}i:1;i:1;i:2;i:2;i:3;i:3;}',
-	'access_callback' => 'ctools_access_menu',
-	'context' => 0,
-	'customized' => 1,
-	'default_revision' => 1,
-	'delivery_callback' => '',
-	'depth' => 3,
-	'description' => '',
-	'expanded' => 0,
-	'external' => 0,
-	'fit' => 8,
-	'has_children' => 0,
-	'hidden' => 0,
-	'href' => 'institute/givi/research centers/93',
-	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/page.inc',
-	'link_path' => 'institute/givi/research centers/93',
-	'link_title' => 'Centers',
-	'load_functions' => array(
-		1 => 'pm_arg_load',
-		2 => 'pm_arg_load',
-		3 => 'pm_arg_load'
-		),
-	'localized_options' => array(
-		'attributes' => array(
-
-			)
-		),
-	'menu_name' => 'main-menu',
-	'module' => 'menu',
-	'number_parts' => 4,
-	'options' => array(
-		'attributes' => array(
-
-			)
-		),
-	'p1' => '3f7c1da8-3889-4280-ac31-5cf396953705',
-	'p2' => 'eb699da5-91e6-4bac-9707-da9d7afbe014',
-	'p3' => '41cd876c-ca77-486e-89f8-44a6e033d292',
-	'p4' => 0,
-	'p5' => 0,
-	'p6' => 0,
-	'p7' => 0,
-	'p8' => 0,
-	'p9' => 0,
-	'page_arguments' => 'a:4:{i:0;s:9:"institute";i:1;i:1;i:2;i:2;i:3;i:3;}',
-	'page_callback' => 'page_manager_page_execute',
-	'path' => 'institute/%/%/%',
-	'plid' => 'eb699da5-91e6-4bac-9707-da9d7afbe014',
-	'position' => '',
-	'router_path' => 'institute/%/%/%',
-	'tab_parent' => '',
-	'tab_root' => 'institute/%/%/%',
-	'theme_arguments' => 'a:0:{}',
-	'theme_callback' => '',
-	'title' => 'Centers',
-	'title_arguments' => '',
-	'title_callback' => 't',
-	'to_arg_functions' => '',
-	'type' => 0,
-	'url_alias' => array(
-
-		),
-	'uuid' => '41cd876c-ca77-486e-89f8-44a6e033d292',
-	'weight' => -43
 	);
 
 $entities['structure_sitemap'][] = (object) array(
@@ -3502,6 +3414,79 @@ $entities['structure_sitemap'][] = (object) array(
 $entities['structure_sitemap'][] = (object) array(
 	'__metadata' => array(
 		'type' => 'menu_link',
+		'uri' => 'menu_link/eb699da5-91e6-4bac-9707-da9d7afbe014',
+		'cause' => 'menu_link/ef87a591-2541-4354-a699-ac72fd7f519f'
+		),
+	'access' => true,
+	'access_arguments' => 'a:4:{i:0;a:2:{s:4:"type";s:4:"none";s:8:"settings";N;}i:1;i:1;i:2;i:2;i:3;i:3;}',
+	'access_callback' => 'ctools_access_menu',
+	'context' => 0,
+	'customized' => 1,
+	'default_revision' => 1,
+	'delivery_callback' => '',
+	'depth' => 2,
+	'description' => '',
+	'expanded' => 0,
+	'external' => 0,
+	'fit' => 8,
+	'has_children' => 1,
+	'hidden' => 0,
+	'href' => 'institute/gind/home/67',
+	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/page.inc',
+	'link_path' => 'institute/gind/home/67',
+	'link_title' => 'Neurological Disease',
+	'load_functions' => array(
+		1 => 'pm_arg_load',
+		2 => 'pm_arg_load',
+		3 => 'pm_arg_load'
+		),
+	'localized_options' => array(
+		'attributes' => array(
+
+			)
+		),
+	'menu_name' => 'main-menu',
+	'module' => 'menu',
+	'number_parts' => 4,
+	'options' => array(
+		'attributes' => array(
+
+			)
+		),
+	'p1' => '3f7c1da8-3889-4280-ac31-5cf396953705',
+	'p2' => 'eb699da5-91e6-4bac-9707-da9d7afbe014',
+	'p3' => 0,
+	'p4' => 0,
+	'p5' => 0,
+	'p6' => 0,
+	'p7' => 0,
+	'p8' => 0,
+	'p9' => 0,
+	'page_arguments' => 'a:4:{i:0;s:9:"institute";i:1;i:1;i:2;i:2;i:3;i:3;}',
+	'page_callback' => 'page_manager_page_execute',
+	'path' => 'institute/%/%/%',
+	'plid' => '3f7c1da8-3889-4280-ac31-5cf396953705',
+	'position' => '',
+	'router_path' => 'institute/%/%/%',
+	'tab_parent' => '',
+	'tab_root' => 'institute/%/%/%',
+	'theme_arguments' => 'a:0:{}',
+	'theme_callback' => '',
+	'title' => 'Neurological Disease',
+	'title_arguments' => '',
+	'title_callback' => 't',
+	'to_arg_functions' => '',
+	'type' => 0,
+	'url_alias' => array(
+
+		),
+	'uuid' => 'eb699da5-91e6-4bac-9707-da9d7afbe014',
+	'weight' => -47
+	);
+
+$entities['structure_sitemap'][] = (object) array(
+	'__metadata' => array(
+		'type' => 'menu_link',
 		'uri' => 'menu_link/ef87a591-2541-4354-a699-ac72fd7f519f',
 		'cause' => false
 		),
@@ -3603,6 +3588,11 @@ $entities['structure_sitemap'][] = (object) array(
 		'alter' => true,
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'menu_name' => 'main-menu',
@@ -3612,6 +3602,11 @@ $entities['structure_sitemap'][] = (object) array(
 		'alter' => true,
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'p1' => '406081d8-493c-4423-9ba0-e7957f1b23a4',
@@ -4041,7 +4036,7 @@ $entities['structure_sitemap'][] = (object) array(
 	'expanded' => 0,
 	'external' => 0,
 	'fit' => 8,
-	'has_children' => 1,
+	'has_children' => 0,
 	'hidden' => 0,
 	'href' => 'institute/gicd/events/71',
 	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/page.inc',
@@ -4570,7 +4565,7 @@ $entities['structure_sitemap'][] = (object) array(
 	'external' => 0,
 	'fit' => 2,
 	'has_children' => 0,
-	'hidden' => 0,
+	'hidden' => 1,
 	'href' => 'node/72',
 	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/node_view.inc',
 	'link_path' => 'node/f32a3cfb-b105-4b03-a373-a43bfd9e39f6',
@@ -4714,7 +4709,7 @@ $entities['structure_sitemap'][] = (object) array(
 	'external' => 0,
 	'fit' => 2,
 	'has_children' => 0,
-	'hidden' => 0,
+	'hidden' => 1,
 	'href' => 'node/10',
 	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/node_view.inc',
 	'link_path' => 'node/a1089f06-dcd5-4112-8a03-4d0ea4d827bc',
@@ -4879,7 +4874,7 @@ $entities['structure_sitemap'][] = (object) array(
 	'external' => 0,
 	'fit' => 2,
 	'has_children' => 0,
-	'hidden' => 1,
+	'hidden' => 0,
 	'href' => 'z/92',
 	'include_file' => 'profiles/gladstone_org/modules/contrib/ctools/page_manager/plugins/tasks/page.inc',
 	'link_path' => 'z/92',
@@ -7854,6 +7849,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'localized_options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'menu_name' => 'main-menu',
@@ -7862,6 +7862,11 @@ $entities['structure_sitemap'][] = (object) array(
 	'options' => array(
 		'attributes' => array(
 
+			),
+		'item_attributes' => array(
+			'id' => '',
+			'class' => '',
+			'style' => ''
 			)
 		),
 	'p1' => '3f7c1da8-3889-4280-ac31-5cf396953705',
