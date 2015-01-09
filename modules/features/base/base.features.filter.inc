@@ -364,6 +364,19 @@ news',
         'status' => 1,
         'settings' => array(),
       ),
+      'pathologic' => array(
+        'weight' => 50,
+        'status' => 1,
+        'settings' => array(
+          'settings_source' => 'global',
+          'local_paths' => '',
+          'protocol_style' => 'full',
+          'local_settings' => array(
+            'protocol_style' => 'full',
+            'local_paths' => '',
+          ),
+        ),
+      ),
     ),
   );
 

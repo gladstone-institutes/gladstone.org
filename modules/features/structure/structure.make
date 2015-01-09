@@ -59,6 +59,14 @@ projects[globalredirect][download][type]     = git
 projects[globalredirect][download][revision] = e7debe9a
 projects[globalredirect][download][branch]   = 7.x-1.x
 
+projects[pathologic][version]  = 7.x-3.x
+projects[pathologic][subdir]	 = contrib
+projects[pathologic][download][type]     = git
+projects[pathologic][download][revision] = 19456fe6
+projects[pathologic][download][branch]   = 7.x-3.x
+; patch for https://www.drupal.org/node/1958122#comment-9471039
+projects[pathologic][patch][]   = https://www.drupal.org/files/issues/pathologic_should-1958122-4%20-%20full.patch
+
 ; Import and export -----------------------------
 
 projects[strongarm][version] = "2.0"
