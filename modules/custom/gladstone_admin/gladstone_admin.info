@@ -8,6 +8,7 @@ dependencies[] = coffee
 dependencies[] = contextual
 dependencies[] = ctools
 dependencies[] = fpa
+dependencies[] = linkchecker
 dependencies[] = menu_editor
 dependencies[] = module_filter
 dependencies[] = page_manager

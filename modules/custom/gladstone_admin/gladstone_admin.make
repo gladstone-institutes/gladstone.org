@@ -51,3 +51,7 @@ projects[simplify][download][type]     = git
 projects[simplify][download][revision] = 7681b0e7
 projects[simplify][download][branch]   = 7.x-3.x
 
+projects[linkchecker][version]  = 7.x-1.2
+projects[linkchecker][subdir]	= contrib
+
+
