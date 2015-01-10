@@ -249,6 +249,38 @@ function bibliorepo_views_default_views() {
       'label' => 'Content: Operational Unit(s) (field_operational_units)',
     ),
   );
+
+  /* Display: Contributor Publications */
+  $handler = $view->new_display('panel_pane', 'Contributor Publications', 'cid_nodes_ca_pane');
+  $handler->display->display_options['display_description'] = 'Biblio nodes by contributor';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Biblio: Author ID */
+  $handler->display->display_options['arguments']['cid']['id'] = 'cid';
+  $handler->display->display_options['arguments']['cid']['table'] = 'biblio_contributor';
+  $handler->display->display_options['arguments']['cid']['field'] = 'cid';
+  $handler->display->display_options['arguments']['cid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['cid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['cid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['cid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['cid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'cid' => array(
+      'type' => 'context',
+      'context' => 'query_string.raw',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Biblio: Author ID',
+    ),
+  );
   $export['biblio'] = $view;
 
   return $export;
