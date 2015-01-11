@@ -43,4 +43,6 @@ features[variable][] = node_submitted_honors_and_awards
 features[views_view][] = honors_and_awards
 features_exclude[dependencies][views] = views
 features_exclude[dependencies][views_content] = views_content
+features_exclude[dependencies][base] = base
+mtime = 1421019138
 project path = profiles/gladstone_org/modules/features

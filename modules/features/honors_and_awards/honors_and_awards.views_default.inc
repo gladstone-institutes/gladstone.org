@@ -48,6 +48,19 @@ function honors_and_awards_views_default_views() {
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_label_alias',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Relation: Relation: awarded to (relation → profile2) */
   $handler->display->display_options['relationships']['relation_base_was_awarded_profile2']['id'] = 'relation_base_was_awarded_profile2';
@@ -74,7 +87,20 @@ function honors_and_awards_views_default_views() {
   $handler->display->display_options['relationships']['profile']['table'] = 'users';
   $handler->display->display_options['relationships']['profile']['field'] = 'profile';
   $handler->display->display_options['relationships']['profile']['relationship'] = 'user';
+  /* Relationship: Profile: Operational Role(s) (field_operational_roles) */
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['id'] = 'field_operational_roles_tid';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['table'] = 'field_data_field_operational_roles';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['field'] = 'field_operational_roles_tid';
+  $handler->display->display_options['relationships']['field_operational_roles_tid']['relationship'] = 'profile';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Profile: Realname Alias  */
+  $handler->display->display_options['fields']['field_label_alias']['id'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['table'] = 'field_data_field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['field'] = 'field_label_alias';
+  $handler->display->display_options['fields']['field_label_alias']['relationship'] = 'relation_base_was_awarded_profile2';
+  $handler->display->display_options['fields']['field_label_alias']['label'] = '';
+  $handler->display->display_options['fields']['field_label_alias']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_label_alias']['element_label_colon'] = FALSE;
   /* Field: Content: Award Date */
   $handler->display->display_options['fields']['field_date_mmyy']['id'] = 'field_date_mmyy';
   $handler->display->display_options['fields']['field_date_mmyy']['table'] = 'field_data_field_date_mmyy';
@@ -97,6 +123,16 @@ function honors_and_awards_views_default_views() {
   $handler->display->display_options['fields']['field_honor_and_award']['label'] = '';
   $handler->display->display_options['fields']['field_honor_and_award']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'field_operational_roles_tid';
+  /* Sort criterion: Name Components: Family */
+  $handler->display->display_options['sorts']['field_realname_family']['id'] = 'field_realname_family';
+  $handler->display->display_options['sorts']['field_realname_family']['table'] = 'field_data_field_realname';
+  $handler->display->display_options['sorts']['field_realname_family']['field'] = 'field_realname_family';
+  $handler->display->display_options['sorts']['field_realname_family']['relationship'] = 'user';
   /* Sort criterion: Content: Award Date (field_date_mmyy) */
   $handler->display->display_options['sorts']['field_date_mmyy_value']['id'] = 'field_date_mmyy_value';
   $handler->display->display_options['sorts']['field_date_mmyy_value']['table'] = 'field_data_field_date_mmyy';
@@ -122,6 +158,8 @@ function honors_and_awards_views_default_views() {
   $handler->display->display_options['arguments']['field_operational_units_tid_1']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_operational_units_tid_1']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_operational_units_tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_category']['name'] = 'Gladstone';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 'offset';
