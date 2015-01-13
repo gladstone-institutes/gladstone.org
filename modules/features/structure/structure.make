@@ -92,7 +92,7 @@ projects[uuid][patch][] = https://www.drupal.org/files/issues/uuid_ctools_contex
 projects[uuid_features][version] = 7.x-1.0-alpha4
 projects[uuid_features][subdir] = contrib
 projects[uuid_features][download][type]     = git
-projects[uuid_features][download][revision] = 31938d91
+projects[uuid_features][download][revision] = 4fdc77f8
 projects[uuid_features][download][branch]   = 7.x-1.x
 
 projects[entity_menu_links][version] = "1.x-dev"
