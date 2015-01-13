@@ -136,3 +136,6 @@ projects[diff[download][type]     = git
 projects[diff[download][revision] = 29ca19a
 projects[diff[download][branch]   = 7.x-3.x
 
+
+projects[backup_migrate][version] = "3.0"
+projects[backup_migrate][subdir] = "contrib"
