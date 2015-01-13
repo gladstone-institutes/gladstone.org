@@ -49,12 +49,10 @@ projects[formatter_field][patch][] = https://raw.githubusercontent.com/jnand/gla
 projects[fieldable_panels_panes][version] 			 = 1.x-dev
 projects[fieldable_panels_panes][subdir] 			 = contrib
 projects[fieldable_panels_panes][download][type]     = git
-projects[fieldable_panels_panes][download][revision] = bfef4bce
+projects[fieldable_panels_panes][download][revision] = fba17ce3
 projects[fieldable_panels_panes][download][branch]   = 7.x-1.x
-; Workaroudn for exportable FPPs https://www.drupal.org/node/2246893
-projects[fieldable_panels_panes][patch][]   = https://www.drupal.org/files/issues/properly-set-pane-subtype-on-edit-form-submit-0.patch
 ; Workaround for invalid operation when exporting FPPs via features
-projects[fieldable_panels_panes][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/fieldable_panels_panes-invalid_op_on_array.patch
+; projects[fieldable_panels_panes][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/fieldable_panels_panes-invalid_op_on_array.patch
 
 projects[twitter_block][version] = 2.2
 projects[twitter_block][subdir] = contrib
