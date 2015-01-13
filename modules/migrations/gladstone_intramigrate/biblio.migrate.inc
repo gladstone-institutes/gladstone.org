@@ -256,9 +256,10 @@ class GSBiblioContributorData extends GSBiblioBase {
 		$arguments['description'] = 'biblio_contributor_data';
 		$arguments['table_name']  = 'biblio_contributor_data';
 		parent::__construct($arguments);
-
+		$this->systemOfRecord = Migration::DESTINATION;
 		$this->dependencies[] = 'user';
 		$this->dependencies[] = 'biblio_contributor_data';
+		$this->addFieldMapping('cid','cid')->sourceMigration('biblio_contributor_data');
 		$this->addFieldMapping('aka','aka')->sourceMigration('biblio_contributor_data');
 		$this->addFieldMapping('alt_form','alt_form')->sourceMigration('biblio_contributor_data');
 		$this->addFieldMapping('drupal_uid','drupal_uid')->sourceMigration('user');
