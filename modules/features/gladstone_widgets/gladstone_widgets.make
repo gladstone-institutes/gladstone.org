@@ -52,7 +52,7 @@ projects[fieldable_panels_panes][download][type]     = git
 projects[fieldable_panels_panes][download][revision] = fba17ce3
 projects[fieldable_panels_panes][download][branch]   = 7.x-1.x
 ; Workaround for invalid operation when exporting FPPs via features
-; projects[fieldable_panels_panes][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/fieldable_panels_panes-invalid_op_on_array.patch
+projects[fieldable_panels_panes][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/fieldable_panels_panes-invalid_op_on_array.patch
 
 projects[twitter_block][version] = 2.2
 projects[twitter_block][subdir] = contrib
