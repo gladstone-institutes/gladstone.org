@@ -18,3 +18,17 @@ core = 7.x
 ; Modules =======================================
 projects[features][version] = "2.0-rc1"
 projects[features][subdir]  = "contrib"
+
+
+
+; Libraries =====================================
+
+
+libraries[backbone][download][type]	= get
+libraries[backbone][download][url]	= "http://backbonejs.org/backbone-min.js"
+libraries[backbone][destination]	= "libraries"
+
+libraries[underscore][download][type]	= get
+libraries[underscore][download][url]	= "http://underscorejs.org/underscore-min.js" 
+libraries[underscore][destination]		= "libraries" 
+
