@@ -89,7 +89,7 @@ function structure_ckeditor_profile_defaults() {
           'media' => array(
             'name' => 'media',
             'desc' => 'Plugin for inserting images from Drupal media module',
-            'path' => '/current/builds/testbuild/profiles/gladstone_org/modules/contrib/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
+            'path' => '/profiles/gladstone_org/modules/contrib/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
             'buttons' => array(
               'Media' => array(
                 'icon' => 'images/icon.gif',
@@ -191,7 +191,7 @@ function structure_ckeditor_profile_defaults() {
           'media' => array(
             'name' => 'media',
             'desc' => 'Plugin for inserting images from Drupal media module',
-            'path' => '/current/builds/testbuild/profiles/gladstone_org/modules/contrib/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
+            'path' => '/profiles/gladstone_org/modules/contrib/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
             'buttons' => array(
               'Media' => array(
                 'icon' => 'images/icon.gif',
@@ -277,7 +277,7 @@ function structure_ckeditor_profile_defaults() {
           'media' => array(
             'name' => 'media',
             'desc' => 'Plugin for inserting images from Drupal media module',
-            'path' => '/current/builds/testbuild/profiles/gladstone_org/modules/contrib/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
+            'path' => '/profiles/gladstone_org/modules/contrib/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
             'buttons' => array(
               'Media' => array(
                 'icon' => 'images/icon.gif',
