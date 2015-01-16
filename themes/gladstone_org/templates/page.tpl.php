@@ -130,7 +130,7 @@
 
                 <div id="slogan">
                   <a href="<?php print $front_page; ?>" title="<?php print $site_name_unlinked; ?>">
-                    <img class="site-slogan image-style-none" src="<?php print $base_path.'/'.$directory.'/slogan.png'; ?>" alt="<?php print $site_slogan;?>">
+                    <img class="site-slogan image-style-none" src="<?php print $base_path.$directory.'/slogan.png'; ?>" alt="<?php print $site_slogan;?>">
                   </a>
                 </div>
 
