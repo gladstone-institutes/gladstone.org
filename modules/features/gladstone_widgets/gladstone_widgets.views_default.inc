@@ -918,13 +918,31 @@ function gladstone_widgets_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'panels_fields';
+  $handler->display->display_options['row_options']['layout'] = 'two_33_66';
+  $handler->display->display_options['row_options']['regions'] = array(
+    'nid' => 'two_33_66_top',
+    'path' => 'two_33_66_top',
+    'field_image' => 'two_33_66_first',
+    'title' => 'two_33_66_second',
+    'field_text' => 'two_33_66_second',
+    'created' => 'two_33_66_second',
+    'created_1' => 'two_33_66_second',
+    'body' => 'two_33_66_second',
+    'field_blurb' => 'two_33_66_second',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'Footer';
-  $handler->display->display_options['footer']['area']['content'] = '<span>Find these stories and more at our </span><a href="node/47" class="accent"><b><span>NEWS HUB </span><i class="fa fa-caret-right"></i></b></a>';
+  $handler->display->display_options['footer']['area']['content'] = '<span>Find these stories and more at our </span><a href="about-us/news-hub" class="accent"><b><span>NEWS HUB </span><i class="fa fa-caret-right"></i></b></a>';
   $handler->display->display_options['footer']['area']['format'] = 'limited_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */

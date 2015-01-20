@@ -3778,7 +3778,7 @@ Members of the media can browse here for Gladstone press releases, media contact
 	'uid' => 1,
 	'url_alias' => array(
 		0 => array(
-			'alias' => 'content/news-hub',
+			'alias' => 'about-us/news-hub',
 			'language' => 'und'
 			)
 		),
