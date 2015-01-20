@@ -18,6 +18,7 @@ namespace 'drupal:dev' do
         execute :rm, '-fr', 'modules/updates/'
         execute :rm, '-fr', 'modules/content/'
         execute :rm, '-fr', 'modules/migrations/'
+        execute :rm, '-fr', 'modules/dev/'
         execute :rm, '-f',  fetch(:application)+'.info'
 
         # Symlink to Module and Theme files. 
