@@ -113,6 +113,7 @@ function keystone_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'pathologic_local_paths';
   $strongarm->value = 'http://today.gladstone.internal:88/current/builds/testbuild/
+http://today.gladstone.internal:88/current/builds/gs5alpha2/
 http://today.gladstone.internal:8888/current/builds/demo/
 ';
   $export['pathologic_local_paths'] = $strongarm;

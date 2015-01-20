@@ -53,6 +53,15 @@ function base_field_default_field_bases() {
     'field_name' => 'endpoints',
     'foreign keys' => array(),
     'indexes' => array(
+      'entity_id' => array(
+        0 => 'entity_id',
+      ),
+      'entity_type' => array(
+        0 => 'entity_type',
+      ),
+      'r_index' => array(
+        0 => 'r_index',
+      ),
       'relation' => array(
         0 => 'entity_type',
         1 => 'entity_id',
