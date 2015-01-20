@@ -1,5 +1,5 @@
 @import "base";
-
+@import "panes/honors_and_awards";
 
 .pane-biblio-member-pubs {
 	.views-row {
@@ -21,4 +21,13 @@
 	.biblio-title-ama a {
 		color: rgba($blue_0,0.8);
 	}
+}
+
+// recent advances 
+.views-field-title h3 {
+	margin-bottom: 0;
+}
+
+.views-field-field-date {
+	margin-top: -.5*$gw;
 }

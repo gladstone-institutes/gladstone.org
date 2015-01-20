@@ -123,20 +123,11 @@
 		float:left; 
 	}
 }
-.pane-profile-user-content-profile-awads-ca-pane {
-	.views-row {
-		.views-field-field-date-mmyy {
-			float: left;
-		}
-		.views-field-field-honor-and-award {
-			display: block;
-			padding-left: 2.5em; //same as date-yyyy width
-		}
-	}
-}
+
+// @import "panes/honors_and_awards";
 
 .field-name-field-date-yyyy { 
-	width: 2.5em;
+	width: 3.5em;
 }
 .field-name-field-degree {
 	width: 2em;

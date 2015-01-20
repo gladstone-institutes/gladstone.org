@@ -1,0 +1,11 @@
+.view-honors-and-awards {
+	.views-row {
+		.views-field-field-date-mmyy {
+			float: left;
+		}
+		.views-field-field-honor-and-award {
+			display: block;
+			padding-left: 3.5em; //same as date-yyyy width
+		}
+	}
+}
