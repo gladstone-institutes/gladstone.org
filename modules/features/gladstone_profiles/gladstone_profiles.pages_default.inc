@@ -47,6 +47,7 @@ function gladstone_profiles_default_page_manager_handlers() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/people/[user:name-field-realname:component-given]-[user:name-field-realname:component-family]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_25_50';
@@ -541,6 +542,7 @@ function gladstone_profiles_default_page_manager_handlers() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/people/[user:name-field-realname:component-given]-[user:name-field-realname:component-family]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_25_50';
