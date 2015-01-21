@@ -45,5 +45,7 @@ features[variable][] = menu_parent_news
 features[variable][] = node_options_news
 features[variable][] = node_preview_news
 features[variable][] = node_submitted_news
+features[variable][] = pathauto_node_news_pattern
 features[views_view][] = news
+mtime = 1421135825
 project path = profiles/gladstone_org/modules/features
