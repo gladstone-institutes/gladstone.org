@@ -51,5 +51,7 @@ features[variable][] = menu_parent_press_release
 features[variable][] = node_options_press_release
 features[variable][] = node_preview_press_release
 features[variable][] = node_submitted_press_release
+features[variable][] = pathauto_node_press_release_pattern
 features[views_view][] = press_release
+mtime = 1421135825
 project path = profiles/gladstone_org/modules/features
