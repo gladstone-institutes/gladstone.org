@@ -126,6 +126,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
@@ -435,6 +436,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
@@ -667,6 +669,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
@@ -899,6 +902,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
@@ -1122,6 +1126,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
@@ -1325,6 +1330,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
@@ -1598,6 +1604,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
@@ -1859,6 +1866,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs2_25_75';
@@ -2123,6 +2131,7 @@ function institute_default_page_manager_pages() {
     'panels_css_js_code_css' => '',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',
+    'pathalias' => 'our-science/[%institute:field_text]/[%variant:name]',
   );
   $display = new panels_display();
   $display->layout = 'gs3_25_50_25';
