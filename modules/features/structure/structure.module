@@ -35,3 +35,21 @@ function structure_menu_alter(&$items) {
 		'module' => 'node'
 	);
 }
+
+
+// @todo
+/**
+ * Fix to display search term in menu item
+ *
+ * Implements hook_panels_pane_content_alter().
+ *
+ * Panels are rendered before hook_page_delivery_callback_alter() is called, so
+ * for Panels pages, we evaluate our rules here instead.
+ */
+/*
+function structure_panels_pre_render($display) {
+
+	// dpm($display);
+
+}
+*/
