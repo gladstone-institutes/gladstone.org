@@ -5,6 +5,7 @@ package = Structure
 php = 5.2.4
 dependencies[] = autocomplete_deluxe
 dependencies[] = better_formats
+dependencies[] = chosen
 dependencies[] = computed_field
 dependencies[] = ctools
 dependencies[] = date
