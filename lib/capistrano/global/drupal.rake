@@ -48,8 +48,9 @@ namespace :drupal do
   task :site_install do    
     auth    = fetch(:db_auth)
     schema  = fetch(:build)
-    profile = fetch(:application)
-    pass    = 'admin' #pass for initial installation
+    profile = fetch(:application)    
+    user    = fetch(:drupal_admin_user) || 'admin'
+    pass    = fetch(:drupal_admin_pass) || 'admin' #pass for initial installation
 
     if auth[:password].nil? || auth[:password].empty?
       db_url = "--db-url=mysql://#{auth[:username]}@#{auth[:host]}/#{schema}"
