@@ -124,6 +124,14 @@ projects[autocomplete_deluxe][download][type]     = git
 projects[autocomplete_deluxe][download][revision] = a49e633d
 projects[autocomplete_deluxe][download][branch]   = 7.x-2.0
 
+projects[chosen][version] 			 = "7.x-2.0-beta4+1-dev"
+projects[chosen][subdir] 			 = "contrib"
+projects[chosen][download][type]     = git
+projects[chosen][download][revision] = e7a0d22
+projects[chosen][download][branch]   = 7.x-2.0
+libraries[chosen][download][type]    = get
+libraries[chosen][download][url]     = https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip
+libraries[chosen][destination]		 = libraries
 
 ; Filters ---------------------------------------
 projects[better_formats][version]	= 1.x-dev
