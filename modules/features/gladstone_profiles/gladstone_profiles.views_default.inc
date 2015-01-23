@@ -1567,8 +1567,8 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_operational_titles_tid']['table'] = 'field_data_field_operational_titles';
   $handler->display->display_options['filters']['field_operational_titles_tid']['field'] = 'field_operational_titles_tid';
   $handler->display->display_options['filters']['field_operational_titles_tid']['value'] = array(
-    0 => '104',
-    1 => '112',
+    0 => '102',
+    1 => '109',
   );
   $handler->display->display_options['filters']['field_operational_titles_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_operational_titles_tid']['expose']['operator_id'] = 'field_operational_titles_tid_op';
