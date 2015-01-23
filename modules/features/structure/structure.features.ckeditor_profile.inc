@@ -88,7 +88,7 @@ function structure_ckeditor_profile_defaults() {
           'linkit' => array(
             'name' => 'linkit',
             'desc' => 'Support for Linkit module',
-            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
+            'path' => '%base_path%profiles/gladstone_org/modules/contrib/linkit/editors/ckeditor/',
             'buttons' => array(
               'linkit' => array(
                 'label' => 'Linkit',
@@ -201,7 +201,7 @@ function structure_ckeditor_profile_defaults() {
           'linkit' => array(
             'name' => 'linkit',
             'desc' => 'Support for Linkit module',
-            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
+            'path' => '%base_path%profiles/gladstone_org/modules/contrib/linkit/editors/ckeditor/',
             'buttons' => array(
               'linkit' => array(
                 'label' => 'Linkit',
@@ -298,7 +298,7 @@ function structure_ckeditor_profile_defaults() {
           'linkit' => array(
             'name' => 'linkit',
             'desc' => 'Support for Linkit module',
-            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
+            'path' => '%base_path%profiles/gladstone_org/modules/contrib/linkit/editors/ckeditor/',
             'buttons' => array(
               'linkit' => array(
                 'label' => 'Linkit',
