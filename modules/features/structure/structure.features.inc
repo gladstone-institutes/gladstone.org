@@ -13,6 +13,10 @@ function structure_ctools_plugin_api() {
     return array("version" => "1");
   }
   list($module, $api) = func_get_args();
+  if ($module == "linkit" && $api == "linkit_profiles") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "menu_block" && $api == "menu_block") {
     return array("version" => "1");
   }

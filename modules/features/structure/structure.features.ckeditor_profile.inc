@@ -15,18 +15,17 @@ function structure_ckeditor_profile_defaults() {
         'ss' => 2,
         'toolbar' => '[
     [\'Source\'],
-    [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\', \'Scayt\'],
+    [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
     [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
     [\'Image\',\'Media\',\'Flash\',\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\'],
-    [\'Maximize\', \'ShowBlocks\'],
+    [\'Maximize\',\'ShowBlocks\'],
     \'/\',
     [\'Format\'],
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
-    [\'Link\',\'Unlink\',\'Anchor\',\'Linkit\']
-]
-    ',
+    [\'linkit\',\'Unlink\',\'Anchor\']
+]',
         'expand' => 't',
         'default' => 't',
         'show_toggle' => 't',
@@ -86,6 +85,17 @@ function structure_ckeditor_profile_defaults() {
             ),
             'default' => 't',
           ),
+          'linkit' => array(
+            'name' => 'linkit',
+            'desc' => 'Support for Linkit module',
+            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
+            'buttons' => array(
+              'linkit' => array(
+                'label' => 'Linkit',
+                'icon' => 'icons/linkit.png',
+              ),
+            ),
+          ),
           'media' => array(
             'name' => 'media',
             'desc' => 'Plugin for inserting images from Drupal media module',
@@ -122,7 +132,7 @@ function structure_ckeditor_profile_defaults() {
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\',\'CreateDiv\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
-    [\'Link\',\'Unlink\',\'Anchor\'],
+    [\'linkit\',\'Unlink\',\'Anchor\'],
     [\'DrupalBreak\'],
     \'/\',
     [\'Format\',\'Font\',\'FontSize\'],
@@ -188,6 +198,17 @@ function structure_ckeditor_profile_defaults() {
             ),
             'default' => 't',
           ),
+          'linkit' => array(
+            'name' => 'linkit',
+            'desc' => 'Support for Linkit module',
+            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
+            'buttons' => array(
+              'linkit' => array(
+                'label' => 'Linkit',
+                'icon' => 'icons/linkit.png',
+              ),
+            ),
+          ),
           'media' => array(
             'name' => 'media',
             'desc' => 'Plugin for inserting images from Drupal media module',
@@ -211,7 +232,7 @@ function structure_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Source\',\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'Link\',\'Unlink\',\'Image\',\'Media\'],
+    [\'Source\',\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'linkit\',\'Unlink\',\'Image\',\'Media\'],
     \'/\',
     [\'Styles\',\'Font\',\'FontSize\',\'TextColor\',\'BGColor\',\'Maximize\',\'ShowBlocks\',\'Iframe\',\'About\']
 ]',
@@ -273,6 +294,17 @@ function structure_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 't',
+          ),
+          'linkit' => array(
+            'name' => 'linkit',
+            'desc' => 'Support for Linkit module',
+            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
+            'buttons' => array(
+              'linkit' => array(
+                'label' => 'Linkit',
+                'icon' => 'icons/linkit.png',
+              ),
+            ),
           ),
           'media' => array(
             'name' => 'media',

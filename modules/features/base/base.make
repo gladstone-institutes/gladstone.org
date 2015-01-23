@@ -133,6 +133,14 @@ libraries[chosen][download][type]    = get
 libraries[chosen][download][url]     = https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip
 libraries[chosen][destination]		 = libraries
 
+
+projects[linkit][version]				= 3.x-dev
+projects[linkit][subdir]				= contrib
+projects[linkit][download][type] 		= git
+projects[linkit][download][revision]	= 2d68605
+projects[linkit][download][branch]		= 7.x-3.x
+
+
 ; Filters ---------------------------------------
 projects[better_formats][version]	= 1.x-dev
 projects[better_formats][subdir]	= contrib
