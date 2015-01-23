@@ -11,7 +11,7 @@ $sidebar = (get_class($renderer) == 'panels_renderer_editor' ? False : True);
     <div class="panel-panel unit panel-header">
       <?php print $content['header']; ?>
     </div>
-    <? endif; ?>
+    <?php endif; ?>
 
   </div>
 
@@ -20,7 +20,7 @@ $sidebar = (get_class($renderer) == 'panels_renderer_editor' ? False : True);
     <div class="panel-panel unit panel-top">
       <?php print $content['top']; ?>
     </div>
-    <? endif; ?>
+    <?php endif; ?>
   </div>
 
   <div class="panel-panel">
@@ -42,6 +42,6 @@ $sidebar = (get_class($renderer) == 'panels_renderer_editor' ? False : True);
     <div class="panel-panel unit panel-footer lastUnit">
       <?php print $content['footer']; ?>
     </div>
-    <? endif; ?>
+    <?php endif; ?>
   </div>
 </div>
