@@ -51,7 +51,7 @@ function structure_default_linkit_profiles() {
         'weight' => '-10',
       ),
       'entity:menu_link' => array(
-        'enabled' => 1,
+        'enabled' => 0,
         'weight' => '-10',
       ),
     ),
