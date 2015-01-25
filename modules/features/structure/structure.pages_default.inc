@@ -13,6 +13,91 @@ function structure_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'pm_existing_pages_user_panel_context';
+  $handler->task = 'pm_existing_pages';
+  $handler->subtask = 'user';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Login',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => 'panel-content',
+    'css' => '#panel-content { margin-top: 1.75em; padding: 1em; }
+#user-login { width: 25%; margin: 0 auto;}
+#user-login input.form-text { width: 100%; }',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'one';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'one_main' => NULL,
+      'three_33_top' => NULL,
+      'three_33_first' => NULL,
+      'three_33_second' => NULL,
+      'three_33_third' => NULL,
+      'three_33_bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '0981f4e4-7361-48da-a649-85dbf9880184';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-06ab6af4-1713-4e1b-b2f4-bca29499f0d1';
+    $pane->panel = 'one_main';
+    $pane->type = 'block';
+    $pane->subtype = 'user-login';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Welcome to Gladstone',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'user-login',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '06ab6af4-1713-4e1b-b2f4-bca29499f0d1';
+    $display->content['new-06ab6af4-1713-4e1b-b2f4-bca29499f0d1'] = $pane;
+    $display->panels['one_main'][0] = 'new-06ab6af4-1713-4e1b-b2f4-bca29499f0d1';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-06ab6af4-1713-4e1b-b2f4-bca29499f0d1';
+  $handler->conf['display'] = $display;
+  $export['pm_existing_pages_user_panel_context'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'search_node_panel_context';
   $handler->task = 'search';
   $handler->subtask = 'node';
