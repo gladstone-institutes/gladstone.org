@@ -67,6 +67,9 @@ projects[pathologic][download][branch]   = 7.x-3.x
 ; patch for https://www.drupal.org/node/1958122#comment-9471039
 projects[pathologic][patch][]   = https://www.drupal.org/files/issues/pathologic_should-1958122-4%20-%20full.patch
 
+projects[logintoboggan][version]	= "1.4"
+projects[logintoboggan][subdir]		= "contrib"
+
 ; Import and export -----------------------------
 
 projects[strongarm][version] = "2.0"
