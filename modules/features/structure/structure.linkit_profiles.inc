@@ -28,11 +28,11 @@ function structure_default_linkit_profiles() {
     'search_plugins' => array(
       'entity:node' => array(
         'enabled' => 1,
-        'weight' => '-10',
+        'weight' => '-9',
       ),
       'entity:profile2' => array(
         'enabled' => 0,
-        'weight' => '-10',
+        'weight' => '-7',
       ),
       'entity:user' => array(
         'enabled' => 1,
@@ -40,19 +40,19 @@ function structure_default_linkit_profiles() {
       ),
       'entity:relation' => array(
         'enabled' => 0,
-        'weight' => '-10',
+        'weight' => '-6',
       ),
       'entity:taxonomy_term' => array(
         'enabled' => 0,
-        'weight' => '-10',
+        'weight' => '-5',
       ),
       'entity:file' => array(
         'enabled' => 1,
-        'weight' => '-10',
+        'weight' => '-8',
       ),
       'entity:menu_link' => array(
         'enabled' => 0,
-        'weight' => '-10',
+        'weight' => '-4',
       ),
     ),
     'entity:node' => array(
@@ -127,7 +127,6 @@ function structure_default_linkit_profiles() {
       'bundles' => array(
         'main-menu' => 'main-menu',
         'menu-connect-with-us' => 0,
-        'devel' => 0,
         'menu-donate' => 0,
         'menu-footer-menu' => 0,
         'management' => 0,
@@ -141,6 +140,18 @@ function structure_default_linkit_profiles() {
       'url_method' => '3',
     ),
     'attribute_plugins' => array(
+      'id' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'rel' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'title' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
       'accesskey' => array(
         'enabled' => 0,
         'weight' => '-10',
@@ -150,18 +161,6 @@ function structure_default_linkit_profiles() {
         'weight' => '-10',
       ),
       'class' => array(
-        'enabled' => 0,
-        'weight' => '-10',
-      ),
-      'rel' => array(
-        'enabled' => 0,
-        'weight' => '-10',
-      ),
-      'id' => array(
-        'enabled' => 0,
-        'weight' => '-10',
-      ),
-      'title' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
