@@ -1,0 +1,69 @@
+<?php
+
+
+
+function structure_install() {
+	
+	/* @hack workaround for Login/Logout links
+	 * 
+	 * Add a signin sing out links since menu admin is throwing errors
+	 * @see https://www.drupal.org/node/1014546#comment-3899894
+	 * @see http://drupal.stackexchange.com/questions/2203/how-do-i-create-relative-menu-links
+	 */
+	$links   = array ();
+	$links[] = array (
+						'menu_name' => 'menu-footer-menu',
+						'link_path' => '/user/login',
+						'router_path' => 'user/login',
+						'link_title' => 'Login',
+						'options' => serialize(array(
+										'attributes' => array(
+											'class' => array('fa','fa-sign-in','icon-only'),
+										),
+										'item_attributes' => array(
+											'id' => '',
+											'class' => '',
+											'style' => ''
+										)
+									)),
+						'module' => 'menu',
+						'external' => 0,
+						'weight' => 4,
+						'depth' => 1,
+						'customized' => 1,
+						// 'p1' => not sure if this needs to be set
+
+				);
+	$links[] = array (
+						'menu_name' => 'menu-footer-menu',
+						'link_path' => '/user/logout',
+						'router_path' => 'user/logout',
+						'link_title' => 'Logout',
+						'options' => serialize(array(
+										'attributes' => array(
+											'class' => array('fa','fa-sign-out','icon-only'),
+										),
+										'item_attributes' => array(
+											'id' => '',
+											'class' => '',
+											'style' => ''
+										)
+									)),
+						'module' => 'menu',
+						'external' => 0,
+						'weight' => 5,
+						'depth' => 1,
+						'customized' => 1,
+						// 'p1' => not sure if this needs to be set
+
+				);
+
+	foreach ($links as $link) {
+		$mlid = db_insert('menu_links')->fields($link)->execute();
+		db_update('menu_links')
+			->fields(array('p1' => $mlid))
+			->condition('mlid', $mlid)
+			->execute();
+	}
+
+}
