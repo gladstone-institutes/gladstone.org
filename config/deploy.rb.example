@@ -1,14 +1,12 @@
 # config valid only for Capistrano 3.1
-lock '3.1.0'
+lock '3.3.5'
 
 set :application, 'gladstone_org'
 set :server_group, 'www-data'
 set :group_wirtable, true
 
-set :build_file, "#{fetch(:application)}.build"
-set :make_file, "#{fetch(:application)}.make"
 
-# !!CONFIGURE!! repo for core
+# !! CONFIGURE ME !! repo for core
 set :scm, :git
 set :repo_url, "USER@HOST:PATH/REPO_NAME.git"
 
