@@ -11,11 +11,11 @@ set :drush_env, ->(){
 namespace :drush do
 	desc 'run an arbitrary drush command'
 	task :run, :command do |t, args|
+		SSHKit.config.output = DrushFormatter.new($stdout)		
 		on release_roles(fetch(:drush_roles)) do
 			within fetch(:drush_site_dir) do
 				with fetch(:drush_env) do 
-					SSHKit.config.output = DrushFormatter.new($stdout)
-					execute :drush, '-p', args[:command], *args.extras
+					execute :drush, args[:command], *args.extras
 				end
 			end
 		end
