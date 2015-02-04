@@ -15,7 +15,7 @@ namespace :drush do
 		on release_roles(fetch(:drush_roles)) do
 			within fetch(:drush_site_dir) do
 				with fetch(:drush_env) do 
-					execute :drush, args[:command], *args.extras
+					execute :drush, args[:command], *args.extras, '2>&1'
 				end
 			end
 		end

@@ -143,8 +143,8 @@ namespace :drupal do
 			within drupal_path do
 				within 'sites/default' do
 					# execute :find, '.',  '-type d -print0 | xargs -0 chmod 754'
-					execute :chmod, '-fr', '754', '*'
-					execute :chmod, '-fr', '754', '.'
+					execute :chmod, '-fR', '754', '*'
+					execute :chmod, '-fR', '754', '.'
 				end
 			end
 		end
@@ -217,15 +217,18 @@ namespace :drupal do
 		end			
 	end
 
-	task :login_url do		
-		on roles(:web) do
-			within current_path do
-				url   = "http://#{roles(:web).first}:#{fetch(:http_port)}"				
-				login = capture :drush, 'user-login', '--browser=0', "--uri=#{url}"
-				info "- Login to the latest deployed Drupal site below -----"
-				info login
-			end
-		end
+	task :revert_features do
+		on roles(:web) do 
+			within release_path do 
+				features = capture(:drush,'features-list','--status=enabled').
+							split(/\r?\n/).
+							map{|l| l.match(/\s+([a-z_]+)\s+Enabled/)[1]}
+				features.each do |feature|
+					info "*** Reverting feature (#{feature}) ***"
+					invoke :drush, 'features-revert', '--yes', '--force', feature
+				end
+			end			
+		end		
 	end
 
 	task :compile do
@@ -239,9 +242,36 @@ namespace :drupal do
 		end
 	end
 
+	task :cleanup do
+		on roles(:web) do |host|
+			releases = capture(:ls, '-xtr', releases_path).split
+			if releases.count >= fetch(:keep_releases)
+				info "Unlocking #{releases.count - fetch(:keep_releases)} on #{host.to_s}"
+				directories = (releases - releases.last(fetch(:keep_releases)))
+				if directories.any?
+					directories.each do |release|
+						invoke 'drupal:unlock', release
+					end
+				end
+			end
+		end
+	end
+
+	task :login_url do		
+		on roles(:web) do
+			within current_path do
+				url   = "http://#{roles(:web).first}:#{fetch(:http_port)}"				
+				login = capture :drush, 'user-login', '--browser=0', "--uri=#{url}"
+				info "- Login to the latest deployed Drupal site below -----"
+				info login
+			end
+		end
+	end
+
 	### Deploy Flow Hooks -----
 
 	task :before_create_release do
+		make_files_changed = false
 		drupal_make_valid  = false
 		repo_present       = false
 
@@ -263,13 +293,29 @@ namespace :drupal do
 		end
 
 		if repo_present
-			if not drupal_make_valid
-				invoke 'drupal:make'
+			make_files = [ 'drupal-org-core.make', "#{fetch(:application)}.make" ]
+			on release_roles :web do
+				within repo_path do
+					with git_work_tree: shared_path do
+						make_files.each do |make_file|
+							execute :git, :checkout, fetch(:branch), '-f', '--', make_file 
+							make_files_changed = ! capture( :diff, '--brief', 
+								deploy_path.join("make/#{make_file}"),
+								shared_path.join(make_file),
+								:raise_on_non_zero_exit => false).empty?
+						end
+					end
+				end
+			end
+
+			if make_files_changed || (not drupal_make_valid)
+				invoke 'drupal:make'				
 			end
 
 			# Copy latest make into release
 			on release_roles :web do
-				execute :cp, '-fr', "#{fetch(:drupal_make_path)}/", release_path
+				execute :rm, '-fr', release_path
+				execute :cp, '-fr', fetch(:drupal_make_path), release_path
 				set :cap_release_path, release_path.dup
 				set :release_path, "#{release_path}/profiles/#{fetch(:application)}"			
 			end			
@@ -290,7 +336,7 @@ namespace :drupal do
 			on release_roles :web do
 				within release_path do
 					execute :rm, '-fr', '*'
-					execute :rm, '-fr', '.*'
+					execute :rm, '-fr', '.[a-z]*'
 				end	
 			end						
 
@@ -305,13 +351,15 @@ namespace :drupal do
 
 	# desc 'cap workarounds for finishing the profile install'
 	task :after_finising do		
-		invoke :drush, 'fr', '--yes --force', 'site_pages', '2>&1'
-		invoke :drush, :en, :biblio_ucsf_profiles
-		invoke :drush, :en, '-y', 'build'
+		on roles(:web) do
+			invoke :drush, 'fr', '--yes --force', 'site_pages'
+			invoke :drush, :en, :biblio_ucsf_profiles
+			invoke :drush, :en, '-y', 'build'
 
-		if fetch(:stage) =~ /^(prod|www)/
-			invoke :drush, :dis, '-y', 'update'
-			invoke :drush, :vset, 'error_level', '0' 	
+			if fetch(:stage) =~ /^(prod|www)/
+				invoke :drush, :dis, '-y', 'update'
+				invoke :drush, :vset, 'error_level', '0' 	
+			end
 		end
 	end
 end

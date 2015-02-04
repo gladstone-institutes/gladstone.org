@@ -14,7 +14,7 @@ class Mysql
 		user = fetch(:mysql)[:admin_user]
 		pass = fetch(:mysql)[:admin_pass]
 		pass = (pass.nil? || pass.empty?) ? '' : "-p'#{pass}'"
-		auth_string = pass+"-h'#{host}' -u'#{user}'"    
+		auth_string = pass+" -h'#{host}' -u'#{user}'"    
 	end
 end
 
