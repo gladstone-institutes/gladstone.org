@@ -152,32 +152,6 @@ namespace :drupal do
 
 	### Internal Tasks -----
 
-	task :site_install do
-		SSHKit.config.output = DrushFormatter.new($stdout)
-
-		host   = fetch(:mysql)[:host]
-		schema = "#{fetch(:stage)}_#{release_timestamp}"
-		user   = fetch(:stage)
-		pass   = fetch(:mysql)[:app_pass]
-
-		on roles(:web) do
-			within release_path do
-				with fetch(:drush_env) do
-					execute :drush, '--yes', 'site-install', 
-									'-d -v', #drush debug flags
-									fetch(:application),
-									"--db-url=mysql://#{user}:#{pass}@#{host}/#{schema}",
-									"--account-name=#{fetch(:drupal_admin_user)}",
-									"--account-pass=#{fetch(:drupal_admin_user)}",
-									"--db-su=#{fetch(:mysql)[:admin_user]}",
-									"--db-su-pw=#{fetch(:mysql)[:admin_pass]}",
-									'2>&1',
-									:raise_on_non_zero_exit => false
-				end
-			end
-		end
-	end
-
 	task :setup_make_dir do
 		set :drupal_make_path, "#{deploy_path}/make"
 		on roles(:web) do
@@ -217,15 +191,59 @@ namespace :drupal do
 		end			
 	end
 
+	task :correct_permissions do
+		on roles(:web) do
+			within deploy_path do
+				execute :chmod,'-fR', 'g+sw', shared_path
+			end
+
+			within release_path.join('sites/default/files') do
+				execute :find, '.', 
+						'-type d -print0 | xargs -0 chmod -fR g+sw',
+						raise_on_non_zero_exit: false
+			end
+		end
+	end
+
+	task :site_install do
+		SSHKit.config.output = DrushFormatter.new($stdout)
+
+		host   = fetch(:mysql)[:host]
+		schema = "#{fetch(:stage)}_#{release_timestamp}"
+		user   = fetch(:stage)
+		pass   = fetch(:mysql)[:app_pass]
+
+		on roles(:web) do
+			within release_path do
+				with fetch(:drush_env) do
+					execute :drush, '--yes', 'site-install', 
+									'-d -v', #drush debug flags
+									fetch(:application),
+									"--db-url=mysql://#{user}:#{pass}@#{host}/#{schema}",
+									"--account-name=#{fetch(:drupal_admin_user)}",
+									"--account-pass=#{fetch(:drupal_admin_user)}",
+									"--db-su=#{fetch(:mysql)[:admin_user]}",
+									"--db-su-pw=#{fetch(:mysql)[:admin_pass]}",
+									'2>&1',
+									:raise_on_non_zero_exit => false
+				end
+			end
+		end
+	end
+
 	task :revert_features do
 		on roles(:web) do 
 			within release_path do 
-				features = capture(:drush,'features-list','--status=enabled').
-							split(/\r?\n/).
-							map{|l| l.match(/\s+([a-z_]+)\s+Enabled/)[1]}
-				features.each do |feature|
-					info "*** Reverting feature (#{feature}) ***"
-					invoke :drush, 'features-revert', '--yes', '--force', feature
+				with fetch(:drush_env) do
+					features = capture(:drush,'features-list','--status=enabled').
+								split(/\r?\n/).
+								map{|l| l.match(/\s+([a-z_]+)\s+Enabled/)}.
+								select{|e| not e.nil?}.map{|r| r[1]}							
+
+					features.each do |feature|
+						info "*** Reverting feature (#{feature}) ***"
+						execute :drush, 'features-revert', '--yes', '--force', feature
+					end
 				end
 			end			
 		end		
@@ -238,7 +256,9 @@ namespace :drupal do
 				execute :rvm, "@#{fetch(:application)}", :do, :compass, :compile
 			end
 
-			invoke :drush, 'generate-theme-files'
+			within release_path do
+				execute :drush, 'generate-theme-files'
+			end
 		end
 	end
 
@@ -246,11 +266,16 @@ namespace :drupal do
 		on roles(:web) do |host|
 			releases = capture(:ls, '-xtr', releases_path).split
 			if releases.count >= fetch(:keep_releases)
-				info "Unlocking #{releases.count - fetch(:keep_releases)} on #{host.to_s}"
+				info "Unlocking #{releases.count - fetch(:keep_releases)} releases on #{host.to_s}"
 				directories = (releases - releases.last(fetch(:keep_releases)))
 				if directories.any?
 					directories.each do |release|
-						invoke 'drupal:unlock', release
+						within releases_path.join(release) do
+							within 'sites/default' do
+								execute :chmod, '-fR', '754', '*'
+								execute :chmod, '-fR', '754', '.'
+							end
+						end						
 					end
 				end
 			end
@@ -352,25 +377,37 @@ namespace :drupal do
 	# desc 'cap workarounds for finishing the profile install'
 	task :after_finising do		
 		on roles(:web) do
-			invoke :drush, 'fr', '--yes --force', 'site_pages'
-			invoke :drush, :en, :biblio_ucsf_profiles
-			invoke :drush, :en, '-y', 'build'
+			within release_path do
+				with fetch(:drush_env) do
+					execute :drush, 'fr', '--yes --force', 'site_pages'
+					execute :drush, :en, '-y', :biblio_ucsf_profiles
+					execute :drush, :en, '-y', 'build'
 
-			if fetch(:stage) =~ /^(prod|www)/
-				invoke :drush, :dis, '-y', 'update'
-				invoke :drush, :vset, 'error_level', '0' 	
+					if fetch(:stage) =~ /^(prod|www)/
+						execute :drush, :dis, '-y', 'update'
+						execute :drush, :vset, 'error_level', '0' 	
+					end
+				end
 			end
 		end
 	end
 end
 
 namespace 'drupal:migrate' do
+
 	### Internal Tasks -----
 	task :setup do
-		mysql = fetch(:mysql)
-		last_release =  capture(:ls, '-xtr').split[1]
+		mysql 		 = fetch(:mysql)
+		last_release = false
 
-		if last_release
+		# if not fetch
+		on roles(:web) do		
+			within releases_path do
+				last_release =  capture(:ls, '-xtr').split[1]
+			end
+		end
+
+		if last_release && ENV['initialize'].empty?
 			source_schema = "#{fetch(:stage)}_#{last_release}"
 			source_files  = shared_path
 		else
@@ -378,24 +415,44 @@ namespace 'drupal:migrate' do
 			source_files  = fetch(:initalization_files)
 		end
 
-		invoke :drush, :vset, 'gladstone_migrate_source_schema', source_schema
-		invoke :drush, :vset, 'gladstone_migrate_source_user', fetch(:stage)
-		invoke :drush, :vset, 'gladstone_migrate_source_pass', mysql[:app_pass]
-		invoke :drush, :vset, 'gladstone_migrate_source_files', source_files
-		invoke :drush, :en, '-y', :gladstone_intramigrate
-		invoke :drush, :cc, :all
+		on roles(:db) do
+			within release_path do
+				with fetch(:drush_env) do
+					execute :drush, :vset, 'gladstone_migrate_source_schema', source_schema
+					execute :drush, :vset, 'gladstone_migrate_source_user', mysql[:admin_user]
+					execute :drush, :vset, 'gladstone_migrate_source_pass', mysql[:admin_pass]
+					execute :drush, :vset, 'gladstone_migrate_source_files', source_files
+					execute :drush, :en, '-y', :gladstone_intramigrate
+					execute :drush, :cc, :all
+				end
+			end
+		end
 	end
 
 	task :run do
-		invoke :drush, :ms
-		invoke :drush, :mi, '--yes', "--group=gladstone"
+		on roles(:db) do
+			within release_path do
+				with fetch(:drush_env) do		
+					execute :drush, :ms
+					execute :drush, :mi, '--yes', "--group=gladstone"
+				end
+			end
+		end	
+
+		invoke 'drupal:correct_permissions'
 	end
 
 	task :cleanup do
-		invoke :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_schema
-		invoke :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_user
-		invoke :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_pass
-		invoke :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_files
+		on roles(:db) do
+			within release_path do
+				with fetch(:drush_env) do
+					execute :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_schema
+					execute :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_user
+					execute :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_pass
+					execute :drush, :vdel, '--yes', '--exact', :gladstone_migrate_source_files
+				end
+			end
+		end		
 	end
 end
 

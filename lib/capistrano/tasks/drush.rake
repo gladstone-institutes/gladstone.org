@@ -19,6 +19,7 @@ namespace :drush do
 				end
 			end
 		end
+		Rake::Task["drush:run"].reenable
 	end
 end
 
