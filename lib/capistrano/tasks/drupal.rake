@@ -221,7 +221,7 @@ namespace :drupal do
 									fetch(:application),
 									"--db-url=mysql://#{user}:#{pass}@#{host}/#{schema}",
 									"--account-name=#{fetch(:drupal_admin_user)}",
-									"--account-pass=#{fetch(:drupal_admin_user)}",
+									"--account-pass=#{fetch(:drupal_admin_pass)}",
 									"--db-su=#{fetch(:mysql)[:admin_user]}",
 									"--db-su-pw=#{fetch(:mysql)[:admin_pass]}",
 									'2>&1',
