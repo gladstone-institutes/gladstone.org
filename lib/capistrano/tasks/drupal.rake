@@ -1,5 +1,5 @@
 
-require 'tempfile'
+require 'fileutils'
 
 set :drupal_admin_user, 'admin'
 set :drupal_admin_pass, 'admin'
@@ -66,75 +66,89 @@ namespace :drupal do
 	task :pull do
 		SSHKit.config.output = DrushFormatter.new($stdout)
 
-		stage			= fetch(:stage)
-		mysql 			= fetch(:mysql)
-		current_release = ''
-		pull_path		= ''
+		stage			 = fetch(:stage)
+		mysql 			 = fetch(:mysql)
+		current_release  = ''
+		pull_path		 = ''
+		drush_alias_path = "#{Dir.tmpdir}/cap-drush-#{Time.now.to_i}"
+		
+		FileUtils.mkdir_p drush_alias_path
+		drush_alias = File.new("#{drush_alias_path}/aliases.drushrc.php",'w')
 
 		on roles(:web) do
 			current_release = File.basename(capture(:readlink, current_path))
-		end
+		
+			execute :mkdir ,'-p', deploy_path.join('mysqldump')
 
-		# Template for creating a drush alias
-		drush_alias = Tempfile.new('aliases.drushrc.php')
-		drush_alias.write(%Q{
-				$aliases['#{stage}'] = array(
-				   'uri' => 'http://#{host.hostname}:#{fetch(:http_port)}',
-				   'root' => '#{releases_path}/#{current_release}',
-				   'remote-host' => '#{host.hostname}',
-				   'remote-user' => '#{host.username}',
-				   'path-aliases' => array(
-				     // '%drush' => '/home/jnand/drush',
-				     '%drush-script' => '#{SSHKit.config.command_map[:drush]}',
-				     '%dump-dir' => '#{deploy_path}/drush-dumps',
-				     // '%files' => 'sites/mydrupalsite.com/files',
-				     // '%custom' => '/my/custom/path',
-				    ),
-				   'databases' => array (
-				       'default' => array ( 'default' => array (
-				        	'driver' => 'mysql',
-				        	'host' => '#{mysql[:host]}',
-				        	'port' => '',			        	
-				        	'database' => '#{stage}_#{current_release}',			        	
-				        	'username' => '#{mysql[:admin_user]}',
-				        	'password' => '#{mysql[:admin_pass]}',			        	
-				         ),
-				      ),
-				    ),
-				    'command-specific' => array ( 'sql-sync' => array ('no-cache' => TRUE)),
-				 );
-		})
-		drush_alias.close
-
-		run_locally do
-			pull_path = "#{deploy_path}/remote_deploys/#{stage}"
-			execute :mkdir, '-p', pull_path
-			within pull_path do
-				execute :drush, '--yes', drush_alias.path, :rsync,
-					"@#{stage}", pull_path			 
-			end
+			# Template for creating a drush alias
+			drush_alias.write(%Q{ <?php
+					$aliases['#{stage}'] = array(
+					   'uri' => 'http://#{host.hostname}:#{fetch(:http_port)}',
+					   'root' => '#{releases_path}/#{current_release}',
+					   'remote-host' => '#{host.hostname}',
+					   'remote-user' => '#{host.username}',
+					   'path-aliases' => array(
+					     // '%drush' => '/home/jnand/drush',
+					     '%drush-script' => '#{SSHKit.config.command_map[:drush]}',
+					     '%dump-dir' => '#{deploy_path}/mysqldump',
+					     // '%files' => 'sites/mydrupalsite.com/files',
+					     // '%custom' => '/my/custom/path',
+					    ),
+					   'databases' => array (
+					       'default' => array ( 'default' => array (
+					        	'driver' => 'mysql',
+					        	'host' => '#{mysql[:host]}',
+					        	'port' => '',			        	
+					        	'database' => '#{stage}_#{current_release}',			        	
+					        	'username' => '#{mysql[:admin_user]}',
+					        	'password' => '#{mysql[:admin_pass]}',			        	
+					         ),
+					      ),
+					    ),
+					    'command-specific' => array ( 'sql-sync' => array ('no-cache' => TRUE)),
+					 );
+			})
+			drush_alias.close
 		end
 
 		load "#{stage_config_path}/local.rb"
 		mysql = fetch(:mysql)
 
 		run_locally do
-			within pull_path do
-				upload! StringIO.new( template('settings.php',
-							host:     mysql[:host],
-							schema:   "#{stage}_#{current_release}",
-							username: stage,
-							password: mysql[:app_pass],
-						)),
-						pull_path
 
-				execute :drush, '--yes', drush_alias.path, 'sql-sync',
-					'--no-cache', '--create-db', 
-					"--db-su=#{mysql[:admin_user]}",
-					"--db-su-pass=#{mysql[:admin_pass]}",
-					"@#{stage}", '.'
+			pull_path = deploy_path.parent.join(stage.to_s)
+
+			within pull_path do
+				execute :mkdir, '-p', '.'
+				execute :chown, '-fR', "#{fetch(:deploy_user)}:#{fetch(:server_group)}", '.'
+				execute :chmod, '-fR', 'u+w', '.'
+			
+
+				File.open( pull_path.join('sites/default/settings.php'), 'w') do |f| 
+					f.write( template('drupal/settings.php',
+								host:     mysql[:host],
+								schema:   "#{stage}_#{current_release}",
+								username: mysql[:admin_user],
+								password: mysql[:admin_pass],
+							)
+					)
+				end
+					
+				execute :drush, '--yes',
+						"--alias-path=#{drush_alias_path}",
+						:rsync, "@#{stage}", '.'	
+
+				execute :drush, '--yes',
+						"--alias-path=#{drush_alias_path}",
+						'sql-sync',
+						'--no-cache', '--create-db', 
+						"--db-su=#{mysql[:admin_user]}",
+						"--db-su-pw=#{mysql[:admin_pass]}",
+						"@#{stage}", '.'
 			end
 		end
+
+		File.unlink(drush_alias.path)
 	end
 
 	desc 'Unlock permissions of critical files'
