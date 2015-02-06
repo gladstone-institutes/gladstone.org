@@ -194,7 +194,7 @@ namespace :drupal do
 	task :correct_permissions do
 		on roles(:web) do
 			within deploy_path do
-				execute :chmod,'-fR', 'g+sw', shared_path
+				execute :chmod,'-f', 'g+sw', shared_path, raise_on_non_zero_exit: false
 			end
 
 			within release_path.join('sites/default/files') do
