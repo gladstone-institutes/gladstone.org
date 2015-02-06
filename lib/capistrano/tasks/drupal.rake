@@ -13,6 +13,7 @@ namespace :drupal do
 		if fetch(:stage) =~ /^(prod|www)/
 			invoke 'drupal:migrate:cleanup'
 		end
+		invoke 'drupal:login_url'
 	end
 
 	desc "Download features dir from remote :web server's profile dir"
