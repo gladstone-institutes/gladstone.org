@@ -406,6 +406,7 @@ end
 
 namespace 'drupal:migrate' do
 
+
 	### Internal Tasks -----
 	task :setup do
 		mysql 		 = fetch(:mysql)
@@ -418,7 +419,7 @@ namespace 'drupal:migrate' do
 			end
 		end
 
-		if last_release && ENV['initialize'].empty?
+		if last_release && ENV['initialize'].nil?
 			source_schema = "#{fetch(:stage)}_#{last_release}"
 			source_files  = shared_path
 		else
