@@ -62,7 +62,7 @@ namespace :drupal do
 		end
 	end
 
-	desc 'Pull a remote release into the local environment'
+	desc 'Pull a remote release into the local environment in a sibling dir to deploy_to'
 	task :pull do
 		SSHKit.config.output = DrushFormatter.new($stdout)
 
