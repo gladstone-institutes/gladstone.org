@@ -282,6 +282,17 @@ namespace :drupal do
 		end
 	end
 
+	task :sanitize do
+		files = [ 'config', 'lib', 'Capfile', 'Gemfile', 'README.md',
+				  'drupal-org-core.make', "#{fetch(:application)}.make"
+				]
+		on roles(:web) do		
+			within release_path.join("profiles/#{fetch(:application)}") do
+				execute :rm, '-fr', files.join(" ")
+			end
+		end
+	end
+
 	task :login_url do		
 		on roles(:web) do
 			within current_path do
