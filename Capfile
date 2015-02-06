@@ -19,26 +19,20 @@ require 'rvm1/capistrano3'
 # Support rsync
 #require 'capistrano/rsync'
 
-#Debug stuff
+# Debug stuff
 require 'pry'
+task :dbg do
+	on roles(:all) do 	
+		within releases_path do
+			binding.pry
+		end		
+	end
+end
 
-
-# Includes tasks from other gems included in your Gemfile
-#
-# For documentation on these, see for example:
-#
-#   https://github.com/capistrano/rvm
-#   https://github.com/capistrano/rbenv
-#   https://github.com/capistrano/chruby
-#   https://github.com/capistrano/bundler
-#   https://github.com/capistrano/rails
-#
-# require 'capistrano/rvm'
-# require 'capistrano/rbenv'
-# require 'capistrano/chruby'
-# require 'capistrano/bundler'
-# require 'capistrano/rails/assets'
-# require 'capistrano/rails/migrations'
-
-# Loads custom rake tasks if any defined.
-Dir.glob('lib/capistrano/global/*.rake').each { |r| import r }
+# Load our Drupal specifc Tasks in order
+load File.expand_path('../lib/capistrano/helpers.rb',__FILE__)
+load File.expand_path('../lib/capistrano/tasks/mysql.rake',__FILE__)
+load File.expand_path('../lib/capistrano/tasks/git.rake',__FILE__)
+load File.expand_path('../lib/capistrano/tasks/drush.rake',__FILE__)
+load File.expand_path('../lib/capistrano/tasks/drupal.rake',__FILE__)
+load File.expand_path('../lib/capistrano/tasks/deploy-flow.rake',__FILE__)
