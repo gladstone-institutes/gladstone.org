@@ -151,6 +151,17 @@ namespace :drupal do
 		File.unlink(drush_alias.path)
 	end
 
+	desc 'Symlink a pulled remote release to their local dev copies'
+	task 'pull:symlink' do
+		remote_stage = fetch(:stage)
+		load "#{stage_config_path}/local.rb"
+		set :profile_path,  deploy_path.parent.
+								join(remote_stage.to_s).
+								join('profiles').
+								join(fetch(:application))	
+		invoke 'drupal:symlink'				
+	end
+
 	desc 'Unlock permissions of critical files'
 	task :unlock, :release do |t, args|		
 		drupal_path = args[:release].nil? ? current_path : releases_path.join(args[:release])
@@ -179,11 +190,12 @@ namespace :drupal do
 	end
 
 	task :symlink do
+		require 'resolv'
 		on roles(:web) do
-			if host.hostname =~ /localhost/
+			if Resolv.getaddress(host.hostname) == '127.0.0.1'
 				info "Installing from locally symlinked working copy"
 
-				profile_path = "#{release_path}/profiles/#{fetch(:application)}"
+				profile_path = fetch(:profile_path) || "#{release_path}/profiles/#{fetch(:application)}"
 
 				themes = capture(:ls, '-xtr', Dir.pwd+'/themes').split
 				within "#{profile_path}/themes" do	
