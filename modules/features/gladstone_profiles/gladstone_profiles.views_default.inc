@@ -1288,9 +1288,9 @@ function gladstone_profiles_views_default_views() {
   $handler->display->display_options['allow']['link_to_view'] = 0;
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
-  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $export['directory_widgets'] = $view;
 
   $view = new view();
