@@ -58,24 +58,12 @@ function theme_gladstone_quote_render_pane($vars) {
       $link = NULL;
     }
 
-    // create  relative url for our css background image
-    global $base_url;          
-    $bg_image_url = file_create_url($entity->field_image['und'][0]['uri']);
-    // make path relative, this fails for sites in a subdir
-    // $bg_image_url = preg_replace('#' . $base_url . '#', '', $bg_image_url);
-
-    $caption = $entity->field_longtext['und'][0]['safe_value'];
-
-    $path = $vars['style']['path'];
-    drupal_add_css($path.'/gladstone_quote.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-
-    $css = '.gladstone-quote.fpp-id-'.$entity->fpid.' .content-wrapper { background: rgb(0, 40, 61) url('.$bg_image_url.') no-repeat;}';
-    drupal_add_css($css,array('type' => 'inline'));    
-
-    // prep css classes for pane container
     $settings['clear'] = ($settings['clear'] == 'null') ? NULL : $settings['clear'];
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
-    $settings['bg_image_url'] = $bg_image_url;
+    $caption = $entity->field_longtext['und'][0]['safe_value'];
+    $background = drupal_render($content['field_image']);
+
+
 
     // apply feature box wrappers
     return theme('gladstone_quote_theme_pane', 
@@ -83,6 +71,7 @@ function theme_gladstone_quote_render_pane($vars) {
                      'caption' => $caption,
                      'link' => $link,
                      'settings' => $settings,
+                     'background' => $background,
               )
             );
 

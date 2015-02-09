@@ -8,10 +8,10 @@
 
 ?>
 <?php if ($link): ?><a href="<?php echo $link ?>"><?php endif; ?>
-<div class="pane gladstone-quote fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">
+<div class="pane gladstone-style gladstone-style-quote fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">
 	<div class="pane inner">
 		<div class="content-wrapper">			
-			<img src="<?php echo $settings['bg_image_url']?>" />
+			<?php print $background ?>
 
 			<div class="content accent">
 				<div class="inner">
