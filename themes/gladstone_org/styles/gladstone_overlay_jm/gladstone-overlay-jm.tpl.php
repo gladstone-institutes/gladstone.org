@@ -7,7 +7,7 @@
  */
 
 ?>
-<div class="pane gladstone-overlay fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">
+<div class="pane gladstone-overlay gladstone-jump-menu fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">
 
 	<div class="heading clearfix">
 		<h3 class="title"><?php echo $title; ?></h3>
@@ -19,10 +19,10 @@
 	<div class="content-wrapper rollover">
 		<img src="<?php echo $settings['bg_image_url']?>" />
 		<div class="content overlay">
-			<div class="inner">
+			<div class="inner roll-toggle">
 				<?php echo $content ?>
 			</div>
-			<div class="inner rollover clearfix">
+			<div class="inner roll-toggle clearfix">
 				<?php echo $menu; ?>
 			</div>
 		</div>		

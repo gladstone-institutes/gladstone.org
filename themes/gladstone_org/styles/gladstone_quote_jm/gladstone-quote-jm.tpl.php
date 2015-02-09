@@ -7,8 +7,8 @@
  */
 
 ?>
-<div class="pane gladstone-quote-jm rollover fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">	
-	<div class="pane inner">
+<div class="pane gladstone-quote-jm gladstone-jump-menu fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">	
+	<div class="pane inner rollover">
 		<div class="content-wrapper">
 			<img src="<?php echo $settings['bg_image_url']?>" />
 			
@@ -22,7 +22,7 @@
 			</div>
 
 			<div class="content-bottom">
-				<div class="inner rollover">
+				<div class="inner roll-toggle">
 					<?php echo $menu ?>
 				</div>
 			</div>
@@ -30,3 +30,4 @@
 		</div>
 	</div>
 </div>
+

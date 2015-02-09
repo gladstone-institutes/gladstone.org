@@ -80,19 +80,6 @@ function theme_gladstone_quote_jm_render_pane($vars) {
     // create jump menu
     $menu = _gladstone_quote_build_jump_menu($entity->field_urls[LANGUAGE_NONE]);
     
-    // add rollover binding
-    $js = '(function ($) {
-            Drupal.behaviors.gladstoneQuoteJumpMenu = {
-              attach: function (context, settings) {
-                $(".gladstone-quote-jm.rollover").hover( function(){
-                    $(".rollover",this).toggle();
-                  }
-                );
-              }
-            };
-          })(jQuery);';
-    drupal_add_js($js,array('type' => 'inline', 'scope' => 'footer'));
-
     // apply feature box wrappers
     return theme('gladstone_quote_jm_theme_pane', 
               array( 'title' => $title,

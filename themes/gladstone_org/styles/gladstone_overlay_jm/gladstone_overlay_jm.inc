@@ -81,19 +81,6 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
     // create jump menu
     $menu = _gladstone_widget_build_jump_menu($entity->field_urls[LANGUAGE_NONE]);
     
-    // add rollover binding
-    $js = '(function ($) {
-            Drupal.behaviors.gladstoneOverlayJumpMenu = {
-              attach: function (context, settings) {
-                $(".content-wrapper.rollover").hover( function(){
-                    $(".inner",this).toggle();
-                  }
-                );
-              }
-            };
-          })(jQuery);';
-    drupal_add_js($js,array('type' => 'inline', 'scope' => 'footer'));
-
 
     // apply feature box wrappers
     return theme('gladstone_overlay_jm_theme_pane', 

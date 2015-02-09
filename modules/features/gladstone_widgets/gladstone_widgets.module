@@ -6,20 +6,13 @@
 
 include_once 'gladstone_widgets.features.inc';
 
-/**
- * Implements hook_init()
- */
-function gladstone_widgets_init() {
-
-	// load the timeago plugin
-	drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/jquery.timeago.js', array('scope' => 'footer'));
-
-}
 
 /**
  * Implements hook_page_build()
  */
 function gladstone_widgets_page_build(&$page) {
+
+  drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/jquery.timeago.js', array('scope' => 'footer'));
 
 	// Add our custom javascript to the footer to override other things.
 	drupal_add_js(drupal_get_path('module', 'gladstone_widgets') . '/js/gladstone-widgets.js', array('scope' => 'footer'));

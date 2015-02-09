@@ -64,6 +64,18 @@ Drupal.settings.spotlight_settings = Drupal.settings.spotlight_settings || {};
     attach: function (context, settings) {
       $('div.timeago').timeago();
     }
-  }
+  }  
+
+  /**
+  * Form behavior for Jump Menus
+  */
+  Drupal.behaviors.gladstoneOverlayJumpMenu = {
+    attach: function (context, settings) {
+        $(".gladstone-jump-menu .rollover").hover( function(){
+          $(".roll-toggle",this).toggle();
+        });
+    }
+  };
  
+
 })(jQuery);
