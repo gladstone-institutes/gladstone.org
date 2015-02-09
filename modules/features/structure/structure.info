@@ -29,6 +29,7 @@ dependencies[] = logintoboggan
 dependencies[] = md_megamenu
 dependencies[] = media
 dependencies[] = menu
+dependencies[] = menu_attributes
 dependencies[] = menu_block
 dependencies[] = menu_editor
 dependencies[] = menu_position
