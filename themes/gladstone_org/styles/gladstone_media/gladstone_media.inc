@@ -43,10 +43,6 @@ function theme_gladstone_media_render_pane($vars) {
   $display  = $vars['display'];
   $settings = $vars['settings'];
 
-
-  // dpm($vars,'Pane');
-  // dpm($entity,'Ent');
-
   $title = $vars['content']->title;
   if (property_exists($entity, 'link') && $entity->link && !empty($entity->path)) {
     $alias = drupal_get_path_alias($entity->path);
@@ -62,12 +58,6 @@ function theme_gladstone_media_render_pane($vars) {
   $content['#contextual_links'] = NULL;
 
 
-  // dpm($content,"Contextual Links");
-
-  $path = $vars['style']['path'];
-  drupal_add_css($path.'/gladstone_media.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-
-  // prep css classes for pane container
   $settings['clear'] = ($settings['clear'] == 'null') ? NULL : $settings['clear'];
   $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
 

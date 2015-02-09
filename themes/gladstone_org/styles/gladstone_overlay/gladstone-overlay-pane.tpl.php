@@ -8,7 +8,7 @@
 
 ?>
 <?php if ($link): ?><a href="<?php echo $link ?>"><?php endif; ?>
-<div class="pane gladstone-overlay fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">
+<div class="pane gladstone-style gladstone-style-overlay fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">
 
 	<div class="heading clearfix">
 		<h3 class="title"><?php echo $title; ?></h3>

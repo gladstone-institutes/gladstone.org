@@ -33,7 +33,7 @@ add_import_path "./sass/panes"
 add_import_path "./sass/page_manager"
 add_import_path "./sass/font-awesome"
 add_import_path "./sass/mixins"
-add_import_path "./sass/layouts"
+# add_import_path "./sass/layouts"
 add_import_path "./sass/styles"
 
 
@@ -54,7 +54,7 @@ relative_assets = true
 
 # To disable debugging comments that display the original location of your
 # selectors. Uncomment:
-# line_comments = false
+line_comments = true
 
 # Pass options to sass.
 # - For development, we turn on the FireSass-compatible debug_info.

@@ -1,0 +1,19 @@
+.gladstone-style-overlay {
+
+	.content-wrapper {
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+
+	.content {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		color: white;
+
+		.inner {
+			margin: 1em;
+		}
+	}
+}

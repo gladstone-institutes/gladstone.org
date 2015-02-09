@@ -7,7 +7,7 @@
  */
 
 ?>
-<div class="pane gladstone-media-pane <?php echo $settings['css'] ?>">
+<div class="pane gladstone-style gladstone-style-media <?php echo $settings['css'] ?>">
 	<div class="pane inner">
 		<div class="heading clearfix">
 			<h3 class="title"><?php echo $title; ?></h3>

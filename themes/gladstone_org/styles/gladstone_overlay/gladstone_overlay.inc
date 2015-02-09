@@ -41,10 +41,6 @@ function theme_gladstone_overlay_render_pane($vars) {
   $pane     = $vars['pane'];
   $display  = $vars['display'];
   $settings = $vars['settings'];
-
-
-  // dpm($vars,'Pane');
-  // dpm($entity,'Ent');
   
   if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'image') {
 
@@ -56,13 +52,6 @@ function theme_gladstone_overlay_render_pane($vars) {
     } else {
       $link = NULL;
     }
-
-    // dpm($vars);
-    // dpm( );
-
-
-    $path = $vars['style']['path'];
-    drupal_add_css($path.'/gladstone_overlay.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 
     $settings['fpid'] = $entity->fpid;
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));    

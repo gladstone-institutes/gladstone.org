@@ -1,5 +1,53 @@
 @import "base";
 
+.gladstone-style {
+
+	line-height: normal;
+
+	.heading {
+		color: white;
+		background-color: rgb(55, 127, 195);
+		padding: .5em 1em;
+
+		.title {
+			color: white;
+			float: left;
+			margin: 0;
+		}
+
+		i {
+			float: right;
+		}
+	}
+
+	.image-float-left img {
+		float: left;
+		padding-right: 1em;
+	}
+
+	.image-float-right img {
+		float: right;
+		padding-left: 1em;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+
+@import "styles/gladstone_overlay";
+@import "styles/gladstone_media";
+
+
+
+
+
+
 .gladstone-pane,
 .gladstone-overlay,
 .gladstone-media-pane {
