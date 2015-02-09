@@ -1,0 +1,61 @@
+.gladstone-style-jump-menu {
+
+	/*background-color: rgb(0, 40, 61);*/
+	color: white;
+	/*padding: 1em;*/
+	background-size: cover;
+	position: relative;
+	background-repeat: no-repeat;
+
+	.inner .content {
+		background-color: transparent;
+		width: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	.content-bottom {
+		position: absolute;
+		width: 100%;
+		bottom: 0;		
+	}
+}
+
+ul.jump-menu {
+	padding: 1em;
+	margin: 0;
+}
+ul.jump-menu li {
+	list-style-type: none;
+	list-style-image: none;
+	padding: 0;
+	margin: 0;
+}
+ul.jump-menu li a {
+	display: inline-block;
+	width: 100%;
+	background-color: rgba(0, 40, 61, 0.62);
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(251, 142, 4);
+	color: rgb(251, 142, 4);
+	padding: .5em 0;
+	margin-bottom: .5em;
+}
+
+ul.jump-menu li a i {
+	float: right;
+	margin-right: 1em;
+}
+
+ul.jump-menu li a span {
+	padding: 0 1em;
+}
+
+ul.jump-menu .donate.button {
+	color: white;
+	background-color: rgb(251, 142, 4);
+	font-weight: bold;
+	margin-bottom: 3em;
+	width: 80%;
+}

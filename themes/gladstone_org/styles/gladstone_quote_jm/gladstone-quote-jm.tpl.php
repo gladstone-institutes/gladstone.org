@@ -7,14 +7,14 @@
  */
 
 ?>
-<div class="pane gladstone-quote-jm gladstone-jump-menu fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">	
+<div class="pane gladstone-style gladstone-style-jump-menu gladstone-jump-menu fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">	
 	<div class="pane inner rollover">
 		<div class="content-wrapper">
 			<img src="<?php echo $settings['bg_image_url']?>" />
 			
 			<div class="content accent">
 				<div class="inner">
-					<h3 class="title"><?php echo $title; ?></h3>
+					<h3 class="title accent"><?php echo $title; ?></h3>
 					<div class="caption">
 						<?php echo $content ?>
 					</div>

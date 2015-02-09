@@ -69,10 +69,9 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
     // $bg_image_url = preg_replace('#' . $base_url . '#', '', $bg_image_url);
     $settings['bg_image_url'] = $bg_image_url;
     $css = '.gladstone-overlay.fpp-id-'.$entity->fpid.' .content-wrapper { background-image: url('.$bg_image_url.');}';
+   $css .= '.gladstone-jump-menu .roll-toggle{ display: none;}';
     drupal_add_css($css,array('type' => 'inline'));  
 
-    $path = $vars['style']['path'];
-    drupal_add_css($path.'/gladstone_overlay_jm.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 
     // prep css classes for pane container
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
