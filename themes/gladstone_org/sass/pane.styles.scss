@@ -20,6 +20,11 @@
 		}
 	}
 
+	.inner .content {
+		background-color: $pane_bg;
+		padding: 1em;
+	}
+
 	.image-float-left img {
 		float: left;
 		padding-right: 1em;
@@ -40,6 +45,7 @@
 }
 
 
+@import "styles/gladstone";
 @import "styles/gladstone_overlay";
 @import "styles/gladstone_media";
 

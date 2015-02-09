@@ -43,9 +43,6 @@ function theme_gladstone_render_pane($vars) {
   $settings = $vars['settings'];
 
 
-  // dpm($vars,'Pane');
-  // dpm($entity,'Ent');
-
   $title = $vars['content']->title;
   if (!empty($settings['url'])) {
     $alias = drupal_get_path_alias($settings['url']);
@@ -54,10 +51,6 @@ function theme_gladstone_render_pane($vars) {
     $link = NULL;
   }
 
-  $path = $vars['style']['path'];
-  drupal_add_css($path.'/gladstone-pane.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-
-  // prep css classes for pane container
   $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear'],$settings['image_layout']));
 
   // apply feature box wrappers

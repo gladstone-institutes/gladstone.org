@@ -7,7 +7,7 @@
  */
 
 ?>
-<div class="pane gladstone-pane <?php echo $settings['css'] ?>">
+<div class="pane gladstone-style gladstone-style-default <?php echo $settings['css'] ?>">
 	<div class="pane inner">
 
 		<?php if ($link): ?><a href="<?php echo $link ?>"><?php endif; ?>
