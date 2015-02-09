@@ -43,13 +43,9 @@ function theme_gladstone_quote_jm_render_pane($vars) {
   $display  = $vars['display'];
   $settings = $vars['settings'];
 
-  // dpm($vars,'Pane');
-  // dpm($entity,'Ent');
-
 
   if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'jump_menu') {
 
-    $settings['fpid'] = $entity->fpid;
     
     $title = $vars['content']->title;
     if (!empty($settings['url'])) {
@@ -57,24 +53,16 @@ function theme_gladstone_quote_jm_render_pane($vars) {
       $link = ($alias) ? $alias : $settings['url'];
     } else {
       $link = NULL;
-    }
+    }      
 
-    $caption = $entity->field_longtext['und'][0]['safe_value'];
-
-    // create  relative url for our css background image
-    global $base_url;          
-    $bg_image_url = file_create_url($entity->field_image['und'][0]['uri']);
-    // make path relative, this fails for sites in a subdir
-    // $bg_image_url = preg_replace('#' . $base_url . '#', '', $bg_image_url);
-    $settings['bg_image_url'] = $bg_image_url;
-    $css  = '.gladstone-quote-jm.fpp-id-'.$entity->fpid.' .content-wrapper { background: rgb(0, 40, 61) url('.$bg_image_url.') no-repeat;}';
-    $css .= '.gladstone-jump-menu .roll-toggle{ display: none;}';
+    $css = '.gladstone-jump-menu .roll-toggle{ display: none;}';
     drupal_add_css($css,array('type' => 'inline'));  
 
-
-    // prep css classes for pane container
+    $settings['fpid'] = $entity->fpid;
     $settings['clear'] = ($settings['clear'] == 'null') ? NULL : $settings['clear'];
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
+    $caption = $entity->field_longtext['und'][0]['safe_value'];
+    $background = drupal_render($content['field_image']);
 
     // create jump menu
     $menu = _gladstone_quote_build_jump_menu($entity->field_urls[LANGUAGE_NONE]);
@@ -85,6 +73,7 @@ function theme_gladstone_quote_jm_render_pane($vars) {
                      'content' => $caption,
                      'menu' => $menu,
                      'settings' => $settings,
+                     'background' => $background,
               )
             );
 

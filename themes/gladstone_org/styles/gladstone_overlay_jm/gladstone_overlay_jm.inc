@@ -44,13 +44,8 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
   $settings = $vars['settings'];
 
 
-  // dpm($vars,'Pane');
-  // dpm($entity,'Ent');
-  // dpm($base_url);
-
   if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'jump_menu') {
 
-    $settings['fpid'] = $entity->fpid;
 
     $title = $vars['content']->title;
     if (!empty($settings['url'])) {
@@ -60,22 +55,13 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
       $link = NULL;
     }
 
-    $caption = $entity->field_longtext['und'][0]['safe_value'];
-
-    // create  relative url for our css background image
-    global $base_url;          
-    $bg_image_url = file_create_url($entity->field_image['und'][0]['uri']);
-    // make path relative, this fails for sites in a subdir
-    // $bg_image_url = preg_replace('#' . $base_url . '#', '', $bg_image_url);
-    $settings['bg_image_url'] = $bg_image_url;
-    $css = '.gladstone-overlay.fpp-id-'.$entity->fpid.' .content-wrapper { background-image: url('.$bg_image_url.');}';
-   $css .= '.gladstone-jump-menu .roll-toggle{ display: none;}';
+    $css = '.gladstone-jump-menu .roll-toggle{ display: none;}';
     drupal_add_css($css,array('type' => 'inline'));  
 
-
-    // prep css classes for pane container
+    $settings['fpid'] = $entity->fpid;
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
-
+    $caption = $entity->field_longtext['und'][0]['safe_value'];
+    $background = drupal_render($content['field_image']);
 
     // create jump menu
     $menu = _gladstone_widget_build_jump_menu($entity->field_urls[LANGUAGE_NONE]);
@@ -87,6 +73,7 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
                      'content' => $caption,
                      'menu' => $menu,
                      'settings' => $settings,
+                     'background' => $background,
               )
             );
 

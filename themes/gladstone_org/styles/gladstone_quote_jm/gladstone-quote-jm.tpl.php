@@ -10,7 +10,7 @@
 <div class="pane gladstone-style gladstone-style-jump-menu gladstone-jump-menu fpp-id-<?php echo $settings['fpid']?> clearfix <?php echo $settings['css'] ?>">	
 	<div class="pane inner rollover">
 		<div class="content-wrapper">
-			<img src="<?php echo $settings['bg_image_url']?>" />
+			<?php print $background ?>
 			
 			<div class="content accent">
 				<div class="inner">

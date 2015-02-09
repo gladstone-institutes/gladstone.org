@@ -17,9 +17,10 @@
 	</div>
 	
 	<div class="content-wrapper rollover">
-		<img src="<?php echo $settings['bg_image_url']?>" />
-		<div class="content overlay">
-			<div class="inner roll-toggle">
+		<?php print $background ?>
+		
+		<div class="content-bottom overlay">
+			<div class="inner roll-toggle" style="display:block;">
 				<?php echo $content ?>
 			</div>
 			<div class="inner roll-toggle clearfix">
