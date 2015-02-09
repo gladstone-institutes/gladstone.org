@@ -15,10 +15,10 @@
   ; See each stylesheet for extensive documentation and help.
   stylesheets[screen][] = css/global.base.css
   stylesheets[screen][] = css/global.styles.css
-  stylesheets[screen][] = css/gladstone.css
-  stylesheets[screen][] = css/panes.css
   stylesheets[screen][] = css/pane.styles.css
-  stylesheets[screen][] = css/layouts/layouts.css
+  stylesheets[screen][] = css/panes.css
+  stylesheets[screen][] = css/layouts.css
+  stylesheets[screen][] = css/gladstone.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
