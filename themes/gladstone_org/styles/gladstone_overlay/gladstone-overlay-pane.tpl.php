@@ -18,7 +18,7 @@
 	</div>
 	
 	<div class="content-wrapper">
-		<img src="<?php echo $settings['bg_image_url']?>" />
+		<?php print $background ?>
 		<div class="content overlay">
 			<div class="inner">
 				<?php echo $content ?>

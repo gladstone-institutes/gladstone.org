@@ -7,19 +7,18 @@
 
 // Plugin definition
 $plugin = array(  
-  'title'              => t('Gladstone Media'),
-  'description'        => t('Gladstone media pane style'),
+  'title'              => t('Gladstone'),
+  'description'        => t('General Gladstone pane style'),
   'render region'      => NULL, //exclude use on regions
   'settings form'      => NULL, //
-  'render pane'        => 'gladstone_media_render_pane',
-  'pane settings form' => 'gladstone_media_pane_settings_form',
+  'render pane'        => 'gladstone_render_pane',
+  'pane settings form' => 'gladstone_pane_settings_form',
   'hook theme' => array(
-    'gladstone_media_theme_pane' => array(
-      'template' => 'gladstone-media-pane',
-      'path' => drupal_get_path('module','gladstone_theme').'/plugins/styles/gladstone_media',
+    'gladstone_theme_pane' => array(
+      'template' => 'gladstone-pane',
+      'path' => drupal_get_path('theme','gladstone_org').'/styles/gladstone',
       'variables' => array(
           'content' => NULL,
-          'contextual_links' => NULL,
           'title' => NULL,
           'link' => NULL,
           'settings' => NULL,
@@ -33,7 +32,7 @@ $plugin = array(
  *
  * render called by a single styled pane
  */
-function theme_gladstone_media_render_pane($vars) {
+function theme_gladstone_render_pane($vars) {
   if (empty($vars['content']->content)) { return; }
 
   $ctype    = $vars['content']->type;
@@ -48,34 +47,23 @@ function theme_gladstone_media_render_pane($vars) {
   // dpm($entity,'Ent');
 
   $title = $vars['content']->title;
-  if (property_exists($entity, 'link') && $entity->link && !empty($entity->path)) {
-    $alias = drupal_get_path_alias($entity->path);
-    $link = ($alias) ? $alias : $entity->path;
-  } elseif (!empty($settings['url'])) {
+  if (!empty($settings['url'])) {
     $alias = drupal_get_path_alias($settings['url']);
     $link = ($alias) ? $alias : $settings['url'];
   } else {
     $link = NULL;
   }
 
-  $contextual_links = $content['#contextual_links'];
-  $content['#contextual_links'] = NULL;
-
-
-  // dpm($content,"Contextual Links");
-
   $path = $vars['style']['path'];
-  drupal_add_css($path.'/gladstone_media.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+  drupal_add_css($path.'/gladstone-pane.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 
   // prep css classes for pane container
-  $settings['clear'] = ($settings['clear'] == 'null') ? NULL : $settings['clear'];
-  $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
+  $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear'],$settings['image_layout']));
 
   // apply feature box wrappers
-  return theme('gladstone_media_theme_pane', 
+  return theme('gladstone_theme_pane', 
             array( 'title' => $title,
                    'content' => render($content),
-                   // 'contextual_links' => render($contextual_links),
                    'link' => $link,
                    'settings' => $settings,
             )
@@ -85,7 +73,7 @@ function theme_gladstone_media_render_pane($vars) {
 /**
  * Settings form callback.
  */
-function gladstone_media_pane_settings_form($style_settings) {
+function gladstone_pane_settings_form($style_settings) {
 
   $form['url'] = array(
     '#title' => t('URL'),

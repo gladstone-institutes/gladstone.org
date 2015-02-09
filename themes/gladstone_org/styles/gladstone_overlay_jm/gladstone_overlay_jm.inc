@@ -7,20 +7,21 @@
 
 // Plugin definition
 $plugin = array(  
-  'title'              => t('Gladstone Overlay'),
-  'description'        => t('Caption overlays full background image'),
+  'title'              => t('Gladstone Overlay Jump Menu'),
+  'description'        => t('Same as Gladstone Overlay, but with a roll over menu'),
   'render region'      => NULL, //exclude use on regions
   'settings form'      => NULL, //
-  'render pane'        => 'gladstone_overlay_render_pane',
-  'pane settings form' => 'gladstone_overlay_pane_settings_form',
+  'render pane'        => 'gladstone_overlay_jm_render_pane',
+  'pane settings form' => 'gladstone_overlay_jm_pane_settings_form',
   'hook theme' => array(
-    'gladstone_overlay_theme_pane' => array(
-      'template' => 'gladstone-overlay-pane',
-      'path' => drupal_get_path('module','gladstone_theme').'/plugins/styles/gladstone_overlay',
+    'gladstone_overlay_jm_theme_pane' => array(
+      'template' => 'gladstone-overlay-jm',
+      'path' => drupal_get_path('theme','gladstone_org').'/styles/gladstone_overlay_jm',
       'variables' => array(
           'content' => NULL,
           'title' => NULL,
           'link' => NULL,
+          'menu' => NULL,
           'settings' => NULL,
       ),
     ),
@@ -32,7 +33,7 @@ $plugin = array(
  *
  * render called by a single styled pane
  */
-function theme_gladstone_overlay_render_pane($vars) {
+function theme_gladstone_overlay_jm_render_pane($vars) {
   if (empty($vars['content']->content)) { return; }
 
   $ctype    = $vars['content']->type;
@@ -45,8 +46,9 @@ function theme_gladstone_overlay_render_pane($vars) {
 
   // dpm($vars,'Pane');
   // dpm($entity,'Ent');
-  
-  if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'image') {
+  // dpm($base_url);
+
+  if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'jump_menu') {
 
     $settings['fpid'] = $entity->fpid;
 
@@ -70,22 +72,40 @@ function theme_gladstone_overlay_render_pane($vars) {
     drupal_add_css($css,array('type' => 'inline'));  
 
     $path = $vars['style']['path'];
-    drupal_add_css($path.'/gladstone_overlay.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_css($path.'/gladstone_overlay_jm.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 
     // prep css classes for pane container
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
 
+
+    // create jump menu
+    $menu = _gladstone_widget_build_jump_menu($entity->field_urls[LANGUAGE_NONE]);
+    
+    // add rollover binding
+    $js = '(function ($) {
+            Drupal.behaviors.gladstoneOverlayJumpMenu = {
+              attach: function (context, settings) {
+                $(".content-wrapper.rollover").hover( function(){
+                    $(".inner",this).toggle();
+                  }
+                );
+              }
+            };
+          })(jQuery);';
+    drupal_add_js($js,array('type' => 'inline', 'scope' => 'footer'));
+
+
     // apply feature box wrappers
-    return theme('gladstone_overlay_theme_pane', 
+    return theme('gladstone_overlay_jm_theme_pane', 
               array( 'title' => $title,
                      'content' => $caption,
-                     'link' => $link,
+                     'menu' => $menu,
                      'settings' => $settings,
               )
             );
 
   } else {
-    $message = 'This style is meant for use with Image widgets only.';
+    $message = 'This style is meant for use with Jump menu widgets only.';
     drupal_set_message($message,'warning',FALSE);
     return '<div class="messages warning"><h2>'.$message.'</h2></div>';    
   }
@@ -94,7 +114,7 @@ function theme_gladstone_overlay_render_pane($vars) {
 /**
  * Settings form callback.
  */
-function gladstone_overlay_pane_settings_form($style_settings) {
+function gladstone_overlay_jm_pane_settings_form($style_settings) {
 
   $form['url'] = array(
     '#title' => t('URL'),
@@ -150,6 +170,31 @@ function gladstone_overlay_pane_settings_form($style_settings) {
   );    
     
   return $form;
+}
+
+/**
+ * Build the jump menu
+ */
+function _gladstone_widget_build_jump_menu($urls) {
+  global $base_url;
+
+  $menu = '<ul class="jump-menu">';
+  foreach ($urls as $uid => $url) {
+    // make path relative, this fails for sites in a subdir
+    // use "#" instead of "/" to wrap the regex expression, it auto-escapes '/' literals
+    $rel_url = preg_replace('#' . $base_url . '/?#', '', $url['display_url']);
+    $classes = array_key_exists('class',$url['attributes']) ? ' '.$url['attributes']['class'] : NULL;
+
+    $li  = '<li class="leaf">';
+    $li .= '<a href="'.$rel_url.'" class="button'.$classes.'">';
+    $li .= '<span>'.$url['title'].'</span><i class="fa fa-angle-right fa-lg"></i>';
+    $li .= '</a></li>';
+
+    $menu .= $li;
+  }
+  $menu .= '</ul>';
+
+  return $menu;
 }
 
 

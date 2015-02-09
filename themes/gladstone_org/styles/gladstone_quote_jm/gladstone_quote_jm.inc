@@ -7,16 +7,16 @@
 
 // Plugin definition
 $plugin = array(  
-  'title'              => t('Gladstone Overlay Jump Menu'),
-  'description'        => t('Same as Gladstone Overlay, but with a roll over menu'),
+  'title'              => t('Gladstone Quote Jump Menu'),
+  'description'        => t('Same as Gladstone Quote, but with a roll over menu'),
   'render region'      => NULL, //exclude use on regions
   'settings form'      => NULL, //
-  'render pane'        => 'gladstone_overlay_jm_render_pane',
-  'pane settings form' => 'gladstone_overlay_jm_pane_settings_form',
+  'render pane'        => 'gladstone_quote_jm_render_pane',
+  'pane settings form' => 'gladstone_quote_jm_pane_settings_form',
   'hook theme' => array(
-    'gladstone_overlay_jm_theme_pane' => array(
-      'template' => 'gladstone-overlay-jm',
-      'path' => drupal_get_path('module','gladstone_theme').'/plugins/styles/gladstone_overlay_jm',
+    'gladstone_quote_jm_theme_pane' => array(
+      'template' => 'gladstone-quote-jm',
+      'path' => drupal_get_path('theme','gladstone_org').'/styles/gladstone_quote_jm',
       'variables' => array(
           'content' => NULL,
           'title' => NULL,
@@ -33,7 +33,7 @@ $plugin = array(
  *
  * render called by a single styled pane
  */
-function theme_gladstone_overlay_jm_render_pane($vars) {
+function theme_gladstone_quote_jm_render_pane($vars) {
   if (empty($vars['content']->content)) { return; }
 
   $ctype    = $vars['content']->type;
@@ -43,15 +43,14 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
   $display  = $vars['display'];
   $settings = $vars['settings'];
 
-
   // dpm($vars,'Pane');
   // dpm($entity,'Ent');
-  // dpm($base_url);
+
 
   if ( $ctype == 'fieldable_panels_pane' && $entity->bundle == 'jump_menu') {
 
     $settings['fpid'] = $entity->fpid;
-
+    
     $title = $vars['content']->title;
     if (!empty($settings['url'])) {
       $alias = drupal_get_path_alias($settings['url']);
@@ -68,25 +67,25 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
     // make path relative, this fails for sites in a subdir
     // $bg_image_url = preg_replace('#' . $base_url . '#', '', $bg_image_url);
     $settings['bg_image_url'] = $bg_image_url;
-    $css = '.gladstone-overlay.fpp-id-'.$entity->fpid.' .content-wrapper { background-image: url('.$bg_image_url.');}';
+    $css = '.gladstone-quote-jm.fpp-id-'.$entity->fpid.' .content-wrapper { background: rgb(0, 40, 61) url('.$bg_image_url.') no-repeat;}';
     drupal_add_css($css,array('type' => 'inline'));  
 
     $path = $vars['style']['path'];
-    drupal_add_css($path.'/gladstone_overlay_jm.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_css($path.'/gladstone_quote_jm.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 
     // prep css classes for pane container
+    $settings['clear'] = ($settings['clear'] == 'null') ? NULL : $settings['clear'];
     $settings['css'] = implode(' ',array($settings['width'],$settings['float'],$settings['clear']));
 
-
     // create jump menu
-    $menu = _gladstone_widget_build_jump_menu($entity->field_urls[LANGUAGE_NONE]);
+    $menu = _gladstone_quote_build_jump_menu($entity->field_urls[LANGUAGE_NONE]);
     
     // add rollover binding
     $js = '(function ($) {
-            Drupal.behaviors.gladstoneOverlayJumpMenu = {
+            Drupal.behaviors.gladstoneQuoteJumpMenu = {
               attach: function (context, settings) {
-                $(".content-wrapper.rollover").hover( function(){
-                    $(".inner",this).toggle();
+                $(".gladstone-quote-jm.rollover").hover( function(){
+                    $(".rollover",this).toggle();
                   }
                 );
               }
@@ -94,9 +93,8 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
           })(jQuery);';
     drupal_add_js($js,array('type' => 'inline', 'scope' => 'footer'));
 
-
     // apply feature box wrappers
-    return theme('gladstone_overlay_jm_theme_pane', 
+    return theme('gladstone_quote_jm_theme_pane', 
               array( 'title' => $title,
                      'content' => $caption,
                      'menu' => $menu,
@@ -104,17 +102,17 @@ function theme_gladstone_overlay_jm_render_pane($vars) {
               )
             );
 
-  } else {
+  } else {    
     $message = 'This style is meant for use with Jump menu widgets only.';
     drupal_set_message($message,'warning',FALSE);
-    return '<div class="messages warning"><h2>'.$message.'</h2></div>';    
+    return '<div class="messages warning"><h2>'.$message.'</h2></div>';
   }
 }
 
 /**
  * Settings form callback.
  */
-function gladstone_overlay_jm_pane_settings_form($style_settings) {
+function gladstone_quote_jm_pane_settings_form($style_settings) {
 
   $form['url'] = array(
     '#title' => t('URL'),
@@ -122,14 +120,7 @@ function gladstone_overlay_jm_pane_settings_form($style_settings) {
     '#type'  => 'textfield',
     '#default_value' => (isset($style_settings['url'])) ? $style_settings['url'] : NULL,
   );    
-
-  $form['icon'] = array(
-    '#title' => t('Font Awesome Icon Class'),
-    '#description' => t('Set the icon class e.g. "fa-close"'),
-    '#type'  => 'textfield',
-    '#default_value' => (isset($style_settings['icon'])) ? $style_settings['icon'] : NULL,
-  );    
-
+  
   $form['width'] = array(
     '#title' => t('Width'),
     '#description' => t('Percent width of parent container'),
@@ -168,14 +159,16 @@ function gladstone_overlay_jm_pane_settings_form($style_settings) {
     ),
     '#default_value' => (isset($style_settings['clear'])) ? $style_settings['clear'] : NULL,
   );    
-    
+
+     
+
   return $form;
 }
 
 /**
  * Build the jump menu
  */
-function _gladstone_widget_build_jump_menu($urls) {
+function _gladstone_quote_build_jump_menu($urls) {
   global $base_url;
 
   $menu = '<ul class="jump-menu">';
@@ -186,7 +179,7 @@ function _gladstone_widget_build_jump_menu($urls) {
     $classes = array_key_exists('class',$url['attributes']) ? ' '.$url['attributes']['class'] : NULL;
 
     $li  = '<li class="leaf">';
-    $li .= '<a href="'.$rel_url.'" class="button'.$classes.'">';
+    $li .= '<a href="'.$rel_url.'" class="button '.$classes.'">';
     $li .= '<span>'.$url['title'].'</span><i class="fa fa-angle-right fa-lg"></i>';
     $li .= '</a></li>';
 
