@@ -283,10 +283,6 @@ namespace :drupal do
 			within Drupal.theme_path do
 				execute :rvm, "@#{fetch(:application)}", :do, :compass, :compile
 			end
-
-			within release_path do
-				execute :drush, 'generate-theme-files'
-			end
 		end
 	end
 
