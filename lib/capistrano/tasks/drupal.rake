@@ -419,12 +419,11 @@ namespace :drupal do
 		on roles(:web) do
 			within release_path do
 				with fetch(:drush_env) do
-					execute :drush, 'fr', '--yes --force', 'site_pages'
-					execute :drush, :en, '-y', :biblio_ucsf_profiles
-
 					if fetch(:stage) =~ /^(prod|www)/
 						execute :drush, :dis, '-y', 'update'
 						execute :drush, :vset, 'error_level', '0' 	
+					else
+						execute :drush, :en, '-y', :gladstone_dev
 					end
 				end
 			end
