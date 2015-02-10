@@ -6,5 +6,4 @@ configure = admin/config/content/biblio/ucsf_profiles
 
 dependencies[] = biblio
 dependencies[] = biblio_pm
-dependencies[] = feeds
 dependencies[] = views
