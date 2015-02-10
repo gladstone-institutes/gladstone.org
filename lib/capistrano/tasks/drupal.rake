@@ -421,7 +421,6 @@ namespace :drupal do
 				with fetch(:drush_env) do
 					execute :drush, 'fr', '--yes --force', 'site_pages'
 					execute :drush, :en, '-y', :biblio_ucsf_profiles
-					execute :drush, :en, '-y', 'build'
 
 					if fetch(:stage) =~ /^(prod|www)/
 						execute :drush, :dis, '-y', 'update'
