@@ -22,7 +22,7 @@ namespace :mysql do
   task 'cleanup:all' do
     on roles(:db) do
       databases = capture(:mysql, Mysql.auth_string, '--skip-column-names',
-                    %Q{-e "show databases like '#{fetch(:stage)}_%'";}).split
+                    %Q{-e "show databases like '#{fetch(:stage)}\_%'";}).split
       databases.each do |database|
         execute :mysql, Mysql.auth_string, 
           %Q{-e "DROP DATABASE IF EXISTS #{database};"}
@@ -38,7 +38,7 @@ namespace :mysql do
       releases  = capture(:ls, '-xtr', releases_path).split
       databases = capture(:mysql, Mysql.auth_string, 
                     '--skip-column-names',
-                    %Q{-e "show databases like '#{fetch(:stage)}_%'";}).split
+                    %Q{-e "show databases like '#{fetch(:stage)}\_%'";}).split
       release_dbs_to_drop = databases.map{|d| d.split('_')[1]} - releases
 
       release_dbs_to_drop.each do |drop_release_timestamp|
