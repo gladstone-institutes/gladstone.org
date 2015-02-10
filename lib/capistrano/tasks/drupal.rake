@@ -191,8 +191,10 @@ namespace :drupal do
 
 	task :symlink do
 		require 'resolv'
-		on roles(:web) do
-			if Resolv.getaddress(host.hostname) == '127.0.0.1'
+		on roles(:web) do			
+			host_ip = Resolv.getaddress(host.hostname) rescue false
+
+			if  (host_ip == '127.0.0.1') || (host.hostname =~ /local/)
 				info "Installing from locally symlinked working copy"
 
 				profile_path = fetch(:profile_path) || "#{release_path}/profiles/#{fetch(:application)}"
