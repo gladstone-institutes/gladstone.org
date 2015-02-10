@@ -37,22 +37,11 @@ function gladstone_org_install_tasks_alter(&$tasks, $install_state) {
  */
 function adaptive_theme_initialization() {
 
-	watchdog('@HACK Workaround', 'adaptive theme css generation');
-	$form_id = 'system_theme_settings';
-	$theme_name = 'gladstone_org';
+	// This does not work correctly becasue the themes are not availble
+	// to the task, AT theme ends up generating css without the subtheme
+	// specifc layout css.
 
-	module_load_include('inc', 'system', 'system.admin');
-	$form_state = form_state_defaults();
-	$form_state['build_info']['args'][0] = $theme_name;
-	$form_state['values'] = array();
-	$form_state['values']['global_file_path'] = 'public_files';
-	drupal_form_submit($form_id, $form_state);
+	// See the drush task 'gsgen' in gladstone_dev for the workaround
 
-	// Reinitialize theme settings, by injecting exported set
-	$jsons = file_scan_directory(drupal_get_path('profile', 'gladstone_org'). '/exports/vars', '/.*\.json/');
-	foreach ($jsons as $json) {
-	$var = drupal_json_decode(file_get_contents($json->uri));
-	variable_set($json->name, $var);
-	}
 
 }

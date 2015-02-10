@@ -6,7 +6,6 @@ php = 5.2.4
 dependencies[] = ctools
 dependencies[] = gladstone_admin
 dependencies[] = gladstone_roles
-dependencies[] = gladstone_theme
 dependencies[] = institute
 dependencies[] = jquery_update
 dependencies[] = strongarm

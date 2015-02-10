@@ -5,7 +5,7 @@
  *
  * @see http://www.sitepoint.com/drupal-create-drush-command/
  */
-function gladstone_theme_drush_command() {
+function gladstone_dev_drush_command() {
 
   $items['generate-theme-files'] = array(
     'description' => 'Generate Gladstone adaptive theme style files.',
@@ -25,6 +25,23 @@ function gladstone_theme_drush_command() {
  */
 function _gs_org_settings_injections() {
 
+	watchdog('@HACK Workaround', 'adaptive theme css generation');
+	$form_id = 'system_theme_settings';
+	$theme_name = 'gladstone_org';
+
+	module_load_include('inc', 'system', 'system.admin');
+	$form_state = form_state_defaults();
+	$form_state['build_info']['args'][0] = $theme_name;
+	$form_state['values'] = array();
+	$form_state['values']['global_file_path'] = 'public_files';
+	drupal_form_submit($form_id, $form_state);
+
+	// Reinitialize theme settings, by injecting exported set
+	$jsons = file_scan_directory(drupal_get_path('profile', 'gladstone_org'). '/exports/vars', '/.*\.json/');
+	foreach ($jsons as $json) {
+		$var = drupal_json_decode(file_get_contents($json->uri));
+		variable_set($json->name, $var);
+	}
 
 }
 
@@ -97,4 +114,3 @@ function _gs_org_settings_programmatic_submit() {
 
 
 }
-

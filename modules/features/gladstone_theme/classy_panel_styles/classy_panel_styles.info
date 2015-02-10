@@ -1,8 +1,0 @@
-name = Classy Panel Styles
-description = Allows themers to create simple, powerful styling options for editors of Panels pages.
-core = 7.x
-package = "Panels"
-configure = admin/config/content/classy_panel_styles
-dependencies[] = ctools
-dependencies[] = panels
-dependencies[] = page_manager
