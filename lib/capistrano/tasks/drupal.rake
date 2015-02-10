@@ -224,7 +224,7 @@ namespace :drupal do
 				execute :chmod,'-f', 'g+sw', shared_path, raise_on_non_zero_exit: false
 			end
 
-			within release_path.join('sites/default/files') do
+			within shared_path.join('sites/default') do
 				execute :find, '.', 
 						'-type d -print0 | xargs -0 chmod -fR g+sw',
 						raise_on_non_zero_exit: false
@@ -243,6 +243,7 @@ namespace :drupal do
 		on roles(:web) do
 			within release_path do
 				with fetch(:drush_env) do
+					execute
 					execute :drush, '--yes', 'site-install', 
 									'-d -v', #drush debug flags
 									fetch(:application),
@@ -298,9 +299,9 @@ namespace :drupal do
 				if directories.any?
 					directories.each do |release|
 						within releases_path.join(release) do
+							execute :chmod, '-f', '775', 'sites/default'
 							within 'sites/default' do
-								execute :chmod, '-fR', '754', '*'
-								execute :chmod, '-fR', '754', '.'
+								execute :chmod, '-fR', '774', '*.php'
 							end
 						end						
 					end
@@ -408,6 +409,9 @@ namespace :drupal do
 			Rake::Task["#{scm}:create_release"].reenable
 			Rake::Task["#{scm}:create_release"].invoke			
 		end
+
+		Rake::Task["drupal:correct_permissions"].invoke			
+		Rake::Task["drupal:correct_permissions"].reenable
 
 		set :release_path, fetch(:cap_release_path)
 	end	
