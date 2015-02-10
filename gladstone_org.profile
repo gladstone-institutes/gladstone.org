@@ -33,7 +33,6 @@ function gladstone_org_install_tasks_alter(&$tasks, $install_state) {
 		'function' => 'mega_menu_initialization',
 	);
 
-
 	$old_tasks = $tasks;
 	$tasks = $old_tasks + $post_install_tasks;
 
@@ -67,6 +66,7 @@ function adaptive_theme_initialization() {
 /**
  * Task callback: Workaround for problematic Mega menu import
  */
+
 function mega_menu_initialization() {
 	global $theme;
 
@@ -132,5 +132,3 @@ function mega_menu_initialization() {
 		->values($mega_menu)
 		->execute();	
 }
-
-

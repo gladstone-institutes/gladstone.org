@@ -262,22 +262,14 @@ namespace :drupal do
 	end
 
 	task :revert_features do
-		features = []
-
-		on roles(:web) do
+		on roles(:web) do 
 			within release_path do 
-				with fetch(:drush_env) do	
+				with fetch(:drush_env) do
 					features = capture(:drush,'features-list','--status=enabled').
 								split(/\r?\n/).
 								map{|l| l.match(/\s+([a-z_]+)\s+Enabled/)}.
-								select{|e| not e.nil?}.map{|r| r[1]}	
-				end
-			end
-		end
+								select{|e| not e.nil?}.map{|r| r[1]}							
 
-		on roles(:web), in: :parallel, limit: 2 do 
-			within release_path do 
-				with fetch(:drush_env) do						
 					features.each do |feature|
 						info "*** Reverting feature (#{feature}) ***"
 						execute :drush, 'features-revert', '--yes', '--force', feature
@@ -427,6 +419,7 @@ namespace :drupal do
 		on roles(:web) do
 			within release_path do
 				with fetch(:drush_env) do
+					execute :drush, 'fr', '--yes --force', 'site_pages'
 					execute :drush, :en, '-y', :biblio_ucsf_profiles
 
 					if fetch(:stage) =~ /^(prod|www)/
