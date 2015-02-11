@@ -438,6 +438,7 @@ namespace 'drupal:migrate' do
 	task :setup do
 		mysql 		 = fetch(:mysql)
 		last_release = false
+		source = ENV['initialize'] || ENV['init'] || ENV['from'] || ENV['source']
 
 		# if not fetch
 		on roles(:web) do		
@@ -446,8 +447,11 @@ namespace 'drupal:migrate' do
 			end
 		end
 
-		if last_release && ENV['initialize'].nil?
+		if last_release && source.nil?
 			source_schema = "#{fetch(:stage)}_#{last_release}"
+			source_files  = shared_path
+		elsif source =~ /^\d{6,}/
+			source_schema = "#{fetch(:stage)}_#{ENV['initialize']}"
 			source_files  = shared_path
 		else
 			source_schema = fetch(:initalization_schema)
