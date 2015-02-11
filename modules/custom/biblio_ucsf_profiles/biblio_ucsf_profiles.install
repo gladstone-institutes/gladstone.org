@@ -1,1 +1,48 @@
 <?php
+/**
+ * @file - install file
+ */
+
+/**
+ * Implement hook_schema()
+ */
+function biblio_ucsf_profiles_schema() {
+	$schema = array();
+	$schema['biblio_ucsf_profiles'] = array(
+		'description' => 'Biblio UCSF Profiles Import states',
+		'fields' => array(
+			'uid' => array(
+				'description' => 'Drupal user id',
+				'type' => 'int',
+				'unsigned' => TRUE,
+				'not null' => TRUE
+			),
+			'ucsf_id' => array(
+				'description' => 'UCSF Profiles public API key',
+				'type' => 'varchar',
+				'length' => 255,
+			),
+			'status' => array(
+				'description' => 'API response code',
+				'type' => 'varchar',
+				'lenght' => 255
+			),
+			'updated' => array(
+				'description' => 'Last update of API key',
+				'type' => 'int',				
+			),
+		),
+		'indexes' => array(
+			'ucsf_id' => array('ucsf_id'),
+		),
+		'foreign keys' => array(
+			'users' => array(
+				'table' => 'users',
+				'columns' => array('uid' => 'uid'),
+			)
+		),
+		'primary key' => array('uid')
+	);
+
+	return $schema;
+}
