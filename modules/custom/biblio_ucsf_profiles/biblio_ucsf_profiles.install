@@ -25,7 +25,7 @@ function biblio_ucsf_profiles_schema() {
 			'status' => array(
 				'description' => 'API response code',
 				'type' => 'varchar',
-				'lenght' => 255
+				'length' => 255
 			),
 			'updated' => array(
 				'description' => 'Last update of API key',
