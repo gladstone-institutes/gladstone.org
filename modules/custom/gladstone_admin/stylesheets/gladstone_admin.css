@@ -60,7 +60,6 @@ div.autocomplete-deluxe-throbber {
 
 /* line 65, ../sass/gladstone_admin.scss */
 #edit-status .form-item:first-child {
-  /*float: left;*/ 
   margin-right: 1em;
 }
 
@@ -76,7 +75,7 @@ div.autocomplete-deluxe-throbber {
 
 /* line 80, ../sass/gladstone_admin.scss */
 .chosen-container {
-  width: 100% !important;
+  width: inherit !important;
 }
 
 /* line 84, ../sass/gladstone_admin.scss */
