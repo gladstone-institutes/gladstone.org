@@ -1,4 +1,7 @@
 <?php
+module_load_include('module','biblio_pm');
+module_load_include('inc','biblio','includes/biblio.import.export');  
+module_load_include('php','biblio_ucsf_profiles', 'lib/jsonpath-0.8.1');
 
 /**
  * Implements hook_help().
@@ -42,32 +45,44 @@ function biblio_ucsf_profiles_menu() {
 function biblio_ucsf_profiles_form($form, &$form_state) {
   $form['biblio_ucsf_profiles_active'] = array(
   	'#type' => 'checkbox',
-  	'#title' => t('Poll UCSF Profiles for publications'),
+  	'#title' => t('Auto-Poll UCSF Profiles for publications'),
   	'#default_value' => variable_get('biblio_ucsf_profiles_active', 1)
   );
 
   $form['biblio_ucsf_profiles_cron'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Cron Frequency'),
+    '#type' => 'timeperiod_select',
+    '#units' => array(
+      '86400' => array('max' => 120, 'step size' => 3),
+      '3600'  => array('max' => 72, 'step size'  => 12),
+    ),
+    '#title' => t('Import Frequency'),
     '#size' => 10,
     '#maxlength' => 10,
     // '#process' => array('form_process_radios'),
-    '#description' => t('Time(seconds) between updates'),
+    '#description' => t('How often should I check for new publications?'),
     '#default_value' => variable_get('biblio_ucsf_profiles_cron', 3*24*60*60),
-    // '#required' => TRUE,
   );
 
-  // https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7#button
+  $form['biblio_ucsf_profiles_update'] = array(
+    '#type' => 'timeperiod_select',
+    '#units' => array(
+      '86400' => array('max' => 120, 'step size' => 3),
+      '3600'  => array('max' => 72, 'step size'  => 12),
+    ),
+    '#title' => t('Time since last update'),
+    '#size' => 10,
+    '#maxlength' => 10,
+    // '#process' => array('form_process_radios'),
+    '#description' => t('How often should I update existing publications'),
+    '#default_value' => variable_get('biblio_ucsf_profiles_update', 30*24*60*60),
+  );
+
   $form['force_poll'] = array(
   	  '#type' => 'submit',
       '#value' => 'Force API Poll',
-      '#submit' => array('biblio_ucsf_profiles_force_poll')
+      '#submit' => array('biblio_ucsf_profiles_force_poll'),
+      '#description' => t('Poll all pubs (new and existing)')
 
-	  
-	  // '#type' => 'button', 
-	  // '#value' => t('Force API Poll'), 
-	  // '#weight' => 19,
-	  // '#submit' => array('biblio_ucsf_profiles_force_poll'),
 	);
 
   return system_settings_form($form);
@@ -84,45 +99,78 @@ function biblio_ucsf_profiles_form($form, &$form_state) {
  *   An associative array containing the current state of the form.
  */
 function biblio_ucsf_profiles_force_poll($form, &$form_state) {
-  module_load_include('php','biblio_ucsf_profiles', 'lib/jsonpath-0.8.1');
-  module_load_include('module','biblio_pm');
-  module_load_include('inc','biblio','includes/biblio.import.export');
 
-  $profiles = views_get_view_result('biblio_ucsf_profiles');
-  foreach ($profiles as $profile) {
-    biblio_ucsf_profiles_import($profile);
+  $batch = array(
+    'operations' => array(),
+    'finished' => 'biblio_ucsf_profiles_batch_finished',
+    'title' => t('Import publications from UCSF Profiles'),
+    'init_message' => t('Import is starting...'),
+    'progress_message' => t('Imported @current of @total profiles.'),
+    'error_message' => t('Import error has occurred.')
+  );
+
+
+  $query = db_select('users', 'u')
+        ->fields('u',array('uid','name'))
+        ->condition('u.status', 0,'<>');
+  
+  $query->leftjoin('field_data_field_text','t','u.uid = t.entity_id');
+  $query->addField('t','field_text_value','ucsf_id'); 
+  $query->condition('t.entity_type','user');
+  $query->condition('t.bundle','user');
+
+  $query->leftjoin('biblio_ucsf_profiles','b','b.uid = u.uid');
+  $query->addField('b','ucsf_id','last_used_ucsf_id'); 
+  $query->fields('b',array('status','updated'));
+         
+  // $result = $query->range(0,50)->execute();
+  $result = $query->execute();
+
+  while ($r = $result->fetchObject()) {
+
+    // @todo this should be refactored and integrated into a SQL subquery subtract
+    // then the "skip" is implied and if: continue; no longer needed
+    // @see http://stackoverflow.com/questions/2723839/mysql-difference-of-two-result-sets
+    if ( ($r->status == 'error') && ($r->ucsf_id == $r->last_used_ucsf_id) )  {
+      continue;
+    }
+
+
+    $update = new stdClass();
+    $update->uid = $r->uid;
+    $pmids = _fetch_ucsf_profiles_pmids($r->ucsf_id);
+    
+    if ($pmids) {
+      $batch['operations'][] = array('biblio_ucsf_profiles_batch_process', array($r->ucsf_id,$pmids));
+      $update->status = 'valid';
+    } else {
+      drupal_set_message(
+        "UCSF Profiles returned no results for ($r->name:$r->ucsf_id)",
+        'status');
+      $update->status = 'error';
+    }
+
+    $update->updated = REQUEST_TIME;
+    $update->ucsf_id = $r->ucsf_id;
+
+    if (is_null($r->status)) {
+      drupal_write_record('biblio_ucsf_profiles', $update);
+    } else {
+      drupal_write_record('biblio_ucsf_profiles', $update, 'uid');
+    }
   }
+
+  batch_set($batch);
+  batch_process('admin/config/content/biblio/ucsf_profiles');
 }
 
 /**
- * UCSF Profiles -> BiblioEntrezClient Importer!
+ * Fetch data from UCSF Profiles
  */
-function biblio_ucsf_profiles_import($profile,$batch=TRUE) {
-  
+function _fetch_ucsf_profiles_pmids($id){
   // Profiles API 
   // @see http://opendata.profiles.ucsf.edu/
   $api = "http://api.profiles.ucsf.edu/json/v2/?publications=full&source=gladstoneinstitutes.org";
-
-
-  $pmids = array();
-  $uid = field_get_items('profile', $profile, 'profile_uid');
-  // $ucsf_id = field_get_items('profile', $profile, 'field_field_ucsf_id');
-  // if ( array_key_exists('raw',$ucsf_id) && array_key_exists('value',$ucsf_id['raw']) ) {
-  //   //http://ucsfprofiles.proboards.com/thread/3/example-code-xml-data-feed
-  //   $person_id = floor($ucsf_id['raw']['value']/10.0) + 2569307;
-  // } else {
-  //   return;
-  // }
-  // $url = $api."&Person=".$person_id;
-  
-  $ucsf_profile_name = field_get_items('profile', $profile, 'field_field_text');
-  if ( array_key_exists('raw',$ucsf_profile_name) && array_key_exists('value',$ucsf_profile_name['raw']) ) {
-    $ucsf_profile_name = $ucsf_profile_name['raw']['value'];
-  } else {
-    return;
-  }  
-  $url = $api."&ProfilesURLName=".$ucsf_profile_name;
-
   $options = array(
     'headers' => array(),
     'method' => 'GET',
@@ -132,18 +180,78 @@ function biblio_ucsf_profiles_import($profile,$batch=TRUE) {
     'context' => NULL
   );
 
-  $json = drupal_json_decode( drupal_http_request($url,$options)->data);
-  $pubs = jsonPath($json,'$.Profiles[0].Publications.*.PublicationSource[0].PMID');
-  $err  = jsonPath($json,'$.error');
+  // Fetch json data
+  $pubs = array();
+  $err = FALSE;
+  if (preg_match('/\w+/', $id)) {
+    $url = $api."&ProfilesURLName=".$id;
+    $json = drupal_json_decode( drupal_http_request($url,$options)->data);
+    $err  = jsonPath($json,'$.error');
 
-  if (!$err && is_array($pubs) && count($pubs) > 0 ) {
-    $pubs = array_filter( array_unique($pubs) );
-    biblio_pm_import_ids($pubs,$terms=array(),$batch=TRUE);
+    if (!$err) {
+      $pubs = jsonPath($json,'$.Profiles[0].Publications.*.PublicationSource[0].PMID');
+    }    
   }
 
-  // variable_set('ucsf_profiles_ids', $form_state['values']['ids']);
-  // drupal_set_message(t('Employee IDs are saved.'), 'status', FALSE);
+  if (!$err && is_array($pubs) && count($pubs) > 0) {
+    $pubs = array_filter( array_unique($pubs) );
+    return $pubs;
+  }
+
+  return false;
 }
+
+/**
+ * The batch processor.
+ */
+function biblio_ucsf_profiles_batch_process($ucsf_id,$pmids,&$context) {  
+  if (!isset($context['sandbox']['progress'])) {
+    $context['sandbox']['progress'] = 0;
+    $context['sandbox']['current_node'] = 0;
+    $context['sandbox']['max'] = db_query(
+        "SELECT COUNT(DISTINCT u.uid) FROM {users} AS u
+         LEFT JOIN {field_data_field_text} AS t
+          ON t.bundle = 'user' AND t.entity_type = 'user' AND t.entity_id = u.uid
+         LEFT JOIN {biblio_ucsf_profiles} AS b
+          ON b.uid = u.uid
+         WHERE b.status is null
+          OR b.status <> 'error'
+          OR (  
+                b.status = 'error'
+                AND t.field_text_value <> b.ucsf_id
+             )"
+    )->fetchField();
+  }
+  
+  $context['sandbox']['progress']++;
+  $context['message'] = "Importing publications for $ucsf_id...\n";
+  biblio_pm_import_ids($pmids,$terms=array(),$batch=TRUE);  
+
+  // Inform the batch engine that we are not finished,
+  // and provide an estimation of the completion level we reached.
+  if ($context['sandbox']['progress'] != $context['sandbox']['max']) {
+    $context['finished'] = $context['sandbox']['progress'] / $context['sandbox']['max'];
+  }
+}
+
+/**
+ * The batch finish handler.
+ */
+function biblio_ucsf_profiles_batch_finished($success, $results, $operations) {
+  if ($success) {
+    drupal_set_message('Import is complete!');
+  }
+  else {
+    $error_operation = reset($operations);
+    $message = t('An error occurred while processing %error_operation with arguments: @arguments', array(
+      '%error_operation' => $error_operation[0],
+      '@arguments' => print_r($error_operation[1], TRUE)
+    ));
+    drupal_set_message($message, 'error');
+  }
+  drupal_set_message(l('Run again', 'admin/config/content/biblio/ucsf_profiles'));
+}
+
 
 /**
  * Implements hook_cron_queue_info().
@@ -185,8 +293,7 @@ function biblio_ucsf_profiles_cron() {
 function biblio_ucsf_profiles_views_api() {
   return array(
     'api' => 3,
-    'path' => drupal_get_path('module', 'biblio_ucsf_profiles') . '/includes/views',
-    // 'template path' => drupal_get_path('module', 'biblio_ucsf_profiles') . '/themes',
+    'path' => drupal_get_path('module', 'biblio_ucsf_profiles') . '/views',
   );
 }
 
