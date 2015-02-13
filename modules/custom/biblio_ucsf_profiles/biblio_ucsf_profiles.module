@@ -112,13 +112,6 @@ function biblio_ucsf_profiles_force_poll($form, &$form_state) {
 
   while ($profile = $profiles->fetchObject()) {
 
-    // @todo this should be refactored and integrated into a SQL subquery subtract
-    // then the "skip" is implied and if: continue; no longer needed
-    // @see http://stackoverflow.com/questions/2723839/mysql-difference-of-two-result-sets
-    if ( ($profile->status == 'error') && ($profile->ucsf_id == $profile->last_used_ucsf_id) )  {
-      continue;
-    } 
-
     $update            = new stdClass();
     $update->uid       = $profile->uid;
     $update->timestamp = REQUEST_TIME;
@@ -317,15 +310,24 @@ function _fetch_new_ucsf_profiles_pmids($id){
  */
 function _biblio_ucsf_profiles_users() {
     $query = db_select('users', 'u')
-          ->fields('u',array('uid','name'))
-          ->condition('u.status', 0,'<>')
-          ->condition('u.uid', 1,'>');
-    $query->leftjoin('field_data_field_text','t','u.uid = t.entity_id');
+          ->fields('u',array('uid','name'));
+          // ->condition('u.status', 0,'<>')
+          // ->condition('u.uid', 1,'>');
+    $query->leftjoin('field_data_field_text','t',
+        "u.uid = t.entity_id AND t.entity_type = 'user' AND t.bundle = 'user'");
     $query->addField('t','field_text_value','ucsf_id'); 
-    $query->condition('t.entity_type','user');
-    $query->condition('t.bundle','user');
     $query->leftjoin('biblio_ucsf_profiles','b','b.uid = u.uid');
     $query->addField('b','ucsf_id','last_used_ucsf_id'); 
     $query->fields('b',array('status','timestamp'));
+    $query->where("u.status <> 0 
+                   AND u.uid > 1
+                   AND (
+                      b.status IS NULL
+                      OR b.status <> 'error'
+                      OR (
+                        b.status = 'error'
+                        AND t.field_text_value <> b.ucsf_id
+                      )
+                   )");
     return $query;
 }
