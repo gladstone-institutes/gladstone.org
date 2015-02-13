@@ -108,9 +108,7 @@ function biblio_ucsf_profiles_force_poll($form, &$form_state) {
     'error_message' => t('Import error has occurred.')
   );
          
-  $profiles = _biblio_ucsf_profiles_users()->range(0,10)->execute();
-  // $profiles = _biblio_ucsf_profiles_users()->execute();
-
+  $profiles = _biblio_ucsf_profiles_users()->execute();
 
   while ($profile = $profiles->fetchObject()) {
 
@@ -130,7 +128,12 @@ function biblio_ucsf_profiles_force_poll($form, &$form_state) {
     if ($pmids) {
       $batch['operations'][] = array('biblio_ucsf_profiles_batch_process', array($profile->ucsf_id,$pmids));      
       $update->status = 'valid';
-    } else {
+    } elseif($profile->status == 'valid') {
+      drupal_set_message(
+        "($profile->name:$profile->ucsf_id) has no new imports or updates at this time.",
+        'status');
+    }
+    else {
       drupal_set_message(
         "UCSF Profiles returned no results for ($profile->name:$profile->ucsf_id)",
         'status');
@@ -287,17 +290,23 @@ function _fetch_new_ucsf_profiles_pmids($id){
 
   // Filter duplicates and known pmids from set
   if (!$err && is_array($pubs) && count($pubs) > 0) {
-    $pmids = db_query(
+    $pubs = array_filter($pubs);
+    $known_pmids  = db_select('biblio_pubmed','b')
+                    ->fields('b',array('biblio_pubmed_id'))
+                    ->condition('b.biblio_pubmed_id',$pubs,'IN')
+                    ->execute()->fetchCol();
+    $update_pmids = db_query(
       "SELECT biblio_pubmed_id
        FROM {biblio_pubmed} as b
        WHERE (UNIX_TIMESTAMP(NOW()) - biblio_pm_changed) > :update_threshold
        AND biblio_pubmed_id in (:ucsf_profiles_pmids);",
        array( ':update_threshold'    => variable_get('biblio_ucsf_profiles_update'),
-              ':ucsf_profiles_pmids' => array_unique($pubs)
+              ':ucsf_profiles_pmids' => $pubs
        )
     )->fetchCol();
+    $new_pmids = array_diff($pubs,$known_pmids);
 
-    return $pmids;
+    return $new_pmids + $update_pmids;
   }
 
   return false;
@@ -309,7 +318,8 @@ function _fetch_new_ucsf_profiles_pmids($id){
 function _biblio_ucsf_profiles_users() {
     $query = db_select('users', 'u')
           ->fields('u',array('uid','name'))
-          ->condition('u.status', 0,'<>');
+          ->condition('u.status', 0,'<>')
+          ->condition('u.uid', 1,'>');
     $query->leftjoin('field_data_field_text','t','u.uid = t.entity_id');
     $query->addField('t','field_text_value','ucsf_id'); 
     $query->condition('t.entity_type','user');
