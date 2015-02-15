@@ -8,8 +8,8 @@
  */
 function biblio_ucsf_profiles_install() {
 	variable_set('biblio_ucsf_profiles_active', TRUE);
-	variable_set('biblio_ucsf_profiles_cron', 3*24*60*60)
-	variable_set('biblio_ucsf_profiles_update', 30*24*60*60)
+	variable_set('biblio_ucsf_profiles_cron', 3*24*60*60);
+	variable_set('biblio_ucsf_profiles_update', 30*24*60*60);
 }
 
 /**

@@ -31,9 +31,18 @@ function biblio_ucsf_profiles_menu() {
     'description' => 'Configure UCSF Profiles',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('biblio_ucsf_profiles_form'),
-    'access arguments' => array('access administration pages'),
+    'access arguments' => array('configure biblio ucsf profiles'),
     'type' => MENU_LOCAL_TASK,
   );
+  $items['admin/reports/ucsf_profiles'] = array(
+    'title' => 'UCSF Profiles',
+    'description' => 'Shows the status of the UCSF Profiles API',
+    'page callback' => 'biblio_ucsf_profiles_report_page',
+    'page arguments' => array('biblio_ucsf_profiles_form'),
+    'access arguments' => array('access biblio ucsf profiles report'),
+    'file' => 'biblio_ucsf_profiles.pages.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );  
   return $items;
 }
 
@@ -247,7 +256,21 @@ function biblio_ucsf_profiles_views_api() {
   );
 }
 
-
+/**
+ * Implements hook_permission().
+ */
+function biblio_ucsf_profiles_permission() {
+  return array(
+    'access biblio ucsf profiles report' => array(
+      'title' => t('Access Bilio UCSF Profiles report'),
+      'description' => t('Allows user to access the UCSF Profiles API report.'),
+    ),
+    'configure biblio ucsf profiles' => array(
+      'title' => t('Access Biblio UCSF Profiles configuration'),
+      'description' => t('Allows user to configure UCSF Profiles imports.'),
+    ),
+  );
+}
 
 
 /**
