@@ -28,7 +28,7 @@ class GSAllNodes extends DrupalMigration {
 	    $query = Database::getConnection('legacy', $this->sourceConnection)
 	      ->select($this->sourceTable, 'n')
 	      ->fields('n');
-	    $query->condition('n.type',array('biblio','site_page'),'NOT IN');
+	    $query->condition('n.type',array('biblio','site_page','technology'),'NOT IN');
 	    return $query;
 	}
 }
