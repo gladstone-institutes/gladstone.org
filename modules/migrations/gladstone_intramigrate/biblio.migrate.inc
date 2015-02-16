@@ -71,7 +71,8 @@ class GSBilblioNodeRevisions extends GSBiblioBase {
 		$this->dependencies[] = 'user';
 		$this->addFieldMapping('uid','uid')->sourceMigration('user');
 		$this->addFieldMapping('nid','nid')->sourceMigration('biblio_nodes');
-		$this->addSimpleMappings(array('title','log','timestamp','status','comment','promote','sticky','vuuid'));
+		$this->addFieldMapping('log','log')->defaultValue('Migrated');
+		$this->addSimpleMappings(array('title','timestamp','status','comment','promote','sticky','vuuid'));
 	}
 
 	public function postImport() {
