@@ -1,16 +1,24 @@
 diff --git a/includes/migration.inc b/includes/migration.inc
-index 5c2a0ad..f48bdee 100644
+index 5c2a0ad..b7e7a13 100644
 --- a/includes/migration.inc
 +++ b/includes/migration.inc
-@@ -1199,6 +1199,11 @@ abstract class Migration extends MigrationBase {
-           continue;
-         }
- 
-+        // Dont migrate fields that have empty sources!
-+        if ($source && empty($this->sourceValues->{$source})) {
-+          continue;
-+        }
-+
-         $destination_values = NULL;
+@@ -1203,7 +1203,7 @@ abstract class Migration extends MigrationBase {
  
          // If there's a source mapping, and a source value in the data row, copy
+         // to the destination
+-        if ($source && isset($this->sourceValues->{$source})) {
++        if ($source && isset($this->sourceValues->{$source}) && !empty($this->sourceValues->{$source})) {
+           $destination_values = $this->sourceValues->$source;
+         }
+         // Otherwise, apply the default value (if any)
+@@ -1263,6 +1263,10 @@ abstract class Migration extends MigrationBase {
+             }
+           }
+         }
++        // Dont migrate fields that have empty sources!
++        else {
++          continue;
++        }        
+ 
+         // Are we dealing with the primary value of the destination field, or a
+         // subfield?
