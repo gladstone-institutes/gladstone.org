@@ -376,6 +376,16 @@ projects[biblio][download][revision] = c584ee17
 projects[biblio][download][branch]   = 7.x-1.x
 projects[biblio][patch][]   = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/biblio-typo_isset.patch
 
+projects[timeperiod][version]	= "7.x-1.x"
+projects[timeperiod][subdir]	= "contrib"
+projects[timeperiod][download][type]     = git
+projects[timeperiod][download][revision] = e32b1ce7
+projects[timeperiod][download][branch]   = 7.x-1.x
+;Widget not parsing out the correct values. @seehttps://www.drupal.org/node/2355859
+projects[timeperiod][patch][]   = https://www.drupal.org/files/issues/2355859-unit-order-1.patch
+;Cannot have empty value @see https://www.drupal.org/node/2092835
+projects[timeperiod][patch][]   = https://www.drupal.org/files/issues/timeperiod-2092835-3.patch
+
 
 ; events - Events ----------------------------------------------------
 
