@@ -1,0 +1,16 @@
+diff --git a/includes/migration.inc b/includes/migration.inc
+index 5c2a0ad..f48bdee 100644
+--- a/includes/migration.inc
++++ b/includes/migration.inc
+@@ -1199,6 +1199,11 @@ abstract class Migration extends MigrationBase {
+           continue;
+         }
+ 
++        // Dont migrate fields that have empty sources!
++        if ($source && empty($this->sourceValues->{$source})) {
++          continue;
++        }
++
+         $destination_values = NULL;
+ 
+         // If there's a source mapping, and a source value in the data row, copy

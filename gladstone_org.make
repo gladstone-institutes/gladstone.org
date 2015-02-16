@@ -510,6 +510,8 @@ projects[migrate][download][revision]	= c9d07e29
 projects[migrate][download][branch]		= 7.x-2.x
 ;fix date import timezone conversion https://www.drupal.org/node/2305049
 projects[migrate][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/migrate-timezone_correction.patch
+;fix migration of phantom nulls
+projects[migrate][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/migrate-skip_phantom_nulls.patch
 
 projects[migrate_d2d][version]				= 2.x-dev
 projects[migrate_d2d][subdir]				= contrib
