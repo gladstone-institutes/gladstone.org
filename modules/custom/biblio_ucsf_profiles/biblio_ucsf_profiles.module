@@ -229,7 +229,9 @@ function biblio_ucsf_profiles_cron() {
     $queue = DrupalQueue::get('biblio_ucsf_profiles');
 
     $query = _biblio_ucsf_profiles_users();
-    $query->condition('(UNIX_TIMESTAMP(NOW()) - b.timestamp)', variable_get('biblio_ucsf_profiles_cron',0), '>');
+    $query->where('(UNIX_TIMESTAMP(NOW()) - b.timestamp) > :biblio_ucsf_profiles_cron',
+                  array(':biblio_ucsf_profiles_cron' => variable_get('biblio_ucsf_profiles_cron',0))
+    );
     $profiles = $query->execute();
 
     while ($profile = $profiles->fetchObject()) {
