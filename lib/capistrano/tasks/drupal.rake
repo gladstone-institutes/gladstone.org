@@ -355,6 +355,9 @@ namespace :drupal do
 		end
 
 		if repo_present
+
+			invoke "#{scm}:update"
+			
 			make_files = [ 'drupal-org-core.make', "#{fetch(:application)}.make" ]
 			on release_roles :web do
 				within repo_path do
