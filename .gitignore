@@ -11,13 +11,18 @@ htdocs/**
 themes/**/*.map
 themes/**/*.css
 themes/**/generated_files
-!themes/**/layouts/**/*.css
+theme/**/css/layouts/**
+!themes/**/layouts/panels/*.css
 
 # Ignore interim build files
 *.build~
 
 # Ignore FileMerge backups
 **/*.orig
+
+# Ignore gem files
+vendor
+vendor/cache/*
 
 # Make sure custom profile stuff is kept in index
 !modules/custom/
