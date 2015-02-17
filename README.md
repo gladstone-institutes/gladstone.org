@@ -27,7 +27,7 @@ Project structure
 
 <dl>
     <dt>content</dt>
-    <dd>stored on a private repo, all the source data needed to "initialize" a `drush site-install` lives hear for branch checkout via drush.</dd>
+    <dd>stored on a private repo, all the source data needed to "initialize" a <code>drush site-install</code> lives here for branch checkout via drush.</dd>
 </dl>
 
 
@@ -48,7 +48,7 @@ Project structure
     <dt>libraries</dt>
     <dd>contrib module dependencies</dd>
     <dt>modules/content</dt>
-    <dd>**content** branch specific modules/data</dd>
+    <dd><strong>content</strong> branch specific modules/data</dd>
     <dt>modules/custom</dt>
     <dd>custom modules not yet broken-out into their own projects, and bundled with the profile</dd>
     <dt>modules/dev</dt>
