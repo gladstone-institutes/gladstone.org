@@ -33,3 +33,7 @@ config/deploy/*.rb
 config/drush/aliases.drushrc.php
 config/drush/drushrc.php
 config/deploy.rb
+
+# Ignore IDE files
+.idea
+
