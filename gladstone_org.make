@@ -31,7 +31,7 @@ projects[field_group][subdir]  = contrib
 
 projects[libraries][version] = 2.1
 
-projects[relation][version]  = 7.x-1.x-dev
+# projects[relation][version] = 1.x-dev
 projects[relation][subdir]	 = contrib
 projects[relation][download][type]     = git
 projects[relation][download][revision] = f6938120
@@ -52,7 +52,7 @@ projects[ctools][patch][] = "https://drupal.org/files/ctools.code_.1774434-7.pat
 ; allow admin overlay for pager page_manager
 projects[ctools][patch][] = "https://www.drupal.org/files/page-manager-admin-paths-1120028-14.patch"
 
-projects[panels][version] = "3.x-dev"
+# projects[panels][version] = "3.x-dev"
 projects[panels][subdir]  = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][revision] = 5fc99872
@@ -63,13 +63,13 @@ projects[panels_css_js][subdir]  = "contrib"
 projects[panels_css_js][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/panels_css_js-allowing_configuration_options-2228381-2.patch
 projects[panels_css_js][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/panels_css_js-allowing_configuration_options-2228381-3.patch
 
-projects[panelizer][version]  = 7.x-3.1+90-dev
+# projects[panelizer][version] = 3.1-dev
 projects[panelizer][subdir]	 = contrib
 projects[panelizer][download][type]     = git
 projects[panelizer][download][revision] = 809ab899
 projects[panelizer][download][branch]   = 7.x-3.x
 
-projects[pm_existing_pages][version]  = 7.x-1.x-dev
+# projects[pm_existing_pages][version] = 1.x-dev
 projects[pm_existing_pages][subdir]	 = contrib
 projects[pm_existing_pages][download][type]     = git
 projects[pm_existing_pages][download][revision] = e0451cc0
@@ -86,13 +86,13 @@ projects[pathauto][subdir]	= "contrib"
 projects[subpathauto][version]	= "1.3"
 projects[subpathauto][subdir]	= "contrib"
 
-projects[globalredirect][version]  = 1.x-dev
+# projects[globalredirect][version]  = 1.x-dev
 projects[globalredirect][subdir]	 = contrib
 projects[globalredirect][download][type]     = git
 projects[globalredirect][download][revision] = e7debe9a
 projects[globalredirect][download][branch]   = 7.x-1.x
 
-projects[pathologic][version]  = 7.x-3.x
+# projects[pathologic][version] = 3.x
 projects[pathologic][subdir]	 = contrib
 projects[pathologic][download][type]     = git
 projects[pathologic][download][revision] = 19456fe6
@@ -114,7 +114,7 @@ projects[date][subdir]  = "contrib"
 ;fix date import timezone conversion https://www.drupal.org/node/2305049
 projects[date][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/date-timezone_correction.patch
 
-projects[entityreference][version]	= 1.x-dev
+# projects[entityreference][version]	= 1.x-dev
 projects[entityreference][subdir]	= contrib
 projects[entityreference][download][type]		= git
 projects[entityreference][download][revision]	= dc4196b
@@ -122,7 +122,7 @@ projects[entityreference][download][branch]		= 7.x-1.x
 ;display views label in autocomplete, not the entity type: https://www.drupal.org/node/1896210
 projects[entityreference][patch][1896210] = https://www.drupal.org/files/issues/entityreference-1896210-5.patch
 
-projects[relation_add][version]  = 1.x-dev
+# projects[relation_add][version]  = 1.x-dev
 projects[relation_add][subdir]	 = contrib
 projects[relation_add][download][type]     = git
 projects[relation_add][download][revision] = 93d6dda9
@@ -130,19 +130,19 @@ projects[relation_add][download][branch]   = 7.x-1.x
 ; Add case for profile2 relation_add queries, depends on computed_field:field_label_alias in target entity
 projects[relation_add][patch][]   = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/relation_add-profile2_query_case.patch
 
-projects[computed_field][version] = "1.x-dev"
+# projects[computed_field][version] = "1.x-dev"
 projects[computed_field][subdir]	= "contrib"
 projects[computed_field][download][type]		= git
 projects[computed_field][download][revision]	= c93e2512
 projects[computed_field][download][branch]	= 7.x-1.x
 
-projects[field_collection][version] = "1.x-dev"
+# projects[field_collection][version] = "1.x-dev"
 projects[field_collection][subdir]	= "contrib"
 projects[field_collection][download][type]		= git
 projects[field_collection][download][revision]	= 13c47f88
 projects[field_collection][download][branch]	= 7.x-1.x
 
-projects[auto_entitylabel][version] = "1.x-dev"
+# projects[auto_entitylabel][version] = "1.x-dev"
 projects[auto_entitylabel][subdir]	= "contrib"
 projects[auto_entitylabel][download][type]		= git
 projects[auto_entitylabel][download][revision]	= baf64896
@@ -151,7 +151,7 @@ projects[auto_entitylabel][download][branch]	= 7.x-1.x
 
 ;	Media -----
 
-projects[media][version] = 2.x-dev
+# projects[media][version] = 2.x-dev
 projects[media][subdir]	 = contrib
 projects[media][download][type] 	  = git
 projects[media][download][revision] = 247b31f8
@@ -159,13 +159,13 @@ projects[media][download][branch]   = 7.x-2.x
 ; fix markup is strip-out by ckeditor @see https://www.drupal.org/node/2364559
 projects[media][patch][] = https://www.drupal.org/files/issues/media-document-stripped-ckeditor-2364559-9.patch
 
-projects[media_youtube][version] = 2.x-dev
+# projects[media_youtube][version] = 2.x-dev
 projects[media_youtube][subdir]  = contrib
 projects[media_youtube][download][type] 	  = git
 projects[media_youtube][download][revision] = 9728dfb1
 projects[media_youtube][download][branch]   = 7.x-2.x
 
-projects[media_vimeo][version] = 7.x-2.0
+# projects[media_vimeo][version] = 2.0
 projects[media_vimeo][subdir] = contrib
 projects[media_vimeo][download][type] 	  = git
 projects[media_vimeo][download][revision] = 546dfa35
@@ -174,13 +174,13 @@ projects[media_vimeo][download][branch]   = 7.x-2.x
 projects[ckeditor_media][version] = 1.x-dev
 projects[ckeditor_media][subdir]  = contrib
 
-projects[file_entity][version] = 2.x-dev
+# projects[file_entity][version] = 2.x-dev
 projects[file_entity][subdir]  = contrib
 projects[file_entity][download][type] 	  = git
 projects[file_entity][download][revision] = 39e9f081
 projects[file_entity][download][branch]   = 7.x-2.x
 
-projects[imagefield_focus][version] = "1.x-dev"
+# projects[imagefield_focus][version] = "1.x-dev"
 projects[imagefield_focus][subdir]	= "contrib"
 projects[imagefield_focus][download][type]		= git
 projects[imagefield_focus][download][revision]	= fd5c5df2
@@ -194,13 +194,13 @@ projects[imagefield_focus][patch][] = https://drupal.org/files/imagefield_focus-
 projects[jquery_update][version] = 2.4
 projects[jquery_update][subdir]  = contrib
 
-projects[autocomplete_deluxe][version] 	= 7.x-2.0-dev
+# projects[autocomplete_deluxe][version] = 2.0-dev
 projects[autocomplete_deluxe][subdir] 	= contrib
 projects[autocomplete_deluxe][download][type]     = git
 projects[autocomplete_deluxe][download][revision] = a49e633d
 projects[autocomplete_deluxe][download][branch]   = 7.x-2.0
 
-projects[chosen][version] 			 = "7.x-2.0-beta4+1-dev"
+# projects[chosen][version] = 2.0-beta4+1-dev"
 projects[chosen][subdir] 			 = "contrib"
 projects[chosen][download][type]     = git
 projects[chosen][download][revision] = e7a0d22
@@ -209,13 +209,13 @@ libraries[chosen][download][type]    = get
 libraries[chosen][download][url]     = https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip
 libraries[chosen][destination]		 = libraries
 
-projects[linkit][version]				= 3.x-dev
+# projects[linkit][version]				= 3.x-dev
 projects[linkit][subdir]				= contrib
 projects[linkit][download][type] 		= git
 projects[linkit][download][revision]	= 2d68605
 projects[linkit][download][branch]		= 7.x-3.x
 
-projects[ckeditor][version]  = 1.x-dev
+# projects[ckeditor][version]  = 1.x-dev
 projects[ckeditor][subdir]	 = contrib
 projects[ckeditor][download][type]     = git
 projects[ckeditor][download][revision] = 8499587d
@@ -229,7 +229,7 @@ libraries[ckeditor][download][url]     = http://download.cksource.com/CKEditor/C
 libraries[ckeditor][download][subtree] = ckeditor/
 libraries[ckeditor][destination]       = modules/contrib/ckeditor/
 
-projects[diff][version]	= 3.x-dev
+# projects[diff][version]	= 3.x-dev
 projects[diff][subdir]	= "contrib"
 projects[diff[download][type]     = git
 projects[diff[download][revision] = 29ca19a
@@ -238,13 +238,13 @@ projects[diff[download][branch]   = 7.x-3.x
 
 ;	Filters -----
 
-projects[better_formats][version]	= 1.x-dev
+# projects[better_formats][version]	= 1.x-dev
 projects[better_formats][subdir]	= contrib
 projects[better_formats][download][type]		= git
 projects[better_formats][download][revision]	= 3b4a8c92
 projects[better_formats][download][revision]	= 7.x-1.x
 
-projects[htmlpurifier][version]	= 2.x-dev
+# projects[htmlpurifier][version]	= 2.x-dev
 projects[htmlpurifier][subdir]	= contrib
 projects[htmlpurifier][download][type]		= git
 projects[htmlpurifier][download][revision]	= a62d293a
@@ -264,7 +264,7 @@ projects[strongarm][subdir]  = "contrib"
 projects[deploy][version] = "2.x-dev"
 projects[deploy][subdir]  = "contrib"
 
-projects[entity][version]	= 1.x-dev
+# projects[entity][version]	= 1.x-dev
 projects[entity][subdir]	= contrib
 projects[entity][download][type]     = git
 projects[entity][download][revision] = a8688df0
@@ -278,13 +278,13 @@ projects[uuid][subdir]	= "contrib"
 ; CTools Contexts are missing UUID support.
 projects[uuid][patch][] = https://www.drupal.org/files/issues/uuid_ctools_context-2145567-5.patch
 
-projects[uuid_features][version] = 7.x-1.0-alpha4
+# projects[uuid_features][version] = 1.0-alpha4
 projects[uuid_features][subdir] = contrib
 projects[uuid_features][download][type]     = git
 projects[uuid_features][download][revision] = 4fdc77f8
 projects[uuid_features][download][branch]   = 7.x-1.x
 
-projects[entity_menu_links][version] = "1.x-dev"
+# projects[entity_menu_links][version] = "1.x-dev"
 projects[entity_menu_links][subdir]  = "contrib"
 projects[entity_menu_links][download][type]     = git
 projects[entity_menu_links][download][revision] = 8a6ef3e8
@@ -294,7 +294,7 @@ projects[menu_position_uuid][version] = "1.x-dev"
 projects[menu_position_uuid][subdir]  = "contrib"
 projects[menu_position_uuid][patch][] = "https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/menu_position_uuid-fix_deletion_of_other_postion_rules.patch"
 
-projects[features_extra][version]  = 1.x-dev
+# projects[features_extra][version]  = 1.x-dev
 projects[features_extra][subdir]	 = contrib
 projects[features_extra][download][type]     = git
 projects[features_extra][download][revision] = d3d1cba0
@@ -307,7 +307,7 @@ projects[backup_migrate][subdir] = "contrib"
 ; gladstone_admin - Admin improvements -------------------------------
 
 ;Admin Launcher
-projects[coffee][version]  = 2.x-dev
+# projects[coffee][version]  = 2.x-dev
 projects[coffee][subdir]	 = contrib
 projects[coffee][download][type]     = git
 projects[coffee][download][revision] = 2598dcdb
@@ -326,7 +326,7 @@ projects[menu_editor][version] = "1.0-beta3"
 projects[menu_editor][subdir] = "contrib"
 
 ;Admin theme
-projects[rubik][version] 			= "4.0-dev"
+# projects[rubik][version] 			= "4.0-dev"
 projects[rubik][download][type] 	= git
 projects[rubik][download][revision] = 5709b83a
 projects[rubik][download][branch] 	= 7.x-4.x
@@ -334,7 +334,7 @@ projects[rubik][download][branch] 	= 7.x-4.x
 projects[tao][version] = "3.1"
 
 ;Contextual adding of relations
-projects[relation_dialog][version]  = 1.x-dev
+# projects[relation_dialog][version]  = 1.x-dev
 projects[relation_dialog][subdir]	 = contrib
 projects[relation_dialog][download][type]     = git
 projects[relation_dialog][download][revision] = fa981fe9
@@ -342,25 +342,25 @@ projects[relation_dialog][download][branch]   = 7.x-1.x
 ; Entity create context button not showing: https://www.drupal.org/node/2174815
 projects[relation_dialog][patch][]   = https://www.drupal.org/files/issues/2174815-eliminate-PHP-warning-and-notice-7.patch
 
-projects[references_dialog][version]  = 1.x-dev
+# projects[references_dialog][version]  = 1.x-dev
 projects[references_dialog][subdir]	 = contrib
 projects[references_dialog][download][type]     = git
 projects[references_dialog][download][revision] = 746a40d9
 projects[references_dialog][download][branch]   = 7.x-1.x
 
 ;Restrict text formats/text UI
-projects[simplify][version]  = 3.x-dev
+# projects[simplify][version]  = 3.x-dev
 projects[simplify][subdir]	 = contrib
 projects[simplify][download][type]     = git
 projects[simplify][download][revision] = 7681b0e7
 projects[simplify][download][branch]   = 7.x-3.x
 
 ;Check for broken links
-projects[linkchecker][version]  = 7.x-1.2
+projects[linkchecker][version] = 1.2
 projects[linkchecker][subdir]	= contrib
 
 ;contextual menu administration
-projects[content_menu][version]  = 1.x-dev
+# projects[content_menu][version]  = 1.x-dev
 projects[content_menu][subdir]	 = contrib
 projects[content_menu][download][type]     = git
 projects[content_menu][download][revision] = f004cdfc
@@ -369,14 +369,14 @@ projects[content_menu][download][branch]   = 7.x-1.x
 
 ; bibliorepo - Biblio repository -------------------------------------
 
-projects[biblio][version]	= "7.x-1.x"
+# projects[biblio][version] = 1.x"
 projects[biblio][subdir]	= "contrib"
 projects[biblio][download][type]     = git
 projects[biblio][download][revision] = c584ee17
 projects[biblio][download][branch]   = 7.x-1.x
 projects[biblio][patch][]   = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/biblio-typo_isset.patch
 
-projects[timeperiod][version]	= "7.x-1.x"
+# projects[timeperiod][version] = 1.x"
 projects[timeperiod][subdir]	= "contrib"
 projects[timeperiod][download][type]     = git
 projects[timeperiod][download][revision] = e32b1ce7
@@ -403,7 +403,7 @@ projects[calendar][subdir]  = contrib
 
 ; gladstone_profiles - Gladstone profiles ----------------------------
 
-projects[profile2][version] = "1.x-dev"
+# projects[profile2][version] = "1.x-dev"
 projects[profile2][subdir]	= "contrib"
 projects[profile2][download][type]		= git
 projects[profile2][download][revision]	= 724a5e94
@@ -412,19 +412,19 @@ projects[profile2][download][branch]	= 7.x-1.x
 ; projects[profile2][patch][]   = "<%= token[:raw_base_uri] %>/patches/profile2-profile2_from_user_relation.patch"
 ; projects[profile2][patch][]   = "<%= token[:raw_base_uri] %>/patches/profile2-uri_callback.patch"projects[profile2][version] = "1.x-dev"
 
-projects[name][version]  = 1.x-dev
+# projects[name][version]  = 1.x-dev
 projects[name][subdir]	 = contrib
 projects[name][download][type]     = git
 projects[name][download][revision] = dbb981c8
 projects[name][download][branch]   = 7.x-1.x
 
-projects[email][version] = "1.x-dev"
+# projects[email][version] = "1.x-dev"
 projects[email][subdir]	= "contrib"
 projects[email][download][type]		= git
 projects[email][download][revision]	= 25dd1a4e
 projects[email][download][branch]	= 7.x-1.x
 
-projects[phone][version] = "1.x-dev"
+# projects[phone][version] = "1.x-dev"
 projects[phone][subdir]	= "contrib"
 projects[phone][download][type]		= git
 projects[phone][download][revision]	= 7ad8524a
@@ -434,7 +434,7 @@ libraries[libphonenumber][download][url]     = https://github.com/giggsey/libpho
 libraries[libphonenumber][download][subtree] = src/libphonenumber
 libraries[libphonenumber][destination]       = libraries/libphonenumber-for-php
 
-projects[field_collection_tabs_widget][version] = "1.x-dev"
+# projects[field_collection_tabs_widget][version] = "1.x-dev"
 projects[field_collection_tabs_widget][subdir]	= "contrib"
 projects[field_collection_tabs_widget][download][type]		= git
 projects[field_collection_tabs_widget][download][revision]	= 7e0fb32c
@@ -446,7 +446,7 @@ libraries[erta][destination]       = libraries
 projects[field_permissions][version] = "1.0-beta2"
 projects[field_permissions][subdir] = "contrib"
 
-projects[panels_ajax_tab][version] = "1.x-dev"
+# projects[panels_ajax_tab][version] = "1.x-dev"
 projects[panels_ajax_tab][subdir]	= "contrib"
 projects[panels_ajax_tab][download][type]		= git
 projects[panels_ajax_tab][download][revision]	= 96b73a48
@@ -457,18 +457,18 @@ projects[panels_ajax_tab][patch][]	= https://raw.githubusercontent.com/jnand/gla
 
 ; gladstone_theme - Gladstone theme ----------------------------------
 
-projects[adaptivetheme][version]  = 3.x-dev
+# projects[adaptivetheme][version]  = 3.x-dev
 projects[adaptivetheme][download][type]     = git
 projects[adaptivetheme][download][revision] = 0e0715cd
 projects[adaptivetheme][download][branch]   = 7.x-3.x
 
-projects[menu_attributes][version]  = 1.x-rc3
+# projects[menu_attributes][version]  = 1.x-rc3
 projects[menu_attributes][subdir]	 = contrib
 projects[menu_attributes][download][type]     = git
 projects[menu_attributes][download][revision] = 3c652035
 projects[menu_attributes][download][branch]   = 7.x-1.x
 
-;projects[classy_panel_styles][version]			  = 1.x
+# ;projects[classy_panel_styles][version]			  = 1.x
 ;projects[classy_panel_styles][subdir]			  = contrib
 ;projects[classy_panel_styles][download][type]     = git
 ;projects[classy_panel_styles][download][url]	  = git://git.drupal.org/sandbox/derek.deraps/2208431.git
@@ -478,7 +478,7 @@ projects[menu_attributes][download][branch]   = 7.x-1.x
 
 ; gladstone_widgets - Panels aware widgets ---------------------------
 
-projects[menu_block][version]	= "2.x-dev"
+# projects[menu_block][version]	= "2.x-dev"
 projects[menu_block][subdir]	= "contrib"
 projects[menu_block][download][type]     = git
 projects[menu_block][download][revision] = 193b23a0
@@ -486,13 +486,13 @@ projects[menu_block][download][branch]   = 7.x-2.x
 ; add exportable/features suport https://drupal.org/node/693302#comment-7946737
 projects[menu_block][patch][]   = https://drupal.org/files/ctools_exportable-693302-119.patch
 
-projects[views_autocomplete_filters][version] 	= 7.x-1.x-dev
+# projects[views_autocomplete_filters][version] = 1.x-dev
 projects[views_autocomplete_filters][subdir] 	= contrib
 projects[views_autocomplete_filters][download][type]     = git
 projects[views_autocomplete_filters][download][revision] = 4773fbe5
 projects[views_autocomplete_filters][download][branch]   = 7.x-1.x
 
-projects[better_exposed_filters][version] 			 = 7.x-3.x-dev
+# projects[better_exposed_filters][version] = 3.x-dev
 projects[better_exposed_filters][subdir] 			 = contrib
 projects[better_exposed_filters][download][type]     = git
 projects[better_exposed_filters][download][revision] = 5e91a5bc
@@ -503,7 +503,7 @@ projects[better_exposed_filters][patch][]   = https://www.drupal.org/files/bette
 
 ; gladstone_migrate - Migrations -------------------------------------
 
-projects[migrate][version]				= 2.x-dev
+# projects[migrate][version]				= 2.x-dev
 projects[migrate][subdir]				= contrib
 projects[migrate][download][type]		= git
 projects[migrate][download][revision]	= c9d07e29
@@ -513,19 +513,19 @@ projects[migrate][patch][] = https://raw.githubusercontent.com/jnand/gladstone.o
 ;fix migration of phantom nulls
 projects[migrate][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/migrate-skip_phantom_nulls.patch
 
-projects[migrate_d2d][version]				= 2.x-dev
+# projects[migrate_d2d][version]				= 2.x-dev
 projects[migrate_d2d][subdir]				= contrib
 projects[migrate_d2d][download][type]		= git
 projects[migrate_d2d][download][revision]	= 5845d885
 projects[migrate_d2d][download][branch]		= 7.x-2.x
 
-projects[migrate_extras][version]				= 2.x-dev
+# projects[migrate_extras][version]				= 2.x-dev
 projects[migrate_extras][subdir]				= contrib
 projects[migrate_extras][download][type]		= git
 projects[migrate_extras][download][revision]	= 02fcb71a
 projects[migrate_extras][download][branch]		= 7.x-2.x
 
-projects[computed_field_tools][version]		= 7.x-1.0
+projects[computed_field_tools][version] = 1.0
 projects[computed_field_tools][subdir]		= contrib
  
 
@@ -537,7 +537,7 @@ projects[tablefield][subdir] = contrib
 projects[simple_gmap][version] = 1.2
 projects[simple_gmap][subdir] = contrib
 
-projects[formatter_field][version] = 1.x
+# projects[formatter_field][version] = 1.x
 projects[formatter_field][subdir]  = contrib
 projects[formatter_field][download][type]     = git
 projects[formatter_field][download][revision] = 67ea6c63
@@ -547,7 +547,7 @@ projects[formatter_field][download][branch]   = 7.x-1.x
 ; @see https://www.drupal.org/node/1393488
 projects[formatter_field][patch][] = https://raw.githubusercontent.com/jnand/gladstone.org/master/patches/formatter_field-undef_index_error.patch
 
-projects[fieldable_panels_panes][version] 			 = 1.x-dev
+# projects[fieldable_panels_panes][version] 			 = 1.x-dev
 projects[fieldable_panels_panes][subdir] 			 = contrib
 projects[fieldable_panels_panes][download][type]     = git
 projects[fieldable_panels_panes][download][revision] = fba17ce3
@@ -562,19 +562,19 @@ projects[twitter_block][subdir] = contrib
 
 ; gladstone_dev - Developer tools ------------------------------------
 
-projects[devel][version]	= 7.x-1.5
+projects[devel][version] = 1.5
 projects[devel][subdir]		= contrib
 
-projects[devel_themer][version]	= 7.x-1.x-dev
+projects[devel_themer][version] = 1.x-dev
 projects[devel_themer][subdir]		= contrib
 
-projects[profiler_builder][version]	= 7.x-1.2
+projects[profiler_builder][version] = 1.2
 projects[profiler_builder][subdir]	= contrib
 
-projects[record_feature][version]	= 7.x-1.0-beta2
+projects[record_feature][version] = 1.0-beta2
 projects[record_feature][subdir]	= contrib
 
-projects[simplehtmldom][version]	= 7.x-1.12
+projects[simplehtmldom][version] = 1.12
 projects[simplehtmldom][subdir]		= contrib
 
 
