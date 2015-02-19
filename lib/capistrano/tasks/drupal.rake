@@ -297,9 +297,11 @@ namespace :drupal do
 				if directories.any?
 					directories.each do |release|
 						within releases_path.join(release) do
-							execute :chmod, '-f', '775', 'sites/default'
-							within 'sites/default' do
-								execute :chmod, '-fR', '774', '*.php'
+							if test "[ -d #{@pwd.first}/sites/default ]"
+								execute :chmod, '-f', '775', 'sites/default'
+								within 'sites/default' do
+									execute :chmod, '-fR', '774', '*.php'
+								end
 							end
 						end						
 					end
