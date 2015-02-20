@@ -117,9 +117,10 @@ namespace :drupal do
 		run_locally do
 
 			pull_path = deploy_path.parent.join(stage.to_s)
+			execute :mkdir, '-p', pull_path.join('sites/default')
 
 			within pull_path do
-				execute :mkdir, '-p', '.'
+				
 				execute :chown, '-fR', "#{fetch(:deploy_user)}:#{fetch(:server_group)}", '.'
 				execute :chmod, '-fR', 'u+w', '.'
 			
@@ -144,7 +145,7 @@ namespace :drupal do
 						'--no-cache', '--create-db', 
 						"--db-su=#{mysql[:admin_user]}",
 						"--db-su-pw=#{mysql[:admin_pass]}",
-						"@#{stage}", '.'
+						"@#{stage}", '@self'
 			end
 		end
 
