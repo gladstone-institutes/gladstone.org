@@ -8,37 +8,45 @@
 #                                                                    #
 ######################################################################
 
+
+# Basic Deploy Configuration
+#--------------------------------------
 set :stage, :EXAMPLE
 
 server 'EXAMPLE.com', roles: [:web,:db], user: 'deploy'
+set :http_port, '80' # webserver host port
 
 set :deploy_user, 	'deploy'
 set :server_group, 	'www-data'
 set :deploy_to, 	'/home/deploy/EXAMPLE'
 
-# Checkout a minimal branch for the dev build
-set :repo_url, 		"git@bitbucket.org:USER/EXAMPLE_REPO.git"
+set :repo_url, 		"git@github.com:jnand/gladstone.org.git"
 set :branch, 		proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :keep_releases, 3
 
-# add some additional dirs to the PATH
+# Fix tmp_dir permission errors when multiple deploy users exist
+set :tmp_dir, "#{fetch(:tmp_dir)}#{fetch(:deploy_user)}"
+
+
+# Add ENV variables as needed
+#--------------------------------------
 # set :default_env, { 
 # 	'PATH' => '/usr/local/bin:$PATH',
 # }
 
-# Drupal Specific Settings
-#----------------------------------
-# * commented lines will default
 
+# Drupal Specific Settings
+#--------------------------------------
+# * commented lines will default
+#
 # set :drush_roles, :all
 # set :drush_site_dir, -> { fetch(:release_path) }
 # set :drupal_admin_user, 'admin'
 # set :drupal_admin_pass, 'admin'
 
-# webserver host port
-set :http_port, '80'
 
-# database configuration
+# Database Configuration
+#--------------------------------------
 set :mysql, ->() {
 	{
 		host: 		'127.0.0.1',
@@ -52,7 +60,9 @@ set :mysql, ->() {
 set :initalization_schema,	'EXAMPLE_DB_NAME'
 set :initalization_files,	'EXAMPLE_PATH'
 
-# Map commands that may not be available in the SSHKit env
+# SSH Command map, for stage specific executables
+#--------------------------------------
+# * commands that may not be available in the SSHKit env
 SSHKit.config.command_map[:drush] = "/usr/bin/drush"
 
 
