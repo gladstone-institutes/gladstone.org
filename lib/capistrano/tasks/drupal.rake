@@ -449,7 +449,7 @@ namespace 'drupal:migrate' do
 		# if not fetch
 		on roles(:web) do		
 			within releases_path do
-				last_release =  capture(:ls, '-xtr').split[1]
+				last_release =  capture(:ls, '-xt').split[1]
 			end
 		end
 
