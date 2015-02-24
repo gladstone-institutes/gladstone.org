@@ -21,18 +21,16 @@ rvm | 1.26.3
 Project structure
 -------------
 
-### Special branches [^gitignore]
+### Special branches 
 
 *SCM based on [Git-flow](http://nvie.com/posts/a-successful-git-branching-model/)*
+
+Branch membership is determined by a series of branch specific .gitignore files based on the configuration [here](http://cogniton-mind.tumblr.com/post/1423976659/howto-gitignore-for-different-branches). 
 
 <dl>
     <dt>content</dt>
     <dd>all source data needed to "initialize" a <code>drush site-install</code>. At build time, <code>drush make</code> will download this branch from a private server</dd>
 </dl>
-
-
-[^gitignore]: Branch membership is determined by a series of branch specific .gitignore files based on the configuration [here](http://cogniton-mind.tumblr.com/post/1423976659/howto-gitignore-for-different-branches). 
-
 
 ### Directories
 
@@ -69,11 +67,89 @@ Project structure
 Deploy Setup
 -----------
 
-The production deployment target should have a dedicated `deploy` user with its primary group set the same as the web-server, typically `www-data`.
+### Deploy user
+Create a dedicated deploy user on the target host with primary group same as the webserver
 
-The `deploy` user will need a ssh-key pair for accessing any private git repos.You'll also need to add your public key to the `deploy` user's authorized_keys, allowing capistrano to ssh into the deploy host. 
+_on targethost:_
 
-Install `drush` locally for the `deploy` user. Cloning the official drush git repo is a good way to do this, in case the drush version needs to be frozen, updated, or changed. 
+    $ sudo adduser --ingroup www-data deploy    
+
+### SSH Keys
+[Create an ssh key pair](https://help.github.com/articles/generating-ssh-keys/) so the deploy user can access any remote repos
+
+_on targethost:_
+
+    $ cd /home/deploy
+    $ ssh-keygen
+
+Add the generated public key to github's [allowed keys](https://help.github.com/articles/generating-ssh-keys/#step-3-add-your-ssh-key-to-your-account)
+
+Add your local machines public key to the deploy user's `~/.ssh/authorized_keys` file on the target host. Now capistrano can SSH without prompting for a password.
+
+_on localhost:_
+
+    $ scp ~/.ssh/id_dsa.pub deploy@targethost:~/
+    $ ssh deploy@targethost
+
+_on targethost:_
+
+    $ cd ~/
+    $ cat id_dsa.pub > .ssh/authorized_keys
+
+### Install drush
+
+_on localhost:_ **repeat** _on targethost:_
+
+    $ git clone git@github.com:drush-ops/drush.git
+    $ cd drush
+    $ git checkout 6.x
+    $ ln -s /path/to/drush/drush ~/bin/drush
+
+### Install [rvm](https://rvm.io/rvm/install) and gemset
+
+_on localhost:_ **repeat** _on targethost:_
+
+    $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    $ \curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+    $ rvm gemset create gladstone_org
+    $ rvm use @gladstone_org
+    $ cd gladstone_org.git
+    $ gem install bundler
+    $ bundler install
+
+### Test if `cap` can connect
+Test that capistrano can connect to the deploy target, assuming the stage config file is set up correctly and specifies the `deploy` user we just created
+
+_on localhost:_
+
+    $ cd /path/to/gladstone_org.git
+    $ rvm use @gladstone_org
+    $ rvm cap stage deploy:check
+
+### Webserver
+Setup the remote target's host webserver to serve pages from `"current"`
+under the `deploy_to` path, via the vhost.conf's `DocumentRoot`
+
+_on targethost:_
+
+    $ cd deploy_to_path/current
+    "path/to/deploy_to/current"
+    $ vim /etc/apache/vhost.conf
+
+### Mysql
+Make sure both the local host and target host have mysql installed and listening on the standard port on `127.0.0.1`
+
+### Deploy the projects
+    
+_on localhost:_
+
+    $ cd gladstone_org.git
+    $ rvm use @gladstone_org
+    $ cap stage deploy 
+    $ cap stage drupal:migrate init=true
+
+### *Notes*
 
 The `deploy` user might also need passwordless sudo for `chgrp` and `chmod` depending on the target host's configuration.
 
