@@ -28,7 +28,7 @@ This repo contains all of the code, configuration, and content needed to bootstr
 
 ### Wiki documentation 
 
-[Requirements](https://github.com/jnand/gladstone.org/wiki/Gladstone.org-CMS-(Drupal-7))  
-[Project Structure](https://github.com/jnand/gladstone.org/wiki/Project-structure)  
-[Deployment](https://github.com/jnand/gladstone.org/wiki/Deploy-Setup)  
-[Tooling](https://github.com/jnand/gladstone.org/wiki/Tooling)  
+[Requirements](https://github.com/gladstone-institutes/gladstone.org/wiki/Gladstone.org-CMS-(Drupal-7))  
+[Project Structure](https://github.com/gladstone-institutes/gladstone.org/wiki/Project-structure)  
+[Deployment](https://github.com/gladstone-institutes/gladstone.org/wiki/Deploy-Setup)  
+[Tooling](https://github.com/gladstone-institutes/gladstone.org/wiki/Tooling)  
